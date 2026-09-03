@@ -1,0 +1,369 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{helvet}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tocloft}
+\renewcommand{\familydefault}{\sfdefault}
+
+% INICIO SUBSUBSUB
+%same as \subsubsection but level 4
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+% number \paragraph
+\setcounter{secnumdepth}{4}
+\makeatother
+% FIN SUBSUBSUB
+
+\usepackage{draftwatermark}
+
+\begin{document}
+% Marca de agua
+\SetWatermarkText{Guía en desarrollo\\Versión 2.6}
+\SetWatermarkScale{0.4}
+\SetWatermarkLightness{0.8}
+\SetWatermarkAngle{45}
+\SetWatermarkColor{red!20!white}
+% Fin - Marca de agua
+
+% Portada
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.6\textwidth]{logo-fiuba.png} \\
+    \vspace{2cm}
+    {\Huge Plantilla de trabajo final} \\
+    \vspace{0.5cm}
+    {\LARGE Materia: TC024 - Gestión de proyectos} \\
+    \vspace{2cm}
+    \begin{flushleft}
+        \textbf{Título del trabajo final:} \\
+        \vspace{0.5cm}
+        \textbf{Alumna/o:} \\
+        \vspace{0.5cm}
+        \textbf{Correo electrónico:} \\
+    \end{flushleft}
+    \vfill
+    \Large Facultad de Ingeniería - Universidad de Buenos Aires
+\end{titlepage}
+
+\setcounter{tocdepth}{4}
+\tableofcontents
+\newpage
+
+%****************    INTRODUCCION  **********%
+\section{Introducción}
+{\it
+Debe contener una descripción del contexto en el que se ubica el proyecto, su función y el lugar que ocupa.\\
+Luego de leer la introducción, el lector debe poder imaginarse de qué se trata el proyecto, sus beneficios, la problemática que aborda o resuelve y la complejidad esperada del mismo.\\
+Esta sección sirve como un resumen anticipado oficial del proyecto para que el lector decida si le interesa dedicar tiempo a leer el detalle del proyecto en las siguientes secciones.
+}
+
+%****************    DEFINICION DEL PROYECTO  **********%
+\section{Definición del proyecto}
+{\it
+Esta sección debe definir el proyecto. A diferencia de la introducción, que es más "blanda", a lo largo de esta sección y subsecciones, se debe ser claro y específico, tratando de minimizar posibles ambigüedades.
+Si vamos a hacer un sistema compuesto por un microcontrolador, sensores para medir ciertos indicadores, registrarlos y decidir tomar alguna acción en base a esos datos con cierta finalidad, digamos eso mismo: {\u "un sistema compuesto por un microcontrolador, sensores para medir ciertos indicadores, registrarlos y decidir tomar alguna acción en base a esos datos con"} la finalidad que sea.\\
+
+En esta parte introductoria de la sección, se puede describir el objetivo de negocio que se persigue y cómo se espera cumplirlo, de forma de facilitar el entendimiento de las siguientes subsecciones.
+}
+
+% la V 2.6 se reodena la sección misión y vision antes de Objetivo
+\subsection{Misión y visión}
+{\it
+Esta subsección debe definir la Misión y la Visión del proyecto.\\
+La **misión** es la razón de ser del proyecto basada en su propósito principal, mientras que la **visión** es la imagen de cómo se espera que el proyecto pueda evolucionar a futuro. La misión se enfoca en el presente y en lo que el resultado del proyecto hace para cumplir su propósito, mientras que la visión se enfoca en el futuro y en los posibles objetivos que el proyecto busca alcanzar.\\
+Existe mucho material disponible para ayudar al alumno a definir estas dos características de su proyecto.
+}
+
+\subsection{Objetivo}
+{\it
+Esta subsección debe definir el objetivo puntual del proyecto, el resultado esperable, de forma más específica que la definición previa, en cuanto a qué esperar. Debe especificarse si se espera un prototipo o un producto final, y con qué calidad. Si el resultado se compone de varias partes, deben especificarse todas.\\
+El objetivo aquí descripto debe cumplir con el paradigma S.M.A.R.T. El lector debe entender completamente qué esperar como resultado del proyecto.
+}
+
+\subsection{Entregables mensurables}
+{\it
+Esta subsección debe definir cuáles serán los resultados esperables para verificar el éxito del proyecto.\\
+Se debe especificar concretamente cómo el verificador puede constatar, al final del proyecto, que se cumplieron los objetivos del mismo. Esta descripción da certidumbre a la vez que ayuda a especificar mejor los requerimientos del proyecto.
+}
+
+
+%****************    EVALUACION DEL PROYECTO  **********%
+\section{Evaluación del proyecto}
+{\it
+Esta sección aborda el análisis del proyecto con el objetivo de evaluarlo desde dos aspectos: **Técnico** y de **Negocio**.\\
+En la **evaluación Técnica** se analizan la factibilidad, los riesgos y todas las cuestiones que aborda el proyecto desde lo tecnológico.\\
+En la **evaluación de Negocio** se analizan los aspectos relacionados con la receptividad o posibilidades de adopción del resultado del proyecto por parte de los destinatarios del mismo y las posibilidades de realización desde lo organizacional, legal, económico y demás posibles aspectos no tecnológicos que deban considerarse.
+}
+
+
+\subsection{Tipo de proyecto}
+{\it
+Esta subsección aborda la tipificación del proyecto o su encuadre dentro del tipo de despliegue que el resultado del proyecto va a tener.\\
+En clase hemos propuesto los siguientes tipos:
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+  \item Proyectos Masivos
+  \item Proyectos Específicos
+  \item Proyectos Únicos o a Medida
+  \item Proyectos de Innovación o Investigación
+\end{itemize}
+Esta lista es una propuesta y puede ampliarse o incluso definir una tipificación diferente.
+}
+
+
+\subsection{Evaluación de factibilidad técnica}
+{\it
+Esta subsección aborda la evaluación Técnica para analizar la factibilidad, los riesgos y todas las cuestiones que involucran el proyecto desde lo tecnológico.\\
+En las diferentes subsecciones se pretenden cubrir todos los aspectos técnicos de la evaluación.
+}
+
+\subsubsection{Requerimientos técnicos}
+{\it
+En este apartado deben definirse todos los requerimientos técnicos que deberá cumplir el proyecto, que serán la especificación para el diseño de la solución a construir.\\
+Debe contemplar los requisitos que, de cumplirse, cubren las expectativas del proyecto.\\
+Todo lo que no se mencione puede no estar y aun así el proyecto ser exitoso.\\
+Estas especificaciones suelen usarse durante la verificación para evaluar el cumplimiento del objetivo.\\
+Los requerimientos técnicos incluyen los tecnológicos y los funcionales.
+}
+
+\subsubsection{Diseño preliminar del producto}
+{\it
+En este apartado debe ir completándose el diseño preliminar. Es un primer bosquejo de diseño que permite tomar dimensión del proyecto y una primera propuesta a alto nivel de solución para cumplir el objetivo y atender los requerimientos.\\
+Esta sección lleva más tiempo completarla porque implica la elaboración de un diseño de circuito, sistema, partes, etc.\\
+Puede contener diagramas en bloque, especificación de partes y demás detalles que den certidumbre sobre la posibilidad de realización. No es necesario que tenga todo el detalle tecnológico.
+}
+    \paragraph{Análisis AMFE (preliminar)}
+    {\it
+    Aquí debe incorporarse el Análisis AMFE preliminar e ir enriqueciéndolo a lo largo del diseño y desarrollo del proyecto.
+    }
+
+
+\subsubsection{Inventario de los diferentes aspectos a cubrir}
+{\it
+En este apartado debe enumerarse y describirse todos los aspectos involucrados en el proyecto que son necesarios para cumplir el objetivo.\\
+Dependiendo del objetivo, será la cantidad de aspectos a tener en cuenta.\\
+Se mencionan algunos ejemplos que podrían aplicar:
+
+\begin{itemize}
+\setlength{\itemsep}{3 pt}
+    \item Línea de Producción / fabricación
+    \item QA
+    \item Soporte
+    \item Repuestos, Entrenamiento
+    \item Servicios Especializados
+\end{itemize}
+}
+
+
+\subsection{Evaluación de factibilidad de negocio}
+{\it
+Esta sección aborda la evaluación de Negocio, analizando los aspectos relacionados con la receptividad o posibilidades de adopción del resultado del proyecto por parte de los destinatarios del mismo y las posibilidades de realización desde lo organizacional, legal, económico y demás cuestiones no tecnológicas que deban considerarse.
+}
+
+\subsubsection{Análisis FODA}
+{\it
+Esta sección incorpora un análisis FODA del proyecto (del resultado del proyecto).\\
+Esta sección, como todas, es dinámica y se enriquece a lo largo del desarrollo del proyecto.
+}
+
+\subsubsection{Análisis de Riesgos}
+{\it
+En esta sección se deben identificar los riesgos del proyecto, es decir, todos los factores que puedan atentar contra el éxito del mismo.\\
+Hemos dividido el análisis en dos partes: Matriz de Riesgos y Análisis AMFE.
+}
+    \paragraph{Matriz de Riesgos y Acciones de Mitigación}
+    {\it
+    Aquí debe incorporarse la Matriz de Riesgos y las Acciones Mitigadoras a tomar.\\
+    Esta parte se irá completando a lo largo del diseño preliminar y las demás secciones.\\
+    El alumno debe investigar diferentes modelos de matrices de riesgos y elegir la que mejor aplique a su proyecto.
+    }
+
+\subsection{Análisis de mercado y financiero}
+{\it
+En esta subsección se aborda el mercado destinatario del proyecto, la receptividad a la adopción y los aspectos financieros o de soporte relacionados con la realización y éxito del proyecto.
+}
+
+\subsubsection{Análisis de mercado y público objetivo}
+{\it
+En este apartado debe describirse de forma cualitativa quiénes son los usuarios finales del proyecto y quiénes son los adquirentes del proyecto, teniendo en cuenta que pueden diferir.\\
+También debe describirse la forma en que ese público satisface actualmente las prestaciones que dará el proyecto y cómo lo hace, cuál es el esfuerzo o costo que asume para ello.\\
+También debe dimensionarse de alguna forma el mercado potencial.\\
+Luego de leer esta sección, el lector deberá tener un entendimiento holístico del usuario final y adquirente: sus necesidades, expectativas, exigencias y motivaciones relacionadas con el proyecto.
+}
+
+\subsubsection{Análisis de competidores y sustitutos}
+{\it
+En este apartado debe describirse de qué otra forma los usuarios finales pueden satisfacer las prestaciones que el proyecto genera.\\
+Esto incluye una descripción de competidores existentes y de soluciones sustitutas.\\
+Debe contemplarse que no hacer nada también puede ser una opción válida para el usuario final.
+}
+
+\subsubsection{Preanálisis de costos y precios}
+{\it
+En esta subsección deben analizarse los costos y precios que existen en relación con la realización del proyecto y su oferta futura.
+}
+    \paragraph{Costos directos e indirectos}
+    {\it
+    En esta subsección deben analizarse los costos que deberá afrontar el proyecto, tanto durante su realización.\\
+    Esta sección se actualiza a lo largo del proyecto, manteniendo la línea base y los ajustes necesarios para poder analizar los desvíos que ocurran.\\
+    Deben identificarse los costos directos e indirectos, así como indicar si son variables o fijos.
+    }
+    \paragraph{Precios y receptividad del mercado}
+    {\it
+    En esta subsección deben analizarse los precios de competidores o sustitutos y los valores que el usuario o adquirente está dispuesto a afrontar para disponer del resultado del proyecto.\\
+    Para analizar la receptividad del mercado, deben analizarse soluciones que el usuario utiliza que son parte de la problemática o contexto donde el proyecto se desempeña.
+   }
+
+
+\subsubsection{Análisis financiero}
+{\it
+En esta subsección se debe analizar el proyecto desde el punto de vista financiero, es decir, analizar las necesidades económicas del proyecto teniendo en cuenta el momento en que deben ser atendidas. También contempla una proyección de ingresos que el proyecto generaría después de obtener el resultado, en caso de que el proyecto tenga un fin que genere ingresos económicos y un retorno de la inversión económica requerida.\\
+Esta es la única parte del presente documento que aborda una perspectiva posterior al proyecto, ya que el retorno de inversión se genera después de que este finaliza. Recomendamos aclarar esta particularidad en este apartado.
+}
+
+    \paragraph{Flujo de fondos esperado}
+    {\it
+    En este apartado se debe realizar una proyección estimativa del flujo de fondos esperado para el proyecto, contemplando las dos etapas típicas: la etapa de inversión que ocurre durante el desarrollo del proyecto, donde se visualizan los costos que deben afrontarse y en qué momento; y luego debe incluirse una etapa de explotación económica del resultado (en caso de que el proyecto sea para obtener beneficios económicos), donde se incorporen los ingresos que el proyecto generaría según las expectativas del autor.\\
+    La estimación de la generación de ingresos debe estar justificada con datos e información objetiva. El análisis de precios y receptividad del mercado realizado en la sección previa debería contener la información que permita realizar esta proyección si se hizo adecuadamente.\\
+    Normalmente el flujo de fondos debería dar negativo en la primera etapa y positivo en la segunda si el proyecto busca un beneficio económico.\\
+
+    {\bf Supuestos y Escenarios posibles}\\
+    Como parte del flujo de fondos previsto, deben explicarse aquellos supuestos que dan soporte a la estimación. Algunos ejemplos de los supuestos pueden ser: rango de costos de recursos asumidos, costos de alquileres, carga impositiva prevista, colaboraciones no económicas que generen ahorros o eviten gastos, costos de logística, costos variables de comercialización, marketing, etc.\\
+    Normalmente, de no cumplirse un supuesto, los costos previstos van a sufrir variación, generalmente en un mayor costo. Si es posible, pueden dejarse claros estos impactos.\\
+    De la misma forma, deben explicarse los supuestos de los ingresos previstos, por ejemplo, precio de venta, cantidad de ventas mensuales, etc.\\
+    Posibles variaciones en valores supuestos de costos e ingresos, tomando casos más optimistas o más pesimistas, generan diferentes Escenarios posibles.\\
+    En el extremo, los costos e ingresos pesimistas generarán el peor escenario y ambos optimistas el mejor de los escenarios; lo esperable es que el proyecto se ubique en algún punto intermedio y es importante analizar esta realidad.\\
+    Previsiones realistas de costos e ingresos darán escenarios probables y la simulación de diferentes escenarios permitirá comprender las posibles realidades del proyecto. Debemos movernos siempre en escenarios realistas.
+    }
+
+    \paragraph{Viabilidad financiera: TIR y VAN}
+    {\it
+    En esta subsección se deben analizar los indicadores TIR y VAN que surgen del flujo de fondos esperado, así como proponer una tasa de descuento adecuada para el financiamiento del proyecto.
+    }
+
+    \paragraph{Financiamiento necesario y estrategias de soporte}
+    {\it
+    En esta subsección se debe analizar el financiamiento necesario que surge del flujo de fondos y definir, a partir del mismo, una estrategia y alternativas de soporte del flujo de fondos.\\
+    Pueden definirse diferentes alternativas para poder soportar el proyecto en caso de que el financiamiento que se obtenga no sea suficiente, qué recortes pueden realizarse o qué tácticas pueden emplearse para disminuir las necesidades de financiamiento.
+    }
+
+
+%****************    PLANIFICACION DEL PROYECTO  **********%
+\section{Planificación del proyecto}
+{\it
+En esta sección se debe analizar la forma y dinámica bajo la cual el proyecto va a realizarse.
+}
+
+\subsection{Plan de producto}
+{\it
+Un plan de producto es un documento estratégico que describe el ciclo de vida de un producto, desde su concepción y diferentes *releases* hasta su retiro del mercado.\\
+El primer *release* lo definiremos como MVP.\\
+Normalmente se lo representa como un gráfico evolutivo, el *Roadmap* del Producto, en el cual se visualizan las diferentes mejoras o prestaciones que se irán incorporando en cada nuevo *release*.\\
+Un plan de producto puede ser muy abarcativo, incluyendo estrategias, plan de desarrollo, marketing, etc. A los fines de este documento, se desea describir la evolución técnico-funcional del producto a través de los diferentes *releases*.
+}
+
+\subsubsection{MVP: objetivo y alcance}
+{\it
+Un MVP es un Producto Mínimo Viable, es decir, tiene que ser un producto y contemplar las mínimas funcionalidades que se consideran necesarias para que pueda prestar servicios. Debe funcionar, pero con las mínimas prestaciones para que sea útil.\\
+El **Objetivo del MVP** define conceptualmente qué debe atender el MVP una vez funcionando. El **Alcance** debe describir todas las prestaciones que debe ofrecer.\\
+Normalmente, en una metodología ágil, se busca que el primer resultado sea un MVP y que luego, en sucesivas iteraciones o *Sprints*, se vayan incorporando más prestaciones, completando el alcance amplio deseado. De esta forma, se pueden “ver” resultados tempranamente y revalidar el objetivo del proyecto, costos, etc.
+}
+
+%  Se elimina esta subsección en la v2.6    27-8-2026
+%\paragraph{Revalidación de costos}
+%{\it
+%Durante la ejecución del proyecto hasta obtener el MVP, ocurren cambios, redefiniciones, replanteos y rediseños que afectan los costos. Es necesario actualizar los costos estimados anteriormente y su impacto en el análisis financiero.
+%}
+
+\subsubsection{Versiones evolutivas}
+\paragraph{Versión evolutiva 1, 2, N: objetivo y alcance}
+{\it
+En las sucesivas iteraciones, se irán incorporando mejoras y funcionalidades al MVP orientadas a llegar al producto deseable para comercializar o prestar servicios.\\
+Debe planificarse mejoras acotadas por iteración, evaluando la cantidad de mejoras y el costo de iterar. Por ejemplo, si obtener una nueva versión del producto implica esfuerzo de importación, manufactura, etc., quizás resulte mejor acotar la cantidad de iteraciones; si en cambio esos costos son bajos, quizás convenga incorporar pocas funcionalidades por iteración para facilitar las pruebas y mitigar riesgos.\\
+Luego de cada iteración, debe analizarse el impacto en los costos, tal como se hizo en el MVP.
+}
+
+
+\subsection{Organización del proyecto}
+{\it
+Aquí debe describirse a grandes rasgos cómo se organizará el proyecto a nivel Equipo, Recursos y Dinámica.\\
+Debe ser breve (ej.: media carilla) y debe transmitir una foto rápida de cómo se desarrollará el proyecto.
+}
+\subsubsection{Equipo de trabajo}
+{\it
+Aquí debe describirse cómo se organizará el proyecto a nivel grupo humano.\\
+La definición debe ser principalmente a nivel de roles. Si hay nombres definidos, se puede mencionar quién ocupará determinado rol.\\
+Una persona puede ocupar varios roles, eso suele suceder, pero es importante entenderlo y expresarlo. Hay roles que son incompatibles para ser realizados por una misma persona, por ejemplo: desarrollar el firmware o software y probarlo.\\
+Incluir un organigrama es altamente recomendable.
+}
+\subsubsection{Recursos Necesarios}
+{\it
+Aquí puede incluirse un párrafo describiendo las subsecciones siguientes y conceptos en común.\\
+En las siguientes subsecciones debe describirse un inventario de recursos necesarios para poder realizar el proyecto y, en lo posible, quién (rol) será el responsable de proveerlos. Si no se sabe o no está definido, puede quedar pendiente (TBD).
+}
+    \paragraph{Infraestructura}
+    {\it
+    Enumerar los recursos de infraestructura necesarios.\\
+    Ej.: oficina, *datacenter*, mesa de pruebas, etc.\\
+    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
+    }
+
+    \paragraph{Equipamiento}
+    {\it
+    Enumerar el equipamiento necesario.\\
+    Ej.: Laboratorio, *tester*, mesa de soldado, kit de desarrollo, computadoras, etc.\\
+    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
+    }
+
+    \paragraph{Insumos}
+    {\it
+    Enumerar los insumos necesarios.\\
+    Ej.: stock de componentes, soldadores, estaño, papelería, etc.\\
+    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
+    }
+
+    \paragraph{Servicios}
+    {\it
+    Enumerar los servicios necesarios.\\
+    Ej.: Contador, telefonía, electricidad, limpieza, etc.\\
+    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
+    }
+
+    \paragraph{Otros}
+    {\it
+    Enumerar otros recursos que no encuadren dentro de las categorías anteriores.\\
+    Ej.: licencias de software, permisos, etc.\\
+    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
+    }
+
+
+\subsection{Metodología de trabajo}
+\subsubsection{Plan de proyecto o iteraciones previstas}
+Cascada tradicional, \textit{ágil}, mixta.
+\subsubsection{Entregables y Mensurables}
+\subsubsection{Estimación de Plazos y Esfuerzo}
+\subsubsection{Seguimiento}
+\paragraph{Revisiones}
+\paragraph{Control de riesgos y desviaciones}
+
+
+%****************    RESUMEN EJECUTIVO  **********%
+\section{Resumen ejecutivo}
+{\it
+Es un resumen muy breve, que puede ser en formato presentación, y que permita, a los ojos de un conocedor, comprender todo lo anterior.\\
+Son los resultados, el {\bf Qué} y no el {\bf Cómo}.
+}
+
+\subsection{Presentación del proyecto}
+\subsection{Mercado, costos y precios}
+\subsection{Diseño técnico y aspectos a cubrir}
+\subsection{FODA y riesgos}
+\subsection{Flujo de fondos, costos, financiamiento o soporte}
+
+\end{document}
