@@ -61,7 +61,6 @@ Para el alcance inicial —monitoreo y detección de plagas en soja, maíz y sor
 - Alcance del análisis: las imágenes y los datos complementarios de sensores terrestres o meteorológicos permiten detectar indicios y priorizar la inspección; no reemplazan el diagnóstico profesional. Esto es especialmente relevante para chinches, trips y arañuelas rojas en soja, y chicharrita en maíz. Si en una etapa posterior se prescribe o aplica un fitosanitario, pasan a ser centrales las reglas de SENASA, las leyes provinciales y municipales y la intervención de un ingeniero agrónomo matriculado.
 - Regulación de comunicaciones (ENACOM): ENACOM es la autoridad competente, no una norma en sí misma. Si se incorporan módulos LoRa para los sensores terrestres o meteorológicos, debe considerarse el régimen de espectro radioeléctrico y la documentación técnica del equipo. La banda 915–928 MHz, habitual para LoRa, es de uso compartido sin autorización individual para uso privado: no es exclusiva ni está libre de interferencias. LoRa es adecuado para telemetría de baja tasa de sensores, pero no debería sustituir el enlace de mando y control ni de video del dron. Al seleccionar o importar equipos, deberá verificarse con el proveedor la inscripción u homologación aplicable en RAMATEL y evitar modificaciones de potencia, antena o banda sin revisión técnica.
 
-(Definir especificaciones normativas a partir de lo analizado por las otras áreas).
 
 Implementación
 (Definir la implementación a partir de lo analizado por las otras áreas).
