@@ -1,0 +1,61 @@
+Drones para el agro
+Monitoreo y detección de plagas por imágenes
+Versión 2 — 2 de septiembre de 2026
+Preguntas/cuestiones a responder para definir especificaciones
+Investigación de mercado y competencia
+
+Cuál de las debilidades de la competencia podemos hacer nuestra fortaleza para tener un valor agregado frente a empresas ya existentes?¿
+
+Frente a las cuatro oportunidades planteadas (ocupar nicho de detección temprana con mayor especificidad en los distintos tipos de plagas, ofrecer un servicio integral, incluir asesoramiento agronómico en la solución y proximidad física en zonas núcleo), ¿cuál explotamos? ¿Hay alguna principal y cuáles podemos plantear como secundarias?
+
+Especificaciones técnicas del servicio a ofrecer
+Especificaciones técnicas del servicio a ofrecer
+1) Teniendo en cuenta que existen técnicas que hagan viable la detección, ¿qué cultivos y plagas
+pensamos tener como objetivo?
+
+Se propone trabajar principalmente con soja, maíz y sorgo, seleccionando aquellas plagas cuya detección mediante imágenes aéreas presenta mayor efectividad.
+
+  Soja  |  Alta efectividad : Orugas | Baja efectividad :Chinches, trips, Arañuelas rojas  
+  Sorgo |    Alta efectividad : Pulgón amarillo 
+  Maíz     |   Alta efectividad : Oruga cogollera  | Baja efectividad : Chicharrita (baja efectividad)
+
+
+2) Proponer un tipo de análisis preliminar para poder definir el tipo de dron.
+Se propone analizar la cobertura necesaria, la resolución espacial, los sensores requeridos, la autonomía energética y las condiciones ambientales, para determinar las características y el tipo de dron adecuado para el servicio.
+Análisis preliminares contemplados:
+    Análisis de cobertura: Determinar cuántas hectáreas debe poder relevar el dron por vuelo.
+    Análisis de resolución espacial: Determinar qué tamaño mínimo de daño queremos detectar.
+    Análisis de sensores
+    Análisis de autonomía energética
+    Análisis de condiciones ambientales, robustez necesaria
+
+Ej: Análisis de cobertura:  Superficie de referencia para diseñar el servicio 
+Soja ,  grandes superficies agrícolas : 50–100 ha/lote como escenario de diseño
+ Maíz , grandes superficies agrícolas : 50–100 ha/lote
+ Sorgo , superficies generalmente menores que soja/maíz: 30–100 ha/lote
+
+Ej: Análisis de resolución (Superficie de referencia y resolución para diseñar el servicio)
+    Oruga en soja, perforaciones, pérdida de área foliar y defoliación: 0,5–2 cm/píxel | Sensor RGB (opcional multiespectral)
+    Oruga cogollera en maíz, perforaciones, "ventaneo" y daño en hojas nuevas: 0,5–1 cm/píxel | Sensor RGB
+    Pulgón amarillo en sorgo, clorosis, amarillamiento y pérdida de vigor: 1–3 cm/píxel | Sensor Multiespectral
+                                                            
+3) Evaluar si tendría sentido complementar con sensores en tierra y/o datos meteorológicos públicos.
+
+Sí, sería conveniente complementar el sistema con sensores en tierra y datos meteorológicos públicos, especialmente para aquellas plagas cuya detección mediante imágenes aéreas es limitada. En soja, se aplicarían estos métodos para chinches, trips y arañuelas rojas, mientras que en maíz se utilizarían principalmente para la chicharrita.
+
+Soja  |  Chinches, trips y Arañuelas rojas complementar con otro método 
+  
+ Maíz     |  Chicharrita complementar con otro método
+
+
+Especificaciones técnicas del dron
+(Definir especificaciones técnicas del dron a partir de lo analizado por las otras áreas).
+
+Marco normativo actual
+¿Qué normativas clave limitan/afectan directamente el lineamiento general del proyecto? Definir las más importantes a tener en cuenta.
+
+(Definir especificaciones normativas a partir de lo analizado por las otras áreas).
+
+Implementación
+(Definir la implementación a partir de lo analizado por las otras áreas).
+
