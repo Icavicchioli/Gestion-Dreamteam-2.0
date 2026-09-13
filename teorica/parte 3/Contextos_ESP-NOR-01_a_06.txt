@@ -1,0 +1,58 @@
+CONTEXTOS RELEVANTES PARA ESP-NOR-01 A ESP-NOR-06
+
+Fuente de trabajo: Homologaciones_organismos_y_consultas.md y Homologaciones_contactos_y_tramites.md.
+Alcance: servicio de monitoreo agricola por imagenes, sin pulverizacion.
+
+ESP-NOR-01 - REQUISITOS PREVIOS DE OPERACION
+
+ANAC es el organismo que debe encuadrar la operacion y el registro de la aeronave. La entrada practica identificada es el Registro Nacional de Aeronaves, cuyo portal enlaza el autorregistro RPAS:
+https://www.argentina.gob.ar/anac/aeronaves/registro-nacional-de-aeronaves
+
+Antes de iniciar el tramite se deben reunir, como minimo, modelo, numero de serie, peso maximo al despegue, titular, ubicacion, altura prevista, modalidad de vuelo y descripcion de las rutas. La documentacion consultada distingue el registro del dron de la autorizacion de cada vuelo: el correo del Registro no reemplaza la consulta del encuadre operativo. Tampoco corresponde asumir que toda operacion comercial exige automaticamente licencia de piloto o CETA; primero deben definirse el equipo y la mision.
+
+La autorizacion del titular o administrador del predio y la identificacion del piloto son controles previos del proyecto. El seguro de responsabilidad civil se incorpora como criterio conservador, aunque su exigibilidad debe confirmarse segun la categoria y el escenario operativo concretos.
+
+
+ESP-NOR-02 - ALTURA DE VUELO
+
+La altura prevista es uno de los datos que ANAC y EANA pueden necesitar para encuadrar o evaluar una mision. La interfaz y el plan de vuelo deberan trabajar con altura sobre el terreno local, no solo con la altitud absoluta informada por GNSS, y deberan aplicar el limite tambien a las rutas automaticas y a las contingencias.
+
+El valor de 122 m es un techo operativo del proyecto. Una restriccion particular del lugar, una autorizacion o la informacion aeronautica vigente puede imponer un limite menor. El sistema debera considerar el relieve y el error de medicion antes de habilitar la mision.
+
+
+ESP-NOR-03 - AREA DE OPERACION Y RESTRICCIONES
+
+La fuente operativa principal para consultar afectaciones es la informacion aeronautica oficial y, cuando corresponda, el procedimiento de EANA para afectacion de espacio aereo:
+https://www.eana.com.ar/servicios
+
+La solicitud puede requerir un legajo operativo RPA/RPAS, poligono o coordenadas, fechas, horarios, altura, equipo y responsable. La anticipacion general publicada es de siete dias habiles, con plazos especiales para algunas actividades. La region de contacto debe elegirse por la FIR del lote y no unicamente por la provincia.
+
+La recepcion de una solicitud no equivale a autorizacion, y el procedimiento no se aplica automaticamente a toda mision rural: depende del lugar y del escenario de vuelo. La trayectoria no debera habilitarse hasta verificar aerodromos, helipuertos, corredores y restricciones permanentes o temporales.
+
+
+ESP-NOR-04 - ALCANCE VISUAL Y CONTROL HUMANO
+
+El criterio inicial del proyecto es mantener el vuelo dentro del alcance visual. Los documentos consultados dejan para una consulta especifica cualquier ampliacion fuera de ese alcance, debido a diferencias que deben contrastarse con las RAAC vigentes y con ANAC.
+
+La automatizacion se entiende como asistencia a una operacion supervisada, no como sustitucion del piloto. El piloto debe poder modificar o interrumpir la ruta automatica, y la operacion se limita a una aeronave por piloto. Si el lote no puede cubrirse manteniendo contacto visual, debera dividirse en varios vuelos.
+
+
+ESP-NOR-05 - SEGURIDAD DE PERSONAS Y OTRAS AERONAVES
+
+La consulta a EANA y a la autoridad del aerodromo, cuando corresponda, sirve para identificar afectaciones del espacio aereo, pero no elimina la obligacion de vigilancia durante la mision. Los documentos consultados recomiendan definir previamente ubicacion, coordenadas, horario, altura, equipo y responsable, y recuerdan que la autorizacion de espacio aereo es condicional al escenario concreto.
+
+La posicion geografica del dron no permite por si sola detectar aeronaves intrusas. Esa deteccion requiere observacion directa del piloto u observador y, eventualmente, equipamiento adicional. Por eso la interrupcion manual ante el ingreso de aeronaves, personas o terceros al area de riesgo es una condicion operativa esencial.
+
+Como criterio inicial, no se planificaran sobrevuelos de aglomeraciones ni de personas ajenas a la operacion. Ante un conflicto, el piloto debera ceder el paso, interrumpir el relevamiento y ejecutar una maniobra segura.
+
+
+ESP-NOR-06 - CONDICIONES DEL EQUIPO, ENLACE Y CONTINGENCIAS
+
+La documentacion de ENACOM exige revisar el sistema real de comunicaciones: transmisor del dron, control, video y, si se incorporan, sensores o gateway LoRa. Antes de integrar equipos deben verificarse la conformidad aplicable, la inscripcion RAMATEL cuando corresponda y la configuracion final, incluidas antenas, potencia y modulos.
+
+Un cambio de antena o configuracion puede requerir una consulta adicional. La conformidad de un componente no demuestra por si sola la de todo el montaje. Para consultas se puede utilizar homologaciones@enacom.gob.ar y la informacion oficial de homologaciones:
+https://www.enacom.gob.ar/homologaciones_p159
+
+La documentacion distingue el enlace de sensores de baja tasa del enlace de mando y video. Una perdida de mensajes LoRa no debe impedir la intervencion del piloto. El alcance, la coexistencia, las perdidas de mensajes y las contingencias deberan ensayarse antes de usar el sistema en campo.
+
+Ademas, el dron debera respetar los limites ambientales y de carga del fabricante, mantener sus sensores vitales activos y contar con mantenimiento vigente. Las respuestas ante perdida de enlace, bateria insuficiente o falla de navegacion deberan estar definidas, probadas y condicionadas a que el retorno automatico sea seguro.
