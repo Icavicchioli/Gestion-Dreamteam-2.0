@@ -1,0 +1,107 @@
+FACTIBILIDAD TÉCNICA - ESP-NOR-07 A ESP-NOR-15
+Drones para el agro - Textos para incorporar debajo de cada especificación
+Fecha de revisión: 13 de septiembre de 2026
+
+Preparado según los lineamientos de Parte 3 y el documento de especificaciones + factibilidad técnica en progreso, versión del 10 de septiembre de 2026. Se cubren las nueve especificaciones del material enviado. Las calificaciones expresan una evaluación preliminar de implementación, no ensayos ni trámites ya realizados.
+
+SOBRE DATOS PERSONALES
+
+ESP-NOR-07 — Finalidad y minimización
+
+Factibilidad Alta: Podemos implementarla mediante la planificación del polígono de relevamiento y de zonas de exclusión, ajustando la orientación y el disparo de las cámaras para reducir la captura de personas, viviendas y predios vecinos. El piloto deberá revisar la misión y suspender la captura cuando ingresen terceros. El límite de vuelo por sí solo no impide que la cámara registre fuera del lote: también debemos considerar su campo de visión. En el procesamiento conservaremos únicamente las imágenes y asociaciones necesarias para el servicio, conforme al principio de pertinencia y finalidad de la Ley 25.326. La captura incidental se tratará según ESP-NOR-08. Son medidas que podemos integrar a la planificación y al procesamiento previstos en el proyecto. [1]
+
+ESP-NOR-08 — Disociación de imágenes
+
+Factibilidad Alta para el volumen inicial del servicio: Podemos revisar las imágenes RGB y multiespectrales antes de generar los entregables y eliminar capturas innecesarias o aplicar máscaras permanentes sobre las regiones identificables. Un detector automático puede señalar candidatos, pero requiere revisión humana porque puede omitir personas o matrículas. Debemos comprobar el archivo exportado y tratar también metadatos, originales, miniaturas y copias de respaldo; una caja superpuesta en un proyecto editable no alcanza. El procesamiento local es una alternativa para evitar subir originales a terceros. La Disposición 20/2015 contempla la disociación definitiva y temprana de datos captados inevitablemente en relevamientos cartográficos o análogos. Antes de escalar, habrá que medir el tiempo de revisión por misión y su compatibilidad con el plazo de entrega de ESP-SRV-14, todavía expresado como X horas. [2]
+
+ESP-NOR-09 — Información y consentimiento
+
+Factibilidad Alta: Podemos preparar un aviso de privacidad, formularios de consentimiento y un registro asociado a cada misión, además de coordinar con el productor la información previa a trabajadores y visitantes. El aviso debe identificar al responsable y su domicilio, finalidad, destinatarios, carácter obligatorio o facultativo de las respuestas, consecuencias y derechos. Cuando corresponda consentimiento, deberá ser libre, expreso e informado y quedar documentado. La Disposición 20/2015 prevé excepciones, incluida la captación dentro de un predio de uso propio bajo condiciones de proporcionalidad, minimización e información a terceros; no debemos asumir que cualquier lote contratado encuadra automáticamente. Necesitamos una revisión jurídica inicial del aviso y del fundamento aplicable al servicio. La autorización del productor y la cartelería no sustituyen por sí solas el consentimiento cuando sea exigible. [1][2]
+
+ESP-NOR-10 — Seguridad, confidencialidad y proveedores
+
+Factibilidad Alta, con apoyo especializado para la revisión inicial: Podemos implementar cuentas individuales, permisos por función y cliente, cifrado de comunicaciones y almacenamiento, copias de respaldo y registros de acceso. Será necesario probar que un cliente no pueda acceder a archivos de otro y que podamos recuperar una misión ante fallas. La Resolución AAIP 47/2018 ofrece medidas de seguridad recomendadas para orientar ese diseño. Para contratar procesamiento o almacenamiento externo necesitaremos revisar confidencialidad, subcontratación, eliminación y usos permitidos de la información. Si existe transferencia internacional, habrá que verificar el país receptor y, cuando corresponda, garantías como cláusulas contractuales modelo. Proponemos mantener deshabilitada la reutilización de datos personales para entrenamiento hasta contar con el fundamento y los permisos correspondientes. La implementación informática está dentro del alcance del equipo, con revisión jurídica de contratos y apoyo de seguridad si excede nuestra experiencia. [3][4]
+
+ESP-NOR-11 — Conservación y derechos sobre los datos
+
+Factibilidad Alta: Podemos mantener un inventario de datos por cliente y misión, asignar vencimientos y automatizar su eliminación, incluyendo un procedimiento para las copias de respaldo. Proponemos un canal de solicitudes con verificación de identidad, responsable de seguimiento y alertas de vencimiento. La Ley 25.326 fija diez días corridos para responder el acceso desde la intimación fehaciente y cinco días hábiles para rectificación, actualización o supresión procedente; no establece un plazo único de conservación para todas las imágenes del proyecto. Necesitamos definirlo según la finalidad y las obligaciones aplicables, con revisión jurídica. Si almacenamos datos personales alcanzados, corresponde preparar el manual de tratamiento previsto para drones e inscribir al responsable y las bases ante la AAIP. Los trámites publicados se realizan por TAD y son gratuitos. Son tareas de gestión e implementación que no requieren desarrollar tecnología nueva. [1][2][5]
+
+Contacto y trámite para ESP-NOR-09 a 11: según Homologaciones_contactos_y_tramites.md, consultar a la AAIP en datospersonales@aaip.gob.ar sobre captura incidental, bases alcanzadas y proveedores de nube. Para registrar las bases, inscribir primero al responsable y luego iniciar en TAD “Inscripción de bases de datos privadas”, con su número de registro. Preparar finalidad, tipos de datos, destinatarios, conservación y proveedores. Véanse los enlaces de [5].
+
+SOBRE COMUNICACIONES
+
+ESP-NOR-12 — Banda y parámetros de emisión
+
+Factibilidad Alta, condicionada a la elección del equipo: Podemos configurar los sensores y el gateway LoRa para operar dentro de 915–928 MHz y controlar por software los parámetros permitidos. ENACOM identifica esta banda como de uso compartido sin autorización individual de uso, sujeta a las condiciones técnicas de la Resolución 4653/2019. Debemos seleccionar el modelo, antena y configuración regional y contrastar potencia, ancho de banda y emisiones con el régimen aplicable; que un equipo se comercialice como «915 MHz» no demuestra su cumplimiento. El equipo de electrónica puede realizar esta selección y conservar la configuración verificada. Si la integración exige ensayos de conformidad que no podemos realizar, necesitaremos un laboratorio reconocido. La revisión de banda se complementa con la conformidad del equipo de ESP-NOR-13. [6]
+
+Contacto para ESP-NOR-12: ENACOM, homologaciones@enacom.gob.ar. Enviar ficha de módulo y gateway, banda, potencia, antena y configuración final; pedir confirmación del encuadre técnico antes de comprar o modificar el equipo. Contacto tomado del MD de trámites de Parte 3.
+
+ESP-NOR-13 — Homologación y RAMATEL
+
+Factibilidad Media/Alta: Será alta si adquirimos equipos cuya conformidad cubra el modelo y la configuración utilizados; disminuye si desarrollamos radios propios o modificamos antenas o potencia y debemos obtener nuevos ensayos o autorizaciones. Primero pediremos al proveedor las constancias y verificaremos la inscripción aplicable en RAMATEL, incluyendo radios de mando, video y LoRa. Si no están cubiertos, corresponde consultar a ENACOM el trámite de homologación para comercialización o autorización para uso propio, según el caso, y reunir identificación del equipo, documentación técnica, antenas e informes de ensayo exigibles. Podemos preparar esa documentación, pero dependemos del proveedor, de laboratorios reconocidos y de ENACOM para completar la conformidad. Costos y plazos quedan pendientes del equipo elegido. Al 13/09/2026 hay una transición normativa: la Resolución 843/2026 postergó al 01/12/2026 la entrada en vigor del nuevo reglamento RAMATEL aprobado por la Resolución 57/2026; hasta entonces continúan las inscripciones bajo la Resolución 729/80 y concordantes. [7][8]
+
+Contactos y trámites para ESP-NOR-13, tomados de Homologaciones_contactos_y_tramites.md:
+- ENACOM: homologaciones@enacom.gob.ar. Pedir el circuito aplicable y los antecedentes aceptados; las fichas de trámites relevadas indican gestión por HERTZ, con acceso mediante TAD. Confirmar el procedimiento según la fecha de presentación y la transición indicada arriba.
+- Homologación de equipos para comercialización: https://www.enacom.gob.ar/tramites/homologacion-equipos_t127
+- Autorización de equipos para uso propio: https://www.enacom.gob.ar/tramites/autorizacion-equipos_t130
+- Registro de empresas, cuando corresponda: https://www.enacom.gob.ar/inscripcion-de-empresas_p3066
+- Para cotizar ensayos: INTI, Departamento de Comunicaciones, ensayos-ddc@inti.gob.ar; alternativas: TÜV Rheinland Argentina, productos@ar.tuv.com, y Teralab, administracion@teralab.com.ar. Solicitar normas cubiertas, muestras necesarias, documentación, costo y plazo. Verificar el alcance reconocido en https://www.enacom.gob.ar/laboratorios-acreditados_p349. El laboratorio aporta los ensayos; ENACOM administra la conformidad regulatoria.
+
+ESP-NOR-14 — Uso de LoRa y convivencia
+
+Factibilidad Alta para telemetría de baja tasa: Podemos enviar mensajes breves con identificador, número de secuencia y fecha de medición, detectar lecturas vencidas y limitar reintentos y frecuencia de envío. Mantendremos el mando y control del dron independiente de ese enlace, de modo que una falla de los sensores no bloquee la intervención del piloto. Debemos ensayar pérdida de mensajes, alcance y coexistencia en el lote real; operar en una banda compartida no garantiza disponibilidad permanente. Estas tareas están dentro de nuestras competencias en electrónica y comunicaciones. Será necesario acordar con el equipo que define ESP-TEC-08 si LoRa transportará también resultados resumidos desde el dron, ya que ese uso figura en el documento en progreso y ESP-NOR-14 menciona sensores. En ambos casos las imágenes completas se almacenarán localmente, conforme a la arquitectura propuesta. [6]
+
+SOBRE EL ALCANCE DEL DIAGNÓSTICO Y LAS RECOMENDACIONES
+
+ESP-NOR-15 — Validación profesional y prescripciones
+
+Factibilidad Alta para implementar la revisión profesional, condicionada a contar con un ingeniero agrónomo habilitado: Podemos incorporar al informe estados de «indicio» y «diagnóstico validado», junto con la identificación del profesional y las limitaciones observadas. El agrónomo deberá interpretar los resultados y determinar cuándo hacen falta inspecciones o muestreos de campo; esa tarea excede nuestras competencias como ingenieros electrónicos. Esto es coherente con ESP-SER-03 y ESP-SRV-09: una señal de estrés no confirma por sí sola una plaga. Para prescribir productos y dosis debemos comprobar la habilitación profesional y la receta exigible en la jurisdicción del lote; por ejemplo, Buenos Aires regula la receta mediante la Ley 10.699 y dispone de un sistema digital. La calificación alta corresponde a organizar esta intervención, no a dar por demostrada la precisión del algoritmo. La validación del método requiere ensayos con referencia agronómica; una eventual colaboración con INTA o una universidad debe acordarse y no equivale automáticamente a una homologación estatal. Se mantiene excluida la aplicación de fitosanitarios según ESP-SRV-16. [9]
+
+Contactos y consultas para ESP-NOR-15, tomados de Homologaciones_contactos_y_tramites.md:
+- INTA: gerencia.innovacion@inta.gob.ar y https://tecnologias.inta.gob.ar/contacto/. Solicitar derivación a un equipo de teledetección y sanidad vegetal para definir ensayos y presupuesto. Adjuntar cultivos y plagas de ESP-SER-01, sensores, resoluciones, datos disponibles y métricas; incluir trigo, que aparece en el PDF en progreso aunque el relevamiento previo de contactos se centraba en soja, maíz y sorgo.
+- Colegio profesional de la jurisdicción: consultar matrícula, habilitación territorial, firma de informes y registros para prescripción. Buenos Aires, CIAFBA Región Norte: secretariarn@ciafba.org; Sudeste: secretariarse@ciafba.org; elegir región en https://ciafba.org/regiones. Córdoba, CIAPC: https://www.ciacordoba.org.ar/contacto/, matriculación 351 593-3127. Santa Fe, CIASFE: administracion@ciasfe2.org.ar (Rosario), info@ciasfe4.org.ar (Venado Tuerto). Entre Ríos, COPAER: https://copaer.org.ar/contacto/, 0343-4223159.
+- Si el lote está en Buenos Aires: Ministerio de Desarrollo Agrario, desarrolloagrario@mda.gba.gob.ar, para consultar el registro y la receta aplicables al asesoramiento previsto. La provincia y el municipio aún deben definirse.
+- Solo si se busca un resultado sanitario oficial: SENASA, redlab@senasa.gob.ar o gestiondlv@senasa.gob.ar, para consultar el circuito específico. No se presupone que el servicio de imágenes deba registrarse como laboratorio.
+
+Los contactos proceden del relevamiento del repositorio fechado el 09/09/2026. Son canales propuestos para la gestión: no se enviaron consultas ni se obtuvieron presupuestos o aprobaciones.
+
+FUENTES DE RESPALDO
+Los números permiten conservar la trazabilidad al pegar los párrafos. Consulta: 13/09/2026.
+
+[1] Ley 25.326, texto actualizado. Arts. 4, 5, 6, 14 y 16: finalidad, consentimiento, información y derechos.
+https://www.argentina.gob.ar/normativa/nacional/64790/actualizacion
+
+[2] Disposición DNPDP 20/2015, anexo I: tratamiento de datos personales mediante drones, manual, inscripción y disociación. El PDF permite consultar el anexo completo.
+https://www.argentina.gob.ar/sites/default/files/disp_2015_20.pdf
+
+[3] Resolución AAIP 47/2018: medidas de seguridad recomendadas. Orienta la implementación; no es una certificación del sistema.
+https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-47-2018-312662/texto
+
+[4] AAIP: transferencias internacionales y garantías disponibles.
+https://www.argentina.gob.ar/transferencias-internacionales
+
+[5] AAIP: inscripción del responsable y de bases de datos privadas.
+https://www.argentina.gob.ar/servicio/inscribir-un-responsable-de-bases-de-datos-personales-privadas
+https://www.argentina.gob.ar/registrar-bases-de-datos-personales-privadas
+
+[6] ENACOM: bandas compartidas sin autorización y parámetros de emisión.
+https://enacom.gob.ar/bandas-no-licenciadas_p680
+https://www.enacom.gob.ar/multimedia/normativas/2019/res4653.pdf
+
+[7] ENACOM: área de homologaciones y consulta de registros. Para el circuito concreto se utilizó también el relevamiento local de trámites de Parte 3; corresponde confirmar requisitos al seleccionar el equipo.
+https://www.enacom.gob.ar/homologaciones_p159
+https://enacom.gob.ar/datosabiertos
+
+[8] Resolución ENACOM 843/2026: modificación del cronograma del reglamento aprobado por Resolución 57/2026.
+https://www.boletinoficial.gov.ar/detalleAviso/primera/346523/20260828
+
+[9] Buenos Aires, ejemplo jurisdiccional: Ley 10.699, art. 8, y sistema de Receta Agronómica Obligatoria. La provincia del proyecto todavía debe definirse.
+https://www.gba.gob.ar/static/agroindustria/docs/legislacion/Ley_agroquimicos_10699.pdf
+https://gba.gob.ar/desarrollo_agrario/Noticias/el_ministerio_de_desarrollo_agrario_lanz%C3%B3_un_nuevo_sistema_para_la_rao
+
+REFERENCIAS DEL REPOSITORIO UTILIZADAS
+- teorica/parte 3/Drones para el agro - Lineamientos para factibilidad técnica.docx.pdf
+- teorica/parte 3/Drones para el agro - Especificaciones + factibilidad técnica  en progreso.pdf
+- teorica/parte 3/Homologaciones_organismos_y_consultas.md
+- teorica/parte 3/Homologaciones_contactos_y_tramites.md
+- teorica/parte 2/Especificaciones_marco_normativo_revisadas.md
