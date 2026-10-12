@@ -1,0 +1,425 @@
+% DIAGRAMAS FUNCIONALES POR OBJETO - TC024
+% Uso independiente: compilar con pdflatex.
+% Para integrar en el TP, agregar al preámbulo:
+% \usepackage{tikz,graphicx,tabularx,booktabs,array}
+% \usepackage[hidelinks]{hyperref}
+% \usetikzlibrary{arrows.meta,calc,fit,backgrounds,babel}
+% En el cuerpo: \def\TPintegrado{1}\input{diseno_conceptual.tex}
+% Los cinco diagramas se pueden mover por separado. No usan imágenes externas.
+\ifdefined\TPintegrado\else
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{tikz,graphicx,tabularx,booktabs,array}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{arrows.meta,calc,fit,backgrounds,babel}
+\pagestyle{plain}
+\setlength{\parindent}{0pt}
+\begin{document}
+\fi
+\begingroup
+\setlength{\parskip}{5pt}
+\renewcommand{\arraystretch}{1.18}
+\newcommand{\fuente}[2]{\href{#1}{\textcolor{tpazul}{#2}}}
+\newcommand{\TPnota}{\small Precios de referencia al 08/10/2026. USD, salvo indicación expresa. Sin envío, importación ni impuestos. Las reservas propias no son cotizaciones.\par\medskip}
+\definecolor{tpazul}{HTML}{243E58}
+\definecolor{tpverde}{HTML}{E6F3EF}
+\definecolor{tpclaro}{HTML}{EAF0F7}
+\definecolor{tpenergia}{HTML}{FFF0D9}
+\tikzset{
+ bloque/.style={draw=tpazul!65,fill=tpclaro,rounded corners=3pt,
+  text width=2.5cm,minimum height=1.15cm,inner sep=5pt,
+  align=center,font=\sffamily\small,execute at begin node={\hyphenpenalty=10000}},
+ sensor/.style={bloque,fill=tpverde},
+ energia/.style={bloque,fill=tpenergia},
+ externo/.style={bloque,fill=white,draw=tpazul!40},
+ flujo/.style={-{Stealth[length=2mm]},line width=.8pt,draw=tpazul},
+ potencia/.style={flujo,dashed,draw=orange!70!black},
+ relacion/.style={line width=.8pt,draw=tpazul},
+ rotulo/.style={font=\sffamily\scriptsize,fill=white,inner sep=2pt,text=tpazul},
+ marco/.style={draw=tpazul!35,rounded corners=5pt,fill=black!1,inner sep=12pt},
+ titulo/.style={font=\sffamily\bfseries\large,text=tpazul,anchor=west}
+}
+\newcommand{\TPsalto}{\ifdefined\TPintegrado\else\clearpage\fi}
+
+
+\begin{center}
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+\node[titulo] at (-1.5,4.4) {Parche descartable};
+\node[externo] (sudor) at (0,0) {Sudor\\de la piel};
+\node[sensor] (cap) at (3.6,0) {Captación\\y distribución\\en papel};
+\node[sensor] (glu) at (8,2.7) {Zona de glucosa\\Reactivo};
+\node[sensor] (lac) at (8,.9) {Zona de lactato\\Reactivo};
+\node[sensor] (ph) at (8,-.9) {Zona de pH\\Indicador};
+\node[sensor] (cor) at (8,-2.7) {Zona de cortisol\\Electrodos y MIP};
+\node[externo] (opt) at (13.1,.9) {Lectura óptica\\por el lector};
+\node[externo] (ele) at (13.1,-2.7) {Lectura eléctrica\\por el lector};
+\draw[flujo] (sudor)--(cap);
+\draw[relacion] (cap.east)--(5.6,0);
+\draw[relacion] (5.6,-2.7)--(5.6,2.7);
+\foreach \n in {glu,lac,ph,cor} {\draw[flujo] (5.6,0|-\n.west)--(\n.west);}
+\draw[relacion] (glu.east)--(10.1,2.7)--(10.1,-.9)--(ph.east);
+\draw[relacion] (lac.east)--(10.1,.9);
+\draw[flujo] (10.1,.9)--node[rotulo,above]{Color}(opt.west);
+\draw[flujo] (cor.east)--node[rotulo,above]{Señal eléctrica}(ele.west);
+\node[font=\sffamily\small,text=tpazul] (base) at (5.8,-4.1) {Soporte y adhesivo en contacto con la piel};
+\begin{scope}[on background layer]
+\node[marco,fit=(cap)(glu)(lac)(ph)(cor)(base)] {};
+\end{scope}
+\end{tikzpicture}}
+\end{center}
+\TPnota
+{\small\noindent
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{3.4cm} >{\raggedright\arraybackslash}p{3.3cm}@{}}
+\toprule
+\textbf{Componente / compra de referencia} & \textbf{Precio publicado} & \textbf{Fuente / estado}\\
+\midrule
+Papel Whatman grado 1; 100 discos de 90 mm & USD 29,00 por paquete; USD 0,29 por disco & \fuente{https://www.taylorscientific.com/catalog/product/view/id/6802/s/filter-paper-cytiva-grade-no-1-qualitative-medium-retention/category/700/2026-12-31}{Taylor Scientific}\\
+Tratamiento de canales y material de soporte & A cotizar por lote & Proceso por definir\\
+Reactivos para glucosa: enzima y sistema de color & A cotizar por lote & \fuente{https://www.sigmaaldrich.com/US/en/product/sigma/g2133}{Sigma-Aldrich}; formulación por definir\\
+Reactivos para lactato y zona de pH & A cotizar por lote & \fuente{https://doi.org/10.1038/s41378-023-00514-2}{Referencia científica}; no es fuente de precio\\
+Celda impresa de carbono, sin MIP; paquete de 50 & \$159,00 por paquete* & \fuente{https://mtxlabsglobal.com/product/screen-printed-carbon-electrode-pack-of-10/}{MTX Labs}\\
+Modificación del electrodo con MIP y reactivos auxiliares & A cotizar por lote & Desarrollo específico\\
+Adhesivo de contacto cutáneo y soporte & A cotizar según área & Material y proveedor por definir\\
+\bottomrule
+\end{tabularx}}
+\small
+*La página de MTX muestra el símbolo \$ sin identificar la moneda en el texto consultado. El valor no se suma al presupuesto en USD hasta confirmar moneda y contenido del paquete.
+
+\textbf{Costo del parche: pendiente.} El papel y la celda son referencias para ensayos; no forman un sensor de cortisol listo para usar. El tamaño, los reactivos y la compatibilidad se deben definir. Tampoco se supone que un disco equivalga a un parche.
+
+Para calcular el costo por parche: costo del lote de materiales, preparación y control dividido por la cantidad de parches aceptados. El sobre inicial se cuenta en la caja; cada recambio requiere su propio sobre. Los reactivos se compran por lote y su costo se distribuye entre los parches fabricados.
+
+\textbf{Uso y recambio.} Se reemplaza el parche completo: papel, zonas químicas, electrodos y adhesivo. Los reactivos vienen incorporados; el usuario no los repone. El lector y la pulsera se conservan. La \fuente{https://doi.org/10.1038/s41378-023-00514-2}{referencia de Cheng et al. (2023)} describe un chip de papel apto para uso descartable.
+
+\textbf{Vida útil por validar.} Se deben ensayar la duración en uso y el vencimiento del parche cerrado. Una zona que ya cambió de color no garantiza una medición independiente de sudor nuevo. La frecuencia de recambio y la cantidad de lecturas quedan pendientes; todavía no se puede calcular el consumo mensual.
+
+\TPsalto
+\begin{center}
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+\node[titulo] at (-1.5,2.4) {Lector reutilizable del brazo};
+\node[externo] (color) at (0,.9) {Zonas de color\\del parche};
+\node[externo] (cort) at (0,-.9) {Electrodos\\del parche};
+\node[bloque] (optica) at (4,.9) {Iluminación\\y sensor de color};
+\node[bloque] (pot) at (4,-.9) {Potenciostato\\Lectura eléctrica};
+\node[bloque] (mc) at (8.1,0) {Microcontrolador\\Adquisición\\y calibración};
+\node[bloque,text width=1.8cm] (ble) at (11.8,0) {Enlace\\BLE};
+\node[externo,text width=1.6cm] (app) at (15,0) {Aplicación\\móvil};
+\node[energia,text width=6cm] (pwr) at (7.7,-3.2) {Batería recargable\\Carga, protección y regulación};
+\draw[flujo] (color)--(optica);
+\draw[flujo,<->] (cort)--(pot);
+\draw[flujo] (optica.east)--++(.5,0)|-([yshift=.27cm]mc.west);
+\draw[flujo] (pot.east)--++(.5,0)|-([yshift=-.27cm]mc.west);
+\draw[flujo] (mc)--(ble);
+\draw[flujo] (ble)--(app);
+\draw[potencia] (pwr.north)--(pwr.north|-mc.south);
+\draw[potencia] (pwr.west)--(2.2,-3.2)--(2.2,.45)--([yshift=-.45cm]optica.west);
+\draw[potencia] (2.2,-1.35)--([yshift=-.45cm]pot.west);
+\draw[potencia] (pwr.east)-|(ble.south);
+\node[rotulo] at (10.5,-2.05) {Energía};
+\node[font=\sffamily\small,text=tpazul] (base) at (7.5,-4.4) {Carcasa opaca y acople al parche};
+\begin{scope}[on background layer]
+\node[marco,fit=(optica)(pot)(mc)(ble)(pwr)(base)] {};
+\end{scope}
+\end{tikzpicture}}
+\end{center}
+\TPnota
+{\small\noindent
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X c r r >{\raggedright\arraybackslash}p{2.6cm}@{}}
+\toprule
+\textbf{Componente / referencia} & \textbf{Cant.} & \textbf{USD/u} & \textbf{USD total} & \textbf{Fuente o base}\\
+\midrule
+
+Sensor de color AS7341, un canal físico por zona & 3 & 18,95 & 56,85 & \fuente{https://www.adafruit.com/product/4698}{Adafruit}\\
+Selector de canales I2C TCA9548A & 1 & 6,95 & 6,95 & \fuente{https://www.adafruit.com/product/2717}{Adafruit}\\
+Kit de lectura electroquímica EVAL-AD5940ELCZ & 1 & 499,46 & 499,46 & \fuente{https://www.digikey.com/en/products/detail/analog-devices-inc/EVAL-AD5940ELCZ/10124785}{DigiKey}\\
+Controlador BLE Feather nRF52840 Express & 1 & 24,95 & 24,95 & \fuente{https://www.adafruit.com/product/4062}{Adafruit}\\
+Batería LiPo de referencia, 400 mAh & 1 & 6,95 & 6,95 & \fuente{https://www.adafruit.com/product/3898}{Adafruit}\\
+Carga y regulación básica de la placa & 1 & Incluida & 0,00 & Incluida en Feather\\
+\midrule
+\textbf{Subtotal con precios publicados} & & & \textbf{595,16} & \\
+\midrule
+Carcasa opaca y acople mecánico & 1 juego & 20--40 & 20--40 & Reserva propia\\
+Iluminación adicional y referencia de color & 1 juego & 5--15 & 5--15 & Reserva propia\\
+Contactos, cables y ajustes de alimentación & 1 juego & 5--15 & 5--15 & Reserva propia\\
+\midrule
+\textbf{Compra y montaje material estimados} & & & \textbf{625,16--665,16} & \\
+\bottomrule
+\end{tabularx}}
+
+\small
+El kit electroquímico es equipo de evaluación de laboratorio: su tamaño y consumo no representan el lector final. Su precio se incluye una sola vez para poder evaluar la función de cortisol. El kit incluye un controlador de ensayo; la placa Feather se presupone adicional para la comunicación BLE.
+
+Los bloques de microcontrolador y BLE del diagrama pueden estar en la misma placa. No se compran dos módulos por dibujar dos funciones. La batería tiene protección; la carga básica se incluye en la placa. Los ajustes necesarios para integrar el kit quedan dentro de la reserva de alimentación.
+
+El total no incluye firmware, calibración, diseño mecánico ni mano de obra. La capacidad de batería es una referencia de compra, no una autonomía demostrada.
+
+\TPsalto
+\begin{center}
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+\node[titulo] at (-1.5,4.3) {Pulsera reutilizable};
+\node[sensor] (ppg) at (0,2.5) {Sensor óptico PPG\\Frecuencia cardíaca};
+\node[sensor] (imu) at (0,.5) {Acelerómetro\\y giróscopo};
+\node[sensor] (tmp) at (0,-1.5) {Temperatura\\de piel};
+\node[bloque] (mc) at (5.2,.5) {Microcontrolador\\Adquisición\\y filtrado};
+\node[bloque] (ble) at (9.1,.5) {Comunicación\\BLE};
+\node[externo] (app) at (13,.5) {Aplicación\\móvil};
+\node[energia,text width=5.5cm] (pwr) at (5.5,-3.6) {Batería recargable\\Carga, protección y regulación};
+\draw[flujo] (ppg.east)--(2.3,2.5)|-([yshift=.38cm]mc.west);
+\draw[flujo] (imu)--(mc);
+\draw[flujo] (tmp.east)--(2.3,-1.5)|-([yshift=-.38cm]mc.west);
+\draw[flujo] (mc)--(ble);
+\draw[flujo] (ble)--(app);
+\draw[potencia] (pwr.north)--(pwr.north|-mc.south);
+\draw[potencia] (pwr.east)-|(ble.south);
+\draw[potencia] (pwr.west)--(-2.1,-3.6)--(-2.1,2.5)--(ppg.west);
+\draw[potencia] (-2.1,.5)--(imu.west);
+\draw[potencia] (-2.1,-1.5)--(tmp.west);
+\node[rotulo] at (6.7,-2.15) {Energía};
+\node[font=\sffamily\small,text=tpazul] (base) at (4.3,-4.85) {Carcasa, contacto con la piel y correa};
+\begin{scope}[on background layer]
+\node[marco,fit=(ppg)(imu)(tmp)(mc)(ble)(pwr)(base),inner xsep=22pt] {};
+\end{scope}
+\end{tikzpicture}}
+\end{center}
+\TPnota
+{\small\noindent
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X c r r >{\raggedright\arraybackslash}p{2.6cm}@{}}
+\toprule
+\textbf{Componente / referencia} & \textbf{Cant.} & \textbf{USD/u} & \textbf{USD total} & \textbf{Fuente o base}\\
+\midrule
+
+Módulo PPG MAX30101 + MAX32664 & 1 & 48,95 & 48,95 & \fuente{https://www.sparkfun.com/sparkfun-pulse-oximeter-and-heart-rate-sensor-max30101-max32664-qwiic.html}{SparkFun}\\
+Sensor de movimiento LSM6DSOX & 1 & 11,95 & 11,95 & \fuente{https://www.adafruit.com/product/4438}{Adafruit}\\
+Sensor de temperatura TMP117 & 1 & 11,50 & 11,50 & \fuente{https://www.adafruit.com/product/4821}{Adafruit}\\
+Controlador BLE Feather nRF52840 Express & 1 & 24,95 & 24,95 & \fuente{https://www.adafruit.com/product/4062}{Adafruit}\\
+Batería LiPo de referencia, 400 mAh & 1 & 6,95 & 6,95 & \fuente{https://www.adafruit.com/product/3898}{Adafruit}\\
+Carga y regulación básica de la placa & 1 & Incluida & 0,00 & Incluida en Feather\\
+\midrule
+\textbf{Subtotal con precios publicados} & & & \textbf{104,30} & \\
+\midrule
+Carcasa, ventana óptica, contacto térmico y correa & 1 juego & 20--40 & 20--40 & Reserva propia\\
+Cables, contactos y ajustes de alimentación & 1 juego & 5--15 & 5--15 & Reserva propia\\
+\midrule
+\textbf{Compra y montaje material estimados} & & & \textbf{129,30--159,30} & \\
+\bottomrule
+\end{tabularx}}
+
+\small
+Los módulos sirven como referencia para evaluación. El PPG y su algoritmo deben verificarse en la muñeca; no se supone que una demostración en el dedo tenga el mismo desempeño. La temperatura de piel requiere contacto térmico y no se obtiene del sensor interno del PPG.
+
+El total no incluye firmware, ensayos de señal, diseño mecánico ni mano de obra. Las reservas propias deben reemplazarse por cotizaciones del montaje seleccionado.
+
+\TPsalto
+\begin{center}
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+\node[titulo] at (-1.5,2.2) {Aplicación móvil};
+\node[externo] (in) at (0,0) {Datos del lector\\y de la pulsera};
+\node[bloque] (rx) at (3.9,0) {Recepción\\por BLE};
+\node[bloque] (prep) at (7.8,0) {Sincronización\\y control de calidad};
+\node[bloque] (model) at (11.7,0) {Análisis\\y estimaciones};
+\node[bloque] (hist) at (7.8,-2.5) {Historial\\de mediciones};
+\node[bloque] (ui) at (11.7,-2.5) {Visualización\\y avisos};
+\node[externo] (usr) at (15.6,-2.5) {Usuario};
+\draw[flujo] (in)--(rx);
+\draw[flujo] (rx)--(prep);
+\draw[flujo] (prep)--(model);
+\draw[flujo] (prep)--(hist);
+\draw[flujo] (hist.east)--++(.5,0)|-([yshift=-.4cm]model.west);
+\draw[flujo] (model)--(ui);
+\draw[flujo] (hist.south)--++(0,-.65)-|(ui.south);
+\draw[flujo] (ui)--(usr);
+\begin{scope}[on background layer]
+\node[marco,fit=(rx)(prep)(model)(hist)(ui),inner ysep=24pt] {};
+\end{scope}
+\end{tikzpicture}}
+\end{center}
+\small
+\textbf{Componentes de software y estimación inicial de trabajo.} Son partidas de implementación posteriores al diseño conceptual, no piezas para comprar por usuario. El escenario adopta un costo laboral de \textbf{ARS 30.625 por hora}, calculado a partir de un salario local de referencia. Las horas son \textbf{estimaciones propias de planificación}; la base salarial se explica en la sección de ingeniería.
+
+\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X r r@{}}
+\toprule
+\textbf{Componente} & \textbf{Horas de implementación} & \textbf{Millones de ARS}\\
+\midrule
+Recepción BLE y vinculación con ambos equipos & 20--40 & 0,61--1,23\\
+Sincronización, calidad y datos faltantes & 20--40 & 0,61--1,23\\
+Historial y almacenamiento local & 30--60 & 0,92--1,84\\
+Interfaz, visualización, avisos y ayuda & 40--80 & 1,23--2,45\\
+Exploración inicial de análisis y modelos & 80--160 & 2,45--4,90\\
+Integración y pruebas de la aplicación & 40--80 & 1,23--2,45\\
+\midrule
+\textbf{Implementación inicial de la aplicación} & \textbf{230--460} & \textbf{7,04--14,09}\\
+\bottomrule
+\end{tabularx}
+
+\textbf{Base del cálculo:} horas por tarea multiplicadas por ARS 30.625/h. Valores en millones de pesos, redondeados a dos decimales; los totales se calculan antes del redondeo. Se supone una primera plataforma móvil, almacenamiento local y datos de ensayo disponibles. La nube queda fuera de este escenario.
+
+El bloque de modelos cubre una exploración inicial; no compromete precisión ni validación de los horizontes de 30--60 minutos y 1--8 horas. La obtención de datos, las referencias clínicas y una posible integración con CGM deben cotizarse por separado. Las horas anteriores no incluyen firmware de los dispositivos ni las horas de diseño conceptual de la tabla siguiente. La exploración de modelos aquí comprende programación y ensayos iniciales; el diseño conceptual solo define sus entradas, salidas y criterios de evaluación.
+
+\textbf{Fuente de costos:} estimación propia de horas y costo laboral; referencias salariales locales detalladas más adelante. Es una asignación de costo interno, pendiente de cotización si el desarrollo se contrata a un tercero.
+
+\TPsalto
+\begin{center}
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+\node[titulo] at (-1.6,2.3) {Caja del producto};
+\node[bloque,text width=3.2cm] (caja) at (5.5,.3) {Caja exterior};
+\node[bloque,text width=3.2cm] (guia) at (0,-2.3) {Guía de inicio\\y manual};
+\node[bloque,text width=3.2cm] (proteccion) at (5.5,-2.3) {Protección interna\\y alojamientos};
+\node[bloque,text width=3.2cm] (etiqueta) at (11,-2.3) {Etiquetas\\e identificación};
+\node[externo,text width=3.2cm] (equipos) at (0,-5.4) {Lector y pulsera};
+\node[externo,text width=3.2cm] (parche) at (5.5,-5.4) {Parche\\en sobre individual};
+\node[externo,text width=3.2cm] (accesorios) at (11,-5.4) {Accesorios\\de carga};
+\draw[relacion] (caja.south)--(5.5,-1.05);
+\draw[relacion] (0,-1.05)--(11,-1.05);
+\draw[relacion] (0,-1.05)--(guia.north);
+\draw[relacion] (5.5,-1.05)--node[rotulo,right]{Contiene}(proteccion.north);
+\draw[relacion] (11,-1.05)--(etiqueta.north);
+\draw[relacion] (proteccion.south)--(5.5,-3.8);
+\draw[relacion] (0,-3.8)--(11,-3.8);
+\draw[relacion] (0,-3.8)--(equipos.north);
+\draw[relacion] (5.5,-3.8)--node[rotulo,right]{Aloja y protege}(parche.north);
+\draw[relacion] (11,-3.8)--(accesorios.north);
+\end{tikzpicture}}
+\end{center}
+\TPnota
+{\small\noindent
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X c r r >{\raggedright\arraybackslash}p{2.6cm}@{}}
+\toprule
+\textbf{Componente / referencia} & \textbf{Cant.} & \textbf{USD/u} & \textbf{USD total} & \textbf{Fuente o base}\\
+\midrule
+
+Caja exterior de cartón, tamaño por definir & 1 & 2--4 & 2--4 & Reserva propia\\
+Protección interna y alojamientos & 1 juego & 2--4 & 2--4 & Reserva propia\\
+Sobre protector para un parche inicial & 1 & 0,5--1 & 0,5--1 & Reserva propia\\
+Cable USB A a Micro-B de referencia & 2 & 2,95 & 5,90 & \fuente{https://www.adafruit.com/product/592}{Adafruit}\\
+Guía de inicio y manual impresos & 1 juego & 0,5--1,5 & 0,5--1,5 & Reserva propia\\
+Etiquetas e identificación & 1 juego & 0,2--0,5 & 0,2--0,5 & Reserva propia\\
+\midrule
+\textbf{Paquete estimado, con dos cables} & & & \textbf{11,10--16,90} & \\
+\bottomrule
+\end{tabularx}}
+
+\small
+Como referencia comercial de escala, \fuente{https://www.uline.com/Product/AdvSearchResult?KeywordTyped=4x4x2&keywords=4x4x2}{Uline publica la caja S-460 a USD 0,68 por unidad}, con compra mínima de 100. No se adopta ese precio en el escenario de una unidad: el tamaño final y la cantidad de compra todavía no están definidos. La reserva de USD 2--4 es propia, no una cotización de Uline.
+
+El sobre se repone con cada parche. No se presupone una barrera de conservación validada. Los dispositivos alojados se contabilizan en sus respectivas tablas, no otra vez como empaque. Se supone una fuente USB existente; una fuente dedicada se debe agregar si forma parte de la entrega.
+
+\textbf{Escala económica preliminar.} Lector, pulsera y paquete suman \textbf{USD 765,56--841,36} en materiales y reservas de montaje. Este importe incluye un kit electroquímico de evaluación. No incluye el parche funcional, firmware, mano de obra de hardware, ensayos ni logística. La aplicación se estima por separado.
+
+\TPsalto
+\subsubsection*{Horas de ingeniería para el diseño conceptual}
+\small
+La estimación cubre bloques, selección preliminar de partes, interfaces y documentación.
+Se expresa en \textbf{horas-persona}, con una primera propuesta y una ronda de revisión.
+Las horas surgen de una estimación propia por tareas, no de las fuentes salariales.
+
+\textbf{Base salarial argentina.} Se adopta \textbf{ARS 3.500.000 brutos mensuales}
+por profesional y 160 horas de trabajo asignables al mes. Se agrega una previsión
+presupuestaria del 40\% para costos laborales adicionales, incluido aguinaldo.
+Es un supuesto global, no una alícuota legal ni una liquidación de haberes.
+\[
+\mbox{Costo por hora} = \frac{3.500.000\times 1{,}40}{160}
+= \mathbf{30.625\;ARS/h}
+\]
+Se usa una base común para estimar el orden de magnitud; no afirma que todas las
+especialidades cobren lo mismo. No es sueldo neto ni tarifa de consultoría.
+
+\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.4cm}>{\raggedright\arraybackslash}X r r@{}}
+\toprule
+\textbf{Objeto / trabajo} & \textbf{Actividades incluidas} & \textbf{Horas} & \textbf{Millones ARS}\\
+\midrule
+Parche descartable & Principios de medición y materiales (12--20 h); canales, zonas y soporte (12--20 h); interfaces y requisitos de calibración (12--24 h); documentación y revisión (6--12 h). & 42--76 & 1,29--2,33\\
+\addlinespace
+Lector del brazo & Óptica y lectura electroquímica (8--16 h); control, BLE y energía (8--16 h); carcasa y acople (8--16 h); interfaces y revisión (8--12 h). & 32--60 & 0,98--1,84\\
+\addlinespace
+Pulsera & Sensores (8--12 h); control, BLE y energía (8--12 h); contacto con la piel, carcasa y correa (8--16 h); documentación y revisión (6--10 h). & 30--50 & 0,92--1,53\\
+\addlinespace
+Aplicación móvil & Requisitos e interfaces (8--12 h); manejo de datos (8--16 h); pantallas preliminares (6--12 h); entradas, salidas y evaluación de modelos (8--16 h). & 30--56 & 0,92--1,72\\
+\addlinespace
+Caja del producto & Distribución y dimensiones (4--8 h); materiales y protección (4--8 h); etiquetas y contenido de la guía (2--4 h). & 10--20 & 0,31--0,61\\
+\addlinespace
+Revisión entre objetos & Compatibilidad de interfaces, consolidación de listas, presupuesto y supuestos del conjunto. & 10--20 & 0,31--0,61\\
+\midrule
+\multicolumn{2}{@{}l}{\textbf{Total de diseño conceptual}} & \textbf{154--282} & \textbf{4,72--8,64}\\
+\bottomrule
+\end{tabularx}
+
+\textbf{Referencias salariales.} \fuente{https://cessi.org.ar/wp-content/uploads/2026/07/OPSSI-Reporte-Industria-Software-1er.-trim.-2026.pdf}{CESSI/OPSSI, julio de 2026},
+págs. 17 y 25: salario bruto medio móvil del sector software a marzo de 2026,
+ARS 3.738.000, ajustado para excluir SAC.
+\fuente{https://hroasis.com/wp-content/uploads/2025/12/HR_Oasis_Reporte_Salarios_Tech_Argentina_2026.pdf}{HR Oasis, reporte 2026},
+pág. 4: software senior en contratación local, ARS 2.800.000--5.500.000 brutos/mes.
+Son referencias del sector tecnológico; extender una base común a electrónica,
+química y diseño es un supuesto del TP, pendiente de cotización por especialidad.
+Los ARS 3.500.000 adoptados no son un promedio medido a octubre.
+
+\textbf{Alcance y totales.} No incluye PCB, simulaciones, planos de fabricación,
+formulaciones químicas, preparación de MIP, firmware, construcción ni validación.
+Diseño conceptual e implementación de la app son etapas distintas: juntas suman
+\textbf{384--742 h} y \textbf{ARS 11,76--22,72 millones} de trabajo valorizado.
+No es el presupuesto completo del producto. Los materiales en USD se mantienen
+separados hasta definir una moneda y un tipo de cambio para el flujo de fondos.
+
+\textbf{Uso del presupuesto.} Estimación preparada el 08/10/2026, con importes
+redondeados a dos decimales y totales calculados antes del redondeo.
+Las horas no equivalen a un plazo calendario. Si el equipo académico no cobra,
+su trabajo se registra como aporte valorizado, separado del desembolso real.
+
+% FUENTE DE VERDAD: PDF original del TP, páginas 5, 9 y 10.
+% Mantener parche descartable completo, lector reutilizable y pulsera reutilizable.
+% NOTAS PARA EL FUTURO FLUJO DE FONDOS (no se imprimen).
+% El flujo muestra cobros y pagos por período, por ejemplo por mes.
+% Todavía faltan el cronograma, modalidad de contratación, ventas y financiación.
+% BASE LABORAL DE PLANIFICACIÓN:
+% Salario bruto mensual adoptado = ARS 3.500.000 por profesional.
+% Horas asignables = 160/mes; factor de costo laboral supuesto = 1,40.
+% Costo mensual equivalente = ARS 4.900.000; costo horario = ARS 30.625.
+% El 40% es una previsión global, no una tasa legal comprobada; incluye SAC.
+% No sumar nuevamente aguinaldo/cargas al costo valorizado de estas tablas.
+% Para un flujo real, reemplazar la provisión por pagos efectivos y sus fechas.
+% Diseño conceptual: 154--282 h = ARS 4.716.250--8.636.250.
+% Implementación app: 230--460 h = ARS 7.043.750--14.087.500.
+% Total parcial de trabajo: 384--742 h = ARS 11.760.000--22.723.750.
+% Sensibilidad sugerida: salario base +/-25%, manteniendo las mismas horas.
+% Distribuir las tareas y sus pagos en meses antes de cargar el flujo.
+% Si se contrata personal mensual, presupuestar toda la dedicación contratada,
+% incluidas horas no asignadas; no pagar ficticiamente solo las horas del cuadro.
+% Si se terceriza, reemplazar el costo interno por honorarios y pagos cotizados.
+% No sumar simultáneamente sueldos y horas valorizadas para el mismo trabajo.
+% Trabajo académico no remunerado: aporte en especie, sin salida de efectivo.
+% REACTIVOS Y PARCHES:
+% El usuario reemplaza el parche completo, no rellena reactivos.
+% Vida útil en uso, vencimiento cerrado y conservación: pendientes de ensayos.
+% Cantidad de recambios/mes = usuarios activos x recambios por usuario/mes.
+% No fijar aún recambios por día: el rendimiento funcional no está validado.
+% Costo de consumo mensual = cantidad usada x costo unitario del parche completo.
+% Este costo incluye reactivos, papel, electrodos/MIP, adhesivo, fabricación,
+% control y sobre; no agregar otra partida de reactivos para esos mismos parches.
+% La caja ya incluye el sobre del parche inicial: no duplicarlo al sumar el kit.
+% Para fabricación propia, registrar compras por lote y pagos de preparación,
+% considerando stock, rendimiento, mínimos de compra y mermas por vencimiento.
+% Compra de lote y consumo mensual no son el mismo momento de salida de caja.
+% Para parches comprados terminados, registrar el pago de la reposición.
+% Lector, pulsera y equipo de evaluación: compras iniciales según el cronograma;
+% no repetir su compra cada vez que se cambia el parche.
+% El kit de evaluación no representa el costo industrial de cada futuro lector.
+% Actualizar salarios y cotizaciones antes de cerrar el presupuesto.
+% Elegir ARS o USD y declarar tipo de cambio/fecha para cada conversión.
+% Mantener coherentes inflación y moneda; no sumar directamente ARS con USD.
+% Saldo final del mes = saldo inicial + cobros - pagos.
+% La depreciación contable no es una nueva salida de efectivo.
+
+\endgroup
+\ifdefined\TPintegrado
+\let\TPfin\relax
+\else
+\def\TPfin{\end{document}}
+\fi
+\TPfin
