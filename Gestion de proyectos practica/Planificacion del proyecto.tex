@@ -1,0 +1,101 @@
+\section{Planificación del proyecto}
+{\consigna
+En esta sección se debe analizar la forma y dinámica bajo la cual el proyecto va a realizarse.
+}
+
+\subsection{Plan de producto}
+{\consigna
+Un plan de producto es un documento estratégico que describe el ciclo de vida de un producto, desde su concepción y diferentes *releases* hasta su retiro del mercado.\\
+El primer *release* lo definiremos como MVP.\\
+Normalmente se lo representa como un gráfico evolutivo, el *Roadmap* del Producto, en el cual se visualizan las diferentes mejoras o prestaciones que se irán incorporando en cada nuevo *release*.\\
+Un plan de producto puede ser muy abarcativo, incluyendo estrategias, plan de desarrollo, marketing, etc. A los fines de este documento, se desea describir la evolución técnico-funcional del producto a través de los diferentes *releases*.
+}
+
+\subsubsection{MVP: objetivo y alcance}
+{\consigna
+Un MVP es un Producto Mínimo Viable, es decir, tiene que ser un producto y contemplar las mínimas funcionalidades que se consideran necesarias para que pueda prestar servicios. Debe funcionar, pero con las mínimas prestaciones para que sea útil.\\
+El **Objetivo del MVP** define conceptualmente qué debe atender el MVP una vez funcionando. El **Alcance** debe describir todas las prestaciones que debe ofrecer.\\
+Normalmente, en una metodología ágil, se busca que el primer resultado sea un MVP y que luego, en sucesivas iteraciones o *Sprints*, se vayan incorporando más prestaciones, completando el alcance amplio deseado. De esta forma, se pueden “ver” resultados tempranamente y revalidar el objetivo del proyecto, costos, etc.
+}
+
+%  Se elimina esta subsección en la v2.6    27-8-2026
+%\paragraph{Revalidación de costos}
+%{\it
+%Durante la ejecución del proyecto hasta obtener el MVP, ocurren cambios, redefiniciones, replanteos y rediseños que afectan los costos. Es necesario actualizar los costos estimados anteriormente y su impacto en el análisis financiero.
+%}
+
+\subsubsection{Versiones evolutivas}
+\paragraph{Versión evolutiva 1, 2, N: objetivo y alcance}
+{\consigna
+En las sucesivas iteraciones, se irán incorporando mejoras y funcionalidades al MVP orientadas a llegar al producto deseable para comercializar o prestar servicios.\\
+Debe planificarse mejoras acotadas por iteración, evaluando la cantidad de mejoras y el costo de iterar. Por ejemplo, si obtener una nueva versión del producto implica esfuerzo de importación, manufactura, etc., quizás resulte mejor acotar la cantidad de iteraciones; si en cambio esos costos son bajos, quizás convenga incorporar pocas funcionalidades por iteración para facilitar las pruebas y mitigar riesgos.\\
+Luego de cada iteración, debe analizarse el impacto en los costos, tal como se hizo en el MVP.
+}
+
+
+\subsection{Organización del proyecto}
+{\consigna
+Aquí debe describirse a grandes rasgos cómo se organizará el proyecto a nivel Equipo, Recursos y Dinámica.\\
+Debe ser breve (ej.: media carilla) y debe transmitir una foto rápida de cómo se desarrollará el proyecto.
+}
+\subsubsection{Equipo de trabajo}
+{\consigna
+Aquí debe describirse cómo se organizará el proyecto a nivel grupo humano.\\
+La definición debe ser principalmente a nivel de roles. Si hay nombres definidos, se puede mencionar quién ocupará determinado rol.\\
+Una persona puede ocupar varios roles, eso suele suceder, pero es importante entenderlo y expresarlo. Hay roles que son incompatibles para ser realizados por una misma persona, por ejemplo: desarrollar el firmware o software y probarlo.\\
+Incluir un organigrama es altamente recomendable.
+}
+\subsubsection{Recursos Necesarios}
+{\consigna
+Aquí puede incluirse un párrafo describiendo las subsecciones siguientes y conceptos en común.\\
+En las siguientes subsecciones debe describirse un inventario de recursos necesarios para poder realizar el proyecto y, en lo posible, quién (rol) será el responsable de proveerlos. Si no se sabe o no está definido, puede quedar pendiente (TBD).
+}
+    \paragraph{Infraestructura}
+    {\consigna
+    Enumerar los recursos de infraestructura necesarios.\\
+    Ej.: oficina, *datacenter*, mesa de pruebas, etc.\\
+    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
+    }
+
+    \paragraph{Equipamiento}
+    {\consigna
+    Enumerar el equipamiento necesario.\\
+    Ej.: Laboratorio, *tester*, mesa de soldado, kit de desarrollo, computadoras, etc.\\
+    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
+    }
+
+    \paragraph{Insumos}
+    {\consigna
+    Enumerar los insumos necesarios.\\
+    Ej.: stock de componentes, soldadores, estaño, papelería, etc.\\
+    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
+    }
+
+    \paragraph{Servicios}
+    {\consigna
+    Enumerar los servicios necesarios.\\
+    Ej.: Contador, telefonía, electricidad, limpieza, etc.\\
+    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
+    }
+
+    \paragraph{Otros}
+    {\consigna
+    Enumerar otros recursos que no encuadren dentro de las categorías anteriores.\\
+    Ej.: licencias de software, permisos, etc.\\
+    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
+    }
+
+
+\subsection{Metodología de trabajo}
+\subsubsection{Plan de proyecto o iteraciones previstas}
+Se propone un enfoque iterativo mixto. Antes de cerrar la definición del producto, se construirá un prototipo integrado de alcance acotado que permita examinar la integración del parche sensor, el módulo electrónico reutilizable, la pulsera y la aplicación. Se realizarán pruebas preliminares de adquisición, comunicación, montaje y uso; se registrarán resultados, fallas y desvíos respecto de los requerimientos, se priorizarán ajustes y se repetirán las pruebas pertinentes antes de revisar la especificación del producto o MVP. Esta etapa responde a la debilidad de desempeño aún no demostrado y contribuye a mitigar el riesgo R1. Las pruebas de prototipo no equivalen a validación clínica ni demuestran por sí solas la precisión de los modelos de IA.
+\subsubsection{Entregables y Mensurables}
+\begin{itemize}
+    \item Prototipo integrado preliminar y registro de su configuración.
+    \item Protocolo y resultados de las pruebas preliminares, vinculados con los requerimientos evaluados y sus criterios de aceptación, que deberán definirse antes de probar.
+    \item Registro priorizado de fallas, desvíos y ajustes propuestos o realizados, con una revisión de la especificación del producto o MVP antes de continuar.
+\end{itemize}
+\subsubsection{Estimación de Plazos y Esfuerzo}
+\subsubsection{Seguimiento}
+\paragraph{Revisiones}
+\paragraph{Control de riesgos y desviaciones}
