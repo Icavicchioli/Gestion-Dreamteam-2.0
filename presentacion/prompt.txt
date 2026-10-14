@@ -1,0 +1,11 @@
+[21:28, 13/10/2026] Ignacio Cavicchioli: objetivo: como afecta la radiacion cosmica la electronica, porque la afecta y explicar como es que la voyager luego de 50 años todavía funciona esa electrónica a pesar de estar expuesta a toda esaradiación cósmica, como es que todavía resiste
+[21:32, 13/10/2026] Ignacio Cavicchioli: que es la radiación cosmica, como se mide.
+donde está el voyager, a que nivel está expuesto, de que tipo
+que electronica había en ese momento, fisicamente como es, tensiones, geometrias de los semiconductores, materiales, térnicas de fabricación, 
+efectos de los rayos cósmicos sobre los semiconductores de la epoca
+que se esperaría en un caso normal
+que hizop la voyager para mitigarlos
+}
+[21:42, 13/10/2026] Ignacio Cavicchioli: Pero todo componentes físico de electrónica, capacitores, pistas, dieléctricos, resistencias, inductores, diodos, etc.
+
+Ver planos de los voyagers? Cuántos hubo?
