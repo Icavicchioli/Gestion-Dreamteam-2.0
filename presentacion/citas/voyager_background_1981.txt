@@ -1,0 +1,2123 @@
+
+--- PAGINA PDF 1 ---
+P 
+National Aeronautics and 
+Space Administration 
+f , 
+4 
+f 
+
+--- PAGINA PDF 2 ---
+... 
+iii 
+VOYAGER BACKGROUNDER .. AUGUST 1981 
+For further information: RELEASE NO: 81-116 
+Charles Redmond 
+NASA Headquarters. Washington. D.C. 
+(Phone: 202/755-3680) 
+Frank Bristow 
+NASA Jet Propulsion Laboratory. Pasadena. Calif . 
+(Phone: 213/354-5011) 
+CONTENTS 
+VOYAGER SPACECRAFT ......................................... 1-26 
+Structure and Configuration ........................ 3 
+Communications ..................................... 8 
+Power .............................................. 15 
+Attitude Control ................................... 20 
+Injection Propulsion Control ....................... 21 
+Celestial Reference Control ........................ 22 
+Trajectory Correction Manuevers .................... 23 
+Science Platform ................................... 24 
+Temperature Control ................................ 25 
+Low-Energy Charged Particles ....................... 28 
+Magnetic Fields .................................... 29 
+Computer Command Subsystem ......................... 18 
+VOYAGER EXPERIMENTS ........................................ 27-42 
+Cosmic Ray ...................................... a..27 .. 
+Infrared Interferometer Spectrometer ............... 30 
+Photopolarimeter ................................... 31 
+Planetary Radio Astronomy .......................... 32 
+Plasma ............................................. 33 
+Plasma Wave ........................................ 35 
+Radio Science ...................................... 37 
+Television ......................................... 38 
+TRACKING AND DATA ACQUISITION ............................... 42 
+MISSION CONTROL AND COMPUTING CENTER ........................ 46 
+VOYAGER SUBCONT..CTORS ..................................... .49 
+APPENDIX A: Earth-Spacecraft Communications ................ 52 
+APPENDIX B: 
+Ultraviolet Spectrometer ........................... 41 
+Navigation Operations .......................... 58 
+
+--- PAGINA PDF 3 ---
+iv 
+
+--- PAGINA PDF 4 ---
+. 
+THE VOYAGER SPACECRAFT 
+The two identical Voyager spacecraft are designed to 
+operate at greater distances from Earth and the Sun than required 
+by any previous mission. Communications capability, hardware 
+reliability, navigation and temperature control are among the 
+major challenges that had to be met to operate over the time of 
+the mission, because of the Earth-spacecraft distances involved and 
+the wide range of environmental conditions encountered. 
+Each spacecraft at launch consisted of a mission module 
+-- the planetary vehicle -- and a propulsion.module, which provided 
+the final energy increment to inject the mission module onto the 
+Jupiter trajectory. The propulsion module was jettisoned after 
+the required velocity was attained. (For the major part of the 
+mission, "spacecraft" and "mission module" will be used interchange- 
+ably. In describing the pre-launch configuration and launch phase, 
+"spacecraft" will refer to the combined "mission module" and "pro- 
+pulsion module. " ) 
+The launch weight of the spacecraft was 2,066 kilograms 
+(4,556 pounds), including the propulsion module with its large, 
+solid-propellant rocket motor that weighed 1,207 kilograms (2,660 
+pounds). After injection the mission module weighed 825 kilograms 
+(1,819 pounds) including a 117 kilograms (258 pound) science 
+instrument payload'. 
+Like the Mariners that explored the inner planets and 
+the Viking Mars orbiters, the Voyagers are stabilized on three 
+axes using the Sun and a star as celestial references. 
+-1- 
+
+--- PAGINA PDF 5 ---
+Hot gas jets provide thrust for attitude stabilization 
+and for trajectory correction maneuvers. 
+Three engineering subsystems are programmable for on- 
+board control of most spacecraft functions. The three are the 
+computer command subsystem (CCS), flight data subsystem (FDS) and 
+attitude and articulation control subsystem (AACS). The memories 
+of the units can be updated or modified by ground command. 
+A nuclear power source -- three radioisotope thermo- 
+electric generators -- provides electrical power for the space- 
+craft . 
+The pointable science instruments are mounted on a two- 
+axis scan platform at the end of the science boom. Other body-fixed 
+and boom-mounted instruments are aligned to provide for proper 
+interpretation of their measurements. 
+Data storage capacity on the spacecraft is about 536 
+million bits -- approximately the equivalent of 100 full-resolution 
+photos. 
+Dual-frequency communication links -- S-band and X-band 
+-- provide accurate navigation data and large amounts of science 
+information during planetary encounter periods (up to 115,200 bits 
+per second at Jupiter and 44,800 bps at Saturn). 
+-. .. r -- 
+The dominant feature of the spacecraft is the 3.66-meter 
+(12-foot) diameter high-gain antenna that, after the first 80 days 
+of flight, almost continuously points toward Earth. Periodic excep- 
+tions are during trajectory-correction, calibration, or science 
+data acquisition attitude maneuvers. 
+While the high-gain antenna dish is white, most visible 
+-2- 
+
+--- PAGINA PDF 6 ---
+-. 
+parts of the spacecraft are black -- blanketed or wrapped for 
+thermal control and micrometeoroid protection. A few small areas 
+are finished in gold foil or have polished aluminum surfaces. 
+Structure and Configuration 
+The basic mission module structure is a 24.5-kilogram 
+(54-pound) 10-sided aluminum framework with 10 electronics packaging 
+compartments. The structure is 47 centimeters (18.5 inches) high 
+and 178 centimeters (70 inches) across from flat to flat; 188 centi- 
+meters (74 inches) from longeron to opposite longeron. The elec- 
+tronics assemblies are structural elements of the 10-sided box. 
+The spherical propellant tank that contains fuel for 
+hydrazine thrusters for attitude control and trajectory correction 
+maneuvers occupies the center cavity of the decagon. Propellant 
+lines carry hydrazine to 12 small attitude-control and four TCM 
+thrusters on the mission module and to larger thrust-vector-control 
+engines on the propulsion module during launch. 
+The 3.66-meter (12-foot) diameter high-gain parabolic 
+reflector is supported above the basic structure by a tubular truss 
+work. The antenna reflector has an aluminum honeycomb core and is 
+surfaced on both sides by graphite epoxy laminate skins. Attach- 
+ment to the trusses is along a 178-centimeter (70-inch) diameter 
+support ring. The Sun sensor protrudes through a cutout in the 
+antenna dish. An X-band feed horn is at the center of the reflector. 
+Two S-band feed horns are mounted back-to-back with the X-band 
+sub-reflector on a three-legged truss above the dish. One radiates 
+tnrough the sub-reflector, transparent at S-.band, to the high-gain 
+dish. The other functions as the low-gain antenna. 
+L -3- 
+
+--- PAGINA PDF 7 ---
+Louver assemblies for temperature control are fastened to 
+the outer faces of two electronics compartments -- those housing 
+the power conditioning assembly and the radio transmitter power 
+amplifiers. The top and bottom of the 10-sided structure are 
+enclosed with multi-layer thermal blankets. 
+Two Canopus star tracker units are mounted side-by-side and 
+parallel atop the upper ring of the decagon. 
+Three radioisotope thermoelectric generators are assembled 
+in tandem on a deployable boom hinged on an outrigger arrangement 
+of struts attached to the basic structure. The RTG boom is 
+constructed of steel and titanium. Each RTG unit, contained in a 
+beryllium outer case, is 40.6 centimeters (16 inches) in 
+diameter, 51 centimeters (20 inches) long and weighs 39 kilograms 
+(86 pounds). 
+The science boom, supporting the instruments that measure 
+energetic particle radiation, is located 180 degrees from the RTG 
+boom and is hinged to a truss extending out from the decagon 
+behind the high-gain antenna. The boom, 2.3 meters (7 1/2 feet) 
+long, is a bridgework of graphite epoxy tubing. Attached on 
+opposite sides of the boom at its mid-point are the cosmic ray 
+and low-energy charged particle instruments. Farther out on the 
+boom is the plasma science instrument. 
+The two-axis scan platform is mounted at the end of the boom 
+and provides precision pointing for four remote-sensing instru- 
+ments -- the ultraviolet spectrometer, infrared interferometer 
+spectrometer amd radiometer, photopolarimeter (no longer operat- 
+ing on Voyager 1) and a two-camera imaging science subsystem. 
+Total platform gimballed weight is 100 kilograms (220 pouncis). 
+With both the RTG and science booms deployed, the near- 
+-4- 
+
+--- PAGINA PDF 8 ---
+est boom-mounted instrument to a radiation source is 4.8 meters 
+(16 feet), with the bulk of the spacecraft between the two. The 
+closest platform-mounted instrument is 6.4 meters (21 feet) away. 
+A pair of 10-meter (33-foot) whip antennas, deployed 
+from a position outside the top ring of the basic structure and 
+extending down between the RTG boom outrigger members, are part of 
+the planetary radio astronomy (PRA) instrument package and are 
+shared with the plasma wave instrument (PWS). The PRA and PWS 
+assemblies are body-mounted adjacently. 
+tubing antennas, which form a right angle, were rolled flat in 
+their housing before deployment by small electric motors. 
+The beryllium-copper 
+The magnetic fields experiment consists of an electronics 
+subassembly located in one of the mission module electronics bays 
+and four magnetometers -- two high-field sensors affixed to the 
+spacecraft and two low-field sensors mounted on a 13-meter (43- 
+foot) deployable boom. The boom, constructed of epoxy glass, 
+spiralled from its stowed position in an aluminum cylinder to form 
+a rigid triangular mast with one magnetometer attached to its end 
+plate and another positioned 6 meters (20 feet) closer to the 
+spacecraft. The mast weighs 2.26 kilograms (five pounds), a few 
+ounces less than the cabling running its length and carrying power 
+to and data from the magnetometers. The boom housing is a 2.8- 
+centimeter (nine-inch) diameter cylinder, 66 centimeters (26 inches) 
+long, supported by the RTG outrigger. The mast uncoils in helix 
+fashion along a line between the rear face of the high-gain antenna 
+and the RTC’ boom. 
+- -. . ~ -- 
+The basic structure of the discarded propulsion module 
+
+--- PAGINA PDF 9 ---
+was a 43.54-kilogram (96-pound) aluminum semi-monocoque shell. 
+The cylinder, 99 centimeters (39 inches) in diameter and 89 centi- 
+meters (35 inches) long, was suspended below the mission module 
+structure by an eight-member tubular truss adapter. 
+the structure contained the solid rocket motor that delivered the 
+final powered stage of flight. The rocket, which weighed 1,123 
+kilograms (2,475 pounds) including 1,039 kilograms (2,290 pounds) 
+of propellant, developed an average 15,300 pounds thrust during 
+The hollow of 
+its 43-second burn duration. 
+Mounted on outriggers from the structure were eight 
+hydrazine engines that provided attitude control during the solid- 
+motor burn. Hydrazine fuel was supplied from the mission module. 
+A pair of batteries and a remote driver module for power- 
+ing the valve drivers to the thrust-vector-control engines were 
+positioned on the outer face of the cylindrical propulsion module 
+structure. 
+A four-square-foot shunt radiator/science calibration 
+target faces outward from the propulsion module truss adapter 
+toward the scan platform. The dual-purpose structure is a flat 
+sandwich of two aluminum radiating surfaces lining a honeycomb 
+core. 
+plates, any amount of the electrical power from the RTGs can be 
+radiated to space as heat. The outer surface also serves as a 
+photometric calibration targt't for the remote-sensing science 
+Through power collectors and emitter resistors between the 
+instruments on the scan platform. 
+The shunt radiator and the propulsion-modtile truss adapter 
+remained when the propulsion module was jettisoned. 
+-6- 
+
+--- PAGINA PDF 10 ---
+Steel alloy/gold foil plume deflectors extended from the 
+propulsion module to shield the stowed RTGs and scan platform from 
+rocket exhaust during engine firing . 
+The spacecraft adapter, a truncated aluminum cone, joined 
+the propulsion module to the Centaur stage of the launch vehicle. 
+The adapter, 76 centimeters (30 inches) tall, was 160 centimeters 
+(63 inches) in diameter at the base (Centaur attachment), 99 
+centimeters (39 inches) at the spacecraft separation joint and 
+weighed 36 kilograms (79 pounds). The adapter remained with the 
+Centaur rocket stage at spacecraft separation. 
+Launch Configuration 
+Some mechanical elements of the spacecraft were rigidly 
+restrained against the severe vibration during launch. After 
+launch, appendages that had been latched securely within the Centaur 
+stage nose fairing were deployed to their cruise positions. 
+The pyrotechnic subsystem provided simple and positive 
+deployment with explosive squibs. Devices stowed securely during 
+launch and released for deployment by the pyrotechnic subsystem 
+were the science boom, RTG boom and magnetometer boom. Uncertainty 
+concerning the full deployment and locking of the science boom on 
+Voyager 2, first spacecraft launched, existed for several weeks. 
+The pyrotechnic subsystem also routed power to devices 
+to separate spacecraft from launch vehicle, activated the prop- 
+ulsion module batteries, ignited the solid-propellant rocket motor, 
+sealed off the prcpellant line carrying hydrazine from the mission 
+module to the propLi3.sion module, jettisoned the propulsion mcdule 
+and released the IRIS dust cover. That subsystem is no longer used. 
+-7- 
+
+--- PAGINA PDF 11 ---
+Communications 
+Communication with the Voyagers is by radio link between 
+Earth tracking stations and a dual-frequency radio system aboard 
+each spacecraft. 
+The uplink operates at S-band only, carrying commands 
+and ranging signals from ground stations to one of a pair of redun- 
+dant receivers. The downlink is transmitted from the spacecraft 
+at both S-band and X-band frequencies. 
+The on-board communications system also includes a program- 
+mable flight data subsystem (FDS), modulation/demodulation subsystem 
+(MDS), data storage subsystem (DSS) and high-gain and low-gain 
+antennas. 
+The FDS, one of the three on-board computers, controls 
+the science instruments and formats all science and engineering 
+data for telemetry to Earth. The telemetry modulation unit (TMU) 
+of the MDS feeds data to the downlink. The flight command unit 
+(FCU) of the MDS routes ground commands received by the spacecraft. 
+Only one receiver is powered at any one time, with-the __ 
+redundant receiver at standby. The receiver operates continuously 
+during the mission at about 2113 megahertz. Different frequency 
+ranges have been assigned to the radio-frequency subsystem of each 
+spacecraft. The receiver can be used with either the high-gain or 
+low-gain antenna. Voyager 2's primary receiver failed on April 5, 
+1978, and the spacecraft is operating on its backup receiver, which 
+is also crippled with a partial failure of that portion of the 
+receiver that acquires and tracks the trantivitted signal. 
+(Appendix A contains a detailed description of Voyager 2 
+-8- 
+
+--- PAGINA PDF 12 ---
+communication problem, the process used to accommodate the operations 
+limitation imposed by the problem, and some of the communications 
+features of the Voyager 2 Saturn encounter.) 
+The S-band transmitter consists of two redundant exciters 
+and two redundant RF power amplifiers, of which any combination is 
+possible. 
+one time. Selection of the combination is by on-board failure- 
+detection logic within the computer command subsystem (CCS), with 
+ground-command backup. The same arrangement of exciter-amplifier 
+combinations makes up the X-band transmitting unit. 
+Only one exciter-amplifier combination operates at any 
+One S-band and both X-band amplifiers emp-ley traveling 
+wave tubes (TWT). The second S-band unit is a solid state ampli- 
+fier. The S-band transmitter is capable of operating at 9.4 watts 
+or at 28.3 watts when switched to high power and can radiate from 
+both antennae. X-band power output is 12 watts and 21.3 watts. 
+X-band uses only the high-gain antenna. (S-band and X-band never 
+operate at high power simultaneously. ) 
+When no uplink signal is being received, the transmitted 
+S-band frequency of about 2295 MHz and X-band frequency of 8418 MHz 
+originate in the S-band exciter's auxiliary oscillator or in a 
+separate ultra-stable oscillator (one-way tracking). With the 
+receiver phase-locked to an uplink signal, the receiver provides 
+the frequency source for both transmitters (two-way tracking). 
+The radio system can also operate with the receiver locked to an 
+uplink signdl while the downlink carrier frequencies are determined 
+by the on-board oscillators jtwo-way noncoherent tracking). 
+Both the 64-meter (210-foot) and 34-meter (112-foot) 
+
+--- PAGINA PDF 13 ---
+antenna stations of the Deep Space Network can receive the 
+downlink X-band signal. The entire 64-meterf 34-meter and 26- 
+meter (85-foot) antenna stations are capable of receiving at S- 
+band . 
+The X-band downlink was not normally used during the first 
+80 days of the mission -- until Earth was within the beam of the 
+spacecraft's high-gain antenna. Communications during launch, 
+near-Earth and early cruise phase operations were confined to S- 
+band and the low-gain antenna. An exception occurred early in 
+the flight when the spacecraft, on inertial control, pointed the 
+high-gain antenna toward Earth to support instrument calibration 
+and an optical navi ga tion/high- ra te telecommunications link 
+test. During its calibration sequence on Sept. 18, 1977, Voyager 
+1 took pictures of Earth-Moon system. 
+The high-gain antenna, with 3.66-meter-diameter (12 feet) 
+parabolic reflector, provides a highly directional beam. The 
+low-gain antenna provides essentially uniform coverage in the 
+direction of Earth. 
+Under normal conditions, after the first 80 days of the 
+mission, all communications -- both S-band and X-band -- have 
+been via the high-gain antenna. The normal communication 
+configuration for the Voyager 2 Saturn encounter is for the X- 
+band transmitter to operate at high power and the S-band 
+transmitter to operate at low power. The only variations to that 
+configuration are during Earth-occultation entrance and exit when 
+the S-band is at high power and the X-band is at low -power. 
+Low-power X-band is also used dcring two IRIS calibrations, when 
+both the S-band and X-band transmitters are at low power. 
+
+--- PAGINA PDF 14 ---
+Commanding the Spacecraft - 
+Ground commands are used to put into execution selected 
+flight sequences, to cause execution of discrete events, or to 
+cope with unexpected events. Commands are issued in either a 
+pre-determined, timed sequence via on-board program control or 
+directly as received from the ground. Most commands are issued by 
+the spacecraft's computer command subsystem (CCS) in its role as 
+"sequencer-of-events" and by the flight data subsystem (FDS) as 
+controller of the science instruments. 
+All communications between spacecraft and Earth are in 
+digital form. Command signals, transmitted at 16 bits per second 
+(bps) to the spacecraft, are detected in the flight command unit 
+and routed to the CCS for further routing to their proper destination. 
+Ground commands to the spacecraft fall into two major categories: 
+discrete commands (DC), and coded commands (CC). 
+A discrete command causes a single action on the space- 
+craft. For example, DC-2D switches the S-band amplifier to high 
+power: DC-2DR, S-band amplifier low power; DC-2E, S-band transmits 
+from high-gain antenna: DC-2ER, S-band transmits low-gain. Coded 
+. _- 
+commands are the transfer of digital data from the computer command 
+system or from the ground via the CCS to user subsystems. Subsys- 
+tems receiving coded commands are flight data, attitude and artic- 
+ulation control, modulation/demodulation, data storage and power. 
+Downlink Teleinetrv 
+Data telemetered from the spacecraft consists of engineer- 
+ing and science measurements prepare? for transmission by the 
+flight data subsystem, telemetry modulation unit and data storage 
+-11- 
+
+--- PAGINA PDF 15 ---
+subsystem. The encoded information will indicate voltages, pres- 
+sures, temperatures, television pictures and other values measured 
+by the spacecraft telemetry sensors and science instruments. 
+Two telemetry channels -- low rate and high rate -- are 
+provided for the transmission of spacecraft data. The low rate 
+channel functions only at S-band at a single 40-bits-per-second 
+data rate and contains real-time engineering data exclusively. 
+It is on only during planetary encounters when the high-rate chan- 
+nel is operating at X-band. 
+The high-rate channel is on throughout the mission. It 
+operates at either S-band or X-band and contains the following 
+types of data: 
+O Engineering only at 40 bits per second or 1,200 bps 
+(the higher data rate usually occurs only during 
+launch and trajectory correction maneuvers) transmitted 
+at S-band only. 
+O Real-time cruise science and engineering at 2,560, 
+1,280, 640, 320, 160 and 80 bps. Reduced data rates 
+result in reduced instrument sampling. Data rate is 
+reduced only when the telecommunications link can- 
+not support the higher rate. 
+O Real-time encounter general science and engineering 
+at 7.2 kilobits per second (a special 115.2 kbps rate 
+was available at Jupiter for the planetary radio 
+astronomy ind plasma wave instruments) transmitted 
+at X-band 0. ly. 
+O Real-time encounter general science, engineering and 
+-12- 
+
+--- PAGINA PDF 16 ---
+television at 115.2, 89.6, 67.2, 44.8, 29.866 2/3 and 
+19.2 kbps transmitted at X-band only. The maximum 
+usable data rate at Saturn is 44.8 kbps. 
+* Real-time encounter general science and engineering, 
+plus tape recorder playback, at 67.2 and 44.8 kbps 
+and 29,866 2/3 bps transmitted at X-band only. The 
+maximum usable data rate at Saturn is 44.8 kbps. 
+O Play back recorded data only at 21.6 and 7.2 kbps 
+transmitted at X-band only. 
+O Memory data stored in the three on-board computers -- 
+CCS, FDS and AACS -- read out and played back at 
+40 or 1200 bps transmited at either S-band or X-band 
+(treated as engineering data). 
+The many data rates for each type of telemetered informa- 
+tion are required by the changing length of the telec'ommunications 
+link with Earth and the possible adverse effects of Earth weather 
+upon reception of X-band radio signals. 
+In order to allow real-time transmission of video infor- 
+mation at each encounter, the flight data subsystem can handle the 
+imaging data at six downlink rates from 115.2 to 19.2 kbps. The 
+115.2-kbps rate represents the standard full-frame readout (at 48 
+seconds per frame) of the TV vidicon. Under normal conditions, 
+that rate was used at Jupiter. Full-frame, full-resolution TV 
+from Saturn can be obtained by increasing the frame readout time 
+to 144 seconds (3tl'slow scan) and transmitting the data at 44.8 
+kbps. A number of other slow scan and framc-edit options are 
+available to match the capability of the telecommunications link. 
+-13- 
+
+--- PAGINA PDF 17 ---
+The data-storage subsystem is a digital tape recorder which 
+can record at two rates: TV pictures, general science and 
+engineering at 115.2 kbps; general science and engineering at 7.2 
+kbps; and engineering only at 7.2 kbps (engineering is acquired 
+at only 1,200 bps, but is formatted with filler to match the 
+recorder input rate). The tape transport is belt-driven. Its 
+1/2-inch magnetic tape is 328 meters (1,075 feet) long and is 
+divided into eight tracks that are recorded sequentially one 
+track at a time. Total recycleable storage capacity is about 536 
+million bits -- the equivalent of 100 TV pictures. Playback is 
+at one of four speeds -- 57.6, 33.6, 21.6 and 7.2 kbps. 
+Downlink telemetry data rates are maximized during the 
+Saturn encounter by the simultaneous receipt and processing of 
+the received signal from the spacecraft by two co-located ground 
+antennas (one 64-meter and one 34-meter). Goldstone, Spain and 
+Australia have co-located stations providing the arrayed 
+capability. Combining the received spacecraft signal results in 
+approximately a one-ldB improvement in signal- to-noise ratio. 
+That is equivalent to having one 72-meter station at each 
+location. Loss of a 34-meter station during any arrayed track 
+would result in a reduction of data quantity or quality, but not 
+in the loss of all data. Loss of the 64-meter antenna would 
+__ -. -- - - 
+result in the loss of X-band capability, reducing available data 
+to engineering information only. 
+Trackinq the Spacecraft for Navigation 
+Very precise navigation is required to achieve the desired 
+maneuver and flyby accuracies for a multi-planet/satellite 
+e nco un t e r mi s s i o 11 . 
+Radiometric observations made by a tracking station on Earth 
+-14- 
+
+--- PAGINA PDF 18 ---
+using radio signals to and from the spacecraft are important in 
+determining the spacecraft's position and velocity. The radio 
+data combined with photographs of selected satellites against the 
+background of known stars taken by the cameras provide the infor- 
+mation necessary for the precise navigation required. (Appendix 
+B contains a description of the Voyager navigation process, 
+including descriptions of the types of data used, orbit determi- 
+nation, trajectory correction, the Voyager 2 targeting strategy 
+and the Voyager 2 navigation status as of May 15, 1981.) 
+Power 
+The Voyager power subsystem supplies all electrical power to 
+the spacecraft by generating, converting, conditioning and 
+switching the power. 
+Power source for the mission module is an array of three 
+radioisotope thermoelectric generators (RTGs). The propulsion 
+module, active only during the brief injection phase of the 
+mission, used a separate battery source; no other batteries are 
+used on the spacecraft because of the necessity for long mission 
+life. 
+The RTG units, mounted in tandem on a deployable boom and 
+connected in parallel, convert to electricity the heat released 
+by the isotopic decay of Plutonium-238. Each isotope heat source 
+has a capacity of 2,400 watts thermal with a resultant maximum 
+electrical power output of 160 watts at the beginning of the 
+mission. There is a gradual decrease in power output. The total 
+power available from the three RTGs on each Voyager ranges from 
+about 475 watts within a few hours after launch to 430 watts 
+after the spacecraft pass Saturn. 
+Spacecraft power requirements from launch to post-Saturn 
+-15- 
+
+--- PAGINA PDF 19 ---
+operations are characterized by this general power timeline: 
+launch and post-launch, 235 to 265 watts; interplanetary cruise, 
+320 to 365 watts; Jupiter encounter, 350 to 370 watts: Saturn 
+encounter, 377 to 382 watts; and post-Saturn, less than 365 
+watts. 
+Telemetry measurements have been selected to provide the 
+necessary information for power management by ground command, if 
+needed . 
+Power from the RTGs is held at a constant 30 volts dc by a 
+shunt regulator. The power is supplied directly to some 
+spacecraft users and is switched to others in the power distri- 
+bution subassembly. The main power inverter is also supplied 30 
+volts dc for conversion to 2.4 kilohertz square wave used by most 
+spacecraft subsystems. Again, the ac power may be supplied 
+directly to users or can be switched on or off by power relays. 
+Command-actuated relays control the distribution of power in 
+the spacecraft. Some relays function as simple on-off switches 
+and others transfer power from one module to another within a 
+subsystem. 
+Among the users of dc power, in addition to the inverter, 
+are the radio subsystem, gyros, propulsion isolation valves, some 
+science instruments, most temperature control heaters and the 
+motors that deloyed the planetary radio astronomy antennas. 
+Other elements of the spacecraft use the 2.4 khz power. 
+There are two identical 2;4 khz power inverters -- main and 
+standby. The main inverter is on from launch and remains on 
+throughout the mission. 
+the mai? inverter, the power chain, after a l.5-,:econd delay, is 
+In case of a malfunction or failure in 
+-16- 
+
+--- PAGINA PDF 20 ---
+switched automatically to the standby inverter. Once the switch- 
+over is made, it is irreversible. 
+A 4.8 khz sync and timing signal from the flight data 
+subsystem is used as a frequency reference in the inverter. The 
+frequency is divided by two and the output is 2.4 khz plus-or-minus 
+0.002%. This timing signal is sent, in turn, to the computer com- 
+mand subsystem, which contains the spacecraft's master clock. 
+Because of the long mission lifetime, charged capacitor 
+energy-storage banks are used instead of batteries to supply the 
+short-term extra power demanded by instantaneous overloads that 
+would cause the main dc power voltage to dip below acceptable 
+limits. A typical heavy transient overload occurs at turn-on of 
+a radio power amplifier. 
+Full output of the RTGs, a constant power source, must 
+be used or dissipated in some way to prevent overheating of the 
+generator units and dc voltage rising above allowed maximum. Full 
+use is controlled by a shunt regulator that dumps excess RTG output 
+power above that required to operate the spacecraft. The excess 
+power is dissipated in resistors in the shunt radiator mounted 
+outside the spacecraft and radiated into space- as heat. -. -., -- 
+Two batteries independently supplied unregulated dc 
+power to a remote driver module (RDM) for powering valve drivers 
+to the thrust-vector-control engines on the propulsion module 
+during the injection phase of the mission. The batteries and the 
+RDM are located in the propulsion mcdule that was jettisoned a 
+few minutes after the mission 
+trajectory. Each battery was 
+module was placed on the Jupiter 
+composed of 22 silver oxide-zinc 
+-1 7- 
+
+--- PAGINA PDF 21 ---
+cells with a capacity of 1,200 ampere seconds at 28 to 40 volts, 
+depending upon the load. 
+Basic requirement on the batteries was high power for a 
+short period -- 12 minutes. With a lifetime of only 66 minutes, 
+the batteries were kept inert until just four seconds before Centaur 
+separation and 20 seconds before solid rocket ignition. After 
+activation, in which an electrolyte was injected into the cells, 
+the batteries were at full voltage in one-half second and ready 
+for use in two seconds. 
+Computer Command Subsystem 
+The heart of the on-board control system is the computer 
+command subsystem (CCS), which provides a semi-automatic capability 
+to the spacecraft. 
+The CCS includes two independent memories, each with a 
+capacity of 4,096 data words. Half of each memory stores reusable 
+fixed routines that do not change during the mission. The second 
+half is reprogrammable by updates from the ground. 
+Most commands to other spacecraft subsystems are issued 
+from the CCS memory, which, at any given time, is loaded with the 
+sequence appropriate to the mission phase. The CCS also can 
+decode commands from the ground and pass them along to other space- 
+craft subsystems. 
+Under control of an accurate on-board clock, the CCS 
+counts hours, minutes or seconds until some pre-programmed interval 
+has elapsed and then branches into subroutines stored in the memory 
+that results in commands to other subsystsms. A sequencing event 
+can be a single command or a routine that includes many commands 
+-18- 
+
+--- PAGINA PDF 22 ---
+(e .g . , manipulating the tape recorder during a playback sequence ) . 
+The CCS can issue commands singly from one of its two 
+processors or in parallel or tandem from both processors. An 
+example of CCS dual control is the execution of trajectory correc- 
+tion maneuvers. 
+TCM thrusters are started with a tandem command (both 
+processors must send consistent commands to a single output unit) 
+and stopped with a parallel command (either processor working 
+through different output units will stop the burn). 
+The CCS can survive any single internal fault; each 
+functional unit has a duplicate elsewhere in the subsystem. 
+Attitude Control and Propulsion 
+Stabilization and orientation of the spacecraft from 
+launch-vehicle separation until end of the mission is provided by 
+two major engineering subsystems -- attitude and articulation 
+control (AACS) and propulsion. 
+Propulsion Subsystem 
+The propulsion subsystem consisted of a large solid- 
+propellant rocket motor for final Jupiter trajectory velocity 
+and a hydrazine blowdown system that fuels 16 thrusters on the 
+mission module and eight reaction engines on the propulsion 
+module. (The propulsion module was jettisoned after injection.) 
+The single hydrazine (N2H4) supply is contained within 
+a 28-inch-diameter spherical titanium tank, separated from the 
+helium pressurization gas by a Teflon-filied rubber bladder. 
+tank, located in the central cavity of the mission module's 10-sided 
+basic structure, contained 104 kilograms (230 pounds) of hydrazine 
+The 
+-1 9- 
+
+--- PAGINA PDF 23 ---
+at launch and was pressurized at 420 psi. As the propellant is 
+consumed, the helium pressure will decrease to a minimum of about 
+130 psi. 
+All 24 hydrazine thrusters use a catalyst that spon- 
+taneously initiates and sustains rapid decomposition of the 
+hydrazine. 
+The 16 thrusters on the mission module each deliver 0.2- 
+pound-thrust. Four are used to execute trajectory correction man- 
+euvers; the others in two redundant six-thruster branches, to 
+stabilize the spacecraft on its three axes. 
+attitude control thrusters is needed at any time. 
+Only one branch of 
+Mounted on outriggers from the propulsion module are 
+four 100-pound-thrust engines that, during solid-motor burn, pro- 
+vided thrust-vector control on the pitch and yaw axes. Four five- 
+pound-thrust engines provided roll control. 
+The solid rocket, which weighed 1,123 kilograms (2,475 
+pounds) including 1,039 kilograms (2,290 pounds) of propellant, 
+developed an average 15,300 pounds thrust during its 43-second 
+burn duration. -- - _- 
+Attitude and Articulation Control Subsystem 
+The AACS includes an onboard computer called HYPACE 
+(hybrid programmable attitude control electronics), redundant sun 
+sensors, redundant Canopus star trackers, three two-axis gyros and 
+scan actuators for positioning the science platform. 
+The HYPACE contains two redundant 4,096-word plated-wire 
+memories -- part of which are fixed and part reprogrammable -- 
+redundant processors and input/o,tput driver circuits. 
+-20- 
+
+--- PAGINA PDF 24 ---
+Injection Propulsion Control 
+Because of the energy required to achieve a Jupiter 
+ballastic trajectory with an 825-kilogram (1,819-pound) payload, 
+the spacecraft launched by the Titan I11 E/Centaur included a final 
+propulsive stage that added a velocity increment of about two kilo- 
+meters per second (4,475 miles per hour). 
+The solid-rocket motor in the propulsion module was 
+ignited 15 seconds after the spacecraft separated from the Centaur 
+and burned for about 43 seconds. Firing circuits to the motor 
+were armed during launch-vehicle countdown. 
+The four 100-pound-thrust engines provided pitch and yaw 
+attitude control and the four five-pound-thrust engines provided 
+roll control until burnout of the solid rocket motor. The hydrazine 
+engines responded to instructions from AACS's computer. Only two 
+pitch/yaw and two roll engines at most were thrusting at any given 
+time . 
+Before solid rocket ignition and after bur'nout, until the 
+propulsion module separated from the mission module, only the 
+five-pound-thrust roll engines were required for attitude control 
+They were oriented on the propulsion module so that, by proper 
+engine selection by the AACS, attitude control was maintained on 
+all three axes. 
+Approximately 11 minutes after solid-rocket burnout, the 
+propulsion module was jettisoned. Several seconds earlier, the 
+propsllant line carrying hydrazine from the mission module to the 
+propulsion module was sealed and separated. 
+-21- 
+
+--- PAGINA PDF 25 ---
+Celestial Reference Control 
+The sun sensors, which look through a slot in the high- 
+gain antenna dish, are electro-optical devices that send attitude 
+position error signals to HYPACE, which, in turn, signals the ap- 
+propriate attitude control thrusters to fire and turn the spacecraft 
+in the proper direction. 
+two axes (pitch and yaw). 
+Sun lock stabilizes the spacecraft on 
+The star Canopus, one of the brightest in the galaxy, 
+is usually the second celestial reference for three-axis stabili- 
+zation. Two Canopus trackers are mounted so that their lines of 
+sight are parallel. Only one is in use at any one time. The star 
+tracker, through HYPACE logic, causes the thrusters to roll the 
+spacecraft about the already-fixed Earth or Sun-pointed roll axis 
+until the tracker is locked on Canopus. Brightness of the tracker's 
+target star is telemetered to the ground to verify the correct 
+star has been acquired. 
+- .. 
+To enhance downlink communication capability, the Sun 
+sensor is electrically biased (offset) by commands from the computer 
+command subsystem to point the roll axis at or as near the Earth 
+as possible. The sun sensor can be biased plus and minus 20° in 
+both pitch and yaw axes. 
+Three-axis stabilization with celestial reference is the 
+normal attitude-control mode for cruise phases between planets. 
+Inertial Reference Control 
+The spacecraft can be stabilized on one axis (roll) or 
+all three axes with the AACS's inertial reference unit consisting 
+of three gyros. 
+
+--- PAGINA PDF 26 ---
+Y 
+Appropriate inertial reference modes are used whenever 
+the spacecraft is not on sun/star celestial lock. Such situations 
+include maintaining inertial reference from Centaur separation 
+until initial celestial acquisition is achieved; purposely turning 
+the spacecraft off sun/star lock to do directed trajectory correc- 
+tions or science instrument observations or calibrations: providing a 
+reference when the sun is occulted; and providing a reference when 
+concern exists that the Canopus or Sun sensor will detect stray 
+intensity from unwanted sources -- planets, rings, satellites. 
+Each gyro has associated electronics to provide position 
+information about two orthogonal axes (Gyro A: pitch and yaw, 
+Gyro B: roll and pitch, Gyro C: yaw and roll). Normally, two 
+gyros are on for any inertial mode. The gyros have two selectable 
+rates, one -- high rate -- for propulsion-module injection phase: 
+the other for mission-module cruise and trajectory-correction and 
+science maneuvers. 
+Trajectory Correction Maneuvers 
+The Voyager trajectories are planned around eight -trajec- -- 
+tory correction maneuvers (TCM) with each spacecraft between launch 
+and Saturn encounter. Mission requirements call for extremely ac- 
+curate maneuvers to reach the desired zones at Jupiter, Saturn 
+and the target satellites. Total velocity increment capability 
+for each spacecraft is about 190 meters per second (425 miles per 
+hour ) . 
+TCM sequencing is under control of the computer command 
+subsystem (CCS), which sends the required turn angles to the AACS 
+for positioning the spacecraft at the correct orientation in space 
+-23- 
+
+--- PAGINA PDF 27 ---
+and, at the proper time, sends commands to the AACS to start and 
+stop the TCM burn. Attitude control is maintained by pulse-off 
+sequencing of the TCM engines and pulse-on sequencing of two atti- 
+tude-control roll thrusters. Position and rate signals are obtained 
+from the gyros. After the burn, reacquisition of the cruise celes- 
+tial references is accomplished by a second set of spacecraft turns. 
+All TCMs are enabled by ground command. 
+Science Platform (Articulation Control) 
+Voyager's two television cameras, ultraviolet spectrometer, 
+photopolarimeter and infrared spectrometer and radiometer are 
+mounted on the scan platform that can be rotated about two axes for 
+precise pointing at Jupiter, Saturn and their moons during the plan- 
+etary phases of the flight. The platform is located at the end of 
+the science boom. Total gimballed weight is 100 kilograms (220 
+pounds). 
+Controlled by the attitude and articulation controi sub- 
+system (AACS), the platform allows multiple pointing directions of 
+the instruments. Driver circuits for the scan actuators -- one for 
+each axis -- are located in the AACS computer. The platform's two 
+axes of rotation are described as the azimuth angle motion about 
+an axis displaced 7O from the spacecraft roll axis (perpendicular 
+to the boom centerline) and elevation angle motion about an axis 
+perpendicular to the azimuth axis and rotating with the azimuth 
+axis. Angular range is 360° in azimuth and 210° in elevation. 
+The platform is slewed one axis at a time with selectable 
+slew rates in response to computer command subsystem commands to 
+the AACS. Slew rates are: l.Oo/s; 0.33O/s; .083O/s; and a special 
+-24- 
+
+--- PAGINA PDF 28 ---
+UVS low rate: .0052O/s. Camera line of sight is controlled to 
+within 2.5 milliradians per axis. 
+Temperature Control 
+The two Voyager spacecraft are designed to operate farther 
+from Earth than any previous man-made object. Survival depends 
+greatly upon keeping temperatures within operating limits while 
+the spacecraft traverses an environmental range of one solar constant 
+at the Earth distance to four percent of that solar intensity at 
+Jupiter and one per cent at Saturn. 
+Unprotected surfaces at the Saturn range, nearly one 
+billion miles from the Sun, can reach 320°F below zero -- the 
+temperature of 1 iquid nitrogen. 
+Both top and bottom of the mission module's basic deca- 
+gon structure are enclosed with multi-layer thermal blankets to 
+prevent the rapid loss of heat to space. The blankets are sand- 
+wiches of aluminized Mylar, sheets of Tedlar for micrometeroid 
+protection and outer black Kapton covers that are electrically 
+conductive to prevent the accumulation of electrostatic charges. 
+Also extensively blanketed are the instruments on the 
+scan platform. Smaller blankets and thermal wrap cover eight 
+electronics bays, boom and body-mounted instruments, cabling, 
+propellant lines and structural struts. 
+ments of the spacecraft are not clad in the black film -- the high- 
+gain antenna reflector, plasma sensors, sun sensors and antenna 
+feed cones. 
+Only a few exterior ele- 
+Temperature control of four of the 10 electronics com- 
+partments is provided by thermostatically controlled louver as- 
+-2 5- 
+
+--- PAGINA PDF 29 ---
+semblies that provide an internal operating range near room temp- 
+erature. The louvers are rotated open by bimetallic springs when 
+large amounts of heat are dissipated. 
+power-conditioning equipment and the radio power amplifiers. Mini- 
+louvers are located on the scan platform, cosmic ray instrument 
+and the sun sensors. 
+These bays contain the 
+Radioisotope heating units (RHU), small non-power-using 
+heat elements that generate one watt of thermal energy, are located 
+on the magnetometer sensors and the sun sensors. No RHUS are used 
+near instruments that detect charged particles. Electric heaters 
+are located throughout the spacecraft to provide additional heat 
+during portions of the mission. 
+off when their respective valves, instruments or subassemblies 
+are on and dissipating power. 
+Many of the heaters are turned 
+-26- 
+
+--- PAGINA PDF 30 ---
+VOYAGER EXPERIMENTS 
+The 
+objectives: 
+1. 
+2. 
+3. 
+4. 
+COSMIC-RAY EXPERIMENT 
+cosmic-ray experiment has four principal scientific 
+To measure the energy spectrum of electrons and 
+cosmic-ray nuclei. 
+To determine the elemental and isotopic corngosition 
+of cosmic-ray nuclei. 
+To make elemental and isotopic studies of Jupiter's 
+radiation belts and to explore Saturn's environment. 
+To determine intensity and directional characteristics 
+of energetic particles as a function of radial distance 
+from the Sun, and determine location of the modulation 
+boundary. 
+- - 
+The cosmic-ray experiment uses multiple solid-state detector 
+telescopes to provide large solid-angle viewing ; the low-energy- 
+telescope system covers the range from 0.5 to 9 million electron 
+volts (MeV) per nucleon; the high-energy telescope system covers the 
+range from 4 to 500 million electron volts. The electron telescope 
+system covers the range from 7 million to 100 million electron volts. 
+The cosmic-ray experiment weighs 7.52 kilograms (16.57 
+pounds) and uses 5.2 watts of power. 
+Dr. Rochus E. Vogt of the California Institute of Technology 
+is principal investigator. 
+-27- 
+
+--- PAGINA PDF 31 ---
+LOW-ENERGY CHARGED PARTICLE EXPERIMENT 
+Scientific objectives of the Low-Energy Charged-Particle 
+Experiment include studies of the charged-particle composition, 
+energy-distribution and angular distribution with respect to: 
+1. Saturn's magnetosphere (exploratory) and Jupiter's 
+magnetosphere (detailed studies). 
+Interactions of charged particles with the satellites 
+of Jupiter and Saturn and possibly with the rings of 
+Saturn. 
+2. 
+3. Measurements of quasi-steady interplanetary flux 
+and high-energy components of the solar wind. 
+4. Determination of the origin and interstellar 
+propagation of galactic cosmic rays (those that 
+come from outside the solar system). 
+5. Measurements of the propagation of solar particles 
+in the outer solar system. 
+The experiment uses two solid-state detector systems on 
+a rotating platform mounted on the scan platform boom. 
+is a low-energy magnetospheric particle analyzer with large dynamic 
+range to measure electrons with energy ranging from 15,000 electron 
+volts (15 KeV) to greater than 1 million electron volts (1 MeV): 
+and ions in the energy range from 15,000 electron volts per nucleon 
+to 160 million electron volts per nucleon. 
+One system 
+The second detector system is a low-energy particle 
+te?.escope that covers the range from 0.15 million electron volts 
+per nucleon to greater than about 10 million electron volts per 
+nucleon. 
+-28- 
+
+--- PAGINA PDF 32 ---
+The Low-Energy Charged-Particle Experiment weighs 7-47’ 
+kilograms (16.47 pounds) and draws 3.9 watts during cruise and 4.2 
+watts during planetary encounter, 
+Dr. S. M. (Tom) Krimigis of the Applied Physics Laboratory, 
+Johns Hopkins University, is principal investigator. 
+MAGNETIC FIELDS EXPERIMENT 
+The magnetic field of a planet is an externally measurable 
+manifestation of conditions deep in its interior. 
+The magnetic-fields instruments on Voyager 1 and 2 
+determine the magnetic field and magnetospheric structure at 
+Jupiter and Saturn; they study the interaction of the magnetic 
+field and the satellites that orbit the planets inside that 
+field and study the interplanetary-interstellar magnetic field. 
+Four magnetometers are carried aboard Voyager. Two are 
+low-field, three-axis instruments located on a boom ‘to place them 
+as far from the spacecraft body as possible. 
+of the spacecraft’s magnetic field from the external field that is 
+to be measured. The other two magnetometers are high-field, three- >. .. 
+axis instruments mounted on the spacecraft body. 
+That allows separation 
+The boom-mounted, low-field instruments measure the 
+magnetic fields in the range from 0.002 gamma to 50,000 gamma. 
+(Fifty-thousand gamma equals one-half gauss, about the average 
+magnetic .field strength at. the surface of Earth.) 
+The high-jfield instruments cover the range from 12 gamma 
+to 20 gauss. While the highest field strengths measured by the 
+
+--- PAGINA PDF 33 ---
+Pioneer spacecraft at Jupiter were about 14 gauss, scientists 
+expect that localized, stronger fields may be associated with the 
+planets or some of their satellites. 
+Total weight of the magnetic-fields experiment is 5.5 
+kilograms (12 pounds). The experiment uses 3.2 watts of power. 
+Dr. Norman Ness of NASA's Goddard Space Flight Center 
+is principal investigator. 
+INFRARED INTERFEROMETER SPECTROMETER AND RADIOMETER 
+~~ -~ 
+The IRIS is designed to perform spectral and radiometric 
+measurements of the Jovian, Saturnian and Uranian planetary systems, 
+and targets of opportunity during the cruise phases. 
+Scientific objectives for IRIS are: 
+1. 
+2. 
+3. 
+4. 
+5. 
+The 
+Measurement of the energy balance of Jupiter, 
+Saturn and Uranus. 
+Studies of the atmospheric compositions of Jupiter, 
+Saturn, Titan and other satellites, and Uranus. 
+Temperature, structure and dynamics of the atmospheres . 
+Measurements of composition and characteristics of 
+clouds and aerosols . 
+Studies of the composition and characteristics of 
+ring particles (at Saturn) and the surfaces of 
+those satellites the instrument will observe. 
+instrument provides broad spectral coverage, high 
+spectral resolution and low noise-equivalence-radiance through 
+use of dual interferometers. That and the variable resolution 
+-30- 
+
+--- PAGINA PDF 34 ---
+of the instrument, as well as the precision of the radiometer, 
+will allow scientists to acquire information about a wide 
+variety of scientific questions concerning the atmospheres of 
+the planets and satellites, local and global energy balance, and 
+the nature of satellite surfaces and the rings of Saturn. 
+The instrument has two fields of view from its position 
+on the scan platform. The first is centered on the boresight of the 
+51-centimeter (20-inch) Cassegrain telescope. The second field of 
+view -- for solar calibration -- is pointed 20 degrees off the 
+telescope boresight. It approximately overlaps the ultraviolet 
+spectrometer's occultation field of view. IRIS pointing is con- 
+trolled by the scan platform. 
+Dr. Rudolf A. Hanel of Goddard Space Flight Center is 
+principal investigator. 
+PHOTOPOLARIMETER 
+A great deal of information about the composition of 
+an object can be learned from the way that object reflects 
+light. The light that Voyager's photopolarimeter measures is 
+polarized by the chemicals and aerosols in the atmospheres and 
+small particles on the surfaces. 
+The photopolarimeter studies aerosol particles in the 
+atmospheres of the planets and satellites, and the textures and 
+compositions of the surfaces of satellites. It also will measure 
+size, albedo, spatial distribution, shape and orientation of 
+particles in Szturn's rings; and optical and geometric thickness 
+of the rings. 
+-31- 
+
+--- PAGINA PDF 35 ---
+Y 
+The instrument is made up of a 15-centimeter (6-inch) 
+Cassegrain telescope, aperture sector, polarization analyzer wheel, 
+filter wheel and a photomultiplier-tube detector. The filter 
+wheel carries eight filters ranging from 2,350-Angstrom to 7,500- 
+Angstrom wavelength; five linear polarizers (0, 60, 120, 135 and 
+45 degrees) plus an open position (no polarizer) and a dark slide. 
+The instrument's field of view can be set at 3.5 degrees, 1 degree, 
+1/4 degree and 1/10 degree. 
+During the Jupiter flyby, Voyager 2's photopolarimeter 
+suffered some radiation damage that affected some of its central 
+logic. As a consequence some of its color filters and polarizers 
+cannot be used. The Saturn encounter will concentrate on the use 
+of deep ultraviolet (2,800 Angstroms) and deep red (7,500 Angstroms) 
+and perpendicular polarizations (45 and 135 degrees). Those choices 
+will return much of the scientific data the photopolarimeter 
+team had counted on. 
+The photopolarimeter weighs 4.41 kilograms (9.7 pounds) and 
+uses 2.4 watts average power. 
+-- - -I . 
+Dr. Arthur L. Lane of the Jet Propulsion Laboratory 
+is principal investigator. 
+PLANETARY RADIO ASTRONOMY 
+The Planetary Radio Astronomy experiment consists of a 
+stepped frequency radio receiver that covers the range from 20 
+kilohercz to 40.5 megahertz, and two monopole antennas 10 meters 
+(33 feet) long, to detect and study a variety of radio signals 
+emitted by Jupiter and Saturn. 
+-3 2- 
+
+--- PAGINA PDF 36 ---
+Scientific objectives of the experiment include detection 
+and study of radio emissions from Jupiter and Saturn and their 
+sources and relationship to the satellites, the planets' magnetic 
+fields, atmospheric lightning and plasma resonance. The instrument 
+also measures planetary and solar radio bursts from new directions 
+in space and relates them to measurements made from Earth. 
+The receiver is designed to provide coverage in two 
+frequency bands -- one covering the range from 20.4 kilohertz to 
+1,345 kilohertz, the second from 1,228.8 kilohertz to 40.5 megahertz. 
+The receiver bandwidth is 1 kilohertz in the low-frequency range and 
+200 kilohertz in the high-frequency band. There are three signal 
+input attenuators to provide switchable total attenuation from 0 to 
+90 decibels. 
+The instrument weighs 7.66 kilograms (16.8 pounds) and 
+draws 6.8 watts of power. 
+Principal investigator is Dr. James W. Warwick of 
+Radiophysics, Inc. , Boulder, Colo. 
+PLASMA EXPERIMENT 
+Plasma, clouds of ionized gases, moves through the 
+interplanetary region and comes from the Sun and from stars. 
+The plasma experiment uses two Faraday cup plasma detectors, 
+one pointed along the Earth-spacecraft line, the other at right 
+angles to that line. 
+Scientific objectives of the plasma experiment are: 
+-3 3- 
+
+--- PAGINA PDF 37 ---
+1. 
+2. 
+3. 
+4. 
+The 
+Determine properties of the solar wind, including 
+changes in the properties with increasing distance 
+from the Sun. 
+Study of the magnetospheres that are intrinsic to 
+the planets themselves and that co-rotate with the 
+planets independent of solar wind activity. 
+Study of the satellites of Jupiter and Saturn and the 
+plasma environment of Io. 
+Detection and measurement of interstellar ions. 
+Earth-pointing detector uses a novel geometrical 
+arrangement that makes it equivalent to three Faraday cups and 
+determines microscopic properties of the plasma ions. With this 
+detector, accurate values of the velocity, density and pressure 
+can be determined for plasma from the Earth (1 A.U.) to beyond 
+Saturn (10 A.U.). Two sequential energy scans are employed to 
+allow the instrument to cover a broad range of energies -- from 
+10 electron volts (eV) to 6,000 electron volts (6 KeV). Significant 
+measurements can be made between subsonic and supersonic speeds in 
+cold solar wind or hot planetary magnetosheath. 
+The variable energy resolution allows scientists to 
+detect and sort out ions that flow with the solar wind at the same 
+time they are measuring the solar wind's properties. 
+The instrument has a large (180-degree) field of view 
+at planetary encounters and a 90-degree field of view in the solar 
+wind; no electrical or mechanical scanning is necessary. 
+The other Faraday cup, a side-looking or lateral detector, 
+measures electrons in the range of 1fi electron volts to 6 KeV and 
+-3 4- 
+
+--- PAGINA PDF 38 ---
+should improve spatial coverage for any drifting or co-rotating 
+positive ions during planetary encounters. 
+The instrument was designed primarily for exploring 
+planets' magnetospheres. It is capable of detecting hot subsonic 
+plasma such as has been observed in the Earth's magnetosphere and 
+is expected from ions originating in the Mclhnough-Brice ring of 
+Io. The instrument's large angular acceptance allows detection 
+of plasma flows well away from the direction of the Sun, such as 
+plasma flows that co-rotate with the planet. 
+The plasma experiment weighs 9.89 kilograms (21.8 pounds) 
+and draws 8.3 watts of power. 
+Dr. Herbert Bridge of the Massachusetts Institute of 
+Technology is principal investigator. 
+PLASMA WAVE 
+Scientific objectives of the plasma wave experiment are 
+measurements of thermal plasma density profiles at Jupiter - and ._ ., 
+..- - 
+Saturn; studies of wave-particle interaction, and study of the 
+interactions of the Jovian and Saturnian satellites with their 
+planets' magnetospheres. 
+The plasma-wave instrument measures electric-field 
+components of local plasma waves over the frequency range from 
+10 hertz to 56 kilohertz. 
+The experiment shares the two extendable 10-meter 
+(33-foot) electric antennas prov'ded by the planetary radio 
+astronomy experiment team. The two groups use the antennas in 
+-35- 
+
+--- PAGINA PDF 39 ---
+different ways. The plasma wave experiment uses the antennas to 
+form a Vee-type balanced electric dipole (while the radio astronomy 
+experiment uses them as a pair of orthogonal monopoles). 
+In the normal format, the plasma-wave signals are pro-. 
+cessed with a simple 16-channel spectrum analyzer. At planetary 
+encounters the system provides a spectral scan every four seconds. 
+The plasma-wave system has a broadband amplifier that 
+uses the Voyager video telemetry link to give electric field 
+waveforms with a frequency range from 50 hertz to 10 kilohertz 
+at selected times during planet encounters. 
+The experiment is designed to provide key information 
+on the wave-particle interaction phenomena that control important 
+aspects of the dynamics of the magnetospheres of Jupiter and Saturn. 
+Wave-particle interactions play extremely important roles at Earth, 
+and scientists understand that at least the inner magnetosphere 
+of Jupiter is conceptually similar to that of Earth despite the 
+vast differences in size and in the energy of trapped particles. 
+In addition, the satellites of Jupiter and Saturn appear 
+to provide important localized sources of plasma and field-aligned 
+currents, and they should significantly affect the trapped-particle 
+populations . 
+The instrument weighs 1.37 kilograms (3.02 pounds) and 
+draws 1.4 watts of power in the step frequency mode and 18 watts 
+in the step frequency plus waveform analyzer mode. 
+Dr. Frederick L. Scarf of TRW Def2nse and Space Systems 
+Group is principal investisator. 
+-36- 
+
+--- PAGINA PDF 40 ---
+I. 
+4 
+RADIO SCIENCE 
+The spacecraft's communications system is used to 
+conduct several experiments by observing how the radio signals 
+are changed on their way to Earth. 
+By measuring the way signals die out and return when the 
+spacecraft disappears behind a planet or satellite and then 
+reappears, the radio science team can determine the properties 
+of planetary and satellite atmospheres and ionospheres. 
+The radio signals also allow scientists to make precise 
+measurements of the spacecraft's trajectory as it passes near a 
+planet or satellite. Post-flight analyses allow determination of 
+the mass of a body and its density and shape. 
+The rings of Saturn will also be explored by the radio 
+science team by measuring the scattering of the radio signals as 
+they travel through the rings. This will provide measurement of 
+ring mass, particle size distribution and ring structure. 
+The experiment uses the microwave receivers and trans- 
+mitters on the spacecraft as well as special equipment at the 
+Deep Space Network tracking stations. The spacecraft transmitters 
+are capable of sending 10 or 25 watts at S-band; and 12 or 20 watts 
+at X-band. The spacecraft antenna is a 3.66 meter (12-foot) para- 
+bola and is aimed by special maneuvers performed during planet 
+occultations. 
+Dr. G. L. Tyler of the Center for Radar Astronomy, 
+Stanford University, is team leader. 
+-37- 
+
+--- PAGINA PDF 41 ---
+TELEVISION 
+The Voyager imaging system is based on those flown 
+aboard Mariner spacecraft, with advancements and changes dictated 
+by the specific requirements of flybys of Jupiter, Saturn and 
+their satellites. 
+Science objectives for the television experiments include 
+reconaissance of the Jupiter and Saturn systems, including high- 
+resolution photography of atmospheric motions, colors and unusual 
+features (such as the Great Red Spot and similar smaller spots); 
+vertical structure of the atmospheres of the planets; comparative 
+and detailed geology of satellites; satellite size and rotation, 
+and detailed studies of the rings of Saturn. 
+Two television-type cameras are mounted on the space- 
+craft’s scan platform: a 200-mm focal-length, wide-angle camera 
+with 4,000-Angstrom to 6,200-Angstrom sensitivity; and a 1,500-mm 
+focal-length, narrow-angle camera with a 3,200-Angstrom to 6,200- 
+Angstrom range. 
+The discs of Jupiter and Saturn exceed the field of 
+view of the narrow-angle camera about three or four weeks before 
+closest approach. At that time, resolution is about 400 kilometers- -__ 
+(250 miles). 
+scientists will have several simultaneous imaging opportunities: 
+For several days before and after closest approach, 
+1. Photography at high resolution of planets whose 
+angular diameters are many times larger than the 
+field of view. 
+2. Close encounters with the major satellites. 
+3. More distant photography of several other satellites. 
+-38- 
+
+--- PAGINA PDF 42 ---
+4. High-resolution photography of Saturn's rings. 
+To exploit such a variety of opportunities, it is 
+necessary for the spacecraft to return large quantities of imaging 
+data. The camera-spacecraft system has been designed to return 
+imaging data over a wide range of telemetry rates in real time. 
+Data can also be recorded on board the spacecraft for later play- 
+back to Earth -- during occultation by Saturn, for instance. 
+Each camera is equipped with a filter wheel whose 
+individual filters have a variety of uses: . 
+The wide-angle camera's filter wheel contains one clear 
+filter, one each in blue, green and orange wavelengths, a seven- 
+Angstrom sodium-D filter for special observations near Io and 
+other satellites, and two 100-Angstrom filters at the wavelength 
+of methane absorption, for study of the distribution of methane 
+in the atmospheres of Jupiter, Saturn, Titan and Uranus. 
+The narrow angle camera's filter wheel carries two 
+clear filters, two green, and one each of violet, blue, orange, 
+and ultraviolet. 
+Voyager is the first imaging system with narrow- 
+band capability to directly observe distribution of atomic and 
+molecular species. The seven-Angstrom sodium-D filter is the 
+narrowest bandwidth filter ever flown with this kind of camera. 
+Because the Voyager spacecraft pass the planets and 
+satellites at high velocities and must take pictures in dimmer 
+light than Mariner missions to the inner planets, image-smear 
+conditions are more severe than on previous f1ighc.s. To overcome 
+these problems, the camera's pre-amplifiers have been designed 
+
+--- PAGINA PDF 43 ---
+to lower system noise and to incorporate a high-gain state; both 
+changes are meant to provide high-quality images with minimum 
+smear . 
+During the several months before closest approachr the 
+narrow-angle camera photographs Jupiter and Saturn regularly 
+and often to provide information on cloud motions. Those pictures 
+are taken on a schedule that permits scientists to make motion 
+pictures in which the planet's rotation has been "frozen" so 
+that only the cloud motions are apparent. Resolution during the 
+period ranges from about 1,600 kilometers (1,OOO miles) to about 
+400 kilometers (250 miles). Once the planet grows larger than 
+the narrow-angle camera's field of view, the wide-angle camera 
+-. - 
+begins its work. The narrow-angle camera then repeatedly photo- 
+graphs portions of the planets that warrant special scientific 
+interest. The cameras can be shuttered simultaneously during 
+these periods so scientists can relate small-scale motions to 
+larger patterns. 
+Because of the nature of the planetary flybysr the 
+cameras are not able to concentrate on a single target for hours 
+at a time. As each satellite movesr it presents an ever-changing 
+appearance to the cameras; the planets' clouds are also in constant 
+motion. Therefore, observational sequences are structured to 
+provide repeated images at differing intervals for each target. 
+Additionally, large amounts of multicolor imaging data are being 
+obtained for the planets and satellikes. 
+The camera system weighs 38.17 kilograms (84.15 p0UndS)r 
+and uses 41.9 watts of power. 
+-4 0- 
+
+--- PAGINA PDF 44 ---
+I. 
+Dr. Bradford A. Smith of the University of Arizona is 
+team leader. 
+ULTRAVIOLET SPECTROMETER 
+The ultraviolet spectrometer looks at the planets' 
+atmospheres and at interplanetary space. 
+Scientific objectives of the experiment are: 
+1. 
+2. 
+3. 
+4. 
+The 
+To determine distributions of the major constituents 
+of the upper atmospheres of Jupiter, Saturn and Titan 
+as a function of altitude. 
+To measure absorption of the Sun's ultraviolet radi- 
+ation by the upper atmospheres as the Sun is occulted 
+by Jupiter, Saturn and Titan. 
+To measure ultraviolet airglow emissions of the 
+atmospheres from the bright disks of the three 
+bodies, their bright limbs, terminatdrs and dark sides. 
+Determine distribution and ratio of hydrogen and 
+helium in interplanetary and interstellar space. 
+instrument measures ultraviolet radiation in 1,.20.0- .. -- .- 
+Angstrom bandwidth in the range from 400 to 1,800 Angstroms. It 
+uses a grating spectrometer with a microchannel plate electron 
+multiplier and a 128-channel anode array. 
+reflects sunlight into the instrument during occultation. The 
+instrument has a 0.86-degree by 0.6-degree field of view during 
+occultation and a,0.86 by 2 degree field of view for airgl3w 
+measurements. 
+A fixed-position mirror 
+-4 1- 
+
+--- PAGINA PDF 45 ---
+. .. . 
+The ultraviolet spectrometer weighs 4.49 kilograms 
+(9.89 pounds) and uses 2.5 watts of power. 
+Dr. A. Lyle Broadfoot of the University of Southern 
+California is principal investigator. 
+TRACKING AND DATA ACQUISITION 
+Tracking, commanding and obtaining data from the space- 
+craft are part of the mission assigned to the Jet Propulsion 
+Laboratory. These tasks cover all phases of the flight, including 
+telemetry from launch vehicle and spacecraft, metric data on both 
+launch vehicle and Voyager, command signals to the spacecraft 
+and delivery of data to the Mission Control and Computing Center 
+(MCCC) at JPL. 
+The Tracking and Data System (TDS) provides elements 
+of the world-wide NASA/JPL Deep Space Network (DSN), Air Force 
+Eastern Test Range (AFETR), the NASA Spaceflight Tracking and Data 
+Network (STDN) and the NASA Communications System (NASCOM). 
+During the launch phase of the mission, data acquisition 
+was accomplished through use of the near-Earth facilities -- the 
+AFETR stations, downrange elements of the STDN, instrumented jet 
+aircraft and an instrumented ship. Radar-metric data obtained 
+immediately after liftoff and through the near-Earth phase was 
+delivered to and computed at the AFETR Real-Time Computer system 
+facility in Florida so that accurate predictions could be transmitted 
+to Deep Space Network stations giving the locations of the space- 
+craft in the sky when they appeared on the horizon. 
+Tracking and communication with the Voyagers since injec- 
+-4 2- 
+
+--- PAGINA PDF 46 ---
+tion onto Jupiter trajectories and until the end of the mission 
+are being carried out by the Deep Space Network (DSN). 
+The DSN consists of nine deep space communications 
+stations on three continents, a spacecraft monitoring station in 
+Florida, the Network Operations Control Center at JPL and ground 
+communications linking all locations. 
+DSN stations are located around the Earth -- at Goldstone, 
+California; Madrid, Spain; and at Canberra, Australia. Each 
+location is equipped with a 64-meter (210-foot) diameter antenna 
+station, a 34-meter (112-foot) antenna, and a 26-meter (85-foot) 
+antenna station. 
+The three multi-station complexes are spaced at widely 
+separated longitudes so that spacecraft beyond Earth orbit -- 
+and, for the Voyager mission, the planets Jupiter and Saturn -- 
+are never out of view. The spacecraft monitoring equipment in 
+the STDN station at Merritt Island, Florida, covered the pre-launch 
+and launch phases of the mission. A simulated DSN station at 
+JPL, called CTA-21, provided pre-launch compatibility support. 
+In addition to the giant antennas, each of the stations 
+is equipped with transmitting, receiving, data handling and inter- 
+station communication equipment. The downlink radio frequency 
+system includes super-cooled low-noise amplifiers. The 64-meter 
+antenna stations at Goldstone, Spain and Australia have 100-kilowatt 
+transmitters. Transmitter power at 34- and 26-meter stations is 
+LO kilowatts. 
+The downlink is transmitted from the spacecraft at S-band 
+(2,295 megahertz) and X-band (8,400 mhz) frequencies. The uplink 
+-4 3- 
+
+--- PAGINA PDF 47 ---
+." . 
+operates at S-band (2,113 mhz) only, carrying commands and ranging 
+signals from ground stations to the spacecraft. 
+Only the 64-meter and 34-meter antenna stations can 
+receive the X-band signal and can receive at both frequencies 
+(S-band and X-band) simultaneously. During Saturn encounter opera- 
+tions, the 64-meter and 34-meter stations provide continuous 
+spacecraft coverage. From about four weeks before to one week 
+after closest approach the arraying of co-located 64-meter and 
+34-meter antennas is used at all three locations to maximize 
+data-return capability. 
+During cruise operations a combination of 64-meter, 
+34-meter and 26-meter station coverage is used for mission op- 
+erations support. The 26-meter subnet is used when only S-band 
+data are received. 
+The nerve center of the DSN is the Network Operations 
+Control Center at JPL that provides for control and monitoring 
+of DSN performance. All incoming data are validated at that 
+point while being simultaneously transferred to the computing 
+facilities of the Mission Control and Computing Center for real- 
+time and later use by engineers and science investigators. 
+-- -- 
+Ground communications facilities used by the DSN to link 
+the global stations with the control center are part of a larger 
+network, NASCOM, that connects all of NASA's stations around the 
+world. Data from the spacecraft are transmitted over high-speed 
+and wide-band circuits. For the Saturn encounter, telemetry at 
+rates up to 44.8 kilobits per second are carried in real-time on 
+wideband lines from Goldstone, Canberra and Madrid. 
+-44- 
+
+--- PAGINA PDF 48 ---
+Simultaneously with the routing to the MCCC of the 
+spacecraft telemetry, range and range-rate information is generated 
+by the DSN and transmitted to the control center for spacecraft 
+navigation. To achieve the desired maneuver and encounter accura- 
+cies, very precise navigation data are required. Navigation infor- 
+mation includes S/X ranging, two-station near-simultaneous rang- 
+ing, differential time delay between spacecraft and quasar, and 
+multi-station tracking cycles. 
+Commands are sent from the MCCC to one of the DSN sta- 
+tions where they are loaded into a command processing computer, 
+automatically verified for accuracy and transmitted to the proper 
+spacecraft at 16 bits per second. Commands may be aborted, if 
+necessary. 
+- 
+For all of NASA's unmanned missions in deep space, the 
+DSN provides the tracking information to determine the trajectory 
+of the spacecraft. It receives engineering and science telemetry 
+and sends commands for spacecraft operations on a multi-missian 
+basis. 
+Concurrent with the four-year or longer Voyager mission, 
+the network is supporting mission activities of the Viking project 
+with one lander on Mars; maintaining post-Jupiter and Saturn com- 
+munications with Pioneers 10 and 11; and complementing West Germany's 
+space communications facilities on the Helios Sun-orbiting mission. 
+The DSN also is supporting a Venus exploration mission by a Pioneer 
+spacecraft -- a planetary orbiter that began planetary-science 
+activities In December, 1978. 
+All of NASA's networks are under the direction of the 
+-45- 
+
+--- PAGINA PDF 49 ---
+Office of Space Tracking and Data Systems. JPL manages the DSN. 
+The STDN facilities and NASCOM are managed by NASA's Goddard 
+Space Flight Center, Greenbelt, Maryland. 
+The Goldstone DSN stations are operated and maintained 
+by JPL with the assistance of the Bendix Field Engineering Corp. 
+The Canberra stations are operated by the Australian Department 
+of Supply. 
+government !s Instituto Nacional de Tecnica Aerospacial. 
+The stations near Madrid are operated by the Spanish 
+MISSION CONTROL AND COMPUTING CENTER 
+The Mission Control and Computing Center (MCCC) at the 
+Jet Propulsion Laboratory is the focus of all Voyager Project 
+flight operations. It is through the center's computer systems 
+that data from the Voyagers.pass, are processed and presented 
+to engineers and scientists for analysis. Through the extensive 
+and varied displays of the computers in the MCCC, the flight 
+analysts observe and control the many ground processing functions 
+and the spacecraft. 
+The MCCC is housed in JPL buildings containing its 
+computer systems, communication and display equipment, photo 
+processing lab and mission support areas. The various areas are 
+outfitted to satisfy the diverse needs of the Voyager mission 
+operations team -- the requirements of the mission controllers, 
+spacecraft performance analysts and science investigators. 
+The MCCC contains several computer systems designed to 
+receive the incoming Voyagkr data, process it in real-time, display 
+-4 6- 
+
+--- PAGINA PDF 50 ---
+it and organize it for further processing and analysis. After the 
+data have been received as radio signals by the Deep Space Network 
+(DSN) stations located around the world, they are transmitted to 
+Pasadena and into the MCCC computers where the processing is done. 
+Software developed by the MCCC, operating in those computers, per- 
+forms the receiving, displaying and organizing functions. Computer 
+programs generated by other elements of the Voyager Project fur- 
+ther process the data. 
+Commands causing the spacecraft to maneuver, gather 
+science data and perform other complex mission activities are 
+introduced into the MCCC computers and communicated to a station 
+of the Deep Space Network for transmission to the appropriate 
+spacecraft. 
+The MCCC is composed of three major elements, each with 
+its own computer system. They are the Mission Control and Com- 
+puting Facility (MCCF), the Information Processing Center (IPC) 
+and the Mission and Test Computing Facility (MTCF). 
+The Mission Control and Computing Facility consi-st-s. of -- 
+two IBM 360-75 processors and a number of Modcomp computers. It 
+supports the Voyager command, monitor and data records activities 
+and routes data to the MTCF and tracking systems. The Modcomp 
+computers provide the means by which commands are formatted and 
+sent by the Deep Space stations to the spacecraft. They also 
+provide displays of ground data system configuration and status 
+information. The 360-75s are used to provide the data management 
+capability to produce plots and printouts for the day-to-day 
+determination of spacecraft operating condition. The 360-75s 
+-4 7- 
+
+--- PAGINA PDF 51 ---
+also produce the final records of data for detailed analysis 
+by the science community. 
+The Information Processing Center, with two UNIVAC 
+1100-81 computers, supports the Voyager Project's navigation, 
+spacecraft analysis, and mission sequence systems. Computer 
+terminals located in the mission support areas allow project 
+analysts to execute their programs and obtain results displayed on 
+TV monitors, or on various printers and plotters. 
+The Mission and Test Computing Facility provides tele- 
+metry data processing for the science and engineering information 
+transmitted from the Voyagers. Within the MTCF are the telemetry 
+system, imaging system and photo system. The telemetry system 
+uses three strings of UNIVAC and Modcomp computers to receive, 
+record, process and display the data as requested by analysts in 
+the mission support areas. The imaging and photo systems produce 
+the photographic products from data generated by Voyager's TV 
+cameras. Pictures of Jupiter, Saturn and their moons are analyzed 
+by scientists housed in the mission support areas. 
+are provided both electronic and photographic displays. 
+Scientists 
+MCCC, like the DSN, also supports the other flight mis- 
+sions, Viking, Pioneers 10 and 11, Helios and Pioneer/Venus. 
+
+--- PAGINA PDF 52 ---
+VOYAGER SUBCONTRACTORS 
+This is a list of some key subcontractors who provid'ed 
+instruments? hardware and services for the Voyager Project: 
+Algorex Data Corp. 
+Syosset, NY 
+Boeing Co. 
+Seattle? WA 
+Fairchild Space and 
+Electronics Co. 
+German town , MD 
+Ford Aerospace and 
+Commun ica t ions Corp 
+Palo Alto, CA 
+Frequency Electronics, Inc. 
+New Hyde Park, NY 
+General Electric Co. 
+Space Division 
+Philadelphia, PA 
+General Electric Co. 
+Utica, NY 
+General Electric Co. 
+Space Systems Organization 
+Valley Forge? PA 
+H i-S he ar Corp . 
+Ordnance Division 
+Torrance? CA 
+Honeywell I Inc . 
+Lexington, MA 
+Hughes Aircraft Co. 
+Aerospace Group 
+Culver City, CA 
+Lockheed Electronics Co. 
+Industrial Technology Div. 
+Plainfield, NJ 
+Automated Design Support 
+for Flight Data Subsystem 
+Radiation Characterization 
+of Parts and Materials 
+Temperature Control Louvers 
+S/X Band Antenna Subsystem: 
+Solid State Amplifiers 
+Ultra Stable Oscillators 
+Radioisotope Thermoelectric 
+Generators 
+Computer Command Subsystem: 
+Flight Control Processors 
+Attitude Control and 
+Articulation Subsystem 
+Pyrotechnic Squibs 
+Canopus Star Trackers 
+Radiation Characterization 
+of Parts and Materials 
+Data Storage Tape Transport 
+-49- 
+
+--- PAGINA PDF 53 ---
+Martin Marietta Aerospace 
+Denver, CO 
+Attitude Control Electronics; 
+Propulsion Subsystem 
+Modula tion/Demodula tion 
+Subsystem: 
+Rad io Frequency Subsys tem 
+Motorola, Inc. 
+Government Electronics Div. 
+Scottsdale, A2 
+Rocket Research Corp. 
+Redmond, WA 
+Rocket Engine and Thruster 
+Valve Assemblies 
+Computer Command Subsys tem 
+Memories 
+SCI Systems, Inc. 
+Huntsville, AL 
+Hybrid Memories for Flight 
+Data Subsystem Teledyne Microelectronics 
+Los Angeles, CA 
+Data Storage Electronics Texas Instruments 
+Dallas, TX 
+The Singer Company 
+Little Falls, NJ 
+Dry Inertial Reference 
+Units (Gyroscopes) 
+Thiokol Chemical Corp. 
+Elkton Division 
+Elkton, MD 
+Solid Rocket Motor 
+S/X Band Traveling Wave 
+Tube Amplifiers Watkins-Johnson Co. 
+Palo Alto, CA 
+Power Subsys tern Xerox Corp. 
+Electro-Optical Systems 
+Pasadena, CA 
+Flight and Test Battery 
+Assemblies Yardney Electronics Corp. 
+Denver, CO 
+Science Instruments 
+Massachusetts Institute of 
+Techno 1 ogy 
+Cambridge, MA 
+Plasma Subsystem 
+_. ... . I - 
+Photopolarimeter Subsystem University of Colorado 
+Boulder, CO 
+University of Iowa 
+Iowa City, IA 
+Plasma Wave Subsystem 
+Imaging Science (TV) 
+Electronics Xerox Corp. 
+Electro-Optical Systems 
+Pasadena, CA 
+Ultraviolet Spectrometer Kit t Peak National Observatory 
+Tucson, AZ 
+-50- 
+
+--- PAGINA PDF 54 ---
+Johns Hopkins University 
+Applied Physics Laboratory 
+Baltimore , MD 
+Goddard Space Flight Center 
+Greenbelt, MD 
+Texas Instruments 
+Dallas, TX 
+Martin Marietta Aerospace 
+Denver, CO 
+Astro Research Corp. 
+Santa Barbara, CA 
+TRW Defense and Space Systems 
+Redondo Beach, CA 
+Matrix Corp. 
+Acton, MA 
+General Electrodynamics Corp. 
+Dallas, TX 
+Low Energy Charged 
+Particle Subsystem 
+Magnetometers: Cosmic Ray 
+Subsystem 
+Modified Infrared 
+Interferometer Spectrometer 
+and Radiometer 
+Planetary Radio Astronomy 
+Subsys tern 
+Magnetometer Boom: Planetary 
+Radio Astronomy Antennas 
+Ultraviolet Spectrometer 
+Electronics 
+Plasma Subsystem Electronics 
+TV Vidicons 
+##### 
+-51- 
+
+--- PAGINA PDF 55 ---
+APPENDIX A: EARTH-S PACECRAFT COMMUNICATIONS 
+The communication process between Voyager 2 and Earth involves 
+several unique features. Transmission of commands is constrained 
+by failure of the prime radio receiver and partial failure of that 
+portion of the back-up receiver used to aquire and track the trans- 
+mitted signal. Several special actions have been taken to accom- 
+modate the limitation. Data transmission to Earth takes advantage 
+of the benefits of increasing apparent size of the receiving antenna 
+by arraying together two antennas, but is complicated by the 
+effects of terrestial weather. 
+Earth to Spacecraft - - Uplink 
+Voyager was launched with two phase-lock-loop radio receivers. 
+Unlike a car radio receiver, which can be tuned to receive signals 
+from stations transmitting at different frequencies, 
+receivers have a single "best-lock frequency" (BLF) and the capability 
+of locking on to and then tracking a received signal over a frequency 
+range of 500#000 Hertz centered on the receivers' BLF. The 500,000 
+Hertz is called the tracking-loop bandwidth. A tracking-loop 
+bandwidth of at least 150,000 Hertz is required to accommodate the 
+Doppler effects induced by rotation of Earth and acceleration of 
+the spacecraft by the planet, and to accommodate changes in the 
+BLF caused by temperature variations in the receiver. Deep Space 
+Stations (DSS) cause this to happen by slowly increasing or decreas- 
+ing the transmitted frequency over a portion of the tracking band- 
+width to allow the spacecraft receiver to lock onto the transmitted 
+signal. This is called ramping. The station then tunes to a 
+fixed frequency for the remainder of the tracking period, usually 
+the Voyager 
+-5 2- 
+
+--- PAGINA PDF 56 ---
+L . 
+8 to 12 hours. 
+period due to rotation of Earth, about 6,000 Hertz, or spacecraft 
+acceleration, as high as 82,000 Hertz near Saturn closest aproach, 
+are then accommodated by the large tracking bandwidth. 
+Frequency shifts during the rest of the tracking 
+In April 1978 the Voyager 2 prime receiver failed and the 
+back-up receiver was determined to have a shorted capacitor in the 
+phase-lock-loop filter. The short reduces the tracking-loop band- 
+width from 500,000 Hertz to 200 Hertz. The narrowness of the new 
+bandwidth requires that the frequency transmitted from the DSS be 
+constantly tuned to remove the rotating Earth and spacecraft ac- 
+celeration effects. A variety of ground constraints requires that 
+the frequency received by the spacecraft not vary by more than 
+about 50 Hertz from the BLF. An emergency development of special 
+hardware resulted in the capability to meet the requirement. But 
+there is another complication. The sensitivity of the receiver's 
+voltage-controlled oscillator to small changes in the receiver 
+temperature, approximately 380 Hertz per degree Celsius, causes 
+large swings in the BLF, relative to the 200 Hertz bandwidth. 
+Examples of events that induce temperature variations large enough 
+to change the BLF are power changes anywhere on the spacecraft to 
+more than two watts and spacecraft maneuvers that change the solar 
+illumination of the main structure. 
+- -- 
+The sequence of events for the Voyager 2 Saturn encounter 
+has been designed to reflect the sensitivity of the BLF to temperature 
+variations. 
+atioi changes and maneuvers has been documente3 in a Flight Rule. 
+The rule specifies the time (referred to as a "command moratorium" 
+A history of the effects on the BLF of various configur- 
+-53- 
+
+--- PAGINA PDF 57 ---
+since command loads cannot be transmitted and reliably received by 
+the spacecraft during those periods) that must be set aside to 
+allow the thermal transient resulting from an event to stabilize. 
+Normal command moratoria are between 24 and 72 hours. Near the 
+end of a command moratorium, special procedures are used to measure 
+the new BLF. The same procedures are performed at the beginning 
+of most DSS tracking periods to confirm that no unexpected changes 
+in the BLF have occurred. 
+Execution of the BLF determination procedures and re- 
+strictions on spacecraft activity are important before command 
+load periods and navigation tracking cycles since a command load 
+period is 12 hours long and nav cycles are between 30 and 54 hours 
+long. The frequency of command loads and nav cycles is dictated 
+by spacecraft activity planned for a given time and the need to 
+obtain measurements of the range and velocity of the spacecraft 
+relative to Earth so the trajectory can be determined. Between 
+25.8 days before Saturn encounter and one day after, six command 
+loads and three nav cycles must be accommodated, having a net of 
+16.4 days to execute, one trajectory correction maneuver, 14 science 
+maneuvers, and three significant power changes. The command mora- 
+toria imposed by those events add up to 8.4 days, leaving a net of 
+eight days of unsubscribed tracking time. In addition to that 
+broad based problem, the day of Saturn closest approach poses two 
+special difficulties. A key science objective is determination 
+of the mass of Tethys. 
+lock with the transmitted signal for a period of about 50 minutes, 
+beginning less than five minutes after the completion of the exit 
+This means the Spacecraft must be in 
+-54- 
+
+--- PAGINA PDF 58 ---
+Earth-occultation maneuver performed for radio science. During 
+Earth occultation (when the spacecraft is hidden from Earth) two 
+of the largest power transients of the entire encounter are made 
+to achieve configuration for the radio science maneuvers. The 
+X-band transmitter is reduced to low power and the S-band trans- 
+mitter is raised to high power for a net power increase of 28 
+watts, and the telemetry drivers are turned off for a net decrease 
+of approximately one watt. Those changes to the configuration are 
+in effect for 2.5 hours only, ending 15 minutes before the end of 
+the exit Earth-occultation radio science maneuvers: however, they 
+are expected to cause a shift in the BLF of at least 65 Hertz. 
+Normally, these changes would result in a 72-hour command morator- 
+ium. The shortness of the period for which the transmitter power 
+changes are in effect suggests that a shortened command moratorium 
+of 12 hours would be sufficient. As a contingency for an error in 
+prognosis, a second load-start point has been planned at 46 hours 
+after Saturn closest approach, or 19 hours after the nominal load- 
+start point. Thus, should it be necessary to use the contingency 
+plan, about 19 hours of science data would be lost. 
+Spacecraft to Earth - - Downlink 
+Key elements of the Voyager downlink consist of low 
+temperature receivers at the Deep Space Stations, efficient 
+error-correction codes for formatting the data, and use of X-band 
+frequencies (8,000 megaHertz) to maximize downlink data rates. 
+The low-temperature receivers are crucial to detection of the 
+extremely week signal (O.OOO,OOO,OOO,OOO,OOO 1 watt) s’riking the 
+DSS antenna. 
+-55- 
+
+--- PAGINA PDF 59 ---
+Most of the data transmitted by the spacecraft is con- 
+volutionally coded. Coding the data in that manner results in a 
+probability distribution for bit errors that is very sensitive 
+to the signal-to-noise ratio of the receiver. Specifically a 
+25 percent change (1 dB) in the signal-to-noise ratio results 
+in a factor-of-10 change in the bit-error rate. 
+Alternatively, since simultaneous receipt and processing 
+of the received signal from the spacecraft by two co-located 
+stations (one 64-meter and one 34-meter) increases the receiver 
+signal-to-noise ratio by about 1 dB, errors in the data can be 
+reduced by 90 percent by arraying a 64-meter and a 34-meter Deep 
+Space station. For the period between 26 days before encounter 
+to about seven days after closest approach arraying is performed 
+at the DSS complexes to take advantage of the improved perfor- 
+mance . 
+Loss of the 34-meter station during any arrayed track 
+would result in reduction of data quality or quantity, but not 
+in the loss of all data. Loss of the 64-meter antenna would __ 
+cause loss of X-band capability, reducing the data to engineering 
+measurements only. 
+The X-band signal is strongly affected by bad weather 
+-- water vapor or rain. Sequences have been'designed to accommodate 
+statistical weather variations. On most days downlink performance 
+will be good. Data loss could be extensive on days where heavy 
+rain or snow falls on the antennas. Those losses are not expected 
+to exceed 10 percent of all data. To protect agr:>inst even those 
+losses -- where data have been defined as unique or critical -- 
+
+--- PAGINA PDF 60 ---
+the data are recorded by the spacecraft and played back twice 
+over separate Deep Space Network stations. That provides addit- 
+ional protection against possible bad weather. 
+-57- 
+
+--- PAGINA PDF 61 ---
+APPENDIX B NAVI GAT ION OPE RAT IONS 
+Navigation is the art of determining where the spacecraft 
+is and where it is going, and making corrections to its 
+trajectory so it will arrive at the intended place at the desired 
+time. The process involves three conceptually different functions: 
+Making measurements that are sensitive to the space- 
+craft's position or velocity. 
+Using the observations to correct the prediction of 
+where, with respect to the target planet, the spacecraft is going 
+and when it will arrive at the predicted place. 
+arrival place and time to determine whether the spacecraft will be 
+close enough tofhe desired aiming conditions to satisfy mission 
+requirements, and if not, computing the trajectory correction 
+Using the predicted 
+maneuver necessary. 
+Navigation Measurements 
+Measurements for navigation are of two basic types: 
+radiometric and optical. Radiometric observations are made by a 
+station on Earth using radio signals to and from the spacecraft. 
+Optical observations are pictures taken by the camera of the target 
+body against the background of stars. 
+Radiometric observations are obtained by tracking the 
+spacecraft with the antennas of the Deep Space Network, strategi- 
+cally located at different longitudes on the Earth so that it is 
+possible to have the spacecraft in view at any time on a given 
+day. 
+the navigator: The difference in frequency between the signals 
+sent to the spacecraft and those received from it, caused by relative 
+The tracking stations measure two quantities of interest to 
+-58- 
+
+--- PAGINA PDF 62 ---
+motion between spacecraft and station. That difference is called 
+Doppler shift. 
+to change in pitch as it passes an observer, and it provides the 
+navigator with a precise measurement of the velocity of the space- 
+craft along the line of sight from the station. The stations also 
+measure the time required for a signal to travel to the spacecraft 
+and back. That is called range measurement because it is directly 
+related to the distance (range) between the station and the space- 
+craft. 
+It is the same effect that causes a train whistle 
+Radiometric data is used for navigation during all mission 
+phases. However, during encounters optical data from the cameras 
+complements radio data and becomes the navigator's most powerful 
+tool. 
+relative to the target rather than to Earth and the further advantage 
+of becoming more accurate as the spacecraft gets closer to its 
+target. 
+It has the advantage of measuring the spacecraft's position 
+Of approximately 17,500 pictures expected to be taken by 
+Voyager 2 during its Saturn encounter, about 180 are designed for- 
+optical navigation. 
+for high resolution and are planned to capture a star image in the 
+same field of view with one or more of Saturn's moons. Pictures 
+of the moons are used rather than Saturn itself because Saturn's 
+image would fill the narrow-angle field of view 16 days before 
+Saturn encounter and would be too large to reliably capture with a 
+star much earlier than that. The star provides a precise direction 
+reference in the picture from .,hich the satellite positions can be 
+measured and the spacecraft's position can be inferred. 
+Those pictures use the narrow-angle camera 
+-59- 
+
+--- PAGINA PDF 63 ---
+Orbit Determination 
+Turning raw measurements into predicted encounter condi- 
+tions is called orbit determination (OD in navigator's jargon). 
+Orbit determination is a differential correction process. The OD 
+analyst starts with a reference trajectory, usually his previous 
+best estimate, and computes a correction based on the difference 
+between what was observed in the navigation measurements and what 
+mathematical formulas predict should have been observed with the 
+current trajectory. 
+Accuracy of the estimated trajectory depends on the 
+accuracy of the measurements and on the accuracy and completeness 
+of the mathematical models embodied in computer programs that 
+represent everything known to significantly affect spacecraft 
+motion or the measurements. Uncertainties in such diverse quantities 
+as position of the target planet in the solar system, locations of 
+tracking stations on Earth's crust, wobble of the Earth about its 
+spin axis, solar pressure and attitude control activity on the 
+spacecraft, charged particles in space that delay the radio signals, 
+and electromagnetic distortion of images from the spacecraft cameras 
+limit the accuracy achievable. 
+Despite the diversity (and perversity) of error sources affect- 
+ing orbit determination, the Voyager spacecraft can be navigated 
+using only radiometric data to an accuracy slightly better than 
+one part in a million: At a distance of 1 million miles, navigation 
+error would be less than a mile. 
+target the size of a baseball from 25 miles away. 
+That is comparaole to hitting a 
+Unfortunately, 
+Saturn is 968 million miles from Earth at the time of Voyager 2's 
+-60- 
+
+--- PAGINA PDF 64 ---
+. a 
+c 
+encounter, so the corresponding radiometric accuracy is about 800 
+miles. That is why optical data is so important for Voyager navi- 
+gation. 
+error relative to Saturn by a factor of 15 compared with what 
+would be achievable with only Earth-based tracking. Instead of 
+800 miles the expected error with both radio and optical data is 
+55 miles. That is comparable to hitting a target the size of an 
+aspirin tablet (rather than a baseball) 25 miles away. 
+It enables navigators to reduce the expected delivery 
+Since optical data continues to provide more accurate measure- 
+ments as the spacecraft gets closer to Saturn, trajectory knowledge 
+continues to improve even after the final trajectory correction 
+maneuver has been executed. The additional trajectory knowledge 
+cannot affect the flight path, but is very important for ensuring 
+that the science instruments are accurately pointed at their intended 
+targets during the time within a few hours of closest approach. 
+Getting correct instrument pointing will be most difficult for 
+objects such as Tethys and Enceladus that are viewed from close 
+range (less than 100,000 km) and for objects whose positions are 
+less well known than the spacecraft's. In this category are several 
+of the recently discovered small satellites for which relatively 
+close-up imaging will be attempted by Voyager 2. One of the navi- 
+gation challenges for this encounter is the "satellite pointing 
+update", which begins 2 1/2 days before Saturn closest approach, 
+during which improved orbit knowledge for the satellites as well 
+as the spacecraft will be exploited to make final corrections to 
+the instrument pointing for selected 1Ct.y observations. 
+When the excitement of the encounter has waned, there is 
+-61- 
+
+--- PAGINA PDF 65 ---
+one more orbit determination task to be done: The encounter tra- 
+jectory reconstruction. "Reconstruction" refers to the precise 
+determination, after the fact, of what trajectory was actually flown 
+through the encounter. That is essential for interpretation of 
+science data from the encounter, especially for some of the radio- 
+science investigations. The post-encounter trajectory reconstruction 
+error (relative to Saturn) will be only 2% of the expected delivery 
+error: The reconstructed trajectory will be accurate to about 1 
+mile. Ironically, it is not the optical data that makes that accu- 
+racy possible but the radiometric data -- the Doppler measurements. 
+That is because Saturn's gravity causes the trajectory to bend 
+during the flyby, and the bending induces large velocity changes 
+that are precisely measured by the Doppler. A side benefit of the 
+reconstruction is that it enables navigators to evaluate their 
+performance with respect to the pre-encounter orbit determination. 
+Trajectory Correction Maneuvers 
+Trajectory correction maneuvers (TCMs) control the flight 
+path by changing the spacecraft's velocity slightly, either speeding 
+it up or slowing it down, and changing its direction. TCMs are 
+accomplished by four small thrusters on the spacecraft opposite-- -. -- 
+the large high-gain antenna. To execute a TCM the spacecraft is 
+first turned so the thrusters point in the right direction to 
+effect the desired velocity change. Then they are fired. The 
+four thrusters acting together exert a maximum force of 1/2 pound 
+on the spacecraft. Length of the burn determines magnitude of the 
+velocity change. 
+burn of about 3 minutes. A typical TCM changes the velocity by 
+A v)slocity change of 1 mile an hour requires a 
+-6 2- 
+
+--- PAGINA PDF 66 ---
+c 
+only a few miles an hour. Since the spacecraft travels through 
+the solar system at 35,000 mph (relative to the sun), a typical 
+correction would represent a change of 1 part in 10,000 or .01%. 
+The last TCM executed by Voyager 2 was TCMB7 (the seventh 
+TCM for the "B" spacecraft) on Feb. 26, 1981. The final approach 
+to Saturn will be controlled by two additional TCMs (88 and B9) on 
+July 19 (Saturn encounter minus 37 days) and Aug. 18 (encounter 
+minus 7 days). Each maneuver is expected to change the velocity 
+by 1 to 5 mph. Their placement was chosen to achieve the necessary 
+delivery accuracy with minimal propellant. 
+The engineering trade-off between accuracy and propellant 
+- 
+use is a major consideration in planning the trajectory correction 
+strategy. The accuracy to which the spacecraft is delivered to its 
+target is determined by the final pre-encounter TCM, which in turn 
+is limited by the orbit determination accuracy available at the 
+time. Since OD accuracy improves as the planet is approached, a 
+late TCM provides more accurate delivery. On the other hand, 
+the velocity change required for a given correction in encounter 
+position is inversely proportional to the time-to-go. The closer 
+the spacecraft is to Saturn when the TCM is executed, the more 
+propellant is required to make the correction. For that reason 
+two TCMs control the encounter trajectory rather than one. TCMB8 
+will remove most trajectory errors accumulated during previous 
+months of cruise when little propellant is required. Then TCMB9 
+will take advantage of the improved OD accuracy to make a final 
+small correction. That two-maneuver approach u'ses only about 40% 
+of the propellant required if a single large correction were made 
+-63- 
+
+--- PAGINA PDF 67 ---
+c 
+at the time of TCMBS. Conservation of propellant is important 
+for Voyager 2, as its flight to Uranus and Neptune depends on 
+sufficient fuel beyond Saturn. 
+Target inq Strategy 
+The aim point at Saturn was selected to continue the 
+"Grand Tour" trajectory that Voyager 2 is following through the 
+solar system. That targeting strategy uses the gravitational field 
+of each planet to "sling" the spacecraft on to the next planet. 
+Voyager 2 gains energy with each planetary encounter. Had there 
+been no planets to encounter the spacecraft would have stayed in 
+orbit around the Sun. Instead, using energy from the planets, it 
+will leave the solar system at 36,000 miles an hour. 
+Each encounter is carefully targeted to send Voyager 2 
+to the desired position at .the next planet, but a TCM is needed to 
+adjust the timing of the next encounter. 
+TCM (called B10) is planned to adjust the arrival time at Uranus 
+by two days to meet the Uranus satellites Miranda and Ariel. TCMBlO 
+will speed up the trajectory by 34 miles an hour and will correct 
+the direction of flight to compensate for the delivery error at 
+Saturn. There is a 4,500-to-1 multiplier between delivery error 
+at Saturn and the error at Uranus: For every mile that Voyager 2 
+On Sept. 29 a post-Saturn 
+misses its Saturn aimpoint the resulting flight path (if not cor- 
+rected) would miss Uranus by 4,500 miles. Thus, the magnitude of 
+the velocity correction to be made by TCMBlO (and therefore the 
+propellant expenditure) is directly related to the Saturn-relative 
+delivery erzor. That further emphasizes the importance of optical 
+data in enhancing the orbit determination accuracy. Ccnsider that 
+-64- 
+
+--- PAGINA PDF 68 ---
+without optical data there would be a 90% chance of having enough 
+fuel to reach the desired Uranus encounter and only a 10% chance 
+of reaching Neptune, With optical navigation the fuel for the 
+Uranus encounter is assured, and the probability of reaching Neptune 
+is 99%. 
+Navigation Status 
+The figure shows the navigation status in the "aim plane". 
+(Navigators call it the "B-plane"). The aim plane is an imaginary 
+plane passing through the center of the target planet that represents 
+the desired encounter conditions and orbit determination results. 
+Included are the aim point and the current best estimate (CBE) for 
+the encounter trajectory based on orbit determination of May 15, 
+1981. Associated with each point in the aim plane is an arrival 
+time expressed in hours, minutes, and seconds GMT on Aug. 26, 
+1981. The error ellipse defines the uncertainty associated with 
+the CBE. Statistically, there is a 40% probability that the 
+actual trajectory is within the error ellipse associated with the 
+orbit determination estimate. That information will be updated 
+during the Saturn enounter. 
+- . -- Encounter Trajectory Description -. .1 ~ 
+The Voyager 2 encounter differs in major respects from 
+the Voyager 1 Saturn encounter. Since Saturn was scheduled to be 
+the final planetary encounter for Voyager I, the trajectory could 
+be designed to maximize the science return and safety of the space- 
+craft without regard to its post-Saturn characteristics. 
+Voyager 2, the aim point was defined solely by the requirements to 
+continue the trajectory to Uranus. The arrival time, however, was 
+For 
+-65- 
+
+--- PAGINA PDF 69 ---
+selected to provide close encounters with some satellites that 
+were not seen close-up by Voyager 1 -- Tethys and Enceladus. 
+Closer approaches to Hyperion, Iapetus, and Phoebe are also achieved 
+by Voyager 2, although none is really close. Other differences 
+include a slightly lower-altitude flyby of Saturn and the absence 
+of a close Titan encounter, one of the major objectives of Voyager 
+1. Voyager 2 crosses the potentially hazardous ring plane only 
+once rather than twice, but it does so at a point much closer to 
+Saturn, 2.85 Saturn radii rather than 6.26. A general view of the 
+Voyager 2 Saturn encounter from above the trajectory plane is 
+shown in the figure. Voyager 2 encounters Saturn on Aug. 25, 1981, 
+at a nominal spacecraft event time of 8:24 p.m. PM'. Closest 
+approach will be 161,094 km or 2.67 Saturn radii from the planet 
+center, which corresponds to an altitude of 101,000 km (63,000 mi) 
+above the cloud tops. 
+Prior to closest approach, the spacecraft encounters 
+five major satellites: Iapetus (-74 hrs, 909,000 km), Hyperion 
+(-26 hrs, 471,00Okm), Titan (-18 hrs, 666,000 km), Dione (-2 hrs, 
+502,000 km), and Mimas (-1 hrs, 310,000 km). The spacecraft also 
+encounters four minor satellites or "rocks:" S12 (-4 hrs, 318,000 
+km) S15 (-2 hrs, 313,000 km*), S17 (-1 hr, 154,000 km), and S13 
+(-5 min, 107,000 km). In addition to the above satellite encounters, 
+the star occultation of Delta-Scorpius (Dschubba) by Saturn and 
+its rings occurs before the spacecraft reaches periapsis. 
+After Saturn closest approach, th2 spacecraft flies by 
+the four remaining major satellites: Enceladus (+21 min, 87,000 
+km), Tethys (+3 hrs, 93,000 km), Rhea (+3 hrs, 645,000 km) and 
+-6 6- 
+
+--- PAGINA PDF 70 ---
+Phoebe (+lo days, 2,076,000 km). Closest approaches to three more 
+rocks also occur after periapsis: S14 (+9 min, 247,000 km), S10 
+(+30 min, 223,000 km); and S11 (+42 min, 147,000 km). The trajectory 
+descending node (ring plane crossing) is reached about 54 minutes 
+after closest approach to Saturn, at a range of 172,109 km or 2.853 
+Saturn radii. 
+* Closest viewing distance. S15 is occulted by Saturn at closest 
+approach . 
+-6 7- 

@@ -1,0 +1,929 @@
+<title>Section Three: Chapter Four</title>
+
+<h2><A NAME="A0">Chapter Four: Design for Radiation 
+Tolerance</A></h2>
+
+<h3>Objective:</h3>
+<strong>To present concepts to an ASIC designer for meeting total ionizing dose (TID) radiation and single event effect (SEE) tolerance 
+specifications.</strong> <p>
+
+Rad-hard ASICs must be designed for optimum performance and 
+reliability in both non radiation and radiation environments 
+encountered during the mission. This chapter discusses radiation 
+hardening methods for ASICs using CMOS technology that must 
+operate in the natural space radiation environment. <p>
+
+<h3><A NAME="A1">Radiation Environment</A></h3>
+
+Three primary radiation components of the natural space 
+environment affect CMOS devices. First, planetary magnetic fields 
+trap belts of high-energy protons and electrons, thus subjecting 
+satellites to large fluxes of these particles when they pass through 
+the radiation belts. Second, galactic cosmic rays occur everywhere in 
+space. These highly energetic particles, with a wide range of atomic 
+numbers, exist in a very low flux compared to the number of 
+particles in the radiation belts. However, a single galactic cosmic ray 
+can deposit sufficient charge in a modern integrated circuit to change 
+the state of internal storage elements and may also cause more 
+complex internal behavior. Third, solar flares produce varying 
+quantities of electrons, protons, and lower energy charged particles. 
+Solar flare activity varies widely at different times. During periods of 
+high solar activity, very high fluxes of particles may occur over time 
+periods of hours or days. Table 3.4.1 below summarizes the three 
+components of the natural space environment along with their 
+primary effects on CMOS devices. <p><img src=gif.images/table.3.4.1.gif alt="Summary of Space Radiation Evironments and their Effects on CMOS Devices"><br>
+Table 3.4.1 Summary of Space Radiation Evironments and their 
+Effects on CMOS Devices
+<p>
+
+<h3><A NAME="A2">Effects of Radiation on MOS Devices</A></h3>
+
+Two basic effects occur when CMOS devices are exposed to space 
+radiation.
+<ul>
+<li> <A NAME="TID">Total Ionizing Dose (TID)</A>: As high-energy 
+electrons and protons pass through the device, they produce 
+electron-hole pairs within the gate and field oxides of MOS 
+structures. The electrons that result from ionization have high 
+mobility in the oxide and are quickly swept out by internal fields. 
+The holes have much lower mobility. Some fraction of the holes will 
+be transported to the silicon/silicon-dioxide interface, where they 
+will be trapped. This will change the threshold voltage and mobility 
+of the gate and field-oxide transistors, modifying their 
+characteristics. These long-lasting effects cause permanent or 
+semipermanent changes in devices.<p>
+Although each particle interaction produces a number of electron-
+hole pairs, the total charge from a single particle interaction is 
+generally too low to cause significant damage in current device 
+technologies. Consequently, total dose degradation usually results 
+from the aggregate interactions of a large number of protons or 
+electrons within the regions of CMOS devices.<p>
+
+<li> <A NAME="SEE">Single-Event Effects (SEE)</A>: High-energy 
+heavy particles, such as galactic cosmic rays, produce far more 
+ionization in semiconductors than electrons or protons. Thus, the 
+short-duration charge from an ion may be high enough to cause 
+internal latches or registers to switch states, introducing random 
+errors (single-event upsets, SEUs) in sequential logic circuits or 
+memories. To recover from SEUs rewrite memory or reinitialize 
+sequential logic operations at the system or subsystem level. Other 
+possible transient effects include: latchup, snapback, and burnout in 
+power MOSFETs, which are all much more difficult to recover from 
+than SEUs and may cause catastrophic failure. <p>
+In general, devices become more sensitive to SEEs as they are 
+reduced in size because they require less switching energy. Highly-
+scaled devices may be susceptible to SEEs from protons as well as 
+heavy ions. This increases the SEE rate significantly because of the 
+proton belts. Thus, SEEs are <A NAME="transient.phenom">transient 
+phenomena</A>, triggered by a single high-energy particle 
+interacting with p-n junctions within a semiconductor.
+</ul> <p>
+In addition to SEEs and TID effects, ASIC vendors sometimes design 
+for radiation effects not considered in this chapter, which come from 
+man-made nuclear events. <p>
+
+The manufacturer's specific techniques for fabricating each layer 
+strongly affect ASIC hardness. Design techniques have some effect on 
+hardness, but only limited improvements can be implemented at the 
+circuit design level. Circuit design cannot overcome global failure of 
+internal transistors due to <A NAME="field-oxide_inversion">field-
+oxide inversion</A>, or compensate for large collection volumes for 
+SEU charge generation. However, designers must know hardening 
+techniques; using the wrong design methods may inadvertently 
+lower radiation hardness to levels far below the level that a specific 
+process can achieve. The following three approaches improve the 
+radiation hardness of ASIC designs: 
+<ul>
+<li> Special processing techniques, implemented by the manufacturer 
+reduce the sensitivity of the process to radiation. This is the most 
+effective hardening technique and can be used to improve both TID 
+and SEE hardness. Specific techniques include modifying processing 
+steps associated with oxide growth because properly controlled oxide 
+growth can increase total dose hardness. Other enhancements include 
+using epitaxial or <A NAME="SOI.1">silicon-on-insulator (SOI)</A> 
+substrates to limit charge collection from heavy particle interactions, 
+thereby improving SEE hardness. The latter approach requires 
+special wafers, which can be grouped into three categories:
+<ul>
+<li> Wafers with a thin epitaxial silicon layer grown on bulk silicon, 
+which reduces latchup susceptibility; these wafers are used to make 
+<A NAME="epi">&quot;epi&quot;</A> devices.
+<li> Synthetic sapphire wafers with silicon islands grown on them, 
+which eliminate latchup and improve SEE hardness; these are used to 
+make <A NAME="CMOS-SOS">CMOS-SOS</A> silicon on sapphire 
+devices.
+<li> Wafers with a thin insulating oxide layer grown beneath an 
+equally thin silicon layer, which also improve SEE and latchup; these 
+are used to make SOI devices.
+</ul>
+<li> Library cell hardening, achieved through the vendor's cell design 
+work. This primarily affects SEE hardness, but may also improve TID 
+hardness.
+ <li> Hardening through cell-level design practice, achieved by the 
+ASIC designer carefully following recommended hardening design 
+practices.
+</ul>
+<p>
+<A NAME="rad.hard.1">Radiation hardening</A> involves a number of 
+trade-offs. It requires either expensive base-wafers, more power 
+than equivalent non-hard circuits, or more chip area than non-hard 
+circuits. The designer may achieve radiation hardening using a 
+combination of all three approaches listed above. To properly make 
+potentially expensive trade-offs, designers must consider the 
+radiation environments the ASIC will confront during operation, the 
+system requirements for allowable charged-particle upset rates, and 
+the allowable parametric shifts over the life of the device.<p>
+
+To get the maximum radiation tolerance for the minimum overall 
+impact on other aspects of their device, designers will benefit from 
+working closely with their ASIC vendors. Vendors with a proven <A 
+NAME="rad.hard.process">radiation-hardened process</A>, <A 
+NAME="rad.hard.cells">radiation-hardened cells</A>, and <A 
+NAME="rad.aware.tools">radiation-aware design tools</A> can 
+provide ample information for the user to study the trade-offs 
+involved in rad-hard design. Such trade-offs include: radiation 
+tolerance, cost, ship area, electrical performance, and power 
+dissipation.<p>
+
+Along with trade-offs, the user and the designer must anticipate 
+radiation requirements near the beginning of an ASIC project. Doing 
+so will help guide ASIC vendor selection and determine whether a 
+commercial process can be used instead of a process specifically 
+designed for radiation hardening.<p>
+
+Also, when contracting for ASIC part acceptance, clearly negotiate 
+and specify radiation requirements to ensure proper testing and 
+adequate hardness of devices. Finally, to use hardening economically, 
+allow for radiation requirement trade-offs during the design phase, 
+both at the system and individual ASIC level.<p>
+
+<A HREF="Appendix.3.html#A0">Appendix Three</A> contains more 
+information on the physics of radiation effects on microelectronics.<p>
+
+<h3><A NAME="A3">Total Ionizing Dose (TID)</A></h3>
+
+<h4>BACKGROUND</h4>
+
+TID refers to the amount of energy that ionization processes create 
+and deposit in a material (such as semiconductor or insulator), when 
+energized particles pass through it, causing ionization. The usual unit 
+used to specify deposited energy is the &quot;<A 
+NAME="rad">rad</A>,&quot; which is defined as 100 ergs/g of 
+material. The material must always be specified in parentheses, e.g., 
+rad(Si).  Satellite and space probes typically encounter total dose 
+levels between 10 and 100 krad(Si), although systems exist with 
+requirements above and below this range.<p>
+
+Ionization produces electron-hole pairs within insulators and 
+semiconductors. The effect of the ionization on MOS devices depends 
+upon the way that this charge is transported and trapped at the 
+silicon-silicon dioxide interface. The net effect of <A 
+NAME="ionizing_radiation">ionizing radiation</A> on MOS device 
+oxides depends upon the oxide thickness, the field applied to the 
+oxide during and after exposure, as well as trapping and 
+recombination within the oxide. The manufacturing processing 
+techniques strongly affect the latter factor. <p>
+
+Bias conditions have a large effect on total dose degradation. A 
+positive gate-to-silicon oxide field will cause holes to be transported 
+to the silicon-silicon dioxide interface, where some fraction of them 
+will be trapped. A negative field will cause the holes to be 
+transported to the gate, where they recombine with electrons and do 
+not create hole traps. For n-channel devices, this worst-case 
+condition for hole transport and trapping requires positive voltage at 
+the gate relative to the source (device biased on). For p-channel 
+devices the worst-case condition is negative gate-to-source voltage, 
+with the device biased off. <p>
+
+The trapped holes at the silicon-silicon dioxide interface change the 
+threshold voltage. For n-channel devices the threshold shift is 
+negative, causing a transistor to gradually shift toward depletion 
+mode as the total dose increases. P-channel devices shift in the 
+opposite direction. Figure 3.4.1 shows these effects for a typical 
+commercial process: hardened devices will exhibit much lower 
+threshold shifts primarily because of recombination in the oxide. 
+Present commercial CMOS technologies will usually fail at levels 
+between 10 and 50 krad(Si).<p>
+
+<IMG SRC=gif.images/figure.3.4.1.gif alt="Voltage shifts due to irradiation"><br>
+Figure 3.4.1 Voltage shifts due to irradiation<p>
+
+In practice, total dose effects in MOS devices are much more 
+complicated than the elementary description of hole trapping 
+described above. In hardening a process, the vendor needs to take 
+three additional factors into account:
+<ul>
+<li> <A NAME="annealing"> Annealing</A>: The trapped holes are not 
+stable, but gradually anneal with time. The rate of annealing depends 
+upon the specific process, and substantial recovery may occur over 
+time periods of days to months. This has a major effect on 
+interpreting laboratory test results for space environment, which are 
+usually concerned with very low dose rates. Figure 3.4.2 shows 
+annealing of trapped holes for a typical commercial CMOS 
+process.<br>
+
+<IMG SRC=gif.images/figure.3.4.2.gif alt="Post-radiation voltage shifts due to annealing"><br>
+Figure 3.4.2 Post-radiation voltage shifts due to annealing<p>
+
+<li> <A NAME="interface_traps">Interface Traps</A>: A second 
+trapped charge component, interface traps, also occurs. For n-channel 
+devices, the interface traps shift the threshold voltage in the opposite 
+direction from trapped holes. This effect, called &quot;rebound&quot; 
+in the literature, severely complicates total dose testing because the 
+interface traps may compensate the negative threshold shift of the 
+trapped holes, making devices appear much harder to radiation 
+under certain combination of dose and time. Figure 3.4.3 shows the 
+measured failure level of an older NMOS process at various dose 
+rates. Compensation of the two charge mechanisms causes the large 
+increase in hardness at intermediate dose rates and gives an 
+unrealistic picture of the device response in space environments.<br>
+
+<IMG SRC=gif.images/figure.3.4.3.gif alt="Dependence of circuit total-dose failure level on ionizing dose rate"><br>
+Figure 3.4.3 Dependence of circuit total-dose failure level on ionizing 
+dose rate<p>
+
+<li> <A NAME = "field_oxides">Field Oxides</A>: Finally, all MOS 
+devices have a thick field oxide. The parasitic field oxide transistor 
+must remain turned off in order for MOS devices to function 
+properly. If ionizing radiation causes this transistor to invert bias, 
+large increases in leakage current will occur and the circuit will fail. 
+This important failure mode for commercial CMOS devices usually 
+dominates devices with feature sizes below 2 microns. Figure 3.4.4 
+shows the effect of field oxide inversion on the I-V characteristic of a 
+1.2 micron commercial CMOS process. Little can be done at the circuit 
+design level to overcome field oxide inversion, which is a global 
+failure mechanism. Hardened processes use special processing 
+techniques to reduce field oxide effects.
+<br>
+
+<IMG SRC=gif.images/figure.3.4.4.gif alt="The effect of field oxide inversion on I-V characteristics of an NMOS transistor"><br>
+Figure 3.4.4 The effect of field oxide inversion on I-V characteristics 
+of an NMOS transistor<br>
+
+</ul>
+<p>
+<h4>SPECIFYING AND INTERPRETING TOTAL DOSE TEST RESULTS</h4>
+
+The discussion above illustrates the complex total dose effects in 
+CMOS devices. Consequently, it is particularly difficult to relate 
+accelerated laboratory tests to the total dose effects that will be 
+encountered in space. Although basic total dose testing can be done 
+relatively inexpensively, characterizing a process for space 
+applications requires a much more thorough evaluation of total dose 
+effects. This includes annealing devices after irradiation at elevated 
+temperatures (with bias applied) to accelerate annealing of holes, 
+and to, therefore, simulate low dose rate effects in space. MIL-STD 
+883, Method 1019.4 specified how these tests are done for space 
+applications. Designers must examine total dose data in detail to 
+ensure that the results quoted by other sources or by manufacturers 
+do not provide a misleading view of the total dose effects in space 
+environments. In addition to test data, ASIC designers need to pay 
+attention to process stability.<p>
+
+Substantial variations in hardness may occur between different lots, 
+particularly for commercial processes, which usually do not include 
+radiation hardness as part of their process control. The radiation 
+response will be affected by <A NAME="oxide.thickness">oxide 
+thickness</A> as well as by changes in the specific way that either 
+gate or field oxides are grown during the fabrication process. The <A 
+NAME = "hardness_commercial_processes">hardness of commercial 
+processes</A> may vary substantially between different processing 
+lots.<p>
+
+<h4>ACHIEVING TOLERANCE TO TID</h4>
+
+<h5>Process</h5>
+
+The specific recipe used for processing semiconductor wafers can 
+significantly affect TID <A NAME="rad.hard.2">hardness</A>. Small 
+variations in processing between lots may cause large variations in 
+the radiation response. For example, a one percent difference in the 
+high-temperature oxide growth cycle of an older CMOS technology 
+caused the total dose hardness to fall from 200 krad(Si) to 30 
+krad(Si). Unless the processing is specifically designed to be radiation 
+hardened, the manufacturer's normal control limits may allow large 
+swings in radiation hardness between different processing lots. 
+Proprietary or other concerns restrict the release of most details 
+covering specific process-hardening techniques. However, some 
+vendors periodically evaluate the radiation hardness of their 
+processes and can make this data available.<p>
+
+During vendor evaluation, the evaluating team should examine 
+radiation data carefully, paying particularly close attention to the 
+dose rate, bias conditions, and time periods used for testing. Data on 
+complex circuits is often difficult to interpret. Often subthreshold I-V 
+curves for test transistors are used to evaluate total dose hardness. 
+When using this approach, the vendor exposes the device to radiation 
+(usually Cobalt-60 gamma rays), under bias. I-V curves are 
+measured after predetermined total dose levels. To characterize the 
+subthreshold region, I-V curves should be taken over many decades 
+of drain current. The subthreshold region can be used to separate the 
+effects of trapped charge and interface traps, providing a good 
+reference point for evaluation of total dose hardness of different 
+processes or different processing runs. When evaluating specific 
+processes, the evaluators must consider total dose effects on both 
+gate and field oxides. <p>
+
+<h5>Cell-Level</h5>
+
+ASIC vendors use several approaches for radiation hardening when 
+performing the transistor logic design and transistor layout for the 
+cells in their ASIC libraries. The basic approach requires designing 
+for a wide range of device (transistor) parameter shifts, including 
+changes in threshold shift and changes in mobility. However, the net 
+change in these parameters depends on bias conditions, so it is not 
+simply a matter of applying worst-case values to each cell design.<p>
+
+One way to accommodate threshold voltage shifts after irradiation is 
+to change the relative area of the p- and n-channel devices.  
+Normally a CMOS inverter will be scaled with a 2:1 ratio between p- 
+and n-channel devices. This scaling compensates for the difference in 
+hole and electron mobility in silicon and thereby provides 
+comparable drive under normal conditions. Changing this ratio can 
+increase the tolerance of a circuit to post-radiation changes in 
+threshold voltage. Figure 3.4.5 illustrates this technique. <p>
+
+<IMG SRC=gif.images/figure.3.4.5.gif alt="CMOS inverters"><br>
+Figure 3.4.5 CMOS inverters<p>
+
+<h5>Logic Gate Design</h5>
+
+The method of implementing  logic gates can affect total dose 
+hardness. For example, consider the NOR and NAND gate structures 
+shown in Figure 3.4.6.<p>
+
+<IMG SRC=gif.images/figure.3.4.6.gif alt="Comparison of NOR and NAND gate transistor implementations"><br>
+Figure 3.4.6 Comparison of NOR and NAND gate transistor 
+implementations<p>
+
+With radiation, the n-MOS transistor may become leaky.  Also,  both 
+transistors may lose drive capability due to mobility degradation. For 
+the NOR gate, the increased channel-leakage currents through the 
+parallel connected n-MOS transistors will increase static power 
+dissipation when all inputs are LOW. In addition, the reduced current 
+drive of the series-connected p-MOS transistors will seriously 
+degrade the charging response of the output node to a falling input 
+signal. Increased leakage currents flowing through the n-MOS 
+transistors further degrade the charging response. Decreased 
+charging response stretches out the output node rise time. Thus the 
+NOR gate may not respond fast enough to a falling input signal and a 
+functional error may result. These failure mechanisms make NOR 
+gates the circuit type  least tolerant to radiation. The NAND gate, on 
+the other hand, does not have these problems because the n-MOS 
+and p-MOS transistors are reversed from that of the NOR gate. In Co-
+60 tests, NAND gates retain a higher fraction  of the  original noise 
+margin with radiation than the NOR gate. Thus, designers prefer the 
+NAND  logic gate for hardened circuit designs. If NOR gates must be 
+used in circuits designed for rad-hard environments, then minimize 
+the number of inputs (fan-in). <p>
+
+<h3><A NAME="A4">Single-Event Effects (SEE)</A></h3>
+
+High-energy protons or heavy ions lose their energy mainly through 
+ionization. When this occurs, they deposit a dense track of electron-
+hole pairs as they pass through p-n junctions. Some of the deposited 
+charge will recombine, and some will be collected at the junction 
+contacts. The net effect is a very short duration pulse of current that 
+induces transient charges at internal circuit nodes. The magnitude of 
+the charge, which is generally much larger for ions with high atomic 
+numbers, depends on the energy and ion type, as well as the path 
+length over which the charge is collected. Figure 3.4.7 shows the 
+representative time response of charge collected from a single ion 
+strike. The prompt charge is collected in much less than 1 ns, which 
+is shorter than the response time of most MOS transistors.<p>
+
+<IMG SRC=gif.images/figure.3.4.7.gif alt="SEU response illustrating collected current pulse shape"><br>
+Figure 3.4.7 SEU response illustrating collected current pulse 
+shape<p>
+
+The effect of these random charges on the circuit depends on a 
+number of factors, including the minimum charge required to switch 
+a digital circuit. If the energy deposited by the ion exceeds the 
+minimum charge (critical charge), then the passage of the ion will  
+upset or otherwise affect the circuit.<p>
+
+High-energy particles can induce a number of effects. Not all of these 
+effects are possible in all devices either because the critical charge 
+for the effect is too high, or because the specific design (or 
+processing) of the circuit precludes the occurrence (e.g., latchup in 
+silicon-on-insulator technology). These effects can be subdivided into 
+two basic categories:
+<ul>
+<li> Transient effects, such as single-event upset (SEU) and multiple-
+bit upset, that change the state of internal storage elements, but can 
+be reset to normal operation by a simple series of electrical 
+operations or reinitialization; and
+<li> Potentially catastrophic events, such as single-event latchup (SEL) 
+and snapback, that may cause destruction unless they are detected 
+and corrected for within a short time after they occur.
+</ul> <p>
+These categories are discussed in more detail below. <p>
+
+<h5>Units and Environmental Specification</h5>
+
+A convenient way to express the transient charge generated by 
+charged particles is in charge per unit length, e.g., pC/micron. 
+However, a less intuitive unit has been adopted in the literature, 
+called <A NAME="LET">&quot;linear-energy transfer,&quot; 
+(LET)</A>. LET is expressed in MeV-cm<sup>2</sup>/mg. For silicon, 
+it is approximately 100 times greater than the charge deposition 
+density in pC/micron. From the device standpoint, the charge 
+collected at internal circuit nodes is directly proportional to LET.<p>
+
+The galactic cosmic ray environment consists of a distribution of 
+different particle types with different ion species and energies. The 
+number of particles falls off rapidly with increasing LET, as shown in 
+Figure 3.4.8. There are very few particles with LET &gt; 26, the so-called 
+iron threshold. Thus, if the threshold LET exceeds the effective LET of 
+iron at more extreme angles (near 80 MeV-cm<sup>2</sup>/mg), the 
+<A NAME="error_rate">error rate</A> will be low.<p>
+
+<IMG SRC=gif.images/figure.3.4.8.gif alt="Galactic cosmic ray environment at geosynchronous orbit"><br>
+Figure 3.4.8 Galactic cosmic ray environment at geosynchronous 
+orbit<br>
+
+<h5>SEE Error Probability</h5>
+
+To calculate the expected error rate requires three different 
+relationships:
+<ul>
+<li> The expected distribution of particles vs. LET.
+
+<li> The <A NAME="c.s.for_upset">cross section for upset</A> or 
+latchup as a function of LET, usually obtained from laboratory 
+measurement.
+
+<li> A calculation of the expected error rate that combines the first 
+two relationships with a calculation of the effect of the 
+omnidirectional particle flux on the charge produced in the device by 
+the incident particles. Computer programs are available that perform 
+this calculation. The net result is a fixed number for the upset or 
+latchup probability.
+</ul> <p>
+The error rate is often expressed in <A 
+NAME="errors_per_bit_day">errors per bit day</A>. The error rate of 
+hardened devices can be on the order of 10<sup>-8</sup> 
+errors/bit-day or lower. The error rate of unhardened devices is 
+generally several orders of magnitude greater.<p>
+
+<h5>CMOS Fabrication Technologies</h5>
+
+CMOS devices can be fabricated in a number of different ways. This 
+can have a large effect on SEE effects in CMOS. Figure 3.4.9  shows 
+two different processes made on bulk material.  Both structures use a 
+separate n-well region to fabricate p-channel devices. Maintaining a 
+reverse bias across the well-substrate junction isolates the well 
+region from the p-substrate. This well structure has no direct 
+function other than providing an isolated region for the p-channel 
+devices.  As shown in Figure 3.4.9, bulk CMOS structures contain <A 
+NAME="parasitic.bipolar">parasitic bipolar transistors</A> that can be 
+inadvertently turned on by high-energy particles. <p>
+
+<IMG SRC=gif.images/figure.3.4.9.gif alt="Cross-sections of bulk and epitaxial CMOS processes"><br>
+Figure 3.4.9 Cross-sections of bulk and epitaxial CMOS processes<p>
+
+The only difference between the two processes shown in Figure 3.4.9 
+is that one is fabricated on a highly doped p+ substrate. The highly 
+doped substrate reduces substrate resistance, making latchup less 
+likely compared to standard bulk processes. The low-resistivity 
+substrate also reduces the amount of charge that can be collected 
+from the n+ drain, which improves single-event upset hardness 
+compared to bulk processes.<p>
+
+Figure 3.4.10 (a) and (b)  shows two CMOS structures that eliminate 
+the junction-isolated well structure, thus eliminating the possibility 
+of latchup. These structures also reduce the charge collection region, 
+further improving single-event upset hardness. The first process is 
+<A NAME="SOS">silicon-on-sapphire (SOS)</A>, which results in two 
+separate p- and n-doped islands on an insulating sapphire substrate. 
+The second process is <A NAME="SOI.2">silicon-on-insulator 
+(SOI)</A>, which uses special processing to grow an isolated silicon 
+dioxide insulating layer on a bulk silicon substrate. Both structures 
+substantially improve single-event upset hardness, and eliminate 
+latchup. However, neither process is used in significant volume, and 
+they are both highly specialized, costly processes. Thus, ASIC 
+processes that use them should only be selected when the radiation 
+requirements are sufficiently high to justify their use.<p>
+
+<IMG SRC=gif.images/figure.3.4.10.gif alt="Cross-sections of CMOS/SOS and silicon on insulator (SOI) processes"><br>
+Figure 3.4.10 Cross-sections of CMOS/SOS and silicon on insulator 
+(SOI) processes<br>
+
+<h4>SINGLE-EVENT UPSET AND RELATED EFFECTS</h4>
+
+<h5>Background</h5>
+
+<b><A NAME="SEU">Single-Event Upset</A>:</b> As discussed above, a 
+high-energy ion induces a short-duration pulse of current in a p-n 
+junction, such as the drain region. If the charge collected at the drain 
+of a CMOS storage element (e.g., memory or flip-flop) exceeds the 
+critical charge required to switch the circuit, it will change state, and 
+the information that was previously stored will be lost. Even though 
+the circuit changes state, it still functions normally, and reinitializing 
+or rewriting can restore its original configuration. In a complex ASIC, 
+SEUs will appear at random locations, depending on the particular 
+region that is struck by a high-energy particle. The term SEU 
+describes the situation where the passage of the particle through the 
+device produces only a single upset.<p>
+
+Originally, only heavy ions caused SEU effects. However, as individual 
+transistors were scaled to smaller dimensions to increase the size and 
+complexity of VLSI circuits, their susceptibility to SEU effects 
+increased. If the sensitivity increases sufficiently, devices can be 
+upset with protons (through nuclear reactions) as well as with heavy 
+particles. This increases the upset rate by many orders of magnitude 
+because of the large number of protons in solar flares and in trapped 
+radiation belts.<p>
+
+There are two ways to harden a circuit against SEUs: (1) Reduce the 
+charge that the node can collect by using processes such as SOI, SOS, 
+or bulk epitaxial substrates, and (2) Increase the charge necessary to 
+produce an upset by increasing the device area or by introducing 
+special circuit techniques (such as decoupling resistors). <p>
+
+<b><A NAME="multiple-bit_upset">Multiple-Bit Upset</A>:</b>  For 
+some technologies, such as DRAMs or certain SRAMs, the ionization 
+track from a single particle may cause several storage elements in a 
+circuit to upset. This is called &quot;multiple-bit upset.&quot; This 
+phenomenon is more difficult to deal with than SEU because the 
+multiple errors may interfere with system-level approaches such as 
+error-detection-and-correction (EDAC) that are often used to 
+overcome SEU effects.<p>
+
+<b><A NAME="SET">Single-Event Transients</A>: </b>Besides the 
+effect on storage cells, single-event interactions can produce 
+transient output pulses in combinational logic circuits that do not 
+contain internal storage elements. These transients are usually of 
+short duration (about 1 ns), but may indirectly produce changes in 
+the state of other circuits if they occur at critical time periods, such 
+as during clock or data transitions. <p>
+
+<h5>Process and Cell Design for Reduction of SEUs</h5>
+
+Using special processing technologies such as SOS or SOI cuts off the 
+charge collection length associated with the charged-particle track, 
+significantly increasing SEU hardness compared to bulk processes. 
+Epitaxial substrates also reduce charge collection, but the degree of 
+improvement is lower than that achieved with the more exotic 
+processes.<p>
+
+Designers have successfully implemented several methods to 
+increase the charge the node must collect (Q<sub>CRIT</sub>) to cause 
+upset. These methods have included the adding capacitors, resistors, 
+transistors or combinations of these devices to the circuit. As a 
+penalty, these additional components generally cause increased 
+circuit area and decreased circuit speed, and these drawbacks must 
+be traded off against the increased SEU hardness. Table 3.4.1 
+illustrates resistor, capacitor, and transistor hardening techniques for 
+an SRAM cell.<p>
+
+Decoupling resistors have been used to harden older processes to 
+SEU. This approach is less effective with newer technologies because 
+of the penalty on area and switching speed.<p>
+
+<h5>Resistive Hardening</h5>
+
+Figure 3.4.11 shows the six transistor CMOS static RAM cell, widely 
+used in IC designs. <p>
+
+<IMG SRC=gif.images/figure.3.4.11.gif alt="Six transisitor CMOS static random access memory (SRAM) cell"><br>
+Figure 3.4.11 Six transisitor CMOS static random access memory 
+(SRAM) cell<p>
+
+This circuit's SEU-sensitive regions are the strongly reverse-biased 
+P+ region when the data node is LOW, and the strongly reverse-
+biased N<sup>+</sup> region when the data node is HIGH. Adding 
+resistors as shown in Figure 3.4.12, introduces additional time 
+constants that filter out the effect of the very fast SEU-induced 
+transients.  The polysilicon decoupling resistors (R) slow down the 
+bistable flip-flop's regenerative feedback response. Although 
+resistive hardening can be successful, it is somewhat difficult to 
+implement in practice because of the high temperature coefficient of 
+the polysilicon resistors, as well as difficulty in controlling the 
+variation of the resistors within a specific process.<p>
+
+<IMG SRC=gif.images/figure.3.4.12.gif alt="Resistive hardened CMOS SRAM cell"><br>
+Figure 3.4.12 Resistive hardened CMOS SRAM cell<br>
+
+<h5><A NAME="EDAC">Error Detection and Correction</A></h5>
+
+One frequently used approach to harden a system to SEU effects is to 
+apply error detection and correction (EDAC). EDAC can be 
+implemented in a number of ways, and can be a very effective way 
+to accommodate SEU-induced errors in memory, microprocessor, or 
+interface blocks. Some EDAC approaches are limited to detecting 
+single errors in a specific word, while others can detect and correct 
+for multiple word errors. In order for EDAC to be effective, the error 
+rate must be low enough so that the fraction of the time that the 
+EDAC is correcting lies within the allowable time window.  Note that 
+the probability of multiple errors must be sufficiently low. <p>
+
+<h5>Other SEU Design Considerations</h5>
+
+In some devices, higher-level architecture influences SEU hardening. 
+For example, for a 4k-bit memory, rad-hard designers prefer the 4k 
+by 1 geometry over the 1k by 4 geometry. The 4k by 1 geometry 
+maximizes system-level error correction codes, requires less 
+decoding between chips, and supports memory words of any 
+length.<p>
+
+Be careful. Many CMOS design approaches have circuitry sections 
+that use resistors, rather than p-channel transistors, as loads for 
+their n-channel devices (four-transistor memory cells). This practice 
+produces a faster, denser and lower power cell compared to a six-
+transistor memory cell, but the 4-T circuits are much more sensitive 
+to radiation because of the high-resistance path of the resistive loads. 
+Therefore, avoid them in rad-hard designs. Similarly, experience 
+shows that depletion-mode load devices and dynamically held node 
+circuitry should be eliminated from the rad-hard library of potential 
+design elements.<p>
+
+System designers will want to know at what rate your ASIC will 
+upset in a given radiation environment. These upset-rate calculations 
+are complex. Work closely with your vendor or, perhaps, make the 
+device upset rate calculation a deliverable from the vendor after 
+performing place and route.<p>
+
+Predicting upset rates for ASIC designs is difficult because the SEU 
+sensitivity depends somewhat on the way the design is implemented. 
+Circuit modeling can also be used to predict the effect of different 
+designs on SEU hardness. Highly accurate upset rate predictions 
+require testing each design in a particle accelerator, such as the 
+Brookhaven Van de Graaff.  Although expensive, such testing 
+provides basic characterization information about the SEU response 
+that can be used to calculate the upset rate in the anticipated space 
+environments.<p>
+
+<h4>SINGLE-EVENT LATCHUP (SEL)</h4>
+
+Bulk CMOS designs contain two parasitic bipolar transistor structures 
+that form a four-layer structure, similar to a silicon-controlled 
+rectifier. These bipolar structures, shown in Figure 3.4.13, Source of 
+latchup in CMOS, are not involved in normal operation of CMOS 
+devices, but transient signals at the input or output terminals can  
+inadvertently trigger them into an &quot;on&quot; condition. Once 
+turned on, they draw very large currents that may cause 
+catastrophic failure, and can only be turned off by temporarily 
+removing power. All CMOS designs use special guardbands and clamp 
+circuits at I/O terminals to prevent this from happening in standard 
+circuit applications. However, in a radiation environment transient 
+signals are no longer confined to I/O terminals, and it is possible for 
+the current pulses from heavy ions to trigger latchup in 
+<i>internal</i> regions of a CMOS device as well as at I/O circuitry. <p>
+
+<IMG SRC=gif.images/figure.3.4.13.gif alt="Source of latchup in CMOS"><br>
+Figure 3.4.13 Source of latchup in CMOS<p>
+
+Once latchup occurs, the four-layer structure will be switched into a 
+conducting mode, and will remain in that mode until power is 
+removed. During latchup currents can be very high. In most circuits, 
+currents of several hundred milliamps or more will flow in the 
+localized region where latchup is triggered, rapidly heating that 
+section to extremely high temperatures. These high temperatures not 
+only introduce the possibility of localized damage to the silicon and 
+metallization, but the excessive heating may also cause the latchup to 
+spread to other regions.<p>
+
+Because of the potential for catastrophic damage, latchup poses a 
+very serious problem for space systems. The most conservative 
+approach tests samples of each device type, and disallows use of any 
+device that exhibits latchup. A number of methods have also been 
+proposed to overcome latchup at the system or subsystem level by 
+sensing excess current, which is a signature of latchup, and 
+temporarily removing power. However, the power must be removed 
+within a few milliseconds after latchup occurs to avoid possible 
+catastrophic damage to the device metallization or bonding leads. <p>
+
+<h5>Radiation Testing for Latchup</h5>
+
+Many variables affect latchup, including the bias conditions applied 
+during testing. Latchup tests should be made under conditions of 
+maximum power supply voltage. Another important variable is 
+temperature. At 125<sup>o</sup>C the threshold LET for latchup 
+decreases by about a factor of three lower compared to its value at 
+room temperature. Therefore, latchup testing must be done at the 
+highest temperature required in the application. A null latchup result 
+at room temperature cannot provide any direct information about 
+the likelihood of latchup at higher temperatures.<p>
+
+Heavy-ion latchup testing is done using a particle accelerator, by 
+placing the device in a vacuum chamber connected to the accelerator. 
+Latchup is detected by monitoring both the power supply current 
+and functional operation while the device is being irradiated with the 
+accelerator. The range of ions used for latchup testing should be 40 
+microns or more. Sources with more limited range (such as 
+californium fission sources) should not be used.<p>
+
+<h5><A NAME="snapback">Snapback</A></h5>
+
+Snapback has many of the characteristics of latchup, but can take 
+place within a single MOS transistor structure. Thus, snapback can 
+occur in SOS and SOI technologies that do not contain four-layer 
+parasitic structures. A single high-energy particle may trigger 
+snapback if the field across the drain region is sufficiently high. 
+Snapback occurs when the parasitic bipolar transistor that exists 
+between the drain and source of an MOS transistor amplifies 
+avalanche current that results from the heavy ion.  This results in a 
+very high current between the drain and source region of the 
+transistor, with subsequent localized heating.<p>
+
+<h5>Process and Design Methods for Reducing or Eliminating SEL</h5>
+
+ASIC vendors adopt the following approaches to reduce susceptibility 
+to latchup from heavy ions:
+<ul>
+<li> using numerous, regularly spaced well and substrate contacts in 
+the design
+<li> using thin-epi/shallow well CMOS processes 
+<li> butting of the source-to-substrate and source-to-well contacts
+</ul> <p>
+These techniques will generally raise the minimum LET at which 
+latchup will occur, but are not always successful in reducing latchup 
+probability to acceptable levels. It is very difficult to analyze latchup 
+conditions in circuits. For example, earlier literature claimed that 
+latchup could not occur in processes that used epitaxial substrates. 
+Later test results showed that this was not necessarily true. <p>
+The only certain way to eliminate latchup is to use an SOS or SOI 
+CMOS process that eliminates one of the parasitic transistors, thereby 
+removing the possibility of latchup.<p>
+
+<h5>Use of SEL-Prone Devices in an SEE Environment</h5>
+
+Some users of commercial, non-rad hard CMOS devices have 
+implemented external <A 
+NAME="I(DD)_current_limiting">I<sub>DD</sub> current limiting</A> 
+circuits to detect latchup and shut down power.  In order for the 
+circuit to recover, the power supply voltage must be clamped to a 
+low value (&lt;0.5 V) for at least 1 msec. While this approach has 
+worked in at least one benign earth-orbit application for a brief 
+period of time, it is somewhat controversial.<p>
+
+Problems with SELs fall into two categories: immediate or latent 
+damage, and reduced system functionality.
+<ul>
+<li> Damage.  The high internal currents that result from latchup can 
+heat the local, latched region to very high local temperature within a 
+few microseconds.  Even if the latchup is detected and clamped 
+within about 100 microseconds the localized heating may be 
+sufficient to cause electromigration or burnout of metallization, or 
+degradation of MOS contacts. Although burnout is easily identified, 
+the other mechanisms degrade device reliability, effectively 
+introducing latent damage. The effects depend on processing details 
+(such as metallization width, step coverage, and contact technology), 
+and the specific location of the latchup path. Insufficient information 
+is available to assess the overall impact on reliability, but it may 
+represent an unacceptable risk for space systems. 
+<li> Reduced System Functionality. Once latchup occurs, a device will 
+remain in the high current, latched condition until power is removed.  
+Power cycling will be required each time that a latchup occurs, which 
+will temporarily shut down sections of the subsystem that share 
+power supplies. Along with power cycling, circuits and subsystems  
+affected by any component that undergoes latchup will have to be 
+reinitialized. 
+</ul> <p>
+<A NAME="power.cycling">Power cycling</A> and reinitializing may 
+be acceptable with a very low latchup probability, but will generally 
+be unacceptable if latchup occurs frequently. There may also be 
+critical phases of a mission during which latchup and power cycling 
+cannot be accommodated, because there is insufficient time to 
+recover within the operational window. <p>
+
+Although design techniques can influence radiation hardness 
+somewhat, the largest single factor in determining radiation hardness 
+is the method of implementing the process. Special, 
+radiation-hardened processes are available that can function at much 
+higher levels than commercial ASIC processes, although they are 
+more costly. A key step for designers is to establish the required 
+level of hardness and then match that hardness to the process. 
+Designers must pay particular attention to this match taking into 
+account the environmental level and other key factors, such as 
+latchup or EDAC compatibility.  Once a specific process is selected, it 
+is very difficult to increase hardness later. In fact, requiring 
+increased hardness may mean starting over.<p>
+
+<h3>Summary</h3>
+<ul>
+<li> Work to establish TID, SEU, and SEL requirements as early as 
+possible. Work with your system people and the people responsible 
+for establishing the space environment in which your ASIC operates.
+<li> Select a vendor with a proven radiation performance record who 
+can deliver a product that meets or exceeds your radiation 
+requirements. Be aware that radiation hardness of a specific process 
+may vary substantially between different processing lots.
+<li> Work with the vendor that you select to learn how he has 
+implemented radiation-hardened designs in the past. Some vendors 
+provide design libraries that incorporate layout techniques to 
+improve SEU and TID hardness.
+<li> If required, make sure that you use the SEU-hardened elements 
+in the design library. Many cell libraries include both hardened and 
+unhardened versions of storage element cells.
+<li> Be aware of the trade-offs that are required for radiation-
+hardened design. Hardened designs usually require substantial 
+increases in chip size, and power compared to an unhardened ASIC in 
+a similar process. 
+</ul> <p>
+<h3>REFERENCES</h3>
+
+ J. L. Andrews et al., &quot;Single event error immune CMOS 
+RAM,&quot; <i>IEEE Trans. Nuclear Sci.</i>, Vol. NS-29, no. 6, Dec. 
+1982, pp. 2040-2043.<p>
+
+H. E. Boesch, Jr., and T. L. Taylor, &quot;Total dose induced hole 
+trapping and interface state generation in field oxides,&quot; <i>IEEE 
+Trans. Nucl. Sci.</i>, Vol. NS-31, no. 6, Dec. 1983,  pp. 1273-1278.<p>
+
+J. S. Browning, R. Koga, and W. A. Kolasinski, &quot;Single event upset 
+rate estimates for a 16-k CMOS SRAM,&quot; <i>IEEE Trans. Nuclear 
+Sci.</i>, Vol. NS-32, no. 6, Dec. 1985,  pp. 4133-4139.<p>
+
+S. E. Diehl-Nagle, &quot;A new class of single-event soft errors,&quot; 
+<i>IEEE Trans. Nucl. Sci.</i>, Vol. NS-31, no. 6, Dec. 1984, pp. 1145-
+1148.<p>
+
+S.E. Diehl, A. Ochoa, Jr., P.V. Dressendorfer, R. Koga, and W. A. 
+Kolasinski, &quot;Error analysis and prevention of cosmic ion-
+induced soft errors in static CMOS RAM's,&quot; <i>IEEE Trans. 
+Nuclear Sci.</i>, Vol. NS-29, no. 6, Dec. 1982 , pp. 2032-2039.<p>
+
+T.P. Haraszti, &quot;CMOS/SOS memory circuits for radiation 
+environments,&quot; <i>IEEE J. Solid-State Circuits</i>, Vol. SC-13, no. 
+5, Oct. 1978.<p>
+
+A. H. Johnston, &quot;Super recovery of total dose damage in MOS 
+devices,&quot; <i>IEEE Trans. Nuclear Sci.</i>, Vol. NS-31, no. 6, pp. 
+1427-1433, Dec. 1984,  pp. 669-676.<p>
+
+A. H. Johnston, et al., &quot;The effect of temperature on single-
+particle latchup,&quot; <i>IEEE Trans. Nucl. Sci.</i>, Vol. NS-38,  Dec. 
+1991, pp. 1435-1441.<p>
+
+S. E. Kerns and B.D. Shafer, &quot;The design of radiation-hardened 
+IC's for space: a compendium of approaches,&quot; <i>Proceedings of 
+the IEEE</i>, Vol 76, no. 11, Nov. 1988, pp. 1478.<p>
+
+T. Ma and P. V. Dressendorfer, <i>Ionizing radiation effects in MOS 
+circuits</i>,  Wiley, New York, 1989.<p>
+
+F.B. McLean and T. R. Oldham, &quot;Charge funneling in N- and P-
+type Si substrates,&quot; <i>IEEE Trans. Nuclear Sci.</i>, Vol. NS-29, 
+no. 6,  Dec. 1982, pp. 2018-2023.<p>
+
+G. C. Messenger, &quot;Collection of charge on junction nodes, from 
+ion tracks,&quot; <i>IEEE Trans. Nuclear Sci.</i>, Vol. NS-29, no. 6, Dec. 
+1982,  pp. 2024-2031.<p>
+
+A. Ochoa, et al., &quot;Snap-back: a stable, regenerative breakdown 
+mode of MOS device,&quot; <i>IEEE Trans. Nuc. Sci.</i>, Vol. NS-30, 
+no.6, Dec. 1983, pp. 4127-4130.<p>
+
+E. L. Petersen, &quot;Soft errors due to protons in the radiation 
+belts,&quot; <i>IEEE Trans. Nucl. Sci.</i>, Vol. NS-28, no. 6,  Dec. 1981, 
+pp. 3981-3986.<p>
+
+J. G. Rollins and J. Choma, Jr., &quot;Single-event upset in SOS 
+integrated circuits,&quot; <i>IEEE Trans. Nucl. Sci.</i>, Vol. NS-34, no. 
+6, Dec. 1987, pp. 1713-1718.<p>
+
+J.R. Schwank, et al., &quot;Physical mechanisms contributing to 
+device rebound,&quot; <i>IEEE Trans. Nuclear Sci.</i>, Vol. NS-31, no. 
+6, Dec. 1984, pp. 1434-1438.<p>
+
+F. W. Sexton, et al., &quot;Qualifying commercial ICs for space total 
+dose environments,&quot; <i>IEEE Trans. Nucl. Sci.</i>, Vol. NS-39, no. 
+6, Dec. 1992, pp. 1869-1875.<p>
+
+L. S. Smith, et al., &quot;Temperature and epi thickness dependence 
+of the heavy ion induced latchup threshold for a CMOS/epi 16k static 
+RAM,&quot; <i>IEEE Trans. Nucl. Sci.</i>, Vol. NS-34, no. 6, Dec. 1987, 
+pp 1800-1803.<p>
+
+E. G. Stassinopoulos and J. P. Raymond, &quot;The space radiation 
+environment for electronics,&quot; <i>Proc. IEEE</i>, Vol. 76, no. 11, 
+Nov. 1988, pp. 1423-1442.<p>
+
+P. S. Winokur, et al., &quot;Total-dose radiation and annealing 
+studies: implications for hardness assurance testing,&quot; <i>IEEE 
+Trans. Nucl. Sci.</i>, Vol. NS-33, no. 6, Dec. 1986, pp. 1343-351.<p>
+
+_______, &quot;Correlating the radiation response of MOS capacitors 
+and transistors,&quot; <i>IEEE Trans. Nucl. Sci.</i>, Vol. NS-31, no. 6, 
+Dec. 1984, pp. 1453-1460.<p>
+
+J. A. Zoutendyk, L. D. Edmonds, and L. S. Smith, 
+&quot;Characterization of multiple-bit errors from single-ion tracks 
+in integrated circuits,&quot; <i>IEEE Trans. Nucl. Sci.</i>, Vol. NS-36, 
+no. 6, Dec. 1989, pp. 2267-2274.
+<p>
+<hr>
+<p>
+Now you may jump to:
+<ul>
+<li> <A HREF="Sect.4.Intro.html#A0">the next section: Section 4: 
+&quot;Part Acceptance&quot;</A>
+<li> <A HREF="TOC.html">the Table of Contents</A>
+  <li> <A HREF="index.html">the Index</A> 
+  <li> <A HREF="Acronyms.html">the Acronym list</A>
+<li> <A HREF="Glossary.html">the Glossary</A>
+</ul>
+<p>
+

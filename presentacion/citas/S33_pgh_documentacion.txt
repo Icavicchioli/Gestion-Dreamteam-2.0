@@ -1,0 +1,49 @@
+v2pgh
+An official website of the United States government
+Here’s how you know
+Here’s how you know
+Official websites use .gov
+A
+.gov website belongs to an official government
+organization in the United States.
+Secure .gov websites use HTTPS
+A
+lock (
+Lock Locked padlock icon   ) or https:// means you’ve safely connected to
+the .gov website. Share sensitive information only on official,
+secure websites.
+Voyager Cosmic Ray Sub System
+Menu
+MISSION
+DATA
+INSTRUMENTS
+PUBLICATIONS
+The PGH rate consists of greater than 70 MeV/nuc nuclei, primarily
+protons, and is a good indicator of the level of modulation of galactic
+cosmic rays. It can also respond to large solar flares.
+The Voyager-2 Cosmic Ray Subsystem instrument heater was turned off on
+Day 178 (06/27/2019) as part of the new power management plan.
+For a list of excluded times please see Excluded Times for
+Voyager-2.
+Postscript and PDF versions are available through the links under each
+figure.
+Voyager-2 PGH Rate (3 months)
+PS
+|
+PDF
+|
+Data Listing
+Voyager-2 PGH Rate (12 months)
+PS
+|
+PDF
+|
+Data Listing
+About NASA
+Accessibility Statement
+FOIA
+No FEAR Act
+Vulnerability Disclosure Policy
+NASA Official: Adam Szabo
+Site Curator: Ayris Narock
+Last Updated: Nov 19, 2025

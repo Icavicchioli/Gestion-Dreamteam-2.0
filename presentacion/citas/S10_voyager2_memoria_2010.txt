@@ -1,0 +1,1055 @@
+
+--- PAGINA PDF 1 ---
+Cosmic Ray Subsystem Report 
+On The Voyager-2 Flight Data System Anomaly 
+And The Subsequent Data Impact 
+ 
+ 
+Anomaly 
+ 
+On April 26, 2010 the Voyager Cosmic Ray Subsystem (CRS) team at the Goddard Space Flight Center 
+(GSFC) was informed by the Jet Propulsion Laboratory (JPL) that the Deep Space Network (DSN) was 
+unable to frame-sync the Voyager-2 telemetry starting on April 22 (DOY 112). 
+ 
+An investigation by JPL revealed that the onboard Flight Data System (FDS) computer, which formats 
+the data to send back to Earth, suffered a flipped bit in a single memory location. Due to the almost 13 
+hour One Way Light Time (OWLT) the investigation of the anomaly and the solution took nearly a 
+month to resolve. Thus, there was no Voyager-2 data for the time period from April 22 to May 21 (DOY 
+112 – 142). See Appendix A for the detailed emails and web site postings covering the anomaly 
+investigation. 
+ 
+ 
+DOY 143 
+ 
+The first Voyager-2 data following the anomaly was a daily Experimental Data Record (EDR) for DOY 
+143. This file, however, would not process using the CRS team’s standard Encyclopedia Generation 
+software (ENCGEN). An investigation by Dr. Nand Lal (GSFC) revealed that the EDR contained a time 
+discrepancy of about 2 hours and 28 minutes between the Earth Receive Time (ERT) and the Space 
+Craft Event Time (SCET) over the expected OWLT difference.  JPL determined that during the anomaly 
+the onboard FDS clock did not increment resulting in the timing offset. A time check subroutine in the 
+CRS ENCGEN software flagged each record due to this time discrepancy resulting in no data output and 
+the failed processing. 
+ 
+To get around this problem Dr. Nand Lal (GSFC) created a specialized version of the production 
+software that excluded the time check subroutine. This specialized software version was used to process 
+Voyager-2 EDRs from DOY 143 – 175 (May 22 – June 24, 2010). Thus, the final Voyager-2 CRS EDRs 
+processed with the specialized, ‘no timecheck’ software are: crsf10143.b, crsf10147.b, 
+crsf10153.b, crsf10161.b and crsf10168.b. See Appendix B for the detailed emails 
+and notes covering the time discrepancy between the ERT and SCET. 
+ 
+ 
+DOY 176 and 183 
+ 
+Additional complications arose starting with DOY 176. CRS was unable to process the Voyager-2 daily 
+EDR for DOY 176 using the specialized software. The ENCGEN runtime output indicated that the entire 
+EDR consisted of  “Overlapping Data” and thus no output was generated.  After an inquiry, JPL 
+informed CRS that the most of the data was corrupted due to rain. 
+ 
+
+--- PAGINA PDF 2 ---
+A subsequent investigation using EDR’s for DOY 170 – 189 revealed, unexpectedly, that the DOY 176 
+EDR would process using the standard production software. The same investigation also revealed that 
+significantly more data was processed from DOY 183 EDR with the standard production software than 
+with the specialized software. With the specialized ENCGEN most of the DOY 183 records were also 
+flagged as “Overlapping Data”.  This investigation was initiated as a data check against the final 
+EDR: crsf10175.b.  Because acceptable output was generated for DOY 176 and 183 using the 
+standard ENCGEN software this production discrepancy between the two software versions was not 
+investigated further. 
+ 
+ 
+FDS Correction 
+ 
+To correct the FDS time discrepancy on Voyager-2 JPL input a FDS SCLK reset on DOY 179: 
+ 
+2010-179/16:25:57.564 (ERT)  =  2010-179/03:42:57.465 (SCET) 
+ 
+However, JPL informed CRS that the central data system would be unable to put the new correlation file 
+in place until the DSS pass was over for DOY 181.  As a result, data for DOY 180 and 181 would still 
+have the old clock issue until the new file is on the system starting on DOY 182. 
+ 
+ 
+Daily EDRs for DOY 170 – 189 and the final EDR CRSF10176.b 
+ 
+Following the FDS correction the processing of the Voyager-2 final EDR crsf10175.b (DOY 176-
+183), which contains data from before and after the reset, failed using the specialized  'no timecheck' 
+version of  ENCGEN.  The ENCGEN runtime output indicated that the entire EDR consisted of 
+“Overlapping Data” and thus no output was generated. This final EDR was processable using our 
+standard ENCGEN software, however, part of DOY 179 and all of DOY 180 were excluded (see yellow 
+sections in Figure 1) due to time check flags: 
+ 
+"FDSC inconsistent with earth received time." 
+ 
+These exclusions directly followed the FDS SCLK reset (dashed line in Fig. 1). 
+ 
+As mentioned above, CRS reprocessed the daily EDRs for DOY 170-189 using both the standard 
+ENCGEN software and the specialized 'no timecheck' version as a data check against the final EDR: 
+crsf10175.b. This investigation revealed the following: 
+ 
+170  The standard ENCGEN software produced a slightly larger encyclopedia file: 
+  Standard Volume 1173263- 1173350, Specialized Volume: 1173263-1173349 
+ 
+171 – 175 The standard and specialized ENCGEN software produced the same output 
+ 
+176  Will only process with the standard ENCGEN software. Discussed above. 
+ 
+177  The standard ENCGEN software produced a slightly larger encyclopedia file: 
+  Standard Volume 1173968- 1174030, Specialized Volume: 1173968-1174029 
+ 
+178  The standard and specialized ENCGEN software produced the same output 
+ 
+
+--- PAGINA PDF 3 ---
+179  The specialized ENCGEN software produced a larger encyclopedia file: 
+  Specialized Volume 1174174-1174224, Standard Volume: 1174174-1174189 
+  This will be discussed further below. 
+ 
+180 Will only process with the specialized ENCGEN software. This will be discussed further 
+below. 
+ 
+181 –182 The standard and specialized ENCGEN software produced the same output 
+ 
+183  The standard ENCGEN software produced a larger encyclopedia file: 
+ Standard Volume 1174511-1174606, Specialized Volume: 1174511-1174512 
+ 
+184 – 189 The standard and specialized ENCGEN software produced the same output 
+ 
+ 
+ 
+Figure 1  Top: Voyager-2 IPENH rate showing  the data differences between the corrected and uncorrected data base. 
+Bottom : Voyager-2 coverage representation . The red boxes represents the final EDR processed with the standard ENCGEN 
+program. The blue represents the daily EDRs processed with the standard ENCGEN program. The yellow represents the daily 
+EDRs processed with the specialized ENCGEN program. 
+ 
+ 
+ 
+
+--- PAGINA PDF 4 ---
+The final Voyager-2 EDR crsf10176.b starts with DOY 176 and ends with DOY 183. It is suspected 
+that the final EDR will not process with the specialized ENCGEN program because these two daily 
+EDRs will not process with this version. This processing problem was not investigated further. 
+ 
+ 
+Database Correction for Final EDR CRSF10176.b 
+ 
+Since the encyclopedia file generated from the final Voyager-2 EDR crsf10176.b with the standard 
+ENCGEN software is missing the last part of DOY 179 and all of DOY 180 we can only include it in the 
+encyclopedia database if we can fill in the missing data. However, the encyclopedia database files are 
+sorted by the analysis software using the starting volume number. Simply copying the two missing 
+encyclopedia files generated from the daily EDRs into the database will be incorrect as the ending 
+volume numbers are expected to be sequential as well. For example: 
+ 
+crsf10175.b 1173894 – 1174580 Final EDR 
+crs10179.b 1174174 – 1174224 Daily EDR 
+crs10180.b 1174282 – 1174310 Daily EDR 
+ 
+The easiest solution to fix the missing data is to replace the final encyclopedia file in the database with 
+the daily encyclopedia files processed as noted. 
+ 
+crsf10168.b 1173141 – 1173813 no timecheck  Existing Final Encyclopedia File 
+ 
+crs10176.b 1173894 - 1173933 standard  Daily EDR 
+crs10177.b 1173968 - 1174030 standard  Daily EDR 
+crs10178.b 1174066 - 1174125 standard  Daily EDR 
+crs10179.b 1174174 - 1174224 no timecheck  Daily EDR 
+crs10180.b 1174282 - 1174310 no timecheck  Daily EDR 
+crs10181.b 1174367 - 1174404 standard  Daily EDR 
+crs10182.b 1174487 - 1174509 standard  Daily EDR 
+crs10183.b 1174511 - 1174606 standard  Daily EDR 
+ 
+crsf10183.b 1174595 - 1175172 standard  Existing Final Encyclopedia File 
+ 
+Although there is volume number overlap between the daily EDR for DOY 183 and the final EDR, 
+crsf10183.b, the sort order is correct and the analysis programs will exclude the duplicate data. The 
+time coverage of these daily data sets are represented by the blue and yellow rectangles in the bottom 
+panel of Figure 1. The standard production version of ENCGEN was reinstated as the default software 
+following this investigation: 
+ 
+"/cosmicra/voyager/owlt/convertEDRtoVB" 
+"/cosmicra/voyager/encgen/src.test/encgen" 
+ 
+See Appendix C for the detailed emails and notes covering the DOY 176-183 issues. 
+ 
+ 
+ 
+
+--- PAGINA PDF 5 ---
+Second FDS Correction 
+ 
+JPL performed a second Voyager 2 FDS SCLK Reset on 2010-216/15:42 ERT.  The purpose of this 
+reset was to have the CCS clock and the FDS clock on the Voyager 2 to sync correctly in order to do 
+sequences in the future. 
+ 
+ 
+Daily EDRs for DOY 216 - 217 and the final EDRs CRSF10210.b and CRSF10217.b 
+ 
+Following the second FDS correction the processing of the Voyager-2 daily EDR crs10217.b, failed 
+using the standard version of ENCGEN.  The runtime output indicated that all data records were flagged 
+as:  “FDSC inconsistent with earth received time” and thus no output was generated.  
+An investigation, using the specialized ‘no timecheck’ version of ENCGEN  revealed that part of DOY 
+216 and all records from DOY 217 were flagged and excluded. 
+ 
+The same result was found with the Voyager-2 final EDRs 'crsf10210.b' and 'crsf10217.b' 
+processed with our standard production software. However, unlike the early problem, both of the final 
+EDRs were processable with the 'no timecheck' version of ENCGEN .  The encyclopedia files generated 
+included all of the data from the standard programs plus the missing data. No data that should have been 
+excluded was detected (Fig. 2). See Appendix D for the detailed emails and notes covering the DOY 
+216-217 issues. 
+ 
+ 
+Database Correction for Final EDR CRSF10176.b 
+ 
+The standard encyclopedia files with the missing data were replaced in the database with the 
+encyclopedia files generated with the specialized ‘no timecheck’ software. 
+ 
+crsf10210.b 1177149 – 1177737 standard  Original Final Encyclopedia File 
+crsf10217.b 1177909 – 1178437 standard  Original Final Encyclopedia File 
+ 
+crsf10210.b 1177149 – 1177761 no timecheck  New Final Encyclopedia File 
+crsf10217.b 1177822 – 1177437 no timecheck  New Final Encyclopedia File 
+ 
+ 
+Final Explanation From JPL 
+ 
+Whenever the FDS clock is reset, the SCLK and the SCET will be disconnected from the existing time 
+trend.  Therefore, you should not use your “timechecks” for your processing for about 2 days until the 
+SCLK and SCET sync up. 
+  
+If we have any clock reset in the future, I’ll make sure to advise you about the event so that you can stop 
+your “timechecks” before your processing. 
+  
+As noted in Appendix D JPL created several additional test EDRs to assist in analyzing the excluded 
+data problem. These files were not helpful. 
+
+--- PAGINA PDF 6 ---
+ 
+Figure 2  Top: Voyager-2 IPENH rate showing  the data differences between the corrected and uncorrected data base. 
+Bottom : Voyager-2 coverage representation . The red boxes represents the final EDRs processed with the standard ENCGEN 
+program. The blue represents the final EDRs processed with the specialized ENCGEN program. 
+
+--- PAGINA PDF 7 ---
+APPENDIX A 
+ 
+Email and Web Site Postings Covering the Voyager-2 Anomaly 
+ 
+ 
+The initial problem was reported to CRS by Regina Wong (JPL) on April 26: 
+ 
+ 
+Hi Everyone, 
+ 
+ There’s seems to be a problem on locking up the Voyager 2’s CR-5 data at DSS-34, 43 and 45.Problem 
+occurred since DOY 112 beginning at 13:35 ERT.  We are still trouble shooting and no Voyager 2 
+data until further notice. 
+ 
+Regards, 
+ 
+Regina Wong 
+Regina.F.Wong@jpl.nasa.gov 
+Voyager Science & Data Management 
+(818) 393-1035 
+ 
+ 
+The following emails and website postings clarified the problem and the correction process: 
+ 
+ 
+From: "Massey, Ed B (7050)" <ed.b.massey@jpl.nasa.gov> 
+ 
+Date: Wed, 28 Apr 2010 15:53:41 -0700 
+Subject: Voyager 2 Anomaly 
+Thread-Topic: Voyager 2 Anomaly 
+ 
+Voyager 2 Anomaly Status Report            28 April 2010 
+ 
+ On Thursday, 22 April 2010, The DSN was unable to frame-sync Voyager 2 telemetry. The downlink 
+signal level, symbol signal-to-noise ratio (SNR) and the Maximum Likely Convolution Decoder SNR 
+were as predicted. The previous pass on Wednesday, 21 April was nominal in all respects and ended as 
+predicted. 
+ 
+ Late Thursday, a Two-Way Non-Coherent (TWNC) OFF command was sent to the spacecraft to help 
+us determine the best lock frequency for future uplinks. Late Friday, a command was uplinked to 
+prevent the operation (NOP) of a MAGROL scheduled for today, 28 April at 9:13. 
+Because we were unable to process the telemetry data, there was no way to verify if the NOP command 
+was received by the spacecraft. We would be able to tell if the MAGROL occurred by observing the 
+downlink AGC. 
+ 
+
+--- PAGINA PDF 8 ---
+ In the meantime, the technical experts were consulted and the team was able to eliminate the ground 
+systems, transmitter and RF systems as possible causes. The telemetry is formatted by the Flight Data 
+Subsystem (FDS) which points to it as a possible source of the problem. 
+ 
+ The plan going forward was to use the first command opportunity after the planned MAGROL and the 
+end of the current command moratorium to send commands to the spacecraft to shift to the 40 bps 
+engineering mode (EL40). This will allow the team to check status bits and determine whether the 
+onboard sequence is still working. These commands are planned for Friday, 30 April. Subsequently, a 
+switch to 1200 bps would be made so that a full FDS memory readout could be accomplished. 
+ 
+ An analysis by Steve Howard of the data received at the station shows that telemetry frames are longer 
+than expected by 80 bits with every fourth frame only 60 bits longer. He compared the 26 April data 
+with the last data received on 21 April and found that the actual frame time was 48.46 seconds instead of 
+the nominal 48.0 seconds (an increase by nearly a half a second per frame, which exactly explains the 
+75, on average, extra bits we are seeing in the data. He asked, and it was agreed that the station 
+configure a parallel string to try to process the telemetry at 158.5 bps as well as the nominal 160 bps. 
+During this morning’s pass, 28 April, the station configured a second Downlink Channel Controller 
+(DCC). They still saw the 80/60 extra bits per frame at the backup DCC. The DCC could frame sync on 
+those 80 bits longer but not the fourth frames. At any rate, the AMMOS can not currently process these 
+data. 
+ 
+ During this morning’s contact it was determined that the MAGROL did not occur. However, there are 
+other possible reasons why it might not have occurred. So, to verify that it was a result of the NOP being 
+executed and not by some other occurrence, we need to command the spacecraft to EL40. 
+ 
+ Commands to turn TWNC OFF and Switch to EL40 will be radiated on Friday afternoon, 30 April, and 
+results received on Saturday afternoon, 1 May. The mode change to EL40 exercise a different part of the 
+Flight Data Subsystem telemetry code and removes the Reed Solomon Encoding portion of the 
+telemetry.  The next steps will depend on what we learn on Saturday. 
+ 
+ 
+Email from Ed Stone April 28: 
+ 
+FYI.  The FDS creates the frame format, so this is likely a problem in the FDS memory. Depending on 
+what is learned from the 40 bps engineering mode, the next step may be an FDS memory dump at 1200 
+bps.  The round trip light time is over 25 hours, so this will take time. 
+ 
+Ed 
+ 
+ 
+Posted on the Voyager website at JPL: 
+May 06, 2010 
+ 
+Engineers have shifted NASA's Voyager 2 spacecraft into a mode that transmits only spacecraft health 
+and status data while they diagnose an unexpected change in the pattern of returning data. Preliminary 
+
+--- PAGINA PDF 9 ---
+engineering data received on May 1 show the spacecraft is basically healthy, and that the source of the 
+issue is the flight data system, which is responsible for formatting the data to send back to Earth. The 
+change in the data return pattern has prevented mission managers from decoding science data. 
+ 
+The first changes in the return of data packets from Voyager 2, which is near the edge of our solar 
+system, appeared on April 22. Mission team members have been working to troubleshoot and resume 
+the regular flow of science data. Because of a planned roll maneuver and moratorium on sending 
+commands, engineers got their first chance to send commands to the spacecraft on April 30. It takes 
+nearly 13 hours for signals to reach the spacecraft and nearly 13 hours for signals to come down to 
+NASA's Deep Space Network on Earth. 
+ 
+ 
+Posted on the Voyager website at JPL: 
+Updated May 17, 2010 at 5:00 p.m. PDT 
+ 
+One flip of a bit in the memory of an onboard computer appears to have caused the change in the science 
+data pattern returning from Voyager 2, engineers at NASA's Jet Propulsion Laboratory said Monday, 
+May 17. A value in a single memory location was changed from a 0 to a 1. 
+ 
+On May 12, engineers received a full memory readout from the flight data system computer, which 
+formats the data to send back to Earth. They isolated the one bit in the memory that had changed, and 
+they recreated the effect on a computer at JPL. They found the effect agrees with data coming down 
+from the spacecraft. They are planning to reset the bit to its normal state on Wednesday, May 19. 
+ 
+ 
+Posted on the Voyager website at JPL: 
+Updated May 20, 2010 at 6:00 p.m. PDT 
+ 
+Engineers have successfully corrected the memory on NASA's Voyager 2 spacecraft by resetting a 
+computer bit that had flipped. Reset commands were beamed up to the spacecraft yesterday, Wed., May 
+19, and engineering data received today confirm that the reset was successful. The Voyager team will 
+continue monitoring the engineering data, and if the bit remains reset, commands to switch to the 
+science data mode will be beamed up to Voyager 2 on Sat., May 22. Receipt of science data would then 
+resume on Sun., May 23. 
+ 
+ 
+From: "Massey, Ed B (7050)" <ed.b.massey@jpl.nasa.gov> 
+Voyager 2 Status, 20 May 2010 
+ 
+ Commands to reset the flipped bit in the Flight Data System were uplinked on yesterday. Today we 
+confirmed via memory readout and checksums that the reset worked. The checksum is again correct. We 
+are still in EL-40 engineering mode. If the checksum holds until Saturday, 22 May, we will send 
+commands to changed the telemetry to 160-bit (CR-5T) cruise mode with confirmation expected on 
+Sunday 23 May. 
+ 
+
+--- PAGINA PDF 10 ---
+EdBM  
+ 
+ 
+Email from Ed Stone May 23: 
+ 
+Great news- V2 science data is being received! 
+ 
+    ________________________________________ 
+    From: Ludwig, Roger (317B) 
+    Sent: Sunday, May 23, 2010 8:47 AM 
+    To: Estabrook, Polly (3320); Taylor, Francis H (337H); Mohr, David L (317B) 
+    Cc: Massey, Ed B (7050); Hall, Jefferson C (314C) 
+    Subject: RE: VGR2 160 bps frame sync anomaly 
+    
+    Polly, Dave, Jim, 
+ 
+    About 5 minutes ago we achieved frame synch on 160C science/engineering telemetry.  Success! 
+ 
+    Roger 
+ 
+ 
+Posted on the Voyager website at JPL: 
+Updated May 24, 2010 at 5:30 p.m. PDT 
+ 
+Engineers successfully reset a computer onboard Voyager 2 that caused an unexpected data pattern shift, 
+and the spacecraft resumed sending properly formatted science data back to Earth on Sunday, May 23. 
+Mission managers at NASA's Jet Propulsion Laboratory in Pasadena, Calif., had been operating the 
+spacecraft in engineering mode since May 6. They took this action as they traced the source of the 
+pattern shift to the flip of a single bit in the flight data system computer that packages data to transmit 
+back to Earth. 
+In the next week, engineers will be checking the science data with Voyager team scientists to make sure 
+instruments onboard the spacecraft are processing data correctly. 
+ 
+ 
+Email from Regina Wong (JPL) on May 24: 
+ 
+Hi Everyone, 
+ 
+ On Wednesday (5/19/2010), commands to reset the Flight Data System(FDS) flipped bit on Voyager 2 
+were sent.  On Saturday (5/22/2010), commands to change the telemetry mode from EL-40 to CR-5T 
+(160 bps) Cruise Science data were sent.  On Sunday (5/23/2010) at 
+15:41:27 ERT (day 143), DSS-43 was in lock on the 160 bps as expected. 
+ 
+ You can retrieve your Voyager 2 data (daily file) for day 143 from our SHOCK workstation. 
+
+--- PAGINA PDF 11 ---
+Data look good at my area.  Please let me know what your status is (good or bad), and let me know if 
+you have any problems with the files. 
+ 
+Thank you! 
+ 
+Regina Wong 
+Regina.F.Wong@jpl.nasa.gov 
+Voyager Science & Data Management 
+(818) 393-1035 
+ 
+ 
+ 
+
+--- PAGINA PDF 12 ---
+APPENDIX B 
+ 
+Supporting Email and Notes regarding the Voyager-2 ERT and SCET time discrepancy 
+ 
+ 
+Email from Regina Wong (JPL) on May 24: 
+ 
+Hi Everyone, 
+ 
+ On Wednesday (5/19/2010), commands to reset the Flight Data System(FDS) flipped bit on Voyager 2 
+were sent.  On Saturday (5/22/2010), commands to change the telemetry mode from EL-40 to CR-5T 
+(160 bps) Cruise Science data were sent.  On Sunday (5/23/2010) at 
+15:41:27 ERT (day 143), DSS-43 was in lock on the 160 bps as expected. 
+ 
+ You can retrieve your Voyager 2 data (daily file) for day 143 from our SHOCK workstation. 
+ 
+Data look good at my area.  Please let me know what your status is (good or bad), and let me know if 
+you have any problems with the files. 
+ 
+Thank you! 
+ 
+Regina Wong 
+Regina.F.Wong@jpl.nasa.gov 
+Voyager Science & Data Management 
+(818) 393-1035 
+ 
+ 
+Email to Regina Wong (JPL) on May 24: 
+ 
+Hi Regina, 
+  
+ My initial attempt to process the V2 data file failed. I asked Nand to take a look at the file. I hope to get 
+back with you soon. 
+   
+Bryant 
+ 
+ 
+README File in '/cosmicra/voyager/edr/test/v2ert2/may2410.d' 
+ 
+05/24/2010 
+ 
+Processing of Voyager-2 data file 'crs10143.b' which was the first 
+available daily EDR after month long data outage due to spacecraft 
+FDS problem. It will not process with either the ‘src.test’ or 
+‘src.mod’ versions of ‘encgen’. 
+
+--- PAGINA PDF 13 ---
+ 
+./doedr crs10143.b 
+53 records processed. 
+ 
+ 
+./doencgen 2 crs10143.bgsfc 
+2 
+Library file to process: crs10143.bgsfc 
+exec /cosmicra/voyager/encgen/src.mod/encgen 2 crs10143.bgsfc 
+child process exited abnormally 
+while executing 
+"exec /cosmicra/voyager/encgen/src.mod/encgen 2 crs10143.bgsfc > 
+crs10143.bgsfc.output" 
+("eval" body line 1) 
+invoked from within 
+"eval "$command > ${libraryFile}.output"" 
+(file "./doencgen" line 38) 
+ 
+ 
+Email to/from Nand May 24 - 25 regarding the processing failure. 
+ 
+Nand, 
+ 
+Voyager-2 data is flowing again but I could not process the EDR from JPL. ENCGEN reported 'no 
+output' from the Library file. All of the relevant files are at: 
+ 
+'/cosmicra/voyager/edr/test/v2ert2/may2410.d' 
+ 
+Bryant 
+ 
+--  
+Bryant Heikkila 
+Voyager Interstellar Mission 
+Wyle Information Systems 
+bryant.heikkila@gmail.com 
+ 
+ 
+From Nand: 
+ 
+The Earth Received time appears to be in error. One way light time is about 12 hours 42 minutes, but the 
+difference between spacecraft time and earth received time on the EDR is >15 hours. I have sent a 
+message to Regina. I may create an EDR with ERT consitent with spacecraft time in order that we can 
+process the EDR and look at our data while we wait for a response from JPL. 
+ 
+ 
+
+--- PAGINA PDF 14 ---
+From Nand: 
+ 
+Please plot some data from /tmp/nand/V21170722.A1170755 which contains the day 143 data processed 
+ignoring the time consistency issue.  
+ 
+ 
+Nand, 
+ 
+I have plotted the new data for PENH, 2-3 MeV H and 30-56 MeV/n He. In each figure the new data in 
+RED is compared to daily averaged old data in BLUE (offset) to make sure the magnitude looks good. I 
+think the data looks OK in all three cases. 
+ 
+Bryant 
+ 
+ 
+Email from Nand to Regina Wong (JPL) on May 24: 
+ 
+From: Lal, Nand (GSFC-6720) [mailto:nand.lal-1@nasa.gov] 
+Sent: Monday, May 24, 2010 6:45 PM 
+To: Wong, Regina F. (JPL-315H)[Caltech-JPL] 
+Subject: RE: Voyager 2 Data 
+ 
+ 
+SCET and ERT are inconsistent. (ERT apparently in error). Difference between ERT and SCET on the 
+EDR for day 143 is 15 hr 1607 sec. One way light time is 12hr 42min. 
+ 
+ 
+Email from Regina Wong (JPL) to Nand on May 25: 
+ 
+Hi Dr.Lal, 
+ 
+The inconsistent of the SCET and ERT may be caused by the recent FDS(Flight Data System)bit flip 
+anomaly.  During the time of the anomaly, the FDS clock did not increment and there's an offset 
+difference of about 2 hrs. and 28 min. 
+ 
+The OWLT of Voyager 2 is 12 hrs 42 min. and 31 sec. plus the offset difference of 2 hrs and 28 min. is 
+about 15 hrs. 10 min. 31 sec.  This is very close to your finding. 
+ 
+The Voyager team is still investigating the FDS anomaly and will decide what to do when we have 
+further information. 
+ 
+Please let me know if you have any other questions/problems. 
+ 
+Thanks, 
+Regina Wong 
+
+--- PAGINA PDF 15 ---
+Regina.F.Wong@jpl.nasa.gov 
+Voyager Science and Data Management 
+(818) 393-1035 
+ 
+ 
+Email from Regina Wong (JPL) on May 27: 
+ 
+Hi Everyone, 
+ 
+ With Voyager 2 returning back to CR-5T (160 bps) Cruise Science Data mode on day 143 at 15:41:27 
+ERT, the following are the initial status of all instruments: 
+ 
+Instrument    Date           Status                                   
+ 
+CRS           5/24/2010      May Be (Concern about the time difference between ERT and SCET) 
+LECP          5/24/2010      May Be (Initial processing is fine but needs Dr. Decker to confirm, he’s on 
+travel) 
+MAG           5/24/2010      Good 
+UVS           5/24/2010      Instrument is off 
+PWS           5/24/2010      Good 
+PLS           5/27/2010      Good 
+ 
+ There is a timing offset (time delay) of about 2 hrs. and 28 min. during the Flight Data System (FDS) 
+bit flip anomaly.  The FDS clock was slowing down and caused the difference between the ERT and 
+SCET is more than the OWLT.  The Voyager team is still investigating the FDS anomaly and will 
+decide what to do with the FDS timing problem. 
+ 
+Please let me know if you have any questions of problems. 
+                    
+Thank you, 
+ 
+Regina Wong 
+Regina.F.Wong@jpl.nasa.gov 
+Voyager Science & Data Management 
+(818) 393-1035 
+ 
+ 
+
+--- PAGINA PDF 16 ---
+APPENDIX C 
+ 
+Supporting Email and Notes regarding the Voyager-2 EDRs for DOY 176-183 
+ 
+ 
+Email to Regina Wong (JPL) on June 29: 
+ 
+Hi Regina, 
+ 
+We were not able to process the V2 daily EDR for DOY 176. There are 78 records but they seem to be 
+all overlapping data. Can you take a look at the file again? Thanks. 
+ 
+Bryant 
+ 
+ 
+Email from Regina Wong on June 30: 
+ 
+Hi Bryant, 
+ 
+ I am on family sick leave since 6/21/2010.  I’ll forward your message to Ron Hungerford (my alternate 
+during my absence) and have him look into that.  I came this morning mainly to create the new 
+SCLK_SCET files.  Voyager 2 had a FDS SCLK reset on Sunday (day 179) take correct the clock offset 
+problem (off by about 2 hrs).  You may have questions on day 180 and 181’s daily files because Ron 
+Hungerford created those files before I created the new SCLK_SCET.32 file. 
+ 
+Regina 
+ 
+ 
+Email from Ron Hungerford (JPL) on July 1: 
+ 
+Bryant, 
+ 
+ Regina Wong is out for family illness for awhile.  I am temporarily filling in for Voyager science 
+questions this week. We examined the Day 176 source data: 
+ 
+S/C 32 DOY 176 
+DSS 45 Track 
+ 
+RAIN 
+DR C107455 
+ 
+Poor data 
+12:00:00 - 21:02:29          2 min  29 sec 
+12:14:29 - 23:21:41          2 min  12 sec 
+
+--- PAGINA PDF 17 ---
+12:29:41 - 12:58:29         28 min  48 sec 
+13:13:41 - 13:16:53          3 min  12 sec 
+13:44:53 - 13:53:41          8 min  48 sec 
+ 
+Data received between will be corrupted… likely bad FDSC & SCET 
+ 
+Unfortunately, the rain over the station corrupted the telemetry stream, generating bad FDSCs. The bad 
+FDSCs are translated to bad SCETs. 
+ 
+We have no tools to repair the data, so this is the best we can do. 
+ 
+Sorry, 
+ 
+Ron Hungerford 
+VGR Science Data Team 
+ 
+ 
+Email from Regina Wong (JPL) on June 30: 
+ 
+Hi Everyone, 
+ 
+ I am off since 6/21/2010 due to family illness.  Ron Hungerford is my alternate for the Voyager task. 
+ 
+  Ron is doing the daily task and he created the final EDRs last week.  The files are available for your 
+access on our SHOCK workstation. 
+ 
+  Voyager 2 had a FDS SCLK reset on day 179 with the following information: 
+ 
+  2010-179/16:25:57.564 (ERT)  =  2010-179/03:42:57.465 (SCET) 
+ 
+ I created a new file (for JPL’s central data system) to reflect this reset this morning and they  cannot put 
+the new correlation file until the DSS pass is over for day 181.  Your data for days 180 and 181 will still 
+have the old clock issue until the new file is on the system starting on day 182.  If you have any 
+questions on the data, please contact Ron Hungerford, any other questions about Voyager’s science 
+activities, please contact Jefferson Hall.  
+ 
+I’ll let everyone know when I’ll be back to work. 
+ 
+Thanks, 
+Regina Wong 
+Voyager Science and Data Management 
+(818) 393-1035 
+ 
+ 
+07/08/2010 
+
+--- PAGINA PDF 18 ---
+ 
+The autoprocessing of 'crsf10175.b' using the 'no timecheck' version 
+of ENCGEN ("/tmp/nand/test/src/encgen") generated no output. 
+Proceeding to handprocessing. 
+ 
+/cosmicra/voyager/edr/test/v2ert2> ./doedr crsf10175.b 
+646 records processed. 
+ 
+/cosmicra/voyager/edr/test/v2ert2> ./doencgen 2 crsf10175.bgsfc 
+2 
+Library file to process: crsf10175.bgsfc 
+exec /cosmicra/voyager/encgen/src.test/encgen 2 crsf10175.bgsfc 
+ 
+Runtime error messages show: 
+Overlapping data at record XX from records 14 - 506 
+ 
+ 
+Reprocessed using the standard 
+"/cosmicra/voyager/encgen/src.test/encgen" 
+program. This run successfully generated an Encyclopedia file. 
+Runtime error messages indicate: 
+ 
+From record ~285 - ~363 the "FDSC inconsistent with earth received 
+time." 
+ 
+ 
+Email from Regina Wong (JPL) on July 20: 
+ 
+Hi Everyone, 
+ 
+ I am back to work. 
+ 
+ Ron Hungerford generated some new final EDRs for both spacecraft during my absence.  The files are 
+from day 176 to 198 and available for you to retrieve from our SHOCK workstation. 
+ 
+Regards, 
+Regina Wong 
+Voyager Science and Data Management 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGINA PDF 19 ---
+APPENDIX D 
+ 
+Supporting Email and Notes regarding the Voyager-2 EDRs for DOY 217 
+ 
+ 
+ 
+Email from Regina Wong (JPL) on August 9: 
+ 
+Hi Everyone, 
+  
+Voyager 2 had  another FDS SCLK Reset at 2010-216/15:42 ERT.  The purpose of this reset was to 
+have the CCS clock and the FDS clock on the Voyager 2 to sync correctly in order to do sequence in the 
+future.  The latest final EDRs which I just posted includes the new clock adjustment. 
+  
+Please let me know if you have any problems. 
+  
+Regina Wong 
+Regina.F.Wong@jpl.nasa.gov 
+Voyager Science and Data Management 
+(818) 393-1035 
+ 
+ 
+ 
+Email from Regina Wong (JPL) on August 9: 
+ 
+Hi Bryant, 
+ 
+ There’s a new SCLK_SCET.32 file for Voyager 2 for you to access from our SHOCK workstation. 
+ 
+There’s a FDS clock reset at : 
+ 
+201-216/15:42 (ERT) 
+ 
+This new SCLK_SCET file is for that adjustment. 
+ 
+Regina 
+ 
+ 
+Email to Regina Wong (JPL) and Nand Lal (GSFC) on August 13: 
+ 
+Hi Regina, 
+ 
+CRS was unable to process the V2 daily for DOY 217. However, all subsequent V2 daily files have 
+processed correctly. 
+
+--- PAGINA PDF 20 ---
+ 
+Thanks. 
+ 
+Bryant 
+ 
+ 
+Email from Regina Wong (JPL) on August 13: 
+ 
+Hi Bryant, 
+  
+Can you please explain a little more about V2’s DOY 217 daily file?  What kind of problem you have 
+with it?  What would you like me to do?  Is it the entire day or just at certain time? 
+  
+Regina 
+ 
+ 
+Email to Regina Wong (JPL) on August 13: 
+ 
+Hi Regina, 
+ 
+For DOY 217 all 62 data records get flagged by our software as: "FDSC inconsistent with earth received 
+time." This is the same problem we had before the first FDS clock reset. As long as we can process the 
+final EDRs for that day then we will be OK. 
+ 
+Bryant 
+ 
+ 
+Email from Regina Wong (JPL) on August 13: 
+ 
+Hi Bryant, 
+  
+I just sent out a message about the new final EDRs that were created today.  Please process V2’s file and 
+see if you still have problems with the data for DOY 217. 
+  
+Thanks, 
+  
+Regina 
+ 
+ 
+Email to Nand on August 13: 
+ 
+Nand, 
+ 
+
+--- PAGINA PDF 21 ---
+I will process the final EDRs this weekend and see what happens with DOY 217 V2 data. The daily file 
+would not process due to all of the records had time errors. 
+ 
+If the finals process OK then no we do not need the old program. 
+ 
+Bryant 
+ 
+Sent from my iPad 
+ 
+ 
+Email to Regina Wong (JPL) on August 19: 
+ 
+Hi Regina, 
+ 
+After processing the final EDRS for Voyager-2 (crsf10210.b, crsf10217.b) we are missing data for part 
+of day 216 and all of day 217 unless we turn off our time checks. Since this occurs right after the FDS 
+Clock Reset and at no other time covered in these EDRs we think something unusual must have 
+happened with respect to the reset. If you have time can you look into this for us. The attached figure 
+shows the results of our processing with the red sections showing standard processed data (y-axis is not 
+important). The blue sections show data processed with our time checks turned off. Our processing 
+shows that all 62 data records of V2 DOY 217 are flagged with incorrect times as well as part of DOY 
+216. Thanks. 
+ 
+Bryant 
+ 
+ 
+Email from Regina Wong (JPL) on August 20: 
+ 
+Hi Bryant, 
+  
+I have some questions about this problem that you have: 
+  
+1.        What is “time checks”?  What does it do?  Is it a piece of software at your local area? 
+2.       If you turn off your “time checks”, does it mean that you get all of the data? 
+3.       When we had the first FDS Clock Reset for Voyager 2 on day 179 at 16:26 (ERT), did you have 
+this kind of problem? 
+4.       Did you have problem with part of DOY 216 and all of DOY 217 only?  Starting on DOY 218, 
+everything is fine? 
+5.       The 62 data records of V2 for part of DOY 216 and DOY 217 are flagged with incorrect times, 
+what does that mean?  What times did you expect to see and what times did you actually have? 
+  
+Hope you can help me out with these questions so that I can investigate the problem. 
+  
+Thanks, 
+Regina 
+
+--- PAGINA PDF 22 ---
+ 
+ 
+Email to Regina Wong (JPL) on August 23: 
+ 
+Hi Regina, 
+ 
+I have added more information following each of your questions below. 
+ 
+Bryant 
+ 
+ 
+ 
+On Fri, Aug 20, 2010 at 6:49 PM, Wong, Regina F (315H) <regina.f.wong@jpl.nasa.gov> wrote: 
+ 
+  
+Hi Bryant, 
+  
+I have some questions about this problem that you have: 
+  
+1.        What is “time checks”?  What does it do?  Is it a piece of software at your local area? 
+ 
+Yes, "time checks" is a general term used to describe data quality 
+analysis with respect to the times during our processing of the EDRs.  
+ 
+2.       If you turn off your “time checks”, does it mean that you get all of the data? 
+ 
+Yes. That is what I tried to show you with the previously sent 
+figure. If we turn off our "time checks" then we get all of the data. 
+With our "time checks" running part of DOY 216 and all of DOY 218 
+fail and are excluded. The failed records start right after the 
+reset.  
+ 
+3.       When we had the first FDS Clock Reset for Voyager 2 on day 179 at 16:26 (ERT), did you have 
+this kind of problem? 
+ 
+We had the problem until you reset the FDS clock but not after. I am 
+going to reprocess some files to make sure we did not miss some data 
+during the reset. I will get back with you on this one.  
+ 
+4.       Did you have problem with part of DOY 216 and all of DOY 217 only?  Starting on DOY 218, 
+everything is fine? 
+ 
+Yes, the only problem is with part of DOY 216 and DOY 217. DOY 218 is 
+fine. We believe it has something to do with the reset. Did it fail 
+or get sent wrong the first time and they had to resend the command?  
+ 
+
+--- PAGINA PDF 23 ---
+5.       The 62 data records of V2 for part of DOY 216 and DOY 217 are flagged with incorrect times, 
+what does that mean?  What times did you expect to see and what times did you actually have? 
+ 
+Our "time checks" compares the expected FDSC derived from the ERT to 
+the actual value in the EDR.  The SCET is computed from the ERT which 
+is assumed to be correct. If these checks fail then the record(s) are 
+flagged. Below is one of the flagged records showing a diffrerence of 
+about 13 minutes between the computed SCET and the SCET (old) in the 
+EDR. The numbers are in milliseconds. 
+ 
+Replacing old SCET 1060037763327.000000 with 1060036995883.315796 
+ 
+ 
+ 
+Email to Regina Wong (JPL) on August 23: 
+ 
+Hi Regina, 
+ 
+Thank you for asking question number 3 below. After looking into it some more I discovered that we 
+did indeed miss data. In this case part of DOY 179 and all of DOY 180. The data is there of course but it 
+fails our time checks. I have attached another figure showing the missing data. Ignore the green data 
+sets, that is another mystery for Nand and me to solve. 
+ 
+Bryant 
+ 
+ 
+Email from Regina Wong (JPL) on August 25: 
+ 
+Hi Bryant, 
+  
+I generated two new final files for you to retrieve.  Information about the files are as follow: 
+  
+          File Name           Start Time                                          Stop Time 
+  
+1)      Crsf10179.b        2010-179/17:27 (ERT)                      2010-180/19:50 (ERT) 
+2)      Crsf10216.b        2010-216/17:43 (ERT)                      2010-217/21:30 (ERT) 
+  
+Please let me know if you still have problems with the data on these files as soon as you can. 
+  
+Thank you, 
+  
+Regina Wong 
+ 
+ 
+Email to Regina Wong (JPL) and Nand Lal (GSFC) on August 26: 
+
+--- PAGINA PDF 24 ---
+ 
+Regina, 
+ 
+I was unable to process these files. Both EDRs failed to produce output with our standard production 
+software or our special version without timechecks.  These files are really big. They are 3 times the size 
+of a final EDR but only contain about a days data based on the times in your email. In addition, there are 
+over 900 records in each file but I would expect less than 100. The error messages indicate every record 
+consists of overlapping data. 
+ 
+Bryant 
+ 
+ 
+Email from Regina Wong (JPL) on August 31: 
+ 
+Hi Bryant, 
+  
+I regenerated two new files for you to retrieve from our SHOCK workstation.  File names, start and stop 
+time are same as before. 
+Please let me know if these files are acceptable. 
+  
+Thank you, 
+Regina Wong 
+ 
+ 
+Email to Regina Wong (JPL) on September 2: 
+ 
+Hi Regina, 
+ 
+I was not able to process these files using our standard programs but I was able to process them using 
+our special version without timechecks. Using a combination of daily and final EDRs I have been able to 
+fill our data base so that we do not have missing data. I don't know if you want to continue to investigate 
+this or simply note that there is a problem with the times right after a FDS Clock reset. 
+I have a couple more quality checks to run and then discuss the results with Nand, but I don't want to 
+hold up the final EDR generation of new data. 
+ 
+Thanks, 
+Bryant 
+ 
+ 
+Email from Regina Wong (JPL) on September 3: 
+ 
+Hi Bryant, 
+  
+Whenever the FDS clock is reset, the SCLK and the SCET will be disconnected from the existing time 
+trend.  Therefore, you should not use your “timechecks” for your processing for about 2 days until the 
+
+--- PAGINA PDF 25 ---
+SCLK and SCET sync up.  The following indicates the time equivalent on the start and stop time for the 
+two files which I generated for you on 8/31/2010: 
+  
+1)       Crsf10179.b       Start Time           2010-179/17:27 (ERT)  =   43140.02.633 (SCLK) 
+                                                                                                        =   2010-179/04:43:59.783 (SCET) 
+                                     Stop Time            2010-180/19:50 (ERT) =    43173.01.384 (SCLK) 
+                                                                                                        =    2010-180/07:06:56.655 (SCET) 
+  
+2)       Crsf10216.b       Start Time           2010-216/17:43 (ERT)  =    44253.33.063 (SCLK) 
+                                                                                                        =    2010-216/04:56:55.184 (SCET) 
+                                     Stop Time            2010-217/21:30 (ERT)  =    44288.16.527 (SCLK) 
+                                                                                                         =   2010-217/08:43:46.831 (SCET) 
+  
+These events are not normal mission activities; we just wanted to adjust the recent Voyager 2’s FDS 
+memory problem. 
+  
+If we have any clock reset in the future, I’ll make sure to advice you about the event so that you can stop 
+your “timechecks” before your processing. 
+  
+Please let me know if you still have any questions or problems. 
+  
+Regina Wong 
+ 
+ 

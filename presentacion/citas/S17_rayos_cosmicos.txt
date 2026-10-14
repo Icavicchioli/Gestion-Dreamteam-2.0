@@ -1,0 +1,119 @@
+Cosmic Rays - Introduction
+National Aeronautics and Space Administration
+Goddard Space Flight Center
+Imagine the Universe!
+Home
+Science
+Astronomer's Toolbox
+Cosmic Objects
+Big Questions
+Featured Science
+Observatories
+Special Exhibits
+Scientist Profiles
+You Be the Astrophysicist
+The Cosmic Distance Scale
+Educators' Corner
+Lesson Plans
+Materials
+Programs
+Ask an Astrophysicist
+Resources
+Other Resources
+Dictionary
+Search
+Additional Links
+Quiz me about this topic!
+Cool fact about this topic!
+Try This !
+FAQs on Cosmic Rays
+Give me additional resources!
+Related Topics
+Supernovae and their remnants
+Active Galaxies and Quasars
+Gamma-ray Bursts
+Retired Quasars Live on to Generate the Fastest, Most Energetic Cosmic Rays
+A TIGER in Antarctica
+For Educators
+NCTM & NSES Standards
+Life Cycles of Stars Booklet
+Gamma-Ray Bursts Booklet
+Show me related lesson plans
+[an error occurred while processing this directive]
+Cosmic Rays - Introduction
+Advanced
+Basic
+Cosmic Rays
+What are cosmic rays?
+Galactic cosmic rays (GCRs) are the high-energy particles that flow into
+our solar system from far away in the Galaxy. GCRs are mostly pieces of
+atoms: protons, electrons, and atomic nuclei which have had all of the
+surrounding electrons stripped during their high-speed (almost the speed
+of light) passage through
+the Galaxy. Cosmic rays provide one of our few direct samples of matter
+from outside the solar system. The magnetic fields of the Galaxy, the
+solar system, and the Earth have scrambled the flight paths of these
+particles so much that we can no longer point back to their sources in
+the Galaxy. If you made a map of the sky with cosmic ray intensities, it
+would be completely uniform.  So we have to determine where cosmic rays
+come from by indirect means.
+Map of Galaxy in Cosmic Rays
+One of the indirect observations we can make is the "composition" of GCRs.
+This can tell us a lot about the GCR sources and the cosmic rays' trip through
+the Galaxy.  The "composition" of cosmic rays describes  what fraction
+of cosmic rays
+are protons, what fraction are helium nuclei, etc.
+All of the natural elements in the periodic table are present in cosmic
+rays, in roughly the same proportion as they occur in the solar system.
+But detailed differences provide a "fingerprint" of the cosmic ray's source.
+Measuring the quantity of each different element is relatively easy, since
+the different charges of each nucleus give very different signatures.
+Harder to measure, but a better fingerprint, is the isotopic composition
+(nuclei of the same element but with different numbers of neutrons). To
+tell the isotopes apart involves, in effect, weighing each atomic nucleus
+that enters the cosmic ray detector.
+About 90% of the cosmic ray nuclei are hydrogen (protons), about 9%
+are helium (alpha particles), and all of the rest of the elements
+make up only 1%.  Even in this one percent there are very rare
+elements and isotopes.  These require large detectors to collect
+enough particles to say something meaningful about the "fingerprint"
+of their source.  The HEAO Heavy Nuclei Experiment, launched in 1979,
+collected only about 100 cosmic rays between element 75 and element
+87 (the group of elements that includes platinum, mercury, and lead),
+in almost a year and a half of flight, and it was much bigger than
+most scientific instruments flown by NASA today.  To make better
+measurements requires an even larger instrument, and the bigger the
+instrument, the greater the cost.
+Where do they come from?
+Most galactic cosmic rays are probably accelerated in the blast
+waves of supernova remnants. This doesn't mean that the supernova explosion
+itself gets the particles up to these speeds.  The remnants of the explosions,
+expanding clouds of gas and magnetic field, can last for thousands of years,
+and this is where cosmic rays are accelerated.  Bouncing back and forth
+in the magnetic field of the remnant randomly lets some of the
+particles gain energy, and become cosmic rays.  Eventually they build up
+enough speed that the remnant can no longer contain them, and they escape
+into the Galaxy.
+Supernova 1006
+Crab Nebula
+Because the cosmic rays eventually escape the supernova remnant, they
+can only be accelerated up to a certain maximum energy,
+which depends upon the size of the acceleration region and the magnetic field
+strength.
+However, cosmic rays have been observed at much higher energies than
+supernova remnants can generate, and where these ultra-high-energies
+come from is a big question.  Perhaps they come from outside the Galaxy,
+from active galactic nuclei, quasars or gamma ray bursts.
+Or perhaps they're the signature of some exotic new physics: superstrings, exotic dark
+matter, strongly-interacting neutrinos, or topological defects in the very structure
+of the universe.  Questions like these tie cosmic-ray astrophysics to basic particle
+physics and the fundamental nature of the universe.
+A service of the High Energy Astrophysics Science Archive Research Center (HEASARC), Dr. Andy Ptak (Director), within the Astrophysics Science Division (ASD) at NASA/GSFC
+The Imagine Team
+Project Leader: Dr. Barbara Mattson
+Curator: J.D. Myers
+NASA Official: Dr. Andy Ptak
+Privacy Policy & Important Notices
+Useful plugins
+Contact Us
+Page Last Updated: Wed, Jun 28, 2017

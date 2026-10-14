@@ -1,0 +1,67 @@
+Sensitive Volumes — CREME-MC site
+Skip to content. |
+Skip to navigation
+Site Map
+Accessibility
+Contact
+Search Site
+only in current section
+Advanced Search…
+Sections
+Home
+News
+Events
+Help
+Frequently Asked Questions
+Personal tools
+Log in
+You
+are here:
+Home
+→
+Help
+→
+Sensitive Volumes
+News
+Patch to TRANS
+Apr 15, 2020
+Site Move
+Jun 04, 2019
+HUP "leaking" integration
+Sep 01, 2016
+Shellshock vulnerability
+Sep 26, 2014
+Notice about "Heartbleed" SSL/TLS bug
+Apr 11, 2014
+More news…
+Log in
+Login Name
+Password
+Cookies are not enabled. You must enable cookies before you
+can log in.
+Forgot your password?
+New user?
+Navigation
+Home
+News
+Events
+Help
+Frequently Asked Questions
+Info
+Sensitive Volumes
+A sensitive volume is a region in space in which energy deposition from ionizing particle can affect the operation of a device. For single event effects, the volume is often associated with the depletion region of a particular circuit node. In the case of total ionizing dose the volume is associated with an insulating layer in the structure. As opposed to the RPP or IRPP methods, sensitive volumes may be weighted. The idea of a volume having a collection efficiency is not new. In fact, Binder et. al describe a charge collection efficiency that is a function of distance to a collecting node. The distinction between charge collection efficiency and a sensitive volume weight will be explored later. Further, multiple devices may be modeled and a single device may consist of multiple sensitive volumes.
+Weighted Sensitive Volume Model
+The weighted sensitive volume model allows one to mimic the effect of imperfect charge collection due to diffusion or other mechanisms. In mathematical terms, the charge collected at circuit node j is sum the energy deposited in Nj sensitive volumes scaled by a weight αj,i for (0 ≦ i < Nj) and the mean ionization potential I(Z) of the material (3.6 eV/ehp in silicon). While a particular region in space may have a charge collection efficiency, sensitive volumes are necessarily disjoint. That is, often these models will nest volumes within others. When an ion passes through the model, its energy may be deposited along a track that is contained in multiple volumes. The energy is therefore included in Equation 1 multiple times. For this reason, a volume weight is not necessarily a region’s collection efficiency. A proper selection of weights will yield the desired charge collection efficiency. When done correctly, one can emulate the increase in single event cross sections as a function of particle LET similar to accelerated test data obtained at a broadbeam facility. This increase in cross section is a result of intracell variation in charge collection.
+Multiple Device Model
+Some circuits use spatial redundancy to increase their resilience to transient radiation effects. For example, triple modular redundacy (TMR) is a design technique that maintains three copies of a data value to prevent the corruption of any individual element from resulting in an error propagating in the greater circuitry. Since the output is computed by a voter, an incorrect value may be produced if a single ion, or shower of secondary particles, generate charge in multiple devices simultaneously. Similar vulnerabilities exist for the Dual-Interlocked Storage Cell (DICE), and error correcting codes (ECC). These events require the coincident collection of charge on multiple circuit nodes. Each of the sensitive devices can be modeled with a single or weighted sensitive volume model. The models are defined in the same way as described in the previous section except the device also requires an event energy threshold. The multiplicity of an event is the number of devices whose threshold is exceeded.
+References:
+D. Binder, E. C. Smith, and A. B. Holman, Satellite anomalies from galactic cosmic rays,"
+IEEE Trans. Nucl. Sci., vol. 22, no. 6, pp. 2675{2680, Dec. 1975.
+Document Actions
+Send this
+Print this
+Powered by Plone
+Valid XHTML
+Valid CSS
+Section 508
+WCAG

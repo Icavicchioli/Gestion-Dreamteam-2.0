@@ -1,0 +1,1224 @@
+
+--- PAGINA PDF 1 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Radiation Effects and Analysis Lessons: 
+a Scientist’s Field Instruction 
+to Explain Radiation Testing
+June 2022 Version 
+(REAL SciFI ExpRT 22)
+This presentation was compiled for 
+The NASA Electronic Parts and Packaging (NEPP) Program by:
+Edward J. Wyrwas
+edward.j.wyrwas@nasa.gov
+Science Systems and Applications, Inc. (SSAI)
+work performed for NASA Goddard Space Flight Center (GSFC) 
+Ted Wilcox
+ted.wilcox@nasa.gov
+Associate Branch Head, Code 561
+NASA Goddard Space Flight Center (GSFC) 
+1
+
+--- PAGINA PDF 2 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Acronyms
+3D 3-Dimensional (3D)
+AI Artificial Intelligence (AI)
+AKA Also Known As (AKA)
+ARC Ames Research Center (ARC)
+Arms Root Mean Square Current in Amps 
+(Arms)
+BGA Ball Grid Array (BGA)
+BOK Body of Knowledge (BOK)
+Caps, C Capacitor (Caps, C)
+CMOS Complimentary Metal-Oxide 
+Semiconductor (CMOS)
+COTS Commercial Off the Shelf (COTS) 
+CREME-96 Cosmic Ray Effects on Micro-Electronics 
+1996 Revision (CRÈME-96)
+DDD Displacement Damage Dose (DDD)
+DFN Dual Flat-Pack No-Leads (DFN)
+DSEE Destructive Single Event Effects (DSEE)
+DUT Device Under Test (DUT)
+ECC Error Correcting Code (ECC)
+EMPC Experimental & Mathematical Physics 
+Consultants (EMPC)
+ESD Electrostatic Discharge (ESD)
+FET Field Effect Transistor (FET)
+FTP File Transfer Protocol (FTP)
+FWHM Fixed Width at Half Maximum power 
+(FWHM)
+GCR Galactic Cosmic rays (GCR)
+GEO Geosynchronous Orbit (GEO)
+GPIO General Purpose Input Output (GPIO)
+GPU Graphics Processing Unit (GPU)
+GSFC Goddard Space Flight Center (GSFC)
+HDPE High Density Polyethylene (HDPE) 
+HPC High Performance Computing (HPC)
+I, V, P Current, Voltage, Power (I, V, P)
+ID Identifier (ID)
+IP Intellectual Property (IP)
+JEDEC Joint Electron Device Engineering Council 
+(JEDEC)
+JESD JEDEC Standards (JESD)
+JPL Jet Propulsion Lab (JPL)
+JSC Johnson Space Center (JSC)
+KVM Keyboard Video Mouse (KVM)
+L Inductor (L)
+LDC Lot Date Code (LDC)
+LET Linear Energy Transfer (LET)
+LPDDR4 Low-Power Dual Data Rate Random Access 
+Memory, Generation 4 (LPDDR4)
+MAPLD Military and Aerospace Programmable Logic 
+Devices (MAPLD)
+ML Machine Learning (ML)
+MOSFET Metal Oxide Semiconductor Field Effect 
+Transistor (MOSFET)
+NASA The National Aeronautics and Space 
+Administration (NASA)
+NDSEE Non-Destructive Single Event Effects (NDSEE)
+NEPP NASA Electronic Part and Packaging (NEPP) 
+Program
+NRL Naval Research Laboratory (NRL)
+NSRL NASA Space Radiation Laboratory (NSRL)
+PCB Printed Circuit Board (PCB)
+PCBA Printed Circuit Board Assembly (PCBA)
+PMIC Power Management Integrated Circuit (PMIC)
+PoP Package-On-Package (PoP)
+RAM Random Access Memory (RAM) - AKA system 
+memory
+REAG Radiation Effects and Analysis Group (REAG)
+RIC Radiation-Induced Conductivity (RIC)
+ROM Read Only Memory (ROM) - AKA program memory
+SBC Single Board Computer (SBC)
+SEB Single Event Burnout (SEB)
+SEFIs Single Event Functional Interrupts (SEFIs)
+SEGR Single Event Gate Rupture (SEGR)
+SEL Single Event Latchup (SEL)
+SET Single Event Effect induced transients (SET)
+SEU Single Event Upsets (SEU)
+SI International System of Units (SI)
+SiP System-In-Package (SiP)
+SoC System-on-Chip (SoC)
+SOI Silicon on Insulator (SOI)
+SOTA State of the Art (SOTA)
+SPE Solar Proton Events (SPE)
+SRIM Stopping and Range of Ions in Matter (SRIM)
+SSAI Science Systems and Applications, Inc. (SSAI)
+TAMU Texas Agricultural & Mechanical University 
+(TAMU)
+TID Total Ionizing Dose (TID)
+TM Technical Memorandum (TM)
+TPA Two-Photon Laser absorption (TPA)
+TPU Tensor Processing Unit (TPU)
+TSV Through Silicon Via (TSV)
+VDD Drain Voltage (VDD)
+VSS Source/Sink Voltage (VSS)
+2
+
+--- PAGINA PDF 3 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Radiation Assurance Requires 
+Synchronous Integration
+This is why radiation engineers tend to answer with “it depends…”
+Mission
+Environment
+Application
+Lifetime
+Image credits: NASA and other government sources
+– Considerations summarized in these 
+elements allow designers to effectively 
+choose parts for their best performance 
+for a given architecture
+– Comprehension requires a complete 
+synchronous picture
+of how technologies 
+are to be used effectively
+– Emphasizing one of these elements 
+without understanding the others can 
+compromise the integrity and 
+performance of the parts and mission 
+success
+Adapted from Edward Wyrwas’ presentation from the 12th Space Computing Conference in Pasadena, CA. July 30 – August 1, 2019. STI DAA number 20190028690 
+3
+
+--- PAGINA PDF 4 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+NEPP Processor Enclave
+• State of the Art (SOTA) computational devices exist as individual 
+semiconductor components yet require other devices to operate in a 
+realistic system. 
+• The Processor Enclave is intended to be better nomenclature to 
+categorize these types of compute devices, including compute devices 
+that are System-In-Package (SiP), Package-On-Package (PoP), or 
+monolithic devices which employ SOTA heterogeneous process 
+integration to achieve a system within one device package.
+• While Graphics Processor Units (GPUs) are the primary technology 
+being characterized in this NEPP subtask, the GPU is a general-
+purpose compute component, and its relevant technology 
+competitors need to be evaluated such as Systems on Chip (SoC), 
+microprocessors and artificial intelligence (AI) capable devices.
+• In these slides we provide a glimpse into the challenges associated 
+with performing radiation testing on High Performance Computing 
+(HPC) and Neuromorphic Computing devices. 
+• These slides provide a high-level overview for an approximation of 
+our radiation assurance process.
+4
+
+--- PAGINA PDF 5 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Design Characterization & 
+Qualification Trade Space
+System
+Box
+Board
+Component
+Component
+Part
+A
+Part
+B
+Part
+C
+Subpart
+Based on ISO 26262-11:2018(E) 
+Figure 2. “A semiconductor, its parts and subparts”
+The higher we go in abstraction, 
+the farther we are from the Device Under Test (DUT)
+Adapted from Edward Wyrwas’ presentation from the 12th Space Computing Conference in Pasadena, CA. July 30 – August 1, 2019. STI DAA number 20190028690 
+5
+
+--- PAGINA PDF 6 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Miniaturization Trends
+• The trend in microelectronics has always been toward miniaturization, 
+improvements in transistor density (quantity per µm3), and power efficiency.  
+• Because we need our electronics to do more things, state of the art 
+technologies aim to heterogeneously integrate many capabilities into small 
+discrete components with ever increasing quantities of input and output 
+signals.  
+• To accomplish this feat, component package configurations must evolve in 
+at least the same velocity leveraging all 3 dimensions. This has permitted 
+computers to shrink from room-sized to palm-sized in just a few decades 
+while their complexities and capabilities have increased tremendously from 
+basic calculations to running most of the modern world. 
+• Moore’s Law has historically been the colloquial term associated with 
+scaling technology smaller as time moves forward. Gordon Moore (co-
+founder of Intel) spoke about an observation he made in 1965 that “the 
+number of transistors on a microchip would double about every two years, 
+while the cost of computers is halved” because of improvements in 
+manufacturing technology. 
+6
+
+--- PAGINA PDF 7 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Component Packaging Technology
+• Coinciding with Moore’s Law have been developments in two adjacent industries 
+which impact how the semiconductor devices are physically used.  The 
+semiconductor device is called the die, as it is diced from a larger wafer of 
+material. 
+– The circuit board industry has developed multiple substrate material options 
+(e.g., epoxy, glass, polyimide) to reduce size (notably thickness) and increase 
+functionality such as flexibility
+– Device integrators have invented interconnect systems (e.g., bond wires, solder 
+bumps) which connect the miniature metallization to the circuit boards and have 
+reduced the overburden (e.g., over-mold, encapsulant, passivation coatings) 
+that provides thermal relief, fire retardants, and protection from environmental 
+stressors such as moisture and chemicals. The latter is called the component 
+package, and in some cases, there isn’t one (i.e., chip-on-board).
+• To address the needs of converging commercial 
+market segments, component packaging 
+technology has developed in favor of modular, 
+multifunctional system blocks that ease 
+integration, shorten product design cycles, and 
+permit automated assembly (aka attaching the 
+devices to the circuit board). 
+7
+
+--- PAGINA PDF 8 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+What is a DUT Really?
+• The Device Under Test (DUT), or electronic item we intend to test, is the 
+transistor layers of the semiconductor die. We call these layers (which 
+typically extend to nearly the edges of the die) and their corresponding 
+thickness the sensitive volume of a device. 
+• The die is often embedded in plastic molding compound, ceramic cavities, 
+or found on organic (small chain polymer) substrates, sometimes with a 
+metal lid over top of it. 
+• A Neuromorphic Computing example is the Google Coral Tensor 
+Processing Unit (TPU) module which is used for tensorflow-lite inferences. 
+– Organic substrate module circuit board with a backfilled lid cavity and copper 
+heat spreader. The backfill is plastic molding compound that fills the entire 
+cavity. Not only is there a 5x5mm TPU die inside the package, but also a power 
+management die, a crystal oscillator, and at least a dozen passive components.
+10mm
+15mmImages courtesy of NEPP 
+DUT is found within 
+the 5mmx5mm die, 
+outlined here
+Left: Photo
+Right: X-ray
+8
+
+--- PAGINA PDF 9 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Component Packaging vs Sensitive Volume
+10 mm
+We had to design and fabricate 
+a PCB to use the component
+Component of interest (TPU die) 
+is a 5x5mm flip-chip (aka upside 
+down die with underside 
+metallization) within the plastic 
+encapsulant, ~500um beneath a 
+copper foil at the top of the 
+packaging lid.
+65,000X !
+The DUT
+1 µm
+Images courtesy of NEPP 
+9
+
+--- PAGINA PDF 10 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+SOTA Packaging
+• State of the Art (SOTA) packaging, while it permits higher performance 
+computing, it introduces significant challenges in the techniques and 
+methodologies used by radiation test designers. 
+• Metallization layers are a higher density barrier in the line-of-sight to reach the 
+sensitive volumes.
+– Sometimes we can remove some layers, but we risk the integrity of the device
+• Heatsinks, heat spreaders, and lidded components create additional challenges 
+and prevent radiation from reaching the sensitive volume. 
+• These overlays prevent us from testing at many ground-based test facilities and 
+do not
+stop radiation in space.
+Adapted from Edward Wyrwas’ presentation from the 12th Space Computing Conference in Pasadena, CA. July 30 – August 1, 2019. STI DAA number 20190028690 
+10
+
+--- PAGINA PDF 11 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+“Fault Tolerant Schemes” (1/2)
+• High Performance Computing (HPC) Commercial Off The Shelf (COTS) 
+devices are extremely complex. Therefore, we map out system 
+redundancies, and any features which promote error correction or parity. 
+• We have to ask questions:
+– Fault tolerance schemes; are they employed correctly? 
+Are they used correctly/overloaded? 
+– Does Error Correcting Code (ECC) improve or hurt radiation performance?
+– Will we have the ability to test with and without the mitigation in place?
+– What software frameworks and libraries must also run in the background in 
+addition to their test software or scientific payload? Are any of these 
+systemwide services prone to faults?
+11
+
+--- PAGINA PDF 12 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+“Fault Tolerant Schemes” (2/2)
+• Upset tolerance is important. Mitigation schemes need to restore the 
+system to a good state.
+• It is important to understand when the mission-critical systems need to 
+be available.  There are many discrete time windows which exist during 
+the mission, with different requirements.  It is not appropriate to assume 
+a complex device will be in the same computational state when radiation 
+effects happen. 
+• Not all fault modes caused by radiation effects can be "injected" or 
+mimicked easily. Charge spreading and diffusion to regions you can't 
+control tend to reign supreme.
+• It is hard or impossible to fully exercise the state-space to verify the 
+tolerance. There are more ways to break something than we can usually 
+test.
+12
+
+--- PAGINA PDF 13 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Radiation Effects and Testing
+• Let’s talk a bit about common space radiation 
+phenomena and their associated tests
+• Cumulative Dose Degradation
+– Total Ionizing Dose (krads)
+– Displacement Damage Dose (MeV/g or neutron fluences)
+• Single-Event Effects
+– Non-Destructives, e.g. analog or digital transients, upsets, 
+resets, stuck bits, crashes…
+– Destructives, e.g. latchup, gate rupture, burnout, dielectric 
+rupture…
+– Usually measured in rates of occurrence or probabilities of 
+failure
+13
+
+--- PAGINA PDF 14 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Radiation Effects in Detail
+Radiation Effect Displacement Damage 
+Dose (DDD) Total Ionizing Dose (TID) Non-Destructive Single 
+Event Effects (NDSEE)
+Destructive Single Event 
+Effects (DSEE)
+Technologies Dominated 
+by the Effect
+Opto-electronics, Bipolar Analog, CMOS, MOSFETs All All (e.g., CMOS→SEL,
+MOSFETs→SEB & SEGR)
+Type of Effect Cumulative 
+(total particle fluences)
+Cumulative 
+(total particle fluences)
+Instantaneous 
+(one particle)
+Instantaneous 
+(one particle)
+Why? Damage cascades, 
+disruption of the 
+semiconductor lattice
+Charge trapping 
+(oxide/passivation/interface 
+trapping especially)
+Transient conditions: 
+recombination and drift of 
+charge carriers. Upsets 
+that are persistent. 
+Charge collection.
+Semiconductor tolerances 
+exceeded internally 
+(current density, electric 
+field strength, etc.)
+What does that lead to? Photonics and 
+transparent material 
+degradation
+Threshold voltage shifts, 
+leakage current
+System and functionality 
+drop-outs, some may 
+require power cycle or 
+reset
+System and functionality 
+failure
+Radiation Source that 
+Exhibits the Effects in an 
+Isolated Fashion
+Mid-energy protons 
+(50-63 MeV p+)
+Gamma source to create 
+electron-hole pairs uniformly 
+throughout the DUT
+High energy protons or 
+heavy ions for sufficient 
+local charge deposition
+Heavy ions
+Other Sources that can 
+also create the effect
+Neutrons (difficult to 
+count) or other energy 
+protons (competing 
+Coulombic interactions)
+Protons, electrons, x-rays, 
+heavy ions (physical coverage 
+uniformity in question)
+Protons, pulsed laser Protons (competing with 
+dose effects)
+M. Campola (GSFC 561), Adapted from Avionics Radiation Hardness Assurance (RHA) Guidelines NASA TM−20210018053. Table 7.4-1. SEE Type Susceptibility 
+of Various Technologies and Part Types. And Table 9.2-1. Driving Factors for Radiation Testing and Analysis Methodologies.  
+14
+
+--- PAGINA PDF 15 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Sources of Ionizing Radiation
+• For space environments, we primarily look at:
+– Galactic Cosmic Rays
+– Solar Particles
+– Trapped protons and electrons
+– Occasionally a human-made radiation source is relevant on 
+the spacecraft as well
+Protons, Electrons, Heavy Ions
+Trapped 
+Particles
+Galactic Cosmic 
+Rays (GCRs)
+–Solar Particles 
+(Protons & 
+Heavier Ions)
+15
+
+--- PAGINA PDF 16 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Cosmic Rays
+• Galactic Cosmic rays (GCR) originate outside the solar system, are 
+highly-energetic, and are the most difficult to replicate on Earth. 
+• GCRs can have energies beyond 1 TeV; for reasons of cost 
+effectiveness and practicality, ground-based SEE testing is performed 
+with much lower energies, usually in the 10-25 MeV/nucleon range.
+• Real cosmic rays have enough energy to penetrate an entire satellite, 
+but at ground testing we are often range-limited to hundreds of microns
+• The effects of space-based GCRs on our transistors are correlated to 
+lower-energy ground accelerator beams with LET
+• In space, we see a fall-off of particles with LETs over 30 MeVcm2/mg 
+(supernova limit). Heavy ion facilities can go higher than this, and 75 
+MeVcm
+2/mg is a common measure of immunity for a part to a given 
+SEE.
+16
+
+--- PAGINA PDF 17 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Solar Particle Events
+• Solar flares and Coronal Mass Ejections
+– These are discrete events with high fluxes of protons and heavier ions from the sun
+– Responsible for sudden disturbances from the “background” radiation environment and 
+day-to-day upset rate
+– Fluxes can be quite high and will drive the “worst-case” single-event effects rate 
+requirements
+– Also contribute significantly to cumulative dose, especially for missions beyond Earth 
+orbit
+17
+
+--- PAGINA PDF 18 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Trapped Particles
+• Spacecraft in Earth orbit are 
+subject to ionizing radiation from 
+the Van Allen belts (trapped 
+protons & electrons)
+• This is a primary source of total 
+ionizing dose for many LEO, MEO, 
+and HEO missions
+• Also contributes to single-event 
+effects, particularly notable in the 
+South Atlantic Anomaly
+Solar Anomalous Magnetospheric Explorer 
+(SAMPEX) Solid State Recorder
+Latitude
+K. A. LaBel, et al., IEEE REDW, 1993.
+18
+
+--- PAGINA PDF 19 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Terrestrial Effects
+• Terrestrial systems are also concerned with single-event effects:
+– High-energy particles impact Earth’s atmosphere and generate a 
+variety of particles (e.g., neutrons) that can reach ground level
+– Local effects from radioactive impurities decaying in common materials
+– A valid concern for data centers, critical computing systems, and 
+aerospace avionics amongst others
+• Nuclear power and physics research facilities have significant dose 
+concerns for instrumentation and control hardware
+Adapted from Edward Wyrwas’ presentation from the 12th Space Computing Conference in Pasadena, CA. July 30 – August 1, 2019. STI DAA number 20190028690 
+19
+
+--- PAGINA PDF 20 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Linear Energy Transfer (LET)
+• LET characterizes the energy deposition from charged particles
+• Based on average energy loss per unit path length (MeV/cm)
+• Density (g/cm3) is used to normalize LET to the target material
+• LET (MeVcm2/mg) is the average energy deposited per unit path length 
+• We often use terms like charge column or charge cone to describe the particle 
+path and resulting localized electron-hole pairs
+dx
+dELET ρ
+1=
+Density of target material
+mg
+cmMeV
+2
+Units
+Adapted from Edward Wyrwas’ presentation from the 12th Space Computing Conference in Pasadena, CA. July 30 – August 1, 2019. STI DAA number 20190028690 
+20
+
+--- PAGINA PDF 21 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Single Event Latch-Up (1/3)
+• Single Event Latch-up (SEL) is a destructive effect 
+that directly impacts system availability
+– Results in a dead short between power and GND
+– Is the latch-up recoverable at all? If so, does it 
+cause latent damage?
+– Can application sustain an upset and a reboot 
+during the mission? What about during the critical 
+time window where science should be happening? 
+– SEL can happen on day 1 or day 1000
+21
+Image adapted R. Ghaffarian, Body of Knowledge (BOK) for Leadless Quad Flat No-Lead/Bottom Termination Components (QFN/BTC) Package Trends and Reliability. STI number 20160001774
+• This is not the same as electrical latchup:
+– “COTS are not intended to experience space related latch-up. They are able to receive 
+Electrostatic Discharge (ESD) related latch-up through their packaging lead frame (x-y 
+axis latch-up) and are tested for this. They are not tested for z-axis latch-up, which is 
+what radiation does. It’s fault injection within the transistors, which are otherwise not 
+accessible from outside its package.” (E. Kawam, Microchip, paraphrased from NEPP 
+Processor Enclave teleconference 1/21/2022)
+– COTS devices are not designed for SEL tolerance or immunity. Limited latch-up 
+mitigation is implemented to protect against terrestrial concerns like power supply-over 
+voltage or ESD. High energy particles in space cause SEL by depositing charge 
+vertically in a transistor → a different concern. (T. Wilcox, GSFC)
+Wire bonded Lead Frame Exemplar
+x-y axis
+z axis
+
+--- PAGINA PDF 22 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Single Event Latch-Up (2/3)
+• How do we identify if a HPC device is susceptible to SEL?
+– The classical first question is “is it CMOS?”  Probably yes for HPC!
+– Is it on an isolated process e.g. SOI?  Possibly, but not likely
+– Is any data published on the part or process?  Hit or miss at best
+• Where SEL data is published, care must be taken to evaluate both for 
+applicability and against reliability and availability requirements. 
+– The classic approach is to prove immunity with very high SEL LET threshold
+– In many cases, immunity of an underlying technology is used in lieu of test data for 
+COTS (e.g., bipolar-only or dielectrically isolated processes).
+• Shielding in a space environment is practical to reduce TID and DDD. It 
+can reduce SEE rates, but most effectively for lower energy particles. 
+– High-energy galactic cosmic rays most capable of causing SEL are minimally affected 
+– Numerous second-order concerns abound here. Additional secondary particles can 
+also be cascaded if the shield is close to the die or cause dose enhancement effects*.
+22
+S. H. Crain, J. E. Mazur, R. B. Katz, R. Koga, M. D. Looper and K. R. Lorentzen, "Analog and digital single-event effects experiments in 
+space," in IEEE Transactions on Nuclear Science, vol. 48, no. 6, pp. 1841-1848, Dec. 2001, doi: 10.1109/23.983140.
+
+--- PAGINA PDF 23 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Single Event Latch-Up (3/3)
+• Often, testing is the only way to assure an SEL requirement is met 
+for COTS high-performance computing devices.
+– Our goal is to prove no SEL; our secondary objective is to identify how often, how to 
+recover, and how destructive the effect is.
+• We have test standards and guidance to help, but often the 
+implementation of each test is unique
+– ASTM F1192, JESD57A, JESD234
+– The “A” in MEAL is Application!
+• Complete coverage of the die is challenging or impossible
+– Typical requirements are 107 particles per cm2 to prove immunity – about 10um2 per 
+particle on average, for devices that feature upwards of 100 billion transistors
+23
+
+--- PAGINA PDF 24 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Non-Destructive Single Event Effects
+• Single-Event Upsets: a non-transient change of state in 
+a memory structure
+• Single-Event Transients: a brief analog or digital “blip” 
+on a circuit element
+• Single-Event Functional Interrupts: a recoverable loss 
+of application functionality
+• SEU Cross Sections (σseu) represent 
+the effective target area for given SEE 
+error type, usually in cm2 or cm2/bit.
+• Key high-level metrics are LET threshold and saturated 
+cross-section to begin estimating rates
+fluence
+errors
+seu
+#=σ
+Adapted from Edward Wyrwas’ presentation from the 12th Space Computing Conference in Pasadena, CA. July 30 – August 1, 2019. STI DAA number 20190028690 
+24
+
+--- PAGINA PDF 25 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Total Ionizing Dose
+• Long-term degradation (or failure) effect
+• Can be life-limiting for HPC devices, but not usually 
+performance-limiting day-to-day
+• In complimentary metal-oxide semiconductor 
+(CMOS) devices, like most HPC devices, ionizing 
+radiation results in charge traps and interface traps 
+that cause the threshold voltage of the transistor to 
+shift left, effectively turning on N-type and turning off 
+P-type transistors. 
+• Individual circuit blocks generally increase leakage 
+current prior to functional failure; susceptibility can 
+vary tremendously based on transistor geometry
+• Dose is measured in rad or gray
+25
+
+--- PAGINA PDF 26 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Common Types of HPC Radiation Tests
+Total Ionizing Dose (TID) Testing
+• Frequently performed with gamma rays, x-rays, and protons. 
+• Characterizes long-term parametric degradation or functional failure of a device. 
+• Determines whether dose-rate sensitivity exists.
+• Common; owned by government labs, universities, and private radiation testing companies
+Heavy-ion SEE Testing
+• Fully explore effects at different energy levels (cross section vs. LET)
+• If effects are observed below 20 MeV•cm2/mg, proton testing may be necessary
+• Typically the ideal test for SEU, SET, SEFI, SEL, SEGR, SEB
+• Limited medium-energy cyclotron facilities available
+Proton SEE Testing
+• High-energy (~200 MeV) often used for SEE testing -- secondary products with moderate LET are 
+created when primary protons interact with semiconductors and packaging materials.
+• Ideal for testing full systems, boards, or boxes, but with tradeoffs 
+• Limited information provided for SEL or SEGR/SEB
+• Primarily provided by medical facilities
+Pulsed Laser Testing
+• A useful analog for heavy-ion testing; offers spatial and temporal resolution of errors 
+• Challenging to generate on-orbit rate estimates, but convenient for parts screening and design or 
+mitigation evaluations
+Adapted from Edward Wyrwas’ presentation from the 12th Space Computing Conference in Pasadena, CA. July 30 – August 1, 2019. STI DAA number 20190028690 
+26
+
+--- PAGINA PDF 27 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Pros and Cons of SEE Test Selection
+Heavy-ion testing
+• Generally requires decapsulation, die thinning, and thermal relief (for HPC components)
+• Large selection of LET, sufficient ion range at most facilities (hundreds of um), broad die coverage
+• Best for estimating on-orbit performance accurately
+Proton testing
+• Broad beam (~400cm2) or collimated ~1-2cm2; test whole boards or piece parts
+• Dependent on indirect ionization; a spectrum of LET are generated for each test 
+• Secondaries up to 15 MeVcm2/mg possible, but limited amount at the high LET limits effectiveness for 
+testing destructive SEE requirements
+• High accumulated dose, activation of test setup – especially metal heat sinks
+• Often the simplest test preparation – place board in front of beam, hit go. But, the range of protons 
+can work against you, striking more of your test setup than you expected!
+Pulsed Laser Testing
+• Requires decapsulation, thinning and polishing
+• Hard to draw direct comparisons to on-orbit performance
+• Very focused energy deposition (1 micron), but spatial and temporal localization of events
+• Equipment is commercially obtainable
+Adapted from Edward Wyrwas’ presentation from the 12th Space Computing Conference in Pasadena, CA. July 30 – August 1, 2019. STI DAA number 20190028690 
+27
+
+--- PAGINA PDF 28 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Coverage of Secondaries versus Heavy Ions
+Heavy Ions
+The takeaway here: 
+ Protons must induce secondary fission 
+reactions within the materials in the die 
+to cause a proper upset. For the same 
+probability or quantity of upsets, it takes 
+much fewer heavy ions than protons.
+ While heavy ions cost more, they take 
+less time to cause an error to occur. In 
+testing, we want to induce errors – and 
+capture that electrical behavior. 
+Raymond L. Ladbury at the Single Event Effects (SEE) Symposium - Military and Aerospace Programmable Logic Devices (MAPLD) Workshop, La Jolla, CA, May 22-25, 2017
+28
+
+--- PAGINA PDF 29 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Another Perspective on Interactions
+Prime Proton SEE Mechanism
+Reaction of protons interacting with semiconductor materials causes secondary recoil ions – Indirect Ionization
+Secondaries have various LETs and penetration ranges
+Courtesy Ladbury/NASA
+29
+
+--- PAGINA PDF 30 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Representative Facility Photos
+X-ray
+ Heavy Ions
+Neutrons
+Protons
+• Not shown: Electrons, Gamma, Pulsed Laser
+Adapted from Edward Wyrwas’ presentation from the 12th Space Computing Conference in Pasadena, CA. July 30 – August 1, 2019. STI DAA number 20190028690 
+30
+
+--- PAGINA PDF 31 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+No Human Presence While the Beam is Engaged
+The test operators 
+sit 15 ft to 300 ft 
+away from the DUT
+Adapted from Edward Wyrwas’ presentation from the 12th Space Computing Conference in Pasadena, CA. July 30 – August 1, 2019. STI DAA number 20190028690 
+31
+
+--- PAGINA PDF 32 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+What About Software?
+• A single board computer (SBC) has firmware, a boot loader, operating system, drivers, 
+libraries, etc.
+– We try to control as many variables as possible; cross compiling code from a single code base 
+or version-locking libraries and other supporting software
+• While the usual “test as you fly” concept is most applicable to simple devices (i.e., 
+operational amplifier), the more complex the device (i.e., GPU), the more challenging it 
+becomes to design an appropriate test design (and build a reliable tester).
+– This is due to the accelerated nature of the SEE test versus space particle rates – actual flight 
+designs might not be appropriate to gather sufficient information, nor to cover sufficient 
+application state-space, nor to statistically cover all the functional blocks during short beam test 
+run times.
+– It is important to note that due to the huge number of application options that modern complex 
+devices are capable of, most SEU testing is geared to provide application-specific information.
+– Interpreting this data is challenging, at best, for other applications.
+• “Test as you fly” may not be possible with higher complexity devices; Therefore, we 
+often focus on simpler IP blocks with simple algorithms for HPC evaluations. When “test 
+as you fly” becomes necessary, the test setup and support equipment are not trivial.
+32
+
+--- PAGINA PDF 33 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Electrical Monitoring
+• In addition to monitoring the outbound data from the device 
+(e.g., accuracy, error, results), we try to monitor electrical and 
+thermal readings from a variety of points within the test system 
+Adapted from Edward Wyrwas’ presentation from the NEPP Electronic Technology Workshop (ETW), Greenbelt, MD, June 15-18, 2020
+33
+
+--- PAGINA PDF 34 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Thermal Control
+• Thermal control is a challenge in both directions – hot or cold.
+• SEL testing is performed at worst-case hot temperatures, often 
+requiring active heating for a low-power device
+• COTS HPC devices often include heat sinks, heat spreaders, 
+and/or fans. Removing these to facilitate radiation testing 
+necessitates additional cooling, not heating!
+– Likely need to cool from back side of PCB
+– Testing in vacuum limits even passive cooling
+– Spare parts are often required to fine tune the cooling solutions.  
+– A fine-tuned system also allows for testing at the HPC’s rated 
+temperature limit; decreasing the cooling until the desired 
+temperature is achieved
+Conduction cooling system with swappable adapter plates
+)
+Adapted from Edward Wyrwas’ presentation from the NEPP Electronic Technology Workshop (ETW), Greenbelt, MD, June 15-18, 2020
+34
+
+--- PAGINA PDF 35 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Material Degradation
+Pre-irradiation
+ Post-irradiation
+• Materials can degrade, weaken or fail due to ionizing and non-ionizing radiation
+• Transparent materials darken (e.g. windows, optics, lenses, photonics) 
+• Materials become brittle (e.g. wire insulation)
+• Materials absorb charge (e.g. floating metal -> ESD risk)
+• Examples shown are glass discs from the ESA RADGLASS study
+High resolution images and reuse permission received from Ilias Manolis of ESA (Netherlands) and the ESA RADGLASS study. 
+35
+
+--- PAGINA PDF 36 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Dose Correlation
+• Mid and high energy protons can also be used to impart TID upon a 
+collimated target when the supporting circuitry requires the dose to be 
+isolated to a small area of the test vehicle. This is challenging with gamma 
+ray irradiators. (The changes between the rows are noted)
+– 1×1011 protons/cm2 at 200 MeV would deposit ~600 rad(Si) of dose
+– 1×1010 protons/cm2 at 200 MeV would deposit ~450 rad(Si) of dose
+– 1×1010 protons/cm2 at 63 MeV  would deposit ~2000 rad(Si) of dose
+• Dose rate is critical to TID irradiation; with gamma irradiation this is controlled 
+by distance to the source and thickness of any Pb/Al shielding. 
+– TID testing can take a range of time -- dose rates of 50-300rad(Si)/s for CMOS 
+and Bipolar, and <.01rad(Si)/s for bipolar are standard
+Adapted from Edward Wyrwas’ ISSI IS46DR16640B-25DBA25 DDR2 SDRAM Total Ionizing Dose Characterization Test Report. STI DAA number 20190001289
+36
+
+--- PAGINA PDF 37 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Particle Range
+• Terrestrial heavy-ion sources have limited range, but HPC devices are often thick and flip-chip.
+• When die are thinned, we reduce the amount of material to which the particles travel through before 
+they reach the sensitive volume
+• Energy deposition and material stack-up calculations are performed using simulation software to 
+determine the ranges of heavy ion particle types to see if they will reach the intended volume. 
+– NASA Space Radiation Laboratory’s (NSRL) range vs LET table below
+37
+
+--- PAGINA PDF 38 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Limited Range Constraints
+• Texas A&M University’s Cyclotron – “Air testing”. 
+We read this chart type from right to left:
+1. Beam leaves window, 
+2. then a point 3 cm in air is reached. 
+3. The particle deposits the most energy as 
+it comes to a stop hence the Bragg peak.
+Image reuse permission received from Dr. Henry L. Clark, Ph.D. Cyclotron Institute. Texas A&M University College Station, TX 77843. 
+38
+
+--- PAGINA PDF 39 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Spallation Concerns
+• With accelerated particle testing there is scattering that happens along the perimeter 
+of the beam outline due to the collimator and from the collisions of the particles on the 
+metallization. This is a significant issue for proton testing. 
+• Instances of spallation increase as you go up in energy.  It can be caused by species 
+dependent features close to sensitive volume such as tungsten plugs. 
+Image courtesy of NEPP 
+39
+
+--- PAGINA PDF 40 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Test Flow & Fault Tree
+• These qualitative bins are how we attempt to classify error signatures 
+recorded during testing. 
+• A disturbance is not the same as an upset. There are recoverable errors, 
+much like there are unrecoverable ones. 40
+Adapted from Edward Wyrwas’ presentation from the 12th Space Computing Conference in Pasadena, CA. July 30 – August 1, 2019. STI DAA number 20190028690 
+
+
+--- PAGINA PDF 41 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Identifying Patterns to Create 
+Mitigation Solutions
+• If we can identify an electrical behavior which indicates particle collisions are 
+happening, then we can abort a computational routine to save the science 
+payload or isolate the component in question. 
+– For the NVIDIA TX2, we can simply monitor current consumption against a 
+threshold. When that threshold is exceeded, we disregard the current 
+computation, reset the system to prevent bad data, and avoid a system crash. 
+Adapted from Edward Wyrwas’ presentation from the 12th Space Computing Conference in Pasadena, CA. July 30 – August 1, 2019. STI DAA number 20190028690 
+41
+
+--- PAGINA PDF 42 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Proton Test Data Analysis
+• We record:
+– the elapsed time (seconds) 
+– at a given flux (known particles per 
+second per unit area) 
+– to determine the fluence (total quantity of 
+particles delivered during the irradiation 
+time per unit area)
+• We simply count the errors and do some 
+algebra – we plot cross section of each test 
+trial. If we tested at different energies, a 
+polynomial would emerge. 
+• We try to delineate between failure types –
+some failures may not be attributed to the 
+component we are actually testing and are 
+otherwise due to peripheral circuitry and bus 
+controllers. 
+• If we are able to evaluate using different 
+energy levels, then we can statistically plot the 
+data to a Weibull or Bendel function and 
+extract the statistical parameters.
+• We than use Monte Carlo simulation software 
+to do the mathematical correlation between 
+test conditions and orbit conditions.
+NVIDIA TX2i 200MeV Proton Data
+Reuse permission from Sarah Katz (Sarah.Katz@jhuapl.edu), Johns Hopkins Applied Physics Laboratory. NVIDIA Jetson TX2i Radiation Report. Single Event Effects Symposium 2020
+42
+
+--- PAGINA PDF 43 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Correlation from Test to Environment
+• We use tools, such as CREME-96 hosted 
+by Vanderbilt, to predict environmental 
+conditions based on modelled data, and 
+estimate single-event effect rate by 
+incorporating experimental results from 
+ground-based testing.
+• These tools leverage historical 
+environmental data to predict single event 
+effects rates for various orbital inclinations 
+and altitudes 
+• In many cases, we consider four scenarios 
+which bound the worst cases of solar 
+proton events (SPE) and galactic cosmic 
+rays (GCR) [tabulated on the right] and use 
+a shielding thickness of 100mil of Al for 
+generic electronics boxes
+1
+2
+3
+4
+https://creme.isde.vanderbilt.edu/
+43
+
+--- PAGINA PDF 44 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Radiation Transport Modelling
+• Top-level dose requirements are often generically 
+determined with a dose-depth curve applicable to 
+uniform sphere. 
+• For critical systems, sensitive components, or when 
+operating in high-dose environments, a radiation 
+transport analysis is often performed.
+• EMPC NOVICE is a radiation transport code used at 
+GSFC that allows complex shielding geometry to be 
+accounted for through the use of CAD file input
+• Total ionizing dose (TID) and Total Non-Ionizing 
+Dose (TNID) can be fine-tuned for specific points 
+within instruments and spacecraft
+• Often, over-conservatism can be reduced with 
+judicious use of this technique
+ Hubble Space 
+Telescope NOVICE 
+CAD model
+Adapted from M. Xapsos. How Long can the Hubble Space Telescope Operate Reliably? – A Total Dose Perspective. STI Document number 20160005759 and 
+How Long Can the Hubble Space Telescope Operate Reliably?. STI Document number 20140017805.
+44
+
+--- PAGINA PDF 45 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+The Difficulty with Models
+• Models may not be fully applicable for a given device architecture. They 
+can be used to approximate. 
+• For HPC, hard to isolate architectural issues from process; radiation 
+models are often process-oriented
+• Models only work with what we know; HPC devices are deeply complex 
+with limited public information
+• Every NASA spacecraft is new technology. We build prototypes, but the 
+flight design is often one of a kind. When technologies have been used 
+previously, we can make some early assumptions based on similarity. 
+• There is always uncertainty:
+– Our radiation cross section results are only a slice of statistics – the 
+radiation engineer must consider the uncertainty and bound risk
+– Each piece of the circuit hierarchy and system topology come with their 
+own error bars and confidence levels
+– Availability/Survivability/Reliability estimates come with error bars
+– There is never one singular value that represents the reliability of a 
+device indefinitely.
+45
+
+--- PAGINA PDF 46 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+CRÈME-96 for Survivability
+• The following is a rather crude approximation of this statistical methodology:
+– When devices have quantifiable components, 
+where we fully understand the physical 
+relationship between transistor layout and the 
+bytes they affect, we can determine an on-orbit 
+single event effects rate per bit. 
+– When we are testing a black-box component we 
+may crudely consider the entire sensitive 
+volume as 1 bit. 
+– For Bendel parameters 1.51 and 2.81, we 
+achieve the following results from CRÈME-96: 
+Survivability at Quantity of days 
+(Quarter Breakdown shown)
+SEE/bit/
+day
+# of bits /
+device
+SEE/dev/
+day
+SEE/bit/
+Total
+SEE/dev/
+Total 1 2 3 4 5 6 7 8 9 10 11 12
+Solar Min 2.27E-03 1 2.27E-03 95% 90% 86% 81% 77% 73% 70% 66% 63% 60% 57% 54%
+Solar Max 8.12E-04 1 8.12E-04 98% 96% 95% 93% 91% 89% 88% 86% 85% 83% 82% 80%
+Worst Week 2.42483 1 2.42483 1.82E+01 1.82E+01 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%
+Worst Day 1.01E+01 1 1.01E+01 7.55E+00 7.55E+00 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%
+Worst 5 minutes 3.70E+01 1 3.70E+01 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%
+𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺= 𝐞𝐞−𝐫𝐫𝐫𝐫𝐫𝐫𝐞𝐞𝐩𝐩𝐞𝐞𝐫𝐫𝐝𝐝𝐫𝐫𝐝𝐝∗𝑺𝑺𝑺𝑺𝒕𝒕𝒕𝒕𝑺𝑺𝒊𝒊𝒅𝒅𝑺𝑺𝑺𝑺𝒅𝒅
+46
+
+--- PAGINA PDF 47 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+But Aren’t There Rules of Thumb?
+• There are many variations in manufacturing
+– Equipment calibration, room conditions, mask set age, foundry staff
+– Substrate changes – Bulk Si, Silicon on Insulator (SOI)
+– Conductor changes – Al, Cu, Ag, Au, W, Alloys
+– Dielectric changes – SiO2, low-k (e.g., polyamide, air), high-k (i.e., hafnium based) 
+– Gate Geometry changes – planar, fin, gate all around
+– Lithography sizes scaling smaller
+• When we test parts, we try to procure enough components to achieve a 
+small statistical bin to capture the smallest amount of variance – preferably 
+to an individual Lot Date Code (LDC). 
+• For every example of a ‘rule’, someone in the radiation effects community 
+can offer a counter example. There are far too many to list. 
+• Because of all these factors, there are No Rules of Thumb. 
+– However, we have seen some trends between generations of specific (AKA “the 
+same”) architectures when manufactures make singular process changes (e.g., shrink 
+pattern by 30%, lower the voltage by 10%, same design but two different substrates)
+47
+
+--- PAGINA PDF 48 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Trends and Opinions, Not Rules
+• Bipolar and Analog devices have known degradation behavior and tend to be 
+more susceptible to TID effects than modern, bulk, scaled CMOS devices; 
+scaling of CMOS transistors has generally helped with TID response though 
+CMOS does have Latchup and some total dose concerns
+• Highly-scaled CMOS devices show increased sensitivity to SEE due to transistor 
+threshold voltages and cell sizes being smaller
+– Was true until transistor geometry changed (planar vs fin vs column)
+• There is not a voltage sweet spot for current consumption, supply voltages, or 
+bias voltages – nor can we compare two different manufacturers in a single 
+device category
+• When electrical derating isn’t possible because of the complexity of the device 
+type (i.e., microprocessor), testing must evaluate the device as close to flight-
+like as possible from a standpoint of computational operation and memory 
+access patterns
+– To assure the ‘state machine’ has been thoroughly explored
+– To assure we can see what pieces of the software workflow or program routine 
+can successfully complete, can identify or capture errors, and handle interrupts 
+– So that we can put together a plan to mitigate some, or all the negative effects 
+imparted by the radiation
+48
+
+--- PAGINA PDF 49 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Similar Experiences
+• Ceramic capacitors found on many High-Performance Computing (HPC) 
+devices
+• Ceramic capacitor packages used on flight hardware are rarely smaller than 
+0805 (SI) / 2012 (metric) sizes (2.0mm x 1.2mm) due to their dense plates 
+and high capacitances
+• Radiation Induced Charge Loss
+– During radiation, the capacitor leakage resistance decreases. Therefore, the time 
+constant of the circuit will also decrease. If the capacitor is in a critical timing 
+circuit, the timing circuit may produce errors that affect system performance.
+• Radiation Induced Conductance
+– The amount of radiation-induced conductivity (RIC) can vary widely with dielectric 
+material type. 
+– For a dielectric (insulator) the band gap is large relative to room temperature 
+thermal energies, the valence band is full, and the conduction band is empty. 
+This leaves no electrons available to participate in the conduction process. 
+However, in the presence of ionizing radiation where the energy from the 
+radiation that can be imparted to an electron exceeds that of the band gap, an 
+electron may transition to the conduction band and electrical conduction will take 
+place. This can cause a catastrophic short circuit depending on the 
+electrode spacing within the component. 
+Adapted from Edward Wyrwas’ Body of Knowledge for Graphics Processing Units (GPUs). STI Document number 20180006915.
+49
+
+--- PAGINA PDF 50 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Old Trends, Far From Rules
+• Silicon substrate changes: An evaluation of 45nm SOI multi-core processors has 
+been conducted by university researchers from France. They compare their 
+work to 45nm bulk silicon multi-core processors. In these tests, a 3-5X 
+improvement to SEE immunity is seen when switching from bulk silicon to silicon 
+on insulator for the same technology node.
+– Pabo Ramos, Vanessa Vargas, M. Baylac, F. Villa, S. Rey, et al.. Evaluating the SEE sensitivity of a 45nm SOI 
+Multi-core Processor due to 14 MeV Neutrons. IEEE Transactions on Nuclear Science, Institute of Electrical and 
+Electronics Engineers, 2016, 63 (4), pp.2193 - 2200. <10.1109/TNS.2016.2537643>. <hal-01280648>
+– S.S. Stolt and E. Normand, “A Multicore Server SEE Cross Section Model,” IEEE Trans. Nucl. Sci., vol. 59, pp. 
+2803–2810, Dec. 2012.
+• Voltage scaling accompanied with feature size scaling reduces the critical 
+charge required to flip a bit. This allows even lower-energy particles to cause 
+soft errors. Due to these reasons, soft-error rate at 16nm is expected to be more 
+than 100X than that at 180nm 
+– S. Mittal et al., “A Survey of Techniques for Modeling and Improving Reliability of Computing Systems,” IEEE TPDS, 
+2015.
+• Zhang et al. characterized soft error vulnerabilities across the stacked layers 
+under 3D integration technology. They show that the outer dies can shield more 
+than 90% particle strikes for the inner dies, which leads to a heterogeneous 
+error rate across layers in a 3D chip. 
+– W. Zhang et al., “Microarchitecture soft error vulnerability characterization and mitigation under 3D integration 
+technology,” in International Symposium on Microarchitecture, 2008, pp. 435–446.
+50
+
+--- PAGINA PDF 51 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Understanding Risk
+• A satellite has independent systems. The requirement of Avionics 
+systems is to function and survive during the mission. It isn’t checking in 
+with the science payload and won’t reset these systems ‘along the way’.
+– Paraphrased from NEPP Processor Enclave teleconference 1/21/2022
+• Historical data may not be related and therefore should not be considered 
+as providing radiation assurance. This includes previous testing with 
+neutrons, model correlations from different orbits, components with 
+slightly different architectures, component generations with different 
+lithography nodes.
+• Extensive testing should always be performed to reduce risk.
+• Questions should arise from testing:
+– Will the component meet its primary mission objective, aka will it still be functioning when 
+it reaches its first rendezvous to do its activity? Are we able to fly powered off to extend 
+survivability?
+– Will redundancy improve the survivability of the system?
+– What did we determine from the test results? Did we learn anything new? Are we able to 
+quantify the unknowns?
+– Are we able to correlate the device’s intended usage in a flight system to how we 
+performed our test? (i.e., software applications and memory utilization)
+51
+
+--- PAGINA PDF 52 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+What Did We Learn?
+• No rules of thumb in radiation effects
+– There are too many variables and manufacturing 
+variations to have one standard model at any 
+granularity in our abstraction diagrams
+– Through a campaign of lot-based testing, we can 
+characterize the radiation tolerance of high-
+performance computing (HPC) and artificial 
+intelligence (AI) devices with a high degree of 
+confidence.
+– We use best practices and the knowledge of 
+our entire radiation effects community to reduce
+risk associated with flying SOTA computational 
+devices which subsequently improves mission 
+assurance.
+52
+
+--- PAGINA PDF 53 ---
+Radiation Effects and Analysis Lessons: a Scientist’s Field Instruction to Explain Radiation Testing. March 2022 Version. (REAL SciFI ExpRT 22). 
+The NASA Electronic Parts and Packaging (NEPP) Program. Edward Wyrwas (SSAI, Inc.). STI Number 20220002512
+Fin
+• Acknowledgements:
+– Peter Majewicz (GSFC, NEPP)
+– Jonny Pellish (GSFC, NEPP)
+– Michael Campola (GSFC, 561)
+– Ray Ladbury (GSFC, 561)
+– Ted Wilcox (GSFC, 561)
+– Megan Casey (GSFC, 561)
+– Jean-Marie Lauenstein (GSFC, 561)
+– Jason Osheroff (GSFC, 561)
+– Landen Ryder (GSFC, 561)
+– Alyson Topper (GSFC 561, SSAI)
+– Ken LaBel (GSFC 561, SSAI)
+– Martha Obryan (GSFC 561, SSAI)
+– Mike Xapsos (GSFC 561)
+– Steve Guertin (JPL, NEPP)
+– Doug Sheldon (JPL, NEPP)
+– Glen Steele (JSC)
+– Richard Alena (ARC)
+– Mike Lowry (ARC)
+– Eli Kawam (Microchip Technology)
+– Ian Troxel (Troxel Aerospace)
+– Mitra Yoonessi 
+(Raytheon Technologies)
+– Eric Miller (The Boeing Company)
+• This work was sponsored by:
+• NASA Electronic Parts and Packaging (NEPP) Program
+• GSFC Radiation Effects and Analysis Group (REAG), Code 561
+53

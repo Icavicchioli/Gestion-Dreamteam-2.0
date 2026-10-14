@@ -1,0 +1,161 @@
+Copia de lectura obtenida mediante herramienta web. No es el HTML original.
+Consulta: 2026-10-14
+URL: https://www.jpl.nasa.gov/news/nasas-voyager-1-resumes-sending-engineering-updates-to-earth/
+
+NASA’s Voyager 1 Resumes Sending Engineering Updates to Earth | NASA Jet Propulsion Laboratory (JPL) (https://www.jpl.nasa.gov/news/nasas-voyager-1-resumes-sending-engineering-updates-to-earth/)
+citeturn22view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.jpl.nasa.gov/news/nasas-voyager-1-resumes-sending-engineering-updates-to-earth/","lineno":7}); Total lines: 238
+L0: Skip to main content
+L1: 
+L2: cite0†Image: JPL Logo L3: 
+L4: cite1†Solar System L5: 
+L6: .3 min read
+L7: # NASA’s Voyager 1 Resumes Sending Engineering Updates to Earth
+L8: 
+L9: April 22, 2024
+L10: 
+L11: NASA’s Voyager 1 spacecraft is depicted in this artist’s concept traveling through interstellar space, or the space between stars, which it entered in 2012.
+L12: 
+L13: Credit: NASA/JPL-Caltech
+L14: 
+L15: After some inventive sleuthing, the mission team can — for the first time in five months — check the health and status of the most distant human-made object in existence.
+L16: For the first time since cite2†November†blogs.nasa.gov , NASA’s Voyager 1 spacecraft is returning usable data about the health and status of its onboard engineering systems. The next step is to enable the spacecraft to begin returning science data again. The probe and its twin, Voyager 2, are the only spacecraft to ever fly in interstellar space (the space between stars).
+L17: Voyager 1 stopped sending readable science and engineering data back to Earth on Nov. 14, 2023, even though mission controllers could tell the spacecraft was still receiving their commands and otherwise operating normally. In March, the Voyager engineering team at NASA’s Jet Propulsion Laboratory in Southern California confirmed that the issue was tied to one of the spacecraft’s three onboard computers, called the flight data subsystem (FDS).
+L18: The FDS is responsible for packaging the science and engineering data before it’s sent to Earth.
+L19: After receiving data about the health and status of Voyager 1 for the first time in five months, members of the Voyager flight team celebrate in a conference room at NASA’s Jet Propulsion Laboratory on April 20.
+L20: 
+L21: Credit: NASA/JPL-Caltech
+L22: 
+L23: cite3†Full Image Details L24: The cite4†team discovered†blogs.nasa.gov that a single chip responsible for storing a portion of the FDS memory — including some of the FDS computer’s software code — isn’t working. The loss of that code rendered the science and engineering data unusable. Unable to repair the chip, the team decided to place the affected code elsewhere in the FDS memory. But no single location is large enough to hold the section of code in its entirety.
+L25: So they devised a plan to divide the affected code into sections and store those sections in different places in the FDS. To make this plan work, they also needed to adjust those code sections to ensure, for example, that they all still function as a whole. Any references to the location of that code in other parts of the FDS memory needed to be updated as well.
+L26: The team started by singling out the code responsible for packaging the spacecraft’s engineering data. They sent it to its new location in the FDS memory on April 18. A radio signal takes about 22 ½ hours to reach Voyager 1, which is over 15 billion miles (24 billion kilometers) from Earth, and another 22 ½ hours for a signal to come back to Earth.
+L27: When the mission flight team heard back from the spacecraft on April 20, they saw that the modification worked: For the first time in five months, they have been able to check the health and status of the spacecraft.
+L28: Get the Latest News from the Final Frontier
+L29: 
+L30: cite5†SUBSCRIBE TO THE JPL NEWSLETTER L31: 
+L32: During the coming weeks, the team will relocate and adjust the other affected portions of the FDS software. These include the portions that will start returning science data.
+L33: Voyager 2 continues to operate normally. Launched cite6†over 46 years ago†voyager.jpl.nasa.gov , the twin Voyager spacecraft are the longest-running and most distant spacecraft in history. Before the start of their interstellar exploration, both probes flew by Saturn and Jupiter, and Voyager 2 flew by Uranus and Neptune.
+L34: 
+L35: Caltech in Pasadena, California, manages JPL for NASA.
+L36: ## Media Contacts
+L37: 
+L38: Calla Cofield
+L39: 
+L40: Jet Propulsion Laboratory, Pasadena, Calif.
+L41: 
+L42: 626-808-2469
+L43: 
+L44: calla.e.cofield@jpl.nasa.gov
+L45: 
+L46: 2024-046
+L47: ## Related News
+L48: 
+L49: cite7†Mars.NASA’s Perseverance Rover Watches Earth Vanish Behind Martian Moon L50: 
+L51: cite8†Solar System.NASA Engineers Help Prolong Voyager 2’s Science Mission L52: 
+L53: cite9†Solar System.NASA’s Juno Takes Temperature of Jupiter’s Fiery Moon Io L54: 
+L55: cite10†Solar System.NASA’s Psyche Mission Delivers Mars Flyby Data, Time-lapse Video L56: 
+L57: cite11†Solar System.NASA Testing Advanced Capabilities for Moon, Mars Rovers L58: 
+L59: cite12†Solar System.NASA’s Psyche Mission Aces Mars Flyby, Targets Metal-Rich Asteroid L60: cite13†Mars.NASA’s Perseverance Rover Snaps Selfie in Mars’ Western Frontier L61: 
+L62: cite14†Mars.NASA’s Perseverance, Curiosity Panoramas Capture Two Sides of Mars L63: 
+L64: cite15†Mars.NASA’s Curiosity Finds Organic Molecules Never Seen Before on Mars L65: 
+L66: cite16†Solar System.NASA Shuts Off Instrument on Voyager 1 to Keep Spacecraft Operating L67: 
+L68: About JPL
+L69: 
+L70: cite17†Who We Are L71: 
+L72: cite18†Directors L73: 
+L74: cite19†Careers†www.jpl.jobs L75: 
+L76: cite20†Internships L77: 
+L78: cite21†The JPL Story L79: 
+L80: cite22†JPL Achievements L81: 
+L82: cite23†Documentary Series L83: 
+L84: cite24†JPL Annual Report L85: cite25†Executive Council L86: 
+L87: Missions
+L88: 
+L89: cite26†Current L90: 
+L91: cite27†Past L92: 
+L93: cite28†Future L94: 
+L95: cite29†All L96: 
+L97: News
+L98: 
+L99: cite30†All L100: 
+L101: cite31†Earth L102: 
+L103: cite32†Solar System L104: 
+L105: cite33†Stars and Galaxies L106: 
+L107: cite34†Eyes on the News L108: 
+L109: cite35†Subscribe to JPL News L110: 
+L111: Galleries
+L112: 
+L113: cite36†Images L114: 
+L115: cite37†Videos L116: 
+L117: cite38†Audio L118: 
+L119: cite39†Podcasts L120: 
+L121: cite40†Apps L122: 
+L123: cite41†Visions of the Future L124: 
+L125: cite42†Slice of History L126: 
+L127: cite43†Robotics at JPL L128: 
+L129: Events
+L130: 
+L131: cite44†Lecture Series L132: 
+L133: cite45†Speakers Bureau L134: 
+L135: cite46†Calendar L136: 
+L137: cite47†Explore JPL L138: 
+L139: Visit
+L140: 
+L141: cite48†Public Tours L142: 
+L143: cite49†Virtual Tour L144: 
+L145: cite50†Directions and Maps L146: cite47†Explore JPL L147: 
+L148: Topics
+L149: 
+L150: cite51†JPL Life L151: 
+L152: cite1†Solar System L153: 
+L154: cite52†Mars L155: 
+L156: cite53†Earth L157: 
+L158: cite54†Climate Change L159: 
+L160: cite55†Exoplanets L161: 
+L162: cite56†Stars and Galaxies L163: 
+L164: cite57†Robotics L165: 
+L166: More
+L167: 
+L168: cite58†Asteroid Watch L169: 
+L170: cite59†NASA's Eyes Visualizations†eyes.nasa.gov L171: 
+L172: cite60†Universe - Internal Newsletter L173: 
+L174: cite61†Social Media L175: 
+L176: cite62†Accessibility at NASA†www.nasa.gov L177: 
+L178: cite63†Contact Us L179: 
+L180: Get the Latest from JPL
+L181: 
+L182: [Input: Enter your email address]
+L183: 
+L184: Follow Us
+L185: 
+L186: JPL is a federally funded research and development center managed for NASA by Caltech.
+L187: More from JPL
+L188: 
+L189: cite19†Careers†www.jpl.jobs cite64†Education cite65†Science & Technology†scienceandtechnology.jpl.nasa.gov cite66†Acquisition†acquisition.jpl.nasa.gov cite67†JPL Store†thejplstore.com L190: 
+L191: cite19†Careers†www.jpl.jobs L192: 
+L193: cite64†Education L194: 
+L195: cite65†Science & Technology†scienceandtechnology.jpl.nasa.gov L196: 
+L197: cite66†Acquisition†acquisition.jpl.nasa.gov L198: 
+L199: cite67†JPL Store†thejplstore.com L200: 
+L201: Related NASA Sites
+L202: 
+L203: cite68†Basics of Spaceflight†solarsystem.nasa.gov L204: 
+L205: cite69†NASA Kids Science - Earth†science.nasa.gov L206: cite70†Earth / Global Climate Change†climate.nasa.gov L207: 
+L208: cite71†Exoplanet Exploration†exoplanets.nasa.gov L209: 
+L210: cite72†Mars Exploration†mars.nasa.gov L211: 
+L212: cite73†Solar System Exploration†solarsystem.nasa.gov L213: 
+L214: cite74†Space Place†spaceplace.nasa.gov L215: 
+L216: cite59†NASA's Eyes Visualization Project†eyes.nasa.gov L217: 
+L218: cite75†Voyager Interstellar Mission†voyager.jpl.nasa.gov L219: 
+L220: cite76†NASA†www.nasa.gov L221: 
+L222: cite77†Caltech†www.caltech.edu L223: 
+L224: cite78†Privacy L225: 
+L226: cite79†Image Policy L227: 
+L228: cite80†FAQ L229: 
+L230: cite81†Feedback L231: 
+L232: Version: v3.2.0 - 38db01a
+L233: Site Managers:Emilee Richardson, Alicia Cermak
+L234: 
+L235: Site Editors:Steve Carney
+L236: 
+L237: CL#:21-0018
+

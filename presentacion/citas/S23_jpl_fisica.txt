@@ -1,0 +1,302 @@
+Appendix Three
+Appendix Three: Space Radiation Effects on
+Integrated Circuits
+Objective:
+To describe the radiation environment in space, the physics of radiation interactions with solids, radiation effects on semiconductor devices, and strategies for with standing the space radiation environment.
+Semiconductor devices are sensitive to many types of radiation
+found in the natural space radiation environment.  For this reason,
+ICs intended for use in this environment often require special design
+and fabrication.  Parts so designed are called radiation-hardened, or rad-hard.  Although
+many design strategies can reduce a part's susceptibility to radiation
+damage, the primary determinants of that susceptibility depend
+upon the fabrication process.  Using special processes and design
+methodologies, certain vendors can produce ICs that meet severe
+radiation environmental stresses.  Rad-hard standard parts have
+specifications that indicate radiation exposure limits beyond which
+they function less efficiently or not at all.  When designing ASICs,
+control over their design provides the opportunity for additional
+radiation-tolerant design approaches.  Military standards such as MIL-M-38510, MIL-I-38535, and MIL-STD-
+883 provide a common language for radiation concepts as well as
+radiation test standards.
+Finding Radiation Information  in This
+Guide
+This guide provides three sections with information about how
+radiation affects ASICs.  For information on how radiation relates to
+ASIC qualification, see the
+management section.  For information on design issues regarding radiation tolerance, see Chapter 4 of the
+design section.  Finally, for background information about the
+physics of radiation and how it
+applies to ICs in general, continue reading this appendix.
+This appendix gives a brief overview of the radiation environment in
+space, the physics of radiation interactions with solids, radiation
+effects on semiconductor devices, and strategies for withstanding the
+space radiation environment.
+The Radiation Environment in Space
+In space, high-energy particles (in the MeV range) can penetrate
+devices and cause temporary upsets and permanent damage.
+Particle sources in space are the cosmic-ray background, solar flare
+events, and trapped particles in
+planetary magnetic fields.  Interactions with spacecraft
+components cause secondary particle emissions as well.  Finally,
+components on the spacecraft itself, such as radioactive heaters,
+radioisotope thermo-elastic generators, and nuclear reactors, can
+emit particles.
+Cosmic rays originate in the outer
+regions of the galaxy and provide our solar system with a constant
+onslaught of particles from all directions.  Of these particles, 85
+percent are protons, 14 percent are alpha particles, and 1 percent are
+heavy ions.  The flux 1 AU from the Earth is about 4/cm-s, with
+energies from almost 0 to over 10 GeV. Hydrogen, helium, carbon
+and oxygen ions are the bulk of the heavy ions, peaking at energies
+around 1 GeV, while ions with atomic numbers above 26 are rarely
+observed.
+Solar flares represent a potential source
+of radiation damage.  These bursts of high-energy charged particles
+originate from certain regions on the sun.  Of these particles, over 90
+percent are protons, and the rest are alpha particles, heavy ions, and
+electrons.  These large, sudden fluxes occur sporadically, at about
+three times per year.  The heaviest doses occur 10 to 12 years apart,
+according to the solar flare cycle.  In a typical burst, the flux peak
+occurs between 2 and 24 hours after its origin and decays over a
+period of a few days.  Heavy ion fluxes from solar flares are usually
+far below the galactic background, but they can be up to four orders
+of magnitude above the background during some flares.
+Planetary magnetic fields tend to trap electrons and protons from
+cosmic and solar sources and, in the case of our planet, man-made
+sources.  The strongest known radiation of this type exists in
+Jupiter's radiation belts.  To illustrate planetary magnetic fields, we
+offer a description of the Earth's magnetic field.
+The solar wind causes the Earth's magnetic trapping region facing the
+sun to be hemispherical, with a radius 10 to 12 times that of Earth,
+and the trapping region extends cylindrically for hundreds of Earth
+radii in the direction away from the sun.  Van
+Allen belts result when the Earth catches electrons and protons
+gyrating around magnetic field lines.  Physicists classify trapped
+electrons into inner and outer zones, divided at a distance of about
+2.5 Earth radii from the Earth's surface.  The flux of electrons in the
+outer zone is about 10 times that of the inner zone, with outer zone
+electron energies of about 7 MeV and inner zone energies of less
+than 5 MeV.  Proton energies vary approximately inversely with
+altitude and can have energies over 400 MeV close to the Earth.  A
+region in the Atlantic Ocean near Brazil contains magnetic field lines
+that are depressed relatively low into the Earth's atmosphere.  This
+region, called the South Atlantic Anomaly
+(SAA), contains the highest concentration of radiation for low-
+Earth orbits.  It is especially rich in proton energies and flux due to
+the protons' inverse relation with altitude.
+The Physics of Radiation Interactions with
+Solids
+Radiation interactions with solids are classified into three groups:
+photon, charged particle, and neutron interactions.  Photons (X-rays
+and gamma rays) interact with atoms through the photoelectric
+effect, Compton scattering, and pair production, and in each case they
+generate energetic free electrons that cause secondary charged
+particle interactions.  Those charged particles, as well as charged
+particles from other sources, interact through Rutherford (Coulombic)
+interaction or, if heavy enough, nuclear interactions.  Neutrons, which
+interact through nuclear interactions, are not a problem in space but
+rather in nuclear explosions and from nuclear reactors.
+Rutherford scattering liberates (ionizes) or excites atomic electrons, while nuclear interactions displace atoms in crystal lattices or
+transmute atoms from one element to another.  These two
+mechanisms change the state of a solid.  Two effects of these
+mechanisms concern the solid state electronics industry: ionization
+and atomic displacement.
+Ionization occurs when an atom loses an excited valence electron to
+the conduction band.  A charged particle ionizes a valence electron
+by liberating that electron and creating lattice vibrations that may
+ionize further atoms.  The electron absence created by this process is
+called a hole.  If an electric field is present, some electrons and holes
+immediately recombine with other atoms or become
+"trapped" in lattice defect sites.  Physicists refer to this
+phenomenon as "initial
+recombination."  While ionization produces electron
+absences, atomic displacement produces lattice defects.
+Atomic displacement occurs when heavy particles interact with
+atomic nuclei, removing them from their lattice sites to new
+(interstitial) sites.  This upsets the periodicity of the lattice, thus
+creating lattice defects.
+Radiation Effects on Semiconductor
+Devices
+In space, radiation effects on semiconductor devices are classified
+into two major types: total ionizing dose (TID) and single-event
+effects (SEE).  TID is the accumulated effect of ionizing radiation over
+the lifetime of a space mission, and SEEs are transient or permanent
+effects due to single particles.  A third type, displacement damage, is
+less important.
+TOTAL IONIZING DOSE
+Ionizing radiation primarily effects the oxide layer of MOS structures,
+silicon dioxide (SiO2).  The oxide is a crystal lattice
+vulnerable to the build-up of injected ions.  Engineers measure TID
+in terms of radiation absorbed dose or rad (1 rad = 100 ergs per
+gram of material).
+Ionizing radiation produces electron-hole pairs in SiO2
+which allow holes to cause further damage.  These pairs form at the
+rate of 7.6 x 1012 pairs/rad(SiO2)-
+cm3.  After initial recombination the gate immediately
+collects the mobile electrons leaving holes to transport to an
+interface, both via the electric field across the transistor.  Holes
+travel to the Si-SiO2 interface if the field is positive.  In
+modern devices this occurs in microseconds, but it can take seconds
+to hours in thicker oxides with low fields.
+These positively-charged holes can cause a catastrophic negative
+shift in the threshold voltage of the device.  A fraction (a fifth or
+more for unhardened devices) of the holes are trapped at the Si-
+SiO2 interface.  If this voltage shift is great enough in the
+right direction, a device which is normally "off" threshold
+can turn "on" (or vice-versa) with 0 volts applied to it.
+Also, the positive charge can invert p-type isolation regions, causing
+leakage currents between adjacent transistors.  These traps remain
+until they are annealed (detrapped) over a
+period of hours to years via effects such as electron tunneling.
+Radiation also induces permanent interface
+traps that can shift threshold voltages.  These interface traps can
+also hinder carrier mobility, which slows device speeds.  These traps
+are energy levels within the Si bandgap near the Si-SiO2
+interface.  Their tendency to form, as with trapped holes, depends upon the
+fabrication process of the device.  These extra energy levels form
+both immediately and over a period of up to a day, causing a net
+negative charge for n-channel metallic oxide semiconductor field
+effect transistors (MOSFETs) and a net positive charge for p-channel
+MOSFETs.  Combined with the positive charge due to hole trapping,
+interface traps offset the hole trapping charge for n-channel devices,
+and the two effects add for p-channel devices.
+A phenomenon known as the rebound
+effect significantly increases the threshold voltage.  Trapped hole
+charge build-ups tend to dominate over interface trap charge build-
+ups initially, but trapped holes anneal over time as the interface
+traps remain.  For n-channel devices, this implies a net positive
+charge that initially reduces the threshold voltage.  But as the net
+positive charge lessens due to annealing of the trapped holes, the
+smaller effect of negative charge from the interface traps begins to
+dominate, thus causing "rebound."  If there are few
+interface traps, rebound may favorably readjust the threshold
+voltages.  Using this mechanism rebound may naturally cure devices
+that previously failed due to trapped hole buildup.  However, if there
+are many interface traps, rebound may also cause the device to fail
+by shifting the threshold voltage from too low to too high.  For p-
+channel devices, the threshold shifts described here move in opposite
+directions.
+TID depends not only upon total trapped charge, but upon the rate of
+incoming particles as well.  The interplay between hole trapping, hole
+annealing and interface trap buildup causes this complex
+dependency.
+SINGLE-EVENT EFFECTS
+Integrated circuits are susceptible to transient upsets (soft errors)
+and permanent damage (hard errors) when single high-energy
+particles impinge on a transistor.  A single charged particle can
+traverse through a transistor's reverse-biased p-n junction and
+create an ionizing path along its line of trajectory.  This causes excess
+charge along that path, the amount of which is called the Linear Energy Transfer (LET).  The electric field
+across the junction is distorted along the ionizing path (this is called
+funneling), which increases the electric
+field's ability to attract the charge to one of the nodes.  Eventually,
+the nodes collect the leftover charge through diffusion.
+Soft Errors
+Transient errors called single-event upsets (SEUs), which are the
+most common manifestations of SEEs.  An SEU is an ion-induced
+change in the logical state of a transistor.  This will happen if the LET
+exceeds the critical charge (QCRIT) required to change the
+logical state of the transistor.  SEUs are temporary since they merely
+cause a logical error--they do not damage the chip.  Once any
+affected registers are reset, the chip will resume correct operation.
+But that error has the potential to propagate and effect critical
+functions, causing any number of permanent problems on board the
+spacecraft.
+Hard-Errors
+SEEs can also cause errors that permanently damage the transistor.
+ASICs are sensitive to single-event latchups, snapbacks, and burnouts (although burnouts have not yet been
+observed in space).  Latchups occur when a p-n-p-n or n-p-n-p CMOS
+transistor is traversed by a high-LET particle.  If enough charge is
+injected into the base of the parasitic bipolars, the normally high-
+impedance state can become low, thereby turning the cell on
+permanently.  Similarly, a snapback permanently turns a cell on, but
+without the p-n-p-n structure.  For a snapback, charge collection in
+the p-well surrounding n-channel transistors produces a drain
+avalanche current and the source-to-drain voltage sustains this
+current.  A single-event burnout (SEB) can occur when a heavy ion
+traverses a high voltage junction, creating a low resistance path
+between the gate and the substrate.  This burns the cell and renders
+it inoperative.
+DISPLACEMENT DAMAGE
+Although rarely a concern for ASICs, high-energy protons--and to
+some extent heavy ions--can displace atoms in a crystal lattice,
+creating energy levels in the forbidden band gap.  This can reduce
+the minority carrier lifetimes and thereby reduce gain by
+introducing new recombination centers.  Typically this only concerns
+solar cells and wide-base bipolar transistors.
+Strategies for Withstanding the Radiation
+Environment
+Everyone involved in designing a spacecraft and its mission should
+be aware of ASIC radiation-tolerance issues.  These designers can
+minimize the effects of radiation by using carefully planned
+trajectories, shields, rad-hard parts, and fault tolerant design
+methods.
+Currently available tools for mission designers determine flight paths
+that minimize radiation exposure.  These tools can ensure that a
+spacecraft spends the least possible amount of time in planetary
+radiation belts.
+Radiation shielding is an integral part of
+any spacecraft design.  Low-energy particles are trivial to shield,
+whereas high-energy particles become much more difficult.  The best
+shields have low atomic number, such as carbon and aluminum.
+Designers often sculpt shields to work in conjunction with the
+spacecraft's inherent shielding, thereby minimizing mass.  Engineers
+design many IC packages with shielding as well.  Shielding can
+significantly reduce TID, but it can rarely affect SEEs since particles
+energetic enough to cause SEEs typically require shields several
+inches thick to be adequately attenuated.  Unfortunately, shielding
+may also enhance TID and SEEs by slowing fast particles into energy
+ranges of SEE or TID sensitivity.
+Given that flight path considerations and shielding cannot completely
+shelter electronics from radiation, designers must use rad-hard and
+fault tolerant subsystems as the final
+recourse.
+Vendors and designers produce rad-hard
+ASICs by hardening the fabrication process and the design.
+Hardening the process deals mainly with hardening the oxide layer,
+since it is the most sensitive to radiation.  Hardening the circuit
+design requires conservative practices such as widening design
+margins for stability, gain, and noise.  Fan-out, slew rate, propagation
+delays, and other circuit parameters must account for worst-case
+radiation effects.
+Fault tolerance includes built-in self tests, redundancy, and other
+methods.  Built-in self tests constantly check faults so that the
+system can implement backup procedures immediately.  Since SEUs
+are not permanent, designers often use redundancy techniques to
+incorporate repetition.  By verifying that successive independent
+repetitions produce the same result, a system can ignore SEU-
+affected operations.  Also, three or more redundant parts may
+"vote" on the correct operation, avoiding the need for
+repetition.  For more information on "Design for Radiation
+Tolerance," see Section Three:
+Chapter 4.
+REFERENCES
+Kerns, Sherra E., and Shafer, B. D. (editors), "The design of
+radiation-hardened ICs for space: a compendium of
+approaches." Proceedings of the IEEE, Vol. 76, No. 11,
+November, 1988.
+McLean, F. Barry, and Oldham, Timothy R., Basic mechanisms of
+radiation effects in electronic materials and devices. U.S. Army
+Laboratory Command, Harry Diamond Laboratories,  Adelphi,
+Maryland,1987.
+Messenger, George C., and Ash, Milton S., The effects of radiation on
+electronic systems. Van Nostrand Reinhold, New York, 1986.
+Pease, Ronald L., Johnston, Allan H., and Azarewicz, Joseph L.,
+"Radiation testing of semiconductor devices for space
+electronics." Proceedings of the IEEE, Vol. 76, No. 11,
+November, 1988.
+Rasmussen, Robert D., "Spacecraft electronics design for
+radiation tolerance." Proceedings of the IEEE, Vol. 76, No.
+11, November, 1988.
+Stassinopulos, E.G., Brown, Dennis B., McNulty, Peter J., Pease, Ronald
+L., Johnston, Allan H., and Azarewicz, Joseph L.,
+"Microelectronics for the Natural Radiation Environments of
+Space." IEEE International Nuclear and Space Radiation
+Effects Conference Short Course, Reno, Nevada, July 16, 1990.
+Now you may jump to:
+the next appendix: Appendix 4:
+"Failure Analysis"
+the Table of Contents
+the Index
+the Acronym list
+the Glossary

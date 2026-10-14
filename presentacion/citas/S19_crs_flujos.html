@@ -1,0 +1,1022 @@
+<!DOCTYPE html><html lang="en-US"> <head><title>Voyager CRS Flux Time History</title><!-- ...................... start of metatag include file for CRS site  ............................................ --><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="Expires" content="0"><meta name="orgcode" content="672"><meta name="rno" content="Adam.Szabo-1"><meta name="content-owner" content="Adam.Szabo-1"><meta name="webmaster" content="Ayris.A.Narock"><meta name="author" lang="en-US" content="Voyager Cosmic Ray Subsystem Team"><meta name="description" content="Provides mission information and cosmic ray data from the Voyager Cosmic Ray Subsystems"><meta name="keywords" content="science, data, space physics, Voyager, cosmic ray, heliopause"><link rel="icon" href="/assets/vgr/images/NASA_Insignia-RGB-2023.png" sizes="any"><!-- ...................... end of metatag include file for CRS site  ............................................ --><link rel="stylesheet" href="assets/uswds/css/vgrcrs.css"><script src="/assets/uswds/js/uswds-init.min.js" defer></script><script id="_fed_an_ua_tag" type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GSFC"></script></head> <div class="usa-overlay"></div> <section class="usa-banner usa-banner--dark" aria-label="Official website of the United States government"> <div class="usa-accordion"> <header class="usa-banner__header usa-header--dark"> <div class="usa-banner__inner"> <div class="grid-col-auto"> <img aria-hidden="true" class="usa-banner__header-flag" src="/assets/uswds/img/us_flag_small.png" alt=""> </div> <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true"> <p class="usa-banner__header-text">
+An official website of the United States government
+</p> <p class="usa-banner__header-action">Here’s how you know</p> </div> <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default"> <span class="usa-banner__button-text">Here’s how you know</span> </button> </div> </header> <div class="usa-banner__content usa-accordion__content" id="gov-banner-default"> <div class="grid-row grid-gap-lg"> <div class="usa-banner__guidance tablet:grid-col-6"> <img class="usa-banner__icon usa-media-block__img" src="/assets/uswds/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true"> <div class="usa-media-block__body"> <p> <strong>Official websites use .gov</strong><br>A
+<strong>.gov</strong> website belongs to an official government
+              organization in the United States.
+</p> </div> </div> <div class="usa-banner__guidance tablet:grid-col-6"> <img class="usa-banner__icon usa-media-block__img" src="/assets/uswds/img/icon-https.svg" role="img" alt="" aria-hidden="true"> <div class="usa-media-block__body"> <p> <strong>Secure .gov websites use HTTPS</strong><br>A
+<strong>lock</strong> (
+<span class="icon-lock"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-description-default" focusable="false"> <title id="banner-lock-title-default">Lock</title> <desc id="banner-lock-description-default">Locked padlock icon</desc> <path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"></path> </svg> </span>) or <strong>https://</strong> means you’ve safely connected to
+              the .gov website. Share sensitive information only on official,
+              secure websites.
+</p> </div> </div> </div> </div> </div> </section> <!--
+<div class="usa-alert usa-alert--info">
+  <div class="usa-alert__body">
+    <h4 class="usa-alert__heading">Info Banner Heading</h4>
+    <p class="usa-alert__text">
+      Info banner text
+    </p>
+  </div>
+</div>
+--> <section class="usa-hero" aria-label="CRS Banner"> <div class="grid-container"> <h1 class="usa-hero__heading"> <a href="https://www.nasa.gov/" class="usa-nav-a"> <img class="usa-footer__logo-img" src="/assets/vgr/images/NASA_Insignia-RGB-2023.png" alt="NASA Logo"> </a> <span class="usa-hero__heading--alt">Voyager Cosmic Ray Sub System</span></h1> <div></div> </div> </section> <header id="navbar" class="usa-header--basic usa-header--dark"> <div class="usa-nav-container">
+    <button type="button" class="usa-menu-btn">Menu</button>
+    <nav aria-label="Primary navigation" class="usa-nav">
+      <button type="button" class="usa-nav__close">
+        <img src="/assets/uswds/img/usa-icons/close.svg" role="img" alt="Close">
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a href="/mission.html" class="usa-nav-a"><span>MISSION</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/data.html" class="usa-nav-a"><span>DATA</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/instruments.html" class="usa-nav-a"><span>INSTRUMENTS</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="https://science.nasa.gov/mission/voyager/bibliography/" class="usa-nav-a"><span>PUBLICATIONS</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div> </header> <script type="module">window.onscroll=function(){o()};var e=document.getElementById("navbar"),n=e.offsetTop;function o(){window.pageYOffset>=n?e.classList.add("sticky"):e.classList.remove("sticky")}const c=document.querySelectorAll("section.usa-hero");c.forEach(t=>{t.addEventListener("click",()=>{window.location.href="/"})});</script> <body onload="available('timehistory')"> <div class="usa-section grid-container-widescreen"> <link rel="stylesheet" href="/assets/vgr/css/spin.css">
+<style media="screen">
+ul#menu li {
+  display:inline;
+}
+.centered {
+    margin: 0 auto;
+}
+.collapse {
+        border-collapse: collapse;
+        border: 1px solid gray;
+}
+.separate {
+        border-collapse: separate;
+        border: 1px solid gray;
+}
+.center-div
+{
+     text-align: center;
+}
+.ui-helper-center {
+    text-align: center;
+}
+.submit_button {
+  background-color: teal;
+  color: white;
+  text-align: center;
+}
+.submit_button.sync_tracked.out_of_sync {
+  background-color: #e1a821
+}
+select {
+  width:100%;
+  text-align: left;
+  margin-left:0px;
+}
+option {
+  text-align: left;
+}
+.dialog {
+    width: 650px;
+    height: 300px;
+    margin: 5%;
+    background:#e8e8e8;
+    font-family:sans-serif;
+}
+body {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+table {
+    border-style:none;
+    border-width:1px;
+    border-spacing: 1px;
+}
+:link {
+    color: #0000ff;
+}
+:link:active {
+    color: #ff0000;
+}
+:visited {
+    color: #0000ff;
+}
+table.results {
+    border-style:none;
+    td {
+      padding: 10px;
+    }
+}
+.spinner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  /* Optional semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.7);
+  display: none; /* Hide by default */
+}
+</style>
+<script src="/assets/vgr/js/speciesTable.js">
+</script>
+<script src="/assets/vgr/js/lowz.js">
+</script>
+<script id="script_ref_id" src="/assets/vgr/js/Script.js">
+</script>
+<script src="/assets/vgr/js/spin.umd.js"></script>
+<script src="/assets/vgr/js/spinner-config.js"></script>
+
+<script>
+var v1BinHKeys = [
+ "v1bin004H", "v1bin005H", "v1bin007H", "v1bin010H",
+"v1bin015H",  "v1bin024H", "v1bin039H", "v1bin052H", "v1bin079H", "v1bin144H",
+"v1bin165H", "v1bin181H", "v1bin204H", "v1bin245H", "v1bin308H"];
+var v1BinHeKeys = [
+"v1bin004He", "v1bin005He", "v1bin007He","v1bin010He", "v1bin015He",
+"v1bin024He", "v1bin039He", "v1bin052He", "v1bin122He", "v1bin143He",
+"v1bin172He", "v1bin216He", "v1bin278He", "v1bin350He", "v1bin431He",
+ "v1bin571He"];
+var v1BinKeys = [
+ "v1bin004H", "v1bin005H", "v1bin007H", "v1bin010H",
+"v1bin015H",  "v1bin024H", "v1bin039H", "v1bin052H", "v1bin079H", "v1bin144H",
+"v1bin165H", "v1bin181H", "v1bin204H", "v1bin245H", "v1bin308H",
+"v1bin004He", "v1bin005He", "v1bin007He","v1bin010He", "v1bin015He",
+"v1bin024He", "v1bin039He", "v1bin052He", "v1bin122He", "v1bin143He",
+"v1bin172He", "v1bin216He", "v1bin278He", "v1bin350He", "v1bin431He",
+ "v1bin571He"];
+var v2BinHKeys = [
+"v2bin004H", "v2bin005H", "v2bin007H", "v2bin010H",
+"v2bin015H", "v2bin024H", "v2bin039H", "v2bin052H", "v2bin079H", "v2bin142H",
+"v2bin163H",  "v2bin182H", "v2bin201H", "v2bin227H", "v2bin259H", "v2bin308H",
+"v2bin411H", "v2bin539H"];
+var v2BinHeKeys = [
+"v2bin004He", "v2bin005He", "v2bin007He", "v2bin010He", "v2bin015He",
+"v2bin024He", "v2bin039He", "v2bin052He", "v2bin090He",
+"v2bin141He", "v2bin168He", "v2bin215He", "v2bin261He", "v2bin325He",
+"v2bin416He", "v2bin528He"];
+var v2BinKeys = [
+"v2bin004H", "v2bin005H", "v2bin007H", "v2bin010H",
+"v2bin015H", "v2bin024H", "v2bin039H", "v2bin052H", "v2bin079H", "v2bin142H",
+"v2bin163H",  "v2bin182H", "v2bin201H", "v2bin227H", "v2bin259H", "v2bin308H",
+"v2bin411H", "v2bin539H",
+"v2bin004He", "v2bin005He", "v2bin007He", "v2bin010He", "v2bin015He",
+"v2bin024He", "v2bin039He", "v2bin052He", "v2bin090He",
+"v2bin141He", "v2bin168He", "v2bin215He", "v2bin261He", "v2bin325He",
+"v2bin416He", "v2bin528He"];
+var app ="timehistory";
+function checkFlux_SC_Selection() {
+  // A quick checker to see which S/C has bins selected
+  var has_v1 = false;
+  var has_v2 = false;
+  var V1selects = ["v1_h_bins_select", "v1_he_bins_select"];
+  var V2selects = ["v2_h_bins_select", "v2_he_bins_select"];
+      //
+  for (i = 0; i < V1selects.length; i++) {
+    var b = V1selects[i];
+    var e = document.getElementById(b);
+    var options = e.options;
+    var o;
+    var j;
+    for (j = 0; j < options.length; j++) {
+        o = options[j];
+        if (o.selected) {
+          has_v1 = true;
+          break;
+        }
+    }
+    if (has_v1) break;
+  }
+  for (i = 0; i < V2selects.length; i++) {
+    var b = V2selects[i];
+    var e = document.getElementById(b);
+    var options = e.options;
+    var o;
+    var j;
+    for (j = 0; j < options.length; j++) {
+        o = options[j];
+        if (o.selected) {
+          has_v2 = true;
+          break;
+        }
+    }
+    if (has_v2) break;
+  }
+  //
+  return [has_v1, has_v2]
+}
+//
+//
+function setBins(index) {
+    var i;
+    var bins;
+    var form = document.forms["bins"];
+    for (i = 0; i < v1BinKeys.length; i++) {
+        var binKey = v1BinKeys[i];
+        if (form[binKey] != null) form.removeChild(form[binKey]);
+    }
+    for (i = 0; i < v2BinKeys.length; i++) {
+        var binKey = v2BinKeys[i];
+        if (form[binKey] != null) form.removeChild(form[binKey]);
+    }
+    if (index == 0) {
+        var n = 0;
+        var selects = [];
+        if (document.getElementById("bin_outer") == null) {
+            var container = document.getElementById("speciesSelectionId").
+                rows[0].cells[0].firstElementChild;
+            var stab = container.rows[0].cells[0].firstElementChild;
+            for (var row = 0; row < stab.rows.length; row++) {
+                var _tab = stab.rows[row].cells[0].firstElementChild;
+                var _div = _tab.rows[1].cells[0].firstElementChild;
+                selects.push(_div.firstElementChild);
+            }
+            if (selects.length > 0) {
+                for (var i = 0; i < selects.length; i++) {
+                    var options = selects[i].options;
+                    for (var j = 0; j < options.length; j++) {
+                        var o = options[j];
+                        var key = o.id
+                        if (o.selected) {
+                            addBinElement(key, "on");
+                            n++;
+                        } else {
+                            if (form[key] != null) form.removeChild(form[key]);
+                        }
+                    }
+                }
+                if (n == 0) alert("No bins selected.");
+                var spa = speciesSelected();
+                if (spa[0].length > 0) addBinElement("v1species", spa[0]);
+                if (spa[1].length > 0) addBinElement("v2species", spa[1]);
+                return n;
+            }
+        }
+	var suffix_required = null;
+        if (selects.length == 0) {
+            var pid = document.getElementById("plotsId");
+            if (pid.selectedIndex > 2) {
+                alert("Please select spacecraft.");
+                return 0;
+            }
+            if (pid.selectedIndex == 0) {
+		suffix_required = "v1";
+                selects = ["v1_h_bins_select", "v1_he_bins_select"];
+            } else {
+                if (pid.selectedIndex == 1) {
+		    suffix_required = "v2";
+                    selects = ["v2_h_bins_select", "v2_he_bins_select"];
+                } else {
+                    selects = ["v1_h_bins_select", "v1_he_bins_select",
+                              "v2_h_bins_select", "v2_he_bins_select"];
+                }
+            }
+        }
+        for (i = 0; i < selects.length; i++) {
+            var b = selects[i];
+            if (suffix_required != null) {
+                if (!b.startsWith(suffix_required)) continue;
+            }
+            var e = document.getElementById(b);
+            var options = e.options;
+            var o;
+            var j;
+            for (j = 0; j < options.length; j++) {
+                o = options[j];
+                if (o.selected) {
+                    addBinElement(o.id, "on");
+                    n++;
+                }
+            }
+        }
+        if (n == 0) alert("No bins selected.");
+        addBinElement("species", "HandHe");
+        return n;
+    }
+    var binKeys;
+    if ((index == 1) || (index == 2)) binKeys = v1BinKeys;
+    if ((index == 3) || (index == 4)) binKeys = v2BinKeys;
+    var h = ((index == 1) || (index == 3));
+    var s = (h)?"H":"He";
+    for (i = 0; i < binKeys.length; i++) {
+        var binKey = binKeys[i];
+        if (form[binKey] != null) {
+            form.removeChild(form[binKey]);
+        }
+        if (binKey.lastIndexOf(s) == (binKey.length - s.length)) {
+            var newKey = document.createElement("input");
+            newKey.setAttribute("id", binKey);
+            newKey.setAttribute("name", binKey);
+            newKey.setAttribute("type", "hidden");
+            newKey.setAttribute("value", "on");
+            form.appendChild(newKey);
+        }
+    }
+}
+function submit_home() {
+  window.location.href = window.origin + window.location.pathname; 
+}
+function dismiss() {
+    document.getElementById("help").style.display="none";
+}
+function clear_prev_results() {
+  document.getElementById('errorMsgId').style.visibility = 'hidden';
+  document.getElementById('errorMsgId').innerHTML = '';
+  document.getElementById('listV1Id').style.visibility = 'hidden';
+  document.getElementById('listV2Id').style.visibility = 'hidden';
+  document.getElementById('imgV1row').style.visibility = 'hidden';
+  document.getElementById('imgV1Id').setAttribute('src','');
+  document.getElementById('imgV2row').style.visibility = 'hidden';
+  document.getElementById('imgV2Id').setAttribute('src','');
+  //
+}
+</script>
+<form id="bins" method="GET">
+<input type="hidden" name="nextProxy" value="none">
+<input type="hidden" name="previousProxy" value="none">
+</form>
+<script>
+  document.forms["bins"].action = window.origin + window.location.pathname;
+//
+  function submitFormWithAjax(form) {
+    // Build query string from form data
+    const formData = new FormData(form);
+    const queryString = new URLSearchParams(formData).toString();
+    //
+    // Create the full URL
+    const url = form.action + "?" + queryString;
+    // Submit job and poll for completion
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const jobId = data.job_id;
+        clear_out_of_sync();
+        pollForResults(jobId);
+    });
+  }
+//
+  function pollForResults(jobId) {
+      const statusUrl = `/cgi/crs_plotter/status.py?job_id=${jobId}`;
+  //    
+      const checkStatus = () => {
+          fetch(statusUrl)
+          .then(response => response.json())
+          .then(data => {
+              if (data.status === "completed") {
+                  // Display results
+                  // console.log("I have finished\nThese are my results:\n", data);
+                  hideSpinner();
+                  hideProgress();
+                  displayResults(data.result);          
+              } else if (data.status === "error") {
+                  console.error("Job failed:", data);
+                  hideSpinner();
+                  hideProgress();
+                  displayError(data.error);
+              } else {
+                  // Still running, check again in 2 seconds
+                  //console.log(data);
+                  //console.log("Waiting . . . ")
+                  displayProgress(data);
+                  setTimeout(checkStatus, 2000);
+              }
+          });
+      };
+  //    
+      checkStatus();
+  }
+  //
+    function displayProgress(data) {
+        let err_element = document.getElementById('errorMsgId');
+        err_element.textContent = `Progress ${data.progress}%: ${data.prog_msg}`;
+        err_element.style.visibility = 'visible';    
+  } 
+    function hideProgress() {
+        let err_element = document.getElementById('errorMsgId');
+        err_element.textContent = ``;
+        err_element.style.visibility = 'hidden';    
+  }     
+  //
+    function displayError(err_msg) {
+        let err_element = document.getElementById('errorMsgId');
+        err_element.innerHTML = `
+          <h3>Error while processing:</h3>
+          <p>${err_msg}</p>        
+        `;
+        err_element.style.visibility = 'visible';    
+  }
+  //
+  function displayResults(result) {
+    let v1_id = result[0];
+    let v2_id = result[1];
+    let datatype = result[2];
+    //
+    if (datatype == 'list') {
+      if (v1_id !== null) {
+        let v1_element = document.getElementById('listV1Id');
+        v1_element.setAttribute('href', `./output/text/${v1_id}.txt`);
+        v1_element.style.visibility = 'visible';
+      }
+      if (v2_id !== null) {
+        let v2_element = document.getElementById('listV2Id');
+        v2_element.setAttribute('href', `./output/text/${v2_id}.txt`);
+        v2_element.style.visibility = 'visible';
+      }
+    } else {
+      if (v1_id !== null) {
+        document.getElementById('imgV1Id').setAttribute('src', `./output/image/${v1_id}.png`);
+        document.getElementById('imgV1row').style.visibility = 'visible';
+      }
+      if (v2_id !== null) {
+        document.getElementById('imgV2Id').setAttribute('src', `./output/image/${v2_id}.png`);
+        document.getElementById('imgV2row').style.visibility = 'visible';
+      }               
+    }  
+  }
+</script>
+<div class="center-div" style="position:relative;top:5px;">
+<!-- begin V2 warning note -->
+<table>
+<tbody><tr>
+<td align="left">
+<b>Note:</b> Corrections have been applied to the Voyager 1 flux data from DOY 145/2022 (May 25) and Voyager 2 flux data from DOY 178/2019 (June 27) due to the
+ turn off of the Voyager CRS<br> Heaters.  V1 Flux data from May 18 - 24/2022 and V2 Flux data from June 9 - 26/2019 are not available.
+<p>
+See <a href="/instrument_problems.html#A1">Voyager Temperature Corrections</a> for additional information.
+</p>
+<p>
+The data units are "Particles / M^2-S-Sr-MeV/nuc".
+</p>
+<!-- 
+<p>&nbsp; </p>
+<font color="red"><h4>Voyager-1 and Voyager-2 data are not available after 04/28/2022. The Voyager-1 data requires recalibration as a result of the V1 CRS Heater Turn Off.</h4></font> -->
+<p>  </p>
+</td>
+</tr>
+</tbody></table>
+<!-- end V2 warning note -->
+  <table style="border-spacing:1px; border-style:solid; border-width:thin">
+    <tbody><tr>
+      <td>
+        <!-- current table starts here -->
+        <table id="banner">
+          <tbody><tr>
+            <td>
+            <a href="spectra.html">
+              <span style="font-size:large">Spectra</span></a>
+            </td>
+            <td colspan="3" style="font-size:x-large;text-align:center">
+              Flux Time History
+            </td>
+            <td>
+              <a href="rates.html">
+                <span style="font-size:large"> Rates Time History</span></a>
+            </td>
+            <td><button onclick="showNotes();" id="notesId">Notes</button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align:center">
+              <table>
+                <tbody><tr>
+                  <td>spacecraft:
+                  </td>
+                  <td>
+                  <select name="plots" form="bins" size="1" id="plotsId" onchange="plotsChangeHandler(event);">
+                    <option value="plotsV1">V1</option>
+                    <option value="plotsV2">V2</option>
+                    <option value="plotsBoth" selected>V1 &#x26; V2</option>
+                    <!-- <option value="none" selected>Select</option> -->
+                  </select>
+                  </td>
+                  <td>
+<!-- NOTE: The heavy (z gt 2) data is questionalble. Commenting out the entire section below
+breaks the page so I added the 'style="visibility:hidden"' code to remove the checkbox and
+then just commented out the Z gt 2' text.
+-->
+                       <input type="checkbox" style="visibility:hidden" name="z_gt_2" form="bins" id="z_gt_2Id" onchange="z_gt_2ChangeHandler(event);">
+                           <!-- Z &gt; 2 -->
+<!--           id="z_gt_2Id" checked style="visibility:hidden"-->
+<!-- <script>z_gt_2ChangeHandler(null);</script> -->
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+            <td style="text-align:center">
+                    <span style="font-size:medium">Averaging</span>
+            </td>
+            <td colspan="1" style="text-align:center">
+              <button class="submit_button sync_tracked" type="button" form="bins" id="plotId" onclick="return dispatcher(this);" name="plot">Plot
+              </button>
+            </td>
+            <td rowspan="1">
+              <table>
+                <tbody><tr>
+                  <td>
+                    <button class="submit_button sync_tracked" type="button" form="bins" id="listId" onclick="return dispatcher(this);" name="list">List</button>
+                  </td>
+                  <td colspan="1">
+                   <input type="checkbox" name="noheader" form="bins" id="noheaderId" onchange="mark_out_of_sync()">noheader
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+            <td>
+              <table style="border-spacing: 1px;">
+                <tbody><tr>
+                  <td style="width:100%">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table style="border-spacing: 1px; border-style:solid; border-width:thin">
+                <tbody><tr>
+                  <td>
+                    <span style="font-size:small">Start Time</span>
+                  </td>
+                </tr>
+                <tr>
+			<td><table id="start_time_1Id"><tbody><tr>
+                  <td>V1</td>
+                  <td>
+                    <select name="syear1" form="bins" id="syear1Id" onchange="mark_out_of_sync()">                  
+                    </select>
+                  </td>
+                  <td>
+                    <select name="smonth1" form="bins" id="smonth1Id" onchange="mark_out_of_sync()">
+                      <option selected>1 </option><option>2 </option><option>3 </option><option>4 </option><option>5
+                      </option><option>6 </option><option>7 </option><option>8 </option><option>9 </option><option>10
+                      </option><option>11 </option><option>12
+                    </option></select>
+                  </td>
+                  <td>
+                    <select name="sday1" form="bins" id="sday1Id" onchange="mark_out_of_sync()">
+                      <option selected>1 </option><option>2 </option><option>3 </option><option>4 </option><option>5
+                      </option><option>6 </option><option>7 </option><option>8 </option><option>9 </option><option>10
+                      </option><option>11 </option><option>12 </option><option>13 </option><option>14 </option><option>15
+                      </option><option>16 </option><option>17 </option><option>18 </option><option>19 </option><option>20
+                      </option><option>21 </option><option>22 </option><option>23 </option><option>24 </option><option>25
+                      </option><option>26 </option><option>27 </option><option>28 </option><option>29 </option><option>30
+                      </option><option>31
+                    </option></select>
+                  </td>
+                  </tr>
+			</tbody></table>
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+            <td>
+              <table style="border-spacing:1px; border-style:solid; border-width:thin">
+                <tbody><tr>
+                  <td>
+                    <span style="font-size:small">End Time</span>
+                  </td>
+                </tr>
+                <tr>
+    			<td><table id="end_time_1Id"><tbody><tr>
+                  <td>
+                    <select name="eyear1" form="bins" id="eyear1Id" onchange="mark_out_of_sync()">
+                    </select>
+                  </td>
+                  <td>
+                    <select name="emonth1" form="bins" id="emonth1Id" onchange="mark_out_of_sync()">
+                      <option>1 </option><option>2 </option><option>3 </option><option>4 </option><option>5
+                      </option><option>6 </option><option>7 </option><option>8 </option><option>9 </option><option>10
+                      </option><option>11 </option><option>12
+                    </option></select>
+                  </td>
+                  <td>
+                    <select name="eday1" form="bins" id="eday1Id" onchange="mark_out_of_sync()">
+                      <option>1 </option><option>2 </option><option>3 </option><option>4 </option><option>5
+                      </option><option>6 </option><option>7 </option><option>8 </option><option>9 </option><option>10
+                      </option><option>11 </option><option>12 </option><option>13 </option><option>14 </option><option>15
+                      </option><option>16 </option><option>17 </option><option>18 </option><option>19
+                      </option><option>20
+                      </option><option>21 </option><option>22 </option><option>23 </option><option>24 </option><option>25
+                      </option><option>26 </option><option>27 </option><option>28 </option><option>29 </option><option>30
+                      </option><option>31
+                    </option></select>
+                  </td>
+                  </tr>
+			</tbody></table>
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+            <td style="text-align:center"> <!-- begin averaging interval -->
+              <table style="border-spacing:1px; border-style:solid; border-width:thin;margin:auto">
+                <tbody><tr>
+                  <td>
+                    <select name="average" id="averageId" form="bins" onchange="averageChangeHandler(event);">
+                      <option value="6 hour">6 hour</option>
+                      <option value="1 day" selected>1 day</option>
+                      <option value="other">other</option>
+                    </select>
+                  </td>
+                  <td>
+                    moving:<input type="text" id="movingId" name="moving" size="1" form="bins" value="0" oninput="mark_out_of_sync()">
+                  </td>
+                </tr>
+              </tbody></table>
+            </td> <!-- end averaging interval -->
+            <td style="text-align:center">
+              <table style="border-spacing:1px; border-style:solid; border-width:thin;margin:auto">
+                <tbody><tr>
+                  <td colspan="1">
+                    <table>
+                      <tbody><tr>
+                        <td>
+                          <input type="checkbox" name="flux_auto" checked form="bins" id="flux_autoId" value="true" onchange="scaleChangeHandler(event);"> autoscale
+                        </td>
+                        <td>
+                          <input type="checkbox" name="flux_log" checked form="bins" id="flux_logId" onchange="mark_out_of_sync()">log
+                        </td>
+                      </tr>
+                    </tbody></table>
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+            <td colspan="1">
+              <select name="timeFormat" id="timeFormatId" form="bins" onchange="mark_out_of_sync()">
+                <option value="ISO time format">ISO time format</option>
+                <option value="y doy h">y doy h</option>
+                <option value="float_year">float_year</option>
+                <option value="seconds since 1970">seconds since 1970
+                </option>
+              </select>
+            </td>
+            <td>
+              <!-- <table style="border-spacing: 1px;">
+                <tr>
+                  <td colspan=1>
+                    <button class="submit_button" form="bins"
+                         onclick="return dispatcher(this);" id ="nextId"
+                         name="next" value="plot" >Next</button></td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="submit_button" form="bins"
+                         onclick="return dispatcher(this);" id="previousId"
+                         name="previous" value="plot" >Prev</button>
+                  </td>
+                </tr>
+              </table> -->
+            </td>
+          </tr>
+          <tr>
+            <td colspan="1" id="other_time_start" style="visibility:visible">
+              <table style="border-spacing:1px; border-style:solid; border-width:thin">
+                <tbody><tr>
+			<td><table id="start_time_2Id"><tbody><tr>
+                  <td>V2</td>
+                  <td>
+                    <select name="syear2" form="bins" id="syear2Id" onchange="mark_out_of_sync()">
+                    </select>
+                  </td>
+                  <td>
+                    <select name="smonth2" form="bins" id="smonth2Id" onchange="mark_out_of_sync()">
+                      <option selected>1 </option><option>2 </option><option>3 </option><option>4 </option><option>5
+                      </option><option>6  </option><option>7 </option><option>8 </option><option>9 </option><option>10
+                      </option><option>11 </option><option>12
+                    </option></select>
+                  </td>
+                  <td>
+                    <select name="sday2" form="bins" id="sday2Id" onchange="mark_out_of_sync()">
+                      <option selected>1 </option><option>2 </option><option>3 </option><option>4 </option><option>5
+                      </option><option>6 </option><option>7 </option><option>8 </option><option>9 </option><option>10
+                      </option><option>11 </option><option>12 </option><option>13 </option><option>14 </option><option>15
+                      </option><option>16 </option><option>17 </option><option>18 </option><option>19 </option><option>20
+                      </option><option>21 </option><option>22 </option><option>23 </option><option>24 </option><option>25
+                      </option><option>26 </option><option>27 </option><option>28 </option><option>29 </option><option>30
+                      </option><option>31
+                    </option></select>
+                  </td>
+                  </tr>
+			</tbody></table>
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+            <td id="other_time_end" style="visibility:visible">
+              <table style="border-spacing:1px; border-style:solid; border-width:thin">
+                <tbody><tr>
+			<td><table id="end_time_2Id"><tbody><tr>
+                  <td>
+                    <select name="eyear2" form="bins" id="eyear2Id" onchange="mark_out_of_sync()">
+                    </select>
+                  </td>
+                  <td>
+                    <select name="emonth2" form="bins" id="emonth2Id" onchange="mark_out_of_sync()">
+                      <option>1 </option><option>2 </option><option selected>3 </option><option>4
+                      </option><option>5
+                      </option><option>6  </option><option>7 </option><option>8 </option><option>9 </option><option>10
+                      </option><option>11 </option><option>12
+                    </option></select>
+                  </td>
+                  <td>
+                    <select name="eday2" form="bins" id="eday2Id" onchange="mark_out_of_sync()">
+                      <option>1 </option><option>2 </option><option>3 </option><option>4 </option><option>5
+                      </option><option>6 </option><option>7 </option><option>8 </option><option>9 </option><option>10
+                      </option><option>11 </option><option>12 </option><option>13 </option><option>14 </option><option>15
+                      </option><option>16 </option><option>17 </option><option>18 </option><option>19
+                      </option><option>20
+                      </option><option>21 </option><option>22 </option><option>23 </option><option>24 </option><option>25
+                      </option><option>26 </option><option>27 </option><option>28 </option><option>29 </option><option>30
+                      </option><option>31
+                    </option></select>
+                  </td>
+                  </tr>
+			</tbody></table>
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+            <td colspan="1" id="otherAverageId" style="visibility:hidden">
+              <table style="border-spacing:1px; border-style:solid; border-width:thin">
+                <tbody><tr>
+                  <td>
+                    <table style="border-spacing: 0px;">
+                      <tbody><tr>
+                        <td>days:<input type="text" id="adaysId" name="days" size="4" form="bins" value="0" oninput="mark_out_of_sync()">
+                        </td><td>hrs:<input type="text" id="ahoursId" name="hrs" size="2" value="0" form="bins" oninput="mark_out_of_sync()">
+                      </td></tr>
+                    </tbody></table>
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+            <td colspan="1" id="flux_minmax" style="visibility:hidden">
+              <table style="border-spacing: 1px; border-style:solid; border-width:thin">
+                <tbody><tr>
+                  <td>
+                    <table style="border-spacing: 1px;">
+                      <tbody><tr>
+                        <td>min:<input type="text" id="flux_minId" name="flux_min" size="6" form="bins" oninput="mark_out_of_sync()">
+                        </td><td>max:<input type="text" id="flux_maxId" name="flux_max" size="6" form="bins" oninput="mark_out_of_sync()">
+                      </td></tr>
+                    </tbody></table>
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+            <td>
+            </td>
+            <td style="text-align:left">
+              <button class="submit_button" onclick="submit_home();" id="homeId" name="home" value="none">
+                <span style="text-align:center">Reset</span>
+              </button>
+           </td>
+          </tr>
+        </tbody></table>
+        <!-- current table end -->
+      </td>
+    </tr>
+<tr>
+<td align="left">
+Note: Hours and Minutes are set to zero (0) for the Start and End times (e.g. an End Time of 2020/01/20 is 2020/01/19 23:59:59).
+</td>
+</tr>
+  </tbody></table>
+  <div id="species_listId"></div>  <!-- Do we need this? AAN 06/2025-->
+  <table>
+    <tbody><tr>
+      <td style="vertical-align:top" id="holds_selection_bins">
+              <!-- begin bin selection table; z_gt_2 replaces this table -->
+        <table id="speciesSelectionId">
+          <tbody><tr>
+            <!-- added 8/17 -->
+            <td>
+              <table>
+                <tbody><tr>
+                  <td style="vertical-align:top">
+                    <table id="bin_outer" style="border-spacing: 1px; border-style:solid; border-width:thin;
+                      visibility:visible">
+                      <tbody><tr>
+                        <td style="text-align:right">
+                          <span style="font-size:medium">
+                          Voyager-1  Hydrogen Bins
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div id="v1_h_bins">
+                            <select multiple id="v1_h_bins_select" size="8" onchange="mark_out_of_sync()">
+                              <optgroup label="v1_h">
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin004H">3.0 - 4.6 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin005H">4.6 - 6.2 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin007H">6.2 - 7.7 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin010H">7.7 - 12.8 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin015H">12.8 - 17.9 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin024H">17.9 - 30.0 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin039H">30.0 - 48.0 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin052H">48.0 - 56.0 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin079H">74.5 - 83.7 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin144H">133 - 155 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin165H">155 - 175 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin181H">175 - 188 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin204H">188 - 220 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin245H">220 - 270 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin308H">270 - 346 MeV</option>
+                              </optgroup>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:right">
+                          <span style="font-size:medium">Voyager-1  Helium Bins </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div id="v1_he_bins">
+                            <select multiple id="v1_he_bins_select" size="8" onchange="mark_out_of_sync()">
+                              <optgroup label="v1_he"> <!-- Voyager-1 Helium  Bins" -->
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin004He">3.0 - 4.6 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin005He">4.6 - 6.2 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin007He">6.2 - 7.7 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin010He">7.7 - 12.8 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin015He">12.8 - 17.9 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin024He">17.9 - 30.0 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin039He">30.0 - 48.0 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin052He">48.0 - 56.0 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin122He">110 - 134 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin143He">134 - 152 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin172He">152 - 193 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin216He">193 - 239 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin278He">239 - 318 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin350He">318 - 381 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin431He">381 - 481 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v1bin571He">480 - 661 MeV/n</option>
+                              </optgroup>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:right">
+                          <span style="font-size:medium">Voyager-2  Hydrogen Bins </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div id="v2_h_bins">
+                            <select multiple id="v2_h_bins_select" size="8" onchange="mark_out_of_sync()">
+                              <optgroup label="v2_h"> <!-- Voyager-2 Hydrogen  Bins" -->
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin004H">3.0 - 4.6 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin005H">4.6 - 6.2 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin007H">6.2 - 7.7 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin010H">7.7 - 12.8 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin015H">12.8 - 17.9 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin024H">17.9 - 30.0 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin039H">30.0 - 48.0 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin052H">48.0 - 56.0 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin079H">75.9 - 82.6 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin142H">130 - 154 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin163H">154 - 171 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin182H">171 - 194 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin201H">194 - 208 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin227H">208 - 246 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin259H">246 - 272 MeV</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin308H">272 - 344 MeV</option>
+                                <!--
+                                <option onclick="bin_clicked(event)" id="v2bin411H">344 - 479 MeV</option>
+                                <option onclick="bin_clicked(event)" id="v2bin539H">479 - 599 MeV</option>
+                                -->
+                              </optgroup>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:right">
+                          <span style="font-size:medium">Voyager-2  Helium Bins </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div id="v2_he_bins">
+                            <select multiple id="v2_he_bins_select" size="8" onchange="mark_out_of_sync()">
+                              <optgroup label="v2_he">  <!--Voyager-2 Helium  Bins" -->
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin004He">3.0 - 4.6 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin005He">4.6 - 6.2 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin007He">6.2 - 7.7 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin010He">7.7 - 12.8 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin015He">12.8 - 17.9 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin024He">17.9 - 30.0 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin039He">30.0 - 48.0 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin052He">48.0 - 56.0 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin090He">77.2 - 102 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin141He">130 - 152 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin168He">152 - 185 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin215He">185 - 245 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin261He">245 - 276 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin325He">276 - 374 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin416He">374 - 459 MeV/n</option>
+                                <option onclick="bin_clicked(event)" class="binOption" id="v2bin528He">459 - 597 MeV/n</option>
+                              </optgroup>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody></table>
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+      <td id="holds_results" valign="top">
+        <div class="dialog" id="help" style="display:none">
+          <table style="width:100%;height:100%">
+            <tbody><tr>
+              <td style="text-align:right">
+                <button class="submit_button" onclick="dismiss();"> Dismiss
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <iframe id="flux_help_id" style="border-style:none;width:100%;height:100%"></iframe>
+              </td>
+            </tr>
+          </tbody></table>
+        </div>
+        <script>
+          document.getElementById("flux_help_id").src = window.origin + "/flux_help.html";
+        </script>
+        <script id="update_script"></script>
+        <table class="results">
+          <tbody><tr>
+            <td colspan="3"><div id="errorMsgId" style="visibility: hidden; border: solid rgb(35 115 89);">Error message goes here</div></td>
+          </tr>        
+          <tr>
+            <td><a id="listV1Id" style="visibility: hidden;" target="_blank" rel="noopener noreferrer">Voyager-1 Listing</a></td>
+            <td><a id="listV2Id" style="visibility: hidden;" target="_blank" rel="noopener noreferrer">Voyager-2 Listing</a></td>
+            <td></td>
+          </tr>
+          <tr id="imgV1row" style="visibility: hidden;">
+            <td colspan="2"><img id="imgV1Id" src="" alt=""></td>
+            <td><button type="button" class="submit_button" onclick="printImage(&#x27;imgV1Id&#x27;);">Print</button></td>
+          </tr>
+          <tr id="imgV2row" style="visibility: hidden;">
+            <td colspan="2"><img id="imgV2Id" src="" alt=""></td>
+            <td><button type="button" class="submit_button" onclick="printImage(&#x27;imgV2Id&#x27;);">Print</button></td>
+          </tr>   
+        </tbody></table>
+        <div id="spinner-container" class="spinner-overlay"></div>          
+      </td>
+    </tr>
+  </tbody></table>
+  </div>
+  <script>
+  var spinner = new Spin.Spinner(opts);
+  var container = document.getElementById('spinner-container');
+//
+    function showSpinner() {
+    container.style.display = 'block';
+    spinner.spin(container);
+  }
+  //
+  // To hide spinner:
+  function hideSpinner() {
+    container.style.display = 'none';
+    spinner.stop();
+  }
+  </script> </div> <script src="/assets/uswds/js/uswds.min.js"></script> </body> <footer class="usa-footer usa-footer--dark"> <div class="usa-footer__secondary-section"> <div class="grid-container"> <div class="grid-row grid-gap"> <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2"> <div class="mobile-lg:grid-col-auto"> <div class="grid-row grid-gap footer-link"> <a href="https://www.nasa.gov/about/">About NASA </a> </div> <div class="grid-row grid-gap footer-link"></div> <div class="grid-row grid-gap footer-link"> <a href="https://www.nasa.gov/privacy/#Accessibility-Statement">Accessibility Statement</a> </div> <div class="grid-row grid-gap footer-link"> <a href=" https://www.nasa.gov/foia/">FOIA</a> </div> <div class="grid-row grid-gap footer-link"> <a href="https://www.nasa.gov/no-fear-act/">No FEAR Act</a> </div> <div class="grid-row grid-gap footer-link"> <a href="https://www.nasa.gov/vulnerability-disclosure-policy/">Vulnerability Disclosure Policy </a> </div> </div> </div> <div class="usa-footer__contact-links mobile-lg:grid-col-6"> <div class="usa-footer__social-links grid-row grid-gap-1"> <div class="grid-row grid-gap"> <address class="usa-footer__address"> <div class="usa-footer__contact-info grid-row grid-gap"> <p>
+NASA Official: <a href="mailto:adam.szabo-1@nasa.gov">Adam Szabo</a><br>
+Site Curator: <a href="mailto:Ayris.A.Narock@nasa.gov" title="Questions about the website">Ayris Narock</a> </p> </div> </address> <a href="https://nasa.gov" title="NASA Home" aria-label="NASA Home"> <img class="usa-footer__logo-img" src="/assets/vgr/images/NASA_Insignia-RGB-2023.png" alt="NASA logo"> </a> </div> </div> <p id="last-updated">Last Updated: Nov 19, 2025</p> </div> </div> </div> </div> </footer> <script type="text/javascript">
+  var lastUpdatedElement = document.getElementById('last-updated');
+  var lastModified = moddate();
+
+  lastUpdatedElement.innerText = "Last Updated: " + lastModified;
+
+  function MM_jumpMenu(targ,selObj,restore){ //v3.0
+    eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+    if (restore) selObj.selectedIndex=0;
+  }
+
+  function moddate(){
+    var newd = new Date(document.lastModified);
+    const mon = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    newd = newd.getDate() + " " + (mon[newd.getMonth()]) + " " + newd.getFullYear();
+    return newd
+  }
+</script> </html>

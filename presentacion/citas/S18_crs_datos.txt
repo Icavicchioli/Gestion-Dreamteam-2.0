@@ -1,0 +1,70 @@
+Data
+An official website of the United States government
+Here’s how you know
+Here’s how you know
+Official websites use .gov
+A
+.gov website belongs to an official government
+organization in the United States.
+Secure .gov websites use HTTPS
+A
+lock (
+Lock Locked padlock icon   ) or https:// means you’ve safely connected to
+the .gov website. Share sensitive information only on official,
+secure websites.
+Voyager Cosmic Ray Sub System
+Menu
+MISSION
+DATA
+INSTRUMENTS
+PUBLICATIONS
+QUICK LOOK DATA
+The most recent Voyager 6-hour averages for the LA1 (> 0.5 MeV/nuc
+nuclei) and PGH (> 70 MeV/nuc nuclei) rates are shown below in
+selectable thumbnail images.
+The LA1 rate consists of greater than 0.5 MeV/nuc nuclei, principally
+protons, and is sensitive to low-energy phenomena in interplanetary
+space (e.g., co-rotating interaction regions, associated enhancements
+and solar flares).
+The PGH rate consists of greater than 70 MeV/nuc nuclei, primarily
+protons, and is a good indicator of the level of modulation of galactic
+cosmic rays. It can also respond to large solar flares.
+Voyager-1 LA1 Rate
+Voyager-1 PGH Rate (HET 1)
+Voyager-2 LA1 Rate
+Voyager-2 PGH Rate (HET 1)
+DATA INTERFACES
+Through the Rate, Flux and Spectra User Interfaces you may generate
+figures and download CRS data for the lifetime of the Voyager mission.
+These interfaces have been tested with Microsoft Edge, Chrome and
+Firefox browsers.
+Note
+The Voyager 1 heater was turned off in May, 2022. Corrections have been
+applied to the Voyager 1 flux data from DOY 145/2022 (May 25). Voyager
+1 flux data from May 18 - May 24, 2022 are not available.
+The Voyager 2 heater was turned off in June 2019. Corrections have been
+applied to the Voyager 2 flux data from DOY 178/2019 (June 27). Voyager
+2 flux data from DOY 160/2019 to DOY 178/2019 (June 9 - 26) are not
+available.
+See Voyager-2 Temperature Corrections
+for additional information.
+The Rate data has not been corrected so please use caution using V1 Rate
+data after DOY 138/2022 (May 18) and V2 Rate data after DOY 159/2019
+(June 8).
+Voyager Rates
+Voyager Fluxes
+Voyager Spectra
+DOCUMENTATION
+MISSION
+ANALYSIS
+INSTRUMENTS
+PUBLICATIONS
+(JPL)
+About NASA
+Accessibility Statement
+FOIA
+No FEAR Act
+Vulnerability Disclosure Policy
+NASA Official: Adam Szabo
+Site Curator: Ayris Narock
+Last Updated: Nov 19, 2025

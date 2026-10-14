@@ -1,0 +1,503 @@
+instrument problems
+An official website of the United States government
+Here’s how you know
+Here’s how you know
+Official websites use .gov
+A
+.gov website belongs to an official government
+organization in the United States.
+Secure .gov websites use HTTPS
+A
+lock (
+Lock Locked padlock icon   ) or https:// means you’ve safely connected to
+the .gov website. Share sensitive information only on official,
+secure websites.
+Voyager Cosmic Ray Sub System
+Menu
+MISSION
+DATA
+INSTRUMENTS
+PUBLICATIONS
+INSTRUMENT PROBLEMS
+The following information has been provided to summarize the Voyager
+Cosmic Ray Subsystem instrument health and experiment problems.
+Heater Events:
+Voyager-2 Temperature Corrections
+Cook:
+Voyager-1 LET B
+Voyager-2 LET C
+Pulse Height Multiplication in the LET 35 micron detectors
+Three Parameter Analysis for Iron Nuclei
+Two Parameter Analysis for Iron Nuclei
+Breneman:
+Pulse Height ‘Multiplication’ Effect
+LET ID Tag Bit Errors at High Counting Rates
+LET L1 Detector Damage and Annealing
+Voyager-2 LET C Temporary Gain Shift
+CRS Instrument Configuration Changes
+Voyager-1 Block I PHA Problem
+Voyager-2 Temperature Corrections
+Heater Event Problem:
+NOTE: The following applies to Voyager 2 however the Voyager 1 heater event problem was very similar and we used a nearly identical plan for data recovery.
+As part of the Voyager 2 power management
+plan the
+Cosmic Ray Subsystem (CRS) Replacement Heater was turned OFF and a
+Supplemental Heater, which uses less power, was turned ON on DOY
+160/2019 02h:30m Space Craft Event Time (SCET, June 9).
+Subsequently, the CRS Supplemental Heater was turned OFF on DOY 178/2019
+01h:15m SCET (June 27). As a result, the temperature of the CRS
+instrument dropped from ~2 degrees C to ~-60 degrees C.
+The CRS counting rates and pulse height distributions changed
+significantly after the CRS heaters were turned off. These changes
+necessitate modification of the flux computation procedure for the post
+heater turnoff (PHTO) era.
+Computation of particle intensities requires converting observed pulse
+heights to energy loss. Our analysis of LET and HET low energy data
+(Appendix A.1 Cummings et al 2016 ApJ 831 18) uses pre-launch detector
+response measurements (which were made at 0 degree and 23 degree C) to
+convert PHA to energy loss for the CRS operating temperature. Using an
+extrapolation of the pre-launch calibration to -60 degrees C (operating
+temperature after the heaters were turned off) yielded intensities
+different from the post heliopause intensities observed prior to heater
+turnoff. Intensities of penetrating protons and helium computed using
+response tables (Appendix A.2 Cummings et al 2016 ApJ 831 18) also
+differed from pre-heater turnoff measurements.
+We assume that, in the period immediately following the heater turnoff,
+the particle population seen by CRS is the same as it was in the post
+heliopause period (March 11, 2019 - June 8, 2019) that preceded heater
+turnoff. We also assume that the energy loss characteristics of our
+detectors are independent of temperature in the temperature range of
+interest. Under these assumptions, changes in counting rates and in
+pulse height distributions at -60 deg C can be attributed to changes in
+detector thresholds and conversion of energy loss to pulse height
+channel.
+We used the 6 month period (July 1, 2019 - December 31, 2019) following
+heater turnoff to identify changes in flux computation in the PHTO era
+(13-day averages of event type rates during this period show no
+significant change). Pulse height distributions and event type counting
+rates during this period were studied to determine changes required to
+align spectra during this period with the observed spectra during the
+reference period (March 11, 2019 - June 8, 2019).
+Changes:
+For flux derived from LET-A, C and D we compute energy loss using the 0
+deg C PHA to energy loss mapping after adding an offset to L1, L2 and L3
+pulse heights. The offsets are: 3, 3 and 1 for L1, L2 and L3,
+respectively. We follow the same procedure for HET A1, A2 and C123 pulse
+heights using offsets of 2, 3 and 1 for A1, A2 and C123, respectively.
+HET penetrating mode analysis uses response tables (Appendix A.2
+Cummings et al 2016 ApJ 831 18) which define a box in B1-C1 channel
+space for each C432 channel. Incident energy range is determined by C432
+channel. Modified versions of tables in which C432 channel is offset by
++2 channels for Hydrogen and +1 channel for Helium are used for PHTO.
+B1-C1 box boundaries for some of the C432 channels were adjusted as
+determined from the pulse height distributions.
+Helium response needed an additional modification due to the fact the
+the flux computed after the offset is applied was lower for all the
+energy bins by roughly the ratio of PENL rates before and after heater
+turnoff. This difference could be due to the significant change in the
+thresholds of detectors which are required to be in coincidence for
+penetrating Helium events, and has been parametrized as a modification
+to the effective geometry factor.
+From Appendix B of Dr. Rick Cook’s Thesis
+Rick Cook Thesis
+Rick Cook Thesis Erratum
+V1 LET B Problem:
+The response of this telescope was unusual in that:
+The HE mass measurement, M1, showed a relatively large energy and
+time dependence,
+A relatively large ‘background’ of events was present in the
+charge range near fluorine,
+The L1 versus L2+L3 element tracks had an uncharacteristically
+blurred appearance.
+The problem may be electronic instability, but was not investigated in
+detail; instead the data from this telescope were excluded from use in
+the measurements presented in Chapter 4, Tables 4.1 through 4.12.
+V2 LET C Problem:
+On April 1, 1978 the L1 detector of this telescope experienced a
+simultaneous shift in energy calibration and an increase in count rate,
+perhaps as the result of a light leak in the thin AL entrance window.
+Subsequent data from this telescope were not used in the measurements of
+Chapter 4, Tables 4.1 through 4.12.
+Pulse Height Multiplication in the LET 35 um Detectors:
+A background effect specific to the iron group nuclei was identified in
+Sections 3.3 and 3.5 and necessitated the further study and special
+handling which is discussed here. The affected PHA events were clearly
+seen in Figure 3.7, a plot of the charge measurements Z1 versus Z2, as a
+clump of points near (Z1=26, Z2=28). Inspection of the L1, L2 and L3
+pulse heights of the events in this clump revealed a very specific
+signature:
+The events lie directly on the L1 versus L3 track for iron, but lie
+just above the L2 versus L3 iron track, indicating that the L1 and
+L3 pulse heights are normal, but that the L2 pulse height is
+abnormally large.
+The events have relatively small L3 pulse heights (E{L3} less than
+about 170 MeV), indicating that the nuclei responsible for the
+events just barely penetrated detector L2.
+The effect also occurs for a fraction of the iron nuclei which barely
+penetrate the L1 detectors. In this case, the affected events may be
+seen as the unusual clump of points near Z1=28 in Figure 3.6.
+The above signature suggests a pulse height multiplication effect in the
+LET 35 micron surface barrier detectors that is very similar to one
+observed earlier in the response of such detectors to fission fragments.
+The effect (discussed by Walter 1969) occurs for nuclei which deposit a
+large ionization charge density in the depleted silicon near the gold
+electrode. The large ionization charge density is thought to induce
+tunneling of additional carriers (electrons) from the electrode through
+the thin oxide layer which separates the electrode frm the depleted bulk
+silicon. The orientation of the LET 35 micron detectors is consistent
+with this multiplication hypothesis: The gold electrodes face toward the
+L3 detector, such that the ionization charge density near a gold
+electrode is largest for nuclei which just barely penetrate the
+detector, as in (2) above.
+To further study the problem, three detector PHA events with charge
+measurements Z1 > 24 were re-analyzed. For each event the L1 and L3
+energy measurements (E{L1} and E{L3}) were used to calculate a new
+charge measurement Z’ and obtain an estimate E’{L2} of the energy
+deposited in detector L2 by solving:
+T{L1} = R(E{L1} + E'{L2} + E{L3}, Z', M) - R(E'{L2} + E{L3}, Z', M)
+T{L2} = R(E'{L2} + E{L3}, Z', M) = R(E{L3}, Z', M)
+taking  M = 2.132 * Z'
+R is the generalized range-energy function discussed in Section 3.4.
+T{L1} and T{L2} are the mean pathlengths for the L1 and L2 detectors
+respectively. The results are illustrated in Figure B.1, a plot of E{L2}
+(the measured L2 energy) versus E’{L2} (the L2 energy inferred from the
+L1 and L3 energy measurements). Normal events lie along the diagonal,
+while events with abnormally large L2 energy measurements lie above the
+diagonal. (Events below the diagonal may be due to L2 edge effects and
+other processes discussed in Section 3.5.2) The abnormal events occur
+predominantly at large values of E’{L2} which can only be obtained by
+nuclei which barely penetrate L2, consistent with observation (2) above.
+Figure B.2 shows two histograms of E{L2}/E’{L2}; one histogram for
+events which barely penetrate L2 (E{L3} < 170 MeV) and one for the
+remaining events (E{L3} > 170 MeV). These histograms are summed over
+all the LETs used on both Voyagers and indicate that (1) about 15
+percent of the events with E{L3} less than 170 MeV have L2 energy
+measurements which are abnormally large by an average of about 12
+percent and (2) the L2 energy measurements are essentially normal for
+events with E{L3} greater than 170 MeV.
+Three Parameter Analysis for Iron Nuclei
+The results for iron nuclei presented in Table 4.2 (8.7-15.0
+MeV/nucleon) are based on PHA events selected as follows:
+Normal iron events (i.e. those with normal L2 pulse height) were
+selected using the charge consistency requirement and charge
+boundaries discussed in Section 3.5, and were counted if the total
+energy measurement, E{L1}+E{L2}+E{L3}, was appropriate to the 8.7 -
+15.0 MeV/nucleon interval.
+Iron PHA events having abnormally large L2 pulse heights were
+identified as those events with charge measurements near (Z1=26,
+Z2=28). (Specifically, the requirement was (Z1+Z2)/2 > 25 and
+(Z1-Z2) < -0.85.) For each of the PHA events the L2 energy
+measurement was divided by 1.125 (the mean shift of the abnormal L2
+energy measurements; see Figure B.2) to obtain a corrected value
+E*{L2}. Then the event was counted if E{L1}+E*{L2}+E{L3} was
+within the total energy interval corresponding to 8.7 - 15.0
+MeV/nucleon.
+PHA events with abnormal L2 pulse heights constitute about 15 percent of
+the iron nuclei counts presented in Table 4.2. Any additional systematic
+error (beyond that discussed in Section 4.4.1) in the iron nuclei counts
+due to the abnormal L2 pulse heights should be small. For example, if no
+corrections at all are applied to the abnormal L2 energy measurements
+(as was the case for the iron abundances reported earlier in Cook et.
+al. 1979 and Cook, Stone and Vogt 1980), the resulting iron abundance
+measurements differ from those of Table 4.2 by less than 5 percent.
+Two Parameter Analysis for Iron Nuclei
+In the two parameter analysis of iron (for the fluence measurements of
+Tables 4.4 through 4.11) the multiplication effect in the L1 detectors
+was taken into account as follows:
+Iron PHA events with normal L1 pulse heights were identified as
+those events with charge measurement Z1 in the range 24.8 to 27.2
+and were binned according to energy/nucleon as described in Section
+3.4.
+PHA events with charge Z1 in the range 27.2 to 32.0 and L2+L3 energy
+measurements of less than 170 MeV are primarily due to iron nuclei
+with abnormally large L1 pulse heights, rather than nickel or other
+nuclei. Therefore, the L1 energy measurements of these events were
+divided by 1.125 before energy/nucleon binning. The remaining events
+with Z1 in the range 27.2 to 32.0 (i.e. those with E{L2}+E{L3} >
+170 MeV) are mainly nickel nuclei an were included with no L1 energy
+adjustment. All PHA events were sorted into energy/nucleon binns as
+if they were due to iron nuclei, exactly as in (1) above.
+In the two parameter iron analysis, no special treatment was applied to
+account for multiplication effects in the L2 detectors. They do not
+significantly affect the Z1 charge measurement and at most shift a small
+fraction (about 5 percent) of the PHA events which should fall in th
+7.8-8.7 MeV/nucleon interval into the 8.7 - 10.6 MeV/nucleon interval.
+The inclusion of nickel and other nuclei (27 <= Z <= 32) increases the
+fluence measurements over measurements of pure iron by roughly the
+combined abundance of these elements relative to iron, or about 10
+percent. However, the inclusion of these nuclei probably has only a
+negligible effect on the spectral index( gamma, see Section 4.5), since
+the energy spectra of the various elements of the iron group are likely
+to be similar. (Spectral index variations among the elements appear to
+be roughly ordered by nuclear charge Z, such that, in a given flare
+event, neighboring elements have similar spectral indices; see Section
+5.2. Further, the nickel to iron ratio {8.7 -15 MeV/nucleon, Table 4.2}
+is nearly constant from flare to flare.)
+The multiplication effect in the L1 detectors is potentially an
+additional source of systematic error (beyond those discussed in Section
+4.5) in the iron fluence measurements of Tables 4.4 through 4.11 and the
+iron spectral index measurements of Tabl 4.12. Upper limits to these
+possible additional errors were obtained by re- computing the fluences
+and spectral indices without the L1 energy corrections discussed in (2)
+above. The changes in the iron fluence measurements were typically less
+than 10 percent for energy bins in the range 5.0-8.7 MeV/nucleon, and
+wer zero for the other higher energy bins. The iron spectral indices
+changed by less than 5 percent. Since the actual systematic error
+induced in the iron spectral indices is probably much less than 5
+percent (and therefore is small compared to statistical error and the
+possible systematic error from other sources discussed in Section 4.5)
+this error is negligible.
+From Appendix G of Dr. H.H. Breneman’s thesis
+Appendix G Instrumental Anomalies and Other Problems
+The analysis of data form the Voyager CRS LET and HET telescopes was
+complicated by several instrumental problems. These are described in
+detail elsewhere (Breneman 1984); they are summarized here. The Flare
+analysis was treated differently from interplanetary data.
+Pulse Height ‘Multiplicaton’ Effect:
+This effect has been observed many times in numerous surfacebarrier
+detectors, both in flight and in the laboratory (Cook 1981, Breneman
+1982). Particles passing completely through a detector sometimes yield
+pulse heights that are anomalously high By about 10 - 30%). It occurs
+most often for particles with high dI/dx in the detector in question,
+and therefore at a given initial energy, the errect occurs more often
+for elements higher on the charge scale; in the data it is most
+prominent for Fe. On a delta E versus E’ plot, the effect appears as a
+more or less diffuse ‘track’ above and roughly parallel to the nominal
+track for the element, since delta E is anomalously high for the
+affected particles (Fig. G.1). A charge determination of such an event
+will of course be high, generally by ~2-3 charge units at Fe. Since the
+effect is strongly dependent on dE/dx, it is usually evident only in the
+delta E detector immediately before the E’ detector. When z is
+calculated for 3-parameter events involving such anomalous pulse
+heights, Z2 is more strongly affected than Z1, since the anomalous pulse
+height has the role of delta E for Z2, while for Z1 the same detector
+PHA usually makes only a modest contribution to E’ with delta E normal.
+On a Z1 versus Z2 plot (e.e., Fig. 3.1), the effect takes the form of a
+cluster fo events to the right of, and slightly above, the main cluster
+along the diagonal. All of the Voyager LETs show the effect for Fe;
+although its rate of occurrence varies somewhat between the different
+telescopes, it is generally in the range of ~5 - 10% of all the
+3-parameter Fe SEP events in a given telescope. The fraction of
+2-parameter events affected is larger, since the E’ detector is thinner
+and therefore a larger fraction of the data has high dE/dx in the delta
+E detector. At least one LET (Voyager 1 LET A) shows evidence for the
+effect at charges as low as 20.
+In the HETs the problem is worse in several respects. Its rate of
+occurrence at Fe, as a percentage of the total Fe event ample, is
+generally much larger than in the LETs (~40 % for Voayger 1 HET 2); it
+is clearly seen for elements as low on the charge scale as Mg in some
+telescopes (Voyager 1 HET 2 and Voyager 2 HET 2); and for 3-parameter
+events it can sometimes be seen occurring in either (or both) delta E
+detectors, rather than just the last one, resulting in several displaced
+clusters of events in those telescopes (Voyager 1 HET 1 and Voayger 2
+HET 2).
+Two actions were necessary to deal with this problem. For abundant
+elements affected by the problem, mainly Fe and Ni, the 3-parameter
+charge consistency requirement was made lenient enough to include the
+particles affected by pulse height multiplication. The rate of
+occurrence in LET for elements lower than Fe was negligible compared to
+other sources of uncertainty in the abundance determination, and no
+correction was made for these elements. Based on the observed rates in
+some HET telescopes for the abundant elements (e.e., Fig. G.2 for
+Voayger 1 HET 2), the rate of occurrence in these thelscopes for
+elements in the Z = 17-25 charge range was significant even though
+limited statistics make it less apparent and less quantifiable. However,
+HET data were not used for these elements for the reasons given in
+Section 3.3.
+In addition, the energy loss in the delta E detector had to be corrected
+in an approximate way for affected events, so that the total incident
+energy, which is required for constructing energy spectra, would be
+accurate.
+For 2-parameter events, there is no second independent determination fo
+Z to permit unambiguous separation of normal and abnormal events. This
+is not a serious problem for abundant elements, since the only abundant
+element significantly affected is Fe, which has no other elements of
+comparable abundance near it on the charge scale with which it could be
+confused. For rare elements the situation would be more serious, but as
+noted in Section 3.3, 2-parameter data were not used for rare element
+abundances due to excessive background contamination from other sources.
+LET Telescope ID Tag Bit Errors at High Counting Rates:
+For each Block I or Block II LET event, there is a single tag bit which
+specifies from whih LET telescope in that Block the event originated. A
+near coincidence in the triggering of LETs A and B, as is possible
+during periods of very high count rates, can result in the bit being set
+for a LET A event, causing that event to be read out as a LET B event
+(similarly for C and D). Since the bit is ordinarily set only for LET B
+events and is otherwise not set, LET A events can be misidentified as
+LET B events but never the reverse.
+The telescope identification bit is used in all subsequent data analysis
+to determine the appropriate detector thicknessess and gains to use in
+calculating energy losses in the detectors and, ultimately, the charge
+of the particle. If the telescope identification is erroneous, incorrect
+thicknesses and gains are used in the calculations, resulting in
+incorrect determinations of Z. The magnitude and sign of the discrepancy
+in Z depends only on the (coincidental) relationship between the
+thicknesses of the detectors in the paired telescopes, and, to a lesser
+degree, differences in the energy calibrations fo the respective
+detectors.
+On a Z1 versus Z2 plot of 3-parameter Voyager data, this effect has the
+appearance of small clusters of events displaced slightly from the main
+clusters along the diagonal for all the more abundant elements. It
+appears only in plots of the B and D telescopes, sine it is events with
+these identifications which contain some misidentified particles. In the
+Voyager flight data the effect is noticeable only during flare period 7,
+for which the peak LET B singles rate is ~ 5 * 10^3^/sec, the highest
+seen during the Voayger mission through August 1984. Its rate of
+occurrence is about 3% at this peak rate, an average of about 1% for
+flare period 7 as a whole, and is the same for all elements for which
+statistics permit a measurement. On delta E versus E’ plots of both 2-
+and 3-parameter data, these effects have the appearance of ‘ghost’
+tracks falling between or partially overlapping the real tracks of
+nearby elements (Fig. G.3).
+Later laboratory work using the backup GRS and pulse generators (Martin
+1983) was able to reproduce the effect with greatly improved statistics,
+and verified the magnitude of the time constant (~6 micro-seconds)
+implied by the flight data while extending coverage to event rates more
+than an order of magnitude above the highest seen in the flight data.
+The impact of this problm on the data analysis is relatively minor. For
+3-parameter data, the previously chosen charge consistency requirement
+is restrictive enough to easily exclude the misidentified events; the
+amount of data lost is an insignificant 0.2% of the total, and the
+remaining data set is as ‘clean’ as that from the other telescopes.
+The problem is more serious for the 2-parameter data, since there is no
+second determination of Z to permit separation of the normal and
+abnormal events; it is an unremovable source of background in the data.
+For abundant elements this is unimportant, since the error introduced by
+this background is on the order of 1 % or less. But the problem would be
+serious for rare elements in cases where the ‘ghost’ track of an
+abundant element overlaps the true location fo a rare element, since
+even 1 % of an abundant element could seriously contaminate a much rarer
+element. However, as noted previously, the 2-parameter LET data are not
+useful in obtaining rare element abundances on account of other
+background contributions.
+LET L1 Detector Jupiter Encounter Radiation Damage and Post-Encounter Annealing:
+As a result of their exposure to intense charged particle fluxes in the
+inner Jovian magnetosphere during the 1979 Jupiter encounters, the L1
+detectors of the LETs experienced radiation damage which can be modeled
+as a reduction in the ‘effective thickness’ of the detectors. It is
+thought to be due to the implantation of energetic oxygen and sulfur
+ions known to be present in the inner Jovain magnetosphere (Gehrels
+1982). Although all LETs on both spacecraft were affected to some
+degree, the Voayger 1 LETs were affected much worse than those on
+Voyager 2, since the former spacecraft passed closer to Jupiter and
+experienced a more intense radiation environment. On each spacecraft,
+LET C was by far the most seriously affected; this telescope was
+sparially oriented so as to receive the most intense radiation exposure
+during the Jupiter encounters. (LET B on Voyager 2 experienced unrelated
+types of radiation damage during the Jovian encounter and has returned
+no data since the encounter.) The front detectors of the HETs, being
+much thicker than those of the LETs and pro- tected by a thicker window,
+showed no detectable effective thichness reduction.
+The impact of the radiation damage on the post-Jupiter data is apparent
+as a shift in the location fo the element tracks on a delta E versus E’
+plot of data from flares 16 and 17, the first large post-Jupiter flares,
+relative to their location in plots of pre-Jupiter flares. Similarly, Z1
+versus Z2 plots of flares 16 and 17 show Z values shifted from their
+proper values when Z is calculated using the detector thicknesses
+measured before launch, which served adequately for all pre- Jupiter
+flares. The change in effective thickness appears to be somewhat
+dependent on Z, with the magnitude of the reduction increasing with Z
+for any given detector. Furthermore, with the passage of time the
+radiation damage seems to gradually undergo a partial reversal. This
+‘annealing’ effect is evident in data from the later large flares, 20
+and 24, which show less shift in Z than do the flares immediately
+following Jupiter encounter.
+In the analysis of post-Jupiter data, this problem was dealt with by
+adjusting the L1 detector thicknesses used in the calculation of Z so as
+to make the calculated charges fall in the proper places on the charge
+scale. Flares 16 and 17 were used to define the required shift for the
+more abundant elements; a linear or weakly quadratic function of Z was
+fit to these to define the Z dependence for all Z. Data from flare
+periods 20 and 24 were used in conjunction with the flare 16/17 data to
+mathematically characterize the time-dependence of the annealing effect,
+by fitting to a decaying-exponential function of time. This procedure,
+repeated for each LET, defined the L1 thickness to be used in analyzing
+any given post-Jupiter event. The adjustment of the L1 thickness was
+then incorporated into the iterative cycle for calculating Z. The
+radiation damage did not have a noiceable effect on the inherent charge
+resolution of the telescopes, so with the above modifications the
+post-Jupiter flare data could be treated the same way as the pre-Jupiter
+data.
+Table G.1 lists the adjustment made to the thickness for each L1
+detector cor carbon and iron at two different times during the
+post-Jupiter phase. The actual expression for the thickness L(Z,t) of
+each L1 detector was given by
+L(Z,t) = L0 - deltaL0(Z) + K exp(delta t / 562.56)
+where K is a constant, L0 is the pre-Jupiter thickness, delta t is the
+time since the Jupiter encounter in days, and deltaL0(z) is the linear
+or quadratic function of Z that closely fits the required thickness
+changes for the first post-Jupiter flares.
+Voyager 2 LET C Temporary Gain Shift:
+During the time period 1978 APR 3 - June 9, the L1 detector of LET C on
+Voayger 2 experienced, for unknown reasons, a temporary gain shift (~
+47 % decrease) and an associated excessively high L1 count rate (~ 9*
+10^3^/sec). The gain shift and excessive count rate set in abruptly,
+remained nearly constant until about May 29, and then gradually reverted
+to their former levels; a very slight decline during the central phase
+was consistent with the decrease in the intensity of sunlight during the
+smae time period and suggests the possibility of a light leak in the
+telescope’s aluminum window.
+The effect on the data was to shift the locations of the element tracks
+on a delta E versus E’ plot, and yield shifted charge estimates when
+nominal gain factors were used in the analysis. The only flares
+occurring duting this time period were the three large events of flare
+period 7. Since the gain was constant at the shifted value during these
+flares, the data could be analyzed by generating the appropriate gain
+factors by fitting the oxygen flight data from flare period 7 in the
+manner described in Appendix A. The resulting values are included in
+Table A.1.
+This anomaly was previously noted (Cook 1981), and the telescope was
+rejected for analysis because of the problem. However, since the energy
+calibration used in the analysis is easily adjusted to compensate for
+the problem, since the charge resolution and background of the telescope
+do not seem to be affected by the problem and since the three 7 flares
+include a major fraction of all SEP data, it was decided to inlude
+Voayger 2 LET C in the analysis with the special treatment described
+above.
+CRS Instrument Configuration Changes:
+At certain times during the Voayger mission, the configuration of the
+CRS instruments was changed in ways that influence data analysis. At the
+beginning of each flight the LETs were configured to require triggering
+of the L3 detector for pulse height analysis; that is, only 3- parameter
+events were analyzed. About 12 days after launch the L3 coincidence
+requirement was removed, permitting both 2- and 3-parameter events to be
+analyzed. For Voyager 2 this occurred before the first flares were seen,
+but on Voyager 1 flares 1a and 1b occurred before the configuration was
+changed, so no 2-parameter events were obtained from these flares. A
+similar situation occurred on 17 Jun 1978 when Voyager 1 LET C was
+switched back to requiring L3 coincidence. Thus for all flares from 8
+onward there are no 2-parameter events from this telescope. These
+situations required changes in the weightings of 2-parameter relative to
+3-parameter events for the affected spacecraft and flares. There could
+still be a residual abundance bias in flares 1a dna 1b if the particle
+composition was energy-dependent and if the two spacecraft saw particles
+with different spectra, but the possibility of a bias comparable to the
+statistical uncertainty in the abundances is very unlikely.
+Another important configuration change is the HET gain state. Normally
+the instrument cycles between high and low gain modes, but after Jupiter
+encounter HET 1 on Voyager 2 was switched to a high-gain-only mode, so
+no post-Jupiter SEP heavy ion data were obtained from this telescope.
+This required changes in the partile wwighting factors of HET relative
+to LET for Voyager 2 for all post-Jupiter flares.
+The event weighting factors tabulated in Table 3.8 include the effects
+of all instrument configuration changes.
+Voyager 1 Block I PHA Problem:
+On 1982 Feb 8 hour 22 (CRS volume 179033), the Voyager 1 CRS experienced a failure affecting
+the readout of PHA information from the Block I telescopes (LETs A and B and HET 1). The
+result of the failure is that in place of PHA2, the instrument reads out whichever of the three
+PHAs has the largest numerical value. In addition, PHA2 got an additional +10 channel offset.
+If PHA2 happens to be numerically the largest pulse height, as is true over some energy ranges,
+the event can be analyzed normally (after subtracting the 10 channel offset); otherwise some
+information is lost. The effect of this problem is that some of the 2-parameter events are lost
+completely, and that some of the 3-parameter events are degraded to 2-parameter events.
+In addition, the CRS team concluded that at the same time a more subtle effect affected all PHAs,
+those in Block I and Block II, and to correct for that effect the average channel width in MeV
+between channel 0 and channel 512 was added to the energy associated with the PHA number.
+About NASA
+Accessibility Statement
+FOIA
+No FEAR Act
+Vulnerability Disclosure Policy
+NASA Official: Adam Szabo
+Site Curator: Ayris Narock
+Last Updated: Nov 19, 2025

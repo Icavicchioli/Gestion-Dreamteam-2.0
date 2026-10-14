@@ -1,0 +1,169 @@
+Copia de lectura obtenida mediante herramienta web. No es el HTML original.
+Consulta: 2026-10-14
+URL: https://www.jpl.nasa.gov/news/engineers-diagnosing-voyager-2-data-system-update/
+
+Engineers Diagnosing Voyager 2 Data System -- Update | NASA Jet Propulsion Laboratory (JPL) (https://www.jpl.nasa.gov/news/engineers-diagnosing-voyager-2-data-system-update/)
+citeturn24view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.jpl.nasa.gov/news/engineers-diagnosing-voyager-2-data-system-update/","lineno":7}); Total lines: 244
+L0: Skip to main content
+L1: 
+L2: cite0†Image: JPL Logo L3: 
+L4: cite1†Solar System L5: 
+L6: .4 min read
+L7: # Engineers Diagnosing Voyager 2 Data System -- Update
+L8: 
+L9: May 24, 2010
+L10: 
+L11: This artist's rendering depicts NASAs Voyager 2 spacecraft as it studies the outer limits of the heliosphere - a magnetic 'bubble' around the solar system that is created by the solar wind.
+L12: 
+L13: Credit: NASA/JPL-Caltech.
+L14: 
+L15: Engineers successfully reset a computer onboard Voyager 2 that caused an unexpected data pattern shift, and the spacecraft resumed sending properly formatted science data back to Earth on Sunday, May 23
+L16: Updated May 24, 2010 at 5:30 p.m. PDT
+L17: Engineers successfully reset a computer onboard Voyager 2 that caused an unexpected data pattern shift, and the spacecraft resumed sending properly formatted science data back to Earth on Sunday, May 23. Mission managers at NASA's Jet Propulsion Laboratory in Pasadena, Calif., had been operating the spacecraft in engineering mode since May 6.
+L18: They took this action as they traced the source of the pattern shift to the flip of a single bit in the flight data system computer that packages data to transmit back to Earth. In the next week, engineers will be checking the science data with Voyager team scientists to make sure instruments onboard the spacecraft are processing data correctly.
+L19: Updated May 20, 2010 at 6:00 p.m. PDT
+L20: Engineers have successfully corrected the memory on NASA's Voyager 2 spacecraft by resetting a computer bit that had flipped. Reset commands were beamed up to the spacecraft yesterday, Wed., May 19, and engineering data received today confirm that the reset was successful. The Voyager team will continue monitoring the engineering data, and if the bit remains reset, commands to switch to the science data mode will be beamed up to Voyager 2 on Sat., May 22.
+L21: Receipt of science data would then resume on Sun., May 23.
+L22: Updated May 17, 2010 at 5:00 p.m. PDT
+L23: 
+L24: One flip of a bit in the memory of an onboard computer appears to have caused the change in the science data pattern returning from Voyager 2, engineers at NASA's Jet Propulsion Laboratory said Monday, May 17. A value in a single memory location was changed from a 0 to a 1.
+L25: On May 12, engineers received a full memory readout from the flight data system computer, which formats the data to send back to Earth. They isolated the one bit in the memory that had changed, and they recreated the effect on a computer at JPL. They found the effect agrees with data coming down from the spacecraft. They are planning to reset the bit to its normal state on Wednesday, May 19.
+L26: 
+L27: May 06, 2010
+L28: Engineers have shifted NASA's Voyager 2 spacecraft into a mode that transmits only spacecraft health and status data while they diagnose an unexpected change in the pattern of returning data. Preliminary engineering data received on May 1 show the spacecraft is basically healthy, and that the source of the issue is the flight data system, which is responsible for formatting the data to send back to Earth. The change in the data return pattern has prevented mission managers from decoding science data.
+L29: The first changes in the return of data packets from Voyager 2, which is near the edge of our solar system, appeared on April 22. Mission team members have been working to troubleshoot and resume the regular flow of science data. Because of a planned roll maneuver and moratorium on sending commands, engineers got their first chance to send commands to the spacecraft on April 30.
+L30: It takes nearly 13 hours for signals to reach the spacecraft and nearly 13 hours for signals to come down to NASA's Deep Space Network on Earth.
+L31: Voyager 2 launched on August 20, 1977, about two weeks before its twin spacecraft, Voyager 1. The two spacecraft are the most distant human-made objects, out at the edge of the heliosphere, the bubble the sun creates around the solar system. Mission managers expect Voyager 1 to leave our solar system and enter interstellar space in the next five years or so, with Voyager 2 on track to enter interstellar space shortly afterward. Voyager 1 is in good health and performing normally.
+L32: "Voyager 2's initial mission was a four-year journey to Saturn, but it is still returning data 33 years later," said Ed Stone, Voyager project scientist at the California Institute of Technology in Pasadena. "It has already given us remarkable views of Uranus and Neptune, planets we had never seen close-up before. We will know soon what it will take for it to continue its epic journey of discovery."
+L33: 
+L34: The original goals for the two Voyager spacecraft were to explore Jupiter and Saturn.
+L35: As part of a mission extension, Voyager 2 also flew by Uranus in 1986 and Neptune in 1989, taking advantage of a once-in-176-year alignment to take a grand tour of the outer planets. Among its many findings, Voyager 2 discovered Neptune's Great Dark Spot and 450-meter-per-second (1,000-mph) winds. It also detected geysers erupting from the pinkish-hued nitrogen ice that forms the polar cap of Neptune's moon Triton.
+L36: Working in concert with Voyager 1, it also helped discover actively erupting volcanoes on Jupiter's moon Io, and waves and kinks in Saturn's icy rings from the tugs of nearby moons.
+L37: Voyager 2 is about 13.8 billion kilometers, or 8.6 billion miles, from Earth. Voyager 1 is about 16.9 billion kilometers (10.5 billion miles) away from Earth.
+L38: 
+L39: The Voyagers were built by JPL, which continues to operate both spacecraft. Caltech manages JPL for NASA.
+L40: 
+L41: For more information about the Voyagers, visit: cite2†http://voyager.jpl.nasa.gov/†voyager.jpl.nasa.gov .
+L42: ## Media Contacts
+L43: 
+L44: Jia-Rui Cook
+L45: 
+L46: Jet Propulsion Laboratory, Pasadena, Calif.
+L47: 
+L48: 818-354-0724
+L49: 
+L50: jccook@jpl.nasa.gov
+L51: 
+L52: 2010-151
+L53: ## Related News
+L54: 
+L55: cite3†Mars.NASA’s Perseverance Rover Watches Earth Vanish Behind Martian Moon L56: 
+L57: cite4†Solar System.NASA Engineers Help Prolong Voyager 2’s Science Mission L58: 
+L59: cite5†Solar System.NASA’s Juno Takes Temperature of Jupiter’s Fiery Moon Io L60: 
+L61: cite6†Solar System.NASA’s Psyche Mission Delivers Mars Flyby Data, Time-lapse Video L62: 
+L63: cite7†Solar System.NASA Testing Advanced Capabilities for Moon, Mars Rovers L64: 
+L65: cite8†Solar System.NASA’s Psyche Mission Aces Mars Flyby, Targets Metal-Rich Asteroid L66: cite9†Mars.NASA’s Perseverance Rover Snaps Selfie in Mars’ Western Frontier L67: 
+L68: cite10†Mars.NASA’s Perseverance, Curiosity Panoramas Capture Two Sides of Mars L69: 
+L70: cite11†Mars.NASA’s Curiosity Finds Organic Molecules Never Seen Before on Mars L71: 
+L72: cite12†Solar System.NASA Shuts Off Instrument on Voyager 1 to Keep Spacecraft Operating L73: 
+L74: About JPL
+L75: 
+L76: cite13†Who We Are L77: 
+L78: cite14†Directors L79: 
+L80: cite15†Careers†www.jpl.jobs L81: 
+L82: cite16†Internships L83: 
+L84: cite17†The JPL Story L85: 
+L86: cite18†JPL Achievements L87: 
+L88: cite19†Documentary Series L89: 
+L90: cite20†JPL Annual Report L91: cite21†Executive Council L92: 
+L93: Missions
+L94: 
+L95: cite22†Current L96: 
+L97: cite23†Past L98: 
+L99: cite24†Future L100: 
+L101: cite25†All L102: 
+L103: News
+L104: 
+L105: cite26†All L106: 
+L107: cite27†Earth L108: 
+L109: cite28†Solar System L110: 
+L111: cite29†Stars and Galaxies L112: 
+L113: cite30†Eyes on the News L114: 
+L115: cite31†Subscribe to JPL News L116: 
+L117: Galleries
+L118: 
+L119: cite32†Images L120: 
+L121: cite33†Videos L122: 
+L123: cite34†Audio L124: 
+L125: cite35†Podcasts L126: 
+L127: cite36†Apps L128: 
+L129: cite37†Visions of the Future L130: 
+L131: cite38†Slice of History L132: 
+L133: cite39†Robotics at JPL L134: 
+L135: Events
+L136: 
+L137: cite40†Lecture Series L138: 
+L139: cite41†Speakers Bureau L140: 
+L141: cite42†Calendar L142: 
+L143: cite43†Explore JPL L144: 
+L145: Visit
+L146: 
+L147: cite44†Public Tours L148: 
+L149: cite45†Virtual Tour L150: 
+L151: cite46†Directions and Maps L152: cite43†Explore JPL L153: 
+L154: Topics
+L155: 
+L156: cite47†JPL Life L157: 
+L158: cite1†Solar System L159: 
+L160: cite48†Mars L161: 
+L162: cite49†Earth L163: 
+L164: cite50†Climate Change L165: 
+L166: cite51†Exoplanets L167: 
+L168: cite52†Stars and Galaxies L169: 
+L170: cite53†Robotics L171: 
+L172: More
+L173: 
+L174: cite54†Asteroid Watch L175: 
+L176: cite55†NASA's Eyes Visualizations†eyes.nasa.gov L177: 
+L178: cite56†Universe - Internal Newsletter L179: 
+L180: cite57†Social Media L181: 
+L182: cite58†Accessibility at NASA†www.nasa.gov L183: 
+L184: cite59†Contact Us L185: 
+L186: Get the Latest from JPL
+L187: 
+L188: [Input: Enter your email address]
+L189: 
+L190: Follow Us
+L191: 
+L192: JPL is a federally funded research and development center managed for NASA by Caltech.
+L193: More from JPL
+L194: 
+L195: cite15†Careers†www.jpl.jobs cite60†Education cite61†Science & Technology†scienceandtechnology.jpl.nasa.gov cite62†Acquisition†acquisition.jpl.nasa.gov cite63†JPL Store†thejplstore.com L196: 
+L197: cite15†Careers†www.jpl.jobs L198: 
+L199: cite60†Education L200: 
+L201: cite61†Science & Technology†scienceandtechnology.jpl.nasa.gov L202: 
+L203: cite62†Acquisition†acquisition.jpl.nasa.gov L204: 
+L205: cite63†JPL Store†thejplstore.com L206: 
+L207: Related NASA Sites
+L208: 
+L209: cite64†Basics of Spaceflight†solarsystem.nasa.gov L210: 
+L211: cite65†NASA Kids Science - Earth†science.nasa.gov L212: cite66†Earth / Global Climate Change†climate.nasa.gov L213: 
+L214: cite67†Exoplanet Exploration†exoplanets.nasa.gov L215: 
+L216: cite68†Mars Exploration†mars.nasa.gov L217: 
+L218: cite69†Solar System Exploration†solarsystem.nasa.gov L219: 
+L220: cite70†Space Place†spaceplace.nasa.gov L221: 
+L222: cite55†NASA's Eyes Visualization Project†eyes.nasa.gov L223: 
+L224: cite71†Voyager Interstellar Mission†voyager.jpl.nasa.gov L225: 
+L226: cite72†NASA†www.nasa.gov L227: 
+L228: cite73†Caltech†www.caltech.edu L229: 
+L230: cite74†Privacy L231: 
+L232: cite75†Image Policy L233: 
+L234: cite76†FAQ L235: 
+L236: cite77†Feedback L237: 
+L238: Version: v3.2.0 - 38db01a
+L239: Site Managers:Emilee Richardson, Alicia Cermak
+L240: 
+L241: Site Editors:Steve Carney
+L242: 
+L243: CL#:21-0018
+

@@ -1,0 +1,5431 @@
+
+--- PAGINA PDF 1 ---
+JPL PUBLICATION 77-41, VOLUME I1
+ 
+Voyager Electronic Parts
+ 
+Radiation Program
+ 
+Volume I1: Test Requirements and
+ 
+Procedures
+ 
+Alan G. Stanley
+ 
+Keith E. Martin
+ 
+William E.. Price 
+N79-14273
+(NASA-CR-157844) VOYAGER ELECTRONIC PARTS 
+TEST
+RADIATION PROGRAM. VOLUME 2: 
+REQUIREMENTS AND PROCEDURES (Jet propulsion
+ 
+Unclas
+Lab.) 98 p HC A05/MF A01 CSCL 20N 
+G3/32 40838
+ 
+December 15,1978 
+National Aeronautics'and '"C 
+Space Administration 
+Jet Propulsion Laboratory .
+ 
+California Institute of Technology
+ 
+'Pasadena, California
+ 
+
+--- PAGINA PDF 2 ---
+JPL PUBLICATION 77-41, VOLUME II
+
+Voyager Electronic Parts 
+Radiation Program 
+Volume I1: Test Requirements and 
+Procedures 
+Alan G. Stanley 
+Keith E. Martin 
+William E. Price 
+December 15, 1978 
+National Aeronautics and 
+Space Administration 
+Jet Propulsion Laboratory
+
+California Institute of Technology
+Pasadena, California
+
+
+
+--- PAGINA PDF 3 ---
+The research described inthis publication was carried out 
+by the Jet Propulsion Laboratory, California Institute of 
+Technology, under NASA Contract No NASZ-IO0 
+
+--- PAGINA PDF 4 ---
+PREFACE
+
+The work described in this report was performed by the Information
+
+Systems Division of the Jet Propulsion Laboratory under the cognizance
+
+of the Voyager Project.
+
+Documents outlining the conditions and requirements of the test
+
+program, which make up Appendixes A through E of this report, are publish­
+ed here as Volume II. These Appendixes are as follows:
+
+Appendix A -- Electron Simulation Radiation Test Specification 
+for Voyager Electronic Parts and Devices 
+Appendix B -- Electronic Piece-Part Testing Program for Voyager 
+Appendix C -- Test Procedure for Radiation Screening of Voyager 
+Piece Parts 
+Appendix D -- Boeing In Situ Test Fixture 
+Appendix E -- Irradiate - Anneal (IRAN) Screening Documents 
+The Voyager Project was formerly designated the Mariner Jupiter/Saturn
+
+1977 Project, and some of the publications cited in this report bear the
+
+earlier Project nomenclature.
+
+iii 
+
+--- PAGINA PDF 5 ---
+ABSTRACT
+
+Test requirements and procedures for the Voyager electronic parts
+
+radiation program are set forth in'detail as Appendixes to JPL Publication
+
+77-41, Volume I. Together, the two volumes describe the program philoso­
+phy, radiation environment, device hardening efforts, and radiation test
+
+methods. Test results of more than 200 device types are summarized in
+
+Volume I.
+
+iv
+
+
+
+--- PAGINA PDF 6 ---
+CONTENTS
+
+APPENDIXES
+
+A. 	 ELECTRON SIMULATION RADIATION TEST SPECIFICATION 
+FOR VOYAGER ELECTRONIC PARTS AND DEVICES -------------- A-i 
+B. 	 PIECE-PARTS TEST PLAN -------------------------------- B-i 
+C. 	 TEST PROCEDURE FOR RADIATION SCREENING OF 
+VOYAGER PIECE PARTS ---------------------------------- C-1 
+D. 	 BOEING IN SITU TEST FIXTURE -------------------------- I-1 
+E. 	 IRRADIATE-ANNEAL (IRAN) SCREENING DOCUMENTS ---------- E-1 
+Figures
+
+A-I. 	 Ionization Energy Deposition and 3-MeV Electron
+
+Equivalent Displacement Damage in Silicon ------------ A-14
+
+A-2. Ionization Energy Deposition and 20-MeV Proton
+
+Equivalent Displacement Damage in Silicon------------ A-14
+
+A-3. Ionization Energy Deposition and 1-MeV Neutron
+
+Equivalent Displacement Damage in Silicon ------------ A-15
+
+A-4. Gamma Ionization Energy Deposition in Silicon -------- A-15
+
+B-I. JPL Dynamitron Test Setup ---------------------------- B-4 
+C-I. JPL Lot Screening Radiation Test Traveler and Sign-Off Sheet ----------------------------------­ C-5 
+0-2. Joint Circuit Sign-Off Sheet-------------------------- C-6 
+C-3. Sample RTR ------------------------------------------- C-7 
+C-4. Test Bias Circuit ------------------------------------ C-14 
+D-1. Typical Measurement Circuit for Analog Switch, 
+Integrated Circuits ---------------------------------- D-2 
+D-2. Front View of the Test Fixture With 1.27 cm (1/2 in.) 
+Aluminum Shield Removed ----------------------------- 4 
+D-3. Rear View of the Test Fixture ------------------------ D-5 
+D-4. Interface Panel --------------------------------------D-6 
+D-5. Block Diagram of Remote Test Fixture ----------------- D-7 
+v 
+
+--- PAGINA PDF 7 ---
+D-6. Block Diagram of Overall Test System ----------------­ D-8 
+E-I. IRAN Screening Program Procedure --------------------­ E-3 
+E-2. Master Log of IRAN Parts -------------------------­ E-9 
+E-3. JPL IRAN Test Traveler ------------------------------­ E-10 
+E-4. Sample of Raw Test Data, JPL IRAN Program ------------­ 11 
+E-5. Sample of Final Test Data, JPL IRAN Program ---------­ E-12 
+E-6. Data Sheet, Device Socket No./Device Serial No.------­ E-13 
+E-7. Flatpack Device/Carrier Orientation -----------------­ E-43 
+E-8. Sample Anneal Data Sheet ---------------------------­ 44 
+Tables
+
+A-I. 	 Category of Parts and Required Test Environments ----- A-3 
+A-2. 	 Ionization Damage Radiation Levels for Testing 
+Voyager Parts (Sequential Testing) ------------------- A-5 
+A-3. 	 Displacement Damage Radiation Levels for Testing 
+Voyager Parts, Using 3-MeV Electrons Incident 
+on the Test Part (Sequential Testing) ---------------- A-5 
+A-4. 	 Displacement Damage Radiation Levels for Testing
+
+Voyager Parts, Using 4.5-MeV Electrons Incident
+
+on the Test Part (Sequential Testing) ---------------- A-8
+
+A-5. 	 Radiation Induced Electronic Noise Background
+
+Fluxes and Dose Rates for Testing Voyager Parts
+
+or Devices ------------------------------------------- A-8
+
+A-6. 	 Tolerance Limits for Radiation Tests ----------------- A-9
+
+A-7. Equivalent Displacement Damage and Ionization Dose 
+Conversion Factors ----------------------------------- A-13 
+A-8. 1-MeV Neutron Damage Constants KT(cm2/s) ------------- A-17 
+A-9. 3-MeV Electron Damage Constants K(cm2/s)------------ A-18 
+A-10. 20-MeV Proton Damage Constants KT(cm2/s) -------------- 19 
+A-11. Summary of Estimates of Relative Displacement 
+Effectiveness in Silicon ----------------------------- A-20 
+B-I. 3-MeV Equivalent Test Levels ------------------------- B-3 
+vi 
+
+--- PAGINA PDF 8 ---
+C-I. Acceptance Criteria for Irradiated Integrated 
+Circuits Subject to Screening ------------------------ C11 
+E-i. JPL-Furnished Part Types for IRAN Test --------------- E-2 
+E-2. IRAN Parameter Testing ------------------------------- E-5 
+E-3. Equipment Required for IRAN Test Performance --------- E-7 
+E-4. Test Setup Matrix ------------------------------------ E-33 
+vii
+
+
+
+--- PAGINA PDF 9 ---
+APPENDIX A
+
+ELECTRON SIMULATION RADIATION TEST SPECIFICATION
+
+FOR VOYAGER ELECTRONIC PARTS AND DEVICES*
+
+A. Sco e
+
+This specification establishes the Jovian electron simulation
+ 
+radiation test requirements for shielded parts and devices used in the
+ 
+Voyager spacecraft. These requirements are based on the Voyager design
+
+requirements for electronic parts contained in the spacecraft bus.
+
+These parts are protected by the inherent shielding provided by the
+ 
+subsystem structure as well as any mass shielding used to reduce the
+
+radiation levels within the subsystem. Consequently, the requirements
+
+should not be used in conjunction with any subsystem or system level
+
+radiation tests or any other radiation tests designed to evaluate materi­
+als or devices which are exposed to the external radiation environment.
+
+The electron radiation test consists of:
+
+a) Radiation damage tests
+ 
+b) Radiation induced electronic noise background tests.
+
+In most cases b) is not required since the interference effects
+
+caused by photocurrents are negligible. This is because the photocurrents
+
+generated are powers of magnitude smaller than the operating currents.
+
+The major exception to this rule is provided by sensitive photode­
+tectors capable of detecting single photons. Interference effects in
+
+such devices must be measured in a separate test program reflecting
+ 
+actual operating conditions of the systems. A 60Co source provides a
+
+suitable radiation environment for this purpose.
+
+B. Aplicable Documents
+
+"Mariner Jupiter/Saturn 1977 Environmental Design Requirements,
+
+"Rev. A, by Tom Gindorf, Oct. 13, 1976, in MJS77 Functional Requirements,
+
+618-205, (various dates), Jet Propulsion Laboratory, Pasadena, California,
+
+(JPL internal document).
+
+C. Requirements
+
+1. Parts to be Tested
+
+Parts or devices to be tested shall be selected by the Electronic
+
+Parts Engineering Section in conjunction with the Voyager
+
+*This Appendix was originally published as Appendixes C and E of Ref. A-I.
+
+A-i
+
+
+
+--- PAGINA PDF 10 ---
+subsystem Cognizant Engineer from the Voyager parts list or
+
+alternative parts under consideration. As a goal, the number
+
+of samples of each part type to be tested shall be suffi­
+ciently large to provide meaningful statistical results
+
+on performance. Furthermore, the parts should be of flight
+
+quality, traceable to a manufacturer's lot number, and have
+
+been previously tested electrically to verify their adherence
+
+to manufacturer's specifications. When flight quality parts
+
+are not available, commercially available parts may be used,
+
+but the quality of the parts and the screening procedure shall
+
+be noted in the test plan.
+
+a) Unit Mechanical Configuration
+
+Parts or devices shall be in their mechanical
+
+configuration as received from the manufacturer.
+
+Particularly, parts or devices shall be in their regular
+
+can to insure mechanical integrity and protection.
+
+However, no additional shielding shall be provided
+
+during the radiation test.
+
+b) Unit Electrical Operating Mode
+
+During the radiation test the parts or devices shall
+
+have electrical bias applied which represents the worst
+
+case electrical mode of the parts during operation with
+
+respect to radiation effects.
+
+c) Unit Performance
+
+The parts and devices shall conform to the requirements
+
+and specifications of the pertinent manufacturer. The
+
+electrical measurements which determine the acceptance
+
+or failure of the parts and devices will be established
+
+by the Electronic Parts Engineering Section in conjunction
+
+with the pertinent Voyager subsystem Cognizant Engineer
+
+and documented in the detailed test plan.
+
+d) Preirradiation Functional Test
+
+All parts and devices shall be electrically tested prior
+
+to irradiation testing to demonstrate that their
+
+performance characteristics are within the requirements
+
+specified in paragraph c). These electrical tests shall
+
+be identical to the postirradiation electrical tests.
+
+2. Radiation Classification of Parts
+
+Parts and devices shall be classified as to the type of
+
+radiation damage to which they are most susceptible in
+
+accordance with Table A-i, which is a summary of the categories
+
+of parts and required test environments.
+
+A-2
+
+
+
+--- PAGINA PDF 11 ---
+Table A-I. Category of Parts and Required Test Environments 
+Predominant Test 
+Parts Effect Environment 
+Group Expected Required Parts 
+Group I Ionization Gammas or MOSFETS 
+Electrons MOS IC 
+CMOS IC 
+JFET (IGS and IDSS only) 
+SCR (except breakover voltage) 
+Optical Materials 
+Small Signal Bipolar Transistors with 
+i fT > 10 MHz and in use emitter current density 
+< 0.1 a/cm2 (Except inverse beta). 
+Group II 
+a. Combined Electron Unijunction Transistor 
+Ionization Phototransistor 
+and Displacement Photodiode (LED) 
+OP AMP 
+Chopper Transistor 
+Inverse Beta for any Transistor 
+Detectors 
+Matched Dual Transistors (Bipolar of JFET) 
+Bipolar Transistors with fT < 10 MHz or in use 
+emitter current density > 0.1 a/cm2 or unknown 
+emitter area. 
+SCR (breakover voltage) 
+b. Displacement Electron 
+
+--- PAGINA PDF 12 ---
+3. Radiation Tests
+
+Four types of radiation tests are defined:
+
+a) Ionization Damage.
+ 
+b) Combined Ionization and Displacement Damage.
+
+c) Bulk Displacement Damage.
+
+d) Radiation Induced Electronic Noise Background.
+
+Each of these tests is specified with appropriate test levels
+
+at which the parts shall demonstrate a capability as defined
+
+in Ref. A-I. For those parts which are not expected to
+
+have a capability at the design requirement, additional
+
+lower test levels may be required for characterization.
+
+a) Ionization Damage
+
+Parts and devices which are primarily sensitive
+
+to ionization damage shall be tested to evaluate
+
+damage at the radiation levels specified in
+
+Table A-2 as a minimum, using either a 
+ 60 C0
+ 
+gamma source or a steady-state dc electron
+
+accelerator, whichever is more practical.
+
+If the tests are to be performed using a de
+
+electron accelerator, the electron flux shall
+
+have an energy sufficient to penetrate the
+
+can, housing, chassis, or other structural
+
+material shielding the sensitive electronic
+
+material of the part or device. It should
+
+be noted that the total accumulated fluence
+
+and dose in Table A-2 are the summation of
+
+fluences and doses obtained by performing each
+
+of the 3 exposures sequentially. Table A-7
+
+or Figure A-I shall be used to calculate dose
+
+from electrons.
+
+If tests are to be performed using a 60 Co
+
+gamma source the test parts shall be covered
+
+with a thickness of Lucite, Teflon, or equivalent
+
+material in the amount of 450 mg/cm2 to provide
+
+buildup of electronic equilibrium at the surface
+
+of the test part.
+
+b) Combined Ionization and Displacement Damage
+
+Parts and devices which are sensitive to both
+
+displacement damage and ionization damage shall
+
+be tested to evaluate damage at the radiation
+
+levels specified in either Table A-2 or Table
+
+A-3 as a minimum depending on electron energy
+
+(as described below) using a steady-state dc
+
+A-4
+
+
+
+--- PAGINA PDF 13 ---
+Table A-2. 	 Ionization Damage Radiation Levels for Testing
+
+Voyager Parts (Sequential Testing)
+
+Electrons 
+	 60Co
+ 
+Total Total
+
+Exposure Electron Electron Accumulated Dose Accumulated
+
+Time Energy Flux Fluence Rate Dose
+
+(s) (MeV) (e/cm2-s) (e/cm2 ) [rad(Si)/s] [rad(Si)]
+
+1. 1000 3 1.2 (9) 1.2 (12) 30 3.0 (4)
+
+2. 1000 3 1.2 (9) 2.4 (12) 30 6.0 (4)
+
+3. 1000 3 2.4 (9) 4.8 (13) 60 1.2 (5)
+
+Table A-3. 	 Displacement Damage Radiation Levels for Testing
+
+Voyager Parts, Using 3-MeV Electrons Incident on the
+
+Test Part (Sequential Testing)
+
+Total
+
+Exposure Incident Electron Fluence per Accumulated
+
+Time Energy Flux Irradiation Fluence
+
+(s) (MeV) (e/cm2 s) (e/cm2 ) (e/cm2 )
+
+1000 3 1.2 (9) 1.2 (12) 1.2 (12)
+
+1000 3 1.2 (9) 1.2 (12) 2.4 (12)
+
+1000 3 2.4 (9) 2.4 (12) 4.8 (12)
+
+A-5
+
+
+
+--- PAGINA PDF 14 ---
+electron accelerator which produces a flux
+
+of electrons having sufficient energy to penetrate
+
+the can, housing, chassis, or other structural
+ 
+material which shields the sensitive electronic
+
+material of the part or device. The dose and
+
+fluence levels of Table A-2 and Table A-3,
+
+respectively, are based on an electron energy
+
+of 3 MeV and sequential testing.
+
+The ionization effects produced by electrons
+
+in the energy range of 1 MeV to 5 MeV are essentially
+
+identical, but the higher energy electrons
+
+produce greater displacement damage. In parts
+
+uhich are sensitive to both types of damage
+
+the two effects cannot be separated.
+
+If the incident electron energy is 3 MeV,
+
+the ionization dose and displacement fluence
+
+requirements specified in Tables A-2 and A-3
+
+will be satisfied concurrently at an accumulated
+
+electron fluence of 4.8 x 1012 e/cm2. If the
+
+incident electron energy is less than 3 MeV
+
+the fluence requirements in Table A-3 will
+
+be controlling. The ionization dose requirement
+
+will be fulfilled at a fluence of about
+
+4.8 x 1012 e/cm2 (adjusted for the relative
+
+ionization dose conversion factors from Table A-7
+
+or Figure A-I) but the displacement damage
+
+will be low. Therefore, it will be necessary
+
+to increase the fluence levels in Table A-3
+
+by applying the appropriate conversion factor
+
+from Table A-7 or Figure A-i such that the
+
+final exposure will yield an accumulated fluence
+
+of 4.8 x 1012 e/cm2 of 3-MeV equivalent electrons.
+
+In this case the total dose will be greater
+
+than 1.2 x 105 rad(Si).
+
+Conversely, if the incident electron energy
+
+is greater than 3 MeV the dose requirements
+
+of Table A-2 will be controlling. The fluence
+
+in Table A-2 required to produce the necessary
+
+doses will be determined by applying the appropriate
+
+ionization dose conversion factors from Table A-7
+
+or Figure A-I. In this case the dose requirements
+
+of Table A-2 will be fulfilled and the displacement
+
+fluence will be greater than the requirements
+
+of Table A-3.
+
+c) Bulk Displacement Damage
+
+Parts and devices which are primarily sensitive
+
+to bulk displacement damage shall be tested
+
+using a steady-state do electron accelerator
+
+which produces a flux of electrons having
+
+A-6
+
+
+
+--- PAGINA PDF 15 ---
+sufficient energy to penetrate the shielding
+
+material and enter the sensitive electronic
+
+material with energy-4.5 MeV. The flux
+
+and fluence levels of Table A-4 are based on
+
+a 4.5 MeV incident beam. If the energy is
+
+different from 4.5 MeV, the flux and fluence
+
+levels in Table A-4 require adjustment to
+
+correspond to the appropriate energy. If required,
+
+these new flux and fluence levels may be obtained
+
+from Table A-7 or Figure A-I.
+
+It should be noted that the accumulated fluence
+
+levels in Table A-4 are the summation of the
+
+fluences obtained by performing each of the
+
+3 exposures sequentially so that the test part
+
+performance evaluations can be made after each
+
+radiation level.
+
+d) Radiation Induced Electronic Noise Background
+
+Fate interference tests shall be conducted
+
+using a steady-state do electron accelerator
+
+or a 60Co gamma source to simulate ionizing
+
+radiation. Electron fluxes and 60Co gamma dose
+
+rates are contained in Table A-5. Electrons
+
+shall have sufficient energy to penetrate any
+
+covering or shielding materials which may be
+
+protecting the rate sensitive material or device
+
+and shall be in the energy range I MeV to 5
+
+MeV. Flux to dose rate conversion factors
+
+can be obtained from Table A-7 or Figure A-i.
+
+D. lest Levels
+
+Tables A-2, A-3, and A-4 contain the required minimum radiation
+
+test levels for evaluating Voyager parts. The maximum test level shall
+
+not exceed a fluence of 5 x 1012 electrons/cm2 (3-Mev equivalent) for
+
+aisplacement damage or a dose of 1.2 x 1o5 rad(Si) for 60Co gamma
+
+irradiations for ionization damage. For parts that are very sensitive
+
+to radiation damage, it may be desirable to characterize their performance
+
+by adding additional lower fluence levels to the required test levels.
+
+For electron damage tests, a flux shall be selected such that the
+
+required fluence is not reached before an exposure time of 15 minutes
+
+(900 seconds).
+
+E. Dosimetry
+
+1. General Requirements
+
+Prior to radiation testing in any environment a flux map
+
+of the pertinent area shall be made to ascertain that the
+
+flux uniformity over the test part meets the requirements
+
+specified in Table A-6. Table A-6 sets the upper tolerance
+
+A-7
+
+
+
+--- PAGINA PDF 16 ---
+Table A-4. 	 Displacement Damage Radiation Levels for Testing Voyager
+ 
+Parts, Using 4.5 MeV-Electrons Incident on the Test
+
+Part (Sequential Testing)
+
+Total
+
+hxposure Incident Electron Fluence per Accumulated
+
+Time Energy Flux Irradiation Eluence
+
+(s) (MeV) (e/cm2-s) (e/cm2) (e/cm2)
+
+1. 1000 4.5 1.0 (9) 1.0 (12) 1.0 (12)
+
+2. 1000 4.5 1.0 (9) 1.0 (12) 2.0 ,2)
+
+3. 1000 4.5 2.0 (9) 2.0 (12) 4.0 (12)
+
+Table A-5. 	 Radiation Induced Electronic Noise Background Fluxes
+
+and Dose Rates for Testing Voyager Parts or Devices
+
+I MeV-5 Mev Total Gamma Total
+
+Exposure Electron Accumulated Dose Accumulated
+
+Time Flux Fluence Rate Dose
+
+(s) (e/cm2-s) (e/cm2) [rad(Si)/s] [rad(Si)]
+
+1. 600 2.5 (7) 1.5 (10) 0.625 3.7 (2)
+
+2. 600 5.0 (7) 4.5 (10) 1.25 1.1 (3)
+
+3. 600 1.0 (8) 1.0 (11) 2.5 2.6 (3)
+
+4. 600 2.0 (8) 2.2 (11) 5.0 5.6 (3)
+
+A-8
+
+
+
+--- PAGINA PDF 17 ---
+Table A-6. Tolerance Limits for Radiation Tests
+
+ELECTRON TEST
+
+The following dosimetry requirements in the free field
+
+environment at the test part apply to tests performed with electrons:
+
+PARAMETER TOLERANCE ()
+
+Energy Measurement +10
+
+Flux and Fluence Measurement +10
+
+Test Beam Uniformity at Test Article Location +10
+
+Dose Measurement ±15
+
+60Co TEST
+
+The following dosimetry requirements apply to tests performed
+with 6OCo.
+
+PARAMETER TOLERANCE ) 
+Specified Dose and Dose Rate +10 
+Dose and Dose Rate Measurement ±15 
+Dose Uniformity at Test Article Location +5 
+NOTE: 	 When using TLDs, the tolerance specified for dose measurement
+
+includes both the uncertainty in reading the TLD response
+
+and the uncertainty in calibration of the 60Co source.
+
+A-9
+
+
+
+--- PAGINA PDF 18 ---
+limit for different parameters involved in a radiation test.
+
+In no event shall the compounding of errors lead to an overall
+
+tolerance which exceeds +20%. The personnel conducting the
+
+test at the contracting test facility shall demonstrate their
+
+capability to measure the exposure of all test parts to within
+
++20% of the levels specified in Tables A-2, A-3, and A-4.
+
+2. Electron Irradiation of Test Parts
+
+The primary standard for performing dosimetry during electron
+
+irradiation of test parts shall be a Faraday cup. The Faraday
+
+cup will measure the electron flux at the test part, and
+
+integration of the flux over the exposure time will yield the
+
+total electron fluence. The fluence-to-dose conversion factor
+
+specified in Table A-7 or Figure A-I shall be used to
+
+calculate total dose.
+
+Additional dosimetry shall be used along with the Faraday
+
+cup. Calibrated LiF TLDs (thermoluminescent dosimeters),
+
+in groups of at least 4 samples each, shall be mounted
+
+on a 2.54-cm (1-inch) thick polyurethane or styrofoam using
+
+doublebacked tape and placed upon the front face of the
+
+Faraday cup and at other strategic locations on the test
+ 
+fixture which, because of its physical size or construction,
+
+may receive a dose which may not necessarily correlate
+
+with the fluence at the Faraday cup: The TLDs shall be
+
+from a manufacturer's lot from which samples have been
+ 
+exposed to a well calibrated 60Co gamma source and for
+
+which a calibration curve of TL reading as a function of
+
+dose is well defined.
+
+The LiF TLDs should not be exposed to doses greater than
+
+1.2 x 105 rad(Si) to remain within an uncertainty band of +15%.
+
+Exposure to larger doses may increase the uncertainty band to
+
+much greater limits depending upon the characteristics
+
+of the particular batch of TLDs used.
+
+TLDs shall be kept in the dark at room temperature until
+
+their TL response is read, at which time the same TLD reader
+
+used for the calibration of the TLDs shall be used.
+
+3. Gamma Exposure of Test Parts
+
+The area exposed by the gamma source shall be well mapped,
+
+as described in Section A-5 (Calibration of 60Co Gamma
+
+Source Used to Calibrate TLDs) to ascertain that the flux
+
+uniformity over the test article meets the requirements
+
+of Table A-6.
+
+If the gamma source is such that an ion chamber cannot
+
+be used for its direct calibration, then the appropriate
+
+TLDs selected from a previously calibrated lot, in groups
+
+of 10 samples contained in the appropriate thickness of
+
+buildup material (450 mg/cm2), shall be exposed to the
+
+A-l0 
+
+--- PAGINA PDF 19 ---
+gamma source for a sufficiently long period of time so
+
+that any dead time is insignificant. This calibration
+
+shall be repeated to provide a minimum of 4 calibrations
+
+of the gamma source, preferably for a time period such
+
+that the expected dose lies on the near-linear portion
+
+of the TL response vs. dose calibration curve.
+
+During exposure of test parts dosimetry shall be performed
+
+using TLDs, as described in Section A-2 (Electron Irradiation
+
+of Test Parts) except that the TLDs shall be contained
+
+or covered by suitable buildup material of Lucite or Teflon,
+
+as described in Section A-4 (Calibration of Thermoluminescent
+
+Dosimeters).
+
+4. Calibration of Thermoluminescent Dosimeters (TLDs)
+
+TLDs to be calibrated shall be selected from a large lot
+
+obtained from the manufacturer so that sufficient TLDs
+
+remain for dosimetry during future radiation exposure testing
+
+of parts. TLDs, in groups of 10 samples, shall be exposed
+
+to a well-calibrated 60Co gamma source for sufficiently
+
+long time periods so that any dead time during the exposure
+
+period is insignificant (<1%). The samples shall be placed
+
+at convenient distances from the source so as to generate
+
+a well-defined calibration curve of TL reading versus dose
+
+over the dose range of interest. During calibration of
+
+TLDs, an ion chamber shall be placed at a convenient distance
+
+from the source as a check on the gamma dose during the
+
+calibration exposure.
+
+TLDs shall be contained in or covered by a suitable thickness
+
+of Lucite or Teflon to assure a buildup of electron equilibrium
+
+at the TLD (generally 450 mg/cm2 for 60Co). Ion chambers
+
+shall also be contained in a suitable material to maintain
+
+electron equilibrium (generally 4.8-mm (3/16-inch) thick
+
+Bakelite).
+
+The TL response of LiF TLDs shall be read during the time
+
+interval between 3 hours and 12 days following exposure.
+
+TLDs shall be kept in the dark and at room temperature
+ 
+until the TL response is read.
+
+5. Calibration of 60Co Gamma Source Used to Calibrate TLDs
+
+The 60Co source used for calibrating the TLDs shall be
+
+well characterized with the use of recently calibrated
+
+ion chambers traceable to the National Bureau of Standards
+
+and exposed to the gamma radiation for sufficiently long
+
+time periods so that any dead time during the exposure
+
+period is insignificant (<1%). The ion chambers shall
+
+be placed at various distances from the 60 Co source to
+
+verify the 1/distance2 relationship. The ion chambers
+
+shall be contained in a suitable container to assure buildup
+ 
+of electronic equilibrium, generally 4.8-mm (3/16-inch)
+
+A-11
+
+
+
+--- PAGINA PDF 20 ---
+thick Bakelite. A minimum of 4 exposures at each position
+
+shall be performed to calibrate the gamma source.
+
+F. Parts Radiation Characterization Test Requirements
+
+The Parts Radiation Characterization Test Requirements shall
+
+be prepared by or submitted to the Information Systems Division prior
+
+to a radiation test. Explicit details of testing a given family of
+
+parts may be referenced to a previously approved radiation test require­
+ments document. The test requirements shall indicate the parts to
+
+be tested and include details of pre-, during, and post-irradiation
+
+electrical mesurements, sample size, disposition, and test sequencing.
+
+The influence of annealing after static irradiations shall be demonstrated,
+
+or shown to be negligible prior to testing, or a discussion is required
+
+as to how the test results will be used to evaluate or demonstrate
+
+annealing. The test requirements shall also specify the radiation
+
+environment to be used, the flux and fluence or dose expected, the
+
+type of dosimetry planned and the location of the dosimeters with respect
+
+to the test part and irradiation source.
+
+Electrical parameters which will determine the acceptance or
+
+failure of the parts or devices shall be specified prior to the irradiation
+
+tests. The detailed test requirements shall also state the methods
+
+of data reduction to evaluate performance and establish a schedule
+
+for a written report following each test or series of tests.
+
+Test parts irradiated to these specifications shall have no
+
+additional shielding provided beyond that inherent in the design and
+
+construction of the part itself. Test parts which satisfy the shielding
+
+limitation, but have inherent shielding equivalent to approximately
+
+100 mils Al, shall be reviewed for irradiation in a 60Co gamma test
+
+or other high energy electron test.
+
+G. Test Regulation and Control
+
+Any deviations or modifications to these Radiation Test Spec­
+ifications shall be approved by the Voyager Environmental Requirements
+
+Engineer.
+
+Detailed test procedures and test setups shall be reviewed
+
+by the Voyager Environmental Requirements Engineer.
+
+H. Radiation Equivalence and Correlation
+
+1. Radiation Equivalence Factors
+
+Table A-7 and Figures A-i through A-4 contain charged particle
+
+displacement damage factors and ionization dose conversions.
+
+Table A-7 provides listings of the equivalent displacement
+
+damage factors for protons, electrons, and neutrons, and
+
+the fluence to ionization dose conversion factors for protons,
+
+electrons, neutrons, and gammas. Figures A-1 through A-4
+
+contain plots of the tabulated data for user convenience.
+
+A-12
+
+
+
+--- PAGINA PDF 21 ---
+Table A-7. E.quivalent Displacement Damage and Ionization Dose
+
+Conversion Factors
+
+Protons. Electrons 
+ 
+20-NeV 3-MeV 
+ 
+Ionization Equivalent Ionization Equivalent
+-2] -2
+E (MeV) [rad(Si)/p-cm Displacement Lrad(Si)/e-cm ) Displacement 
+ 
+0 01 1.00-5 354 0 2 70-7 0 
+0.015 1.00-5 253 0 2 00-7 0 
+0.02 1.00-5 173 0 1 62-7 0 
+0 03 1.00-5 114.0 1 26-7 0 
+0.045 1.00-5 74.3 8.94-8 0 
+0.065 8.50-6 50 4 6.92-8 0 
+0.10 6.90-6 31.7 5 23-8 0 
+0.15 6 11-6 20 4 4.14.8 .033 
+0.20 5.60-6 14.9 3 60-8 .050 
+0.30 4 85-6 9.42 3 04-8 0.087 
+0.45 4.12-6 5.91 2.70-8 0 15 
+0.65 3.44-6 3.82 2 53-8 0.23 
+1.00 2.82-6 2.26 2 45-8 0 38 
+1 50 2 17-6 2.26 2.42-8 0.57 
+2.00 3.00 1.81-6 1.36-6 2.26 
+2.26 
+2.45-8 2 50-8 0 73 1.00 
+4 50 1.01-6 1.77 2 58-8 1.23 
+6.50 7.72-7 1.49 2 64-8 1 49 
+10.0 5.57-7 1.28 2.72-8 1.811 
+15 0 4.07-7 1.15 2 78-8 Z.24 
+20.0 3.25-7 1.00 2 83-8 2 57 
+30.0 2.36-7 0 920 2 90-8 3.13 
+45.0 1.72-7 0.745 2 96-8 3 82 
+65 0 1 29-7 0563 3.01-8 4 56 
+100.0 9.37-8 0.345 3.07-8 5.63 
+5Note' 1 00-5 1.00 x 10-
+Neutrons 
+ 
+Ionization 
+ 
+Erad(si)/n-om-2]  
+ 
+-
+-
+-
+-
+1.0-12 
+1 1-12 
+1.0-12 
+5 0-13 
+ 
+1 7-11 
+1 0-11 
+1.1-11 
+1 7-1l 
+2.0-11 
+2 7-11 
+3.2-11 5 6-11 
+8 4-11 
+6.0-10 
+1 0-9 
+7 0-10 
+-
+-
+-
+-
+-
+I-MeV
+
+Equivalent 
+ 
+Displacement 
+ 
+-
+0.10 
+0 10 ­
+0 10 
+0 10 
+ 
+0.83 
+0.71 
+0.83 
+1 70 
+ 
+1 00 
+ 
+1 25 
+1 37 I 60 
+1 83 
+2.00 
+2.16 
+2 30 
+-
+-
+-
+-
+-
+Oanes 
+Ionization
+
+Erad(Si)/Y-cm2l
+
+5.35-9 
+2 10-9
+ 
+1 10-9 
+5 00-10
+
+2 35-10 
+1.31-10 
+7.35-11 
+7.49-11
+
+9.37-11 
+1.47-10 
+2 15-10 
+3.06-10 
+4.43-10 
+6 07-10 
+7 70-10 I 05-9 
+1.45-9 
+1.88-9 
+2 60-9 
+4 18-9 
+5 54-9 
+8 40-9 
+-
+
+--- PAGINA PDF 22 ---
+, III0,6 1' J I I I ' I '' I i 101 Z' 
+100 
+'3 	 U 
+10 70: 	 Ee< 0. 14 MeV 100 
+o 	 0.6 [1,-p (-E)] 0o.486 
+ ZO~o -­
+0 
+U 	 -8
+2. °- 0 	 l t zt0 
+ow 
+z 
+-	 -2
+10		 10
+
+0.01 0.1 1 10 100 1000 
+ELECTRON ENERGY, MeV 
+Figure A-1. 	 Ionization Energy Deposition and 3-MeV Electron
+
+Equivalent Displacement Damage in Silicon
+
+3,0E - <10 Key 
+- 10 KeV-<Ep< 1MeV 
+v10 	 E 2 io0 0 
+=
+
+D(E) 3.26 1MeV5-Ep< 3 Mev 
+2,exp [-0.014 (E +30)] M < 
+a 	 2.13 [1-exp (-0.3E)J 3 MeV: Ep< 100 h\ 
+04 100 MeV< Ep<0 
+z11 
+U 	 U 
+a 
+o 	 z
+
+U.10
+
+Z IC7 
+00 
+PROTON ENERGY, MeV 
+Figure A--2. 	 "ronization Energy Deposition and 20-MeV Proton
+ 
+Equivalent Displacement Damage in Silicon
+
+A-14
+
+
+
+--- PAGINA PDF 23 ---
+10110-9 
+E 	 Z 
+00
+z
+
+oo 
+To I
+~10-10 
+0 
+> z 
+Zz 
+0 u 
+11 .0 	 10 -1 
+0 	 1 
+0 0 
+z CU 
+R 	 ­
+-S z0 
+NETRNNRG,0e 
+0.D,01 	 1i 10 100i 166 
+NEUTRON ENERGY, MeV 
+Figure A-3. 	 Ionization Energy Deposition and 1-MeV Neutron
+
+Equivalent Displacement Damage in Silicon
+
+z10'- 8 io1mm 
+V0 
+-J 
+-0 
+0 
+2 o101 	 uZZ 
+0.01 0.1 1 10 100 1000 
+GAMMA ENERGY, MeV 
+Figure A-4. 	 Gamma Ionization Energy Deposition in Silicon
+
+A-15
+
+
+
+--- PAGINA PDF 24 ---
+2. Particle Radiation Damage Correlation
+ 
+A study was performed in which correlation factors were
+
+developed for relative displacement effects produced by
+
+electrons, protons, and neutrons in silicon. The corre­
+lation was based on the degradation of excess lifetime
+
+as a function of injection level* obtained from available
+
+data in existing literature. Lifetime damage constants
+
+were calculated and, subsequently, damage constant ratios
+
+for the particles mentioned above were obtained.
+
+The results generally showed that damage constants decreased
+
+with increasing injection level and that damage constant
+
+ratios, referred to neutrons, increased with increasing
+
+injection level. lt may be concluded, therefore, that
+
+the damage constants depend upon differences in the injection
+
+levels.
+
+Damage constants are summarized in Tables A-8 through A-10
+
+and Table A-11 summarizes the estimates of the relative
+
+effectiveness for causing displacement damage in silicon.
+
+However, great care should be exercised in applying these
+
+correlation factors in predicting radiation effects on
+
+electronics because of the uncertainties associated with
+
+the constants derived.
+
+*Injection level is the unitless ratio of the excess carrier concen­
+tration of the minority charge carriers to the equilibrium carrier
+
+concentration of the minority carriers.
+
+A-16 
+
+--- PAGINA PDF 25 ---
+Table A-8. 1-MeV Neutron Damage Constants, K Ccm 2 /s)
+
+Injection Level
+
+Resistivity
+
+(ohm-cm)
+
+1o-5 10-3 10- 1 100
+
+n-type
+
+- 6 6 ­1 1 x 10-5 5 x 10 2 x 10- 1.5 x 10 6 *
+
+10 6 x 10-6 3 x 10-6 1.5 x 10-6 1 x 10-6
+
+-7 - 7
+100 1 x 10-5 2.5 x 10-6 5 x 10 3 x 10
+ 
+- 6 7 ­ 7 *1 8 x 10-6 2 x 10 5 x 10- 3 x 10
+ 
+- 6 - 6 - 7 - 7
+10 8 x 10 2 x 10 5 x 10 3 x 10
+ 
+100 2.5 x 10-6 1.5 x 10-6 5 x 10-7
+
+* Estimated from trends.
+
+A-17
+
+
+
+--- PAGINA PDF 26 ---
+Table A-9. 3-MeV Electron Damage Constants K(cm2/s)
+
+Injection Level
+
+Resistivity (ohm-cm)
+
+Low ( 10-2) 	 High (>)
+
+n-type
+
+1 	 0.6 - 3 x I0-7 5 x 10-8
+
+-
+10 	 2 - 10 x 10-8 1 x 10 8*
+
+p-type
+
+1 1 - 4 x 1o-8 2 - 8 x I0-9
+
+10 0.5 - 2 x 10-8 1 - 4 x Io-9
+
+100 - 3 x 10-9 -6 x 10-10
+
+*Estimated from trends.
+
+Note: A conservative estimate for the range associated with
+
+approximate numbers (indicated by -) is a factor of three above
+
+and below the value given.
+
+A-18
+
+
+
+--- PAGINA PDF 27 ---
+Table A-10. 20-MeV Proton Damage Constants, KT(cm2/s)
+
+Injection Level 
+Resistivity (ohm-em)_ 
+ia­3 10 - 1 
+n-type
+
+- 5 - 52 - 10 x 10 1 - 5 x 101 
+10 - 5 x 10-6 
+100 
+p-type 
+- 5 
+1 1 - 3 x 10 - 5 -1 x 10
+10 -5 x 10- 6 
+Note: A conservative estimate for the range associated with
+
+approximate numbers (indicated by -) is a factor of three above
+
+and below the value given.
+
+A-19
+
+
+
+--- PAGINA PDF 28 ---
+Table A-11. 	 Summary of Estimates of Relative Displacement
+
+Effectiveness in Silicon (relative fluence needed
+
+to cause equal displacement damage in silicon)
+
+Silicon Protons Electrons Neutrons
+
+Type 20 MeV 3 MeV 1 MeV
+
+n-type 1 	 70 - 1600 2 - 25
+
+p-type 	 1 300 - 1000 4 - 60
+
+Note: The relative effectiveness is dependent upon the injection
+
+level and the resistivity of n-type and p-type silicon. If the
+
+injection level and/or resistivity are known, the relative dis­
+placement effectiveness can be determined more accurately from
+
+the data in Tables A-8 to A-10.
+
+REFERENCE
+
+A-I. Mariner Jupiter/Saturn 1977 Radiation Control Requirements
+ 
+Document, PD 618-229, Rev. A, Jet Propulsion Laboratory, Pasadena,
+
+Calif., Dec. 19, 1975 (JPL internal document).
+
+A-20
+
+
+
+--- PAGINA PDF 29 ---
+PAGE BLANK NOT Ow" 
+APPENDIX B
+
+PIECE-PARTS 'EST PLAN
+
+INTRODUCTION
+
+The Electronic Parts Engineering Section (Section 365) has the
+
+responsibility of making recommendations of piece parts to spacecraft
+
+subsystem designers which will operate properly in the environments
+
+encountered on each mission. For the Voyager spacecraft, there are
+
+severe radiation environments, in addition to the usual space environments,
+
+which must be considered. The electron environment appears to be the
+
+worst for most piece parts and little data presently exists on electron
+
+radiation effects to semiconductor devices.
+
+This test will provide performance data on piece parts which
+
+can be used to demonstrate acceptable function of critical electrical
+
+parameters in >5 x 1012 c/cm2 , 3 MeV equivalent electrons. Where piece
+
+parts cannot demonstrate acceptable function within this design re­
+quirement and no substitute piece part can be obtained, a part character­
+ization at lower levels will be performed.
+
+Consequently, a crash program has been set up to obtain such
+
+information on all devices of concern. While the program will be aimed
+
+at obtaining radiation effects data on most semiconductor devices it
+
+will be carried out mostly by subcontractors (specifically Boeing and
+
+hughes) under close direction of Section 365 personnel. The data
+
+will be obtained by utilizing several radiation sources, principally
+
+(1) Hughes cobalt 60 source
+
+(2) JPL Dynamitron
+
+(3) Boeing Dynamitron
+
+Other sources are contemplated as either backup, in case a primary
+
+source breaks down, or in order to do some other types of experiments
+
+not being done routinely.
+
+The routine tests described below will be done to (1) characterize
+
+the effects of radiation to a particular device type, or (2) to screen
+
+diffusion lots. In the case of "screening," fast turn around is an
+
+important requirement; that is, it is important to get radiation effects
+
+data as soon as possible after receiving a set of devices.
+
+TEST DESCRIPTION
+
+Most tests will be done at room temperature in situ, where measurements
+
+on device electrical parameters will be made immediately after each
+
+radiation exposure. Between 1 and 10 samples will be exposed on one
+
+test board (a standard vector board, 11.5 cm x 14 cm, or 4 1/2 x 5 1/2 in.).
+
+Two boards can be exposed simultaneously. The limitation on number
+ 
+B-I
+
+
+
+--- PAGINA PDF 30 ---
+of samples exposed during one set of exposures is set by the requirement
+
+that all property measurements are to be done in about 5 minutes after
+
+exposure.
+
+RADIATION DESCRIPTION
+
+For these tests it is desired that the electrons be from a continuous
+
+source such as a Van de Graaff or a Dynamitron rather than from a pulsed
+
+source as a LINAC provides. The electron energy should be 3 MeV or
+
+equivalent. The energy should never be below 2.0 MeV beam port exit
+
+energy because of the losses incurred in beam spreading and in penetrating
+
+the device casing.
+
+Beam uniformity over the test area shall be within 20% of the
+ 
+test level specified. Beam uniformity characteristics will be checked
+
+periodically and reported for that particular test.
+
+The flux and fluence levels may be adjusted if new information
+
+on the levels at Jupiter, or if the particular piece part, requires
+
+it. The general piece-part radiation test requirements specifies the
+
+following 3-MeV equivalent test levels shown in Table B-I.
+
+EXPOSURE PROCEDURE
+
+The first two steps of fluence may sometimes be done in one step
+
+at 5 x 109 e/cm 2-sec in 1000 seconds. When the first two steps are
+
+combined, a new third step will be assigned at 1000 seconds irradiation
+
+time and 5 x 109 e/cm 2-sec at the option of the Radiation Test Group
+
+Supervisor, to produce a total accumulation of 2.0 x 1013 e/cm2 . This
+
+will allow characterization at other levels when necessary. Since
+
+1000 sec is 16.7 minutes, a series of three exposures, with measurements
+ 
+between, should take the following:
+
+15 - 30 min - setup and checkout
+
+5 min - initial parameter readings
+
+17 min - first exposure
+
+5 min - first post-exposure readings 
+17 min - second exposure
+
+5 min - second post-exposure readings
+
+17 min - third exposure
+
+5 min - third post-exposure readings 
+111 min (or about 2 hours)
+
+B-2
+
+
+
+--- PAGINA PDF 31 ---
+Table B-I. 3-MeV Equivalent Test Levels
+
+lime For Flux, Accumulated
+
+Exposure bluence Levels
+
+(see) (e/cm2-sec) (e/cm2)
+
+1000 2.5 x 109 2.5 x 1012
+
+2.5 x 109 5.0 x 1012
+1000 
+1000 5.0 x 109 1.0 x 1013
+
+This would be shorter by 22 minutes if only two exposures are required.
+
+It is desired that there is no break in the series once it begins,
+
+in order to reduce annealing at room temperature.
+
+RESPONSIBILITIES OF VARIOUS GROUPS
+
+Section 365 is funding the subcontracting work through its Voyager
+
+budget and is buying all the parts to be exposed to radiation in the
+
+program. These parts are supplied to the subcontractor along with
+
+a sheet of Radiation Test Requirements (RTR). The electrical performance
+
+requirements are prepared by Section 365 after discussions with cognizant
+ 
+engineers and designers. The RTR will give electrical parameters to
+
+be measured and other electrical conditions, including bias during
+ 
+exposure, as well as flux and fluence requirements. After completion
+
+of the test and a minor amount of data analysis, the data will be turned
+
+over to Section 365 personnel who will transmit it to appropriate Project
+
+personnel as necessary.
+
+The subcontractor will build test fixtures, check out the bias
+
+and measurement system, place the parts on the fixture, and place
+
+the fixtures in position for exposure with proper shielding to assure
+
+good data. Subcontractor personnel will travel to radiation sources
+
+and supply equipment as required to carry out the program. After ex­
+posure they will make electrical parameter measurements on each device
+
+as rapidly as possible and do some simple calculations to put the
+ 
+data in a reasonable form for presentation to Section 365 personnel.
+
+The radiation source personnel shall provide the electron or
+
+cobalt 60 source on a prearranged schedule where Section 365 personnel
+
+can know the schedule at least 2 weeks in advance, and preferably 2
+
+months. They shall provide a faraday cup to make electron/cm measure­
+ments to set the absolute test level. The faraday cup will be located
+
+in a position defined with respect to the beam uniformity map to insure
+
+that all locations in the test beam remain with the +20% of test level
+
+specified.
+
+B-3
+
+
+
+--- PAGINA PDF 32 ---
+The above outlines the program of radiation testing being carried
+
+It is expected that in the course of the program
+out by Section 365. 
+hundreds of parts will be tested and that there will be continuous
+
+work over the next 6 months to accomplish the initial survey and finally
+
+the screening.
+
+The arrangement to be used for the JPL Dynamitron exposures is
+
+shown in Figure B-i.
+
+SDYNAMITRON [ 
+"fEST . 
+ITEMS09r 
+-FARADAY 
+cupMEASUREMENTS 
+,0 "__L I 
+Figure B-I. JPL Dynamitron Test Setup
+
+B-4
+
+
+
+--- PAGINA PDF 33 ---
+J PAGE BLANK NOQT. Wpfl 
+APPENDIX C
+
+TEST PROCEDURE FOR RADIATION
+
+SCREENING OF VOYAGER PIECE PARTS
+
+1.0 SCOPE
+
+This procedure covers radiation screening of Voyager piece
+
+parts for lot sample screening and reirradiation of lot samples after
+
+Irradiation Anneal (IRAN). The requirements are given herein for parts
+
+handling and data recording. Data and parts movement between JPL and
+
+the radiation testing contractor are also defined.
+
+2.0 DEFINITIONS
+
+Definitions of terms unique to this program are given below:
+
+(1) 	 IRAN: Irradiation and Anneal program in which flight
+
+parts are irradiated with cobalt 60 gammas and then
+
+annealed in an oven at 1500C for 4 days.
+
+(2) 	 Lot Screen: Radiation testing program of a sample
+
+of piece parts from a particular manufacturer's date
+
+code, diffusion run, or wafer.
+
+(3) 	 JFET Radiation Screening: Junction field-effect
+
+transistors are irradiated with cobalt 60 gammas
+
+and are not subsequently annealed. This is a special
+
+case of lot screening.
+
+(4) 	 Reirradiate: Radiation testing program where a sample
+
+of a lot previously irradiated in the IRAN or Lot
+
+Screen program is reirradiated with electrons to
+
+simulate the Voyager exposure to the Jupiter electron
+
+belts.
+
+(5) 	 Laboratory Standard: A part which has had its electrical
+
+parameters measured by independent means and is used
+
+for checkout of the measurement systems used in radiation
+
+testing.
+
+3.0 TEST SAMPLES
+
+All test samples shall be semiconductor devices, including
+
+integrated circuits, bipolar transistors, and JFET's. Many are samples
+
+taken from lots of flight parts which have had a number of tests and
+
+measurements prior to the radiation tests (see note below). Several
+
+device types are "charge-sensitive," requiring special handling to
+
+protect them against static electrical discharge.
+
+C-I
+
+
+
+--- PAGINA PDF 34 ---
+NOTE
+
+It is of extreme importance that all Lot
+
+Screen and Reirradiate Test parts shall be
+
+treated with great care to guard against
+
+damage by charge effects or improper test
+
+procedures due to their value and scarcity.
+
+Most samples are irreplaceable.
+
+All samples shall be provided to the testing contractor by JPL
+
+with suitable identification, with a "Traveler" described in Section
+
+9 below, and a Radiation Test Requirement (RTR) described in Section
+
+10. These samples shall be determined by contractor bench tests to
+
+be operating samples within JPL or manufacturers' specifications.
+
+When the radiation tests have been completed, the samples shall
+
+be returned to JPL along with copies of the raw test data, calculated test
+
+data, joint signoff sheet, circuit schematic, traveler, and a sheet listing
+
+all test anomalies and the resultant actions taken by the contractor.
+
+4.0 PERSONNEL
+
+Contractor personnel shall be permanently assigned to this task.
+
+Changes in personnel shall be agreed to by JPL prior to such change.
+
+At least one engineer and one technician shall be the normal complement
+
+of the test group. Each member of the test group and any possible
+
+substitutes required (due to illness) shall have a green badge assignment
+
+for unescorted on-Lab (JPL) use. Personnel shall be required to travel
+
+between the contractor's test facilities and JPL.
+ 
+5.0 FACILITIES
+
+Two facilities will be used in these tests; the JPL Dynamitron
+
+and the Hughes 50-kilocurie cobalt 60 source.
+
+At the JPL Dynamitron, the test equipment will be set up on a
+
+bench outside the exposure room, using a standard 15-m (50-foot) cable
+
+going through the doorway to connect with the test circuit boards inside
+
+the exposure room. The test device circuit board shall be placed in
+
+a fixture to position it 0.9 m (3 feet) from the emergent beam window.
+
+A Faraday cup shall be positioned on center of the beam with circuit
+
+card broadside to the beam direction and with the test devices positioned
+
+within a 10 cm (4-inch) radius (x-y axis) from the center of the Faraday
+
+cup opening. The end of the beam tube shall be covered with 0.05 mm
+
+(0.002 in.) of copper and 0.10 mm (0.004 in.) of aluminum, in addition
+
+to the 0.05 mm (0.002 in.) titanium beam window. Contractor personnel
+
+will assure that the scattering foils are in place for each test.
+
+At the Hughes 50-kilocurie cobalt 60 source the test setup is
+
+very similar, and the test equipment is identical. The test devices
+
+circuit board shall be placed at a point in the field to give the dose
+
+rate specified in the RTR.
+
+C-2
+
+
+
+--- PAGINA PDF 35 ---
+6.0 RADIATION MEASUREMENTS
+
+At the JPL Dynamitron, the radiation measurements shall be made
+
+with a Faraday cup placed on beam center. The devices under test shall
+
+be positioned in the x-y plane in front of the Faraday cup and within
+
+3.8 cm (1.5 in.) in the z-plane of the aperture. The Faraday cup's
+
+output shall be integrated with an integrating current meter which
+
+shall be calibrated each day of the testing. Periodic measurements
+
+shall be made of the beam uniformity in the plane of the devices under
+
+test. This shall be done using standard techniques such as thermo­
+luminescent dosimeters (TLD) or a traversing ion chamber. Uniformity
+
+over the test area for all tests shall not vary more than 10%. Any
+
+changes in geometry shall require a beam uniformity mapping before
+
+the test.
+
+Radiation dosimetry at the Hughes cobalt 60 source shall be per­
+formed using TLD calibrated by a ±2% ion chamber, with accuracy traceable
+
+to the U.S. Bureau of Standards. Measurements of beam uniformity shall
+
+be made over the test boards to show that the dose rates on the devices
+
+under test do not vary more than 10%.
+
+Doses and fluences used for each test are given on the RTR's.
+
+These values shall be obtained in the test to within +10% for each
+
+device under test.
+
+7.0 TEST EQUIPMENT
+
+Test equipment has been built for use in the in situ tests in
+
+carrying out the characterization tests prior to the screening tests.
+
+This equipment (along with a number of pieces of standard test
+
+equipment, including power supplies, a digital voltmeter, a micro-micro
+
+ammeter and others) is to be used in the screening tests. Because
+
+the tests required on the RTR's vary radically from one type of device
+
+to another, the test equipment list will change from time to time.
+
+Calibration of the applicable test equipment shall be done on
+
+a routine basis. The contractor's test engineer is responsible for
+
+keeping a list of the equipment being used in the screening work and
+
+ensuring that recalibration is done as required on each piece of
+
+equipment.
+
+As the equipment is used both at the contractor's facility and
+
+at JPL, the movements of equipment out of and into each facility shall
+
+be covered by shippers. Equipment coming into JPL shall be checked
+
+in by the Receiving Group immediately upon arrival and before being
+
+taken to the test site.
+
+Test equipment needed to carry out screening tests shall be
+
+provided by the contractor. In the event the equipment is not available,
+
+the contractor may request JPL to loan the appropriate equipment for
+
+the duration of the test.
+
+C-3
+
+
+
+--- PAGINA PDF 36 ---
+8.0 LABORATORY STANDARDS
+ 
+Piece parts known as Laboratory Standards shall be obtained by
+
+the contractor and used to check out each new circuit and test each
+
+setup before using that circuit or setup on screening samples. The
+
+Laboratory Standards shall be devices of the same type as the screening
+
+samples (if possible) or ones which are of the same generic type, such
+
+as operational amplifiers, of which several types can be measured with
+
+the same test circuit. Therefore, only one type of operational amplifier
+ 
+Laboratory Standard is needed, with the exception of the LM1O8, HA2700,
+
+and LM124, where an identical Laboratory Standard must be used.
+
+Accurate measurements of all applicable electrical parameters
+
+shall be made on the Laboratory Standards and the values retained so
+
+that the contractor's radiation test setup can be checked out prior to
+
+each radiation test for performance and accuracy.
+
+9.0 TRAVELER AND SIGN-OFF SHEET
+
+A traveler form will accompany each group of parts of the same
+ 
+type and of the same lot to be tested at one time. The purpose of
+
+the traveler is to completely indentify the parts and to require
+
+sign-off by the contractor's test engineer for each major step in the
+
+procedure. A sample of the traveler is shown in Figure C-1.
+
+A key part of the procedure is the Joint Sign-Off Sheet (see
+
+Figure C-2) where both JPL and tHe contractor agree on the circuit(s)
+
+to be used for the RTR, with each traveler. A joint sign-off sheet
+
+must be completed for each new or revised RTR before testing is initiated.
+
+RTR's which have been used in prior tests will not require a Joint
+
+Sign-Off Sheet.
+
+10.0 RADIATION TEST REQUIREMENTS
+
+A Radiation Test Requirements (RTR) form governs each screen
+
+test on Voyager piece parts. The part identification, radiation levels,
+
+and bias conditions during exposure are given on page 1 of the RTR;
+
+the test parameters and conditions to be imposed before and after
+ 
+radiation exposures are shown on Page 2 of the RTR. Most tests are
+ 
+to be made in situ as defined on Page 2. A sample RTR is shown as
+
+Figure C-3.
+
+11.0 TEST PROCEDURES
+
+The test procedure as described below is a general plan, and
+
+it is anticipated that minor deviations may occur. No deviation in
+
+procedure shall occur without the knowledge and approval of the JPL
+ 
+Technical Contract Manager or his designated alternate. Each group
+
+of parts of the same type and the same lot number is considered as
+
+a separate independent test, even though several part types or groups
+
+C-4
+
+
+
+--- PAGINA PDF 37 ---
+Device Type: Mfg.: Pkg. Type:
+
+Lot Number: Quantity: Log No:
+
+Diff. Run No:- S/N's: RTR No:_- Rev.__
+
+Trace No: Circuit No:
+
+Date Code: Test Type: DynDl Co 6o El Reirradiate: Yes[]lNo LI
+
+Other Ident. No's:_
+
+ACTIONS Initials Date
+
+SIGN-OFF LIST FOR NEW/REVISED RTR's
+
+1. Contractor receives RTR.
+
+2. Contractor responds to JPL with critique of RTR.
+
+3. Contractor sends proposed test circuit schematic to JPL. 
+4. JPL approves proposed test schematic with sign-off.
+
+5. Contractor 	 signs approved test circuit for concurrence.
+
+6. Contractor builds test fixture and obtains test equipment.
+
+7. Contractor checks fixture and test set-up using lab standard devices.
+
+8. JOINT SIGN-OFF SHEET signed.
+
+FOR OLD RTR
+ 
+Record Previous Test Date: RTR No._ - Rev. Circuit #
+
+SIGN-OFF LIST FOR DEVICE TESTING 	 Initials Date
+
+1. Contractor receives devices with RTR and Traveler.
+
+2. Contractor measures test devices on test system at HAC.
+
+3. Time scheduled at radiation source.
+
+4. Priority of testing established by JP.
+
+5. Contractor 	 sets up at test site specified.
+
+6. Contractor 	 carries out test per specified RTR and circuit.
+
+7. Contractor 	 returns test data and test devices to JPL. 
+Figure C-I. 	 JPL Lot Screening Radiation Test
+
+Traveler and Sign-Off Sheet
+
+C-5
+
+
+
+--- PAGINA PDF 38 ---
+Log No.
+
+Device Type
+ 
+Circuit No.
+
+RTR No.
+
+JPL
+
+Circuit diagram approved.
+
+Proceed with test after carrying
+
+out action items 1 through 7.
+
+Approval Signature Date
+
+TESTING CONTRACTOR
+ 
+RTR approved and executed.
+
+Devices tested on circuit board.
+
+Approval Signature Date
+
+Figure C-2. Joint Circuit Sign-Off Sheet
+
+C-6
+
+
+
+--- PAGINA PDF 39 ---
+Date 9/5/75 
+RADIATION TEST REQUIREMENTS 
+Device Type HA 2700 (in situ) SN 11 Rev. 4 
+Manufacturer Harcis 
+Lot No. - Date Code 
+No. of Devices Supplied _ 
+No. of Devices to be Tested 
+Type 
+Metal can T0-99 
+Flatpack T0-116 
+Flatpak T0-91 
+Package 
+No. of Leads 
+8 
+14 
+10 
+Radiation Cond. Levels 
+Facility: 
+Energy: 
+Dvnamitron 
+2.5 VeV 
+Fluenee: 5 x 1011 
+Flux: 5 x 108 
+1.25 x 1012 2.5 x 101 2 
+7.5 x 108 1.25 x 109 
+5 x 1012 e/cm 
+2.5 x 109 e/am 
+sec 
+Bias Cond. During Irradiation: 
+Pin No. Parameter Voltage Remarks Bias Circuit 
+Can 
+1 2 2 Offset Adj Open See Fig. C-4 
+2 4 3 IN­ 100 K to ground 
+3 5 4 IN 100 K to ground 
+AoS-1 
+AGS-2 
+4 
+6 
+7 
+10 
+5 
+7 
+V-
+Out 
+-15 V 
+10 KR to Summing Junction 
+SI and s2 open during irradiation 
+AGS-3 7 11 8 V+ +15 V 
+AGS-4 8 12 10 Offset Adj Open 
+3,6 Guard ---
+Figure C-3. Sample RTR 
+C-7
+
+
+
+--- PAGINA PDF 40 ---
+(All measurements at 250C in sequence)
+
+Device Type: HA 2700 
+ 
+Preirradiation Soec. Limits:
+
+VOS <3mV, IOS <10nA, IB <20nA
+
+Measurement Conditions:
+
+In Situ
+
+No. Yes No Parameter 
+1 X input offset voltage 
+2 1 input offset current 
+3 X input bias current 
+RADIATION TEST REQUIREMENTS 
+G. Stakk DRIRU 4048 
+E. Klippenstean 365 
+S. Dodge 365 
+R. Service 365 
+JPL Contact: 
+Name Subsystem Phone 
+H. Coe HYBIC 
+C. Coppock UVS 
+F. Mazzocco PPS 
+V. Albrecht MDS 
+M. Woncik RFS 
+H. Mertz PLS 
+M. Agabra PWS 
+W. Harris MDS 
+T. C. Clark ECS 
+Test Conditions Remark and Circuit 
+Figure C-3. Sample RTR (Continuation 1) 
+C-8
+
+
+
+--- PAGINA PDF 41 ---
+may be done in series. The procedure will take one group of parts
+
+through a test sequence in chronological order.
+
+11.1 Parts are supplied by JPL to the contractor along with a
+
+traveler and RTR.
+
+11.2 The contractor examines the RTR within 24 hours of receipt of
+
+errors or technical questions. If there are any, contractor personnel
+
+phone the JPL Technical Contract Manager or his designated alternate
+
+for discussion and resolution.
+
+11.3 The contractor examines the test devices supplied for any
+problems in testing. If there are any, contractor personnel contact
+
+JPL for resolution.
+
+11.4 The contractor prepares circuit drawings showing bias during
+
+radiation and measurement circuits. Switches in the circuit will have
+
+the conditions of use designated. The circuit drawing is returned to
+
+JPL for concurrence within 3 days after RTR receipt.
+
+11.5 When a final version of the circuit is agreed to by JPL
+
+and the contractor, the circuit drawing is signed by each, a circuit
+
+number is assigned to the drawing, and one copy is retained by each.
+
+Future tests using the same circuit are referenced by circuit number.
+
+11.6 The contractor builds test fixtures and obtains test equipment
+
+to carry out the required biasing and tests.
+
+11.7 The contractor checks out the test fixture and test setup
+
+with Laboratory Standard parts (see Section 8 of this Appendix) within
+
+5 days of receipt of the RTR. Measured values shall agree to within
+
+10% of established values.
+
+11.8 The contractor checks out the test devices on the contractor's
+
+radiation test system. If devices do not meet JPL specification or
+
+manufacturers' minimum-maximum, the contractor shall contact JPL for
+
+resolution. For transistors, use the lowest current dissipation operation
+
+values to obtain comparable measurement.
+
+11.9 The Joint Sign-Off Sheet shall be obtained before proceeding
+
+with a radiation test. This form is initiated by JPL after agreement
+
+that the circuit is satisfactory and the correct RTR is being used.
+
+C-9
+
+
+
+--- PAGINA PDF 42 ---
+11.10 JPL schedules time on the Dynamitron for the test. For
+
+cobalt 60 tests, the contractor sets the schedule. JPL sets priorities
+
+of the various tests to be done in the test series.
+
+11.11 The contractor moves equipmen to the test site and sets
+
+up in preparation for test. The contractor also checks with JPL to
+
+assure that RTR's to be used are still valid.
+
+11.12 The contractor checks out the test setup with Laboratory
+
+Standard devices and records data. If previously measured parameter
+
+values do not agree within 10%, the contractor shall not proceed with
+
+the test, but will contact the JPL Technical Contract Manager or his
+
+designated alternate for resolution.
+
+11.13 The contractor carries out the test according to the RTR.
+ 
+Any anomalies during test shall be recorded on the data sheet or on
+
+a separate page attached to the data. Data-taking must be completed
+
+within 5-15 minutes after the radiation exposure for in situ measurements.
+
+For non-in situ measurements, see Section 12.
+
+11.14 The contractor repeats the Laboratory Standard Measurements
+ 
+and records data.
+
+11.15 The contractor calculates data into required parameter
+
+values and reproduces a copy of the original data, parameter values
+
+calculated, the Joint Sign-off Sheet, the circuit schematic, the traveler,
+
+and a separate anomalies sheet (if any) for JPL.
+
+'11.16 The data package copy is given to JPL as soon as possible,
+
+but within 21 hours of completion of data acquisition.
+
+11.17 The contractor keeps the original data and related information
+
+filed for future reference.
+
+11.18 The contractor processes the data through the Lot Screen
+
+computer program and provides a copy of the reduced, final printout
+
+to JPL within one week. The acceptance criteria given in Table C-I
+
+shall be used.
+
+TEST PROCEDURE FOR NON-IN SITU TESTING
+
+There are three modes of non-in situ testing which shall
+
+be required in Lot Screening of Voyager piece parts:
+
+C-10
+
+12.0 
+
+--- PAGINA PDF 43 ---
+Table C-I. Acceptance Criteria for Irradiated Integrated
+
+Circuits Subject to Screening
+
+Lot Screen IRAN Reirradiate 
+Acceptance Specification 
+Device Accept Spec. 
+Type Parameter RTR All fluences RTR 
+2 5x10 12e/cm2 5x10 12e/cm 2 
+DG129 Is (off) 5E <3OnA C3OnA 
+DG133 IS (off) 1E <3OnA <3OnA 
+DG141 IS (off) 2E <60nA <60nA 
+HA2520 A IOS 8 <4OnA 8E <40 5nA <46nA 
+"VOS <20mV <17 2mV <9.3mV 
+"IB <1 A <442nA <839nA 
+AOL,2mA 8B <2000 >4680 >1860 
+HA2600 VOS 9 <12mV 
+IB <20nA 
+IDS <60nA 
+AOL,2mA 9B >7,100 
+HA2620 VOS 10 <5mV 
+IOS <15OnA 
+IB <1OOnA 
+HA2700(can) VOS 11 <10mV 11E <3mV (3.5mV 
+A VOS <5mV <1.9mv <4.4mV 
+IOS <30nA 
+AIDS <10nA <2.7nA <2.2nA 
+AI B <40nA 
+HA2700(FP) A VOS 11 <15mV 
+AIDS <10nA 
+A IB <40nA 
+LMi01A AVos 12E <3mV <10mV 
+A IDS <6nA <15nA 
+A IB <70nA <120nA 
+LM102 A VOS 13 <5mV 
+Hard AIR <1OnA 
+LM1O5 A Output Reg. 17 <25mV 
+A Line Reg. VIN-8.5V <25MV 
+A Line Reg VIN-4OV <25mV 
+L108 AVOS 14 <0.5mV 
+Hard AIDS <0.4nA 
+AIR <6nA 
+AOL 14B >45K 
+LM111 VOS 15E <4 7mV <6.4mV 
+IDS <223nA <313nA 
+IB <1 9 A <1.9 A 
+LM124 A VOS 7 <25mV 
+"IOS <1OOnA 
+AI B <IA 
+ISINKSK load >0.84mA 
+ISOURCE,5K load >250gA 
+C-1 I 
+
+--- PAGINA PDF 44 ---
+CI) 	 The HAC Tak-box is used on site to test devices under
+
+unsaturated conditions, where pulse testing is required
+
+to prevent annealing of the radiation-induced effects
+
+caused by high power dissipation. Other testing apparatus
+
+can be brought to the test site for on-site but
+
+non-in situ measurements. No change in procedure
+
+is required from that described in Section 11 other
+
+than the delay required for radiation source shut down
+
+and the time for the non-in situ tests.
+
+(2) 	 The second type of non-in situ test which shall be
+
+required is when the parameter measurements are done
+
+off-site by other than a HAC engineer. In this case,
+
+HAC personnel shall accompany the parts to ensure
+
+proper techniques are used to prevent annealing of
+
+the radiation effects and that the parts are moved
+
+expeditiously to and from the measurement site.
+
+Measurements shall be initiated no later than 10
+
+minutes after the end of the radiation exposure.
+
+Scheduling arrangements shall be made by the HAC
+
+engineer directly with the personnel making measure- ­
+ments. The procedure should be similar to that des­
+cribed in 3 below.
+
+(3) 	 Devices requiring pulse-testing in the saturated
+
+mode require use of the JPL Fairchild 500 (FC 500)
+
+or the Lorlin Impact 100, which require off-site
+
+measurements. For devices requiring such measurements,
+ 
+the following procedure shall be followed:
+
+(a) 	 The contractor determines the non-in situ mea­
+surement requirement from the RTR.
+
+(b) 	 The contractor contacts the cognizant JPL Parts
+
+Test 	Engineer for the FC 500 or Lorlin at
+
+JPL 3 	 to 5 days in advance of the scheduled
+
+test date for agreement to use the tester and
+
+to schedule an operator's time for doing the
+
+measurements.
+
+(c) 	 The contractor supplies to the JPL Parts Test
+
+Engineer, at least 24 hours in advance of the
+
+test time, RTR documents detailing the test con­
+ditions. The contractor also supplies the test
+
+parts for preirradiation measurements and obtains
+
+a Test Condition Sheet from the operator.
+
+(d) 	 At least one control device shall be measured
+
+along with the test parts measurements for
+
+each set of measurements.
+
+(e) 	 On the morning of the test, the contractor
+
+shall confirm the detailed schedule with the
+
+Parts Test Engineer.
+
+C-12
+
+
+
+--- PAGINA PDF 45 ---
+13.0 
+(f) 	 The contractor carries out the series of radiation
+
+exposures on the test devices, hand-carrying
+ 
+the devices to the parts test laboratory after
+
+each exposure for parameter measurements.
+
+Measurements shall be started no later than
+
+10 minutes after the end of the radiation exposure.
+
+(g) 	 Contractor personnel remain at the parts test
+
+site to observe the measurements and note any
+
+anomalies.
+
+(h) 	 The contractor shall check data for inconsistencies
+
+(if any), report the details, and remeasure.
+
+All other procedures are the same as given in Section 11.
+
+GENERAL PROCEDURE FOR PARTS TESTING: DATA IDENTIFICATION
+
+AND RECORDING
+
+Many groups of parts are being tested in this program which
+
+are of the same part type, differing only in the details of processing
+
+at the manufacturer's. The differences are known to only a limited
+
+number of people and are, at times, proprietary. Therefore, it is
+
+extremely important to mark the data sheets to fully identify each
+
+device tested, giving all numbers which can be determined from the
+
+device package and the accompanying paper work.
+
+Each test and test data are further identified with the
+
+date of the test and the run number used at the test site. The run
+
+number is to be used by the radiation source operator and should be
+
+a unique number. Contractor personnel are responsible for assigning
+
+the run number.
+
+Actual irradiation levels are to be recorded on the data
+
+sheet, as opposed to the RTR required levels.
+
+C-13
+
+
+
+--- PAGINA PDF 46 ---
++15 
+i5 
+5 . ipF 
+IOK(I%)
+
+S
+
+TO 116 NO B ACKETS 
+T0591 3)-15 
+Figure C-4. Test Bias Circuit 
+C-14
+
+
+
+--- PAGINA PDF 47 ---
+" -Z4I&PAGEBLANK HOTFar j 
+APPENDIX D
+
+BOEING IN SITU TEST FIXTURE
+
+DESCRIPION
+
+The Boeing Company constructed a test fixture to enable measure­
+ments of the electrical parameters of integrated circuits to be made
+
+in situ, that is, in the radiation exposure area but with the radiation
+
+source turned off. This allows measurements without the necessity
+
+of personnel entering the exposure area. To minimize the number of
+
+cables which are required between the exposure and measurement areas,
+
+remote switching between groups of six devices of a given type is employed.
+
+The switches are open-frame reed relay types which are compact and
+
+have very low leakage currents. Low-noise coaxial cable is used for
+
+current measurements. A preliminary experiment was performed which
+
+demonstrated that this cable is adequate for leakage currents as low
+ 
+as 10 pA in the experimental area.
+
+An example of the measurement circuitry of this test fixture
+
+is shown in Figure D-1 for an analog switch. The required measurements
+
+are rDS(on), output switching waveform, and three leakage currents.
+
+The power supply and input connections are not included in this schematic.
+
+Relays KD, KS and KA are groups of six relays which are connected to
+
+six different test devices and can be switched remotely. The relays
+
+are shown in the normal position during irradiation.
+
+The switching response can be measured by connecting the line
+
+driver to the appropriate device with KA, using an appropriate switching
+
+waveform from a pulse generator at the input of the device. All six
+
+units can be driven in parallel from the same pulse source. The line
+
+driver is used to eliminate the effect of the cable capacitance on
+
+the output of the device, and a terminated cable is used on the line
+ 
+driver output. An oscilloscope is used to record the switching response
+
+of the device under test. The pulse generator and line driver are
+
+connected to coaxial cables, terminated in their characteristic impedance.
+
+The on resistance, rDs(on), is measured by closing KA and measuring
+
+the output voltage of the line driver with a digital voltmeter. The
+
+current for rDS is determined by VDD and the drain resistance.
+
+The (drain, source) gate leakage current is measured by switching
+
+KD and KS, shorting the source and drain together with K2 and measuring
+
+the leakage current with the electrometer at an applied voltage V1 .
+
+bith the various combinations of K1 and K2 the leakage current of the
+
+source (drain) with the drain (source) at V2 can be measured.
+
+The relay switches were constructed on 1 x 6 matrix cards which
+
+can be plugged into a specific test card for a given device type. This
+
+eliminated the necessity of hard wiring relays to each test card. Appro­
+priate test cards were designed for other device types, such as opera­
+tional amplifiers and transistors which utilize the same relay cards.
+
+D-1
+
+
+
+--- PAGINA PDF 48 ---
+OSCRALOSCOE j KK 
+RODVM f, 
+____________ -DEVICES TEST CELL. 
+-- UNDR 
+KEITHLEY _D 
+aECPOMETER K-I D 
+Figure D-1. 	 Typical Measurement Circuit for Analog Switch,
+
+Integrated Circuits
+
+For manual measurements, the minimum time for a single measure­
+ment is approximately 10 seconds. For 6 devices, with 4 measurements per
+
+device, this is approximately 250 seconds or 4 minutes. This does not
+
+include time required to change ranges. In addition, 30 seconds to 3
+
+minutes is required to obtain stable readings of low leakage currents
+
+because of cable capacitance charging and instrument response times.
+
+When all of these factors are considered, measurement times from 5 to 15
+
+minutes were required between radiation levels, depending on the types
+
+of measurements required.
+
+Because of the complexity of testing several devices, it is neces­
+sary to fabricate special test cards and required lengthy preparation
+
+and checkout times. In situ measurements have the disadvantage that no
+
+control devices can be used. This difficulty was largely eliminated by
+
+careful preirradiation checkout of the setup.
+
+The same general approach was also used to test operational ampli­
+fiers and comparators, although the details of the tests are not included
+
+in this Appendix. A special null amplifier was constructed and built
+
+into the text box in order to make measurements of the input parameters
+
+of differential comparators. The null amplifier could be switched
+
+D-2
+
+
+
+--- PAGINA PDF 49 ---
+inand out of the test fixture by the existing reed relay cards. The
+
+test fixture permitted testing up to 6 devices of a given type during
+each irradiation sequence.
+
+PHYSICAL LAYOUT OF THE INSIJU IC TEST FIXTURE
+
+The physical layout of the remote test fixture is shown inFig­
+ures D-2 through D-4. Basically, it consists of eight modules of six
+
+relays each, which allow automatic sequencing of six different connec­
+tions. Within each module, the six relays can be held either on or
+
+off during a test sequence or they can be held on and switched off
+
+individually by the clock. These features are shown inthe block diagram
+form inFigure D-5. The overall test system is shown inblock diagram
+
+form inFigure D-6.
+
+IC TEST FIXTURE AND PROGRAMMING PROCEDURE
+
+The physical layout of the test fixture isdescribed in the preceding
+section. The procedure for programing a given part test is as follows:
+
+(1) 	 The Parts and Test Specifications are received.
+
+(2) 	 A test board is designed to accommodate the package config­
+uration with the test fixture.
+
+(3) 	 Each test condition is then drawn schematically.
+
+(4) 	 The test conditions are then reviewed for mutual compata­
+bility and then the overall test fixture circuit isdrawn.
+
+(5) 	 A table is then made listing all of the interconnects to
+
+be made on the patch terminals in the test fixture to
+
+implement the overall test schematic. The relay conditions
+
+for each test are tabulated along with pin voltage conditions
+
+to implement each test.
+
+(6) 	 These diagrams and tables are then used to hook up, or
+
+program, the test with hardware.
+
+(7) 	 An initial check of pin voltages ismade at each device
+
+socket for each test, to assure that no catastrophic electri­
+cal conditions have occurred.
+
+(8) 	 The parts are tested on a Textronix Curve Tracer, or bench
+
+fixture, prior to insertion into the test fixture. This
+
+verifies proper initial operation.
+
+(9) 	 Having established that the desired electrical conditions
+
+are satisfied, one device is inserted for checkout, then
+
+the other devices are inserted and the test begun.
+
+D-3 
+
+--- PAGINA PDF 50 ---
+Figure D-2. Front View of the Test Fixture With
+
+1.27 cm (1/2 in.) Aluminum Shield 
+Removed. This View Shows the
+
+Arrangement of the Relay Cards and
+
+the Plug-In Terminals Which Permits 
+the Programming of a Given Test
+
+D-AL 
+OF' POOR QUAJXU2 
+D-4 
+
+--- PAGINA PDF 51 ---
+! !I
+
+TEST SCKET SOCKET 
+Figure D-3. Rear View of Test Fixture, Showing
+
+the Arrangement of Relay Logic, Line
+
+Driver, Null Amplifier, And Other
+ 
+Elements
+
+D-5
+
+
+
+--- PAGINA PDF 52 ---
+iS
+
+Figure D-4. 	 Interface Panel. This Panel Allows the Relay Logic to
+
+be Controlled by the ACE Machine or To Be Controlled
+
+Manually by the Switches. Twelve External Lines Are
+
+Available for Sending Signal Lines Directly to the
+
+Test Fixture or for Patching Into the ACE Machine
+
+4r% 
+D-6
+
+
+
+--- PAGINA PDF 53 ---
+- ! '6 RELAYS 
+KS 
+CL 
+PANEL ALLOWINAOT6 
+CL RELAYS 
+ACE 
+AUTOMATIC 
+CIRCUIT 
+TESTER 
+INTERFACE 
+PANEL ALLOWING 
+CONTROL OF 
+EACH RELAY 
+MODULE EITHER 
+MANUALLY OR 
+BY ACE 4C 
+B 
+C 
+A 
+a 
+6 RELAYS 
+6 RELAYS 
+SA 
+B 6 RELAYS 
+MEASURING 
+INSTRUMENT 
+(DVM CURRENTMETEROR 
+OSCILLOSCOPE) 1 
+CL 
+B 
+L 
+6 RELAYS 
+KKp 
+Figure D-6. Block Diagram of Overall Test System 
+Dr-8 
+
+--- PAGINA PDF 54 ---
+PAGE BLANK NOT FMO­
+,t#NG­
+t ox~~9 
+
+--- PAGINA PDF 55 ---
+PART I
+TEST PROCEDURE FOR IRRADIATION-ANNEAL (IRAN) SCREENING PROGRAM
+
+FOR,,VOYAGERRSEMICONDUCTOR DEVICES 
+1.0 SCOPE 
+This Test Procedure (TP) presents the procedures, instrumen­
+tation, and methods of measurement required for the performance of
+
+IRAN screening of Jet Propulsion Laboratory (JPL) furnished semiconductor
+
+parts. The IRAN testing of the semiconductors shall be performed in
+
+accordance with the requirements of Contract Number 954269. A flow
+
+diagram of the program is shown in Figure E-1.
+
+The semiconductor devices shall be screened using a gamma
+
+ray radiation source (cobalt 60) which produces surface ionization
+
+effects. Due to the nature of surface ionization effects, which exhibit
+
+a rapid initial partial annealing, the electrical parameter tests shall
+
+be performed in situ within 15 minutes after irradiation to the required
+
+dose level. For open loop gain measurements the devices shall be removed
+
+from the test system, and tested on the bench within one hour after
+ 
+parts irradiation.
+
+2.0 TEST SAMPLE NOMENCLATURE
+ 
+The test samples to be evaluated are identified in Table
+
+E-i as operational amplifier, voltage comparator, analog switch micro­
+circuit devices and JFETs.
+
+Table E-1. JPL-Furnished Part Types for IRAN Test
+
+Item Device Package Type Quality Range Manufacturer
+
+1 HA2-2700 (TO-99) 629-1048 Harris 
+2 HA9-2700 (FP) 368-610 Harris 
+3 LM101AH (TO-99) 397-400 National 
+4 LM101AF (FP) 230-375 National 
+5 LM111H (TO-99) 278-300 National 
+6 LM111F (FP) 264-285 National 
+7 DG129 (FP) 84-119 Siliconix 
+8 DG133 (FP) 273-350 Siliconix 
+9 DG141 (FP) 60-100 Siliconix 
+10 2N5556 (TO-72) 80 Motorola
+
+11 2N5520 (TO-71) 10 Siliconix
+
+12 2N5196 (TO-71) 77 Siliconix
+
+13 2N4856 (TO-18) 220 Siliconix
+
+E-2
+
+
+
+--- PAGINA PDF 56 ---
+PRNEDDATA COMPUTER 
+MP7~~ ~ 
+INPUT DATA TOREVIE,W COMPUTERPRINTED DATA FROM TAPE 
+REMOVE PARTS PART 
+FROM AETAsj 
+CONTRACTORS 
+*LISTED ON TRAVELER FOR QA SIGNOFF. 
+Figure E-1. 
+O P P E EPOSUTRE DATAPRINREDCOPIESOSICHC~~ I 
+UNLOADREVIEW* 
+CALCULATED MOTHERPARAMETERS BOARDS 
+ANAINO IN RMVTAY PACKAGE' 
+ON N 4 DAYS %RMOVN 
+NOTIFY JPL NOTIFY JPL PARTS 
+IRAN Screening Program Procedure 
+EASUREMENT 
+FINAL' 
+LOG OUT 
+E-3
+
+
+
+--- PAGINA PDF 57 ---
+3.0 SECURITY CLASSIFICATION
+ 
+The test samples are unclassified.
+
+4.0 APPLICABLE DOCUMENTS
+
+The following JPL documents form a part of this test procedure
+
+to the extent specified herein.
+
+A. 	 "Radiation Screen-Anneal Services," Contract Number
+
+954269. (JPL internal document).
+
+B. 	 EP 595977 Rev. A, dated 30 September 1971, JPL Procedure,
+
+"Hi-Rel Program for Microcircuits," Paragraph 7 (JPL
+
+internal document).
+
+C. 	 ZPP2073-GEN Rev. H, "Screening Inspection of Electronic
+
+Parts, General Inspection For" (JPL internal document).
+
+5.0 TEST REQUIREMENTS
+
+Table E-2 shows individual part types and test parameters
+
+used in testing. The test devices will be subjected to electrical tests
+
+before irradiation; parts which fail to meet the acceptance limits listed
+
+in the document referenced in Table E-2 will be identified. After irradi­
+ation, parts which fail to meet the IRAN acceptance specifications as given
+
+on each Radiation Test Requirement (RTR) document shall be identified on
+
+the final test data sheet. Test parts shall be annealed after irradiation
+
+at 1500C ± 30C for 2 96 hours, after which time they shall be packaged and
+
+JPL notified for pickup.
+
+E-4
+
+
+
+--- PAGINA PDF 58 ---
+6 
+Table E-2. IRAN Parameter Testing 
+Item Part Type No. Test Parameters Ref. 
+1 LMI01 VOS 
+IOS 
+IB 
+= Input offset voltage 
+= Input offset current 
+= Input bias current 
+ST11149 
+2 JFETs IGSS Mfg. Spec. 
+3 HA-2700 VOS 
+I s 
+IB 
+= Input offset voltage 
+= Input offset current 
+= Input bias current 
+ST11148 
+4 
+5 LM111 VOS 
+IOS 
+IB 
+= Input offset 
+= Input offset current 
+= Input bias current 
+ST11149 
+DG129 IS(OFF) = Drain - Source current ST11146 
+DG133 in OFF condition
+DG141 
+E-5
+
+
+
+--- PAGINA PDF 59 ---
+6.0 PERSONNEL AND RESPONSIBILITIES
+
+The following personnel shall be present as required during
+
+the performance and implementation of IRAN testing, and shall have
+
+the stated responsibilities.
+
+A. Radiation Effects Test Engineer (RETE)
+
+The RETE, functioning as Test Conductor, has the
+
+overall responsibility for proper test performance
+
+and implementation of the requirements of this Test
+
+Procedure.
+
+B. Radiation Effects Test Technician (RETT)
+
+The RETT shall be assigned to be responsible for
+
+setting up the various instrumentation and test
+
+configuration, logging in parts and maintaining the
+
+parts test record.
+
+C. Quality Assurance Representative
+
+A JPL QA representative shall monitor the performance
+
+of IRAN in accordance with the provisions of this
+
+Test Procedure.
+
+7.0 GAMMA-RAY FACILITY
+
+The facility to be used in this program is the Hughes Aircraft
+
+50,000 curie source located in Fullerton, California. This source is
+
+a Gammabeam Model 650, manufactured by Atomic Energy of Canada, Ltd.
+
+8.0 DOSIMETRY
+
+The cobalt 60 source shall be calibrated and the exposure
+
+positions mapped prior to starting the IRAN program, by use of LiF
+
+thermoluminescent dosimeters. The source calibration shall be checked
+
+analytically on a monthly basis using the known decay characteristics
+ 
+of cobalt 60.
+
+9.0 TEST EQUIPMENT
+
+The test equipment presented in Table E-3, or the acceptable
+
+equivalents (as determined by the responsible RETE, with JPL concurrence),
+
+shall be required for use during the performance of the tests covered
+
+by this procedure. The test equipment acceptability for performance
+
+of these tests shall be determined on the basis of part performance
+
+requirements and parameter measurements. A test equipment log shall
+
+be maintained during the performance of the IRAN tests which shall
+
+include the type of equipment (nomenclature), part or model number,
+
+serial number, manufacturer, calibration date and calibration due date.
+
+E-6
+
+
+
+--- PAGINA PDF 60 ---
+Table E-3. Equipment Required for IRAN Test Performance
+
+Item Quantity Equipment Description Model Manufacturer
+
+1 2 Digital Voltmeter 	 5800 DANA
+
+2 2 Thermal Chamber 	 IPS-24 Tabai
+
+3 1 Temperature Potentiometer 	 Catalog Leeds­
+it8692 Northrup 
+4 2 Data Terminal 	 WU 300 WUDSC
+
+5 2 Digital Recorder 5050B Hewlett-
+Packard
+
+6 1 Automatic Data Acquisition ATS-1 HACRE
+
+Test Station
+
+7 1 Data Set 	 103F Bell Sys. 
+It shall be the responsibility of the test technician to ensure that
+
+all calibrated equipment is in current calibration at the time of
+
+their usage.
+ 
+10.0 TEST SAMPLE OPERATION
+
+The test devices that are listed in Table E-1 shall be
+
+irradiated under the bias conditions specified in the RTR's. The
+
+operating conditions for irradiation are defined in the individual
+
+RTE's. The electrical parameters listed in Table E-2 shall be mea­
+sured in situ. In order to perform the parameter measurements,
+
+discrete components shall be switched in and out of the required test
+
+circuits while the devices are located in the cobalt 60 source. This
+
+shall be accomplished by stepper switches which are controlled from
+
+the automatic Test Console panel. The actual mechanics of the test
+
+operation are described in Part II, the Test Station Operational Pro­
+cedure.
+
+11.0 CIRCUIT LOADS
+
+During IRAN testing the device outputs shall be nominally
+
+loaded as specified for each individual part type. The operational
+
+amplifiers are set up for a nominal gain of 100 during parameter mea­
+surements and irradiations. During irradiation the voltage comparator
+
+E-7
+
+
+
+--- PAGINA PDF 61 ---
+shall be terminated into 5.0 kilohms and during the measurements it
+
+shall be additionally terminated into a buffer input.
+
+12.0 TEST PROCEDURES
+
+All test specimens received at the HAC-Fullerton facility
+
+shall be placed in bonded stores while not being tested or annealed.
+
+The Master Log and Test Traveler shall be maintained during the test
+
+operation until the IRAN effort is completed and JPL notified for parts
+
+pickup. A typical Master Log that shall be used during the IRAN tests
+ 
+is shown in Figure E-2, and a typical Test Traveler in Figure E-3.
+
+The test operation required to perform electrical parameter measurements
+
+is described in the Test Station Operational Procedure (Part II).
+
+During the performance of electrical measurements, one device will be
+
+designated as a control unit which shall accompany each test lot and
+
+be measured during the electrical measurements. This device shall
+
+not be irradiated or baked, but shall be used for verification of test
+
+results. During the tests the control unit shall be located at the
+
+Test Console and not in the irradiation test fixture located in the
+
+cobalt 60 chamber. Upon completion of initial electrical measurement,
+
+the test devices shall be checked for compliance of measured parameter
+
+values to the limits given for each individual part as listed in docu­
+ments referenced in Table E-2. The test devices shall then be irradiated
+
+at the desired dose rate, to the desired dose level, after which the
+
+established electrical parameters shall again be measured in situ.
+
+Where applicable the test devices shall be placed on trays and baked
+
+in an oven at 1500 ± 30C for > 96 hours, after which the devices shall
+
+be repackaged in the original containers, and JPL notified for pickup.
+
+13.0 TEST DATA PRESENTATION
+
+The test data package for the IRAN test effort shall
+
+consist of 6 copies each of the raw test (Figure E-4), final test data
+
+(Figure E-5) and, if requested by JPL, Data Terminal printout. Figure E-6
+
+shows the Data Sheet to be used to record the device serial number vs
+
+socket number. Each Data Sheet will be signed by the RETE and stamped
+
+by the JPL QA representative, but shall not form a part of the data
+
+package.
+
+14.0 QUALITY ASSURANCE
+
+The test-device handling, which is specified on the Test
+
+Traveler, during the IRAN operation is described in a step-by-step
+
+fashion in Part III. Each Test Traveler shall be signed by the respon­
+sible test personnel and the JPL QA representative at each designated
+
+step. A Master Log (Figure E-2) shall be maintained. Cursory visual
+
+inspection by JPL QA personnel shall be performed as required at the
+ 
+HAC-Fullerton test facility.
+
+E-8
+
+
+
+--- PAGINA PDF 62 ---
+JPL VIS Anneal Anneal 
+Device Date Shipper Lot Date Insp Irrad Start Out JPL JPL 
+Type Mfg Qty Rec'd Number Number Code Date Date Date Date Notified Pickup Remarks 
+Figure E-2. Master Log of IRAN Parts
+
+
+
+--- PAGINA PDF 63 ---
+JPL-IRAN TRAVELER
+
+Device Type: - Lot No: Traveler No. 
+Manufacturer: Date Code: Date/Run No. 
+Dose, Rad (Si): RTR No. Rev. Quantity 
+Exposure Time (min). __ 
+Item Date & Q.A. 
+No. Operation Initial Appr. 
+1. Receive & Log-in to Bonded Stores 
+2. Load Contactors 
+1. Load Mother Boards (Log Socket No. vs. 
+Device S/N) pin 1 check 1 
+4. System Checkout 
+5. Pre-Irradiation Measurements 
+6. Review Printer Data 
+7. Input Parts I.D. to Computer 
+8. Input Test Data to Computer (Punch Tape) 
+9. Review Computer Output & Retest as Required 
+10. Expose Devices Rad(Si)/sec. Rad(Si) 
+11. Post-Irradiation Measurements 
+12. Review Printer Data 
+13. Input Test Data to Computer (Punch Tape) 
+14. Review Computer Output & Retest as Required 
+15. Request 6 Copies of Data (4 to JPL, 1 HAC, 
+Item 25) _ _ 
+16. Unload Mother Boards 
+17. Remove Parts from Contactors _ __ 
+18. Place Parts in Annealing Trays 
+19. Log Parts into Anneal & notify JPL 
+20. Anneal 
+21. Log Parts out of Anneal Total Anneal 
+Time hrs. 
+22. Remove Parts from Oven & Notify JPL 
+23. 
+24. 
+Repackage Parts 
+Log out Parts 
+2. Release Parts & One Copy of Data, one copy 
+computer printout to JPL 
+NOTE: LINE OUT ALL NON-APPLICABLE LINE ITEMS 
+Figure E-3. JPL IRAN Test Traveler
+
+E-1O
+
+
+
+--- PAGINA PDF 64 ---
+DEVICE TYPE: LM101AF DATR-RUN! 12-15-75-3
+
+MANUFACTURER! NSC EXPOSURE: 129KRAD(SI)
+
+LOT NUMBER 10158 RATE: SORAD(SI)-SEC ACCEPT CRITERIA
+
+DATE CODE: 7532 FACILITY: 
+ HAC-FUL PARAM. PRE-PAD POST-HAD DELTA
+
+TRAVELER NO: 64 RTR NO: IPC - REVISION: 5
+
+VOS(V)< .200E-02 .OOOE#O .700E-03
+
+IOS(A)< IOOE-07 .OO E+00 .250E-08
+
+IU(A) < .750E-07 .OOOF+00 .600E-07
+
+SKT. NO. LOT-DEV. S/N PRE-IRRADIATION VALUES (VOLTS) POST-IPRADIATION VALUES (VOLTS)
+
+ESO ESS EOS 
+ EOO ESO ESS EOS EO0
+
+1 STD-555 - .52pi - .11 
+ 5 + .2416 - .1613 - .5218 - .1204 + .2344 - .1624 2 10198-6672 - *519 - .0719 + .3679 - .0793 ­
+ .9714 + .0132 + *9954 + .0113
+
+3 10151-6673 - .R293 + .0150 + .P793 + .0346 - .9731 + .0469 +1.227 + .2043 
+4 101lR-6675 - *2?SI + .0203 
+ + .27PP + .0174 - .7939 + .0941 + .9403 
+ + .022
+
+5 1019-6678 - .3719 
+ + .0384 4 .497A + .0477 - .e1rs + .0915 +1.0259 
+ + .1165
+
+A 101S-6679 - .40P6 + .07A7 + .57q7 + .0976 
+ - ,e537 + .1977 +1.3Od + .dbb7 
+7 101SP-6683 - .3711 + .OP61 + .5' 3 + .09b4 - .9137 + .1664 ,+1.2643 + *d040
+
+9 101SP-6685 - .1400 + .0306 + .?049 + .0P52 - .5185 + .0563 + .6427 + .0618 9 10]2P-686 - .401 - .0666 + .3934 - .0769 -1.0559 + .0194 +1.1009 + '.0?4h 
+1O 101$P-6687 - .?414 - .0191 + .2086 - .0173 - .b489 + .0639 + + Ubt73
+11 1015A-6690 - .466 - .0351 + .3003 - .0409 - .9105 + .040b + .9953 + 
+ .0448 
+12 1OIS-6691 - .5lq - .1506 + P265e - .1793 -1.0358 - .0b30 + .878U0 - .0949 13 101SA-6bq? - .1906 + .0136 + .2105 + .0140 - .6075 + .034? + .6$3b9 + .04b4
+14 10198-6693 - .1 38 + .07P5 + .2653 + .0A35 - .45t0 + .1064 + .tbi7 + .1235
+ 
+15 1015A-6700 - .4471 + .0117 
+ + .452 + .0002 - b971 + .1121 +1.1394 + .Ib2 16 10158-6702 - .1791 - .1045 + .1636 
+ - .1061 - .8191 - .066B + .b437 - .ObH3 
+17 10198-e703 - .P737 - .079? + .1101 - .0139 - .7235 - .0b27 4 .6ao0 - .0443 IP 101SR-6705 - .40AO - .097A + .3030 - .0471 - .8301 + .0063 + .808 + boh30 19 101"P-Ai706 - .2864 - .0327 
+ + 1P22 - .0718 - .9542 - .0097 + .8o1 - U0P44
+
+20 101SP-6707 - .4108 + .0246 + .'049 + .049 
+ - .9473 + .1378 +1.2-jOl + .1950
+
+21 I01SP-6710 - .443 + .000 + .4609 + .01'q4 .9908 + .0681 +1.1760 + .1173
+
+22 10198-6715 - .3343 - .13P6 + .05C8 
+ - .1415 - .7687 - .0983 + .,,4 - .1139
+23 10158-6716 - .21,7 + OA1A + .3254 + .081 
+ - .7039 + .1152 + .9374 + .11h5 24 1015P-6721 - .1938 + .1399 + .5100 + .1643 - .4041 + .2P47 +1.0642 + .?378 21 1019A-'722 - .3lA - .0616 + .'122 - .0588 - .7815 - .0281 + .740 - .0072
+
+26 S10-5S5 - .SP1 - .1193 + .2412 - .1616 - .5221 - .1201 + .2400 - .1020
+
+NOTE!
+
+DEVICES ON SOCKETS 1 AND 26 ARE CONTROL DEVICES.
+
+Figure E-4. Sample of Raw Test Data, JPL IRAN Program
+
+
+
+--- PAGINA PDF 65 ---
+DATE-PUN: 1a-15-75-3 
+SKT, NO, LOT-DEV. S/N PAPAMFTER AND UNITS PPC-IRRADIATION VALUES POST-IRRADIATION VALUES DELTA VALUE DECISION 
+1 STD-55S VOS(MV) - 1.19b 1.204 .009 
+IOS(NA) + 4.1P0 + 4.200 4 .020 
+I3(NA) 4 3I.Il', + 38,060 .125 
+2 IOIS-6672 VOS(MV) - 714 + .132 + .PS1 REJ(DEL) 
+IOS(NA) + .740 + .190 - .550 
+I9(NA) + 44.340 + 98.340 + 54.000 
+3 1015-6673 VOS(MV) + .190 + e469 + .319 
+IOS(NA) 
+I8(NA) 
+- 1.960 
++ P5.430 
+- 15.T40 
++109.890 
+- 13.7h0 
++ 84.460 
+PEJ(DEL) 
+REJ(DEL) 
+4 10158-6675 VOS(MV) + .?(3 + .941 4 .736 REJ(DkL) 
+10 (NA) + .2)0 + 4.190 + 3.900 REJ(DOEL) 
+I(NA) + 29.4C5 + 8b.rl0 + 61.305 REJ(UELI 
+S 10158-6678 VOS(MV) * .3P4 + .915 + .b31 
+IOS(NA) - .930 - 2.500 - 1.570 
+I(NA) 4 41.465 + 92.189 + 50.720 
+6 1015H-6679 VOS(MV) + .7q7 + 1.97t + 1.190 REJ(DEL) 
+IOS(NA) - I.FA)O - 5.900 - 4.010 REJ(UEL) 
+I&3(NA) + 49.065 +10d.095 + 59.030 
+7 10158-A683 VOS(MV) + .161 1.664 + .803 RLJ(DEL) 
+IOi(NA) - 1.030 - 3.760 - 2.730 REJ(VEL) 
+It(NA) + 46.220 +109.92b + 63.705 REJ(DLL) 
+8 10158-6685 VOS(MV) + .30l6 + .b63 + .257 
+IOS(NA) + op340 .550 - 1.090 
+IR(NA) + 17.695 + 58.060 + 40.365 
+9 1O1SR-6686 VOS(NV) - .6A6 + .194 + .880 REJ(DELI 
+IOS(NA) + .830 - .540 - 1.370 
+IN(NA) + 46.675 +107.540 + 61.1bS REJ(DEL) 
+10 10158-6687 VOS(MV) - .lbl ,639 + .790 REJ(DEL) 
+IOS(NA) + .20­ .340 - .560 
+IB(NA) + 22.5E00 + 61.455 + 38.955 
+11 10158-6690 VOS(MV) - .351 ..406 + .757 REJ(DEL) 
+TOS(NA) + .Seo .420 - 1.000 
+r8(NA) + 42.7,5 + 95.290 4 52.495 
+12 10158-6641 VOS(MV) - .b06 - .630 + .876 REJ(DEL) 
+IOS(NA) + 2.470 + 3.190 + .720 
+113(N) + 42.ebb + 95.690 + 52.805 
+Figure E-5. Sample of Final Test Data, JPL IRAN Program
+
+
+
+--- PAGINA PDF 66 ---
+DATA SHEET
+ 
+Device Socket No./Device Serial No.
+
+Traveler No. 
+Date/Run 
+Device Type 
+Manufacturer 
+Lot Number 
+Date Code 
+Mother Board 
+Adaptor 
+Stepper 
+Socket 
+No. Lot -S/IN Lot -S/N 
+1 STD 
+214 
+-3 15 
+4 5 16 17 
+6 18 7 19 
+8 20 
+9 1 21 
+10h _____ 22 
+11 23 
+12 24 
+13 25 
+Figure E-6. Data Sheet, Device Socket No./Device Serial N
+
+E-13
+
+
+
+--- PAGINA PDF 67 ---
+15.0 TEST FAILURES AND RETEST REQUIREMENTS
+
+All anomalies shall be reported to the JPL Component
+Specialist by telephone, followed by a copy of the Hughes Avoid Verbal
+
+Orders, form 15CS, Sept. 72. The Radiation Effects Test Engineer and
+
+JPL Technical Monitor shall be notified within one working day when
+
+the test data indicates out-of-tolerance conditions, at which time
+
+consideration shall be given to evaluate the anomaly and establish
+
+conditions and requirements for re-testing.
+
+E-14
+
+
+
+--- PAGINA PDF 68 ---
+PART II
+
+TEST STATION OPERATIONAL PROCEDURE FOR IRRADIATION-ANNEAL
+
+SECTION 1
+
+-SYSTEM SETUP
+
+1.1 EQUIPMENT SETUP
+
+1.1.1 Exposure Station
+ 
+The exposure station consists of the equipment located
+
+in the exposure cell near the cobalt 60 gamma source. The equipment
+
+is to be set up as indicated below.
+
+1.1.1.1 Switching System. The Switching System box is placed inside
+ 
+the screen enclosure which is located on the special support fixture.
+
+1.1.1.2 Stepper Control. Place the Stepper Control box inside
+
+the screen enclosure.
+
+1.1.1.3 Cable Assemblies. Perform the following:
+
+(1) 	 Connect cable assemblies No. 1 and No. 2 to J1 and
+
+J2 on the Switching System box.
+
+(2) 	 Connect the stepper control cable to the Stepper
+
+Control box.
+
+(3) 	 Route the cables to the data room for connection
+
+to the test station.
+
+1.1.2 Test Station
+
+The test station consists of an equipment cabinet located
+
+in the data room near, but shielded from, the exposure cell.
+
+1.1.2.1 Connect the three cable assemblies from the exposure cell
+
+to the corresponding receptacles on the Test Console.
+
+1.1.2.2 Connect the data processor cable assembly to the Radiation
+
+Analysis Data System chassis and route the cable to the data processing
+
+station.
+
+E-15
+
+
+
+--- PAGINA PDF 69 ---
+'
+
+1.1.3 Data Processing Station
+
+This station consists of data acquisition and computer
+
+interface equipment.
+
+1.1.3.1 Connect the cable assembly, from the test station, to the
+
+receptacle on the Remote head.
+
+1.1.3.2 The cable from the Tape Module is to be connected to the
+
+Remote Head.
+
+1.1.3.3 Connect the cable assembly between the Remote Head and
+
+the Data Set.
+
+NOTE
+
+Exercise extreme care in connecting all cable
+
+assemblies. JPL QA representative is to verify
+
+correct connector mating (ref. Part III, para. 4.0).
+
+1.2 SYSTEM POWER 
+1.2.1 Test Station 
+1.2.1.1 Test Console. Perform the following: 
+(1) Position the Power switch in the OFF position. 
+(2) Place the Manual/Auto switch in the MANUAL position. 
+1.2.1.2 Main Frame. Place the Power switch on the equipment cabinet
+
+in the ON position.
+
+1.2.1.3 Digital Voltmeter. Operate the Power switch to turn the
+
+DVM power ON.
+
+1.2.1.4 Radiation Analysis Data System. Depress the Power switch
+ 
+lighting the power indicator.
+
+1.2.1.5 Ammeter. Turn ammeter power switch ON.
+
+1.2.2 Data Processing Station
+
+E-16
+
+
+
+--- PAGINA PDF 70 ---
+v 
+1.2.2.1 Remote Head. Perform the following:
+
+(1) 	 Power. Verify that system power is ON as shown by the
+
+illuminated indicator.
+
+(2) 	 Console Select. Depress the Console Select button
+
+illuminating the indicator.
+
+1.2.2.2 Tape Module. Perform the following:
+
+(1) 	 Power ON. Press the Power switch to turn module power ON.
+
+(2) 	 Printer ON. Depress the Printer switch, obtain "PRINTER"
+
+reading on the Tape Module readout.
+
+(3) 	 Term Data. Operate the Source switch to obtain "TERM
+
+DATA" on the module readout.
+
+(4) 	 Off Line. Press the Online switch to obtain a flashing
+
+"ON LINE" readout.
+
+1.2.2.3 Data Terminal. Perform the following:
+
+(1) 	 Power ON. Operate the power switch located at the
+
+rear of the data terminal. Indicator lamps will
+
+illuminate on the front panel.
+
+(2) 	 On Line. Press the Line switch illuminating the line
+ 
+indicator.
+
+(3) 	 Ready. Depress the Ready switch lighting the indicator.
+
+NOTE
+
+Allow equipment to warm up for 15 minutes
+
+before proceeding to Section 2.
+
+E-17
+
+
+
+--- PAGINA PDF 71 ---
+SECTION 2
+
+SYSTEM CHECKOUT
+
+2.1 TEST EQUIPMENT SETUP
+
+Test equipment is to be set up as indicated below. Selection
+
+of equipment to be used in controlled by Table E-4.
+
+NOTE
+
+If the test equipment is already set up and
+
+continued screening does not require a change
+
+of stepper switches or if Table E-4 requires
+
+no diagnostic check go directly to Step 3.
+
+2.1.1 Switching System
+
+2.1.1.1 Stepper Switches. Two stepper switches, as specified in
+
+Table E-4, are to be placed inside the screen enclosure. Connectors
+
+are to be mated in accordance with number and color coding.
+
+2.1.1.2 Diagnostic Hardware. Table E-4 specifies the equipment
+
+setup for diagnostic system checkouts. Install the appropriate diagnostic
+
+hardware into the Switching System.
+
+NOTE
+
+Exercise extreme care in mating connectors.
+ 
+JPL QA representative to verify correct
+
+connector mating (ref. Part III, para. 4.0).
+
+2.1.2 Test Console
+ 
+2.1.2.1 LAB. STD. DEV. Select the appropriate Control card in
+
+accordance with Table E-4. Install the appropriate laboratory standard
+
+device into the control board and insert the board into the Test Console
+
+front panel (ref. Part III, para. 1.0).
+
+NOTE
+
+All operational amplifier and comparator
+
+laboratory standard devices are the TO-99
+
+can versions. The analog switches are flat­
+packs. JMET packages are TO-18, TO-71 and
+
+TO-72. 
+E-18 
+
+--- PAGINA PDF 72 ---
+2.1.2.2 DVM RANGE. Set the DVM Range Selector switch to the type
+
+of device being tested and as specified on Table E-4.
+
+2.1.2.3 MANUAL Mode. Place the Manual/Auto switch in the MANUAL
+
+position.
+
+2.1.2.4 Power ON. Place the Power switch in the ON position.
+
+2.1.2.5 Reset. Depress the Reset button until the device number
+
+readout reads "39".
+
+2.1.2.6 Data Cables. Data cable connections between the Test Console,
+
+DVM and Ammeter are dependent upon what type of device is being screened.
+
+Set up cable connections indicated below.
+ 
+(1) Operational Amplifiers and Comparators
+
+(a) DVM Input cable connects to "TC OUTPUT" terminals.
+
+(b) Ammeter input cable connects to "BLANK" terminals.
+
+(2) Analog Switches and JFET
+
+(a) DVM input cable connects to "AMM. OUTPUT" terminals.
+
+(b) Ammeter input cable connects 'TC OUTPUT" terminals.
+
+2.1.3 Ammeter
+
+If screening JFET or analog switches, set up the ammeter
+
+as indicated below, otherwise proceed to Step 2.1.4.
+
+2.1.3.1 Display Rate -- MAX. Rotate the Display Rate switch to
+
+the MAX position.
+
+2.1.3.2 Filter -- IN. Place Filter switch in the IN position.
+
+2.1.3.3 Zero -- OPERATE. Check meter zero and place the Check/Operate
+
+switch in the OPERATE position.
+
+2.1.3.4 Range -- AUTO. Place the Hold/Automatic switch in the
+
+AUTOMATIC position.
+
+2.1.4 Tape Module
+
+E-19
+
+
+
+--- PAGINA PDF 73 ---
+2.1.4.1 Load Cassette. Load the magnetic tape cassette into the
+
+Tape Module.
+
+2.1.4.2 Rewind. Momentarily depress the Rewind switch to rewind,
+
+the tape.
+
+2.1.5 Data Terminal
+
+2.1.5.1 Carriage Return. Operate the Carriage Return key to clear
+
+the paper in the typewriter.
+
+2.1.5.2 Tape Punch. Press the Power switch to turn punch power ON.
+
+2.1.5.3 Leader. Feed approximately 15cm (6 inches) of blank leader
+
+on the paper tape.
+
+2.2 TEST SEQUENCE
+
+2.2.1 Tape Module
+
+2.2.1.1 ON LINE. Press the Online switch to obtain a steady "ON
+
+LINE" readout.
+
+2.2.1.2 LINE DATA. Operate the Source switch to obtain "LINE DATA"
+
+readout.
+
+2.2.2 Remote Head -- SYSTEM RESET.
+
+Depress the Power On/System Reset button. The tape will
+
+run briefly and "WRITE" will appear in the Tape Module readout.
+ 
+2.2.3 Test Console
+
+2.2.3.1 AUTO. Place the Manual/Auto switch in the AUTO position.
+
+A 
+2.2.3.2 START. Depress the Start button once to start the sequence.
+
+NOTE
+
+The system will sequence through the tests automatic­
+ally; data will be recorded on the magnetic tape and
+
+the teletype. At the end of the test sequence, the
+
+"end of test" lamp will be illuminated on the TC and
+
+the magnetic tape will rewind automatically.
+
+E-20
+
+
+
+--- PAGINA PDF 74 ---
+2.2.4 Tape Module -- TERM DATA
+
+At the end of the test sequence press the Source switch
+
+to obtain "TERM DATA" on the readout.
+
+2.2.5 Data Terminal
+ 
+2.2.5.1 Leader. Feed 15cm (6 inches) paper tape leader.
+
+2.2.5.2 Remove Tape. Remove the paper tape and hold for use in
+
+data processing if required.
+
+2.2.5.3 Punch OFF. Turn the paper tape punch power OFF.
+
+2.3 DATA PROCESSING
+
+2.3.1 Remote Head -- MODEM SELECT.
+
+Operate the Modem Select switch illuminating the indicator.
+
+2.3.2 Data Terminal
+
+Establish communication with the computer. Call up the
+ 
+current program and proceed to the question "Ready to accept diagnostic
+
+data?". Do not answer.
+
+2.3.3 Tape Module -- LINE DATA 
+Depress the Source switch to obtain "LINE DATA" on the readout.
+
+2.3.4 Data Terminal -- CTL/Q
+
+On the keyboard simultaneously depress the CTL and Q keys.
+
+NOTE
+
+The Tape Module will play the data to the
+
+computer automatically and the typewriter
+
+will print the data received by the com­
+puter. At the end of the data, the tape will
+
+stop automatically at the question "Do you
+
+want to input the diagnostic data again?"
+
+Do not answer.
+ 
+E-21
+
+
+
+--- PAGINA PDF 75 ---
+2.3.5 	 Data Terminal
+
+Before answering the~question, determine what the answer
+
+should be and proceed as directed below.
+
+2.3.5.1 	 YES. If the answer is YES:
+
+(1) TaDe Module. Rewind the tape cassette by momentarily 
+processing the Rewind switch. 
+(2) Answer the question YES. 
+(3) Recycle to Step 2.3.5. 
+2.3.5.2 	 NO. If the answer is NO:
+
+(1) 	 Tape Module -- TERM DATA. Press the Source switch
+
+to obtain "TERM DATA" on the module readout.
+
+(2) 	 Answer the question NO.
+
+(3) 	 After the computer completes processing the diagnostic
+
+data, sign off from the computer.
+
+(4) 	 Go to Step 2.3.6.
+
+2.3.6 	 Remote Head -- CONSOLE SELECT
+
+Switch the Remote Head to console position by-pressing
+
+Console Select switch; indicator will be illuminated.
+
+2.3.7 	 Tape Module
+
+2.3.7.1 	 Remove the tape cassette.
+
+2.3.7.2 OFF LINE. Press the Online switch to obtain a flashing
+
+"ONLINE" readout.
+
+2.3.8 	 Test Console -- POWER OFF.
+
+Turn Test Console Power OFF.
+ 
+E-22
+
+
+
+--- PAGINA PDF 76 ---
+SECTION 3
+
+DEVICE SCREENING
+
+3.1 TEST EQUIPMENT SETUP
+
+Test equipment is to be set up as indicated below. Selection
+
+of equipment to be used is controlled by Table E-4.
+
+3.1.1 Switching System
+
+3.1.1.1 Stepper Switches. Two stepper switches, as specified in
+
+Table E-4 are to be placed inside the screen enclosure. Connectors
+
+are to be mated in accordance with number and color coding.
+
+3.1.1.2 Mother Boards. Two Mother Boards with flight parts installed
+
+are to be installed anto the Switching System (ref. Part III, para. 3.0).
+
+3.1.1.3 Setup for Exposure. Prior to continuing, set up the exposure
+
+station as indicated below.
+
+NOTE
+
+Exercise extreme care in mating connectors.
+
+JPL QA representative is to verify correct
+ 
+connector mating (ref. Part III, para. 4.0).
+
+(1) 	 Set the cobalt 60 source tube array to a pitch diameter
+
+of 11.4 cm using the setup template.
+
+(2) 	 Set the exposure station to place the flight devices
+ 
+at the required distance from the source using the
+
+setup template.
+ 
+(3) 	 Set three TLD's (broad side to the source) in a plane
+
+passing through the flight devices to measure the
+
+absorbed dose.
+
+(4) 	 After completion of the setup close the screen enclosure
+
+by installing and securing the end wall of the enclosure.
+
+3.1.2 Test Console
+
+3.1.2.1 LAB. STD. DEV. Select the appropriate Control card in
+
+accordance with Table E-4. Install the appropriate laboratory standard
+
+device into the control board and insert the board into the Test Console
+
+front panel (ref. Part III, para. 1.0).
+
+E-23 
+
+--- PAGINA PDF 77 ---
+NOTE
+
+All operational amplifier and comparator
+
+laboratory standard devices are the TO-99
+
+can versions. The analog switches are flat­
+packs. JFET packages are TO-18, TO-71 and
+
+TO-72.
+
+3.1.2.2 DVM RANGE. Set the DVM Range selector switch to the type
+
+of device being tested and as specified on Table E-4.
+
+3.1.2.3 MANUAL Mode. Place the Manual/Auto switch in the MANUAL
+
+position.
+
+3.1.2.4 Power ON. Place the Power switch in the ON position.
+
+NOTE
+
+Verify that power supply current levels are
+
+not greater than the levels specified in
+
+Table E-4.
+
+3.1.2.5 Data Cables. Data cable connections between the Test Console,
+
+DVM and Ammeter are dependent upon what type of device is being screened.
+
+Set up cable connections as indicated below.
+
+(1) 	 Operational Amplifier and Comparators
+
+(a) 	 DVM Input cable is to be connected to "TO OUT"
+
+receptacle.
+
+(b) 	 Connect the Ammeter input cable to the "BLANK"
+
+receptacle.
+
+(2) 	 Analog Switch and JFET
+
+(a) 	 DVM Input cable is to be connected to "AMM.
+
+OUT" receptable.
+
+(b) 	 Connect the Ammeter input cable to the "TC
+
+OUT" receptable.
+
+3.1.3 Ammeter
+
+If screening JFET or analog switches, set up the ammeter
+
+as indicated below, otherwise proceed to Step 2.1.4.
+
+E-24
+
+
+
+--- PAGINA PDF 78 ---
+3.1.3.1 Display Rate -- MAX. Rotate the Display Rate switch to
+
+the MAX position.
+
+3.1.3.2 Filter -- IN. Place Filter switch in the IN position.
+
+3.1.3.3 Zero -- OPERATE. Check meter zero and place the Check/Operate
+
+switch in the OPERATE position.
+ 
+3.1.3.4 Range -- AUTO. Place the Hold/Automatic switch in the
+ 
+AUTOMATIC position.
+
+3.1.4 Tape Module
+
+3.1.4.1 Load Cassette. Load the magnetic tape cassette into the
+ 
+Tape Module.
+
+3.1.4.2 Rewind. Momentarily depress the Rewind switch to rewind
+
+the tape.
+
+3.1.5 Data Terminal
+
+3.1.5.1 Carriage Return. Operate the Carriage Return key to clear
+
+the paper in the typewriter.
+
+3.1.5.2 Tape Punch. Press the Power switch to turn punch power ON.
+
+3.1.5.3 Leader. Feed approximately 15cm (6 inches) of blank leader
+
+on the paper tape.
+
+NOTE
+
+Allow the flight devices to warm up for 5
+
+minutes before proceeding to Step 3.2.
+
+3.2 PREIRRADIATION TEST SEQUENCE
+
+This test sequence is performed to establish device acceptability
+
+prior to exposing the devices to radiation (ref. Part III, para. 5.0).
+
+3.2.1 Remote Head -- CONSOLE SELECT.
+
+Depress the Console Select switch, illuminating the indicator
+
+lamp.
+
+E-25
+
+
+
+--- PAGINA PDF 79 ---
+3.2.2 	 Tape Module
+
+3.2.2.1 LINE DATA. Operate the Source switch to obtain "LINE DATA"
+
+on the module readout.
+
+3.2.2.2 ONLINE. Press the Online switch to obtain a steady "ONLINE"
+
+readout.
+
+3.2.3 	 Remote Head -- RESET.
+
+Press the Power ON/System Reset to reset the test system.
+
+3.2.4 Test Console 
+3.2.4.1 AUTO. Place the Manual/Auto switch in the AUTO position. 
+3.2.4.2 START. Depress the Start switch once to start the test 
+sequence. 
+NOTE
+
+The system 	 will sequence through the tests
+ 
+automatically, data will be recorded on the
+
+magnetic tape, paper tape and teletype. At
+
+the end of the test sequence the "end of test"
+
+lamp will be illuminated on the TC and the
+
+magnetic tape will rewind automatically.
+
+3.2.5 	 Tape Module -- TERM DATA.
+
+At end of the test sequence press the Source switch to obtain
+
+"TERM DATA" on the module readout.
+
+3.2.6 	 Data Terminal
+
+3.2.6.1 	 Leader. Feed 15cm (6 inches) blank paper tape leader.
+ 
+3.2.6.2 	 Remove Tape. Remove the paper tape and label.
+ 
+3.2.6.3 	 Punch OFF. Turn paper punch power OFF.
+
+PREIRRADIATION DATA PROOESSING
+
+3.3.1 	 Remote Head -- MODEM SELECT
+
+Depress the Modem Select button. The Modem Select indicated
+
+will illuminate.
+
+E-26
+
+3.3 
+
+--- PAGINA PDF 80 ---
+3.3.2 Data Terminal
+
+Establish communication with the computer. Call up the
+ 
+current program and proceed to the question "Ready to accept pre-radiation
+
+data?". Do not answer.
+
+3.3.3 Tape Module -- LINE DATA
+
+Depress the Source switch to obtain "LINE DATA" readout.
+ 
+3.3.4 Data Terminal -- CTL/Q.
+
+Depress the CTL and Q keys simultaneously.
+
+NOTE
+
+The Tape Module will play the preirradiation
+
+data to the computer automatically and the tele­
+type will print the data received by the computer.
+
+At the end of the data the tape will stop auto­
+matically at the question "Do you want to input the
+
+pre-radiation data again?". Do not answer.
+
+3.3.5 Data Terminal
+
+Before answering the question determine what the answer
+
+should be and proceed as directed below.
+
+3.3.5.1 YES. If the answer is YES: 
+(1) Tape Module -- REWIND. Rewind the cassette 
+by depressing the Rewind switch momentarily. 
+(2) Answer the question YES. 
+(3) Recycle to 3.3.5. 
+3.3.5.2 NO. If the answer is NO:
+
+(1) 	 Tape Module -- TERM DATA. Depress the Source switch
+
+to obtain "TERM DATA" on the module readout.
+
+(2) 	 Answer the question NO.
+
+(3) 	 At question "What Next?"
+
+(a) 	 If results are acceptable, answer "5", sign 
+off from the computer and go to 3.3.6. 
+E-27
+
+
+
+--- PAGINA PDF 81 ---
+(b) 	 If the results are unacceptable, remedy the problem
+
+and:
+
+(i) 	 Go to 1.0 if equipment teardown was required.
+
+(ii) 	 Go to 3.0 if no teardown was required.
+
+3.3.6 	 Remote Head -- CONSOLE SELECT
+
+Depress Console Select switch illuminating the indicator.
+
+3.3.7 Tape Module 
+3.3.7.1 Remove Tape. Remove the cassette and label per Part III, 
+para. 9.0. 
+3.3.7.2 Load Tape. Rotate the cassette and reload it into the
+
+Tape Module to record on the second side. The second side is to be
+
+labeled "POST".
+
+3.3.7.3 REWIND. Rewind the cassette by momentarily pressing the
+
+Rewind switch. The rewind process will take about 2 minutes, but it
+
+is OK to proceed while the tape is rewinding.
+
+3.3.7.4 OFF LINE. Place the module ofr line by pressing the Source
+
+switch and obtaining a flashing "ON LINE" readout.
+
+3.3.8 	 Test Console
+ 
+3.3.8.1 	 MANUAL. Place the Manual/Auto switch in the MANUAL position.
+
+3.3.8.2 RESET. Reset the steppers by depressing the Reset button
+
+until "39? appears in the device number readout.
+
+3.4 	 DEVICE EXPOSURE
+
+3.4.1 Determine the exposure time required to obtain the specified
+
+dose level. Write the time, in minutes, on the Traveler (ref. Part III,
+
+para. 10.0).
+
+3.4.2 	 Set the Gammabeam 650 timer to the time determined in Step 3.4.1.
+
+3.4.3 	 Select all source tubes on the Gammabeam 650 control console.
+
+3.4.4. Verify that power supply currents do not exceed the levels
+
+called out in Table E-4.
+
+E-28
+
+
+
+--- PAGINA PDF 82 ---
+3.4.5 Close the exposure cell.
+
+3.4.6 Activate the source verifying that all sources are up and
+
+the system is functioning properly.
+
+NOTE
+
+If problems occur in source operation, stop
+
+the exposure, keeping track of the actual time
+
+the devices were exposed. Remedy the problem
+
+and recycle to Step 3.4.
+
+3.4.7 Approximately 3 minutes prior to completion of the exposure,
+
+set up the following equipment as indicated.
+
+3.4.7.1 Remote Head -- CONSOLE SELECT. Verify that the Remote
+
+Head is in Console Select mode.
+
+3.4.7.2 Data Terminal. Perform the following:
+
+(1) 	 Carriage Return. Operate the Return key to clear
+
+paper 	 in the typewriter.
+
+(2) 	 Punch ON. Turn the paper tape punch ON.
+
+(3) 	 Leader. Feed approximately 15cm (6 inches) of leader
+
+on the paper tape punch.
+
+3.4.7.3 Tape Module. Perform the following:
+
+(1) 	 LINE DATA. Operate the Source switch to obtain a
+
+"LINE DATA" readout.
+
+(2) 	 ON LINE. Operate "ONLINE" switch to obtain a steady
+
+"ON LINE" readout.
+
+3.4.7.4 Remote Head -- RESET. Reset the system by depressing the 
+Power ON/System Reset button. 
+POSTIRRADIATION TEST SEQUENCE
+
+When the device exposure is complete start the postirradia­
+tion test sequence immediately.
+
+3.5.1 Test Console
+
+E-29 
+3.5 
+
+--- PAGINA PDF 83 ---
+3.5.1.1 	 AUTO. Place the Manual/Auto switch in the AUTO position.
+ 
+3.5.1.2 	 START. Press the Start switch once to start the test sequence.
+
+NOTE
+
+The system will sequence through the tests
+
+automatically, data will be recorded on the
+
+magnetic tape, paper tape and teletype. At
+
+the end of 	 the test sequence the "end of test" 
+lamp will be illuminated on the test console
+
+and the magnetic tape will rewind automatically.
+
+3.5.2 	 Tape Module -- TERM DATA
+ 
+At the end of the test sequence place the module in TERM
+
+DATA mode by depressing the Source switch to obtain a "TERM DATA" readout.
+
+3.5.3 	 Data Terminal
+
+3.5.3.1 	 Leader. Feed 15cm (6 inches) blank paper tape leader.
+
+3.3.5.2 	 Remove Tape. Remove the punched tape and label.
+
+3.3.5.3 	 Punch OFF. Turn paper tape punch OFF.
+
+3.6 	 POSTIRRADIATION DATA PROCESSING
+
+3.6.1 	 Remote Head -- MODEM SELECT
+
+Operate the Modem Select switch to illuminate the indicator.
+
+3.6.2 	 Data Terminal
+
+Establish communications with the computer, call up the
+
+current program and proceed to the question "Ready to accept post-radiation
+
+data?". Do not answer.
+
+3.6.3 	 Tape Module -- LINE DATA
+
+Operate the Source switch to obtain "LINE DATA" on the
+ 
+module readout.
+
+E-30
+
+
+
+--- PAGINA PDF 84 ---
+3.6.b Data Terminal -- CTL/Q
+
+Simultaneously depress the CTL and Q keys on the typewriter
+
+keyboard.
+
+NOTE
+
+The Tape Module will play the post-irradiation
+
+data to the computer automatically and the tele­
+type will print the data received by the computer.
+
+At the end of the data the tape will stop auto­
+matically at the question "Do you want to input
+
+post-radiation data again?". Do not answer.
+
+3.6.5 Data Terminal
+
+Before answering the question determine what the answer
+
+should be and proceed as indicated below.
+
+3.6.5.1 YES. If the answer is YES: 
+(1) Tape Module -- REWIND. Rewind the cassette. 
+(2) Answer the question YES. 
+(3) Recycle to 3.6.5. 
+3.6.5.2 NO. If the answer is NO:
+
+(1) 	 Tape Module -- TERM DATA. Function Source switch
+
+to obtain "TERM DATA" readout.
+
+(2) 	 Answer question NO.
+
+(3) 	 After computer completes processing the data request
+
+final printout twice ("7", "7"), stop test ("5")
+
+and sign off from the computer
+
+(ref. 	 Part III, para. 15.0).
+
+3.6.6 Tape Module
+
+3.6.6.1 Remove Tape. Remove the tape cassette and verify that
+
+it is labeled per Part III, para. 14.0.
+
+3.6.7 Test Console
+
+3.6.7.1 MANUAL. Place the Manual/Auto switch in the MANUAL position.
+
+3.6.7.2 Power OFF. Turn console power OFF.
+
+E-31
+
+
+
+--- PAGINA PDF 85 ---
+3.6.8 Device Anneal 
+From this point on device handling shall be controlled
+
+by Part III starting with para. 16.0.
+
+E-32
+
+
+
+--- PAGINA PDF 86 ---
+Table E-4. Test Setup Matrix
+
+DEVICE TYPE DEV. 
+TYPE 
+CODE 
+DVM 
+RANGE 
+SET-UP 
+MOTHER 
+BOARD/ 
+CONTROL ADPTR 
+BOARD 
+STPR +15V 
+MAXIMUM POWER SUPPLY CURRENT 
++1OV +40V -20V +12V 
+mA 
+-18v 
+LM101AF 11 OA OA 3 OA 75 NA NA NA NA NA 
+LM101AH 10 OA OA 2A OA 75 NA NA NA NA NA 
+LM111F 15 COMP COMP 10 OA 150 5 NA NA NA NA 
+LM111H 14 COMP COMP 9 OA 150 5 NA NA NA NA 
+OA DIAGNOSTIC 
+2N5556 
+10 
+22 
+OA 
+JFET 
+OA DIAG 
+JFET-I 
+NA 
+NA 
+OA 
+AS 
+NA 
+<1 
+NA 
+NA 
+NA 
+NA 
+NA 
+NA 
+NA 
+NA 
+NA 
+NA 
+AS DIAGNOSTIC 01 AS AS 1 AS NA NA NA NA NA NA 
+COMP DIAGNOSTIC 10 OA OA DIAG NA OA NA NA NA NA NA NA 
+DG129A 01 AS AS 1 AS NA <1 NA NA 170 100 
+DG133A 
+DG141A 
+02 
+03 
+AS 
+AS 
+AS 
+AS 
+1 
+1 
+AS 
+AS 
+NA 
+NA 
+<1 
+LI 
+NA 
+NA 
+NA 
+NA 
+170 
+170 
+100 
+100 
+2N5196 20 JFET JFET-II NA AS NA <1 NA NA NA NA 
+2N5520 21 JFET JFET-II NA AS NA <1 NA NA NA NA 
+2N4856 24 JFET JFET-I NA AS NA NA NA < 1 NA NA 
+NOTE: OA = Operational Amplifier AS = Analog Switch 
+COMP = Voltage Comparator JFET = Junction Field Effect Transistor
+
+
+
+--- PAGINA PDF 87 ---
+1.0 
+PART III
+
+QUALITY ASSURANCE REQUIREMENTS
+ 
+FOR IRAN SCREENING PROGRAM
+
+GENERAL
+
+During the IRAN test operation, all flight devices shall
+
+be handled using cotton gloves and/or tweezers. At no time shall the
+
+flight parts be handled by uncovered hands. Wrist-stats shall be used
+
+at all times when handling the parts.
+
+When the test parts are removed from packing containers
+
+they shall be handled over a bench having at least 2.5 cm (1 inch)
+
+foam padding. When not in a test cycle, the test devices shall be
+
+stored in sealed cardboard or plastic boxes, which will be taped shut
+
+and placed in a bonded stores area. The parts traveler, shown in
+
+Figure E-3, shall be used as a guide for Quality Assurance operation.
+ 
+The individual operational steps required in handling parts are shown
+
+in Figure E-1 and discussed in detail in the subsequent paragraphs.
+
+The JPL QA representative, using a 3M static charge meter,
+
+shall periodically verify the acceptability of work area and bench
+
+test area prior to the IRAN screen test operation.
+
+LOG-IN PARTS AND INITIATE TEST TRAVELER
+
+Upon arrival of each lot of IRAN screening parts at Hughes
+
+Fullerton test facility, a Master Log and Screening Traveler shall be
+
+initiated for that lot. Take the parts out of shipping container on the
+
+designated bench top area and perform the following operations:
+
+(1) 	 Identify and record the following information on
+
+the Master Log:
+
+(a) 	 Part Type
+
+(b) 	 Manufacturer
+
+(c) 	 Quality
+
+(d) 	 Receipt date
+
+(e) 	 JPL shipper number
+
+(f) 	 Lot number
+
+(g) 	 Date code
+
+(h) 	 Diffusion run number (if available record in
+
+remarks column)
+ 
+E-34 
+
+--- PAGINA PDF 88 ---
+(2) 	 Have the JPL QA representative initial and stamp item
+
+number 1 of the traveler. The responsible HAG personnel
+
+shall also initial and date item on the traveler.
+
+(3) 	 JPL QA representative shall perform a microscopic
+
+(10X) inspection of the leads on a sample of five
+
+(5) devices from each lot.
+
+(4) 	 Laboratory Standard devices shall be used as control
+
+devices which shall not be irradiated or annealed.
+
+The Laboratory Standards devices shall not be returned
+
+to JPL as a part of the lot. The control unit shall
+
+be electrically measured every time the test devices
+
+are measured to check the test setup.
+
+2.0 LOAD CONTACTORS
+
+Select the appropriate contactors (adaptors) as specified
+
+in Table E-4. Load the empty adaptors onto the Mother Boards. JPL QA
+
+representative is to verify correct orientation of pin 1 on the adaptor.
+
+Item 2 on the traveler is to be signed off by the JPL QA and HAG
+
+representatives.
+
+3.0 LOAD MOTHER BOARDS
+
+The flight device containers shall be opened by cutting
+ 
+the tape (tape shall not be stripped from boxes) and the devices placed
+
+on the padded bench ready for loading onto the Mother Boards. As each
+
+device is loaded onto the Mother Board the following items-shall be
+
+performed:
+
+(1) 	 Verify that the device is correctly oriented with
+
+the device carrier (Figure E-7).
+
+(2) 	 The Mother board shall be loaded with the lowest
+ 
+serial number in socket number two; the next highest
+ 
+serial number into socket number three, etc. This
+
+secuence shall be carried out until all test parts
+
+are loaded, or the Mother Board is full.
+ 
+(3) 	 As a device is loaded into a Mother Board socket,
+
+the device serial number shall be recorded opposite
+
+the appropriate socket number on the Data Sheet (see
+
+Figure E-6). Devices received without serial numbers
+
+shall be serialized prior to loading on the Mother
+
+board.
+
+(4) 	 Prior to loading devices onto the Mother Boards (MB)
+ 
+the MB is to be connected to the Supply Current Test
+
+Fixture (SCTF). The SCTF is to be used to test the
+ 
+supply current drawn by the devices as they are loaded
+
+onto the MB. As each device is loaded onto the MB
+
+E-35
+
+
+
+--- PAGINA PDF 89 ---
+a current test is made and results are compared with
+
+the allowed supply current flow as indicated in Table
+
+E-4.
+
+(5) 	 If for any current test the value measured exceeds
+
+the value specified in Table E-4 proceed as follows:
+
+(a) 	 Remove the last device installed and check
+
+the device orientation in the carrier or socket.
+
+If the device/carrier orientation was incorrect,
+ 
+the JPL QA representative shall remove the
+
+device and reinstall it correctly. Then load
+
+the device onto the MB again and test the supply
+
+current again.
+ 
+(b) 	 If the measured current agrees with the allowed
+
+current in Table E-4, leave the device in the
+
+MB, prepare an AVO describing the problem and
+
+contact the cognizant JPL technical represent­
+ative 	 for instructions prior to testing.
+
+(c) 	 If the excessive current can't be eliminated
+
+remove the device from the test lot, prepare
+
+an AVO describing the problem and contact
+
+the cognizant JPL representative.
+
+(6) 	 Continue sequentially loading devices onto the MB
+
+and testing the supply current with the SCTF until
+
+all devices to be screened are loaded onto MB's.
+
+The JPL QA representative shall verify this operation
+
+and initial and stamp item 3 on the traveler. The
+
+responsible HAC personnel shall also initial and
+
+date item 3 on the traveler (Figure E-3).
+
+4.o SYSTEM CHECKOUT
+
+Before a loaded Mother Board is placed in the radiation
+
+test fixture, the appropriate Diagnostic Card shall be utilized. The
+
+Diagnostic Card shall be placed in the Mother Board socket and the
+
+system operation verified per paragraph 2.0, Part II of this procedure.
+
+Prior to system checkout the JPL QA representative shall
+
+verify correct mating of all test equipment connectors.
+
+After verification and approval of system operation by
+
+the JPL QA representative, the QA representative shall initial and
+
+stamp item number 4 on the traveler. The responsible HAC personnel
+
+shall also initial and date item number 4 on the traveler.
+
+E-36
+
+
+
+--- PAGINA PDF 90 ---
+5.0 PRE-IRRADIATION MEASUREMENTS
+
+Install the loaded Mother Boards into the switching system
+
+chassis and initiate parameter testing as described in Part II of this
+
+procedure.
+
+6.0 REVIEW PRINTER DATA
+
+The printer tape output shall be inspected for abnormalities,
+
+such as missing and/or obviously incorrect data, prior to initiation
+
+of irradiation.
+
+When the data is deemed acceptable, The JPL QA representative
+
+shall initial and stamp item 6 on the traveler. The responsible HAC
+
+personnel shall also date and initial item 6 on the traveler.
+
+7.0 INPUT PARTS I. D. TO COMPUTER
+
+Communication with the HAC Facility HP 3000 computer shall
+
+be initiated through the computer terminal, and acoustic coupler.
+
+Information input to the computer shall consist of the operator typing
+
+answers from the terminal keyboard in response to questions from the
+
+computer.
+
+The computer shall indicate to the operator when the program
+
+is prepared to receive data from the search tape.
+
+8.0 INPUT TEST DATA TO COMPUTER
+
+The paper punch tape generated in item 6 shall now be inserted
+
+into the tape reader/punch unit attached to the teletype terminal. When
+
+alignment of the punch tape on the tape drive sprocket has been verified,
+
+and the feed cover securely latched, the tape reader/punch unit shall
+ 
+be activated by moving the lever switch to the "READY" position. When
+
+ready to input data, type "RESUME" followed by a line return, the tape
+
+will be read in automatically under computer control.
+
+After the tape has fed through reader/punch unit the tape
+ 
+shall be removed from the unit and set aside pending verification of
+
+parameter value calculations.
+
+9.0 REVIEW COMPUTER OUTPUT
+
+The calculated parameter values returned to the terminal
+
+shall be examined for errors or devices which do not fall within the
+
+specification values. In the event of either occurrence, a second
+
+pre-irradiation data run shall be performed for verification. In the
+
+event of non-verification, a third data run shall be made. If no
+
+agreement between the three data runs can be established, the test
+ 
+E-37
+
+
+
+--- PAGINA PDF 91 ---
+shall be aborted to identify and remedy the problem. After the problem
+
+has been remedied, a new data run shall be performed.
+
+After verification of parameter calculations the data tape
+
+shall be labeled as pre-irradiation data. The device type, lot number
+
+and irradiation date shall be recorded on the tape, and the tape stored
+
+in a plastic box. The plastic box shall be labeled with the following 
+information: 
+(1) Part type 
+(2) Manufacturer 
+(3) Lot number 
+(4) Date code 
+(5) Irradiation test date 
+(6) Responsible HAC personnel initials. 
+The plastic box containing the punch tape shall remain
+
+in the test area pending the addition of the post'-irradiation data
+
+tape.
+
+The JPL QA representative shall initial and stamp item
+
+9 on the traveler. The responsible HAC test personnel shall also initial
+
+and date item 9 on the traveler.
+
+10.0 EXPOSE DEVICES
+
+Verify that the Gammabeam control console has been selected
+
+for automatic operation, the timer has been set for the required time,
+
+and all sources have been selected for use. Start the irradiation
+
+run and verify that all sources have been raised.
+
+At the end of the irradiation run the JPL QA representative
+
+shall initial and stamp item 10 of the traveler. The HAC responsible
+
+test personnel shall initial and date item 10 on the traveler and enter
+ 
+the required information concerning total dose and dose rate.
+
+11.0 POST-IRRADIATION MEASUREMENTS
+
+The post-irradiation procedure shall be identical to the
+
+pre-irradiation procedure called out in item 5.
+
+The JPL QA representative shall initial and stamp item
+
+11 of the traveler. The responsible HAC test personnel shall also
+
+initial and date item 11 on the traveler.
+
+E-38
+
+
+
+--- PAGINA PDF 92 ---
+12.0 	 REVIEW PRINTER DATA
+
+The same procedure called out in item 6 shall be used.
+
+The JPL QA representative shall initial and stamp item 12
+
+and date item 12 on the traveler.
+
+13.0 	 INPUT TEST DATA TO COMPUTER
+
+The same procedure called out in item 8 shall be used.
+
+14.o 	 REVIEW COMPUTER OUTPUT
+
+The same procedure called out in item 9 shall be used with
+
+the exception that the punch tape shall be marked as post-irradiation.
+
+The plastic box containing the data tapes shall be returned
+
+to bonded stores, and become a part of the test record.
+
+15.0 	 REQUEST COPIES OF DATA
+
+Prior to sign off from the computer request two copies
+
+of raw and final data.
+
+A. Data 	 Handling
+
+Pick up data at computer terminal, obtain six reduced
+
+copies and notify cognizant JPL representative that
+
+the data is available.
+
+16.0 	 UNLOAD MOTHER BOARDS
+
+A. Integrated Circuits
+
+Remove the 	 Mother Boards from the switching system
+
+chassis and place them on the designated work bench
+
+area. Remove loaded contactors from the Mother Board
+
+and place them in sequential serial number order
+
+on the bench top.
+
+B. Transistors
+
+Remove Mother Boards from switching system and return
+
+them to the bonded stores area. These devices shall
+
+not be annealed. Therefore additional handling procedures
+
+shall skip to para. 23.
+
+E-39
+
+
+
+--- PAGINA PDF 93 ---
+17.0 REMOVE PARTS FROM CONTACTORS
+
+Remove parts from contactors wearing cotton gloves and
+
+wrist-stats, and place them on the bench, maintaining sequential serial
+
+number order. Gather the empty contactors and store them in their
+
+designated box in the supply cabinet.
+ 
+18.0 PLACE PARTS IN ANNEALING TRAYS
+
+Place parts on the vented annealing trays maintaining sequential
+
+serial number order. The part with the lowest serial number shall be
+
+placed in the upper left hand corner of the tray and continue in horizontal
+
+rows left to right and then toward the operator. When placing the test
+ 
+devices on the vented tray maintain a minimum of 1/16 inch separation be­
+tween 	 device carriers, to insure an even air flow and prevent hot spots.
+ 
+19.0 LOG PARTS INTO ANNEAL
+
+The Anneal Data Sheet shall be maintained in chronological
+
+order, and attached to the environmental chamber indicating which part types
+ 
+are located inside the chamber and the date due out. The Anneal Data Sheet
+
+is shown in Fig. E-8. The required information will be filled out on
+
+the anneal data sheet and the devices will be on standby for annealing.
+
+The JPL QA representative shall initial and stamp item
+
+19 on the traveler. The HAC responsible test personnel shall also
+
+date and initial item 19 of the traveler.
+
+20.0 POST-IRRADIATION ANNEALING
+
+Upon initial start-up of the temperature ovens, the following
+
+steps shall be performed:
+
+(1) Set fail-safe thermostat to 1550C (JPL-QA shall monitor). 
+(2) Open the nitrogen (N2) valve and adjust the gas flow 
+rate to 4ft3/hr. for 30 min before application of beat. 
+(3) Set the oven temperature to 1500C and activate the heaters. 
+After verification that the proper temperature has been reached,
+
+the following steps shall be used for subsequent annealing of irradiated
+
+parts.
+
+(1) 	 Install bake trays in the temperature chamber.
+
+(2) 	 Close door and secure by means of the two screw-down
+
+handles provided.
+
+(3) 	 Assure gas flow of 4ft3/hr.
+
+E-40
+
+
+
+--- PAGINA PDF 94 ---
+For addition and/or removal of parts the following steps
+
+shall be used: 
+(1) Addition or removal of parts shall be as rapid as 
+possible to reduce heat loss. 
+(2) Addition or removal of parts shall take place only 
+once per day. 
+(3) Determine which bake trays are due to be removed 
+prior to opening the chamber. 
+(4) Open temperature chamber door by loosening the two 
+screw-down handles. 
+(5) 	 Add and/or remove parts as required.
+
+(6) 	 Close door and secure with the two screw-down handles.
+
+(7) 	 Record time-in or out on the lot traveler.
+
+(8) 	 Assure that the gas flow rate remains at 4ft3/hr.
+
+(9) 	 Check level of N2 remaining in bottles and replace
+
+any bottle that has less than 10% of the original
+
+volume remaining.
+
+(10) 	 Notify JPL that the parts have entered the anneal
+
+cycle.
+
+Test parts shall be annealed in the temperature for a minimum
+
+of 96 hrs at 150 ± 30C. In the event that parts are scheduled to be
+
+removed from the annealing cycle on Friday evening or during a weekend
+
+the parts shall remain in the temperature chamber at elevated temperature
+ 
+until the following working day at which time the parts shall be removed
+
+from the chamber. Prior to personnel leaving for the weekend all N2
+
+bottle levels shall be checked to insure sufficient volume of gas to
+
+carry through the weekend.
+
+21.0 LOG PARTS OUT OF ANNEAL
+
+After the parts have been removed from the temperature
+
+chamber the trays shall be placed on a grounded heat sink until cool.
+
+Then place the trays on the foam pad on the designated area of the
+ 
+bench. The total anneal-time shall be determined from the anneal data
+
+sheet and entered on the parts traveler in item 21. The JPL QA representa­
+tive shall perform a microscopic inspection of the leads on a sample of
+
+five devices of each lot using a 1oX power microscope. The JPL QA
+
+representative shall initial and stamp item number 21 of the traveler.
+
+The responsible HAC personnel shall also initial and date item number
+
+21 on the traveler.
+
+E-41
+
+
+
+--- PAGINA PDF 95 ---
+22.0 NOTIFY JPL OF COMPLETION OF ANNEALING
+
+23.0 REPACKAGE PARTS
+
+The annealed parts shall be removed from the bake tray using
+
+cotton gloves and wrist-stats, and placed in sequential serial number
+
+order on the designated work bench area. Obtain the original individual
+
+shipping containers from the storage area, match device and container
+
+serial number, and place containers adjacent to the annealed parts.
+
+The JPL QA representative shall apply a yellow sticker and blue seal to
+
+each part container. The JPL Q- representative shall stamp each blue seal
+
+with the I.P. stamp using black ink. The part containers shall be placed
+
+in the original shipping container and the container shall receive a yellow
+
+sticker and blue seal with I.P. stamp, by JPL QA representative.
+
+NOTE
+
+In the event the original containers cannot be used
+
+JPL will furnish new anti-static charge containers
+
+and packaging materials.
+
+JPL QA representative shall initial and stamp item 23 on
+
+the traveler. The HAC responsible test personnel shall also date and
+
+initial item 23 on the traveler.
+
+24.0 LOG OUT PARTS
+
+Complete the Master Log and Screening Traveler. Notify
+
+JPL that the parts are available for pickup. JPL QA representative
+
+shall initial and stamp item 24 on the traveler. The HAC responsible
+
+test personnel shall also date and initial item 24 on the traveler.
+
+Complete AVO to identify which screened devices are to be re­
+moved from the screened lot for further test under the re-irradiate program.
+
+25.0 RELEASE PARTS
+
+The responsible HAC test personnel shall fill out the Hughes
+
+Property Accountability Document (PAD-Form 11052). Upon pickup by
+
+JPL personnel the following items shall be noted.
+
+(I) 	 JPL QA representative shall stamp and initial item
+
+25 of the traveler.
+
+(2) 	 HAC personnel shall date and initial item 25 of the traveler.
+
+(3) 	 The JPL pickup personnel shall sign and date the PAD
+
+accepting delivery of parts and data.
+
+(4) 	 Re-irradiate devices are to be handled as a package
+
+separate from the screened lot and identified on the PAD.
+
+E-42
+
+
+
+--- PAGINA PDF 96 ---
+14 I 
+DG129A 
+DGI33A 
+DGI41A 
+8 7 
+14 PINS 
+LMIOIAF 
+LM111F
+
+10 1 ­
+10 PINS 
+Figure E-7. Flatpack Device/Carrier Orientation
+
+E-43
+
+
+
+--- PAGINA PDF 97 ---
+ANNEAL DATA (OVEN)
+
+Date/ Expected Actual Accumulated 
+Part Lot Run Time In Time Out Time Out 
+T-ype. No. No- -Qty.-(Date ­ hrs.) (Date ­ hrs.) (Date - hrs.) Anneal time 
+ENb bwr6 Figure E-8. Sample Anneal Data Sheet 
+AEFunffL) : rES. A -'10"? E-44INS-P-on 
+
+--- PAGINA PDF 98 ---
+TECHNICAL REPORT STANDARD TITLE PAGE
+
+1. Report No. JPL Pub.77-41,11 2. Gove-timent Accession No. 3. Recipient's Catalog No. 
+4. Title and Subtitle 5. Report Date 
+Voyager Electronic Parts Radiation Program December 15, 1978
+
+Volume II: Test Requirements and Procedures 6. Performing Organization Code 
+7. Author(s) 8. Performing Orgonization Report No. 
+A. G. Stanley/K. E. Martin/W. E. Price
+
+9. Performing Organization Name and Address 1J0. Work Unit No. 
+JET PROPULSION LABORATORY
+
+California Institute of Technology 11. Contract or Grant No. 
+4800 Oak Grove Drive NAS 7-100
+
+Pasadena, California 91103 13. Type of Report and Period Covered 
+12. Sponsoring Agency Name and Address JPL Publication 
+NATIONAL AERONAUTICS AND SPACE ADMINISTRATION 14. Sponsoring Agency Code 
+Washington, D.C. 20546
+
+15. Supplementary Notes 
+16. Abstract 
+Test requirements and procedures for the Voyager electronic parts radiation program
+
+are set forth in detail as Appendixes to JPL Publication 77-41, Volume I. Together,
+
+the two volumes describe the program phiolosophy, radiation environment, device
+
+hardening efforts, and radiation test methods. Test results of more than 200 device
+
+types are summarized in Volume I.
+
+17. Key Words (Selected by Author(s)) 18. Distribution Statement 
+Space Radiation Unclassified - Unlimited
+
+19. Security Classif. (of this report) 20. Security Classif. (of this page) 21 . No. of Pages 22. Price 
+99
+Unclassified Unclassified 
+ 
+
+--- PAGINA PDF 99 ---
+PUBLICATION 77-41, VOLUME 11
+

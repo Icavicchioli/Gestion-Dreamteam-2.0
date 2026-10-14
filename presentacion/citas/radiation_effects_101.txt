@@ -1,0 +1,1770 @@
+
+--- PAGINA PDF 1 ---
+Radiation Effects on Electronics 
+101:
+Simple Concepts and New Challenges
+Kenneth A. LaBel
+ken.label@nasa.gov
+Co-Manager, NASA Electronic Parts and Packaging 
+(NEPP) Program
+Group Leader, Radiation Effects and Analysis 
+Group (REAG), NASA/GSFC
+Project Technologist, Living With a Star (LWS) 
+Space Environment Testbeds (SET)
+
+--- PAGINA PDF 2 ---
+2
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Outline
+• The Space Radiation 
+Environment
+• The Effects on Electronics
+• The Environment in Action
+• NASA Approaches to 
+Commercial Electronics
+– The Mission Mix
+– Flight Projects
+– Proactive Research
+• Space Validations of Models and 
+Test Protocols
+• Final Thoughts
+Atomic Interactions
+– Direct Ionization
+Interaction with Nucleus
+– Indirect Ionization
+– Nucleus is Displaced
+http://www.stsci.edu/hst/nicmos/performance/anomalies/bigcr.html
+
+--- PAGINA PDF 3 ---
+The Space Radiation Environment
+STARFISH detonation –
+Nuclear attacks are not considered in this presentation
+
+--- PAGINA PDF 4 ---
+4
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Space Environments and Related 
+Effects
+Plasma
+Charging ImpactsDrag Surface
+Erosion
+Ultraviolet 
+& X-ray
+Neutral
+gas particles
+Particle
+radiation
+Micro-
+meteoroids & 
+orbital debris
+Ionizing &
+Non-Ionizing
+Dose
+•Degradation 
+of micro-
+•electronics
+•Degradation 
+of optical 
+components
+•Degradation 
+of solar cells
+Single
+Event
+Effects
+•Data 
+corruption
+•Noise on 
+Images
+•System 
+shutdowns
+•Circuit 
+damage
+•Degradation 
+of thermal, 
+electrical, 
+optical 
+properties
+•Degradation 
+of structural 
+integrity
+•Biasing of 
+instrument 
+readings
+•Pulsing
+•Power 
+drains
+•Physical 
+damage
+•Torques
+•Orbital 
+decay
+•Structural 
+damage
+•Decompression
+Space Radiation Effects
+after Barth
+
+--- PAGINA PDF 5 ---
+5
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Space Radiation Environment
+Trapped Particles
+Protons, Electrons, Heavy Ions
+after
+Nikkei Science, Inc.
+of Japan, by K. Endo
+Galactic Cosmic Rays (GCRs)
+Solar Protons
+&
+Heavier Ions
+Deep-space missions may also see: neutrons from background
+or radioisotope thermal generators (RTGs) or other nuclear source
+Atmosphere and terrestrial may see GCR and secondaries
+
+--- PAGINA PDF 6 ---
+6
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Sunspot Cycle:
+An Indicator of the Solar Cycle
+Length Varies from 9 - 13 Years
+7 Years Solar Maximum, 4 Years Solar Minimum
+1947 1997Years
+0
+50
+150
+200
+250
+100
+300
+Sunspot Numbers
+Cycle 18
+Cycle 22Cycle 21Cycle 20Cycle 19
+after Lund Observatory
+
+--- PAGINA PDF 7 ---
+7
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Solar Particle Events
+Holloman AFB/SOON
+• Cyclical (Solar Max, Solar Min)
+– 11-year AVERAGE (9 to 13)
+– Solar Max is more active time period
+• Two types of events
+– Gradual (Coronal Mass Ejections –
+CMEs)
+• Proton rich
+– Impulsive (Solar Flares)
+• Heavy ion rich
+• Abundances Dependent on Radial 
+Distance from Sun
+• Particles are Partially Ionized
+– Greater Ability to Penetrate 
+Magnetosphere than GCRs
+
+--- PAGINA PDF 8 ---
+8
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Solar Proton Event - October 1989
+10 -4
+10 -3
+10 -2
+10 -1
+10 0
+10 1
+10 2
+10 3
+10 4
+10 5
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+-200
+0
+200
+Oc to b e r No ve m b e r
+Counts/cm2/s/ster/MeV nT
+Proton Fluxes - 99% Worst Case Event
+GOES Space Environment Monitor
+
+--- PAGINA PDF 9 ---
+9
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Free-Space Particles: Galactic 
+Cosmic Rays (GCRs) or Heavy 
+Ions
+• Definition
+– A GCR ion is a charged particle 
+(H, He, Fe, etc) 
+– Typically found in free space 
+(galactic cosmic rays or GCRs) 
+• Energies range from MeV to 
+GeVs for particles of concern 
+for SEE
+• Origin is unknown
+– Important attribute for impact 
+on electronics is how much 
+energy is deposited by this 
+particle as it passes through a 
+semiconductor material. This 
+is known as Linear Energy 
+Transfer or LET (dE/dX).
+CREME 96, Solar Minimum, 100 mils (2.54 mm) Al
+10
+-1
+10
+0
+10
+1
+10
+210
+-810
+-710
+-610
+-510-410-310-210
+-110
+010110
+210
+310
+4
+GEOGTOMEOEOSLEO
+Z = 2 - 92
+LETFluence(#/cm2/day)
+LET (MeV-cm2/mg)
+Commercial Technology Sensitivity
+Time
+
+--- PAGINA PDF 10 ---
+10
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Trapped Particles in the Earth’s Magnetic 
+Field: Proton & Electron Intensities
+1 2345 67 89 101234
+L-Shell
+AP-8 Model AE-8 Model
+Ep > 10 MeV Ee > 1 MeV
+#/cm2/sec #/cm2/sec
+A dip in the earth’s dipole moment causes an asymmetry in the picture above:
+The South Atlantic Anomaly (SAA)
+
+--- PAGINA PDF 11 ---
+11
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+SAA and Trapped Protons:
+Effects of the Asymmetry in the Proton Belts on 
+SRAM Upset Rate at Varying Altitudes on CRUX/APEX
+-180 -1 5 0 -1 20 -9 0 -6 0 -3 0 0 30 60 90 1 2 0 150 18 0
+Longi tude
+-9 0
+-7 5
+-6 0
+-4 5
+-3 0
+-1 5
+0
+15
+30
+45
+60
+75
+90
+Latitude
+H ita c h i 1M :A ltitude: 1 250k m  -  1 350k m
+1 .0E -7  t o  5. 0 E -7
+5 .0E -7  t o  1. 0 E -6
+1 .0E -6  t o  5. 0 E -6
+5 .0E -6  t o  1. 0 E -5
+1 .0E -5  t o  5. 0 E -5
+5 .0E -5  t o  1. 0 E -4
+1 .0E -4  t o  5. 0 E -4
+5 .0E -4  t o  1. 0 E -3
+1 .0E -3  t o  5. 0 E -3
+U p s e ts /B it/D a y
+-1 80 -150 -1 20 -9 0 -60 -3 0 0 30 60 90 120 150 1 8 0
+Lon gi tu d e
+-9 0
+-7 5
+-6 0
+-4 5
+-3 0
+-1 5
+0
+15
+30
+45
+60
+75
+90
+Latitude
+H ita ch i 1 M :A ltitude :650k m  -  750km
+1. 0E -7  t o  5. 0E -7
+5. 0E -7  t o  1. 0E -6
+1. 0E -6  t o  5. 0E -6
+5. 0E -6  t o  1. 0E -5
+1. 0E -5  t o  5. 0E -5
+5. 0E -5  t o  1. 0E -4
+1. 0E -4  t o  5. 0E -4
+5. 0E -4  t o  1. 0E -3
+1. 0E -3  t o  5. 0E -3
+U p se ts/B it/D a y
+-180 -1 5 0 -1 20 -9 0 -6 0 -3 0 0 30 60 90 1 2 0 150 18 0
+Longi tude
+-9 0
+-7 5
+-6 0
+-4 5
+-3 0
+-1 5
+0
+15
+30
+45
+60
+75
+90
+Latitude
+H ita c h i 1M :A ltitude: 1 750k m  -  1 850k m
+1 .0E -7  t o  5. 0 E -7
+5 .0E -7  t o  1. 0 E -6
+1 .0E -6  t o  5. 0 E -6
+5 .0E -6  t o  1. 0 E -5
+1 .0E -5  t o  5. 0 E -5
+5 .0E -5  t o  1. 0 E -4
+1 .0E -4  t o  5. 0 E -4
+5 .0E -4  t o  1. 0 E -3
+1 .0E -3  t o  5. 0 E -3
+U p s e ts /B it/D a y
+-1 80 -150 -1 20 -9 0 -60 -3 0 0 30 60 90 120 150 1 8 0
+Lon gi tu d e
+-9 0
+-7 5
+-6 0
+-4 5
+-3 0
+-1 5
+0
+15
+30
+45
+60
+75
+90
+Latitude
+H ita c h i 1 M :A ltitude :2450k m  -  255 0k m
+1. 0E -7  t o  5. 0E -7
+5. 0E -7  t o  1. 0E -6
+1. 0E -6  t o  5. 0E -6
+5. 0E -6  t o  1. 0E -5
+1. 0E -5  t o  5. 0E -5
+5. 0E -5  t o  1. 0E -4
+1. 0E -4  t o  5. 0E -4
+5. 0E -4  t o  1. 0E -3
+1. 0E -3  t o  5. 0E -3
+U p s e ts /B it/D a y
+
+--- PAGINA PDF 12 ---
+12
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Solar Cycle Effects:
+Modulator and Source
+• Solar Maximum
+– Trapped Proton Levels Lower, 
+Electrons Higher
+– GCR Levels Lower
+– Neutron Levels in the Atmosphere 
+Are Lower
+– Solar Events More Frequent & 
+Greater Intensity
+– Magnetic Storms More Frequent --
+> Can Increase Particle Levels in 
+Belts
+• Solar Minimum
+– Trapped Protons Higher, 
+Electrons Lower
+– GCR Levels Higher
+– Neutron Levels in the Atmosphere 
+Are Higher
+Light bulb shaped CME
+courtesy of SOHO/LASCO C3 Instrument
+– Solar Events Are Rare
+
+--- PAGINA PDF 13 ---
+The Effects
+DNA double helix
+Pre and Post Irradiation
+Biological effects are a key concern
+for lunar and Mars missions
+
+--- PAGINA PDF 14 ---
+14
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Radiation Effects and Spacecraft
+• Critical areas for design in the 
+natural space radiation 
+environment
+– Long-term effects
+• Total ionizing dose (TID)
+• Displacement damage
+– Transient or single particle effects
+(Single event effects or SEE)
+• Soft or hard errors
+• Mission requirements and 
+philosophies vary to ensure 
+mission performance
+– What works for a shuttle mission 
+may not apply to a deep-space 
+mission
+An Active Pixel Sensor (APS) imager
+under irradiation with heavy ions at Texas
+A&M University Cyclotron
+
+--- PAGINA PDF 15 ---
+15
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Total Ionizing Dose (TID)
+• Cumulative long term 
+ionizing damage due to 
+protons & electrons
+• Effects
+– Threshold Shifts
+– Leakage Current
+– Timing Changes
+– Functional Failures
+• Unit of interest is 
+krads(material)
+• Can partially mitigate with 
+shielding
+– Low energy protons
+– Electrons
+Erase Voltage vs. Total Dose for 128-Mb 
+Samsung Flash Memory
+0
+2
+4
+6
+8
+10
+12
+14
+02 4 6 8 10
+Total Dose [krad(Si)]
+Voltage During Erase Function
+Failed to erase
+
+--- PAGINA PDF 16 ---
+16
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Displacement Damage (DD)
+• Cumulative long term non-ionizing
+damage due to protons, electrons, and 
+neutrons
+• Effects
+– Production of defects which results in 
+device degradation
+– May be similar to TID effects
+– Optocouplers, solar cells, CCDs, linear 
+bipolar devices
+• Unit of interest is particle fluence for 
+each energy mapped to test energy
+– Non-ionizing energy loss (NIEL) is one 
+means of discussing
+• Shielding has some effect - depends on 
+location of device
+– Reduce significant electron and some 
+proton damage
+Not parti
+cular
+ly ap
+plicable to CM
+OS microelectroni
+cs
+
+
+--- PAGINA PDF 17 ---
+17
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Single Event Effects (SEEs)
+• An SEE is caused by a single charged particle as it passes 
+through a semiconductor material
+– Heavy ions
+• Direct ionization
+– Protons for sensitive devices
+• Nuclear reactions for standard devices
+• Effects on electronics
+– If the LET of the particle (or reaction) is greater than the 
+amount of energy or critical charge required, an effect may be 
+seen
+• Soft errors such as upsets (SEUs) or transients (SETs), or
+• Hard (destructive) errors such as latchup (SEL), burnout (SEB), or 
+gate rupture (SEGR)
+• Severity of effect is dependent on
+– type of effect
+– system criticality
+ Destructive event 
+in a COTS 120V 
+DC-DC Converter
+
+--- PAGINA PDF 18 ---
+18
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Radiation Effects on Electronics 
+and the Space Environment
+• Three portions of the natural 
+space environment contribute to 
+the radiation hazard
+– Solar particles
+• Protons and heavier ions
+– SEE, TID, DD
+– Free-space particles
+• GCR
+– For earth-orbiting craft, the 
+earth’s magnetic field provides 
+some protection for GCR
+– SEE
+– Trapped particles (in the belts)
+• Protons and electrons including 
+the South Atlantic Anomaly 
+(SAA)
+– SEE (Protons)
+– DD, TID (Protons, Electrons)
+The sun acts as a modulator and
+source in the space environment
+
+--- PAGINA PDF 19 ---
+The Environment in Action
+“There’s a little black spot on the sun today”
+
+--- PAGINA PDF 20 ---
+20
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Recent Solar Events –
+A Few Notes and Implications
+• In Oct-Nov of this year, a series of X-class (X-45!) solar events took place
+– High particle fluxes were noted
+– Many spacecraft performed safing maneuvers
+– Many systems experienced higher than normal (but correctable) data error rates
+– Several spacecraft had anomalies causing spacecraft safing
+– Increased noise seen in many instruments
+– Drag and heating issues noted
+– Instrument FAILURES occurred
+– Two known spacecraft FAILURES occurred
+• Power grid systems affected, communication systems affected…
+
+
+--- PAGINA PDF 21 ---
+21
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+SOHO LASCO C2 of the Solar Event
+
+
+--- PAGINA PDF 22 ---
+22
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Solar Event Effect - Solar Array 
+Degradation on CLUSTER Spacecraft
+Many other spacecraft to
+noted degradation as well.
+
+--- PAGINA PDF 23 ---
+23
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Science Spacecraft Anomalies During 
+Recent Solar Events
+Type of Event Spacecraft/
+Instrument
+Notes
+Spontaneous Processor Resets RHESSI 3 events; all recoverable
+CLUSTER Seen on some of 4 spacecraft; recoverable
+ChipSAT S/C tumbled and required ground command to 
+correct
+High Bit Error Rates GOES 9,10
+Magnetic Torquers Disabled GOES 9, 10, 12
+Star Tracker Errors MER Excessive event counts
+MAP Star Tracker Reset occurred
+Read Errors Stardust Entered safe mode; recovered
+Failure? Midori-2
+Memory Errors GENESIS 19 errors on 10/29
+Many Increase in correctable error rates on solid-
+state recorders noted in many spacecraft
+
+--- PAGINA PDF 24 ---
+24
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Science Instrument Anomalies During 
+Recent Solar Events
+Type of Event Spacecraft/
+Instrument
+Notes
+Instrument Failure GOES-8 XRS Under investigation as to cause
+Mars 
+Odyssey/Marie
+Under investigation as to cause; power 
+consumption increase noted; S/C also had a 
+safehold event – memory errors
+NOAA-17/AMSU-A1 Lost scanner; under investigation
+Excessive Count Rates ACE, WIND Plasma observations lost
+GALEX UV 
+Detectors
+Excess charge – turned off high voltages; 
+Also Upset noted in instrument
+ACE Solar Proton Detector saturated
+Upset Integral Entered Safe mode
+POLAR/TIDE Instrument reset spontaneously
+Hot Pixels SIRTF/IRAC Increase in hot pixels on IR arrays; Proton 
+heating also noted
+Safe Mode Many Many instruments were placed in Safe mode 
+prior to or during the solar events for 
+protection
+
+--- PAGINA PDF 25 ---
+25
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Selected Other Consequences
+• Orbits affected on several spacecraft
+• Power system failure
+– Malmo, Sweden
+• High Current in power transmission lines
+– Wisconsin and New York
+• Communication noise increase
+• FAA issued a radiation dose alert for planes 
+flying over 25,000 ft
+A NASA-built
+radiation monitor 
+that can aid
+anomaly resolution,
+lifetime degradation,
+protection alerts, etc.
+
+--- PAGINA PDF 26 ---
+NASA Approaches to Electronics: 
+Flight Projects and Proactive 
+Research
+It doesn’t matter where you go
+as long as you follow a
+programmatic assurance approach
+
+--- PAGINA PDF 27 ---
+27
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+NASA Missions –
+A Wide Range of Needs
+• NASA typically has over 200 missions in some 
+stage of development
+– Range from balloon and short-duration low-earth 
+investigations to long-life deep space
+– Robotic to Human Presence
+• Radiation and reliability needs vary 
+commensurately
+Mars Global Surveyor
+Dust Storms in 2001
+
+--- PAGINA PDF 28 ---
+28
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Implications of NASA Mix
+• Prior to the new Presidential “Moon-Mars” 
+vision
+– >90% of NASA missions required 100 krad(Si) 
+or less for device total ionizing dose (TID) 
+tolerance
+• Single Event Effects (SEEs) were prime driver
+– Sensor hardness also a limiting factor
+• Many missions could accept risk of anomalies as 
+long as recoverable over time
+• Implications of the new vision are still TBD for 
+radiation and reliability specifics, however,
+– Nuclear power/propulsion changes radiation 
+issues (TID and displacement damage)
+– Long-duration missions such as permanent 
+stations on the moon require long-life high-
+reliability for infrastructure
+• Human presence requires conservative 
+approaches to reliability
+– Drives stricter radiation tolerance requirements and 
+fault tolerant architectures
+Lunar footprint
+Courtesy of
+NASA archives
+Nuclear Propulsion
+
+--- PAGINA PDF 29 ---
+29
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+NASA Approach to RHA
+• With commercial technology sensitivity to SEU 
+increasing and limited radiation hardened 
+offerings, a dual approach to RHA needs to be 
+installed
+– A systems approach at the flight mission level, and
+– Proactive investigation into new technologies
+Rockwell/Hawaii 2048x2048 
+5µm HgCdTe NGST FPA  (ARC)
+Candidate James Webb Space Telescope (JWST)
+IR array preparing for rad tests. The ultra-low 
+noise requirement of JWST is the driver.
+
+--- PAGINA PDF 30 ---
+A Systematic Approach to Flight 
+Project Radiation Hardness 
+Assurance (RHA)
+Size, complexity, and human presence are 
+among the factors im deciding how RHA is to 
+be implemented
+
+--- PAGINA PDF 31 ---
+31
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Sensible Programmatics for Flight RHA: 
+A Two-Pronged Approach for Missions
+• Assign a lead radiation engineer to each spaceflight 
+project
+– Treat radiation like other engineering disciplines
+• Parts, thermal,...
+– Provides a single point of contact for all radiation issues
+• Environment, parts evaluation, testing,…
+• Each program follows a systematic approach to RHA
+– RHA active early in program reduces cost in the long run
+• Issues discovered late in programs can be expensive and 
+stressful
+– What is the cost of reworking a flight board if a device has RHA 
+issues?
+
+--- PAGINA PDF 32 ---
+32
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Flight Program Radiation Hardness
+Assurance (RHA) Flow
+Environment
+Definition Project
+Requirements
+and
+Specifications
+Technology HardnessSpacecraft or
+Component
+Mechanical
+Modeling –
+3D ray trace,
+Monte Carlo,
+NOVICE, etc.
+Flight Program RHA Managed via Lead Radiation Engineer
+Design Margins
+External Environment
+Environment in
+the presence of
+the spacecraft
+Box/system Level
+In-Flight
+Evaluation
+Technology
+Performance
+Anomaly
+Resolution
+Lessons
+Learned
+Design
+Evaluation
+Parts List Screening
+Radiation
+Characterizations,
+Instrument
+Calibration,
+and Performance
+Predictions
+Mitigation
+Approaches
+and Design
+Reliability
+Iteration over project development cycle Cradle to Grave!
+
+--- PAGINA PDF 33 ---
+33
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Radiation and Systems Engineering: 
+A Rational Approach for Space Systems
+• Define the Environment
+– External to the spacecraft
+• Evaluate the Environment
+– Internal to the spacecraft
+• Define the Requirements
+– Define criticality factors
+• Evaluate Design/Components
+– Existing data/Testing/Performance characteristics
+• “Engineer” with Designers
+– Parts replacement/Mitigation schemes
+• Iterate Process
+– Review parts list based on updated knowledge
+
+--- PAGINA PDF 34 ---
+Approach to Insertion of New 
+Electronics
+IBM CMOS 8SF ASIC
+
+--- PAGINA PDF 35 ---
+35
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Microelectronics: Categories
+• Microelectronics can be split several ways
+– Digital, analog, mixed signal, other
+– Complementary Metal Oxide Semiconductor (CMOS), Bipolar, etc...
+– Function (microprocessor, memory, …)
+• There are only two commercial foundries (where they build 
+devices) in the US dedicated to building radiation hardened digital 
+devices
+– Efforts within DoD to provide alternate means of developing hardened 
+devices
+• Hardened-by-design (HBD)
+• Provides path for custom devices, but not necessarily off-the-shelf devices
+– Commercial devices can have great variance in radiation tolerance 
+from device-to-device and even on multiple samples of same device
+• No guarantees!
+– Analog foundry situation is even worse
+• New technologies have many unknowns
+– Ultra-high speed, nanotechnologies, microelectromechanical systems 
+(MEMS and the optical versions – MOEMS), …
+A MOEMS in action
+
+--- PAGINA PDF 36 ---
+36
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+The Digital Logic Trends
+• Standard CMOS
+– Feature sizes are scaling 
+(shrinking) to sub-0.1 micron sizes
+• Faster devices, lower operating 
+voltages
+– Reduced electrical margins within 
+devices
+– New dielectrics are being used
+– Thickness of gate oxide is being 
+diminished
+– Implications (general)
+• Improved TID tolerance
+– DD not an issue (except possibly 
+at nuclear levels)
+• Improved SEL tolerance
+• Increased SEU sensitivity
+– Technology speed increase drives 
+this issue (SETs in logic 
+propagate)
+• Unknown effect of other 
+technology changes
+– Increased use of silicon-on-
+insulator (SOI) substrates
+1.E-12
+1.E-11
+1.E-10
+0 204 06 0 80 100 120
+Angle (Degrees)
+Device Cross Section (cm
+2
+)
+DUT #5
+DUT #3
+after Reed, 2002
+Effects of protons in SOI with varied 
+angular direction of the particle;
+Blue line represents expected response 
+with “standard” CMOS devices.
+
+--- PAGINA PDF 37 ---
+37
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Time
+Relative Event Rates per Bit or Device
+Feature size shrinkage
+> 1 um to < 0.1 um
+1994 2004
+Speed kills – SETs drive increase
+SEL –
+Single Event
+Latchup
+SEFI –
+Single Event
+Functional
+Interrupt
+The New Challenge: Changes in CMOS 
+Technology and Design
+*Electronics manufacturers
+are concerned with soft error
+rates (SER) on the ground and 
+are beginning to insert
+means of reducing SER
+Notional g
+raph
+ of RAM
+SEU T
+rends
+SEU -
+Single Event Upset*
+
+--- PAGINA PDF 38 ---
+38
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Analog/mixed signal
+• Not scaled as aggressively 
+(need higher voltages to get 
+analog range)
+– Efforts to improve electrical 
+performance have reduced 
+reliability and signal margins 
+within the device
+– Increased sensitivity to
+• SETs (noise propagation that 
+can be invasive to operations)
+– The higher the resolution or 
+speed, the worse this becomes
+• TID and DD
+– Commercial device failure noted 
+as low as 1 krad(Si)
+» Even short duration 
+missions would have 
+concerns without test data
+0 5 10 15 20 25 30
+-20
+-15
+-10
+-5
+0
+5
+10
+Q2
+Q18
+Q5
+Q4
+Q9,Q16,Q19
+Q20
+Q20
+R1,Q6,Q16
+SET Pulse Amplitude, V
+SET Pulse Width, µs
+LASER SEU tests on
+a LM124 Op Amp.
+Note the variety of transients
+generated depending on
+particle arrival point and
+circuit application
+
+--- PAGINA PDF 39 ---
+39
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+New Technologies – Sample Issues
+• Ultra-high speed
+– Devices that may be relatively 
+tolerant at low-speed (<100 MHz) 
+have vastly increased SEU 
+sensitivity at high-speeds (>1 GHz)
+• Speed can defeat HBD methods
+• New technologies don’t fit old 
+models
+• Sensors
+– Noise, damage, etc. can limit 
+device performance (such as an 
+imager) and lifetime
+• Small effort at DoD to provide 
+hardened solutions
+• MEMS
+– Combined effects of electrical, 
+optical, and mechanical 
+degradation
+• Nanotechnologies
+– A great unknown for radiation 
+effects and protection
+Jazz 120 SiGe HBT 127 bit Register at 12.4 Gbps
+1.0E-07
+1.0E-06
+1.0E-05
+1.0E-04
+1.0E-03
+1.0E-02
+0 204 06 08 0 100 120
+Effective LET (MeV cm2/mg)
+Device Event Cross-Section (cm2)
+Xe-129
+Kr-84
+Ar-40
+Ne-22
+Anomalous angular effects at low LET
+Effects of heavy ions on SiGe devices at 12 
+GHz speeds;
+Drawn line represents expected response 
+with “standard” models.
+Expected curve shape (RPP)
+
+--- PAGINA PDF 40 ---
+40
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Insertion of New Technologies –
+A Mission Perspective
+NASA Technology Readiness 
+Levels (TRLs)
+NEPP
+Interest
+• NASA mission timeframes rarely 
+allow for a technology development 
+path
+– For a 2008 launch, for example, 
+technology freeze dates are likely 
+2005 or earlier
+• Technology must be moderately 
+mature when a mission is being 
+developed
+– There may be time to qualify a 
+device, but there may not be time to 
+develop/validate a new technology 
+solution!
+• Risk versus performance reward for 
+using less mature or commercial 
+off-the-shelf (COTS) technologies
+• Technology development and 
+evaluation programs need to be in 
+place prior to mission design
+– Strategic planning
+
+--- PAGINA PDF 41 ---
+41
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Insertion of New Technologies
+An Approach
+• Develop knowledge-base of 
+existing technology 
+information
+• Determine 
+reliability/radiation gaps
+• Performance ground-based 
+tests
+– May be sufficient to 
+“qualify” for a specific 
+mission, but not generically 
+for all
+• Develop technology-specific 
+models/test protocols
+– Performance Predictions
+• Validate models with flight 
+data
+– Requires in-situ 
+environment monitoring
+Reliable Technology
+for
+Space Systems
+Technology
+Development
+Ground
+Test, Protocols,
+and Models
+On-orbit
+Experiments and
+Model Validation
+Performance
+Tools
+Environment
+Modeling and
+Transport
+
+--- PAGINA PDF 42 ---
+42
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Radiation Test Issues - Fidelity
+Ground
+Test
+Flight
+Test
+Mixed particle
+species
+Combined
+environment
+effects
+Omnidirectional
+environment
+Broad energy
+spectrum
+Actual 
+particle rates
+Single particle
+sources
+Individual
+environment
+effects
+Unidirectional
+environment
+Monoenergetic
+spectrum
+Accelerated
+particle rates
+(Multiple tests with
+varying sources)
+Actual conditions Simulated conditions
+How accurate is the
+ground test in predicting Space Performance?
+
+--- PAGINA PDF 43 ---
+43
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+The Physics Models of Space 
+Radiation – Environment to Target
+Spacecraft material
+Target
+External Space Environment
+Induced Environment
+– Predictive model of the external 
+space radiation environment that 
+impinges on the spacecraft
+– Predictive model of the interaction 
+of that environment with the 
+spacecraft
+•This is the induced or internal 
+environment that impinges on 
+electrical, mechanical, or biological 
+systems
+•May need to consider 
+spacecraft transport and local 
+material transport separately
+– Predictive model for the effects of 
+the interactions of the induced 
+environment with semiconductor, 
+material, or biological systems (the 
+target)
+
+--- PAGINA PDF 44 ---
+44
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Gaps for New Technologies
+• Simple example citing tool limitations
+– CREME96 Tool (standard SEU rate tool)
+• Assumes the sensitive portion of the device (flip-flop) 
+looks like a  rectangular parallel-piped (RPP)
+• Data over the last few years has shown the RPP model 
+doesn’t always fit modern technology/circuits
+– Single event transient (SET) issues for higher speeds
+– Diffusion effects noted in SDRAMs (synchronous dynamic random 
+access memories)
+– Non-bulk CMOS test results
+1.E-12
+1.E-11
+1.E-10
+0 204 06 0 80 100 120
+Angle (Degrees)
+Device Cross Section (cm
+2
+)
+DUT #5
+DUT #3
+Proton-induced angular effects in SOI 
+device with high aspect ratio
+after Reed, 2002
+Jazz 120 SiGe HBT 127 bit Register at 12.4 Gbps
+1.0E-07
+1.0E-06
+1.0E-05
+1.0E-04
+1.0E-03
+1.0E-02
+0 204 06 08 0 100 120
+Effective LET (MeV cm2/mg)
+Device Event Cross-Section (cm2)
+Xe-129
+Kr-84
+Ar-40
+Ne-22
+Expected curve shape (RPP)
+Anomalous angular effects at low
+Linear Energy Transfer (LET)
+Expected curve shape
+RPP model does not fit SiGe
+
+--- PAGINA PDF 45 ---
+45
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Implications of Space Radiation 
+Technology “Gaps”
+• Simplifying assumptions (such as RPP) used in many 
+existing tools are inadequate for new technology 
+performance
+– Use of existing tools for predictive purposes may add large risk
+factors onto NASA missions (significant under or over prediction
+of performance)
+– Physics-based models could provide a more accurate solution 
+using physics-modeling codes (GEANT4, MCNPX, etc.)
+• Comprehensive tool suite is desired using physics-based 
+codes
+– Requires careful technology characterization and modeling 
+effort
+• Challenge is to make the tool suite realizable (i.e., physics-based 
+codes could take long periods of time to calculate results)
+– Simplifying assumptions and 1st order model development
+• New effort is to define the gaps and begin development of a 
+Space Computational Radiation Interaction Performance 
+Tools (SCRIPT) suite
+– Note: CNES and ESA collaboration with GEANT4 is part of the 
+picture (Space User’s Group)
+
+--- PAGINA PDF 46 ---
+46
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Space Computational Radiation 
+Interaction Performance Tools 
+(SCRIPT) – Pieces of the Puzzle
+External 
+Environment 
+Models
+Spacecraft  
+CAD*          
+Model
+Induced         
+Environment
+Target 
+Interaction 
+Models
+Performance 
+Tools
+Circuit 
+Application
+Prediction
+Yellow = NASA/Vanderbilt
+Technology 
+Tests and 
+Models
+Target 
+Interactions
+Peach = NASA
+Grey = Vanderbilt
+Focus Areas
+*Computer Aided Design
+Defense Threat Reduction Agency
+is co-funding this development.
+This is conceptual with a severe funding shortage.
+
+--- PAGINA PDF 47 ---
+47
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+SCRIPT – Sample Gaps and Technology 
+Dependent Implementation Issues
+External 
+Environment 
+Models
+Spacecraft  
+CAD          
+Model
+Induced         
+Environment
+Target 
+Interaction 
+Models
+Performance 
+Tools
+Circuit 
+Application
+Prediction
+Technology 
+Tests and 
+Models
+Target 
+Interactions
+Gaps exist in areas such
+as low energy electrons,
+solar heavy ions,
+MEO, etc.
+CAD model 
+selection
+may vary with 
+proximity to 
+technology
+Environment 
+granularity
+may vary with 
+technology
+effect of 
+interest (I.e., 
+TID differs from 
+detector noise)
+Choice of tools 
+hinges on 
+technology 
+concern (SEE, 
+TID, noise, etc.);
+Requires 
+test/model 
+program
+Device response may not 
+reflect technology response
+
+--- PAGINA PDF 48 ---
+48
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Flight Experiments  - Validating Technology 
+and Environment Interactions
+• Differences exist between ground-based 
+radiation tests and the actual space 
+environment
+– Energy spectrum
+– Directionality
+– Mixed environment
+– Particle arrival rates (flux or dose)
+• Flight experiments and/or monitoring 
+technology performance are  required to 
+validate ground-based models and tools
+– In-situ technology AND environment 
+measurements desired
+• Brief History of Electronics and NASA Flight 
+Radiation Experiments
+– Microelectronic and Photonics Testbed (MPTB)
+• Fiber optic data bus, commercial electronics
+– Space Technology Research Vehicle -1d (STRV-
+1d) – mission failed 12 days after launch
+• Optocouplers, state-of-the art digital electronics, 
+pulse height analyzer (PHA) instrument, dosimetry
+– Others
+• CRUX, HOST, commercial airplane
+• Engineering data from SAMPEX, TOMS/Meteor,
+SeaStar, XTE, TRMM, EOS, et al
+Flight technology experiments
+such as ACTS help provide
+validation for ground-based
+technology models and
+concepts
+
+--- PAGINA PDF 49 ---
+49
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+NASA’s Living With a Star (LWS) Space 
+Environment Testbed (SET) –
+A Dual Approach to Flight Validation
+• Data mining
+– The use of existing flight 
+data to validate or develop 
+improved models and 
+tools
+• Examples
+– Linear device 
+performance on 
+Microelectronics and 
+Photonics TestBed 
+(MPTB)
+– Physics-based Solar 
+Array Degradation Tool 
+(SAVANT)
+• Flight experiments
+– Focus on correlating 
+technology (semiconductor 
+to material) performance with 
+solar-variant space 
+environment (radiation, UV, 
+etc.)
+• Model/technology validation 
+and not device validation are 
+the goals
+– In-situ environment 
+monitoring allows for ground 
+test protocol/model 
+correlation
+– Multiple flight opportunities
+– Carrier under development
+Investigations are selected via NASA Research Announcements (NRAs)
+or provided under partnering arrangements
+
+--- PAGINA PDF 50 ---
+Final Comments and Future 
+Considerations
+
+
+--- PAGINA PDF 51 ---
+51
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Technology, Testing, and Flight
+• Technology complicates the tests
+– Speed, Thermal, Fault Isolation, Packaging: die 
+access!, etc
+• SETs are the “new” effect in digital devices
+– Ultra-low noise science instruments
+• Future facility issues
+– Beam structure
+• Issue: At-speed testing
+– Microbeam
+• Issue: Isolation of errors / Identification of 
+sensitive junctions
+– High energy heavy ions – Michigan State 
+University (MSU) National Superconducting 
+Cyclotron Labs (NSCL) now open for business
+• Issue: Increased fidelity to space environment
+• Issue: Improved ion penetration (packaging 
+issues!)
+• Issue: Thermal (open air testing possible)
+• Issue: Speed (reduced cabling requirements)
+• Nanotechnologies? MEMS? 
+• A proactive radiation test and modeling 
+program is required to allow successful 
+system RHA
+
+
+--- PAGINA PDF 52 ---
+Backup Slides
+
+--- PAGINA PDF 53 ---
+Details on RHA Approach for 
+Flight Projects
+
+--- PAGINA PDF 54 ---
+54
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Define the Hazard
+• The radiation environment external to the spacecraft
+– Trapped particles
+• Protons
+• Electrons
+– Galactic cosmic rays (heavy ions)
+– Solar particles (protons and heavy ions)
+• Based on
+– Time of launch and mission duration
+– Orbital parameters, …
+• Provides
+– Nominal and worst-case trapped particle fluxes
+– Peak “operate-through” fluxes (solar or trapped)
+– Dose-depth curve of total ionizing dose (TID)
+Note: We are currently using static models for a dynamic environment
+
+--- PAGINA PDF 55 ---
+55
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Evaluate the Hazard
+• Utilize mission-specific geometry to determine 
+particle fluxes and TID at locations inside the 
+spacecraft
+– 3-D ray trace (geometric sectoring)
+• Typically multiple steps
+– Basic geometry (empty boxes,…) or single electronics box
+– Detailed geometry
+• Include printed circuit boards (PCBs), cables, integrated 
+circuits (ICs), thermal louvers, etc…
+• Usually an iterative process
+– Initial spacecraft design
+– As spacecraft design changes
+– Mitigation by changing box location
+
+--- PAGINA PDF 56 ---
+56
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Define Requirements
+• Environment usually based on hazard definition with “nominal 
+shielding” or basic geometry
+– Using actual spacecraft geometry sometimes provides a “less 
+harsh” radiation requirement
+• Performance requirements for “nominal shielding” such as 70 
+mils of Al or actual spacecraft configuration
+– TID
+– DDD (protons, neutrons)
+– SEE 
+• Specification is more complex
+• Often requires SEE criticality analysis (SEECA) method be invoked
+• Must include radiation design margin (RDM)
+– At least a factor of 2
+– Often required to be higher due to device issues and environment
+uncertainties (enhanced low dose rate issues, for example)
+
+--- PAGINA PDF 57 ---
+57
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Sample TID Top Level Requirement : 
+Dose-Depth Curve
+Total dose at the center of Solid Aluminum Sphere 
+ST5: 200-35790 km, 0 degree inclination, three months
+0 50 100 150 200 250 300 350 400 450 500 550 600 650 700 750 800 850 900 950 1000
+Aluminum shield thickness (mils)
+Total dose
+electrons
+Trapped protons
+solar protons
+bremsstrahlung
+(0.127cm) (1.27 cm) (2.54cm)
+12 krad(Si)
+102
+103
+104
+105
+Total Dose (rad-Si)
+106
+107
+
+--- PAGINA PDF 58 ---
+58
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+System Requirements -
+SEE Specifications
+• For TID, parts can be given A 
+number (with margin)
+– SEE is much more application specific
+• SEE is unlike TID
+– Probabilistic events, not long-term
+• Equal probabilities for 1st day of mission or 
+last day of mission
+– Maybe by definition!
+
+--- PAGINA PDF 59 ---
+59
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Sample Single Event Effects 
+Specification (1 of 3)
+1. Definitio ns and Terms
+Single Event Effect (SEE) - any measurable effect to a circuit due to an ion strike.  This includes (but is not limited 
+to) SEUs, SHEs, SELs, SEBs, SEGRs, and Single Event Dielectric Rupture (SEDR).
+Single Event Upset (SEU) - a change of state or transient induced by an energetic particle such as a cosmic ray or 
+proton in a device. This may occur in digital, analog, and optical components or may have effects in surrounding 
+interface circuitry (a subset known as Single Event Transients (SETs)).  These are “soft” errors in that a reset or 
+rewriting of the device causes normal device behavior thereafter.
+Single Hard Error (SHE) - an SEU which causes a permanent change to the operation of a device. An example is a 
+stuck bit in a memory device.
+Single Event Latchup (SEL) - a condition which causes loss of device functionality due to a single event induced 
+high current state.  An SEL may or may not cause permanent device damage, but requires power strobing of the 
+device to resume normal device operations.
+Single Event Burnout (SEB) - a condition which can cause device destruction due to a high current state in a 
+power transistor.
+Single Event Gate Rupture (SEGR) - a single ion induced condition in power MOSFETs which may result in the 
+formation of a conducting path in the gate oxide.
+Multiple Bit Upset (MBU) - an event induced by a single energetic particle such as a cosmic ray or proton that 
+causes multiple upsets or transients during its path through a device or system.
+Linear Energy Transfer (LET) - a measure of the energy deposited per unit length as a energetic particle travels 
+through a material.  The common LET unit is MeV*cm2/mg of material (Si for MOS devices, etc.).
+Onset Threshold LET (LETth0) - the minimum LET to cause an effect at a particle fluence of 1E7 ions/cm2(per 
+JEDEC).  Typically, a particle fluence of 1E5 ions/cm2 is used for SEB and SEGR testing.
+
+--- PAGINA PDF 60 ---
+60
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Single Event Effects Specification 
+(2 of 3)
+2.  Component SEU Specification
+2.1  No SEE may cause permanent damage to a system or subsystem.
+2.2  Electronic components shall be designed to be immune to SEE induced performance anomalies, or outages 
+which require ground intervention to correct.  Electronic component reliability shall be met in the SEU 
+environment.
+2.3  If a device is not immune to SEUs, analysis for SEU rates and effects must take place based on LETth of the 
+candidate devices as follows:
+Device Threshold Environment to be Assessed
+LETth < 15* MeV*cm2/mg Cosmic Ray, Trapped Protons, Solar Proton Events
+LETth = 15*-100 MeV*cm2/mg Galactic Cosmic Ray Heavy Ions, Solar Heavy Ions
+LETth > 100 MeV*cm2/mg No analysis required
+2.4  The cosmic ray induced LET spectrum which shall be used for analysis is given in Figure TBD.
+2.5  The trapped proton environment to be used for analysis is given in Figures TBD.  Both nominal and peak 
+particle flux rates must be analyzed.
+2.6   The solar event environment to be used for analysis is given in Figure TBD.
+2.7  For any device that is not immune to SEL or other potentially destructive conditions, protective circuitry must 
+be added to eliminate the possibility of damage and verified by analysis or test.
+*This number is somewhat arbitrary and is applicable to “standard” devices.
+Some newer devices may require this number to be higher.
+
+--- PAGINA PDF 61 ---
+61
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Single Event Effects Specification 
+(3 of 3)
+2.  Component SEU Specification (Cont.)
+2.8   For SEU, the criticality of a device in it's specific application must be defined into one of three categories: 
+error-critical, error-functional, or error-vulnerable.  Please refer to the  /radhome/papers/seecai.htm Single Event 
+Effect Criticality Analysis (SEECA) document for details. A SEECA analysis should be performed at the system 
+level.
+2.9  The improper operation caused by an SEU shall be reduced to acceptable levels.  Systems engineering 
+analysis of circuit design, operating modes, duty cycle, device criticality etc. shall be used to determine 
+acceptable levels for that device.  Means of gaining acceptable levels include part selection, error detection and 
+correction schemes, redundancy and voting methods, error tolerant coding, or acceptance of errors in non-
+critical areas.
+2.10  A design's resistance to SEE for the specified radiation environment must be demonstrated.
+3.   SEU Guidelines
+Wherever practical, procure SEE immune devices. SEE immune is defined as a device having an
+LETth > 100 MeV*cm2/mg.
+If device test data does not exist, ground testing is required. For commercial components, testing is 
+recommended on the flight procurement lot.
+
+--- PAGINA PDF 62 ---
+62
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Notes on System Requirements
+• Requirements do NOT have to be for 
+piecepart reliability
+– For example, may be viewed as a “data loss” 
+specification
+• Acceptable bit error rates or system outage
+– Mitigation and risk are system trade parameters
+– Environment needs to be defined for YOUR 
+mission (can’t use prediction for different 
+timeframe, orbit, etc…)
+
+--- PAGINA PDF 63 ---
+63
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Radiation Design Margins 
+(RDMs)
+• How much risk does the project want to take?
+• Uncertainties that must be considered
+– Dynamics of the environment
+– Test data
+• Applicability of test data
+– Does the test data reflect how the device is used in THIS design?
+• Device variances
+– Lot-to-lot, wafer-to-wafer, device-to-device
+• Risk trade
+– Weigh RDM vs. cost/performance vs. probability of issue vs. 
+system reliability etc…
+
+--- PAGINA PDF 64 ---
+64
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Evaluate Design/Component 
+Usage
+• Screen parts list
+– Use existing databases
+• RADATA, REDEX, Radhome, IEEE TNS, IEEE Data Workshop Records, 
+Proceedings of RADECS, etc.
+• Evaluate test data
+– Look for processes or products with known radiation tolerance 
+(beware of SEE and displacement damage!)
+• BAE Systems, Honeywell Solid State Electronics, UTMC, Harris, etc.
+• Radiation test unknowns or non-RH guaranteed devices
+• Provide performance characteristics
+– Usually requires application specific information: understand the 
+designer’s sensitive parameters
+• SEE rates
+• TID/DDD
+
+--- PAGINA PDF 65 ---
+65
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Data Search and Definition of Data Usability Flow
+Does data
+Exist?
+Same
+wafer lot?
+Sufficient 
+test data?
+Test method 
+applicable?
+Has 
+process/foundry
+changed?
+Perform radiation
+test
+NO
+YES
+NO
+Test recommended 
+but may be waived
+based on risk 
+assumption
+NO
+NO
+YES
+YES
+Data usable
+YES
+YES
+NO
+After K LaBel, IEEE TNS vol 45-6, 1998
+
+--- PAGINA PDF 66 ---
+66
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+System Radiation Test 
+Requirements
+• All devices with unknown characteristics should be 
+ground radiation tested (TID and SEE)
+• All testing should be performed on flight lot, if 
+possible
+• Testing should mimic or bound the flight usage, if 
+possible
+– Beware of new technology issues…
+1. 00E-07
+1. 00E-06
+1. 00E-05
+1. 00E-04
+1. 00E-03
+1. 00E-02
+0 102 0 304 0 506 0 70 80
+LET in M eV*cm 2/ m g
+Device Cross-section in cm2
+Block e rro rs
+No bl oc k er rors obs er ved
+Sample Heavy Ion Test Results
+
+--- PAGINA PDF 67 ---
+67
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Engineer with the Designer
+• Just because a device’s radiation hardness may not meet 
+requirements, does NOT necessarily make it unusable
+– Many concerns can be dealt with using mitigative approaches
+• Hardened by design (HBD) approaches
+• Circuit level tolerance such as error detection and correction (EDAC) on 
+large memory arrays
+• Mechanical approaches (shielding)
+• Application-specific effects (ex., single bad telemetry point or device is 
+only on once per day for 10 seconds or degradation of parameter is 
+acceptable)
+• System tolerance such as 95% “up-time”
+– The key is what is the effect in THIS application
+– If mitigation is not an option, may have to replace device
+Warning: Not all effects can be mitigated safely
+
+--- PAGINA PDF 68 ---
+68
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Destructive Conditions - Mitigation
+• Recommendation 1: Do not use devices that exhibit destructive 
+conditions in your environment and application
+• Difficulties:
+– May require redundant components/systems
+– Conditions such as low current SELs may be  difficult to detect
+• Mitigation methods
+– Current limiting
+– Current limiting w/ autonomous reset
+– Periodic power cycles
+– Device functionality check
+• Latent damage is also a grave issue
+– “Non-destructive” events may be false!
+
+--- PAGINA PDF 69 ---
+69
+NEPP Webex Presentation –Radiation Effects 101 presented by Kenneth A. LaBel– Apr 21,2004
+Latent Damage: Implications to SEE
+– SEL events are 
+observed in some 
+modern CMOS devices
+• Device may not fail 
+immediately, but 
+recover after a power 
+cycling
+– However, in some cases
+• Metal is ejected from 
+thin metal lines that 
+may fail 
+catastrophically at 
+some time after event 
+occurrence
+SEL test qualification methods need to take latent 
+damage into consideration;
+Post-SEL screening techniques required;
+Mitigative approaches may not be effective
