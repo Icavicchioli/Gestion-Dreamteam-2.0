@@ -2,12 +2,11 @@
 
 **Fecha de corte: 14 de octubre de 2026. Nivel: electrónica universitaria.**
 
-Voyager permite estudiar un problema de ingeniería completo: una partícula o un flujo de partículas interactúa con materiales, modifica parámetros eléctricos y puede comprometer una función. La respuesta depende de la resistencia del dispositivo, el margen del circuito y la capacidad del sistema para seguir operando cuando algo falla. El interés está tanto en un dieléctrico o una resistencia como en un procesador.
+Voyager permite estudiar un problema de ingeniería completo: una partícula o un flujo de partículas interactúa con materiales, modifica parámetros eléctricos y puede comprometer una función. La respuesta depende de la tolerancia del dispositivo, del margen del circuito y de la capacidad de recuperación del sistema. El interés está tanto en un dieléctrico o una resistencia como en un procesador.
 
 La explicación mejor respaldada de su longevidad combina componentes evaluados para su ambiente, cambios de diseño y fabricación, blindaje, redundancia y operaciones desde Tierra. Hubo daños y pérdidas de capacidad. En particular, la documentación del CRS registra daño tras Júpiter, mientras que el estado actual distingue instrumentos apagados por energía de otros retirados por degradación. [[S01](04_fuentes.md#s01), [S09](04_fuentes.md#s09), [S07](04_fuentes.md#s07); bibliografía en **04_fuentes.md**]
 
 Se usan tres etiquetas: **documentado** para un resultado explícito de una fuente; **inferido** para una consecuencia física razonada que no constituye una observación del hardware de vuelo; **no resuelto** cuando falta información para atribuir un material, valor o causa a Voyager. Un componente ensayado dentro del programa no equivale automáticamente a un componente instalado en una placa concreta.
-
 
 ## Guía de lectura y resultados posibles
 
@@ -23,9 +22,35 @@ Estas categorías describen el resultado, no tres tipos exclusivos de radiación
 
 **Ruta para leer hoy.** Leer §§1–2 para el ambiente y los mecanismos; recorrer §3 con sus apartados «Cómo explicarlo en clase»; terminar con hardware, mitigaciones y casos reales (§§4–7). Los apartados «Profundización opcional» explican regiones y ecuaciones que no son necesarias para exponer. El guion curado está en [03_sintesis_20min.md](03_sintesis_20min.md).
 
-**Vocabulario mínimo.** Un portador es una carga móvil: electrón o hueco, este último una ausencia de electrón que se comporta como carga positiva. Generar un par no crea carga neta: crea dos portadores de signo opuesto. Un campo puede separarlos y producir corriente. Una trampa es un estado localizado que puede capturar y liberar un portador; un centro de recombinación puede facilitar la eliminación sucesiva de un electrón y un hueco. No toda trampa actúa igual ni toda captura es recombinación. Un estado de interfaz está asociado a la frontera entre materiales. La región de agotamiento de una unión tiene pocos portadores móviles y un campo que favorece la colección de carga. [[S21](04_fuentes.md#s21)–23, [S36](04_fuentes.md#s36)]
+**Vocabulario mínimo.** Un portador es una carga móvil: electrón o hueco, este último una ausencia de electrón que se comporta como carga positiva. Generar un par no crea carga neta: crea dos portadores de signo opuesto. Un campo puede separarlos y producir corriente. Una trampa es un estado localizado que puede capturar y liberar un portador; un centro de recombinación puede facilitar la eliminación sucesiva de un electrón y un hueco. No toda trampa actúa igual ni toda captura es recombinación. Un estado de interfaz está asociado a la frontera entre materiales. La región de agotamiento de una unión tiene pocos portadores móviles y un campo que favorece la colección de carga. [[S21](04_fuentes.md#s21), [S22](04_fuentes.md#s22), [S23](04_fuentes.md#s23), [S36](04_fuentes.md#s36)]
 
 **Espurio no equivale a ruido continuo.** Aquí llamamos espuria a una señal que el circuito entrega o interpreta sin que corresponda al estímulo buscado. Un pulso aislado es un transitorio; el ruido se describe estadísticamente y también puede producir cruces falsos de umbral. Una sucesión de eventos puede aumentar el fondo de un detector. Para atribuir cualquiera de ellos a radiación hace falta evidencia; una interferencia o fluctuación térmica no se vuelve radiativa por parecerse a un pulso. [[S35](04_fuentes.md#s35), §§2–4; interpretación funcional]
+
+### Siglas para seguir el recorrido
+
+| Término | Significado útil para esta lectura |
+|---|---|
+| BJT / TBJ | Transistor bipolar de juntura; ambas siglas designan el mismo tipo de dispositivo |
+| MOSFET / CMOS / TTL | Transistor controlado por compuerta aislada / lógica que combina MOS complementarios / familia lógica basada en transistores bipolares |
+| IC / ADC | Circuito integrado / convertidor de señal analógica a dato digital |
+| TID / SEE | Dosis ionizante total / efectos de un evento individual; un SEE no implica necesariamente daño permanente |
+| ESR | Resistencia serie equivalente de un capacitor; distinta de la resistencia de fuga en paralelo |
+| PCB | Placa de circuito impreso: soporte, aislantes y conductores |
+| CCS / AACS / FDS | Computación de comandos / control de actitud y articulación / procesamiento y formato de datos de Voyager |
+| PWS / PRA / CRS / MAG | Instrumentos de ondas de plasma / radioastronomía planetaria / rayos cósmicos / campo magnético |
+| RTG | Generador que convierte calor de decaimiento radiactivo en electricidad |
+| Offset / corriente oscura | Desplazamiento respecto de la respuesta ideal / corriente de un detector sin iluminación |
+
+Arquitectura e instrumentos: [S03](04_fuentes.md#s03), [S04](04_fuentes.md#s04), [S05](04_fuentes.md#s05), [S08](04_fuentes.md#s08) y [S30](04_fuentes.md#s30). Los efectos se desarrollan en §2.
+
+### Índice por preguntas
+
+- ¿Qué llega a la nave y qué se puede medir? **§1**.
+- ¿Cómo se transforma esa interacción en carga, defectos o una descarga? **§2**.
+- ¿Qué cambia en cada componente? **§3**, con una explicación breve al final de cada familia.
+- ¿Qué hardware está realmente identificado? **§4**, especialmente la tabla de alcance de §4.4.
+- ¿Qué puede hacerse y cómo se calcula un ejemplo? **§5**.
+- ¿Qué pasó realmente y qué no sabemos de la causa? **§6**; respuesta central en **§7**.
 
 ## 1 Ambiente y medición
 
@@ -45,6 +70,8 @@ Para un circuito hay que distinguir cuatro ambientes:
 El viento solar, una onda de radio y un ion galáctico de alta energía no son amenazas equivalentes. La electrónica puede sufrir además **carga electrostática** por intercambio y acumulación de partículas; ese problema debe estudiarse junto con la radiación, aunque no se reduzca a TID o a errores de memoria. [[S21](04_fuentes.md#s21), pp. 4–14; [S25](04_fuentes.md#s25), §4.1; [S01](04_fuentes.md#s01), §II]
 
 ### 1.2 Magnitudes que no conviene mezclar
+
+**Para la primera lectura:** energía es lo que trae cada partícula; flujo es cuántas llegan por área y tiempo; fluencia acumula esa llegada; dosis es lo depositado por masa. LET describe cuán concentrada es la deposición a lo largo de una trayectoria. La intensidad angular, NIEL y las integrales siguientes son profundización; no hace falta explicarlas todas en clase.
 
 | Magnitud | Definición operativa | Unidades habituales | Qué permite calcular |
 |---|---|---|---|
@@ -159,161 +186,131 @@ Esto vincula radiación y plasma con resistencias, dieléctricos, pistas, conect
 
 ![Tres mecanismos conceptuales](figuras/02_mecanismos_conceptuales.png)
 
-**Figura explicativa.** Colección de carga en una unión, carga atrapada en óxido y fuga en un capacitor. Esquema propio sin escala, basado en [S21](04_fuentes.md#s21)–25/S35; no identifica dispositivos de vuelo.
+**Figura explicativa.** Colección de carga en una unión, carga atrapada en óxido y fuga en un capacitor. Esquema propio sin escala, basado en [S21](04_fuentes.md#s21), [S22](04_fuentes.md#s22), [S23](04_fuentes.md#s23), [S24](04_fuentes.md#s24), [S25](04_fuentes.md#s25) y [S35](04_fuentes.md#s35); no identifica dispositivos de vuelo.
+
+### 2.5 Mecanismo posible no significa frecuencia conocida
+
+Describir cómo se produce un efecto no establece cuántas veces ocurre ni si supera el margen de una aplicación. Para eso hacen falta el ambiente local y la respuesta del componente bajo su polarización y temperatura. Un ensayo de gran tasa de dosis puede demostrar conductividad inducida sin probar que el mismo efecto domine en el ambiente interestelar. De manera análoga, un transitorio medido en otro amplificador no determina la tasa de errores del FDS de Voyager. [S21](04_fuentes.md#s21), [S24](04_fuentes.md#s24), [S35](04_fuentes.md#s35), §§2–3.
+
+Conviene separar cuatro preguntas: **¿puede ocurrir físicamente?, ¿con qué amplitud y duración?, ¿con qué frecuencia en ese ambiente?, ¿qué hace el circuito cuando ocurre?** Los mecanismos y ejemplos no establecen cuáles fueron las fallas más frecuentes de Voyager.
 
 ## 3 Componentes de un circuito
 
 ![Mapa del circuito y sus componentes](figuras/01_mapa_componentes.png)
 
-**Figura 1.** Mapa conceptual propio. Las flechas representan funciones; no es un esquema eléctrico ni un plano de Voyager. Cada familia se analiza por material, parámetro eléctrico y consecuencia. Las mitigaciones de vuelo verificadas se distinguen de criterios generales.
+**Figura 1.** Mapa conceptual propio de familias; no es un esquema eléctrico ni un plano de Voyager. Cada familia se analiza por material, parámetro eléctrico y consecuencia. Las mitigaciones de vuelo verificadas se distinguen de criterios generales.
 
 ### 3.1 Resistencias y redes resistivas
 
-**Estructura y efecto.** Una resistencia combina un elemento resistivo, terminaciones y materiales de soporte o encapsulado. La corriente no depende de almacenar un bit ni de una barrera de óxido de compuerta. Interesan la estabilidad de R, el coeficiente térmico, el ruido y el aislamiento respecto a nodos vecinos. Una fuga por el soporte puede importar más que una pequeña variación del elemento resistivo, especialmente en entradas de megaohmios. [[S27](04_fuentes.md#s27), p. 156]
-
-**Consecuencia en circuito.** En un divisor, Vout = Vin·R2/(R1+R2): interesa la deriva relativa de ambas resistencias, no solo la tolerancia aislada. En una entrada de 20 MΩ, una fuga adicional de 10 nA produce un desplazamiento de 0,2 V; este último es un ejemplo ilustrativo, no una medida de Voyager. Una resistencia de polarización también puede evacuar carga ambiental.
-
-**Evidencia y mitigación.** El programa Voyager ensayó resistencias Dale de película metálica sin detectar cambio de R dentro de ±0,01 % a la fluencia informada. Esto no demuestra inmunidad de toda resistencia. El PWS documenta una resistencia de entrada a masa que limita potencial de antena: caso concreto desarrollado en §5.3. [[S01](04_fuentes.md#s01), §VII.H; [S08](04_fuentes.md#s08), §5.G]
-
-**Criterio general.** Seleccionar tecnología y lote, verificar aislamiento, usar márgenes de tensión/potencia y analizar cómo variaciones correlacionadas o independientes afectan el circuito. No se ha identificado una resistencia de protección contra radiación en cada red de Voyager.
-
-#### De la corriente del material al error de medida
-
-La resistencia cumple aproximadamente V = IR en su régimen de trabajo. Cambiar la resistividad del elemento o crear un camino conductor por su soporte son efectos diferentes: el segundo puede desviar corriente entre terminales o hacia otro nodo aunque el elemento resistivo conserve su valor. En un aislante, portadores generados por ionización pueden aumentar la conductividad durante la exposición; carga atrapada puede modificar campos y tiempos de recuperación. No se presume un cambio importante en una película metálica solo porque otro material aislante sea sensible. [[S24](04_fuentes.md#s24), p. 49; [S25](04_fuentes.md#s25), §4.1; [S27](04_fuentes.md#s27), p. 156]
+La resistencia cumple aproximadamente V = IR en su régimen de trabajo. Cambiar la resistividad del elemento o crear un camino conductor por su soporte son efectos diferentes: el segundo puede desviar corriente entre terminales o hacia otro nodo aunque el elemento resistivo conserve su valor. En un aislante, portadores generados por ionización pueden aumentar la conductividad durante la exposición; carga atrapada puede modificar campos y tiempos de recuperación. La sensibilidad del aislante no implica igual sensibilidad de la película metálica. [[S24](04_fuentes.md#s24), p. 49; [S25](04_fuentes.md#s25), §4.1; [S27](04_fuentes.md#s27), p. 156]
 
 **Efecto de circuito y duración.** En una entrada de alta impedancia, una pequeña corriente inducida produce una tensión espuria. Para una perturbación lenta respecto del tiempo RC, ΔV ≈ Iespuria·R; para un impulso muy breve interesa la carga que llega y la capacitancia del nodo. El transitorio puede desaparecer al cesar la corriente y descargarse el nodo, mientras una deriva permanente de R exige otro análisis. La resistencia no necesita sufrir daño directo para participar en un error: convierte una corriente ajena en tensión.
 
-**Mitigación y límite.** Reducir impedancia puede reducir la tensión causada por una fuga, pero también cargar el sensor y consumir más. Calificar aislamiento y tecnología, y evaluar tolerancias del divisor, son criterios generales. El caso PWS de 20 MΩ documenta una función concreta de evacuación de carga; no demuestra que todas las resistencias fueran protectoras ni que esa red suprima cualquier pulso. [[S08](04_fuentes.md#s08), §5.G]
+**Mitigación y límite.** Reducir impedancia puede reducir la tensión causada por una fuga, pero también cargar el sensor y consumir más. Calificar aislamiento y tecnología, y evaluar tolerancias del divisor, son criterios generales. El caso PWS de 20 MΩ documenta evacuación de carga, no supresión de cualquier pulso. [[S08](04_fuentes.md#s08), §5.G]
+
+#### Evidencia y aplicación
+
+**Consecuencia en circuito.** En un divisor, Vout = Vin·R2/(R1+R2): interesa la deriva relativa de ambas resistencias, no solo la tolerancia aislada. En una entrada de 20 MΩ, una fuga adicional de 10 nA produce un desplazamiento de 0,2 V; este último es un ejemplo ilustrativo, no una medida de Voyager. 
+
+**Evidencia y mitigación.** El programa Voyager ensayó resistencias Dale de película metálica sin detectar cambio de R dentro de ±0,01 % a la fluencia informada. Esto no demuestra inmunidad de toda resistencia. El caso de la antena PWS se desarrolla en §5.3. [[S01](04_fuentes.md#s01), §VII.H; [S08](04_fuentes.md#s08), §5.G]
 
 **Cómo explicarlo en clase.** «En una resistencia debemos mirar tanto su valor como el aislamiento que la rodea. Si aparece una corriente no deseada en una entrada de alta resistencia, puede producir una tensión que se confunda con señal. La pieza puede seguir sana; el circuito igual puede medir mal».
 
-
 ### 3.2 Capacitores y sus dieléctricos
-
-**Estructura y efecto.** Dos electrodos separados por un dieléctrico forman una capacitancia; el modelo real incluye ESR, inductancia serie y una resistencia de fuga en paralelo. La ionización puede aumentar la conductividad del aislante mientras se irradia, y la carga atrapada o cambios del material pueden modificar propiedades después. El efecto depende de química, geometría, dosis y tasa. [[S24](04_fuentes.md#s24), p. 49]
-
-**Consecuencia en circuito.** Un capacitor puede conservar aproximadamente C y, aun así, perder capacidad de retener tensión si baja su resistencia de aislamiento. Eso afecta temporizadores, sample-and-hold, acoplamientos y filtros. En desacoplamiento importan también impedancia y corriente de fuga. No toda deriva de ESR o pérdida de electrolito es radiación: envejecimiento, temperatura y sellado constituyen mecanismos propios.
-
-**Evidencia Voyager.** Se ensayaron seis unidades de cada valor de capacitores B11B de teflón de 0,02 y 0,05 µF. Las reducciones medias informadas fueron 5 y 12 pF después de 5 × 10¹² electrones/cm²: **0,025 % y 0,024 %**, respectivamente. Es un resultado de capacitancia, no una medida de todos sus parámetros ni una lista completa de capacitores instalados. [[S01](04_fuentes.md#s01), p. 7-53, PDF 151; cálculo propio]
-
-**Mitigación.** La evaluación de material y componente forma parte de la calificación. En el acoplamiento PWS–PRA hay además tensiones nominales explícitas, vinculadas con el potencial de entrada previsto. Los bancos capacitivos de potencia de Voyager tienen otra función: cubrir transitorios de carga eléctrica. No se debe confundir reserva de energía con protección universal frente a partículas. [[S08](04_fuentes.md#s08), §5.G; [S03](04_fuentes.md#s03), p. 17]
-
-#### El dieléctrico durante y después de irradiar
 
 En un capacitor ideal, los electrodos almacenan cargas opuestas y el dieléctrico impide una corriente DC entre ellos. En el material real, la ionización puede generar portadores que se mueven bajo el campo entre electrodos. Esto eleva la conductividad y reduce la resistencia de aislamiento durante la exposición. Captura, liberación y recombinación determinan cuánto dura la respuesta; no debe suponerse recuperación instantánea. Los cambios residuales dependen de composición, defectos y exposición. La carga atrapada puede modificar el campo interno sin que eso se traduzca en una variación única o universal de C. [[S24](04_fuentes.md#s24), p. 49; [S25](04_fuentes.md#s25), §§4.1.3–4.1.5]
 
-**Circuito y recuperación.** Representar C en paralelo con Rfuga permite separar almacenamiento y pérdida. Una fuga transitoria puede descargar un capacitor de temporización: aunque el aislamiento se recupere, el temporizador ya pudo dispararse antes de lo debido. Hay que volver a cargarlo o restablecer la función. En un capacitor de desacoplamiento, el efecto depende además de la impedancia de la fuente, ESR e inductancia del montaje. No toda exposición equivale a un corto y no toda alteración del dieléctrico es permanente.
+**Circuito y recuperación.** Representar C en paralelo con Rfuga permite separar almacenamiento y pérdida. Una fuga transitoria puede cambiar el tiempo de cruce de un umbral. Si se espera que el capacitor se cargue hasta un nivel, la fuga puede retrasar o impedir el disparo; si se mide su descarga hasta un nivel inferior, puede adelantarlo. Aunque el aislamiento se recupere, el evento temporal puede haber quedado alterado. La recuperación funcional puede requerir recargar el capacitor. En un capacitor de desacoplamiento, el efecto depende además de la impedancia de la fuente, ESR e inductancia del montaje. 
 
-**Profundización opcional.** En geometría plana C ≈ εA/d, mientras que Rfuga ≈ d/(σA) para conducción uniforme. Un aumento de σ no exige un cambio proporcional de ε; por eso C puede permanecer casi igual mientras la retención empeora. En este modelo RC = ε/σ. Materiales heterogéneos, dependencia del campo, absorción dieléctrica y caminos superficiales requieren un modelo más completo. Estas relaciones ilustran el mecanismo, no parametrizan los B11B de vuelo.
+**Profundización opcional.** En geometría plana C ≈ εA/d, mientras que Rfuga ≈ d/(σA) para conducción uniforme. Un aumento de σ no exige un cambio proporcional de ε; por eso C puede permanecer casi igual mientras la retención empeora. En este modelo RC = ε/σ. Materiales heterogéneos, dependencia del campo, absorción dieléctrica y caminos superficiales requieren un modelo más completo. Estas relaciones ilustran el mecanismo; no parametrizan los B11B ensayados por el programa ni identifican su instalación en vuelo.
 
-**Mitigación y límite.** Seleccionar y medir el dieléctrico bajo condiciones relevantes; comprobar aislamiento además de C y ESR. Un capacitor añadido como filtro puede reducir ciertos pulsos, pero modifica ancho de banda y respuesta, y puede sufrir sus propios efectos. El ensayo B11B demuestra estabilidad de C bajo sus condiciones, no inmunidad funcional completa. [[S01](04_fuentes.md#s01), p. 7-53]
+**Mitigación y límite.** Seleccionar y medir el dieléctrico bajo condiciones relevantes; comprobar aislamiento además de C y ESR. Un capacitor añadido como filtro puede reducir ciertos pulsos, pero modifica ancho de banda y respuesta, y puede sufrir sus propios efectos. [[S01](04_fuentes.md#s01), p. 7-53]
+
+#### Evidencia y aplicación
+
+**Evidencia Voyager.** Se ensayaron seis unidades de cada valor de capacitores B11B de teflón de 0,02 y 0,05 µF. Las reducciones medias informadas fueron 5 y 12 pF después de 5 × 10¹² electrones/cm²: **0,025 % y 0,024 %**, respectivamente. Es un resultado de capacitancia, no una medida de todos sus parámetros ni una lista completa de capacitores instalados. [[S01](04_fuentes.md#s01), p. 7-53, PDF 151; cálculo propio]
+
+**Mitigación.** En el acoplamiento PWS–PRA se especifican tensiones nominales según el potencial de entrada previsto. Los bancos capacitivos de potencia de Voyager tienen otra función: cubrir transitorios de carga eléctrica. No se debe confundir reserva de energía con protección universal frente a partículas. [[S08](04_fuentes.md#s08), §5.G; [S03](04_fuentes.md#s03), p. 17]
 
 **Cómo explicarlo en clase.** «La radiación puede hacer que el aislante conduzca más mientras está expuesto. El capacitor entonces pierde carga más rápido: puede alterar una medida o un tiempo sin quedar destruido y sin cambiar mucho su capacitancia».
 
-
 ### 3.3 Inductores y transformadores
 
-**Estructura y efecto.** Incluyen conductor bobinado, aislamiento entre espiras, soporte y, frecuentemente, un núcleo magnético. Un inductor no tiene un umbral MOS; las preguntas pertinentes son estabilidad de permeabilidad y pérdidas del núcleo, resistencia del bobinado, aislamiento y soportes. El manual NASA centra el efecto radiativo de esta categoría en algunos aislantes y no atribuye degradación de propiedades magnéticas en su descripción. Por tanto, no corresponde presentar «desmagnetización por rayos cósmicos» como una falla comprobada de Voyager. [[S26](04_fuentes.md#s26), §10.2.6.5, p. 10-22, PDF 72]
+**Estructura y efecto.** Incluyen conductor bobinado, aislamiento entre espiras, soporte y, frecuentemente, un núcleo magnético. Interesan la permeabilidad y las pérdidas del núcleo, la resistencia del bobinado y el aislamiento. El manual NASA centra el efecto radiativo de esta categoría en algunos aislantes y no atribuye degradación de propiedades magnéticas en su descripción. [[S26](04_fuentes.md#s26), §10.2.6.5, p. 10-22, PDF 72]
 
-**Consecuencia en circuito.** Una alteración de L cambia rizado y frecuencia de un filtro. Una fuga o corto entre espiras altera pérdidas, calentamiento y capacidad de transformar tensión. Un cambio de corriente impuesto por un transistor dañado puede saturar un núcleo sano: hay que distinguir daño directo del componente de la propagación de una falla ajena. Para un modelo lineal, L ≈ μN²A/l y f0 = 1/(2π√LC) muestran qué parámetros intervienen; cerca de saturación ese modelo deja de bastar.
+El campo magnético almacena energía y el núcleo modifica la relación entre corriente y flujo. La radiación no implica por sí sola un impulso de corriente en el bobinado. Hay que identificar el material afectado: una corriente inducida en aislamiento o una descarga puede perturbar la red, mientras una orden espuria en el transistor de mando puede aplicar volt-segundos indebidos a un transformador sano. El segundo caso es un efecto indirecto. [[S26](04_fuentes.md#s26), §10.2.6.5; [S25](04_fuentes.md#s25), §4.1; inferencia de circuito]
+
+Una perturbación breve puede disiparse con la dinámica de la red; una perforación de aislamiento o un sobrecalentamiento pueden dejar daño. La energía ½LI² y la relación v = L·di/dt, dentro del régimen lineal, ayudan a entender que cortar corriente o excitar el bobinado genera tensiones. No permiten calcular un transitorio radiativo sin conocer su fuente y circuito. 
+
+#### Evidencia y aplicación
 
 **Mitigación general.** Calificar materiales, aislamiento y bobinado; respetar márgenes térmicos, eléctricos y de flujo magnético. El blindaje se decide con el ambiente local. **No resuelto para Voyager:** composición y tolerancia radiativa de cada núcleo, barniz y transformador. Está documentada la conversión de potencia a 2,4 kHz, pero eso no permite inventar el material de sus magnéticos. [[S03](04_fuentes.md#s03), pp. 16–17]
 
-#### Separar el magnético de la perturbación que lo atraviesa
-
-El campo magnético almacena energía y el núcleo modifica la relación entre corriente y flujo. La radiación no implica por sí sola un impulso de corriente en el bobinado. Hay que identificar el material afectado: una corriente inducida en aislamiento o una descarga puede perturbar la red, mientras una orden espuria en el transistor de mando puede aplicar volt-segundos indebidos a un transformador sano. El segundo caso es propagación desde la electrónica, no desmagnetización directa. [[S26](04_fuentes.md#s26), §10.2.6.5; [S25](04_fuentes.md#s25), §4.1; inferencia de circuito]
-
-Una perturbación breve puede disiparse con la dinámica de la red; una perforación de aislamiento o un sobrecalentamiento pueden dejar daño. La energía ½LI² y la relación v = L·di/dt, dentro del régimen lineal, ayudan a entender que cortar corriente o excitar el bobinado genera tensiones. No permiten calcular un transitorio radiativo sin conocer su fuente y circuito. El control de aislamiento y márgenes se fundamenta aquí en el manual NASA de componentes, no en materiales de magnéticos Voyager identificados.
-
-**Cómo explicarlo en clase.** «En bobinas y transformadores miramos especialmente el aislamiento y lo que les aplica el circuito de mando. Un transistor que entrega un pulso incorrecto puede alterar un transformador que está perfectamente sano. No tenemos evidencia para decir que los rayos cósmicos desmagnetizaron los núcleos de Voyager».
-
+**Cómo explicarlo en clase.** «En bobinas y transformadores miramos especialmente el aislamiento y lo que les aplica el circuito de mando. Un transistor que entrega un pulso incorrecto puede alterar un transformador que está perfectamente sano. Los materiales concretos de esos núcleos no están identificados en las fuentes consultadas».
 
 ### 3.4 Diodos y rectificadores
 
-**Estructura y efecto.** Una unión p-n depende de perfiles de dopado, región de agotamiento y tiempos de vida; un Schottky emplea una barrera metal-semiconductor. No todos responden igual. Defectos de red pueden aumentar fugas y modificar conducción o recuperación; efectos de superficie pueden alterar corrientes periféricas. [[S23](04_fuentes.md#s23); [S27](04_fuentes.md#s27), p. 157]
+Una unión p-n dispone de una región con campo eléctrico. Si la radiación genera pares electrón–hueco dentro de ella o cerca, parte de esos portadores se separa y llega a los terminales. En la zona de campo predomina el transporte por deriva; carga generada cerca puede llegar por difusión antes de recombinarse. Aparece una corriente adicional aunque la tensión aplicada no haya cambiado. El pulso termina al recogerse o recombinarse el exceso de portadores; no requiere crear defectos permanentes. La polarización, geometría y trayectoria determinan cuánto se recoge. [[S21](04_fuentes.md#s21), [S22](04_fuentes.md#s22), [S23](04_fuentes.md#s23); [S35](04_fuentes.md#s35), §2]
 
-**Consecuencia en circuito.** Más fuga modifica un detector o rectificador de señal; un cambio de tensión directa altera una referencia; variaciones de recuperación pueden incrementar pérdidas de conmutación. En un Zener importa además la estabilidad de tensión y su coeficiente térmico. Que un diodo sirva como protección de transitorios no significa que detenga partículas incidentes.
-
-**Evidencia Voyager.** La caracterización de 1N4148, 1N5711 y otros rectificadores del programa encontró típicamente cambios de fuga menores que 1 nA y cambios de tensión directa de pocos mV bajo el ensayo descrito. Son resultados de esos dispositivos y condiciones, no un umbral universal de daño. [[S01](04_fuentes.md#s01), §VII.G.3, p. 7-53]
-
-**Mitigación general.** Selección y ensayo de lote, margen de tensión inversa y corriente, y verificación funcional del circuito con parámetros degradados. El dossier no asigna esos números de parte a posiciones concretas de vuelo sin una lista de materiales correspondiente.
-
-#### Cómo una unión produce una corriente espuria
-
-Una unión p-n dispone de una región con campo eléctrico. Si la radiación genera pares electrón–hueco dentro de ella o cerca, parte de esos portadores se separa y llega a los terminales. En la zona de campo predomina el transporte por deriva; carga generada cerca puede llegar por difusión antes de recombinarse. Aparece una corriente adicional aunque la tensión aplicada no haya cambiado. El pulso termina al recogerse o recombinarse el exceso de portadores; no requiere crear defectos permanentes. La polarización, geometría y trayectoria determinan cuánto se recoge. [[S21](04_fuentes.md#s21)–23; [S35](04_fuentes.md#s35), §2]
-
-En una entrada de medida esa corriente puede parecer señal. En un diodo de protección o rectificación, la consecuencia depende de impedancias y polarización: no se presupone la misma sensibilidad que en un detector. Tras el pulso el diodo puede recuperar su comportamiento, pero un circuito posterior pudo memorizar una lectura equivocada.
+Esa corriente puede parecer una señal en una entrada de medida. Su efecto en un rectificador o diodo de protección depende de la polarización y del circuito. Tras el pulso el diodo puede recuperar su comportamiento, pero un circuito posterior pudo memorizar una lectura equivocada.
 
 **Profundización opcional.** Los defectos de red pueden introducir niveles dentro de la banda prohibida. Bajo polarización inversa, centros de generación pueden aumentar corriente de fuga; en otras condiciones favorecen recombinación y cambian el transporte. Generación y recombinación dependen de ocupación y concentraciones, no de una «pérdida de electrones» universal. Un Schottky no se explica enteramente con el mismo modelo p-n. La carga transitoria Qrec = ∫iespuria(t)dt se distingue del incremento residual de fuga. [[S21](04_fuentes.md#s21), p. 16; [S23](04_fuentes.md#s23)]
 
 **Caso y mitigación.** El programa ensayó, entre otros, 1N4148 y 1N5711; su evaluación de parámetros posirradiación no caracteriza por sí sola los pulsos durante irradiación. Para estos últimos se requiere conocer la respuesta temporal y la aplicación. Selección y márgenes reducen susceptibilidad; filtrado o validación temporal son opciones generales cuyo uso en Voyager requiere evidencia específica. [[S01](04_fuentes.md#s01), p. 7-53; [S35](04_fuentes.md#s35)]
 
-**Cómo explicarlo en clase.** «La radiación puede generar cargas que el campo de la unión separa. Durante un instante circula una corriente que el circuito no esperaba. Si además quedan defectos, también puede aumentar la fuga después: el pulso y el deterioro son dos efectos diferentes».
+#### Evidencia y aplicación
 
+**Consecuencia en circuito.** Más fuga modifica un detector o rectificador de señal; un cambio de tensión directa altera una referencia; variaciones de recuperación pueden incrementar pérdidas de conmutación. En un Zener importa además la estabilidad de tensión y su coeficiente térmico. Que un diodo sirva como protección de transitorios no significa que detenga partículas incidentes.
+
+**Evidencia Voyager.** La caracterización de 1N4148, 1N5711 y otros rectificadores del programa encontró típicamente cambios de fuga menores que 1 nA y cambios de tensión directa de pocos mV bajo el ensayo descrito. Son resultados de esos dispositivos y condiciones, no un umbral universal de daño. [[S01](04_fuentes.md#s01), §VII.G.3, p. 7-53]
+
+**Cómo explicarlo en clase.** «La radiación puede generar cargas que el campo de la unión separa. Durante un instante circula una corriente que el circuito no esperaba. Si además quedan defectos, también puede aumentar la fuga después: el pulso y el deterioro son dos efectos diferentes».
 
 ### 3.5 Transistores bipolares
 
-**Estructura y efecto.** El emisor inyecta portadores que deben atravesar la base y llegar al colector. Una mayor recombinación, causada por defectos de volumen o superficie, reduce la fracción recogida. La consecuencia habitual es pérdida de ganancia de corriente β y aumento de corrientes parásitas. La ionización de pasivaciones también importa; no todo cambio de β es exclusivamente desplazamiento. [[S23](04_fuentes.md#s23); [S27](04_fuentes.md#s27), p. 157]
+En un NPN en región activa, la unión base–emisor polarizada en directa permite inyectar electrones desde el emisor a la base. La base es suficientemente delgada para que una fracción elevada alcance la región de campo base–colector y sea recogida. Otra fracción se recombina; además existe inyección de huecos hacia el emisor. La corriente del terminal de base sostiene esos procesos. Aquí usamos NPN como ejemplo; el PNP invierte tipos de portadores y polaridades. Para magnitudes de corriente estacionarias, IE = IC + IB y β = IC/IB. 
 
-**Consecuencia en circuito.** Si una etapa exige 10 mA y el diseño presupone β = 100, estima 0,1 mA de base. Con β = 20 necesita 0,5 mA. Si el driver no puede entregarlos, la etapa deja de cumplir. Es un cálculo ilustrativo: en saturación debe analizarse β forzado y las curvas reales. Una etapa analógica puede perder ganancia o cambiar offset sin llegar a un corto ni a un circuito abierto.
-
-**Mitigación Voyager documentada.** El programa combinó análisis de peor caso, selección de unidades y lotes, revisión de ganancia inicial, sustitución y blindaje cuando era necesario. La dispersión entre dispositivos y los casos atípicos importaban tanto como la media. [[S01](04_fuentes.md#s01), §III y §VIII.C]
-
-**Límite moderno.** Algunos bipolares presentan mayor sensibilidad a tasas de dosis bajas. Una equivalencia basada solo en dosis total no debe extenderse de manera automática entre ensayos acelerados y años de exposición; temperatura, polarización y proceso también deben controlarse. [[S21](04_fuentes.md#s21), p. 56; [S22](04_fuentes.md#s22), interpretación de pruebas TID]
-
-#### Balance de corrientes y dos caminos de degradación
-
-En un NPN en región activa, la unión base–emisor polarizada en directa permite inyectar electrones desde el emisor a la base. La base es suficientemente delgada para que una fracción elevada alcance la región de campo base–colector y sea recogida. Otra fracción se recombina; además existe inyección de huecos hacia el emisor. La corriente del terminal de base sostiene esos procesos. Para magnitudes de corriente estacionarias, IE = IC + IB y β = IC/IB. Esa igualdad conserva carga, pero no explica por sí sola cuánto vale cada corriente.
-
-**Desplazamiento.** Los defectos en el volumen pueden introducir niveles que facilitan la captura sucesiva de un electrón y un hueco. El centro puede volver a participar: no es un recipiente que se llena una sola vez. Una menor vida de minoritarios reduce la probabilidad de atravesar la base sin recombinarse. **Ionización.** Carga y estados de interfaz en óxidos superficiales alteran campos y recombinación, especialmente cerca de la unión emisor–base; pueden aumentar IB aun cuando IC cambie poco a un mismo VBE. No atribuir todo aumento de IB a defectos en el volumen. [[S36](04_fuentes.md#s36), figuras 26–27; [S01](04_fuentes.md#s01), §VII.B]
+**Desplazamiento.** Los defectos en el volumen pueden introducir niveles que facilitan la captura sucesiva de un electrón y un hueco. El centro puede participar repetidamente. Una menor vida de minoritarios reduce la probabilidad de atravesar la base sin recombinarse. **Ionización.** Carga y estados de interfaz en óxidos superficiales alteran campos y recombinación, especialmente cerca de la unión emisor–base; pueden aumentar IB aun cuando IC cambie poco a un mismo VBE. [[S36](04_fuentes.md#s36), figuras 26–27; [S01](04_fuentes.md#s01), §VII.B]
 
 **Condición de comparación.** A IC fijada, un β menor implica más IB. A IB fijada, puede disminuir la corriente de colector en región activa. A VBE fijada, observar por separado curvas de IC e IB permite identificar de dónde proviene el cambio de β. En saturación, IC ≈ βIB no basta: la carga y las tensiones disponibles fijan el funcionamiento. Ejemplo ilustrativo: sostener IC = 10 mA con β = 100 requiere IB = 0,1 mA; con β = 50 requiere 0,2 mA en el modelo activo. No son parámetros medidos de Voyager.
 
 **El transistor también entrega espurios.** La carga generada y recogida en sus uniones puede producir corrientes momentáneas y ser amplificada por el circuito. Un amplificador puede saturarse brevemente y tardar en recuperar su punto de trabajo. El exceso de señal puede desaparecer sin degradación de β; si dispara un comparador o se muestrea, la consecuencia puede persistir. [[S35](04_fuentes.md#s35), §§2 y 4; explicación de circuito]
 
-**Profundización opcional.** La longitud de difusión Ln = √(Dnτn) relaciona difusión y vida de electrones minoritarios en la base p. Una reducción de τn puede reducir el transporte útil, dependiendo del ancho y perfil de base. No inferir anchos de base Voyager con esta fórmula. La recombinación superficial y en regiones de agotamiento requiere considerar concentración de portadores y estados de interfaz, además de τ del volumen. [[S36](04_fuentes.md#s36)]
+**Profundización opcional.** La longitud de difusión Ln = √(Dnτn) relaciona difusión y vida de electrones minoritarios en la base p. Una reducción de τn puede reducir el transporte útil, dependiendo del ancho y perfil de base. La fórmula no determina el ancho de base de los dispositivos Voyager. La recombinación superficial y en regiones de agotamiento requiere considerar concentración de portadores y estados de interfaz, además de τ del volumen. [[S36](04_fuentes.md#s36)]
 
 ![Ensayo de ganancia de bipolares](figuras/voyager_bjt_p101.png)
 
 **Gráfico para estudiar.** [S01](04_fuentes.md#s01), figura 7-1, representa cambio de 1/hFE frente a IC bajo el ensayo indicado. Un mayor incremento de la ganancia inversa significa más degradación; no es un gráfico del valor absoluto de β. Permite explicar dependencia con corriente y proceso. La figura 7-2 compara condiciones del 2N2907A. Los 2N2222 de distintos fabricantes no se comportaron igual: el nombre comercial no fija la tolerancia. Estos son resultados de ensayo del programa, sin asignación a una placa concreta. [[S01](04_fuentes.md#s01), pp. 7-2–7-3]
 
-**Cómo explicarlo en clase.** «Parte de la corriente de control se relaciona con recombinación. La radiación puede crear condiciones que aumenten esa recombinación, y el transistor necesita más corriente de control para sostener la salida. También puede generar un pulso momentáneo sin dañarlo. Diseñar con margen de ganancia y evitar que un pulso se interprete como orden resuelven problemas distintos».
+#### Evidencia y aplicación
 
+**Mitigación Voyager documentada.** El programa combinó análisis de peor caso, selección de unidades y lotes, revisión de ganancia inicial, sustitución y blindaje cuando era necesario. La dispersión entre dispositivos y los casos atípicos importaban tanto como la media. [[S01](04_fuentes.md#s01), §III y §VIII.C]
+
+**Límite de extrapolación del ensayo.** Algunos bipolares presentan mayor sensibilidad a tasas de dosis bajas. Una equivalencia basada solo en dosis total no debe extenderse de manera automática entre ensayos acelerados y años de exposición; temperatura, polarización y proceso también deben controlarse. [[S21](04_fuentes.md#s21), p. 56; [S22](04_fuentes.md#s22), interpretación de pruebas TID]
+
+**Cómo explicarlo en clase.** «Parte de la corriente de control se relaciona con recombinación. La radiación puede crear condiciones que aumenten esa recombinación, y el transistor necesita más corriente de control para sostener la salida. También puede generar un pulso momentáneo sin dañarlo. Diseñar con margen de ganancia y evitar que un pulso se interprete como orden resuelven problemas distintos».
 
 ### 3.6 JFET, MOSFET y dispositivos de control de potencia
 
-**Estructura y efecto.** El JFET controla el canal mediante una unión polarizada; el MOSFET lo hace a través de una compuerta aislada. El JFET evita el óxido de compuerta como mecanismo principal de control, pero conserva uniones y superficies susceptibles. En MOS son relevantes carga atrapada, estados de interfaz y caminos parásitos. En dispositivos de potencia susceptibles pueden aparecer eventos destructivos, dependientes de estructura y polarización. [[S02](04_fuentes.md#s02), tabla A-1; [S21](04_fuentes.md#s21), p. 59; [S22](04_fuentes.md#s22)]
-
-**Consecuencia en circuito.** Cambios de IDSS o corriente de compuerta alteran una entrada de alta impedancia; deriva de VT modifica conducción y disipación; una fuga puede cargar un nodo que debería estar aislado. En una fuente, la falla del transistor de control puede causar subtensión o sobretensión en muchas cargas.
-
-**Mitigación.** Ensayar con la polarización relevante, revisar parámetros del circuito degradado y limitar solicitaciones. El informe Voyager distingue categorías de prueba y caracteriza JFET, conmutadores analógicos y dispositivos de potencia. **No resuelto:** susceptibilidad SEE y medidas específicas de limitación de corriente para cada transistor de potencia de vuelo. No se atribuye tecnología MOSFET moderna a todas sus fuentes. [[S02](04_fuentes.md#s02), apéndice A; [S01](04_fuentes.md#s01), §§V–VIII]
-
-#### Control electrostático, carga atrapada y carga recogida
-
-En un MOSFET, el potencial de compuerta establece un campo a través del óxido que modifica la población de portadores del canal. El aislante permite ejercer ese control sin una corriente DC ideal entre compuerta y canal. La ionización puede generar pares en el óxido: una parte se recombina; la restante se transporta bajo el campo y puede atraparse. Esa carga también contribuye al campo que ve el semiconductor, modificando el voltaje de compuerta necesario para una misma condición de canal. Los estados de interfaz intercambian carga con el semiconductor y alteran su respuesta; no son idénticos a una carga fija dentro del óxido. [[S22](04_fuentes.md#s22)–23]
+En un MOSFET, el potencial de compuerta establece un campo a través del óxido que modifica la población de portadores del canal. El aislante permite ejercer ese control sin una corriente DC ideal entre compuerta y canal. La ionización puede generar pares en el óxido: una parte se recombina; la restante se transporta bajo el campo y puede atraparse. Esa carga también contribuye al campo que ve el semiconductor, modificando el voltaje de compuerta necesario para una misma condición de canal. Los estados de interfaz intercambian carga con el semiconductor y alteran su respuesta; no son idénticos a una carga fija dentro del óxido. [[S22](04_fuentes.md#s22), [S23](04_fuentes.md#s23)]
 
 **Profundización opcional.** Con convención de tensión de compuerta, el término de carga positiva efectiva en óxido produce ΔVT ≈ −Qot/Cox. En un NMOS puede reducir el umbral positivo; en un PMOS puede volver más negativo el umbral. El signo y ocupación de estados de interfaz y otros efectos cambian el resultado neto; no afirmar que NMOS y PMOS siempre se vuelven más fáciles de encender. La dispersión de portadores por defectos puede afectar movilidad, y los estados de interfaz empeorar la transición subumbral. Tiempo, polarización y temperatura condicionan recuperación y compensación de efectos. [[S22](04_fuentes.md#s22), TID e Interface Traps]
 
-**Transitorio distinto.** Una partícula también puede generar carga en el silicio, que se recoge en una unión de drenador y perturba un nodo. No hace falta esperar a que cambie el umbral. El tamaño y duración del pulso dependen de colección, capacitancia y corriente restauradora. En un JFET, la compuerta controla mediante una unión: explicar corrientes de unión y cambios de canal, sin atribuirle el óxido de compuerta de un MOS. [[S21](04_fuentes.md#s21)–23]
+**Transitorio distinto.** Una partícula también puede generar carga en el silicio, que se recoge en una unión de drenador y perturba un nodo. No hace falta esperar a que cambie el umbral. La amplitud y duración del pulso dependen de la colección de carga, la capacitancia y la corriente que restablece el nodo. En un JFET, la compuerta controla mediante una unión: explicar corrientes de unión y cambios de canal, sin atribuirle el óxido de compuerta de un MOS. [[S21](04_fuentes.md#s21), [S22](04_fuentes.md#s22), [S23](04_fuentes.md#s23)]
 
 **Potencia: límite de evidencia.** El informe muestra montajes para ensayar transistores de potencia (figuras 5-15 y 5-16), pero eso no identifica aquí cada modelo instalado ni su función. No se ha demostrado presencia de MOSFET de potencia en las unidades de vuelo con esta documentación. SEB/SEGR se mantienen como mecanismos generales de dispositivos susceptibles, fuera de la explicación principal de Voyager. Un fallo del mando puede perturbar la alimentación sin daño directo del elemento de potencia. [[S01](04_fuentes.md#s01), §V; [S21](04_fuentes.md#s21)]
 
-**Cómo explicarlo en clase.** «La compuerta controla el transistor con un campo eléctrico. Si queda carga atrapada en el aislante, ese campo cambia y también cambia la tensión necesaria para encenderlo. Por otro camino, la carga recogida en una unión puede producir un pulso breve aunque el transistor no haya quedado deteriorado».
-
-
-### 3.7 Amplificadores, comparadores, reguladores y lógica
-
-Un IC combina los mecanismos de sus transistores, resistencias, aislantes e interconexiones. En un amplificador interesa offset, corrientes de entrada, ganancia, ruido y rango de salida. En un comparador, una deriva de referencia puede disparar una protección incorrecta. En lógica, importan umbrales, consumo, retardo y margen de ruido. Un circuito puede dejar de ser útil mucho antes de destruirse físicamente. [[S22](04_fuentes.md#s22)–[S23](04_fuentes.md#s23)]
+#### Evidencia y aplicación
 
 **Caso de fabricación de Voyager.** RCA modificó el recocido del óxido de la familia CMOS CD4000 de 1100 a 950 °C para mejorar su comportamiento radiativo. Son temperaturas de fabricación, no de funcionamiento de la sonda. El programa también trabajó con circuitos lineales y calificó componentes sensibles. El resultado no vuelve inmune al dispositivo ni autoriza usar una curva de un CD4000 actual como si fuera la del lote de 1977. [[S01](04_fuentes.md#s01), §VI]
 
-**Mitigación de circuito.** Aplicar límites degradados al diseño: retardo máximo, fan-out, referencias, fugas y consumo. En una red analógica, ajustar el margen puede ser más útil que cambiar toda la tecnología. En Voyager, esa evaluación estuvo ligada a selección, rediseño y blindaje, no solo a la etiqueta comercial del IC. [[S01](04_fuentes.md#s01), §III]
+**Consecuencia en circuito.** Cambios de IDSS (corriente drenador–fuente a VGS = 0 bajo las condiciones especificadas para el JFET) o de corriente de compuerta alteran una entrada de alta impedancia; deriva de VT modifica conducción y disipación; una fuga puede cargar un nodo que debería estar aislado. En una fuente, la falla del transistor de control puede causar subtensión o sobretensión en muchas cargas.
 
-![Transitorios de circuitos lineales, fuente NASA](figuras/S35_transitorios_p004.png)
+**Mitigación.** Ensayar con la polarización relevante, revisar parámetros del circuito degradado y limitar solicitaciones. El informe Voyager distingue categorías de prueba y caracteriza JFET, conmutadores analógicos y dispositivos de potencia. **No resuelto:** susceptibilidad SEE y medidas específicas de limitación de corriente para cada transistor de potencia de vuelo. No se atribuye tecnología MOSFET moderna a todas sus fuentes. [[S02](04_fuentes.md#s02), apéndice A; [S01](04_fuentes.md#s01), §§V–VIII]
 
-**Figura de respaldo.** [S35](04_fuentes.md#s35), p. 4, figuras 1–2: tensión de salida frente a tiempo, con recuperación rápida y lenta en condiciones distintas. No son datos Voyager. La escala temporal difiere entre gráficas; no compararlas solo por su ancho en pantalla.
+**Cómo explicarlo en clase.** «En un MOS, la compuerta controla el transistor con un campo eléctrico. Si queda carga atrapada en el aislante, ese campo cambia y también cambia la tensión necesaria para encenderlo. Por otro camino, la carga recogida en una unión puede producir un pulso breve aunque el transistor no haya quedado deteriorado».
 
-#### De un nodo interno a una salida falsa
+### 3.7 Amplificadores, comparadores, reguladores y lógica
 
 Un amplificador tiene nodos con pequeñas capacitancias y corrientes que fijan su punto de trabajo. Una corriente inducida en una unión puede cargar uno de esos nodos; las etapas siguientes amplifican o transforman la perturbación. La salida puede producir un SET, es decir, un transitorio de evento único. Su forma depende del dispositivo, ganancia configurada, alimentación, entrada y carga; un ensayo con una sola configuración no cubre todas las aplicaciones. Comparadores, referencias y reguladores pueden transmitir consecuencias diferentes a partir de una perturbación interna. [[S35](04_fuentes.md#s35), §§2.4 y 4]
 
@@ -321,104 +318,93 @@ En un comparador, un pulso puede cruzar el umbral y generar un cambio lógico. E
 
 **Mitigación general.** Elegir componentes caracterizados en condiciones pertinentes; filtrar cuando la señal útil lo permita, validar duración, introducir histéresis o contrastar medidas. Cada opción tiene límites: un pulso grande puede superar histéresis; una señal falsa suficientemente larga supera un filtro; filtros pueden retrasar protecciones legítimas. No se atribuyen estas técnicas a una placa Voyager concreta por recomendarlas aquí.
 
-**Cómo explicarlo en clase.** «El circuito puede amplificar una carga que no venía del sensor. Sale entonces un pulso falso. Aunque desaparezca, otro bloque puede haberlo tomado como una medida o una orden. Debemos estudiar el circuito receptor, no solo comprobar si el integrado sobrevivió».
+#### Evidencia y aplicación
 
+**Mitigación de circuito.** Aplicar límites degradados al diseño: retardo máximo, fan-out, referencias, fugas y consumo. En una red analógica, ajustar el margen puede ser más útil que cambiar toda la tecnología. En Voyager, esa evaluación estuvo ligada a selección, rediseño y blindaje, no solo a la etiqueta comercial del IC. [[S01](04_fuentes.md#s01), §III]
+
+![Transitorios de circuitos lineales, fuente NASA](figuras/S35_transitorios_p004.png)
+
+**Figura de respaldo.** [S35](04_fuentes.md#s35), p. 4, figuras 1–2: tensión de salida frente a tiempo, con recuperación rápida y lenta en condiciones distintas. No son datos Voyager. La escala temporal difiere entre gráficas; no compararlas solo por su ancho en pantalla.
+
+**Cómo explicarlo en clase.** «El circuito puede amplificar una perturbación causada por carga que no venía del sensor. Sale entonces un pulso falso. Aunque desaparezca, otro bloque puede haberlo tomado como una medida o una orden. Debemos estudiar el circuito receptor, no solo comprobar si el integrado sobrevivió».
 
 ### 3.8 Memorias, registros y temporización
 
-Una SRAM conserva estados mediante realimentación y alimentación; una perturbación suficiente puede invertirlos. Una memoria magnética plated-wire representa información mediante magnetización, pero sus circuitos de lectura y escritura siguen siendo electrónicos. «Memoria magnética» no equivale a «computadora inmune». [[S04](04_fuentes.md#s04), pp. 182–184; [S05](04_fuentes.md#s05); inferencia de arquitectura]
+Una memoria CMOS estática almacena estados eléctricos mediante realimentación; una memoria plated-wire representa información mediante magnetización. Sus circuitos de lectura y escritura siguen siendo electrónicos: memoria magnética no implica sistema inmune. [S04](04_fuentes.md#s04), pp. 182–184; [S05](04_fuentes.md#s05).
+
+Si una perturbación lleva una celda estática al otro estado estable, esta conserva el dato equivocado. La carga transitoria ya desapareció, pero la realimentación sostiene el nuevo estado. Reescribir puede corregirlo si no hay daño. Una señal espuria capturada por un registro también puede cambiar estado sin impacto directo en la celda. [[S22](04_fuentes.md#s22), SEU y SET]
+
+La consecuencia depende del dato: una muestra incorrecta puede descartarse; un parámetro o una instrucción alterada puede afectar muchas operaciones. Reiniciar no garantiza recuperar datos originales y requiere un estado seguro conocido. La alimentación de retención evita cierta pérdida por interrupción de suministro, pero no bloquea por sí misma la colección de carga radiativa. [[S04](04_fuentes.md#s04), p. 183; distinción funcional]
+
+#### Evidencia y aplicación
 
 Voyager combina tecnologías: CCS y AACS emplean plated-wire; el FDS adoptó memoria CMOS volátil. El suministro de retención del FDS fue una decisión explícita para preservar estado ante problemas del camino de alimentación alterna. La redundancia tampoco era uniforme: la conmutación de FDS descrita requería órdenes desde Tierra, mientras que AACS tenía supervisión de heartbeat. [[S03](04_fuentes.md#s03), p. 20; [S04](04_fuentes.md#s04), recuadros 6-1 y 6-2]
 
 **Mitigación general frente a errores.** Detección, reescritura, reinicio, códigos correctores o redundancia pueden ser adecuados según arquitectura; no se atribuye ECC, scrubbing o votación triple a Voyager sin documentación específica. Un checksum detecta ciertas corrupciones, pero no repara automáticamente el dato. Los casos operacionales comprobados se describen en §6.
 
-#### El pulso termina, el estado puede permanecer
-
-En una memoria estática, la realimentación mantiene uno de dos estados. Si una perturbación desplaza suficientemente un nodo y la dinámica cruza hacia el otro estado estable, la celda termina conservando el dato equivocado. La carga transitoria ya desapareció, pero la realimentación sostiene el nuevo estado. Reescribir puede corregirlo si no hay daño. Una señal espuria capturada por un registro también puede cambiar estado sin impacto directo en la celda. [[S22](04_fuentes.md#s22), SEU y SET]
-
-La consecuencia depende del dato: una muestra incorrecta puede descartarse; un parámetro o una instrucción alterada puede afectar muchas operaciones. Reiniciar no garantiza recuperar datos originales y requiere un estado seguro conocido. La alimentación de retención evita cierta pérdida por interrupción de suministro, pero no bloquea por sí misma la colección de carga radiativa. [[S04](04_fuentes.md#s04), p. 183; distinción funcional]
-
 **Cómo explicarlo en clase.** «La memoria conserva estados. Un pulso breve puede hacerla conservar el estado equivocado después de que el pulso terminó. Eso puede recuperarse escribiendo de nuevo, pero no significa que cualquier error se arregle solo o reiniciando».
-
 
 ### 3.9 Detectores, LED y acoplamientos ópticos
 
-El mismo depósito de energía que perturba un transistor puede ser la señal buscada en un detector. Para detectar se desea recoger carga; para lógica puede ser necesario impedir que esa carga altere un estado. Los defectos cambian colección y corriente oscura, y los materiales ópticos pueden perder transmisión. Una degradación del emisor o receptor reduce la transferencia de una cadena óptica. [[S21](04_fuentes.md#s21), p. 16; [S01](04_fuentes.md#s01), §VII.I]
-
-**Evidencia de vuelo.** Después de Júpiter, detectores L1 de los telescopios LET del CRS mostraron daño modelado como reducción de espesor efectivo. La atribución a implantación de oxígeno y azufre se presenta como hipótesis en la documentación. Voyager 1 fue más afectada; el LET B de Voyager 2 perdió capacidad de entregar datos tras otro daño radiativo del encuentro. Se corrigieron modelos de respuesta para recuperar análisis de otros detectores. Eso recupera utilidad científica; no vuelve físicamente nuevo el sensor. [[S09](04_fuentes.md#s09), apartado de daño en Júpiter]
-
-#### Cuándo la carga es señal y cuándo es espuria
-
-Un detector de silicio aprovecha generación y colección de portadores para medir partículas. Una trayectoria que deposita energía produce un pulso útil si corresponde al canal y a la medición buscada. En un sensor óptico, una partícula ionizante puede generar carga sin el fotón que se quería medir: aparece un evento espurio. La misma interacción tiene distinto significado según la función. Su amplitud depende de energía depositada y colección, no simplemente de la energía incidente. [[S21](04_fuentes.md#s21); [S30](04_fuentes.md#s30); explicación funcional]
+Un detector de silicio aprovecha generación y colección de portadores para medir partículas. Una trayectoria que deposita energía produce un pulso útil si corresponde al canal y a la medición buscada. En un sensor óptico, una partícula ionizante puede generar carga sin el fotón que se quería medir: aparece un evento espurio. Su amplitud depende de energía depositada y colección, no simplemente de la energía incidente. [[S21](04_fuentes.md#s21); [S30](04_fuentes.md#s30); explicación funcional]
 
 Con defectos acumulados puede aumentar corriente oscura y disminuir colección. En emisores, recombinación no radiativa puede reducir la luz emitida; en una cadena óptica importa la transferencia completa, no solo si el LED enciende. El montaje [S01](04_fuentes.md#s01), figura 7-6, permite distinguir fuente y receptor en el ensayo. La recuperación de un pulso es distinta de recalibrar una respuesta degradada: recalibrar no elimina defectos. [[S01](04_fuentes.md#s01), §VII.I; [S09](04_fuentes.md#s09)]
 
-**Cómo explicarlo en clase.** «Un detector usa la carga producida por radiación como señal. En otro sensor, esa carga puede ser una lectura falsa. A lo largo del tiempo también puede cambiar la eficiencia del detector; corregir su calibración recupera utilidad, pero no lo vuelve nuevo».
+#### Evidencia y aplicación
 
+**Evidencia de vuelo.** Después de Júpiter, detectores L1 de los telescopios LET del CRS mostraron daño modelado como reducción de espesor efectivo. La atribución a implantación de oxígeno y azufre se presenta como hipótesis en la documentación. Voyager 1 fue más afectada; el LET B de Voyager 2 perdió capacidad de entregar datos tras otro daño radiativo del encuentro. Se corrigieron modelos de respuesta para recuperar análisis de otros detectores. [[S09](04_fuentes.md#s09), apartado de daño en Júpiter]
+
+**Cómo explicarlo en clase.** «Un detector usa la carga producida por radiación como señal. En otro sensor, esa carga puede ser una lectura falsa. A lo largo del tiempo también puede cambiar la eficiencia del detector; corregir su calibración recupera utilidad, pero no lo vuelve nuevo».
 
 ### 3.10 Pistas, soldaduras y conectores
 
-Una pista metálica no almacena un estado lógico por sí sola. En el circuito completo interesa cómo una descarga o transitorio se acopla a ella y cómo el aislamiento cercano conduce o retiene carga. Un metal flotante puede cargarse aunque sea buen conductor: la conductividad interna no garantiza conexión a una referencia. [[S25](04_fuentes.md#s25), p. 32]
+La carga depositada o acumulada en otro material puede descargarse hacia un conductor. Corrientes rápidas generan diferencias de potencial en impedancias compartidas y pueden acoplarse capacitivamente o magnéticamente a otras líneas. Así una descarga puede llegar a una entrada remota por cable, pista o referencia común. La pista no tiene que cambiar su resistividad ni sufrir un defecto permanente para transportar un espurio. [[S25](04_fuentes.md#s25), §4; explicación de interconexión]
+
+La carga acumulada se disipa y el pulso puede terminar, pero una entrada puede quedar dañada o un receptor interpretar una orden. Continuidad de retornos, equipotencialidad y control del acoplamiento son criterios generales; el PWS documenta su requisito equipotencial, sin identificar aquí todo el cableado de vuelo. [[S08](04_fuentes.md#s08), §5.G]
+
+#### Evidencia y aplicación
 
 Para una soldadura o contacto, atribuir una apertura a radiación requiere evidencia adicional. Fatiga térmica, vibración, defectos de fabricación y envejecimiento son causas distintas. La evidencia consultada no cuantifica daño radiativo directo de las soldaduras de Voyager ni identifica sus aleaciones o acabado de cada conector. **No resuelto para el hardware de vuelo.**
 
-**Mitigación general.** Controlar continuidad y retorno, evitar conductores involuntariamente flotantes, calificar aislamiento, minimizar acoplamientos y verificar susceptibilidad a descargas. No basta dibujar un blindaje alrededor del IC: el cable puede conducir el transitorio desde otro lugar. La exigencia equipotencial aparece específicamente en el diseño Voyager descrito para PWS. [[S08](04_fuentes.md#s08), §5.G]
-
-#### La pista conduce la perturbación, aunque no sea su origen
-
-La carga depositada o acumulada en otro material puede descargarse hacia un conductor. Corrientes rápidas generan diferencias de potencial en impedancias compartidas y pueden acoplarse capacitivamente o magnéticamente a otras líneas. Así una descarga puede llegar a una entrada remota por cable, pista o referencia común. La pista no tiene que cambiar su resistividad ni sufrir un defecto permanente para transportar un espurio. [[S25](04_fuentes.md#s25), §4; explicación de interconexión]
-
-La carga acumulada se disipa y el pulso puede terminar, pero una entrada puede quedar dañada o un receptor interpretar una orden. Separar esa consecuencia de la fatiga de una soldadura. Continuidad de retornos, equipotencialidad y control del acoplamiento son criterios generales; el PWS documenta su requisito equipotencial, sin identificar aquí todo el cableado de vuelo. [[S08](04_fuentes.md#s08), §5.G]
-
 **Cómo explicarlo en clase.** «El problema puede empezar en un aislante y viajar por una pista hasta otro circuito. El cobre puede estar sano y, sin embargo, transportar una señal falsa o una descarga. Importa el recorrido completo de la corriente».
-
 
 ### 3.11 Placas, encapsulados, recubrimientos y aislantes
 
-La placa aporta aislamiento y soporte, pero también capacitancias y caminos de fuga. La carga que queda en un dieléctrico puede elevar el campo local; si se supera la resistencia a ruptura aparece una descarga. La radiación también puede aumentar conductividad durante la exposición. Estos efectos pueden competir: más conductividad ayuda a evacuar carga, pero perjudica una función que necesita aislamiento. [[S25](04_fuentes.md#s25), §§4.1.3–4.1.5]
+En un aislante penetrado por electrones, la carga que queda retenida puede crear campo interno. Si llega más carga de la que sale, ese campo aumenta; una trayectoria de descarga puede aparecer cuando las condiciones locales superan la capacidad del aislamiento. La tensión y energía disponibles dependen de la geometría y los caminos de fuga. La radiación también puede elevar la conductividad y facilitar la evacuación de carga. [[S25](04_fuentes.md#s25), §§4.1.3–4.1.5]
+
+Un aumento temporal de conducción puede afectar una entrada de alta impedancia sin producir descarga. Una descarga puede ser un evento aislado de interferencia o dejar daño. El espesor de placa PWS documentado no identifica su resina ni permite calcular una tensión de ruptura. Los mecanismos generales se apoyan en NASA-HDBK-4002B, posterior a Voyager y no prueba de que cada recomendación se aplicó en 1977.
+
+#### Evidencia y aplicación
 
 Los materiales y su temperatura importan: no se debe asignar automáticamente FR4, Kapton o una resina particular a todas las placas de Voyager. El artículo del PWS sí identifica montaje con módulos cordwood e híbridos sobre una placa de 0,062 pulgadas y una carcasa de magnesio con acabado dorado. Es un dato de ese instrumento. [[S08](04_fuentes.md#s08), §5.C]
 
 **Mitigación general.** Materiales caracterizados, caminos de evacuación compatibles con la función, geometría y aislamiento adecuados, control de superficies flotantes y pruebas de descarga. El expediente de cada componente decide si blindar, cambiar material o rediseñar el circuito.
 
-#### Acumulación, conducción y descarga no son lo mismo
-
-En un aislante penetrado por electrones, la carga que queda retenida puede crear campo interno. Si llega más carga de la que sale, ese campo aumenta; una trayectoria de descarga puede aparecer cuando las condiciones locales superan la capacidad del aislamiento. La tensión y energía disponibles dependen de geometría y caminos de fuga. Al mismo tiempo, radiación puede elevar conductividad y facilitar evacuación: el balance debe evaluarse, no decidirse por el nombre «aislante». [[S25](04_fuentes.md#s25), §§4.1.3–4.1.5]
-
-Un aumento temporal de conducción puede afectar una entrada de alta impedancia sin producir descarga. Una descarga puede ser un evento aislado de interferencia o dejar daño. El espesor de placa PWS documentado no identifica su resina ni permite calcular una tensión de ruptura. Los mecanismos generales se apoyan en NASA-HDBK-4002B, posterior a Voyager y no prueba de que cada recomendación se aplicó en 1977.
-
 **Cómo explicarlo en clase.** «La placa también contiene aislantes. Pueden acumular carga o conducir más durante la exposición. Eso puede causar fugas y, si el campo crece lo suficiente, una descarga. No hace falta que falle un chip para alterar una señal».
-
 
 ### 3.12 Relés y elementos electromecánicos
 
-En un relé se deben considerar bobina, aislamiento, carcasa, contactos y mecanismo. La radiación sobre aislantes y la carga de partes flotantes son relevantes; no hay motivo para asignarle un SEU como si fuera una SRAM. Una orden errónea desde electrónica sí puede cambiar el estado del relé y afectar la alimentación. [[S25](04_fuentes.md#s25), p. 32; [S27](04_fuentes.md#s27), p. 156]
+La electrónica de mando energiza la bobina y el mecanismo mueve contactos. Un pulso muy breve no necesariamente lo acciona: importan corriente, duración, dinámica mecánica y circuito de excitación. Si la perturbación altera antes un registro de mando, la orden puede durar lo suficiente para cambiar el relé. Ese es un efecto indirecto, distinto de deteriorar su aislamiento. [[S03](04_fuentes.md#s03), p. 16; [S25](04_fuentes.md#s25), p. 32; inferencia funcional]
+
+La recuperación dependerá de que el relé sea mantenido o biestable y del estado que conserve el controlador; no se asigna aquí una de esas arquitecturas a todos los relés Voyager. Una maniobra falsa puede afectar la misión aunque contactos y bobina sigan sanos.
+
+#### Evidencia y aplicación
 
 Voyager utilizó relés comandados para distribuir potencia y transferirla entre módulos. **Documentado.** No se han identificado aquí ensayos radiativos ni materiales de cada modelo de relé de vuelo. **No resuelto.** Calificación, margen de bobina/contacto y control de aislamiento son mitigaciones generales; desgaste mecánico y contacto también deben analizarse como envejecimiento. [[S03](04_fuentes.md#s03), p. 16]
 
-#### Una orden espuria puede cambiar una carga real
-
-La electrónica de mando energiza la bobina y el mecanismo mueve contactos. Un pulso muy breve no necesariamente lo acciona: importan corriente, duración, dinámica mecánica y circuito de excitación. Si la perturbación altera antes un registro de mando, la orden puede durar lo suficiente para cambiar el relé. Ese es un efecto indirecto, distinto de deteriorar su aislamiento. [[S03](04_fuentes.md#s03), p. 16; [S25](04_fuentes.md#s25), p. 32; inferencia funcional]
-
-La recuperación dependerá de que el relé sea mantenido o biestable y del estado que conserve el controlador; no se asigna aquí una de esas arquitecturas a todos los relés Voyager. Validar órdenes y calificar el aislamiento son medidas diferentes. Una maniobra falsa puede afectar la misión aunque contactos y bobina sigan sanos.
-
 **Cómo explicarlo en clase.** «Un relé no cambia un bit como una memoria, pero puede recibir una orden equivocada de ella. Si el mando dura lo suficiente, conecta o desconecta una carga real. Hay que distinguir el relé dañado del relé sano que obedece una orden falsa».
-
 
 ### 3.13 Cristales y osciladores
 
-Un resonador de cuarzo convierte energía eléctrica y mecánica por piezoelectricidad. La radiación puede cambiar frecuencia y resistencia equivalente; la respuesta depende del cristal, sus impurezas, preparación y exposición. La circuitería que sostiene la oscilación tiene, además, sus propias sensibilidades. [[S26](04_fuentes.md#s26), §8.6.8, pp. 8-23–8-24]
-
-En Voyager se seleccionaron muestras de barras de cristal para irradiarlas; se fabricaron unidades de vuelo a partir de barras aceptadas. El informe no encontró degradación importante en esos ensayos. Esa evidencia respalda una selección concreta, no un principio de invariabilidad del cuarzo. [[S01](04_fuentes.md#s01), §VIII.F, p. 8-41, PDF 202]
-
-#### Resonador y electrónica del oscilador
-
-El cuarzo es un resonador piezoeléctrico; su respuesta se representa cerca de una resonancia mediante una rama equivalente mecánica-eléctrica. Cambios en defectos y propiedades efectivas pueden modificar frecuencia y pérdidas, con dependencia del material y preparación. No se deriva aquí una magnitud universal de cambio a partir de dosis. El manual NASA describe sensibilidad del cristal y el informe Voyager documenta selección de barras. [[S26](04_fuentes.md#s26), §8.6.8; [S01](04_fuentes.md#s01), §VIII.F]
+El cuarzo es un resonador piezoeléctrico; su respuesta se representa cerca de una resonancia mediante una rama equivalente mecánica-eléctrica. Cambios en defectos y propiedades efectivas pueden modificar frecuencia y pérdidas, con dependencia del material y preparación. El manual NASA describe esa sensibilidad; el informe Voyager documenta selección de barras mediante ensayos. [[S26](04_fuentes.md#s26), §8.6.8; [S01](04_fuentes.md#s01), §VIII.F]
 
 Un pulso en la electrónica que mantiene o conforma la oscilación también puede perturbar el reloj sin alterar permanentemente el cuarzo. Es una consecuencia posible del circuito, no una observación de Voyager establecida por el ensayo de barras. Distinguir deriva de frecuencia, fase momentánea y pulso lógico extra evita atribuir toda falla temporal al cristal. [[S35](04_fuentes.md#s35); inferencia de circuito]
 
-**Cómo explicarlo en clase.** «El cristal fija una referencia de tiempo y puede cambiar su respuesta según material y exposición. Pero el reloj también tiene electrónica: un pulso espurio allí no significa que el cuarzo haya cambiado permanentemente de frecuencia».
+#### Evidencia y aplicación
 
+En Voyager se seleccionaron muestras de barras de cristal para irradiarlas; se fabricaron unidades de vuelo a partir de barras aceptadas. El informe no encontró degradación importante en esos ensayos. Esa evidencia respalda una selección concreta, no un principio de invariabilidad del cuarzo. [[S01](04_fuentes.md#s01), §VIII.F, p. 8-41, PDF 202]
+
+**Cómo explicarlo en clase.** «El cristal fija una referencia de tiempo y puede cambiar su respuesta según material y exposición. Pero el reloj también tiene electrónica: un pulso espurio allí no significa que el cuarzo haya cambiado permanentemente de frecuencia».
 
 ## 4 El hardware real y los planos disponibles
 
@@ -447,7 +433,7 @@ Hay evidencia de semiconductores de silicio con estructuras de óxido y pasivaci
 
 ### 4.3 Qué tipo de planos hay en las fuentes
 
-- **Diagramas de instrumento:** el artículo original del PWS presenta su cadena funcional y detalles de entrada. [S08](04_fuentes.md#s08), figuras 4–7 y §5.
+- **Diagramas de instrumento:** el artículo original del PWS presenta su cadena funcional y detalles de entrada. [S08](04_fuentes.md#s08), figura 7 (diagrama de bloques), figura 6 (antenas y montaje) y §5.
 - **Circuitos de ensayo:** [S01](04_fuentes.md#s01), figura 7-6, p. 7-54, muestra una prueba de fuente y detector ópticos con alimentación, resistencias y punto de medida. Es un montaje de ensayo, no una placa de vuelo.
 - **Curvas de dispositivo:** [S01](04_fuentes.md#s01), figura 6-1, p. 6-3, compara características MOS antes y después de irradiación.
 - **Arquitectura y hardware:** [S03](04_fuentes.md#s03) describe potencia y comunicaciones; [S04](04_fuentes.md#s04), figura 6-2 y recuadro 6-2, muestra y describe el FDS.
@@ -468,7 +454,7 @@ Se lanzaron **dos Voyager**, pero documentación de un prototipo, modelo de prue
 | Redes Dale de película metálica | Ensayo de estabilidad resistiva | Ausencia de toda fuga o perturbación durante exposición |
 | Transistores de potencia | Fotografías de montajes de ensayo en §V | Identificación de MOSFET de potencia o modelo/BOM de vuelo |
 
-Los ensayos de componentes y la arquitectura de la nave se complementan, pero no sustituyen un esquema revisado y su lista de materiales. En la exposición se nombrarán componentes concretos con esta etiqueta de alcance.
+Para ubicar los componentes ensayados en una placa de vuelo hacen falta el esquema y la lista de materiales correspondientes.
 
 ## 5 Mitigaciones y ejemplos cuantitativos
 

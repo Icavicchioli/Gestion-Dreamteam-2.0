@@ -23,7 +23,7 @@ Fecha: 14 de octubre de 2026. Se revisaron unidades, cálculos, trazabilidad y c
 |---|---|---|
 | Edad V1: 05/09/1977 → 14/10/2026 | 49 años y 39 días | Fechas civiles, no precisión de hora de lanzamiento |
 | Edad V2: 20/08/1977 → 14/10/2026 | 49 años y 55 días | Mismo criterio |
-| 30 krad × 0,01 Gy/rad | 300 Gy = 300 J/kg | Mantener material Si al comparar dosis |
+| 30.000 rad × 0,01 Gy/rad | 300 Gy = 300 J/kg | Mantener material Si al comparar dosis |
 | RDM: 60/30 | 2, adimensional | Diseño documentado, no dosis acumulada medida |
 | 5 pF / 0,02 µF × 100 | 0,025 % | Resultado relativo de capacitancia ensayada |
 | 12 pF / 0,05 µF × 100 | 0,024 % | No certifica fuga, ESR ni toda la vida útil |
@@ -69,4 +69,13 @@ El plan recibido sumaba 18:45, no 18:00. El esquema curado deja 17:30 de conteni
 
 Se añadieron [S35](04_fuentes.md#s35) (NASA/GSFC, 24/10/2005) y [S36](04_fuentes.md#s36) (JPL Publication 12-20, diciembre de 2012 según portada), descargados con texto extraído. Total actualizado: **36 fuentes, 33 originales descargados y tres copias de lectura web**. Las dos fuentes nuevas son generales, no hardware específico de Voyager.
 
-Comprobación final: 36 archivos catalogados con SHA-256 coincidente, sin enlaces locales rotos, trece explicaciones para clase. Las notas orales suman aproximadamente 1511 palabras: 12,1 minutos a 125 palabras/minuto, dejando unos 5,4 minutos de contenido para señalar figuras, pausas y transiciones, más la media minuta de bibliografía. Es una estimación, no un ensayo cronometrado. Se revisaron visualmente las figuras nuevas; se corrigieron símbolos que la fuente tipográfica no representaba.
+Comprobación final: 36 archivos catalogados con SHA-256 coincidente, sin enlaces locales rotos, trece explicaciones para clase. Las notas orales revisadas suman aproximadamente 1478 palabras: 11.8 minutos a 125 palabras/minuto. El presupuesto restante contempla señalar figuras, pausas, transiciones y bibliografía. Es una estimación, no un ensayo cronometrado. Se revisaron visualmente las figuras nuevas; se corrigieron símbolos que la fuente tipográfica no representaba.
+
+
+## Revisión editorial y física del 14 de octubre
+
+Se integraron las explicaciones añadidas con las fichas iniciales, eliminando aproximadamente mil palabras de repeticiones antes de añadir ayudas de lectura. Se preservaron las trece familias, resultados de ensayos, explicaciones para clase y referencias. Se unificó el ejemplo de ganancia BJT a 100→50, sin mezclarlo con otro ejemplo 100→20.
+
+Se corrigió la temporización capacitiva: una fuga puede adelantar, retrasar o impedir un cruce según topología y sentido del umbral. Se retiró la expresión que identificaba los B11B ensayados como necesariamente de vuelo. Se añadió la distinción entre mecanismo posible y frecuencia de ocurrencia en el ambiente real. El guion utiliza resultados separados por barras, evitando flechas que parecían indicar evolución obligatoria de pulso a daño.
+
+Verificación posterior: enlaces locales y anclas de fuentes válidos; integridad SHA-256 de los 36 archivos conservada; trece familias y trece explicaciones para clase. No se agregaron fuentes ni se alteraron originales descargados.

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "galeria",
+    "url": "https://science.nasa.gov/gallery/images-of-voyager/",
+    "archivo": "galeria.html",
+    "sha256": "01356f11a14bf583414e471dbaa52409776562b0151b02bc728c4dd5357eace4",
+    "consulta": "2026-10-14"
+  },
+  {
+    "id": "integracion",
+    "url": "https://science.nasa.gov/image-detail/pia21736/",
+    "archivo": "integracion.html",
+    "sha256": "d066051c40fc1e1784c75da84cbd75dc5da6144b3cbf297e4e3529a281da007c",
+    "consulta": "2026-10-14"
+  },
+  {
+    "id": "portada",
+    "url": "https://science.nasa.gov/image-detail/spacecraft-profile-3/",
+    "archivo": "portada.html",
+    "sha256": "5b49127262bb8222709408dd9c2b4fce7913b6ecf797cd208bb7edca11fccb5a",
+    "consulta": "2026-10-14"
+  },
+  {
+    "id": "jupiter",
+    "url": "https://science.nasa.gov/photojournal/inner-radiation-belts-of-jupiter/",
+    "archivo": "jupiter.html",
+    "sha256": "98489c31043bb452dcaa46ac822be875d1ecf21b4d58bb05be623518ef50b429",
+    "consulta": "2026-10-14"
+  },
+  {
+    "id": "solar",
+    "url": "https://soho.nascom.nasa.gov/bestofsoho/Particle/cos003.html",
+    "archivo": "solar.html",
+    "sha256": "ea3dfb8f888d906ba1c738a68eaaa7dfbafaa5c05a71826999cd2e8f2905aba6",
+    "consulta": "2026-10-14"
+  },
+  {
+    "archivo": "integracion.jpg",
+    "url": "https://science.nasa.gov/wp-content/uploads/2024/04/pia21736.jpg",
+    "sha256": "f964b0eb404e9b32104b302cbd7edb99abcc3b51e7a0a598bc6972f97c798f9a",
+    "consulta": "2026-10-14"
+  },
+  {
+    "archivo": "portada.jpg",
+    "url": "https://science.nasa.gov/wp-content/uploads/2024/04/spacecraft-profile.jpg",
+    "sha256": "be5ecfb387c32cb921e5ae485a329dd16f790114491f50ea8b642f68f8541581",
+    "consulta": "2026-10-14"
+  },
+  {
+    "archivo": "jupiter.jpg",
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia03/pia03478/PIA03478.jpg",
+    "sha256": "51d0eeb00366a44ce89a05a363f02119df532d7f822b2a86c4306a145b29bdd9",
+    "consulta": "2026-10-14"
+  },
+  {
+    "archivo": "solar.jpg",
+    "url": "https://soho.nascom.nasa.gov/bestofsoho/Particle/large/cos003.jpg",
+    "sha256": "6c07b201c5af21abc77d4b1607fbacd62959446a6bad62bf95d328607b851801",
+    "consulta": "2026-10-14"
+  },
+  {
+    "id": "H01",
+    "archivo": "hamamatsu_fotodiodos.pdf",
+    "url": "https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/si_pd_kspd9001e.pdf",
+    "sha256": "901695725606e2a7ee68eef62a7c3ddc8bd8417f32ff3cbd4aa53971820f574e",
+    "consulta": "2026-10-14"
+  }
+]

@@ -4,6 +4,8 @@
 
 La pregunta conductora es **cómo la radiación altera señales y componentes, y cómo Voyager limita esos efectos y sus consecuencias**. Una perturbación no necesita destruir una pieza para afectar la función.
 
+[Imágenes descargadas y selección por diapositiva](imagenes_diapos/README.md): incluye créditos, límites y gráficos técnicos de respaldo.
+
 ## Orden y presupuesto de tiempo
 
 | Nº | Bloque | Tema | Duración | Acumulado |
@@ -21,7 +23,7 @@ La pregunta conductora es **cómo la radiación altera señales y componentes, y
 | 11 | III Ingeniería | Mitigaciones, evidencia y conclusión | 1:45 | 17:30 |
 | — | Cierre | Mostrar bibliografía y señalar material de respaldo | 0:30 | 18:00 |
 
-Se corrige la suma del plan recibido: sus once intervalos daban 18:45. Esta selección deja **18:00 de recorrido y 2:00 de margen**. La bibliografía puede mostrarse como lámina de consulta posterior, sin agregar explicación técnica. Si las preguntas cuentan dentro de veinte minutos, consumir ese margen y responder lo restante con el dossier.
+La selección deja **18:00 de recorrido y 2:00 de margen**. La bibliografía puede mostrarse como lámina de consulta posterior, sin agregar explicación técnica. Si las preguntas cuentan dentro de veinte minutos, consumir ese margen y responder lo restante con el dossier.
 
 Las notas siguientes son el relato seleccionado, no texto para copiar a la pantalla. Los tiempos incluyen señalar dibujos, explicar ejes y hacer pausas. La velocidad real debe comprobarse en un ensayo oral; un conteo de palabras solo aproxima su viabilidad.
 
@@ -39,7 +41,7 @@ Las notas siguientes son el relato seleccionado, no texto para copiar a la panta
 
 **Transición:** «Primero debemos separar las distintas radiaciones que encontraron».
 
-**Fuentes:** [S06](04_fuentes.md#s06)–07, [S21](04_fuentes.md#s21); dossier §§1 y 6.
+**Fuentes:** [S06](04_fuentes.md#s06), [S07](04_fuentes.md#s07), [S21](04_fuentes.md#s21); dossier §§1 y 6.
 
 ## 2 Qué llega al circuito
 
@@ -51,7 +53,7 @@ Las notas siguientes son el relato seleccionado, no texto para copiar a la panta
 
 **Notas orales:**
 
-«Los rayos cósmicos galácticos incluyen principalmente núcleos, como protones y helio, y llegan desde fuera del sistema solar. El Sol también produce episodios de partículas energéticas. Además, las magnetosferas planetarias pueden atrapar partículas, como ocurre en Júpiter. No son ambientes equivalentes. La energía ayuda a determinar cómo penetra e interactúa una partícula; el flujo indica cuántas llegan por área y tiempo. La fluencia acumula esa llegada durante un intervalo. La dosis mide energía depositada por masa en un material. Por eso no podemos tomar una cantidad de partículas y llamarla directamente dosis del chip: necesitamos saber qué deposita energía y dónde.»
+«Los rayos cósmicos galácticos incluyen principalmente núcleos, como protones y helio, y llegan desde fuera del sistema solar. El Sol también produce episodios de partículas energéticas. Además, las magnetosferas planetarias pueden atrapar partículas, como ocurre en Júpiter. La energía ayuda a determinar cómo penetra e interactúa una partícula; el flujo indica cuántas llegan por área y tiempo. La dosis mide energía depositada por masa en un material. Por eso no podemos tomar una cantidad de partículas y llamarla directamente dosis del chip: necesitamos saber qué deposita energía y dónde.»
 
 **Transición:** «Voyager pasó por más de uno de estos ambientes».
 
@@ -67,27 +69,27 @@ Las notas siguientes son el relato seleccionado, no texto para copiar a la panta
 
 **Notas orales:**
 
-«Ambas sondas pasaron por Júpiter y Saturno; Voyager 2 continuó a Urano y Neptuno. Hoy están fuera de la heliosfera. Para el diseño, los electrones de Júpiter eran una amenaza importante. Los informes establecieron exposiciones y requisitos de protección según la ubicación del equipo. Eso es diferente de afirmar cuánto recibió cada componente durante 49 años. Tenemos mediciones recientes de partículas de Voyager 2, pero son datos de un instrumento con una respuesta propia. Entre ese ambiente y un chip hay materiales, blindaje y geometría. Por eso vamos a usar los números de diseño como tales, sin presentarlos como una dosis actual medida de toda la nave.»
+«Ambas sondas pasaron por Júpiter y Saturno; Voyager 2 continuó a Urano y Neptuno. Hoy están fuera de la heliosfera. Para el diseño, los electrones de Júpiter eran una amenaza importante. Los informes establecieron exposiciones y requisitos de protección según la ubicación del equipo. Tenemos mediciones recientes de partículas de Voyager 2, pero son datos de un instrumento con una respuesta propia. Entre ese ambiente y un chip hay materiales, blindaje y geometría. Los requisitos de diseño no son una medición de la dosis acumulada durante toda la misión.»
 
 **Transición:** «Ahora veamos qué hay detrás de ese blindaje».
 
-**Fuentes:** [S01](04_fuentes.md#s01) tablas 2-1/3-1; [S06](04_fuentes.md#s06), [S18](04_fuentes.md#s18)–20, [S29](04_fuentes.md#s29), [S33](04_fuentes.md#s33). Distancias exactas fuera de la pantalla; fechas en dossier §1.3.
+**Fuentes:** [S01](04_fuentes.md#s01) tablas 2-1/3-1; [S06](04_fuentes.md#s06), [S18](04_fuentes.md#s18), [S19](04_fuentes.md#s19), [S20](04_fuentes.md#s20), [S29](04_fuentes.md#s29), [S33](04_fuentes.md#s33). Distancias exactas fuera de la pantalla; fechas en dossier §1.3.
 
 ## 4 El mapa del circuito y tres resultados
 
 **Mensaje central:** toda la cadena electrónica importa, y no todo efecto es permanente.
 
-**En pantalla:** seis grupos del mapa; una franja «Pulso → estado alterado → daño» con la aclaración «resultados posibles, no etapas obligatorias».
+**En pantalla:** seis grupos del mapa; una franja «Pulso / estado alterado / degradación»; tres resultados posibles, no etapas obligatorias.
 
 **Visual previsto:** mapa de familias, resaltando sucesivamente pasivos, semiconductores y conexiones. No presentarlo como plano de vuelo.
 
 **Notas orales:**
 
-«La nave combina alimentación, sensores, procesamiento y comunicaciones. En ellos encontramos resistencias, capacitores, dispositivos magnéticos, diodos, transistores, circuitos integrados y conexiones. No era simplemente toda TTL con una memoria CMOS: la documentación describe la evolución del FDS hacia procesador y memorias CMOS, además de numerosas funciones lógicas CMOS. Para cada componente preguntaremos qué cambia. Puede aparecer un pulso que termina solo; ese pulso puede dejar un dato u orden incorrectos; o pueden cambiar parámetros y quedar daño. Son resultados diferentes y no una secuencia inevitable.»
+«La nave combina alimentación, sensores, procesamiento y comunicaciones. En ellos encontramos resistencias, capacitores, dispositivos magnéticos, diodos, transistores, circuitos integrados y conexiones. La documentación describe un procesador y memorias CMOS en el sistema de datos, además de otras funciones lógicas CMOS. Para cada componente preguntaremos qué cambia. Puede aparecer un pulso que termina solo; ese pulso puede dejar un dato u orden incorrectos; o pueden cambiar parámetros y quedar daño. Son resultados diferentes y no una secuencia inevitable.»
 
 **Transición:** «Empezamos por dos componentes que parecen simples».
 
-**Fuentes:** [S01](04_fuentes.md#s01) §VI.B; [S03](04_fuentes.md#s03)–04; [S21](04_fuentes.md#s21)–22. Alcance de identificación: dossier §4.4.
+**Fuentes:** [S01](04_fuentes.md#s01) §VI.B; [S03](04_fuentes.md#s03), [S04](04_fuentes.md#s04); [S21](04_fuentes.md#s21), [S22](04_fuentes.md#s22). Alcance de identificación: dossier §4.4.
 
 ## 5 Resistencias y capacitores también participan
 
@@ -101,7 +103,7 @@ Las notas siguientes son el relato seleccionado, no texto para copiar a la panta
 
 «En una resistencia importa su valor, pero también el aislamiento que la rodea. Una corriente no deseada puede crear una tensión considerable en una entrada de alta resistencia. En el instrumento PWS se consideró una corriente de carga de antena de cuatro microamperios y una resistencia de veinte megaohmios a masa: el producto da ochenta voltios. Esa resistencia ayuda a evacuar carga. Es un caso documentado, no una afirmación sobre cada resistencia de la nave.
 
-En el capacitor, los electrodos almacenan cargas opuestas y el dieléctrico limita la corriente entre ellos. La radiación puede generar portadores en ese aislante y hacer que conduzca más durante la exposición. Entonces crece la fuga. El capacitor puede perder carga y disparar un temporizador antes de tiempo, incluso si después se recupera el aislamiento. Si solo medimos capacitancia, podemos pasar por alto ese problema.
+En el capacitor, los electrodos almacenan cargas opuestas y el dieléctrico limita la corriente entre ellos. La radiación puede generar portadores en ese aislante y hacer que conduzca más durante la exposición. Entonces crece la fuga. El capacitor puede perder carga y alterar un tiempo, incluso si después se recupera el aislamiento. El disparo puede adelantarse o retrasarse según cómo funcione ese temporizador. Si solo medimos capacitancia, podemos pasar por alto ese problema.
 
 El programa Voyager ensayó capacitores de teflón con cambios pequeños de capacitancia. Eso es evidencia favorable para ese parámetro y esas condiciones; no demuestra ausencia de todos los efectos. La mitigación exige elegir material, verificar aislamiento y comprobar que el circuito funcione con los parámetros previstos. Un capacitor usado como filtro tampoco elimina cualquier perturbación.»
 
@@ -129,7 +131,7 @@ Un bipolar también puede entregar un pulso espurio sin haber perdido ganancia p
 
 **Transición:** «En MOS, el aislante de compuerta agrega otro mecanismo».
 
-**Fuentes:** [S01](04_fuentes.md#s01) §VII.B, figuras 7-1/7-2; [S21](04_fuentes.md#s21); [S35](04_fuentes.md#s35)–36. Dossier §§3.4–3.5. No explicar diagramas de bandas durante el relato principal.
+**Fuentes:** [S01](04_fuentes.md#s01) §VII.B, figuras 7-1/7-2; [S21](04_fuentes.md#s21); [S35](04_fuentes.md#s35), [S36](04_fuentes.md#s36). Dossier §§3.4–3.5. No explicar diagramas de bandas durante el relato principal.
 
 ## 7 MOS y circuitos: el campo cambia o aparece un pulso
 
@@ -137,19 +139,19 @@ Un bipolar también puede entregar un pulso espurio sin haber perdido ganancia p
 
 **En pantalla:** «Carga atrapada: cambia el control» / «Carga recogida: aparece un pulso» / «Pulso capturado: cambia un estado».
 
-**Visual previsto:** corte conceptual compuerta–óxido–semiconductor y curva MOS original [S01](04_fuentes.md#s01) figura 6-1. Señalar solo eje de tensión, eje de corriente y desplazamiento; indicar escala logarítmica. No extraer números finos del escaneo.
+**Visual previsto:** corte conceptual compuerta–óxido–semiconductor y panel NMOS de la figura 6-1 de [S01](04_fuentes.md#s01), conservando ejes y condiciones. El panel PMOS queda como respaldo. Señalar solo eje de tensión, eje de corriente y desplazamiento; indicar escala logarítmica. No extraer números finos del escaneo.
 
 **Notas orales:**
 
 «En un transistor MOS, la compuerta controla la conducción mediante un campo eléctrico a través de un aislante. La radiación puede generar carga en ese óxido. Parte se recombina o sale, pero otra puede quedar atrapada. Esa carga también genera campo: cambia la tensión de compuerta necesaria para obtener la misma conducción. Los defectos en la interfaz aportan otros cambios, por lo que no todos los dispositivos responden igual.
 
-En este gráfico del programa Voyager vemos corriente frente a tensión de compuerta antes y después de irradiar. Las curvas se desplazan. Para el circuito eso puede significar menos margen de encendido y apagado o más consumo. El programa modificó un paso de fabricación de la familia CMOS RCA para mejorar su comportamiento. No significa que el dispositivo se hiciera inmune.
+En este gráfico del programa Voyager vemos corriente frente a tensión de compuerta antes y después de irradiar. La característica NMOS se desplaza: para una misma corriente cambia la tensión de compuerta. Para el circuito eso puede significar menos margen de encendido y apagado o más consumo. El programa modificó un paso de fabricación de la familia CMOS RCA para mejorar su comportamiento. No significa que el dispositivo se hiciera inmune.
 
 Por otro camino, la carga generada en el semiconductor puede perturbar un nodo por un instante. Un amplificador puede entregar un pulso falso; un comparador puede cambiar su salida; una memoria puede conservar el estado equivocado después de que el pulso desapareció. No todo pulso llega a alterar un estado: importa su amplitud, duración y cuándo lo recibe el siguiente bloque. El filtrado o la comprobación de estados pueden ayudar en una aplicación, pero deben verificarse y no reparan por sí solos un dispositivo dañado.»
 
 **Transición:** «La perturbación tampoco se queda obligatoriamente dentro del integrado».
 
-**Fuentes:** [S01](04_fuentes.md#s01) §VI.B y figura 6-1; [S22](04_fuentes.md#s22)–23; [S35](04_fuentes.md#s35). Mitigaciones generales identificadas como tales.
+**Fuentes:** [S01](04_fuentes.md#s01) §VI.B y figura 6-1; [S22](04_fuentes.md#s22), [S23](04_fuentes.md#s23); [S35](04_fuentes.md#s35). Mitigaciones generales identificadas como tales.
 
 ## 8 Aislantes y conexiones: por dónde viaja el efecto
 
@@ -163,7 +165,7 @@ Por otro camino, la carga generada en el semiconductor puede perturbar un nodo p
 
 «Las placas y los bobinados tienen materiales aislantes. Pueden acumular carga o conducir más; según las condiciones, una descarga puede inyectar un pulso en una conexión. La pista puede estar sana y conducir ese pulso hasta otra entrada. Importan los retornos y la conexión entre partes, además de proteger cada chip.
 
-En un transformador debemos separar el núcleo, el bobinado y su aislamiento. No tenemos evidencia para atribuir una desmagnetización radiativa a los núcleos de Voyager. También puede pasar que el transistor de mando entregue un pulso incorrecto a un magnético sano. Algo similar ocurre con un relé: si recibe una orden equivocada suficientemente larga, puede conectar una carga aunque no esté dañado.
+En un transformador debemos separar el núcleo, el bobinado y su aislamiento. También puede pasar que el transistor de mando entregue un pulso incorrecto a un magnético sano. Algo similar ocurre con un relé: si recibe una orden equivocada suficientemente larga, puede conectar una carga aunque no esté dañado.
 
 Esta explicación general se basa en manuales NASA. Cuando no conocemos el material o modelo de vuelo lo dejamos explícito; tampoco confundimos una soldadura fatigada con daño por radiación.»
 
@@ -223,7 +225,13 @@ La conclusión es que la radiación puede alterar señales y parámetros. El dis
 
 **Transición al respaldo:** «Las fuentes originales y las explicaciones más profundas quedan disponibles en el dossier».
 
-**Fuentes:** [S01](04_fuentes.md#s01)–04, [S07](04_fuentes.md#s07), [S09](04_fuentes.md#s09)–16. Presentar estado de instrumentos solo con fecha de corte si surge la pregunta.
+**Fuentes:** [S01](04_fuentes.md#s01), [S02](04_fuentes.md#s02), [S03](04_fuentes.md#s03), [S04](04_fuentes.md#s04), [S07](04_fuentes.md#s07), [S09](04_fuentes.md#s09), [S10](04_fuentes.md#s10), [S11](04_fuentes.md#s11), [S12](04_fuentes.md#s12), [S13](04_fuentes.md#s13), [S14](04_fuentes.md#s14), [S15](04_fuentes.md#s15), [S16](04_fuentes.md#s16). Presentar estado de instrumentos solo con fecha de corte si surge la pregunta.
+
+## Qué conviene dominar antes de exponer
+
+Poder explicar con palabras propias tres cadenas: **unión → carga recogida → pulso**, **recombinación → más corriente de base para la misma salida → menor ganancia**, y **carga en óxido → campo modificado → cambio del umbral**. Para los pasivos, distinguir valor nominal de aislamiento y mostrar el ejemplo del capacitor. Si una curva exige un concepto que todavía no se domina, usar el esquema conceptual y conservar la curva como respaldo.
+
+En cada caso se presenta un mecanismo posible, no su frecuencia demostrada en Voyager. Distinguir al introducir cada ejemplo si corresponde a vuelo, a un ensayo del programa o a un circuito conceptual.
 
 ## Material de respaldo y límites de la selección
 

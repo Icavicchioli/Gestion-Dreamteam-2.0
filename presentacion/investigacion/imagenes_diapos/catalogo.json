@@ -1,0 +1,62 @@
+[
+  {
+    "archivo": "01_instrumentos.jpg",
+    "url": "https://www.nasa.gov/wp-content/uploads/2022/09/voyager_1_5_instruments.jpg",
+    "consulta": "2026-10-14",
+    "sha256": "710f6f6cfe2665315060e56931d477ded36cc23624938f355c976c4a309326c6",
+    "dimensiones_px": [
+      640,
+      482
+    ],
+    "fuente": "S37",
+    "credito": "NASA; reproducción publicada en S37, sin crédito individual en el pie"
+  },
+  {
+    "archivo": "02_trayectorias.png",
+    "url": "https://www.nasa.gov/wp-content/uploads/2022/09/voyager_1_6_trajectories_lightened.png",
+    "consulta": "2026-10-14",
+    "sha256": "331de2e25ce29c632b11b3e470a5b7d4b9cdd1d765dc551a85e4ccc5fb7eed32",
+    "dimensiones_px": [
+      850,
+      710
+    ],
+    "fuente": "S37",
+    "credito": "NASA; reproducción publicada en S37, sin crédito individual en el pie"
+  },
+  {
+    "archivo": "03_heliosfera.jpg",
+    "url": "https://www.nasa.gov/wp-content/uploads/2022/09/voyager_1_14_interstellar_mission.jpg",
+    "consulta": "2026-10-14",
+    "sha256": "b0b293c80283e9bcc9635b672bd09a1e95576c8c64a965a4664ee90b6154410e",
+    "dimensiones_px": [
+      985,
+      584
+    ],
+    "fuente": "S37",
+    "credito": "NASA; reproducción publicada en S37, sin crédito individual en el pie"
+  },
+  {
+    "archivo": "04_lanzamiento.jpg",
+    "url": "https://www.nasa.gov/wp-content/uploads/2022/09/voyager_1_4_launch.jpg",
+    "consulta": "2026-10-14",
+    "sha256": "98f6b1ac00c42bcb2925617e98a058fec8fb69399509a029b398b9ec572ec9f6",
+    "dimensiones_px": [
+      703,
+      994
+    ],
+    "fuente": "S37",
+    "credito": "NASA; reproducción publicada en S37, sin crédito individual en el pie"
+  },
+  {
+    "archivo": "05_pws_bloques.gif",
+    "url": "https://pds.nasa.gov/data/vg1-j-spice-6-spk-v2.0/vg_1501/document/pws/fig7.gif",
+    "consulta": "2026-10-14",
+    "sha256": "7108dedd84d34c72b2a6142cb5ee2e8065ef635eb31a240b4dff340b0ad8dd56",
+    "dimensiones_px": [
+      709,
+      430
+    ],
+    "fuente": "S08",
+    "credito": "Scarf y Gurnett (1977), figura 7; reproducción NASA PDS"
+  }
+]

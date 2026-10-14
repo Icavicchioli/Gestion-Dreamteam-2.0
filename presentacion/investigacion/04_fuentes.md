@@ -360,3 +360,9 @@ Las páginas son reproducciones renderizadas de los PDF NASA/JPL, sin reconstrui
 - [S36, PDF 25](figuras/S36_corrientes_p025.png), p. 17, figuras 24–27: estructuras y componentes de corriente de base; gráfico de IC e IB frente a VBE. Apoya la explicación microscópica, no identifica geometrías Voyager.
 - [Mecanismos conceptuales](figuras/02_mecanismos_conceptuales.png): esquema propio de colección en unión, carga en óxido y capacitor con fuga, fundamentado en S21–25/S35. Sin escala ni parámetros de vuelo.
 - [Pulso y estado](figuras/03_pulso_y_estado.png): esquema propio de propagación y captura; fundamentado en S22/S35. La captura es un supuesto indicado, no el resultado inevitable de cualquier pulso.
+
+<a id="s37"></a>
+
+## S37 — Historia e imágenes de Voyager 1
+
+NASA, 7 de septiembre de 2022. [Original](https://www.nasa.gov/history/45-years-ago-voyager-1-begins-its-epic-journey-to-the-outer-planets-and-beyond/) · [Copia local](../citas/S37_historia_imagenes_2022.html) · [Texto](../citas/S37_historia_imagenes_2022.txt). Historia, trayectorias y pies de imágenes; sus previsiones operativas de 2022 no representan el estado actual. [Selección visual y créditos](imagenes_diapos/README.md).

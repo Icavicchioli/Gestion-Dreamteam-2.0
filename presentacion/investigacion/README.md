@@ -26,3 +26,5 @@ Esquema conceptual propio para organizar la investigación. No representa un cir
 [`../citas/`](../citas/README.md) contiene las fuentes originales descargadas y copias de texto con numeración PDF o contenido HTML. El texto automático puede confundir µ con p o exponentes; los valores utilizados de las tablas principales se cotejaron visualmente con el PDF.
 
 `figuras/` contiene el mapa original y páginas técnicas de respaldo. `scripts/` contiene la descarga de fuentes y la generación del mapa y sus índices. Las referencias web se consultaron el 14 de octubre de 2026; la fecha de publicación o medición se especifica por separado.
+
+[Revisión histórica y de fuentes](06_revision_historica.md) · [Imágenes seleccionadas para las diapositivas](imagenes_diapos/README.md).

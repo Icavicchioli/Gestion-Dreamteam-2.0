@@ -46,3 +46,5 @@ Los HTML son copias del documento, no sitios completos sin conexión: imágenes,
 | S36 | Hydrogen Contamination and Its Correlation with Enhanced Low-Dose-Rate Sensitivity | [Abrir](S36_bipolares_recombinacion.pdf) | [Texto](S36_bipolares_recombinacion.txt) |
 
 [Catálogo con fechas y huellas de integridad](catalogo.json).
+
+- **S37** — NASA, historia de Voyager 1 (07/09/2022): [HTML](S37_historia_imagenes_2022.html), [texto](S37_historia_imagenes_2022.txt). Procedencia de las nuevas imágenes; no usar sus previsiones como estado actual.

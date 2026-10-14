@@ -430,5 +430,16 @@
     "consulta": "2026-10-14",
     "paginas_pdf": 70,
     "nota": "Portada JPL Publication 12-20, 12/12; no inferir fecha a partir del nombre del archivo."
+  },
+  {
+    "id": "S37",
+    "titulo": "45 Years Ago: Voyager 1 Begins its Epic Journey to the Outer Planets and Beyond",
+    "fecha": "2022-09-07",
+    "url": "https://www.nasa.gov/history/45-years-ago-voyager-1-begins-its-epic-journey-to-the-outer-planets-and-beyond/",
+    "archivo": "S37_historia_imagenes_2022.html",
+    "consulta": "2026-10-14",
+    "sha256": "1d18ba3c91a18e495f00c23759a73cfa0d3282034e68d29032ac5569a3121f16",
+    "bytes": 277769,
+    "estado": "descargado"
   }
 ]
