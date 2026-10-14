@@ -1,0 +1,3546 @@
+
+--- PAGINA PDF 1 ---
+ 
+National Aeronautics and Space Administration 
+ 
+ 
+ 
+ 
+Hydrogen Contamination and Its Correlation 
+with Enhanced Low-Dose-Rate Sensitivity 
+ 
+NASA Electronic Parts and Packaging (NEPP) Program 
+Office of Safety and Mission Assurance 
+ 
+ 
+Philippe Adell 
+Jet Propulsion Laboratory 
+Pasadena, California 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Jet Propulsion Laboratory 
+California Institute of Technology 
+Pasadena, California 
+ 
+JPL Publication 12-20 12/12 
+ 
+
+
+--- PAGINA PDF 2 ---
+i 
+ 
+National Aeronautics and Space Administration 
+ 
+ 
+ 
+ 
+Hydrogen Contamination and Its Correlation 
+with Enhanced Low-Dose-Rate Sensitivity  
+ 
+NASA Electronic Parts and Packaging (NEPP) Program 
+Office of Safety and Mission Assurance 
+ 
+ 
+Philippe Adell 
+Jet Propulsion Laboratory 
+Pasadena, California  
+ 
+ 
+ 
+ 
+ 
+ 
+NASA WBS: 724297.40.49.11 
+JPL Project Number: 104593 
+Task Number: 40.49.03.05 
+ 
+ 
+Jet Propulsion Laboratory 
+4800 Oak Grove Drive 
+Pasadena, CA 91109 
+ 
+http://nepp.nasa.gov 
+ 
+
+
+--- PAGINA PDF 3 ---
+ii 
+This research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, and was 
+sponsored by the National Aeronautics and Space Administration Electronic Parts and Packaging (NEPP) 
+Program.  
+ 
+Reference herein to any specific com mercial product, process, or service by trade name, trademark, 
+manufacturer, or otherwise, does not constitute or imply its endorsement by the United States Government 
+or the Jet Propulsion Laboratory, California Institute of Technology. 
+ 
+©2012. California Institute of Technology. Government sponsorship acknowledged. 
+ 
+
+--- PAGINA PDF 4 ---
+ 
+iii 
+ABSTRACT 
+ 
+Enhanced low-dose-rate sensitivity (ELDRS) investigations carried out by the Jet Propulsion 
+Laboratory (JPL) and Arizona State University (ASU) have shown significant differences in the 
+degradation of bipolar microcircuits with total dose in the presence of molecular hydrogen (H 2) 
+in packages. This has a significant impact on radiation hardness assurance and  provides 
+opportunities to improve device performance.  
+The general objectives of this program were to:  
+1. determine the extent to which hydrogen contamination affects the total dose and dose rate 
+response of linear bipolar circuits;  
+2. develop a model that will enable the prediction of high dose rate (HDR) and low dose 
+rate (LDR) response asymptotes and transition dose rates as a function of total dose, 
+temperature, pressurized hydrogen, defect precursors, and other process-dependent 
+variables;  
+3. explore the possibility of an accelerated hardness assurance method and possible 
+hardening approaches; and  
+4. extend the work to other technologies that have total dose response affected by hydrogen 
+contamination.  
+This document summarize s the findings obtained from experimental and modeling studies done 
+on bipolar technologies from FY07–FY12.  
+ 
+
+--- PAGINA PDF 5 ---
+iv 
+SUMMARY OF THE HYDROGEN EFFORT 
+ 
+Molecular hydrogen (H 2) is ubiquitous in today’s semiconductor integrated circuit (IC) 
+fabrication and packaging processes [1]. During IC fabrication, H2 is present in wafer cleaning 
+procedures, film depositions, etches, high - and low -temperature anneals , and an assortment of 
+other processes. During IC packaging, it is introduced during die attach ment and by forming 
+gases during packaging processes [2]. H 2 can outgas from grain boundaries or structural 
+imperfections in iron -nickel alloy (kovar, Alloy42) lead frame material. Electroplated metal 
+components such as plated gold or nickel films are major sources of dissolved hydrogen. 
+Moisture is often present a nd results from the absorption or adsorption of H 2O on the internal 
+surfaces of the package prior to sealing or from moisture within the sealing gas itself.  
+Solutions to hydrogen contamination have been reported and include thermal treatment, the use 
+of package materials with low hydrogen absorption, a change of barrier materials in gates, and 
+the use of hydrogen getters inside the packaging to absorb the hydrogen. However, there is no 
+clear guideline or limit as to what level of hydrogen might be consider ed acceptable in sealed 
+packages. The military standard test method for internal gas analysis, MIL -STD-883 Test 
+Method 1018, was designed to look for moisture and not hydrogen or other gas impurities. There 
+is no specification limit available for H 2. This lack of specification introduces another unknown 
+when dealing with the radiation response of commercial linear bipolar devices. As shown in this 
+document, the devices’ total ionizing dose (TID) response and sensitivity to enhanced low -dose-
+rate sensitivity (ELDRS) are affected.  
+In FY07, we reported on the impact of hydrogen contamination on the total dose response of 
+linear circuits. A general investigation was performed on a selection of key parts from different 
+manufacturers that both exhibit ELDRS as we ll as differences in the total dose degradation with 
+bias conditions and dose rates. Residual gas analyses (RGAs) and die passivation analyses were 
+performed on these devices.  The results of this study clearly indicated that there is a 
+correlation between packaging characteristics and hydrogen content . They suggested that by 
+only looking at the package characteristics (ceramic packag ing with or without gold plating  and 
+with or without kovar lids, can packag ing, passivation layers, etc.), it is possible to e valuate 
+which category of device is likely to have a non -negligible amount (~0.5–4%) of hydrogen  in 
+the package and consequently might be sensitive to total -dose and low -dose-rate (LDR) 
+enhancement. We showed that 1) devices in can packages exhibit low am ounts of hydrogen; 2) 
+ceramic frit glass devices show negligible amounts of hydrogen; 3) parts that also have a nitride 
+passivation layer do not show a significant quantity of hydrogen  (though there is not necessarily 
+a correlation here); and 4) nitride-coated devices exhibit both cases of ELDRS and non -ELDRS. 
+While silicon nitride is a very good barrier to hydrogen diffusion, the deposition processes are 
+known to introduce hydrogen into device passivation layers. Thus, we believe it is critical to 
+investigate the mechanisms of hydrogen absorption/desorption in nitride passivations. In 
+addition, two parts, the HSYE -117RH linear voltage regulator from Intersil and the AD590 
+temperature transducer from Analog Devices, were identified as showing a significant a mount of 
+hydrogen (~0.6 –3%) in their package s. Further experiments were conducted to identify the 
+relationship between hydrogen content and total dose response . Twelve screened space -
+qualified AD590s were irradiated at both high dose rate (HDR) and LDR unbiased with all leads 
+grounded. Three flat packs (with 0.4 –1% H2) and three cans (~0% H 2) were irradiated up to 30 
+krad(Si) with a LDR of 0.01 rad(Si)/s. Three flatpacks and three cans were irradiated up to 100 
+krad(Si) with an HDR of 25 rad(Si)/s. In addition, two parts of the HYSE-117RH (~3% H2) from 
+the same wafer lot were irradiated unbiased at a dose rate of 0.05 rad(Si)/s. One part was opened 
+for more than a week to release the hydrogen content. The results led to the following 
+
+--- PAGINA PDF 6 ---
+v 
+conclusions: 1) flat pac k devices degrade much more at both HDR and LDR  compared to the 
+cans due to hydrogen contamination; 2) devices in the HDR and LDR case degrade more as the 
+amount of hydrogen content increases; 3) can devices can be made to degrade similarly to the 
+flat pack when the die is exposed to H 2; 4) the devices in the HDR and LDR case degrade more 
+as the amount of hydrogen content increases; and 5) parts that have an oxide passivation are 
+more affected by H 2 in packages. The results clearly confirmed the correlation  between total 
+dose response, packaging, and hydrogen contamination . For the HSYE -117 case, the same 
+trends were observed but more experiments were needed with more devices to confirm. During 
+FY09, an evaluation of 12 additional devices in three different packages (i.e., with different 
+concentrations of H2) was performed to compare the HDR and LDR behavior. Results, presented 
+in this document, show the same impact of hydrogen on the total dose response. In order to 
+explain the underlying mechanisms that relate to the role of hydrogen contamination in the total 
+dose response of linear bipolar microcircuits, additional work was performed at Arizona State 
+University. A combination of modeling and experiments were conducted on gated -lateral PNP 
+(GLPNP) devices f abricated at National Semiconductor. These devices were specifically 
+designed to study ELDRS. Experimental results showed a monotonic increase in radiation -
+induced interface traps as well as oxide -trapped charge with increasing molecular hydrogen 
+concentration in the ambient during irradiations. Using chemical kinetics and previously 
+developed models for interface trap formation, a first -order model was proposed to describe the 
+relationship between interface trap formation and excess molecular hydrogen conc entration in 
+gas ambient during radiation exposure. This model provided an excellent fit to the data obtained 
+from the experiments.  
+In FY08, we focused our effort s on providing a better understanding of how hydrogen impacts 
+the total dose and dose rate response of linear bipolar circuits and its correlation with ELDRS. 
+Because hydrogen is a dominant factor in determining both the total dose and dose rate responses 
+of linear bipolar circuits, we conducted experiments on both transistor structures and linear  
+circuits to measure their response as a function of the externally introduced hydrogen 
+concentration. The results of these experiments showed that the amount of hydrogen does two 
+things: 1) it increases the degradation at LDR, and 2) it increases the dose  rates region where the 
+transition from HDR to LDR enhancement occurs. The mechanisms for these trends were 
+explored with a code that incorporates the basic drift -diffusion as well as kinetic processes for 
+hydrogen cracking and free electron -hole recombina tion. The results from this model also 
+indicate saturation at LDR. However, further experiments at a lower dose rate were suggested to 
+completely validate the results. The following are the main conclusions drawn from the FY08 
+study: 
+1. Bipolar linear circuit s should be processed and packaged with a minimum amount of 
+hydrogen to achieve reasonable total dose hardness and minimize ELDRS. If the amount 
+of hydrogen introduced during processing through metallization ensures an acceptable 
+response, then the post -metal processes should be designed to minimize any further  
+introduction of hydrogen. 
+2. If the amount of hydrogen —both initially in the base oxide and in the introduction after 
+metallization—is low, then the transition to ELDRS may occur at a very low dose rate . 
+Hence, some parts that have only been tested at dose rates as low as 10 mrad(Si)/s may 
+show enhanced degradation when taken to even lower dose rates. If this is the case, it 
+would have severe implications for MIL -STD-883, Test Method 1019. Experiments 
+conducted by NASA Goddard Space Flight Center are underway to explore this 
+possibility and results are available upon request.  
+
+--- PAGINA PDF 7 ---
+vi 
+3. An accelerated hardness assurance test method was suggested by testing parts at HDR 
+(100 rad(Si)/s) in a 100% H 2 atmosphere to set  an upper bound to the LDR response in 
+space [3]. The technique is to irradiate parts with package lids removed in a glass tube 
+pressurized with high concentration of H 2 (10–100%). Parts with nitride layers will 
+prevent any penetration of externally applie d hydrogen. To use this approach for such 
+parts, the nitride layer has to be removed. This approach has only been demonstrated on a 
+GLPNP test transistor and one circuit type. As a result, in FY10, the proposed method of 
+accelerated testing using HDR irrad iations in environments with elevated concentrations 
+of H2 was tested on six different part types representing a wide variation in manufacturer, 
+process technology, and circuit design (GLPNP, LM193, AD590, LT1019, OP -42, and 
+HSYE-117). In all cases, results were very promising. Such a technique may have a large 
+beneficial impact on radiation hardness assurance for bipolar linear technologies. 
+Compared to LDR testing, hydrogen -enhanced testing at HDRs can be a very cost -
+effective approach for part selection during the design phase of space systems. It also 
+may be considered for missions that require higher dose levels for qualification where 
+LDR testing is not practical. For use as a qualification or lot acceptance test method, a 
+characterization test would n eed to be performed to establish the optimum dose rate and 
+H2 concentration to bound the LDR response. 
+In FY11, further experiments were required to consolidate the method proposed particularly for 
+non-ELDRS parts. This report evaluates if the method is too conservative for radiation-hardened, 
+ELDRS-free parts and discusses radiation hardness implications. Experiments performed on a 
+number of bipolar linear circuits delidded the parts and exposed the dies to molecular hydrogen 
+at various concentrations from  1% to 100% H 2, prior to irradiation. The total dose response of 
+these parts was compared to the HDR and LDR response of the packaged samples not exposed to 
+H2. The results, in all cases, were that the degradation was significantly higher for the parts 
+subjected to H 2, even at 1%. The increased degradation ranged from a few percent to over two 
+orders of magnitude. While the use of H 2 exposure followed by medium - to high -dose-rate 
+irradiation, as an accelerated test for ELDRS -free parts, is shown to be overl y conservative, the 
+results demonstrate that the radiation hardness of the parts will be compromised if the parts are 
+purchased in die form and p laced in a package that contains even small amounts of H 2. This 
+would be the case for hybrids, dies assembled by third-party packaging companies, or other non-
+manufacturer packaging options. 
+Finally, to support the experimental observations, we developed a theoretical model that 
+describes the physical mechanisms contributing to the buildup of radiation -induced defects in a  
+metal-oxide-semiconductor ( MOS) system. The presented model helps in understanding the 
+underlying mechanisms that describe the impact of dose rate effects. The model incorporates 
+hole-trapping mechanisms as well as the formation of interface trap s due to the release of 
+hydrogen as described by the two -stage hydrogen radiolysis model [7]. Therefore, the effects of 
+on the dose-rate response are captured by the model. Calculations suggest that dose-rate response 
+and ELDRS can depend on the combined e ffect of space charge from trapped holes near the 
+interface and bimolecular recombination. Transient calculations also show that the reaction of 
+cracking at positively charged defects is important in modeling the effects of hydrogen on dose -
+rate sensitivit y. Results from calculations using this model for dose rate and hydrogen effects  
+have shown to be consistent with experimental data. 
+
+--- PAGINA PDF 8 ---
+vii 
+TABLE OF CONTENTS 
+ 
+1.0 Introduction ........................................................................................................................................................... 1 
+2.0 Overview of Total Ionizing Dose and Damage Processes in SiO2 ........................................................................ 2 
+2.1.1 Total Dose Induced Oxide-Trapped Charge and Interface Trap Formation in SiO2 .......................... 4 
+2.1.2 Interface Traps .................................................................................................................................. 5 
+2.2 Annealing of Oxide Traps and Interface Traps ............................................................................................. 6 
+3.0 Total Ionizing Dose (TID) Effects in MOS and Bipolar Technologies .................................................................... 8 
+3.1 Total Ionizing Dose (TID) Effects in Metal-Oxide-Semiconductor (MOS) Devices ....................................... 8 
+3.1.1 Radiation Damage in Isolation Oxides ............................................................................................ 10 
+3.1.2 Time-Dependent Effects and Annealing .......................................................................................... 14 
+3.2 Total Ionizing Dose (TID) Effects in Bipolar Devices .................................................................................. 15 
+3.2.1 Bipolar Junction Transistors Structures ........................................................................................... 16 
+3.2.2 Circuit Effects .................................................................................................................................. 20 
+3.2.3 ELDRS in Bipolar Technology ......................................................................................................... 22 
+4.0 Impact of Hydrogen Contamination on TID response of MOS structures ........................................................... 28 
+4.1 Experiments Showing the Correlation between Hydrogen, Packaging, and Dose Rates ........................... 28 
+4.1.1 LM193 ............................................................................................................................................. 31 
+4.1.2 HSYE-117RH Linear Regulator ....................................................................................................... 32 
+4.1.3 Experimental Results—GLPNPs ..................................................................................................... 33 
+5.0 Modeling ............................................................................................................................................................. 36 
+5.1 1-D Model Description ................................................................................................................................ 36 
+5.1.1 Dose Rate Effects............................................................................................................................ 37 
+5.1.2 Hydrogen Effects ............................................................................................................................. 38 
+5.1.3 Calculations and Discussions .......................................................................................................... 39 
+5.1.4 Discussion and Conclusions ............................................................................................................ 43 
+6.0 Irradiation in an Hydrogenated Environment as an Accelerated Testing Technique ........................................... 45 
+6.1 Introduction ................................................................................................................................................ 45 
+6.2 Accelerated Testing Validation ................................................................................................................... 46 
+6.2.1 ELDRS Parts ................................................................................................................................... 46 
+6.2.2 ELDRS-Free Parts........................................................................................................................... 49 
+6.2.3 Conclusion ....................................................................................................................................... 54 
+
+--- PAGINA PDF 9 ---
+1 
+1.0 INTRODUCTION 
+Organizations or space agencies involved in building spacecraft have to guarantee the 
+survivability of electronics in order to fly missions successfully. With the various types of 
+missions that exist for space exploration, such as deep space, Earth orbit, and outer planets, the 
+risk assessment of electronics is an involved process. Each spacecraft uses a very large number 
+of components, from basic transistor structures to hybrid implementations, which need to be 
+evaluated and selected according to the design functions criteria. This assessment depends on the 
+requirements of the mission (i.e., the characteristics of the orbit, the duration of the mission, the 
+amount of shielding, and the radiation environment).  
+This document focuses on providing a set of rec ommendations to engineers and scientists on 
+how to address the issue of hydrogen contamination through the involved process of total dose 
+evaluation within a radiation hardness assurance flow. Th ese recommendations are supported by 
+many experimental data o btained from irradiation performed on various device types and 
+thorough modeling work that captures the key reactions, including hydrogen reactions, that 
+participate in the physical mechanisms of total dose degradation.  
+The document first covers the basic  understanding about the physics of total dose degradation 
+mechanisms in silicon dioxide (SiO 2)-based electronics. Section 2 introduces the mechanisms of 
+creation of defects in SiO 2 induced by total ionizing dose  (TID) (i.e., interface traps [ Nit] and 
+oxide traps [ Not]). Section 3 then demonstrates how these defects affect the electrical properties 
+of the most common SiO 2-based devices (i.e., complementary metal -oxide semiconductor 
+[CMOS] and bipolar) that are used in integrated circuits (ICs) to design  space systems. Many 
+details are provided, particularly, about the influence of time -dependent biases and annealing 
+effects, and how these challenge current total dose evaluation practices for old and emerging 
+technologies.  
+Section 4 presents results obta ined from in -situ hydrogen -soaking irradiations performed on 
+transistor test  structures and various circuit types from different manufacturers. These results 
+help quantify the impact of hydrogen contamination of the total dose and dose rate response of 
+microcircuits. This experimental work is supported by a theoretical model , described in Section 
+5, that has been developed to describe the physical mechanisms contributing to the buildup of 
+radiation-induced defects in a metal-oxide-semiconductor (MOS) system. This model shows the 
+key reactions that capture the role of H2 and its correlation with ELDRS. A good correlation with 
+experimental data is shown.  
+Section 6 summarizes the results of additional experimental studies that investigated the extent to 
+which molecular H2 can be used to accelerate the degradation induced by higher -rate laboratory 
+sources in order to bound or perhaps predict the low dose rate (LDR) responses of linear bipolar 
+circuits. Results from experiments performed on ELDRS -sensitive and EL DRS-free parts are 
+summarized. The radiation hardness assurance implications as well as the limitations of the 
+testing method are discussed.  
+The end of each section  provides a summary of key findings and a set of recommendations on 
+how to account for the issue of hydrogen contamination within a radiation hardness assurance 
+flow.  
+
+--- PAGINA PDF 10 ---
+2 
+2.0  OVERVIEW OF TOTAL IONIZING DOSE AND DAMAGE PROCESSES IN SIO2  
+Ionization of a target material is caused by the interaction of high -energy photons or charged 
+particles (mainly protons and electrons) with the atoms of that material [1]. Photon interactions 
+are not a primary concern for satellites in the natural space environment. However, they are for 
+TID evaluations since most laboratory sources used to simulate total -dose space environments 
+emit either low-energy x-rays or high-energy gamma rays.  
+Photons interact with material through three different processes, namely the photoelectric effect, 
+the Compton Effect, and pair production [ 2] as illustrated in Figure 1. For each of these 
+processes, the primary result of the interaction is the creation of energetic secondary electrons. 
+The relative importance of the three processes as a function of photon energy and atomic mass of 
+the target material is illustrated in Figure 2 [ 3]. Figure 2 shows regions where each proces s 
+dominates. The solid lines correspond to equal probabilities for the different interactions. The 
+dashed line corresponds to the atomic mass of silicon (Z=14). Thus, for silicon, x -rays emitted 
+from a low -energy (typically 10 keV) x -ray irradiator will in teract predominantly through the 
+photoelectric effect, while high -energy gamma rays (typically 1.25 MeV) from a 60Co source 
+will interact predominantly through Compton scattering. 
+Based on these interactions (i.e., photon or charge particles), the ehps den sity generated is 
+proportional to the energy transferred to the target material [4]. Stopping power or linear energy 
+transfer (LET) is the particle energy loss per unit length ( dE/dx). It is a function of the particle 
+mass and energy as well as the target material density [5]. The units of LET are commonly 
+expressed as MeV.cm2/mg.  
+Figure 3 shows a plot of LET vs. particle energy for electrons and protons [5]. The LET for 
+protons is higher than the one for electrons at lower energies, but decreases rapidly with 
+increasing energy. Electrons show a non-monotonic response, decreasing as a function of particle 
+energy before increasing for energies above 1 MeV. The total amount of energy deposited by a 
+particle that results in ehps production is commonly referred to as TID. The SI unit for TID is Gy 
+(1 Gy = 1 J/kg); however, rad (radiation -absorbed dose) is the conventional unit used in space 
+industry (1 rad = 100 erg/g = 6.24×10 13 eV/g = 1×10 -2 Gy). One rad (material) is equivalent to 
+100 ergs absorbed by one gram of the target material. 
+  
+ 
+Fig. 1. Schematic drawing of three processes 
+through which photons interact with material: a) 
+photoelectric effect, b) Compton effect, and c) pair 
+production. [1] 
+ 
+Fig. 2. Relative importance of the photoelectric effect, Compton scattering, and 
+pair production as a function of photon energy (after [1]). 
+
+
+--- PAGINA PDF 11 ---
+3 
+ 
+Fig. 3. Stopping power for electrons and protons 
+as a function of particle energy [6]. 
+ 
+Fig. 4. Schematic energy band diagram for a MOS structure with a positive 
+bias at the gate, indicating the basic radiation-induced processes [8]. 
+ 
+The physical processes that lead from the initial deposition of energy by ionizing radiation to the 
+creation of ionization defects in SiO 2 are the generation of ehps ( process 1 ), the prompt 
+recombination of a fraction of the generated ehps ( process 2 ), the transport of free carriers 
+remaining in the oxide (process 3), and either the formation of a trapped charge via hole trapping 
+in defect precursor sites ( process 4a) or the for mation of interface traps via reactions involving 
+hydrogen (process 4b) [6]. These processes are summarized graphically in Figure 4 [7]. 
+In ehps generation (process 1), a fraction of the kinetic energy of the incident par ticle is lost to 
+ehps creation. The mean energy, Ep, needed to ionize a material is dependent on the band -gap of 
+the target material. The number of ehps generated for a given dose is thus strongly dependent on 
+Ep as well as the material density. The relati onships between ionization energy, material density, 
+and generated carriers for three materials (GaAs, Si, and SiO 2) are listed in Table 1 [1]. The ehps 
+density per rad (column 3 in Table 1) is obtained using the following conversion formula: 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 3123 cm
+g
+eV
+ehp#1
+erg
+eV
+106.1
+1
+rad
+1
+g
+erg100radcm
+ehp# 
+P
+g
+Ex .  (1)  
+ 
+Once generated, a fraction of the ehps is annihilated through either columnar or geminate 
+recombination (process 2) [4]. Figure 5 plots the fractional charge yield ( fy) as a function of the 
+radiation type [7, 8]. The figure also indicates that electron-hole pair recombination is electric field–
+dependent within the material [9]. The fractional yield of ehps increases monotonically as the local 
+electric field increases (and is not zero at the zero electric field [4]). Electrons, having a much higher 
+mobility than holes in oxides, are rapidly swept out of the dielectric [10]. Holes surviving this initial 
+recombination undergo polaron hopping transport via shallow traps in the SiO2 (process 3) [10]. A 
+fraction of these transporting holes may fall into deep traps in the oxide bulk or near the Si/SiO 2 
+interface, thereby forming a trapped positive charge ( Not) ( process 4a) [1 0]. The hole trapping  
+efficiency (fot) is also a function of the electric field in the oxide [10]. The trapped hole defect may, 
+ 
+Table 1. Ionization energy and carrier generation for a given material. 
+Material 
+Ep  
+(eV) 
+Density 
+(g/cm3) 
+Pair Density, g0 
+(ehps/cm3 • rad) 
+GaAs ~4.8 5.32 7.6  1012 
+Silicon 3.6 2.328 4  1013 
+Silicon Dioxide 17 2.2 8.1  1012 
+ 
+
+--- PAGINA PDF 12 ---
+4 
+depending on its proximity to the interface, exchange charges with the underlying Si via electron 
+tunneling [11, 12]. Reactions between holes and hydrogen-containing defects or dopant complexes 
+can also lead to the formation of a second type of ionization defect: the interface trap (Nit) (process 
+4b) [13, 14].  
+2.1.1 Total Dose Induced Oxide-Trapped Charge and Interface Trap Formation in SiO2 
+2.1.1.1 Oxide-Trapped Charge (Not) 
+An oxide-trapped charge ( Not) is typically net positive due to the capture of a hole in neutral 
+oxygen vacancies and the subsequent formation of oxygen vacancy defects, or E’ centers [15-20]. 
+There are primarily two types of E’ defects: E’ and E’. The E’ center is a “dimmer” vacancy, 
+which forms a relatively shallow trap for holes in the oxide. Most of the E’ centers have energies 
+located in the SiO2 band-gap within 1.0 eV of the oxide valence band [16]. The shallow trap level 
+of the E’ makes it a good candidate for the defect type responsible for hole transport through SiO2 
+(process 3) [16]. The E’ center is a significantly deeper trap than the E’ defect, residing at energy 
+levels greater than 3 eV above the oxide valence band [15, 16]. While E’ centers may be located 
+throughout the oxide, most are found near the Si/SiO2 interface [10-12].  
+Both types of E’ centers can exchange charges with an adjacent Si layer [1 5]. The ability of the 
+E’ defect to “communicate” with the Si is a strong function of its proximity to the interface [1 2]. 
+E’ centers that readily capture or emit carriers to the adjacent Si are often called border traps or 
+switching states. They are generally located within a few nanometers of the Si/SiO 2 interface and 
+can exchange charges via electron tunneling on time scales of microseconds to seconds [1 1-12]. 
+E’ centers located at distances greater than a few nanometers from the interface (i.e., in the 
+oxide bulk) may capture and emit carriers, but the probability of this process occurring is low. 
+Thus, E’ defects in the oxide bulk are generally treated as  a fixed (i.e., bias -independent) 
+positive oxide charge ( Not). Removal or compensation of Not may require elevated temperature 
+and/or biased anneals over relatively long periods of time. A schematic illustration of the 
+location of border traps (switching states) and oxide -trapped charge (fixed states) in the MOS 
+system is illustrated in Figure 6. Not buildup in an oxide can be expressed as [21, 22] 
+oxotygot tffDN 
+,      (2) 
+ 
+Fig. 5. Fractional yield of holes generated in SiO2 as a function of the electric field in the material [7, 8]. 
+
+
+--- PAGINA PDF 13 ---
+5 
+where D is the total ionizing dose deposited. As Eq. 2 shows, Not is proportional to the oxide 
+thickness. 
+As noted above, depending on their proximity to the Si/SiO 2 interface, E’ centers can 
+“communicate” with an adjacent Si layer [11, 1 2, 15]. The mechanism of charge exchange is 
+dependent on the nature of the trap. For  instance, the E’ defect can simply capture and re -emit 
+trapped holes [11]. This process has been shown to more likely  occur in p-type MOS transistors 
+[11]. For E’ defects, the mechanisms are somewhat more complex. Most theories contend that 
+the acting carriers for charge transfer in and out of the E’ defect are tunneling elec trons. It is 
+now widely held that the positively charged E’ centers can trap an electron, forming a highly 
+stable dipole structure [10-12, 15, 26]. While it is possible for these trapped electrons to be re -
+emitted, the dipole will also act as a shallow el ectron trap that is relatively easy to fill or empty 
+depending on the surface potential of the underlying Si [11, 26]. For a more detailed examination 
+of the processes related to switching oxide traps, readers may want to consult [10-12, 15, and 
+26]. 
+The i mpact of switching oxide (border) traps on CMOS dc parameters is different than the 
+impact of fixed oxide charge discussed above. Unlike Not, the charge state of the switching trap 
+can vary with bias. As such, the signature effect of border traps on metal-oxide-semiconductor 
+field-effect transistor (MOSFET) dc parameters is similar to the effect of Nit.  
+2.1.2 Interface Traps 
+Like border traps, interface traps ( Nit) will also exchange charges with an adjacent Si layer. 
+However, unlike border traps, interface traps ( Nit) are located exactly at the interface. Ther e is 
+essentially no barrier to trapping and de -trapping of carriers in the near -surface Si. Nit can 
+therefore have a significant effect on carrier mobility and recombination rates of carriers at the 
+semiconductor surface. Nit are primarily dangling bond defects called Pb centers [27]. The most 
+important and abundant of these centers is called the  Pb0 center. A secondary contribution is 
+provided by a closely related defect called Pb1. Figure 7 shows the schematic illustrations of Pb0 
+and Pb1 defects on (111), (110), and (100) silicon [28].  
+The three initial processes that lead to Nit formation are similar to processes that lead to the 
+formation of oxide -trapped charges (i.e., ehp s generation, recombination, and transport). 
+However, the final formation of dangling bonds relies on several other reactions. The first 
+ 
+Fig. 6. Location and stability of the trapped charge in SiO2 [11]. 
+
+
+--- PAGINA PDF 14 ---
+6 
+reaction is between transporting holes and hydrogen -containing oxide defects (D’H), which 
+releases protons (H +) [13]. Although it has been contended that direct reactions with holes can 
+create Nit, it has been shown experimentally that (near and above room temperature) most Nit are 
+created by protons [29]. Moreover, density -functional theory calculations confirm that the 
+formation of Nit by direct hole interaction is not energetically favorable under most conditions 
+[30]. The creation of a Pb center primarily relies on the presence of H+ near the interface. Protons 
+diffusing or driven by the electric field to the SiO2 interface can remove hydrogen atoms from H-
+passivated dangling bonds (D) via the simple reaction [13, 30] 
+ 
+2HDHSiH   . (3) 
+The resulting defect ( D+) is the interface trap. Further details regarding the formation of 
+radiation-induced interface traps can be found in [13, 14, 27, and 30].  
+2.2 Annealing of Oxide Traps and Interface Traps 
+The annealing (i.e., compensation) of radiation -induced trapped holes in SiO 2 is a long -term 
+process that is strongly dependent on temperature and applied electric field. The basic 
+mechanisms for electron compensation are tunneling of an electron from the Si substrate and 
+compensation by thermal excitation of an electron from the v alence band [27]. Both tunneling 
+and thermal emission have been combined into a single model by McWhorter et al. that describes 
+a tunneling front and a thermal emission front, where the position of both varies logarithmically 
+with time [33]. In other words, the distance into the oxide bulk from where trapped holes can be 
+removed, measured from  either the Si -SiO2 interface for the case of tunneling or from the 
+valence band edge for thermal emission, varies as ln( t). Figure 8 illustrates hole trapping along 
+with the annealing/compensation processes. The trapped positive charge  can be neutralized by 
+adding an electron to the relaxed   
+  center. The added electrons eliminate the unpaired spin and 
+therefore compensate for the positive charge by creating a dipole structure by the transition from 
+(b) → (c). The electron compensation process is revers ible as illustrated by the transition from 
+(c) → (b), where the electron has tunneled back into the substrate. True annealing can occur 
+when the electrostatic force between the two ends of the dipole structure (c) is sufficient to 
+reform the Si-Si bond. This situation is indicated by the transition from (c) → (a) [33].  
+ 
+Fig. 7. Schematic illustration of Pb0 and Pb1 interface trap defects on (111), (110), and (100) silicon [35].  
+
+
+--- PAGINA PDF 15 ---
+7 
+ 
+Fig. 8. Model for hole trapping and de-trapping (annealing) and for intermediate electron compensation and reverse annealing 
+phenomenon [33]. 
+ 
+The spatial and energy distributions of Not will strongly affect the rate at which charge 
+neutralization occurs. For tunneling, the spatial distribution of Not must be close to the Si/SiO 2 
+interface. For thermal emis sion, the energy distribution needs to be close to the valence band 
+energy. Unlike oxide-trapped charges, Nit buildup occurs on timeframes much slower than oxide-
+trapped charge build-up and can take thousands of seconds to saturate after a pulse of ionizin g 
+radiation. Interface -trapped charges do not anneal at room temperature , only at higher 
+temperature [1]. These properties make Nit charge effects very important for LDR applications 
+and total dose evaluations. Annealing behavior s have critical implication with total dose 
+assessment of electronic devices.  
+
+
+--- PAGINA PDF 16 ---
+8 
+3.0 TOTAL IONIZING DOSE (TID) EFFECTS IN MOS AND BIPOLAR TECHNOLOGIES 
+3.1 Total Ionizing Dose (TID) Effects in Metal-Oxide-Semiconductor (MOS) Devices 
+The basic structure of an n -channel MOSFET is illustrated in Figure 9. It is a four -terminal 
+device with connection to the source, drain, gate, and silicon substrate (or bulk). It consists of a 
+metal-oxide-silicon structure with a surface inversion layer or channel extending between two 
+diffused junctions (i.e., source and drain). These diffused junctions are electrically disconnected 
+unless there is an n -type inversion layer at the surface to provide a conducting channel between 
+them. When the surface is inverted and a voltage is applied be tween the junctions, electrons can 
+enter the channel at one junction, the source, and leave at the other, the drain.  
+The electrons flow primarily in regions of the silicon where they are majority carriers, a 
+fundamental difference from bipolar transistors, in which current through the base is carried by 
+injected minority carriers. Complementary -metal-oxide-semiconductor (CMOS) cells use MOS 
+devices with smaller oxide  thickness and are built by connecting in series p - and n -channel 
+MOSFET devices. They are widely used in digital integrated circuits (ICs). Figure 10 shows a 
+cross-sectional diagram for a generic deep -submicron bulk CMOS technology featuring  shallow 
+trench isolation (STI) oxides (that replaced LOCOS in old technologies).  
+The main degradation mechanism induced by total dose in MOS devices is caused by radiation -
+induced charge buildup ( Not and Nit) in its gate 
+oxide. Not in thicker gate oxide can invert the  
+channel interface causing leakage current to 
+flow in the OFF state condition ( VGS = 0 V). 
+This typically results in an increase in the static 
+power supply current of an IC and may also 
+cause IC failure. Large concentrations of Nit 
+charge can decrease the carriers’ mobility and 
+increase the threshold voltage of n -channel 
+transistors. For advanced ICs with thin ner gate 
+oxides such as CMOS technology , radiation -
+induced charge buildup in field oxides (LOCOS 
+or STI)  normally dominates the radiation -
+induced degr adation of ICs  and induces large 
+leakage currents.  
+ 
+ 
+ 
+Fig. 10. Cross-sectional diagram for a generic deep-submicron bulk CMOS technology.  
+ 
+Fig. 9. Cross-section of an n-MOS device illustrating charge 
+buildup in its gate oxide. 
+Substrate
+
+--- PAGINA PDF 17 ---
+9 
+Effect of Not on I-V Characteristics 
+Assuming that gate oxides are thick enough, the primary impact of  Not on the dc parameters of 
+CMOS devices and ICs is the negative shift in the dc drain current vs. gate -to-source voltage 
+(Vgs) for both n- and p-channel MOSFETs as illustrated in Figure 11. Figure 11 shows that for a 
+fixed Id, the radiation -induced buildup of Not shifts the Vgs bias point more negative (i.e., by 
+Vot). In n-channel MOSFETs, this shift leads to a reduction in threshold voltage and an increase 
+in off -state and drive currents . In p -channel MOSFETs, Vt increases while off -state and drive 
+currents are reduced. 
+Radiation-induced dc voltage shifts can be calculated using the following equation: 
+ot
+ox
+ox
+ot Nqk
+tV 
+0
+,       (4) 
+ 
+where kox is the dielectric constant of SiO2 and 0 is the permittivity of free space [34]. Given Eq. 
+1 and 3, the theory predicts that negative threshold voltage shifts caused by fixed oxide -trapped 
+charge buildup are proportional to the square of oxide thickness, i.e., 
+ 
+ 
+2
+oxotott tVNV 
+.     (5) 
+ 
+This theoretical relationship has been verified through numerous experiments [ 21]. The 
+relationship in Eq. 4 indicates that as the gate oxides of a dvanced CMOS technologies scale  to 
+thinner dimensions, the threat of shifts in dc parameters due to Not buildup in the gate oxide is 
+reduced [23, 24]. Instead, hole trapping in the thicker STI dielectrics is now a great er radiation 
+threat in modern CMOS technologies. Typical STI trenches are much thicker than gate oxides. 
+For advanced CMOS technologies, the thicknesses range from approximately 300 nm to 450 nm 
+[31].  
+ 
+ 
+Fig. 11. Illustration of the effect of fixed oxide-trapped charge on n- and p-MOS devices. 
+ 
+
+
+--- PAGINA PDF 18 ---
+10 
+Effect of Nit on I-V Characteristics 
+On the other hand, the primary effect of Nit is an increase in the sub-threshold swing of a CMOS 
+device. This effect is illustrated in Figure 12, which shows a characteristic stretch out Vit in the 
+Id vs. Vgs response for both n - and p-channel devices. The mechanism for this effect is the bias -
+dependent trapping or de -trapping of charge at the interface as the device surface is swept from 
+accumulation to inversion by the gate voltage. Figure 12 shows that the threshold voltage is also 
+impacted by Nit buildup. Also, depending on the pre -irradiation characteristics of the MOSFET, 
+Nit buildup may also increase off-state drain current.  
+As stated above, switching oxide (border) traps can also change charge state as  the dc gate -to-
+source bias is varied. As a result, in dc measurements, it is difficult to distinguish the effects of 
+interface traps ( Pb centers) and switching oxide traps (near interface E’ centers). The key 
+difference between the two defect types is tha t the charge exchange frequency at switching E’ 
+centers is low (<100 Hz) compared to Pb centers (>1 kHz) [31, 32]. 
+ 
+Fig. 12. Illustration of the effect of interface traps on n- and p-MOS devices. 
+3.1.1 Radiation Damage in Isolation Oxides 
+Defect buildup in gate oxides scales with tox (Eq. 4). Radiation tolerance in thin gate oxides is 
+further enhanced by the increased likelihood of positive charge annihilation or compensation by 
+tunneling electrons from the adjacent materials [ 35]. Inherent  gate oxide hardness was 
+demonstrated at the 0.25 μm technology node [45]. At this node, the oxide thickness is typically 
+less than 6 nm, which is less than twice the approximate distance for high probability electron 
+tunneling (i.e., ~3 nm ) [12, 35]. Gate oxide hardness trends have continued to be observed in 
+subsequent smaller technologies, e.g., 0.18 μm ( tox = 3.2  nm) and 0.13 μm ( tox ~2 nm) [ 37]. 
+Defect buildup in thicker isolation oxides is typically the dominant cause of radiation -induced 
+degradation in modern CMOS ICs. Figure 13 shows a representative cross-section of a modern 
+n-channel MOSFET  (n-FET). As the figure illustrates, the STI structures enclosing the active 
+device are much thicker (by more than two orders of magnitude) than the gate oxide. In 
+advanced CMOS technologies, the STI oxide thickness is typically greater than 300 nm. 
+
+
+--- PAGINA PDF 19 ---
+11 
+ 
+Fig. 13. Representative cross-section of an n-channel MOSFET in a modern CMOS technology. 
+ 
+Radiation Induces Leakage Path in CMOS 
+Radiation-induced degradation in STI 
+oxides can cause a significant increase in 
+the standby current in modern CMOS ICs.  
+The causes of increased standby current are 
+leakage paths created as a result of TID 
+buildup. They include 1) drain -to-source 
+leakage in a single n -channel MOSFET, 2) 
+drain-to-source leakage between two 
+different devices, and 3) source -to-well 
+leakage between two different devices. The 
+basic mechanisms for all field leakage 
+phenomena are  the same. Positively 
+charged oxide defects invert an adjacent p -
+type Si layer, which enables the flow of 
+current from one isolated region to another. 
+Figure 14 plots the normalized increase in 
+standby current in CMOS shift registers 
+manufactured in a commercial 130 -nm 
+process [41].  
+Charges trapped in the isolation dielectric, 
+particularly at the Si/SiO2 interface along the sidewalls of the trench oxide, create a leakage path, 
+which becomes the domina nt contributor to off -state drain-to-source leakage current in  n-FETs 
+[42]. This effect is illustrated schematically in Figure 15, which shows a) the edge leakage path 
+from drain-to-source on the planer (top) view of the n -FET and b) the device cross -section with 
+fixed oxide-trapped charge buildup in the STI [43]. 
+The impact of STI radiation damage on the n -FET current-voltage characteristics of one deep 
+sub-micron technology is shown in the experimental data in Figure 16 [37]. These data were 
+obtained from  TID measurements on 0.18 -μm n -channel MOSFETs fabricated by the Taiwan 
+Semiconductor Manufacturing Company (TSMC) [ 37]. The data show that off -state leakage 
+current, Id,off, exhibits a significant monotonic increase above 200 krad(SiO 2), reaching a level 
+above 100 nA at 500 krad(SiO2) of total dose [37]. 
+ 
+Fig. 14. Normalized increased standby current vs. total dose in shift 
+registers fabricated in 130-nm process [42].  
+
+
+--- PAGINA PDF 20 ---
+12 
+ 
+Fig. 15. a) Illustration of drain-source leakage path in n-FETs and b) its cause: oxide-trapped charge buildup in the isolation 
+oxide [42]. 
+ 
+ 
+Fig. 16. Impact of STI radiation damage on the current-voltage characteristics of n-FET fabricated in TSMC 0.18-m CMOS [37].  
+ 
+The primary cause of increased Id,off is the reduction in threshold voltage and increase in drive 
+current in the parasitic n-FET formed along the two edges of the “as-drawn” device (Figure 17a). 
+Prior to radiation exposure, the threshold voltage is high and drive current is low for the parasitic 
+device relative to the as -drawn structure. Upon TID exposure, the parasitic device Vth is reduced 
+significantly relative to th e as-drawn transistor (Figure 17b). This is because the “gate” oxide of 
+the parasitic structure is formed from the STI, which is much thicker than the as -drawn gate 
+dielectric. In addition to negative voltage shifts, the drive current of the parasitic n -FET also 
+increases significantly ( Figure 17b). This is due to the fact that the effective width of the 
+parasitic transistor ( Weff.), to which drive current is proportional, increases as surface along the 
+STI sidewall inverts in response to Not buildup [43]. The degree to which Not can invert this 
+surface is also inversely proportional to the doping concentration along the sidewall [43]. Thus, a 
+higher doping concentration in the p -type body will typically mitigate the effects of fixed oxide -
+trapped charge in the STI.  
+1E-15
+1E-13
+1E-11
+1E-09
+1E-07
+1E-05
+1E-03
+-0.5 0 0.5 1 1.5 2
+Gate Voltage (V)
+Drain Current (A)
+0
+50K
+100K
+150K
+200K
+250K
+300K
+400k
+500k
+PA
+TSMC 0.18 m
+NMOS 
+Minimum Geometry
+VG = 1.8 V
+72 rad/s
+1.E-12
+1.E-11
+1.E-10
+1.E-09
+1.E-08
+1.E-07
+1.E-06
+250 300 350 400
+Dose (krad(Si))
+IDoff (A)
+1E-15
+1E-13
+1E-11
+1E-09
+1E-07
+1E-05
+1E-03
+-0.5 0 0.5 1 1.5 2
+Gate Voltage (V)
+Drain Current (A)
+0
+50K
+100K
+150K
+200K
+250K
+300K
+400k
+500k
+PA
+0
+50K
+100K
+150K
+200K
+250K
+300K
+400k
+500k
+PA
+0
+50K
+100K
+150K
+200K
+250K
+300K
+400k
+500k
+PA
+TSMC 0.18 m
+NMOS 
+Minimum Geometry
+TSMC 0.18 m
+NMOS 
+Minimum Geometry
+VG = 1.8 V
+72 rad/s
+1.E-12
+1.E-11
+1.E-10
+1.E-09
+1.E-08
+1.E-07
+1.E-06
+1.E-12
+1.E-11
+1.E-10
+1.E-09
+1.E-08
+1.E-07
+1.E-06
+250 300 350 400
+Dose (krad(Si))
+IDoff (A)
+3.2 nm/STI
+
+--- PAGINA PDF 21 ---
+13 
+ 
+Fig. 17. a) Illustration of the circuit-level models associated with the n-channel MOSFET with parasitic n-FETs, and b) the effects 
+of increasing TID radiation exposure on the threshold voltage and drive current of the parasitic n -FET [43]. 
+Radiation and Scaling in CMOS Isolation Oxides 
+In order to examine the scaling trends of 
+drain-to-source leakage, the pre - and post-
+irradiation Id vs. V gs characteristics of a 
+commercial 130 -nm CMOS were studied; 
+the results are shown in Figure 18 [4 1]. 
+These data indicate that negative voltage 
+shifts in the parasitic edge devices are 
+significantly smaller than the 180 -nm 
+TSMC technology ( Figure 16). The 
+increased radiation tolerance of the 130-nm 
+technology may be due to the aggressive 
+use of halo implants. In advanced CMOS 
+technologies, highly doped halo implants 
+(Figure 13) are used to suppress space 
+charge effects (SCEs). Li ke the thinning of 
+gate oxides, this deep -sub-micron 
+processing technique seems to be 
+fortuitously increasing the radiation 
+tolerance of modern CMOS devices. At the 
+130-nm node, where the physical gate 
+length is below 100 nm, the halo doping 
+may extend acr oss the entire channel for minimum gate length devices. This significantly 
+increases the p -type doping concentration along the entire STI sidewall, between the drain and 
+source of the n -FETs. The increased doping will inhibit the impact -fixed oxide charge,  thereby 
+increasing the inherent radiation hardness of ultra-small bulk CMOS devices.  
+Unlike drain-to-source leakage, where the leakage path is associated with one n -channel device, 
+inter-device leakage pertains to paths that are created between the n+ dr ains and sources of two 
+adjacent n-FETs or between the n+ drain/source of one n -FET and the n-type well of an adjacent 
+p-channel MOSFET. A schematic illustration of the n -FET device-to-device leakage mechanism 
+is illustrated in Figure 19. Figure 20 shows a schematic illustration of the n-FET drain/source-to-
+n-well leakage mechanism. 
+ 
+Fig. 18. Impact of STI radiation damage on the current-voltage 
+characteristics of n-FET fabricated in 0.13 m CMOS [41]. 
+1.E-11
+1.E-10
+1.E-09
+1.E-08
+1.E-07
+1.E-06
+1.E-05
+1.E-04
+0 0.2 0.4 0.6 0.8 1 1.2 1.4
+0k
+100k
+ 500k
+Norm. drain current [A/m]
+gate-to-source bias [V]
+VG = 1.32V
+20 rad/s
+1.E-11
+1.E-10
+1.E-09
+1.E-08
+1.E-07
+1.E-06
+1.E-05
+1.E-04
+0 0.2 0.4 0.6 0.8 1 1.2 1.4
+0k
+100k
+ 500k
+Norm. drain current [A/m]
+gate-to-source bias [V]
+VG = 1.32V
+20 rad/s
+
+--- PAGINA PDF 22 ---
+14 
+ 
+Fig. 19. Schematic illustration of n-FET device-to-device 
+leakage [44]. 
+ 
+Fig. 20. Schematic illustration of n-FET drain/source-to-n-well 
+leakage. 
+3.1.2  Time-Dependent Effects and Annealing 
+Time-dependent effects (TDEs) in MOS technologies are typically related to four mechanisms:  
+• Hole trapping process 
+• Interface traps formation 
+• Time dependencies of oxide trap annealing  
+• Time dependencies of interface trap annealing 
+These times vary with oxide thickn ess, oxide processes, oxide fields, and temperature [4 4-48]. 
+Hole trapping is the fastest, followed by interface state growth, hole trap annealing, and lastly, 
+interface trap annealing. The decrease in the magnitude of oxide -trapped charges generally 
+follows a logarithmic time dependence and the rate at which Not (i.e., Vot) neutralized is dose -
+rate independent. As shown in Section 1, the neutralization of trapped charges mainly follows 
+two mechanisms: 1) the tunneling of electrons from the silicon into oxide traps, and 2) the 
+thermal emission of electrons from the oxide valence band into oxide traps. The rate and number 
+of oxide traps neutralized by electron tunneling is highly dependent on the spatial distribution of 
+the traps in the oxide, which is dep endent on fabrication process. Traps with energy closer to the 
+valence band will be neutralized more easily whereas traps farther from the valence band or in 
+distance from the silicon interface will be less accessible. Unlike oxide-trapped charges, interface 
+traps do not anneal at room temperature. Some interface -trap annealing at 100 C has been 
+reported in several cases [4 4, 4 5]. However, higher temperatures are normally required to 
+observe significant interface -trap annealing [4 4, 4 8]. To illustrate this latter point, Figure 21 
+shows an illustrative plot of the threshold voltage degradation for an n -channel MOS transistor 
+during irradiation (anneal start at 1 Mrad) and anneal with Vth separated into shifts due to 
+interface-trapped charge and oxide-trapped charge.  
+A more recent study led by Johnston  [49], indicated that the annealing processes (i.e., tunneling 
+and thermal) are still valid for most advanced CMOS technologies for which the TID 
+degradation in isolation oxides is dominant. Indeed, the annealing  behavior of the degraded 
+leakage current in STI CMOS devices was converted in terms of threshold voltage recovery and 
+compared to the gate and field oxides annealing behavior previously reported, similar to the data 
+shown in Figure 22. Results clearly ind icate that the annealing trends are very similar and that 
+current annealing models seem to apply for advanced CMOS technologies as well. These results 
+will have some good implication for total dose evaluations practices.  
+
+
+--- PAGINA PDF 23 ---
+15 
+ 
+Fig. 21. Threshold voltage shift  of an n-channel MOS 
+transistor during irradiation and anneal with VT 
+separated into shifts due to interface -trapped charge 
+and oxide-trapped charge. 
+ 
+Fig. 22. Comparison between the annealing behavior of gate and field 
+oxides with STI oxides based on threshold voltage, not leakage current 
+[49]. 
+ 
+KEY POINTS ABOUT TOTAL DOSE EFFECTS IN MOS DEVICES 
+ 
+* The main degradation mechanism induced by total dose in MOS devices is caused by radiation -induced 
+charge buildup (Not and Nit) in its gate oxide. Not in thicker gate oxides can invert the channel interface causing 
+leakage current to flow in the OFF state condition ( VGS = 0 V). Nit decreases the carriers’ mobility and 
+increases the threshold voltage of n-channel transistors.  
+* Threshold voltage shifts caused by fixed oxide-trapped charge buildup are proportional to the square of oxide 
+thickness. For advanced ICs with thinner gate oxides (<6 nm), radiation-induced charge buildup in field oxides 
+(LOCOS or STI) normally dominates the radiation -induced degr adation of ICs and induces large leakage 
+currents. 
+* Radiation-induced degradation in STI oxides can cause an increase in the standby current in modern CMOS 
+ICs. The causes of this increase are leakage paths created as a result of total ionizing defect bui ldup. They 
+include 1) drain -to-source leakage in a single n -channel MOSFET, 2) drain -to-source leakage between two 
+different devices, and 3) source-to-well leakage between two different devices. 
+* TDEs in MOS technologies are critical to be considered for any total dose evaluation, particularly, for the dose 
+rate selection and annealing consideration. TDEs are related to four mechanisms: 1) hole trapping process, 2) 
+interface trap formation, 3) time dependencies of oxide trap annealing and 4) interface trap  annealing. Hole 
+trapping is the fastest, followed by interface state growth, hole traps annealing, and lastly, interface traps 
+annealing. These times vary with oxide thickness, oxide processes, oxide fields and temperature.  
+* The annealing (i.e., compensation) of radiation-induced trapped holes (Not) in SiO2 is a long-term process that 
+is strongly dependent on temperature, applied electric field , and spatial distribution of the traps. It follows two 
+mechanisms: 1) the tunneling of electrons from the silic on into oxide traps, and 2) the thermal emission of 
+electrons from the oxide valence band into oxide traps. Interface -trapped charges do not anneal at room 
+temperature, only at higher temperature. Compensation model applies for advanced CMOS STI oxides. 
+3.2 Total Ionizing Dose (TID) Effects in Bipolar Devices 
+Like MOS technologies, bipolar junction transistors (BJT s) are widely used within spacecraft 
+systems. They are particularly important for analog -function, radio-frequency (RF), and mixed -
+
+
+--- PAGINA PDF 24 ---
+16 
+signal ICs. Much of the recent work on BJTs has focused on development of very high -speed 
+transistors ( fT > 50 GHz) for RF -integrated circuits , particularly, BJTs based on silicon -
+germanium (SiGe) technology. SiGe BJTs have shown some very good total dose performance 
+as well as very good electrical response at very low temperature [50].  
+The mechanisms of total dose degradation in bipolar technologies involve Not and Nit formation 
+in SiO 2 as well [51-57]. Gain degradation is the primary effect with bipolar technologies. An 
+illustrative plot of current gain vs. em itter-base voltage is shown in Figure 23. The top curve 
+corresponds to the un -irradiated device, and the curves decrease monotonically with total dose. 
+The decrease in current gain is particularly large at low bias levels, but the peak gain also 
+decreases significantly. 
+In the space radiation environment, high -energy 
+protons constitute a large part of the radiation 
+environment. Protons cause displacement damage 
+in addition to total -dose defects. The device -level 
+effects due to these two types of damage are not 
+simply addi tive; they interact in a complicated 
+fashion [58]. It has been shown tha t proton 
+irradiation can cause linear ICs to fail at much 
+lower total-dose levels than can be tolerated for  
+irradiation [59]. A comparison of heavy ions, 
+electrons, and cobalt -60  rays showed that the 
+heavy ions produce the most degradation at a given 
+total-dose level because of the higher level of 
+displacement damage compared to the other 
+radiation sources [60]. When establishing the rule 
+of a TID evaluation for radiation hardness 
+assurance, the combined test of total dose and 
+displacement damage effects must be taken into 
+account.  
+3.2.1 Bipolar Junction Transistors Structures 
+The basic structure of a bipolar transistor consists of a three -layer sandwich of semiconductor 
+material, with alternate layers having opposite doping types. The npn BJT is the most common 
+bipolar transistor; it has two l ayers of n-type semiconductor separated by a thin layer of p-type 
+material. In addition to having the doping types reversed in each layer, the pnp BJT typically has 
+a different physical structure than that of the npn transistor because of the way in which it is 
+fabricated. Figure 24 shows a cross -sectional view of a traditional npn BJT. The dashed line in 
+this figure indicates the portion of the device that is most sensitive to ionizing radiation. The 
+oxide layer of importance is typically a thick thermally  grown oxide of poor quality (similar to 
+field oxide in CMOS) compared to gate oxides in MOS devices. 
+Three basic pnp types of structures are used in ICs. Vertical pnp (VPNP) transistors are similar 
+in structure to vertical npn (VNPN) devices. Lateral pnp (LPNP) transistors have the active 
+region of the device at the silicon surface and the current flows laterally between emitter and 
+collector regions that are both at the surface. Substrate pnp (SPNP) devices have a vertical 
+current-flow pattern, but the su bstrate serves as the collector for the device. Figure 25 shows 
+qualitative cross-sections of lateral and substrate pnp transistors. The physical structures of these 
+two device types are very similar, but the current flow paths are different.  
+ 
+Fig. 23. Normalized current gain vs. base-emitter voltage 
+for an npn BJT irradiated to various total doses. 
+
+
+--- PAGINA PDF 25 ---
+17 
+ 
+Fig. 24. Cross-sectional view of a conventional npn BJT. The 
+dashed line indicates the portion of the device that is most 
+sensitive to ionizing radiation. 
+ 
+ 
+Fig. 25. Representative cross-sections of lateral and substrate 
+pnp transistors. The arrows indicate the current-flow paths for 
+each type of device. 
+ 
+The decreased current gain in irradiated BJTs is primarily a result of increased base current at a 
+fixed emitter bias. Typically, the collector current remains roughly constant, although it may 
+change somewhat [56, 61]. Figure 26 shows an example Gummel plot (log IC and IB vs. VBE). For 
+this device, the collector current remains unchanged except at very low bias levels, while the 
+base current increases significantly. This causes a large reduction in the current gain, especially 
+at low bias levels.  
+The mechanisms responsible for this 
+increase in the base current result from the 
+degradations of two out of three main 
+components of the base current as 
+illustrated in Figure 27: 1) IB1 is the current 
+due to recombination in the  emitter-base 
+depletion region, 2)  IB2 is the current due 
+to back -injection of carriers from base to 
+emitter, and 3)  IB3 is the current due to 
+recombination in the neutral base. For 
+transistors that have not been irradiated, IB2 
+normally dominates. However, for devices 
+that have been exposed to ionizing 
+radiation, both IB1 and IB3 increase, with IB1 
+normally dominating. When the 
+degradation is dominated by displacement 
+damage, IB3 is often the current component 
+that increases the most. 
+ 
+ 
+Fig. 27. Illustration of the different components of the base current in an npn BJT. The subscripts 1, 2, and 3 refer to 
+recombination in the emitter-base depletion region, back-injection of minority carriers into the emitter, and recombination in the 
+neutral base, respectively. 
+P
+N P N
+Emitter Base Collector
+P
+P
+NP
+Substrate
+Lateral
+Emitter BaseCollector
+IB3
+Emitter                     Base                              Collector
+Space-Charge
+Regions
+IB1
+IB2
+IB
+ 
+Fig. 26. Collector and base current vs. VBE for an irradiated npn BJT. 
+JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
+‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+————————————————————————————————————————————————————————————————————
+………………………………………………………………………………………………………………………………………………………………………………………
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+1x10-12
+1x10-11
+1x10-10
+1x10-9
+1x10-8
+1x10-7
+1x10-6
+1x10-5
+1x10-4
+1x10-3
+1x10-2
+0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9
+Base-Emitter Voltage [V]
+IC
+IB
+Collector and Base Current [A]
+Increasing
+total dose
+
+--- PAGINA PDF 26 ---
+18 
+Equation 6 provides an expression of the excess -base current approximation induced by total 
+dose that corresponds to an enhanced recombination in the emitter -base depletion region [ 53]. 
+The recombination-rate increase occurs mainly where the depletion region intersects the Si/SiO 2 
+interface, due to Nit formation that serve s as recombination centers. The increase of 
+recombination centers is proportional to the surface recombination velocity at the Si/SiO 2 
+interface that covers the emitter-base junction.  
+JB1  vsu rf exp qV
+2kT
+
+
+
+
+     (6) 
+ 
+The recombination rate is a function of position along the surface and varies with total dose, 
+exhibiting a peak where n = p, as illustrated in Figure 28. Four cases are represented: a) a 
+recombination peak in a pn junction for an un -irradiated condition and a forward bias case , b) a 
+recombination peak increase induced by Nit for a forward bias case , c) a recombination peak 
+increase and extension of the depletion region induced by Not and Nit for a forward bias case, and 
+d) an increase of generation term fo r a reverse bias junction. All of these conditions result in the 
+Excess-base current and is proportional to the surface recombination velocity, which combines 
+the effects of the different spatial locations at which the recombination takes place.  The 
+recombination rate increases more slowly with voltage than the back -injected (ideal) component 
+of the base current. Its effect is greatest at low emitter-base voltages.  
+ 
+ 
+ 
+(a)  (c)  
+ 
+(b)  
+(d) 
+Fig. 28. Illustration of Nit and Not on recombination profile in the depletion region of a pn junction. 
+ 
+  
+n-type p-type
+Anode
+(VA)
+Cathode
+(VC)
+Fixed positive charge in
+the oxide enhances
+recombination by
+increasing depl. region
+Depl.
+region
+x
+x
+R
+X  X   X   X   X   X   X   X   X   X   X+ + + + + + + + + + + +
+For lighter doped p-region
+recombination increases
+super-linearly with dose
+n-type p-type
+Anode
+(VA)
+Cathode
+(VC)
+Interface traps increase
+the recombination rate
+Depl.
+region
+x
+x
+R
+X  X   X   X   X   X   X   X   X   X   X
+itNR max
+
+
+--- PAGINA PDF 27 ---
+19 
+In the case of displacement damage, the recombination rate will increase throughout the 
+depletion region,  and not just where it intersects the surface. If the volume density of traps 
+increases uniformly in the silicon, the peak recombination rate will always occur within the 
+depletion region where n = p, as described above. The electrical effect of these traps can be 
+described as a reduction in the minority -carrier lifetime. If recombination in the depletion region 
+is dominated by bulk traps instead of interface traps, Eq. 6 becomes: 
+ 
+JB1  1
+ exp qV
+2kT
+
+
+
+  
+(7) 
+ 
+where  is the minority-carrier lifetime in the depletion region. 
+ 
+Finally, TID can also affect the current due to recombination of minority carriers in the neutral 
+base IB3. Typically, pretty small for the un -irradiated condition, this current may become 
+significant following irradiation (particularly for displacement da mage). For instance, in a BJT 
+operating in the forward -active region, the base current density required to supply the 
+recombination process can be expressed as  
+ 
+J B3  QB
+ B
+
+qW Bn B0 exp qVBE
+kT
+
+
+
+
+2 B , 
+(8) 
+ 
+where QB is the distribution of minority carriers in the neutral base, B is the average lifetime of 
+minority carriers in the neutral base, and WB is the base width. When the device is irradiated, this 
+component of the current increases as the lifetime in the base  decreases. For ionizing radiation, 
+the surface lifetime decreases due to Nit formation, but the bulk lifetime remains approximately 
+constant. For displacement damage, the bulk lifetime decreases. 
+3.2.1.1 Radiation Dependence on the BJT Structure 
+VPNP transistors are usually relatively radiation-hard compared to VNPN devices [62, 63]. This 
+is because the positive charge that accumulates in the oxide accumulates the n-type base region 
+and tends to deplete the p-type emitter. However, the p-type emitter in VPNP transistors is 
+heavily doped compared to the p-type base in VNPN transistors. In contrast, LPNP and SPNP  
+transistors tend to be relatively soft [51, 64, 65]. The LPNP is commonly used as an active load 
+or current source in mi crocircuits, such as operational amplifiers, voltage regulators, 
+comparators, analog -to-digital (A/D) converters, and other analog IC types. LPNP transistors 
+may degrade severely at low total dose levels [66, 67]. They are affected more significantly by 
+ionizing radiation than SPNP transistors, since the current flow pattern in the LPNP devices is 
+lateral and directly under the oxide where the recombination centers buildup after radiation, 
+while the current flow path in the SPNP devices is vertical. The tot al dose required to degrade 
+the lateral devices to half of their normalized current gain may be as much as 50 times less than 
+that needed to observe current gain degradation of the same extent in vertical devices [67]. 
+Figure 29 shows a plot comparing the base degradation for a fixed emitter -base voltage for the 
+different BJT. It should be noted that this comparison varies with different bias levels and often 
+BJTs that are biased at low levels are most sensitive to radiation-induced degradation. 
+ 
+
+--- PAGINA PDF 28 ---
+20 
+ 
+Fig. 29. Normalized current gain vs. base-emitter voltage for an npn BJT irradiated to various total doses. 
+ 
+3.2.2 Circuit Effects 
+While it is important to understand the mechanisms of degradation in the three types of bipolar 
+structures, it should be noted that linear devices built with these structures exhibit total dose 
+parametric degradation trends that are more complex and vary with bias, dose level, and dose 
+rate [68-77]. Several studies have been performed to identify the circuit interactions that lead to 
+the observed terminal response [68 -77]. For almost all cases, the degradation of  the circuit 
+parameters is a result of the gain degradation of the various npn and pnp transistors in the circuit. 
+For some circuit parameters, such as input bias current and output sink/source current, the 
+degradation may be proportional to the gain degradation of a single transistor, in which case, the 
+analysis is simple. The greatest tota l dose and dose rate effects occur when the input or output 
+transistor is a simple LPNP or SPNP. Recent integrated linear circuits have improved their 
+design and use combinations of npn and pnp transistors in the input stage circuitry for 
+compensation, hel ping to extend their operation over a wide range of conditions while 
+maintaining high input resistance, low offset voltage, and low offset current [76 -77]. Since the 
+npn and pnp transistors degrade differently as a function of both dose and dose rate, the 
+degradation interactions can be complex. A first example is shown in Figure 30, where the 
+change of input bias current as a function total dose of an OP -97 is plotted. The degradation  
+shows a non -linearity that has been attributed to circuit effects [77]. Indeed, the OP -97 uses a 
+compensated input stage where a current source (comprised of an LPNP current mirror) nearly 
+compensates the base current of the npn transistors used at the input stage, reducing the input 
+bias current while allowing the npn transistors to operate at relatively high current. Although this 
+compensation technique reduces input bias current by several order of magnitude compared to 
+old technologies, it shows a non -linear response with total dose due to the reversal of input  
+current sign when the LPNP degrades sufficiently and reaches a threshold gain value. It has been 
+shown that this threshold is power supply ( Vcc) dependent and that the total dose level at which 
+the non -linearity occurs varies as a function of  Vcc. This is not too surp rising since current 
+sources are directly dependent on Vcc [77].  
+1.E-09
+1.E-08
+1.E-07
+1.E-06
+1.E-05
+1 10 100
+Delta Ib (A)
+Dose (krad)
+vnpn LDR
+vnpn HDR
+lpnp LDR
+lpnp HDR
+LM124 process
+ELDRS test chip
+Vbe=0.59V
+p-glas only
+
+--- PAGINA PDF 29 ---
+21 
+Figure 31 shows a second example of circuit effect, in which the output voltage degradation of 
+an LM117 negative voltage regulator may start positive and then become negative at HDR, and 
+start negative and then become positive at LDR [72]. The changes are related to circuit -level 
+compensation of effects in one part of the circuit by effects in another part of the circuit, in this 
+case, a current source.  
+ 
+ 
+Fig. 30. Degradation of input bias current of an OP-97 op-amp showing the extreme non-linearity that occurs for compensated 
+input stages [77]. 
+ 
+ 
+Fig. 31. Change in output voltage for an LM117 voltage regulator versus dose at HDR and LDR [72]. 
+ 
+
+
+--- PAGINA PDF 30 ---
+22 
+3.2.3  ELDRS in Bipolar Technology 
+Linear integrated circuits built in bipolar technologies  are exposed to ionizing radiation at very 
+low dose rates when used in space systems . With these conditions, their parametric degradation, 
+more noticeable for dc parameters,  exhibits a “true” dose rate effect known as enhanced low -
+dose-rate sensitivity (ELDRS) [78-81]. ELDRS is characterized by an LDR enhancement factor 
+(EF) defined as the ratio of the parametric degradation at a n LDR to the degradation at a n HDR 
+for a fixed dose level. EF is not a universal number and varies for different part types and for 
+different parameters within the same part. This approach to characterize the dose rate response of 
+bipolar devices and circuits as an EF versus dose rate was first used by Johnston et al. [80] and is 
+illustrated in Figure 32. To demonstrate the ELDRS phenomena, it shows the input bias current 
+degradation (or base current at a fixed collector current for the discrete transistors) relative to the 
+degradation at 50 rad/s, as a function of dose rate for a fixed total dose leve l. Several linear 
+circuits from different manufacturers were studied, the LM108 (op amp), LM101 (op amp), and 
+LM111 (comparator) from National Semiconductor Corporation (NSC), and an LM324 (quad op 
+amp) from Motorola. Several discrete bipolar transistors w ere also included. The number on the 
+vertical scale is the LDR EF as a function of dose rate. The EF is greatest for the LM111 and 
+LM324, both of which have LPNP/SPNP input transistors. The LM101 has VNPNP input 
+transistors and the LM108 has super-beta npn input transistors.  
+To demonstrate that ELDRS is a real effect in space, an experiment was also run under the 
+Microelectronics and Photonics TestBed (MPTB) program using an LM139 quad comparator. 
+The experiment ran for approximately seven years, and the p arts accumulated ~45 krad(Si), with 
+most of the dose received in the 1-hour flight through the radiation belts during each 12 -hour 
+orbit [82-83]. This corresponds to an average dose rate of approximately 2.5 mrad/s. The results 
+are shown in Figure 33, comparing various ground test data at constant dose rate to the space 
+data. Although the space environment  consists of protons and electrons of various energies and 
+widely changing dose rates, the degradation falls between the degradation at a constant dose ra te 
+of 1 mrad(Si)/s and 10 mrad(Si)/s using Co -60. The results at 10 and 100 rad(Si)/s show much 
+less degradation than in space; the elevated temperature irradiation at 100 °C and 1 rad(Si)/s falls 
+in between. Note that the input bias current that started at  25 nA reached 400 nA, a potential 
+problem for some system applications. The pre -irradiation specification limit for this parameter 
+is 100 nA.  
+ 
+Fig. 32. Relative damage (EF) versus dose rate, normalized to 50 rad(Si)/s, for irradiation of several circuit  types and discrete 
+transistors to a fixed unspecified dose [80]. 
+
+
+--- PAGINA PDF 31 ---
+23 
+ 
+Fig. 33. MPTB experiments comparing space data with ground 60Co data.  
+3.2.3.1 Characteristics of ELDRS 
+Research studies have indicated that the ELDRS response depends on a number of factors , such 
+as final passivation (or processing tools) [ 82–84], pre-irradiation thermal stresses during burn -in 
+or packaging [85]. However, the exact factors that determine the maximum EF and the dose rate 
+where the transition between  HDR and LDR  response occurs has never been determined 
+precisely. The largest LDR EFs that have been observed occur in bipolar linear circuits that 
+incorporate LPNP and SPNP transistors [82]. Additional studies have shown that a small amount 
+of H 2 can have a significant effect on the EF a nd LDR response and that 100% hydrogen can 
+cause significant degradation at HDR and LDR  [87]. The main characteristics of ELDRS  listed 
+below are described briefly in this subsection; hydrogen is described in detail in Section 4. 
+• True dose rate effect (TDRE) versus time-dependent effect (TDE) 
+• Bias conditions 
+• Passivation 
+• Pre-irradiation elevated temperature stress (PETS) 
+• Molecular hydrogen contamination 
+True Dose Rate Effect versus Time-Dependent Effect 
+When ELDRS was first discovered , it was observed as a “t rue” dose rate effect (TDRE) and not 
+a time-dependent effect (TDE) often observed in CMOS. Presence of a  TDRE means that the 
+degradation at the end of an LDR  irradiation is greater than the degradation measured after 
+irradiation to the same dose at HDR fol lowed by a room temperature anneal  (RTA) for a time at 
+least as long as the irradiation time at LDR and for the same bias conditions.  Presence of a TDE 
+means that the degradation at HDR and LDR is essentially the same when measured at the same 
+time from the beginning of irradiation (including anneal time). The LDR EF shown in Figure 34 
+includes both the contribution from the TDRE and TDE. In this figure, an LM111 comparator  
+has been subjected to a 175°C, 300-hour pre-irradiation elevated temperature stress (PETS), then 
+irradiated to various total dose values at 50 rad(Si)/s and 10 mrad(Si)/s. Following each set of 
+HDR irradiations, the samples were annealed at room temperature for the same amount of time 
+as the LDR irradiation to the same dose to determine the TDE. The results show that above 10 
+krad(Si), there is a TDRE as well as a TDE component of the total EF. 
+
+
+--- PAGINA PDF 32 ---
+24 
+ 
+Fig. 34. Input bias current of LM111 versus dose for HDR and LDR irradiation plus RTA after HDR. Parts subjected to PETS of 
+175°C for 300 hours prior to irradiation [89]. 
+ 
+Unfortunately, in the literature , almost all of the data on bipolar linear circuits as a function of  
+dose rate are only shown as the result immediately after the irradiation and not as a function of 
+time, so the EF cannot be separated into components of TDRE and TDE. This could have some 
+implications when defining the rules for total dose evaluations. 
+Bias Conditions 
+Many of the experiments examining ELDRS are performed under a single irradiation bias 
+condition, either with nominal or maximum supply voltage ( VCC) or with all leads grounded or 
+shorted. The rationale for using the no bias condition is that the ELDRS effect occurs under very 
+low oxide electric fields [ 92]. It has been shown that for many sensitive electrical parameters  
+(e.g., input bias current, output source/sink current, and reference or output voltage, no bias is the 
+worst case [ 93, 94]). However, there are other parameters, such as offset parameters, that are 
+more sensitive to LDR effects with irradiation bias.  In addition, because of circuit effects 
+associated with degradation, it is recommended to always perform ELDRS testing both with a nd 
+without bias. This testing practice with and without bias at HDR and LDR is incorporated in the 
+ELDRS characterization test in MIL -STD-883/TM1019.8. Figure 35 illustrates a case (low 
+dropout regulator) where the worst-case bias at LDR is with no bias. 
+ 
+Fig. 35. Maximum output current of Linear Tech LT1185 versus dose for two dose rates and two irradiation bias conditions [93-94]. 
+Total Dose (rad(SiO2))
+103 104 105
+(+) Input Bias Current (nA)0
+500
+1000
+1500
+50 rad/s
+RTA
+0.01 rad/sStress
+175°C, 300 hour
+TDRE
+TDE
+Pre rad stress
+-4.0
+-3.8
+-3.6
+-3.4
+-3.2
+-3.0
+0 20 40 60 80 100
+Mean Iout Maximum (A)
+Dose [krad(Si)]
+Unbiased  0.01 R/s
+Biased  0.01 R/s
+Unbiased   40 R/s
+Biased       40 R/s
+No output after 30Krad
+Vin = - 6.5V, Vout = -4.7V
+LT1185
+
+--- PAGINA PDF 33 ---
+25 
+ELDRS and Passivation 
+A study led by Shaneyfelt in 2002 [ 102] showed that the final passivation had a significant 
+impact on ELDRS. The study was performed on NSC LM111 comparators, which had the nitride 
+passivation removed by chemical etching. Figure 36 shows the results for the LM111 for input 
+bias current versus dose for parts with and without the nitride passivation at HDR and LDR. 
+The results clearly demonstrate that removing the nitride eliminates ELDRS. An additional study 
+was done with LM139, in which a wafer lot was fabricated with various final passivation splits, 
+including the standard nitride over phosphorous glass (p-glass), no passivation, p-glass only, and 
+a new nitride over p -glass process to reduce the hydrogen content in the oxide. The results were 
+that both nitride -passivated parts degraded severely at both  HDR and LDR , the p -glass part 
+showed ELDRS, and the parts with no passivation were hard at HDR and LDR [102].  
+ 
+ 
+Fig. 36. NSC LM111 input bias current vs. dose for two dose rates for parts with nitride passivation and with the nitride removed 
+[102]. 
+PETS and ELDRS 
+PETS can also have a major impact on the total dose and dose rate response of bipolar linear 
+circuits. The term PETS has been used to include any exposure to elevated temperature that 
+occurs after processing, and before irradiation. This can occ ur during packaging, where parts are 
+subject to short temperature cycles with temperatures as high as 450°C to simulate die attach or 
+lid seal processes or power burn -in, which is often done at 125 –150°C for 168 hours. The effect 
+of PETS on the total dose response can result in either more or less degradation depending on the 
+temperature and time. The increased degradation usually peaks at a time for each pre -irradiation 
+temperature that decreases as the temperature is increased. For pre -irradiation tempera tures as 
+high as 450°C, this time may be as short as a few minutes, and for temperatures of 150°C , it may 
+be many tens of hours. For a temperature of 175°C , it is shown in [ 91] that pre-irradiation bakes 
+can eliminate the true dose rate effect in the NSC LM111 for PETS times longer than 10 hours, 
+as illustrated in Figure 37. 
+
+
+--- PAGINA PDF 34 ---
+26 
+In Figure 37, on the left (Virgin Devices), degradation is shown following irradiation to 100  
+krad(SiO2) at 50 rad(SiO 2)/s and 0.1 rad(SiO 2)/s as well as the result for an RTA of 10 6 seconds 
+following HDR irradiation. These results illustrate that the EF consists of both TDRE and TDE. 
+The horizontal axis shows the pre -irradiation stress time at 175°C. Whi le the TDE remains 
+relatively constant, the TDRE is seen to go away after approximately 10 hours. After 4  106 
+seconds, the degradation at LDR is actually less than at HDR plus RTA. 
+The effects of PETS for higher temperatures and shorter times, as might b e seen in some 
+packaging steps, are shown in Figure 38 [102]. In Figure 38, the increase in input bias current at 
+HDR (83.3 rad(SiO 2)/s) for the NSC LM111 is shown for parts with the nitride passivation and  
+for parts with the nitride removed by wet etch. PETS for 200 seconds at 250°C and 450°C causes 
+a significant increase in the degradation of the parts with nitride, whereas it has little effect on 
+the parts with nitride removed. The peaking of the degradation and subsequent decrease at high 
+doses is explained as a competition between degradation in the input LPNP and SPNP transistors 
+and the npn transistors in the input stage [103]. These results would seem to imply that, since the 
+parts with nitride have a much higher concentration of hydrogen, the PETS c auses a 
+redistribution of the hydrogen, a change in the way the hydrogen is incorporated in the oxide, or 
+a change in the defects that act to release the hydrogen in the form of protons. In addition, these 
+temperatures are high enough to break Si-H and N-H bonds to form molecular hydrogen. 
+ 
+ 
+Fig. 37. Input bias current of LM111 after 100 krad(SiO2) at HDR and LDR versus pre-irradiation stress time at 175°C [91].  
+Time (s)
+101 102 103 104 105 106
+(+) Input Bias Current (nA)0
+200
+400
+National LM111 W21, All Pins Grounded
+175oC, 100hr
+100 krad(SiO2)
+50 rad/s
+0.1 rad/s
+50 rad/s
+0.1 rad/s
+Time
+Dependent
+Effect
+175°C, 100 hr
+100 krad(SiO2)
+Stress Time (s)
+102 103 104 105 106 107
+(+) Input Bias Current (nA)
+200
+400
+600
+800
+1000
+Virgin
+Devices
+National LM111 W21, 175oC Burn-In, 
+All Pins Grounded, 100 krad(S iO2)
+0.1 rad/s
+50 rad/s
+175oC Stress
+100 krad(SiO2)
+RTA
+Input bias current (nA)
+
+--- PAGINA PDF 35 ---
+27 
+ 
+Fig. 38. Input bias current of LM111 vs. dose for parts with and without nitride subject to PETS of 250°C and 450°C for 200 
+seconds [102]. 
+ 
+KEY POINTS ABOUT TOTAL DOSE EFFECTS IN BIPOLAR LINEAR CIRCUITS 
+* The mechanisms of total dose degradation in bipolar technologies involve Not and Nit formation in SiO 2. Gain 
+degradation is the primary effect with bipolar technologies and is particularly large at low bias levels.  
+* The gain decrease is due to an increase in the base current resulting from the degradations of the current due 
+to recombination in the emitter-base depletion region and the current due to recombination in the neutral base. 
+Both are affected because: 1) base surface current increases due to oxide -trapped charges, Not, and interface 
+traps, Nit; and 2) Not changes surface potential at base surface and Nit increases surface recombination 
+velocity. 
+* LPNP and SPNP transistors degrade much more than npn transistors because of surface current flow (directly 
+under the oxide where the recombination centers buildup after irradiation) and lower doped base region.  
+* Bipolar technologies are sensitive to ELDRS and their electrical degradation varies with final passivation (or 
+processing tools), pre-irradiation thermal stresses during burn-in or packaging. 
+* Bipolar ICs see some circuit effects associated with their total dose and dose rate responses. Non -linearity 
+occurs with most recent designs that involve new compensation circuit scheme at their input stage. Because 
+of the dose rate dependence, it is recom mended to always perform ELDRS testing with and without bias at 
+HDR and LDR. 
+Total Dose (rad(SiO2))
+102 103 104 105 106
+(+) Input Bias Current (nA)0
+500
+1000
+1500
+250C/200s - No Nitride
+450C/200s - No Nitride
+Control  - No Nitride
+250C/200s
+450C/200s
+Control
+83.3 rad/s, Co-60
+Pre
+
+--- PAGINA PDF 36 ---
+28 
+4.0 IMPACT OF HYDROGEN CONTAMINATION ON TID RESPONSE OF MOS STRUCTURES 
+Now that we have explained the basic mechanisms and electrical degradation for SiO 2-based 
+devices, the next sections focus on how residual H 2 present in hermetic packages influences the 
+total dose and dose rate response of linear bipolar circuits (i.e., the transition dose rate curve and 
+the EF [95 -100]). Hydrogen contamination is an involved problem since device t ype, 
+passivation, packaging processes, gate structure/metallurgy, and operating ambient temperature, 
+all can impact the sensitivity to the hydrogen concentration level.  
+These studies indicate that there are several likely sources of H2:  
+1. In many cases, piece parts are baked or fired and then sealed in a reducing environment 
+of forming gas containing >4% H2 in N2.  
+2. H2 can also outgas from grain boundaries or structural imperfections in iron-nickel alloy 
+(kovar, Alloy42) lead-frame materials.  
+3. Electro-plated metal components such as plated gold or nickel films are major sources of 
+dissolved hydrogen; H2 can be trapped during this process.  
+4. Moisture is often present and results from the absorption or adsorption of H2O on the 
+internal surfaces of the package prior to sealing or from the sealing gas itself that is 
+moist.  
+Solutions to hydrogen contamination have been proposed and include thermal treatment, the use 
+of package materials with low hydrogen absorption, a change of barrier materials in gates, and 
+the use of hydrogen getters inside the packaging to absorb the hydrogen. However, the problem 
+still exists and there is no clear guideline or limit as to what level of hydrogen might be 
+considered acceptable in hermetically sealed packages. H 2 concentration levels as high as 4% 
+have been detected in hermetic packages through residual gas analysis (RGA) [97].  
+The military standard test method for internal gas analysis, MIL -STD-883 Test Method 1018, 
+was designed to look for moisture and not hydrog en or other gas impurities. There is no 
+specification limit on H 2. In addition, recent research finding s about modeling ELDRS have 
+shown that hydrogen transport and reactions play a key role in the radiation response and long -
+term reliability of bipolar mi croelectronics technologies [96, 98]. Due to its high mobility, 
+hydrogen may diffuse into SiO2 over-layers and participate in the creation of interface traps upon 
+ionizing radiation exposure, thereby enhancing the total dose and dose rate response of bipol ar 
+devices. Modeling of ELDRS is still under investigation; however, the main mechanisms that 
+involve hydrogen reaction and cracking have been identified [96, 98]. 
+4.1 Experiments Showing the Correlation between Hydrogen, Packaging, and Dose Rates 
+The first set of experiments that relate to hydrogen contamination and its effects on the radiation 
+response of bipolar devices started with radiation experiments conducted on specially designed 
+gated-lateral pnp (GLPNP) bipolar fabricated in NSC’s standard linear bip olar process and 
+packaged in hermetically sealed packages. These transistors, shown in Figure 39, were part of an 
+ELDRS test chip taken from a single wafer lot , designed to study the buildup of oxide -trapped 
+charge and interface traps with NSC linear circuit technology. This special wafer lot was 
+fabricated with several different combinations of the final passivation [99].  
+In the first set of experiments, measurements were conducted on samples with five different 
+package conditions: 1) hermetically se aled with 1% in package H 2, 2) lid/seal removed but with 
+metal lid taped back on, 3) lid/seal removed but with cera mic lid taped back on, 4) never -sealed 
+package with taped -on lid. Fig ure 40 shows the radiation response of these devices after 
+
+--- PAGINA PDF 37 ---
+29 
+30 krad[Si] o f total dose exposure. Time -dependent experiments were also conducted to study 
+the diffusion of hydrogen over time from the packages as the package lids are removed. Data on 
+Figure 41 show the decrease in radiation damage as H2 is diffused out of the package.  
+Further experiments were conducted on GLPNP devices with different ambient concentrations of 
+H2; the relationship between excess ambient H 2 concentration and radiation -induced interface 
+trap density ( Nit) w as established using analytical modeling [3]. The experimental results in 
+Figure 42 shows monotonic increase of both radiation -induced interface trap and ox ide-trapped 
+charge formation as ambient H2 concentrations are increased. 
+A first study conducted by Crane, Raytheon, Boeing, and TRW (now Northrop Grumman) shows 
+that the Analog Devices AD590 temperature transducer exhibits ELDRS when irradiated without 
+bias and when packaged in a flatpack  (FP). The part is available in both a FP and a can. Several 
+lots of both cans and FPs were evaluated and the FPs all exhibited  ELDRS whereas the cans 
+were hard at both HDR and LDR. After seeing the results on the NSC GLPNP ELDRS test chip, 
+it was suggested that an RGA be run on the AD590 FPs. The RGA showed that the FP parts had 
+on the order of 0.6% of H 2. This amount of H 2 was apparently enough to cause the FP parts to 
+degrade significantly at LDR under zero bias. Tests run on the AD590 with 100% H 2 did not 
+show any greater degradation than that of parts with 0.6% H 2, indicating a saturating effect with 
+the smaller amount of hydr ogen. However, these results were obtained with parts from different 
+diffusion lots and, therefore, the claim of a causal relationship between H 2 and total dose  
+ 
+Fig. 39. GLPNP 2-D cross-section and layout. 
+ 
+Fig. 40. Radiation induced interface trap build-up in devices 
+with unsealed and hermetically sealed packages. 
+ 
+Fig. 41. Decrease of radiation induced interface traps as H2 
+diffuses out of the sealed package over time. 
+n+ buried layer
+p substrate
+n -epi
+p+ p+ n
++
+Emitter Collector Base
+Gate
+12 
+umbase
+collector
+gate
+emitter 
+12 
+umbase
+collector
+gate
+emitter 
+n+ buried layer
+p substrate
+n -epi
+p+ p+ n+
+Emitter Collector Base
+Gate
+12 
+umbase
+collector
+gate
+emitter 
+12 
+umbase
+collector
+gate
+emitter 
+Sealed kovar
+De-sealed,taped kovar
+De-sealed,taped ceramic
+Never sealed, taped ceramic
+1010
+1011
+1012
+1 10 100
+ΔNit [cm-2]
+Total Dose [Krad(Si)]
+Sealed kovar
+De-sealed,taped kovar
+De-sealed,taped ceramic
+Never sealed, taped ceramic
+1010
+1011
+1012
+1 10 100
+ΔNit [cm-2]
+Total Dose [Krad(Si)]
+De-sealed,Lid-off
+De-sealed,Taped Kovar
+De-sealed,Taped Ceramic
+Never Sealed (taped ceramic)
+Lid Off Time (hours)
+10001010
+1011
+1012
+1 10 1000
+≈
+Never
+Sealed
+Part
+ΔNit [cm-2]
+De-sealed,Lid-off
+De-sealed,Taped Kovar
+De-sealed,Taped Ceramic
+Never Sealed (taped ceramic)
+Lid Off Time (hours)
+10001010
+1011
+1012
+1 10 1000
+≈
+Never
+Sealed
+Part
+ΔNit [cm-2]
+
+--- PAGINA PDF 38 ---
+30 
+sensitivity needed to be confirmed. As a result, 
+additional experiments were performed on another 
+twelve space -qualified AD590s from the same 
+diffusion lot provided by Analog Devices. Parts  
+were irradiated at HDR and LDR for comparison: 
+1) three FPs and three cans were irradiated up to 30 
+krad(Si) at a LDR of 0.01 rad (Si)/s; 2) t hree FPs 
+and three cans were irradiated up to 100 krad(Si) at 
+a HDR of 25 rad (Si)/s. Varying levels of H 2 were 
+detected through RGA, respectively, 0.2%, 0.27%, 
+and 0.88% of H 2 for the FP ceramic packaged 
+devices, whereas 0% was detected within the cans 
+devices. These results are  not surprising because 
+the FPs had several potential sources of hydrogen 
+such as gold/nickel/tungsten metallization and 
+kovar lid with gold-nickel plating. The cans did not 
+show any hydrogen content because of their seal 
+process (i.e., a welded process in which parts are sealed in dry air preventing the introduction of 
+hydrogen). All irradiated parts were unbiased during irradiation with all leads grounded or in 
+conductive foam.  
+The output current ( or error in temperature) was recorded for each dose step with a Vcc of 20 V. 
+The results are shown in Figure 43 and reveal that FP devices degrade significantly more than 
+the cans at LDR and HDR when irradiated unbiased. At HDR, the degradation in the output 
+current (or error in temperature) tracks the increase in hydrogen content (0.2%, 0.27%, and 
+0.88%) and, at LDR, the impact  of hydrogen is even worse on the degradation (see 0.33% and 
+1.04% of H2 for the LDR case). An additional data set was obtained by irradiating another device 
+packaged in a can with 100% hydrogen at HDR to make it degrade similar to the FP devices. 
+This latter data set suggests that an LDR-accelerated testing methodology could be developed by 
+using hydrogen soaking at HDR [97].  
+ 
+ 
+Fig. 43. Degradation of the AD590 error temperature (or output current) as a function of total dose: 1) FPs degrade more at LDR 
+and HDR compared to the cans due to H 2 contamination. 2) At HDR and LDR, there is more degradation when H 2 content 
+increases. 3) Cans can be made to degrade similar to the FPs when the die is exposed to H 2 and HDR [97-101]. 
+-7
+-6
+-5
+-4
+-3
+-2
+-1
+0
+0 5 10 15 20 25 30
+Error in temperature (0C)
+Total Dose krad(Si)
+FP-LDR-0.8-1.2% H2
+FP-HDR
+CAN-HDR-0% H2
+CAN-LDR-0% H2
+HDR-100% H2
+Early failure
+ 
+Fig. 42. Radiation-induced oxide-trapped charge (Not) and 
+interface-trap (Nit) buildup. 
+
+
+--- PAGINA PDF 39 ---
+31 
+To confirm the correl ation between molecular hydrogen and 
+ELDRS, additional experiments were conducted to study the 
+effects of externally applied hydrogen on both the total dose 
+and dose rate response of bipolar test structures and ICs [100]. 
+The hydrogen was applied to the pa rts in a glass tube that was 
+evacuated and then back -filled with H 2 to a controlled pressure 
+that determines the concentration of H 2 (%) to which the part is 
+exposed. The parts were irradiated in the glass tube at different 
+dose rates and to different tota l dose levels. The vacuum level 
+in each tube before being soaked by H 2 was 10-5 torr. A picture 
+of the glass tubes used by JPL for the H 2 exposures is shown in 
+Figure 44. 
+Several experiments were performed with different percentages 
+of H 2 as well as for different amounts of H 2 exposure time 
+before being irradiated. It has been shown that H 2 diffuses quite 
+rapidly through oxides [100] but does not penetrate nitride [97]. 
+Hence, it is reasonable to assume that when the parts with 
+nitride hav e the nitride removed, the H 2 can outgas from the 
+layers near the active device regions and increase the total dose 
+hardness.  
+4.1.1 LM193 
+The circuit characterized in this additional set of experiments is an NSC LM193 dual voltage 
+comparator. The LM193 is a dual version of the well-characterized LM139 quad comparator and 
+has the same circuit design and layout, utilizing substrate and lateral pnp transistors in the input 
+stage circuit. They are packaged in 8 -pin dual in-line ceramic packages with sealed ceramic l ids 
+and have a standard final passivation of nitride over p -glass. The LM193 devices were from a 
+single date code lot (date code 0551) and were purchased as commercial parts.  An RGA showed 
+the presence of <0.01% H 2 in the package cavity. Thirty of the part s had the lid removed and 
+were subjected to a CF 4/O2 plasma etch (150 mTorr CF 4, 50 mTorr O 2, 125 Watt RF for three 
+minutes) to remove the top nitride layer, leaving the p -glass passivation. The nitride was 
+removed because it is a barrier to hydrogen. The irradiations were carried out at JPL in a 
+Shepherd 81 Co -60 irradiator. All irradiations were conducted with all leads shorted and 
+grounded. All of the parts in the glass tube were soaked in the H 2 gas ambient for a minimum of 
+48 hours before irradiation t o allow the H 2 to penetrate the p-glass. The range of dose rates used 
+varied from 2 mrad/s to 100 rad/s, while the maximum total dose varied from ~8 krad to 100 
+krad. The LM193 was characterized for all dc specification parameters using an LTS2020 linear 
+circuit tester.  
+Figure 45 displays the results of the increase in input bias current at 10 krad(Si) for an NSC 
+LM193 dual comparator irradiated at various dose rates and various H 2 levels. LM193 data 
+includes include the as -packaged parts from date code 05 51 (virgin), and the parts with the 
+nitride plasma etched off, leaving only the p -glass on the top of the SiO2 layer, and irradiated in 
+air (PG-0%), in a glass tube with 1% H2 (PG-1%), and in a glass tube with 100% H 2 (PG-100%). 
+The individual data points illustrate the spread in the data (the lines simply provide a guide). 
+Unlike the other NSC parts with nitride, these LM193s are relatively hard down to 10 mrad(Si)/s 
+before exhibiting ELDRS. The parts with p-glass and no externally applied H 2 exhibit ELDRS at 
+a much higher dose rate. As the amount of H 2 is increased in the p -glass parts, the saturated 
+degradation at LDR increases and the transition dose rate also increases.  
+ 
+Fig. 44. Picture of glass tubes used by 
+JPL for exposure in H2. 
+
+
+--- PAGINA PDF 40 ---
+32 
+ 
+Figure 45. Increase in input bias current at 10 krad for NSC LM193 as packaged and with the nitride removed and exposed to 
+0%, 1%, and 100% H2 versus dose rate. Individual data points are shown [100-101]. 
+4.1.2 HSYE-117RH Linear Regulator 
+The HSYE -117RH linear regulator from Intersil was also evaluated and showed  a significant 
+amount of hydrogen (~3%) in its package. It presents some interesting packaging characteristics 
+that are potential source s of hydrogen , such as brazed kovar lids with gold plating and dry 
+nitrogen gas. It is likely that a large amount of hyd rogen was introduced during the sealing 
+process in a reducing environment of forming gas containing some H 2 in N2. The HYSE-117RH 
+has no passivation layer other than SiO 2. Two parts of the HYSE -117RH were available for this 
+test. Parts were from the same w afer lot and were irradiated unbiased at a dose rate of 0.05 
+rad(Si)/s. One part was opened for more than a week to release the hydrogen content. Parts were 
+electrically tested with an LTS2020 mixed signal automated test system located adjacent to the 
+Co-60 range source. Pre - and post - irradiation tests were performed at ambient temperature 
+according to the DC test parameters listed in the vendor or military specifications. Special 
+precautions were taken to allow the temperature of the HYSE -117RH to stabili ze before 
+electrical testing was conducted. Three critical parameters were considered to assess the HYSE -
+117RH total dose response: changes in Vref, Iout and Vout. Degradation of Iout is a good indicator of 
+the loss of gain in the output transistor, which, in this case is a vertical pnp. Vout and Vref are also 
+good parameters to be considered so that the DC regulation of the device can be estimated. The 
+results shown in Figures 46, 47,  and 48, clearly indicate significant differences in the response 
+between the sealed part (~3% of hydrogen content) and the open one (~0%). First, as shown in 
+Figure 47, the voltage reference  starts degrading at 100 krad. This is not surprising since this 
+process is a “hardened” process ; therefore, large variations were not expected  below 100 krad. 
+Small variations in the voltage reference have a non-negligible effect on the DC regulation of the 
+linear regulator.  
+The most significant difference is shown fo r the output current change and dropout voltage. 
+From the results show in Figure 47 and Figure 48 , a very large difference is observed between 
+the two parts: 1) an approximate 200 mA difference at 150 krad for the output current and 2) an 
+approximate 0.9 V difference at 150 krad in the dropout voltage. These results clearly indicate a 
+correlation between hydrogen content, packaging and total dose response, with a significant 
+increase in degradation when hydrogen is present. 
+10
+100
+1000
+0.0001 0.001 0.01 0.1 1 10 100 1000
+Delta Ib (nA)
+Dose Rate [rad(Si)/s]
+packaged
+air
+1% H2
+100% H2
+Ib aNit
+Increasing H2
+
+--- PAGINA PDF 41 ---
+33 
+ 
+Fig. 46. Reference voltage degradation as a function of total 
+dose for the HYSE -117RH regulator. Two devices were tested: 
+sealed package with ~3% hydrogen and open package with 
+~0% hydrogen. The dose rate was 0.05 rad/s. 
+ 
+Fig. 47. Maximum output current variation  as a function of 
+total dose for the HYSE -117RH regulator. Two devices were 
+tested: 1) sealed (~3% of hydrogen) and 2) open (0% of 
+hydrogen). The dose rate was 0.05 rad/s. 
+ 
+4.1.3 Experimental Results—GLPNPs 
+To provide insight into the physical 
+mechanisms of the total dose degradation in the 
+presence of H2, additional experiments were 
+performed on the GLPNP devices. Experiments 
+were performed both at ASU and JPL facilities. 
+Data were taken on the transistors in the sealed 
+kovar lid packages (i.e., ~1.2 to 1.4% H 2 in the 
+cavity), in air (with the lid off), an d in the glass 
+tube at 100% H 2 over a range of dose rates 
+from 0.02 to 100 rad/s, all to a total dose of 30 
+krad. The sample size was three for each set of 
+conditions. For each data set, because of the 
+GLPNP structures, the value of Nit was 
+extracted using the method discussed in [9 9]. 
+Figure 49 is a plot of the average increase in Nit 
+versus the hydrogen concentration, including data taken in an earlier experiment by NAVSEA 
+Crane at 20 mrad(Si)/s [99]. The error for each data point is within the symbol. It is clear that the 
+value of Nit increases with the amount of externally applied H 2 and with decreasing dose rate. 
+With 100% H 2 (atmospheric pressure), Nit is greater  at HDR  than at LDR for parts with no 
+externally applied H2. 
+Figure 50 shows the data for the increase in Nit (average of three samples) versus the dose rate 
+for irradiation to 30 krad. The lines provide a guide for the eye and represent suggested 
+hypothetical curves based on previous experimental data [ 100, 101] showing saturation at very 
+low dose rates, current ELDRS models [1 4, 104, 105], and the hydrogen/ELDRS model 
+presented in this document. There are two clear trends in the data. As the H 2 concentration is 
+increased, the maximum Nit value at LDR increases and the transition between HDR and LDR 
+response moves to higher dose rate. The highest dose rate that could be achieved with the 
+available sources was 100 rad(Si)/s. This dose rate did not exhibit a significant decrease in the Nit 
+value of the 100% H2 sample, suggesting that Nit value will decrease at higher dose rates. 
+ 
+Fig. 48. Dropout voltage variation as a function of total dose for 
+the HYSE-117RH regulator. Two devices were tested: 1) 
+sealed (~3%) of hydrogen and 2) open (0%) of hydrogen. The 
+dose rate was 0.05 rad/s. 
+
+
+--- PAGINA PDF 42 ---
+34 
+ 
+Fig. 49. Extracted value of increase in Nit versus hydrogen concentration for GLPNPs at 30 krad for irradiation at several dose rates. 
+ 
+Fig 50. Nit versus dose rate for irradiation to 30 krad for the GLPNPs with p-glass. Lines are hypothetical curves to guide the eye. 
+A similar trend is seen for the average increase in base current for a base-emitter voltage of 0.5 V 
+and a gate bias of 0 V, as shown in Figure 51. Again the error for each data point is within the 
+symbol. The correlation between the increase in Nit and the increase in base current establishes 
+the dependence of LPNP base current on the increased interface trap density. We note that the 
+input bias current of the LM193 is primarily the base current of an LPNP transistor in the input 
+circuitry and, therefore, would also be expected to depend on the increase in Nit.  
+In addition, post -irradiation annealing experiments were conducted in room t emperature with 
+another set of GLPNP devices irradiated both in air and in 100% H 2 environments. The 
+annealing experiments also took place both in air and in 100% H 2 environments. Higher 
+temperature anneal s were conducted in air for samples irradiated in 1 00% H 2 as well. The 
+annealing results indicate that changes in interface -trap and oxide -trapped charge densities are 
+strong functions of H2 content in both exposure and post -exposure ambient. For devices 
+irradiated in air, Figure 52 shows the annealing behaviors of a 60-day air anneal followed by a 3-
+day 100% H 2 anneal. The decrease of  both Nit and Not after a 60-day air anneal agrees with past 
+results. After a 3-day 100% H 2 anneal, a decrease in Not corresponding to an increase in Nit was 
+observed in these devices. This annealing behavior coincides with the results and mechanisms 
+described by Stahbush and Mrstik [106, 107], indicating that H2 reacts at trapped hole sites to 
+anneal Not and produce additional H+ to enhance Nit generation during annealing.  
+0.0E+00
+5.0E+10
+1.0E+11
+1.5E+11
+2.0E+11
+2.5E+11
+3.0E+11
+3.5E+11
+0.00001 0.0001 0.001 0.01 0.1 1 10 100
+Hydrogen concentration (% )
+Nit (cm^-2)
+0.02 rad/s
+0.1 rad/s
+0.6 rad/s
+100 rad/s
+H2 tube
+Sealed
+package
+air
+Irradiation to 30 krad
+Increasing H2
+Decreasing
+Dose rate
+0.0E+00
+5.0E+10
+1.0E+11
+1.5E+11
+2.0E+11
+2.5E+11
+3.0E+11
+3.5E+11
+0.001 0.01 0.1 1 10 100 1000 10000
+Dose rate (rad/s)
+Nit (cm^-2)
+Air
+1% H2
+100% H2
+Air
+1% H2
+100% H2
+
+--- PAGINA PDF 43 ---
+35 
+ 
+ 
+Fig. 51. Increase in base current at a base -emitter voltage of 0.5 V versus dose rate for irradiation to 30 krad for the GLPNPs 
+with p-glass. Lines are hypothetical curves to guide the eye. 
+ 
+Fig. 52. Extracted Nit and Not values for GLPNP devices irradiated in air, then annealed first in air for 60 days and then in 
+100% H2 for 3 days. 
+ 
+KEY POINTS ABOUT THE CORRELATION OF H2 AND TOTAL DOSE EFFECTS IN BIPOLAR CIRCUITS 
+ Molecular hydrogen (H2) influences the total dose and dose rate response of linear bipolar ICs. Residual H2 as 
+low as 0.1% present in hermetic packages can significantly affect the degradation. Hydrogen introduced 
+during the passivation process influences ELDRS. 
+ ELDRS-free parts provided by manufacturers can b e made ELDRS in the presence of hydrogen. This can 
+have a significant impact on hardness assurance for parts purchased in die form and packaged later , or 
+directly introduced in hybrid circuits. 
+ Increasing H2 concentration increases device total dose degradation for both HDR and LDR. 
+ Exposure at HDR in 100% H2 causes more degradation than exposure in air at LDR. 
+ The transition between HDR and LDR response moves to higher dose rate with increasing H2.  
+0.0E+00
+5.0E-08
+1.0E-07
+1.5E-07
+2.0E-07
+2.5E-07
+3.0E-07
+3.5E-07
+0.001 0.01 0.1 1 10 100 1000 10000
+Dose rate (rad/s)
+Del Ib (A)
+Air
+1% H2 
+100% H2
+0.0E+00
+5.0E-08
+1.0E-07
+1.5E-07
+2.0E-07
+2.5E-07
+3.0E-07
+3.5E-07
+0.001 0.01 0.1 1 10 100 1000 10000
+Dose rate (rad/s)
+Del Ib (A)
+Air
+1% H2 
+100% H2
+
+
+--- PAGINA PDF 44 ---
+36 
+5.0 MODELING 
+The previous sections detail the mechanisms of radiation effects in SiO 2-based devices that are 
+relevant for bipolar and CMOS technologies and show experimental evidence that a correlation 
+exists between residual H2 present in package and ELDRS. This section focuses on the physical 
+mechanisms responsib le for “true” dose rate effects and hydrogen contamination. Up to now, 
+two types of models have been proposed to explain ELDRS: the space charge model that focuses 
+on the dose rate –dependent effect of positive charge (e.g., trapped holes) on the transport of 
+protons toward the interface [ 92, 40] and the bimolecular reaction model that describe s a 
+reduction of proton density in the oxide during HDR exposures [ 109, 110]. The combined effect 
+of the mechanisms described by these two models yields an enhancement in Nit buildup at LDR 
+when compared to HDR irradiations. A good review of these models has been presented by 
+Pease et al. [111]. Additional work has been presented by Rowsey et al [112] and provides a very 
+good description of the true dose rate effect and hydrogen contamination as well. This latter 
+model was based on first principles calculations using density functional theory. 
+Here, we present a generalized 1-D model that simulates the physical mechanisms that contribute 
+to the buildup of defects in SiO 2 structures following exposure to ionizing radiation. This model 
+was developed by ASU under JPL supervision and captures both dose rate effects and the impact 
+of hydrogen contamination on the dose rate response. It incorporates hole trapping mechanisms 
+as well as the formation of interface traps due to the release of hydrogen as described by the two-
+stage hydrogen model [108]. Dose-rate effects are simulated following the approach described 
+by Hjalmarson et al. in [110], which adopts most of the formalisms presented in [49, 113, 114]. 
+The influen ce of molecular hydrogen on dose rate response is incorporated by using the key 
+reactions that include molecular hydrogen (H 2) cracking at positively charged defects and other 
+bimolecular reactions. Modeling results show that space charge effects arise nat urally from these 
+bimolecular reactions. As a result, the model therefore captures the combined effect  of the two 
+dose rate mechanisms described above. The dose rate effects in SiO 2 technologies can be 
+analyzed and modeled by processes that use kinetic equations of those mechanisms.  Numerical 
+calculations are obtained through a finite difference representation of the model.  
+The model is validated with the data presented in the previous sections from dose rate 
+experiments on GLPNP bipolar transistors. We used their electrical characteristics to extract the 
+densities of radiation-induced defects (i.e., oxide trap charge, Not, and interface trap, Nit). The 1-
+D model is used to compare the dose rate sensitivity of the GLPNP structures and investigate the 
+mechanisms that contribute to the dose rate –dependent buildup of these defects. Finally, we 
+extend the discussion based on additional calculations that provide insight into the key factors 
+that determine total dose and dose rate effects in SiO 2-based devices, no t only bipolar 
+technologies. We show that degradation is a strong function of different parameters, such as 
+applied bias, dose -rate, hydrogen contamination , and distribution of trapping precursors (i.e. , 
+processing defects), that all can affect the dose and dose rate responses.  
+5.1 1-D Model Description 
+The theoretical model presented below describes the physical mechanisms contributing to the 
+buildup of radiation -induced defects in a MOS system. This model helps to understand the 
+underlying mechanisms that describe the dose rate sensitivity and the effect of hydrogen on dose 
+rate effects. The model incorporates hole trapping mechanisms as well as the formation of interface 
+traps due to the release of hydrogen, as described by the two-stage hydrogen radiolysis model [1]. 
+The model can be divided into two set of key reactions that captures dose rate effects  and 
+hydrogen contamination effects. A more complete set of equations is available upon request. 
+
+--- PAGINA PDF 45 ---
+37 
+5.1.1 Dose Rate Effects 
+The mechanisms in cluded in the model can be described by the following set of reactions 
+between the mobile species and defects [109, 110]: 
+a) Hole trapping:         →   
+  (1) 
+    
+      →     (2) 
+b) Proton Release:                (3) 
+       →         (4) 
+          →     (5) 
+c) De-passivation:          →   
+       (6) 
+Reactions (1)–(6) describe the mechanisms contributing to the radiation response following the 
+generation of electron-hole pairs and initial “prompt” recombination, as described in the first part 
+of this document. In Reactions (1) and (2), neutral hole trapping defects (~oxygen vacancies) are 
+denoted by DA, and positively charged hole trapping defects are denoted by  DA
++ . As described 
+by Reaction (2), a positively charged defect can be neutralized by capturing an electron. The 
+formation of interface traps occurs through the “depassivation” of Pb-centers at the Si -SiO2 
+interface. As described in the two -stage model [111], protons ( H+) are first released within the 
+oxide and then migrate toward the interface where they can react with the passivated dangling 
+bond to form interface traps. It is commonly assumed that the proton is released following hole 
+capture [114]. The first stage of the proton release model is described by Reactions (3)–(5). In 
+these reactions , DBH is a hydrogenated neutral hole trapping defect. In the model, the atomic 
+nature of DB is not determined. Reactions (3) and (4) describe proton release following hole 
+capture. Reaction (5) describes electron capture at a positively charged hydrogenated defe ct 
+(i.e.,     ). The competition between the mechanisms described by Reactions (4) and (5) result 
+in dose rate effects [109]. In the second stage, protons that have reached the Si-SiO2 interface can 
+react with passivated Pb centers (PbH) as described by Reaction (6). The PbH centers are 
+dangling bonds that have been passivated by hydrogen during processing. This reaction will 
+produce a dangling bond and release a neutral hydrogen molecule (i.e., H2).  
+Reactions are formulated into continuity equations describing the reactive transport for each 
+mobile species. Following the notation in [109-110], the continuity equations are given by  
+   
+                 
+ 
+. (7) 
+In Reaction (7), ni ≡ ni(r,t) is the density for each species i defined as a function of position r and 
+time t, Jsi is the species current density, Rj is the reaction rate, and     is the stoichiometric 
+coefficient giving the contribution from reaction j to species i [109-110]. The flux of each mobile 
+species is given by fi = |Jsi|/q. The kinetic equations describing the rates of the radiation induced 
+defects buildup are  
+     
+                –              , (8) 
+     
+                –               –          , (9) 
+   
+                . (10) 
+
+--- PAGINA PDF 46 ---
+38 
+In Reactions (8)–(10), NTA and NTB are the density of hole traps (i.e., DA) and the density 
+hydrogenated defects (i.e. , DBH); pt,A and pt,B are the density of trapped holes at hole traps and 
+hydrogenated defects, respectively;  pta and  ptb are the capture cross -sections for holes at hole 
+traps and at hydrogenated defects;  nptb and  nptb are the capture cross -sections for electrons at 
+positively charged hole traps and at positively charged hydrogenated defects; rpth is the proton -
+release coefficients from positively charged hydrogenated defects;  it and  NPbH are the capture 
+cross-section for protons at passivated Pb centers and the density of passivated Pb centers at the 
+Si-SiO2 interface, respectively. The electrostatic potential ( ) is obtained by solving Poisson’s 
+equation given by 
+   
+       
+   
+   
+  
+ 
+   
+   
+                            , 
+  (11) 
+where all charged particles are included in the charge density term ( ox).  
+A finite -difference methodology is used to compute solutions for the densities of the mobile 
+species as well as for the electrostatic potential ( ) at nodes contained within a mesh 
+superimposed on the solution domain . With this set of reactions, calculations for the buildup of 
+Nit can be plotted for any SiO2 system as a function of dose rate for a fixed total dose level. 
+5.1.2 Hydrogen Effects 
+To capture the effects of H 2 on dose rate respons e, the model follows the approach in [108] 
+which adopts most of the formalisms presented by Stahlbush et al. and Mrstik et al. in [106-107]. 
+In the model, hydrogen cracking occurs at positively charged defects. Therefore, H2 disassociates 
+to form hydrogenated defects (i.e., DH centers) by releasing a proton following hole capture (i.e., 
+the positive charging of a defect). The H 2 cracking mechanisms are described by the following 
+set of reactions [109-110]: 
+H2 cracking:   
+          
+  (12) 
+   
+                  (13) 
+               (14) 
+          
+     (15) 
+   
+           (16) 
+ 
+In Reactions (12) –(15), a third kind of hole trapping defect is introduced, i.e., D C. In the 
+hydrogen cracking process, (12) describes hole capture resulting in positively charging of the D C 
+defect. Reaction (13) describes the cracking of H 2 at the positively charged defect creating a DH 
+center (DCH) and releasing a pr oton. The resulting DH center can release additional protons as 
+described by Reactions (14) and (15). Reaction (16) describes electron compensation at 
+positively charged DC defects. In this case, dose rate dependence results from the competition of 
+Reactions (13) and (16). By introducing the hydrogen cracking mechanisms into the calculations, 
+it is possible to describe the effect of H 2 on the buildup of interface traps and on the dose rate 
+response. Section 5.1.3 describes the experimental results from irradiation performed on GLPNP 
+devices and how the model can reproduce the experimental data. In addition, we employed the 
+model to determine the key factors responsible for total dose and dose rate effects in SiO2-based 
+devices. Experimental data obtained on FOXFETs devices are also presented. 
+
+--- PAGINA PDF 47 ---
+39 
+5.1.3 Calculations and Discussions 
+To explain  and extrapolate  the results from experiments obtained from irradiation of GLPNP 
+devices, we use the 1 -D model described above and employ a finite-difference methodology for 
+the numerical calculations. This methodology computes solutions for the densities of the mobile 
+species as well as for the electrostatic potential at nodes contained within a mesh superimposed 
+on the solution domain [ 115]. These calculations allow for studying the key mechanisms 
+responsible for differences in enhancement factor (EF) between devices as well as identifying the 
+key mechanisms responsible for the build-up of Nit at LDR in the presence of H2. 
+5.1.3.1 Calculation 1: Dose Rate Effects 
+The first set of calculations, shown in Fig ure 
+53, plots the buildup of Nit as a function of 
+dose rate at a total dose of 30 krad(SiO 2) for 
+different values of tox. All of the calculations 
+are obtained from transient simulations  
+performed up to a maximum total time of 
+3 × 107 s, which is the time required to reach 
+a dose of 30 kr ad(SiO2) at the lowest dose 
+rate. These calculations are obtained using a 
+uniform density of hydrogenated defects, NTB 
+= 10 15 cm-3, distributed throughout the oxide 
+and a uniform density of hole traps, NTA = 
+1019 cm-3, located within 25 nm of the Si -
+SiO2 interface. Other model parameters used 
+in the calculations are given in Table 2. The 
+defect densities and capture cross -sections 
+used here are consistent with values reported 
+in [ 13, 110, 11 4, 1 16, 117]. The results 
+plotted in Figure 53 show that at low dose rates, the buildup of Nit is suppressed as tox is reduced 
+from 1 ,000 nm to 400 nm (i.e., Nit is lower for tox = 400 nm for dose rates below 0.1 
+rad(SiO2)/s). This reduction is a result of fewer protons being released within the thinner oxides, 
+as des cribed by Reaction (4), and consequently a lower Nit. For increasing dose rates, the 
+competition between Reactions (4) and (5) becomes more significant as the density of radiation -
+induced generated ehps becomes comparable to NTB. In this case, electron re combination at  
+DBH+ reduces the amount of protons being released within the oxide , resulting in a reduction in 
+Nit at higher dose rates. This neutralization process is described by Reaction (5). However, the 
+results in Figure 53 show that the reduction in Nit as a function of dose rate (i.e., the dose rate 
+sensitivity) is more significant for tox = 1,000 nm than for tox = 400 nm. The LDR to HDR EF is 
+reduced from approximately 6.2 for tox = 1,000 nm to approximately 1.8 for tox = 400 nm. The EF 
+is obtained from the ratio of Nit for dose rates of 10 -3 rad(SiO2)/s and 10 2 rad(SiO2)/s. The 
+difference in dose rate sensitivity as a 
+function of tox can be explained by 
+space charge effects. 
+Space charge effects that contribute to 
+dose rate sensitivity are investigated by 
+using different densities of hole 
+trapping defects (i.e., NTA). A higher 
+NTA results in more fixed positive 
+ 
+Fig. 53. Calculations for the buildup of Nit plotted as a function 
+of dose rate for a total dose of 30 krad(Si) and for different 
+values of tox. 
+Table 2. Simulation input parameters for calculations in Figures 54 and 
+55. 
+Parameter Value Units 
+NPbH 1013 cm-2 
+σpta 5.5  10-14 cm2 
+σptb 5.5  10-14 cm2 
+σnpta 5.0  10-13 cm2 
+σnptb 2.0  10-12 cm2 
+σit 10-11 cm2 
+rpth 10-5 s-1 
+ 
+
+
+--- PAGINA PDF 48 ---
+40 
+charge near the Si -SiO2 interface. Localized electric fields caused by the fixed positive charge 
+and other radiation-generated species can result in the confinement of electrons within the oxide 
+bulk [ 13, 92]. The confinement of electrons enhances recombination at  DBH+ sites, and 
+contributes to dose rate sensitivity. Figure 54 is a plot of the EF obtained by the ratio of Nit at a 
+total dose of 30 krad(Si) for dose rates of 10 -3 rad(Si)/s and 10 3 rad(Si)/s. The EF is plotted as a 
+function of tox for two different d ensities of hole traps, NTA = 10 19 cm-3 and 10 18 cm-3, located 
+within 25 nm of the Si-SiO2 interface. The results in Figure 54 show that a higher density of hole 
+trapping defects near the Si -SiO2 interface enhances dose rate sensitivity as a function oxide 
+thickness. Space charge effects are due to localized electric fields caused by radiation -generated 
+species and can alter the tran sport of charged particles during irradiation. However, as tox is 
+reduced, space charge effects become less significant because the transport of charged particles is 
+predominantly determined by the electric field set by the gate bias and the gate -to-semiconductor 
+work-function difference. This effect is demonstrated by the calculation results shown in Fig ure 
+55. Here, for the case of NTA = 1019 cm-3, dose rate sensitivity is significantly impacted by oxide 
+thickness as determined by the increase in EF as a function of tox. On the other hand, for NTA = 1018 
+cm-3, the impact of tox on dose rate sensitivity is less significant as determined by the nearly 
+constant EF as a function of tox. 
+Additional data from numerical calculation s are shown in Figure 55. Data show a plot of the 
+LDR to HDR EF calculated by the ratio of Nit at a total dose of 30 krad(Si) for dose rates of 10 -3 
+rad(Si)/s and 100 rad(Si)/s. The EF is plotted as a function of the electron capture cross -section 
+at positively charged hydrogenated defects (i.e.,  nptb) and for two different densities of hole 
+traps, NTA = 1019 cm-3 and 1018 cm-3, located within 25 nm of the Si-SiO2 interface. For the lower 
+values of  nptb, electron compensation at positively charged hydrogenated defects, i.e., Reaction 
+(5), is not significant. Consequently, the EF, and therefore dose rate sensitivity, is independent of 
+electron compensation at positively charged hydrogenated defects for values below 10 -13 cm2. 
+For these values of  nptb, the simulated EF is simply the result of space charge effects that arise 
+from buildup of fixed positive charges at hole traps near the Si-SiO2 interface, and thus increases 
+with NTA. For  nptb = 10-14 cm2, the EF is ~1 for NTA = 1018 cm-3 and ~3.5 for NTA = 1019 cm-3. As 
+ 
+Fig. 54. LDR to HDR enhancement factor obtained by the 
+ratio of Nit for dose rates of 10-3 rad(Si)/s and 100 rad(Si)/s for 
+two different densities of hole traps, NTA = 1019 cm-3 and 1018 
+cm-3, located within 25 nm of the Si -SiO2 interface. For these 
+calculations NTB = 1016 cm-3 and is uniformly distributed in the 
+oxide. 
+  
+Fig. 55. LDR to HDR enhancement factor given by the ratio of 
+Nit for dose rates of 10-3 rad(Si)/s and 103 rad(Si)/s plotted as a 
+function of tox, for two different densities of hole traps, NTA = 1019 
+cm-3 and 1018 cm-3, located within 25 nm of the Si-SiO2 
+interface. For these calculations NTB = 1015 cm-3 and is uniformly 
+distributed in the oxide. 
+
+
+--- PAGINA PDF 49 ---
+41 
+ nptb increases above 10 -13 cm2, the EF increases as the reaction between electrons and DBH+ 
+centers becomes more significant at higher dose rates. However, the enhancement is greater for 
+the case of NTA = 1019 cm-3 because space charge confines electrons in the oxide bulk, allowing 
+more recombination to occur. A higher NTA results in more fixed positive charge near the Si-SiO2 
+interface and therefore more confinement of electrons in the oxide bulk.  
+5.1.3.2 Calculation 2: Effect of Hydrogen 
+Effect of Hydrogen on Dose Rate Sensitivity 
+We performed additional calculations to study the impact of hydrogen on  the total dose and dose 
+rate response using the 1-D model on a MOS structure that simulates the gated base oxide region 
+of the GLPNP bipolar transistors. The simulation parameters include a fixed gate work -function, 
+uniform Si substrate doping concentrati on and a base oxide thickness of 1.22 μm. Other 
+parameters are the same as listed in Table 1, except NTC = 10 15 cm-3, which is the density of 
+defects D C. For these calculations , no initial density of hydrogenated defects is specified (i.e. , 
+NTB = 0). Figure 56 shows the model calculations of Nit plotted as a function of dose rate for 
+three different concentrations of H2. The results show a shift to the right in the dose rate response 
+of Nit (i.e., the Nit vs. dose rate curve) as the concentration of H 2 is increased. This shift is 
+consistent with the experimental data shown in Figure 46. As mentioned above, dose rate effects 
+arise from the competing contributions of Reactions (13) and (16). Increasing the concentration 
+of H 2 favors Reaction (13) resultin g in more protons being released. Therefore, the dose rate 
+response is shifted to right as a greater density of electrons is required for recombination 
+mechanisms to become significant. 
+It should be noted that the saturation point can be controlled dependi ng on the oxide parameters, 
+indicating that by using a known oxide process, it would be possible to predict the expected EF 
+for a specific device at a specific dose for LDR conditions. As a result, it is not surprising that we 
+see saturation for the GLPNP devices and no saturation for the LM193 dual comparator from 
+NSC reported by Pease [100]. 
+With this model, additional calculations were also performed and results were plotted against the 
+experimental data obtained in Figure 43. Those da ta indicate that with minimum amount of 
+hydrogen, between 0.1%–0.5%, the degradation can be significantly enhanced.  
+ 
+Fig. 56. Calculations of Nit plotted as a function of dose rate 
+for three different concentrations of H2. 
+ 
+Fig. 57. Fit of analytical model describing interface trap 
+formation due to excess H2. 
+
+
+--- PAGINA PDF 50 ---
+42 
+5.1.3.3 Calculation 3: Comparison between STI 
+Deposited Oxides vs. Thermal Oxides 
+Figure 58 plots the buildup of interface trap 
+density as a function of dose rate for data 
+presented in [100] from irradiation performed 
+FOXFET test structures and GLPNP transistors 
+[24]. The FOXFET data corresponds to a total 
+dose of 21 krad(SiO 2) and the GLPNP 
+transistor data corresponds to a total dose of 30 
+krad(SiO2). Nit for the GLPNP transistors is 
+extracted using the methods discussed in [ 99, 
+100]. Degradation in the GLPNP transistors is a 
+result of interface trap buildup at the base 
+oxide-silicon interface. The base oxide 
+thickness for the GLPNP transistors is  tox = 
+1.22 μm. As described in the previous section 
+and shown in Figure 40, oxide thickness and  
+the density of hole traps (i.e., NTA), can affect 
+dose rate sensitivity. However, trapping 
+properties that result from different oxide 
+processing may also affect dose rate sensitivity. 
+For example, as reported in [ 118], most of the 
+hole trapping in therma l oxides occurs near the Si -SiO2 interface whereas deposited oxides can 
+have a significant amount of hole trapping deeper within the bulk. Additionally, the capture 
+cross-section for hole traps (i.e.,  pta) appears to be smaller in deposited oxides than in  thermal 
+oxides [118]. The GLPNP base oxide consists of a thermally grown oxide covered by a deposited 
+oxide that is used to assure adequate oxide thickness over the emitter [ 100]. For STI oxides, 
+typical processing involves etching a trench pattern throug h a nitride layer, sidewall oxidation to 
+grow a thin oxide liner, chemical vapor deposition to fill the trench , and chemical-mechanical 
+planarization polishing [119]. Therefore, the bulk of the STI will consist of a deposited oxide.  
+Additional calculation s have been completed to investigate how the differences in oxide 
+processing between base oxides in GLPNP transistors and STI oxides in FOXFETs affect the 
+dose rate sensitivity. The solid and dashed lines in Figure 59 correspond to these calculations.  
+The calculations fitted to the GLPNP transistor data (i.e., the solid line) are obtained using a 
+uniform density of hydrogenated defects, NTB = 8.5 × 1014 cm-3, distributed throughout the oxide 
+and a uniform density of hole traps, NTA = 10 19 cm-3, located within 25 nm of the Si -SiO2 
+interface. All other parameters are the same as listed in Table 1. For the case of the FOXFETs, 
+the calculations are fitted using NTB = 6.5 × 1015 cm-3 distributed uniformly throughout the oxide 
+and NTA = 1019 cm-3 located within 75 nm of the Si -SiO2 interface (dashed line in Figure 59). In 
+this case, all other parameters are the same as listed in Table 1 except hole capture cross-section, 
+which is reduced to  pta = 5.5 × 10-15 cm2. Calculations show that increasing the depth within the 
+oxide where hole traps are located (as measured from the Si -SiO2 interface) slightly increases 
+dose rate sensitivity. However, the reduction in hole capture cross -section reduces the buildup of 
+fixed positive charge near the Si-SiO2 interface, significantly reducing dose rate sensitivity. This 
+results in a better agreement with the FOXFET data.  
+The impact of hole capture cross -section on dose rate sensitivity can be observed in the 
+calculations shown in Figure 59 where EF is plotted as a function of  pta. EF is obtained from the 
+ratio of Nit for dose rates of 10 -3 rad(Si)/s and 103 rad(Si)/s. The results in Figure 59 show that 
+ 
+Fig. 58. Nit plotted as a function of dose rate for the 
+FOXFETs (from data in Fig. 4) and for GLPNP transistors 
+fabricated in the NSC linear bipolar circuit technology. 
+FOXFET data corresponds to a total dose of 21  krad(SiO2) 
+and the GLPNP transistor data corresponds to a total dose of 
+30 krad(SiO 2). Symbols indicate data and solid lines model 
+calculations.   
+
+
+--- PAGINA PDF 51 ---
+43 
+for a fixed location and density of hole traps 
+(e.g., NTA = 10 19 cm-3 located within 25 nm of 
+the Si-SiO2 interface) the dose rate sensitivity is 
+independent of  pta for values below ~4  × 10-14 
+cm2. However, as  pta increases, significant 
+hole trapping in regions near the Si -SiO2 
+interface increases dose rate sensitivity as 
+determined by the increased EF obtained for 
+values above ~4  × 10-14 cm2. The calculations 
+also show that the value for  pta where the 
+transition in dose rate sensitivity occurs is 
+reduced by extending the locat ion of the hole 
+traps from within 25 nm of the Si -SiO2 
+interface to 45 nm. 
+5.1.4 Discussion and Conclusions 
+The impact of different model parameters on 
+the dose rate –dependent buildup of interface 
+traps can be investigated using the numerical 
+calculations given in Section 2. This analysis 
+makes it possible to understand how 
+differences in technological and process ing 
+characteristics affect the dose rate sensitivity of 
+SiO2-based devices. From the model calculations, it has been determined that oxide thickness, 
+density and location of hole traps and hole capture cross -section affect dose rate sensitivity. The 
+density and location of hole traps, as well as the hole capture cross -section, affect the buildup of 
+fixed charge near the Si -SiO2 interface, which can result in space charge effects that enhance 
+recombination mechanisms and impact the dose rate sensitivity. The numerical calculations 
+presented in this section indicate that dose rate sensitivity can result from the combined effects of 
+space charge and recombination mechanisms. However, the contribution from space charge 
+effects becomes less significant as tox is reduced because the transport of charged particles during 
+irradiation is determined by the electric field set by the gate bi as and the gate -to-semiconductor 
+work-function difference.  
+Comparison of model calculations with experimental data results in excellent agreement for the 
+description of dose rate sensitivity. The difference in dose rate sensitivity between base oxides of 
+bipolar devices and advanced CMOS STI oxides is captured through differences in oxide 
+thickness, in the location of hole traps (i.e., the location of NTA) and in the value of the hole 
+capture cross -section. The differences in the location of NTA, and in th e values of  pta are 
+consistent with observations made by Mrstik  et al . in [ 119] based on experimental 
+characterization of deposited oxides using photo-assisted injection techniques. 
+Other model parameters such as  the electron capture cross -section at posi tively charged 
+hydrogenated defects (i.e.,  nptb) and proton release coefficient from positively charged 
+hydrogenated defects (i.e., rpth) can also impact dose rate sensitivity. As described in [ 117], 
+important factors that impact dose rate sensitivity in bipolar technologies are final passivation, 
+packaging and post -packaging thermal treatments , and hydrogen contamination in the package. 
+However, the work presented here provides strong evidence that specific technology and 
+processing characteristics of iso lation oxides can explain the differences observed in dose rate 
+sensitivity between bipolar and CMOS technologies. 
+ 
+Fig. 59. Enhancement factor in the buildup of interface trap 
+density obtained by the ratio of  Nit at a dose rate of 10 -3 
+rad(Si)/s to Nit at a dose rate and 10 3 rad(Si)/s plotted as a 
+function of the hole capture cross -section ( pta). The solid 
+lines are calculations for NTA located within 25 nm of the Si -
+SiO2 interface and dashed lined for NTA located  within 45 nm 
+of the interface. 
+
+
+--- PAGINA PDF 52 ---
+44 
+In addition, with respect to the hydrogen contamination issue, results in Figures 56 and 57 
+demonstrate good qualitative agreement between th e analytical model and the experimental data 
+shown in Figure 46, particularly in the transition region between HDR and LDR responses. At 
+present, the model does not capture the impact of hydrogen on the HDR and LDR asymptotes. 
+One explanation for the increase in interface trap buildup at the HDR and LDR extremes is that 
+hydrogen alters the density of precursor species and othe r reactants. However, as observed in 
+Figure 56, saturation in the enhancement of Nit at LDR in the presence of H 2 occurs in some  
+cases. A contributing factor to the differences in saturation of Nit at measured at LDR may be 
+the different concentrations o f molecular hydrogen and hole trapping defects (i.e. , NTC) in oxide 
+regions for a given hydrogen ambient condition. Experimental results and model calculations 
+indicate that saturation of Nit in the presence of hydrogen for devices exposed at LDR may vary 
+based on the trapping characteristics and concentration of H2 in the oxide. 
+ 
+KEY POINTS ABOUT THE HYDROGEN-ELDRS MODEL 
+* Oxide thickness, density, and location of hole traps and hole capture cross -sections affect the buildup of fixed 
+charges near the Si -SiO2 interface, which can result in space charge effects that enhance recombination 
+mechanisms and impact the dose rate sensitivity.  
+* The dose rate sensitivity can result from the combined effects of space charge and recombination 
+mechanisms. However, the contribution from space charge effects becomes less significant as tox is reduced. 
+* The difference in dose rate sensitivity between base  oxides of bipolar devices and advanced CMOS STI 
+oxides is captured through differences in oxide thickness, the location of hole traps (i.e., the location of NTA) 
+and the values of hole capture cross-sections.  
+* Experimental results and model calculations  indicate that saturation of Nit in the presence of hydrogen for 
+devices exposed at LDR may vary based on the trapping characteristics and concentration of H2 in the oxide. 
+* With minimum amount of hydrogen, between 0.1%–0.5%, the degradation can be significantly enhanced. 
+ 
+
+--- PAGINA PDF 53 ---
+45 
+6.0 IRRADIATION IN AN HYDROGENATED ENVIRONMENT AS AN ACCELERATED TESTING 
+TECHNIQUE 
+6.1 Introduction 
+The previous sections show that the ELDRS phenomena is dependent on the processing of the 
+base oxide, oxide thickness, final passivation, packaging and post-packaging thermal treatments, 
+and hydrogen contamination. Through the use of modeling and experiments , we showed that 
+hydrogen is a dominant factor determining both the total dose and dose rate characteristics of 
+linear bipolar circuits.  Experiments conducted on both transistor structures and linear circuits 
+indicated that the percent of hydrogen 1) increases the degradation at LDR and 2) increases the 
+dose rate region where the transition from a HDR response to an enhanced LDR response occurs.  
+These results suggested that a new accelerated hardness assurance test method might be possible, 
+whereby parts are tested at a higher dose rate while exposed in a rich H 2 environment. Data 
+obtained from such a method could rapidly establish an uppe r bound to the LDR response in 
+space. If these results are reproducible in other part types, then a general method of accelerate d 
+testing using hydrogen stress may be developed and help in the parts selection for systems 
+designed for space. Up to now, seve ral accelerated testing methods have been proposed: 1) 
+elevated temperature irradiation ( ETI) initially proposed by Fleetwood et al. [ 92] and 
+investigated by others [ 104, 110, 121 ]; 2) alternate HDR irradiation and elevated temperature 
+anneals initially proposed by Freitag and Brown [ 122] and further investigated by Pershenkov et 
+al. [123]; and 3) switched dose rate experiments proposed by Boch et al . [124, 125]. In the ETI 
+technique, irradiation is usually performed at a temperature of ~100°C at a dose rat e of 1 
+rad(Si)/s or less.  In the alternate HDR irradiation and elevated temperature anneal approach, 
+Freitag and Brown found that for two types of op amps the following procedure worked: 
+irradiation at HDR to half the specification dose followed by an elevated temperature anneal at 
+100°C for 3 hours, followed by an additional irradiation at HDR to half the specification dose, 
+followed by another elevated temperature anneal at 100°C for 4.4 hours [ 122]. The switched 
+dose rate technique consists of irradiation at HDR to increasing values of total dose and then 
+switching to LDR and continuing the irradiation [ 124, 125]. The results at LDR are then 
+transposed along the dose axis to construct the LDR response. Although it takes many more test 
+samples to use this approach, the total irradiation time is reduced by the number of steps used.  
+All of these techniques are useful; however , they all have their limitations. The number of part 
+types investigated for each of the tech niques is limited and, at least for the first two techniques, 
+there is no set of variables that is universal.  Hence, a characterization would be required to 
+establish the parameters and procedures for each process technology and part type to bound the 
+LDR response. Also , in the case of the ETI technique , the total dose is limited because 
+irradiation at elevated temperature s for extended times results in annealing that competes with 
+the additional degradation. Hence, combining this approach with over-test will usually not work. 
+Nevertheless, accelerated hardness assurance method development is highly desired because of 
+the cost and time constraints associated with LDR testing.  
+The data shown in Section 4.1.1 is again plotted in Figure 60. The  data represent the average 
+increase in input bias current, Ib, versus dose rate (three or four parts for each data point) after a 
+total dose exposure of 10 krad(Si). The four curves represent the dose rate response characteristics 
+of 1) unmodified commercial -off-the-shelf (COTS) parts with a nitride over p -glass final 
+passivation (nitride), 2) parts with nitride stripped off (p-glass left intact) and irradiated in a natural 
+air environment with ~0 % H2 (air), 3) parts soaked in 1.0 % H2 (1%), and 4) parts soaked in 100% 
+H2 (100%). One data point at 1 mrad (Si)/s for the parts with nitride over p -glass has been added 
+and shows the predicted saturation at LDR. The data provide an excellent illustration of how H2 can 
+
+--- PAGINA PDF 54 ---
+46 
+be used to accelerate the dose rate response characteristic s. The unmodified part’s bias current 
+represents a typical dose rate profile. At the higher rate exposures, Ib for the COTS part is fairly 
+low (well within the specification limit of the part). At a dose rate near 100 mrad(Si)/s, called the 
+transition dose rate, excess current increases dramatically. Near 2 mrad(Si)/s, the degradation seems 
+to be saturating. This type of leveling off in the dose rate behavior is consistent with most ELDRS 
+signatures. 
+As shown in the figure, t hese data suggest that with the right combination of dose rate and 
+hydrogen concentration, we should be able to bound or perhaps predict LDR responses of linear 
+bipolar circuits.  
+6.2 Accelerated Testing Validation 
+The proposed accelerated hardness assurance technique using H 2 has the following 
+characteristics: It is best used on parts that are packaged in hermetic packages.  The package lids 
+must be removed so that the microcircuit die can be exposed directly to H 2. If plastic packages 
+are used the plastic mus t be etched away over the surface of the die.  Parts with a silicon nitride 
+passivation must have the nitride removed, for example, by plasma etching.  The exposure to H 2 
+is done in evacuated glass tubes (10 -5 torr), that are backfilled to various controlled  partial 
+pressures of H 2. While the test method appears to be true for the data shown in Figure 60 from 
+various experiments performed on the LM193 ELDRS sensitive part , it needed to be tested  
+against various ELDRS devices covering several circuit types and  manufacturers and some 
+claimed “ELDRS-free” parts to see if the method is too conservative or not.  
+6.2.1 ELDRS Parts 
+Experimental data presented in this section were taken at JPL facilities. LDR  and HDR 
+irradiations were performed using a Shepherd 81 Co -60 range irradiator. The irradiations with 
+concentrations of H 2 (1–100%) were all conducted with the parts inside a sealed glass tube that 
+was evacuated and then filled with H 2 to the appropriate partial pressure. The vacuum level in 
+ 
+Fig. 60. Increase in input bias current vs . dose rate for 1) irradiation to 10 krad for the LM193s with p -glass and different 
+percentage of  H2, and 2) nitride with no H 2. At 1 rad/s the 1% H 2 underestimates the LDR response whereas the 100% H 2 
+bounds it. 
+Upper Bound
+Lower Bound
+10
+100
+1000
+0.0001 0.001 0.01 0.1 1 10 100 1000
+Delta Ib (nA)
+Dose Rate [rad(Si)/s]
+packaged
+air
+1% H2
+100% H2
+
+--- PAGINA PDF 55 ---
+47 
+each tube before being soaked by H 2 was 10-3 torr. All the parts in the glass tube were soaked in 
+the H 2 gas ambient for a minimum of 48 hours before irradiation. All DC specification 
+parameters were measured at each dose step using an LTS2020 or ETS300 linear circuit tester. 
+Parts under consideration are all ELDRS sensitive candidates commonly used in space: the 
+LT1019 voltage reference from Linear Technology, the HSYE -117 linear voltage regulator f rom 
+Intersil, the AD590 temperature transducer and OP42 JFET -input operational amplifier from 
+Analog Devices. These five part types represent a wide range of manufacturer process 
+technologies and circuit designs.  
+6.2.1.1 Experimental Validation on Four Candidates (LT1019, HSYE-117RH, AD590 and OP42) 
+Figure 61 shows experimental data obtained from irradiations performed on the LT1019 voltage 
+reference from Linear Technology. The change in reference voltage as a function of total dose is 
+plotted for five different c onditions of irradiation: HDR (50 rad/s), LDR (10 mrad/s) and HDR 
+(50 rad/s) with 1 %, 10 %, and 100% H 2. Irradiations were performed unbiased with all leads 
+grounded. Every data point is an average of 2–3 samples. At 30 krad, the ratio between the HDR-
+100% data point and the LDR data point is approximately 1.9. The ratio between  the HDR-10% 
+data point and the LDR data point is approximately 1, indicating that 10% could be a more 
+appropriate testing choice because it is much less conservative.  
+Figure 62 is a plot of experimental data obtained from irradiation performed on the HSYE -117 
+linear voltage regulator from Intersil. The dropout voltage at 100  mA load current is plotted as a 
+function of total dose for two conditions of irradiation: 1) twelve parts in three different packages 
+(can TO -39 with 0% H 2, TO -220 with ~1.66% H 2, and flatpack-SCC with ~1.9% H 2) were 
+irradiated unbiased at a dose rate of 0.05 rad/s, and 2) two additional TO -220 parts (with the lid 
+off and nitride removed) were irradiated with 100% H2 at a dose rate of 50 rad/s. Once again, the 
+HDR-100% H 2 data bound the LDR responses for all dose steps. This also applies to other 
+susceptible parameters that exhibit enhance d degradation at LDR, such as the reference 
+voltage,Vref, and adjust curr ent, Iadj. The interesting result is that unlike other parts, the response 
+between the ~2% and 100% hydrogen data is saturating. The fact that Intersil uses a hardened 
+(RSG) process with better oxide properties (possibly lower numbers of passivated interfa cial 
+ 
+Fig. 61. Change in reference voltage for the LT1019 as a function of total dose for four irradiation conditions: HDR (50 rad/s), 
+LDR (10 mrad/s) and (50 rad/s with 1%, 10%, and 100% H 2). 
+
+
+--- PAGINA PDF 56 ---
+48 
+bonds limiting Nit creation or fewer defect centers in the oxide to release protons in the presence 
+of H2) might explain the results. In addition, these results could indicate that the dose rate used 
+for these experiments was somewhat high, and going to a lower dose rate (i.e. , 1 rad/s) could 
+have shown a bounding factor > 1.  
+The AD590 temperature transducer has been shown to exhibit ELDRS when irradiated in a FP 
+containing H 2 and with all leads shorted. Additional tests have been performed on AD590s in 
+both cans (no H 2) and FPs. Initially, twelve screened space-qualified AD590s were irradiated at 
+both high (25 rad/s) and low (10 mrad/s) dose rates with all leads grounded. Three FPs (with 
+0.4–1% H 2) and three cans (~0% H 2) were irradiated up to 30 krad. The results show that FPs 
+degrade signif icantly more than cans 
+at LDR and HDR when irradiated 
+unbiased due to  the amount of 
+hydrogen introduced into the package. 
+The results are compared to an 
+accelerated test and show similar 
+trends as those observed for the other 
+devices. Indeed, the AD590 in cans 
+(~0% H 2) were made to degrade 
+similarly to the FPs when the die was 
+exposed to 100% H 2 with a dose rate 
+of 1 rad/s. Unlike with the LT1019 
+and HSYE-117, the HDR exposure in 
+H2 had to be lowered to 1 rad/s to 
+bound the LDR response. Once again, 
+the HDR -100% H 2 data bounds the 
+LDR response for all dose steps. Note 
+that the parts irradiated after being 
+soaked with 100% H 2 failed earlier 
+(dashed line on Figure 63)  than the 
+FPs. 
+ 
+Fig. 62. Change in dropout voltage versus total dose for the HSYE -117 linear voltage regulator in three different packages 
+(TO39, TO-220 and FP -SCC). Twelve parts were irradiat ed at LDR (0.05 rad/s). Two additional parts (TO -220) with the lid off 
+were irradiated at HDR (50 rad/s) with 100% H2. 
+ 
+Fig. 63. Degradation of the AD590 temperature error as a function of total 
+dose. Two groups of three flatpacks  and three cans were irradiated 
+unbiased at both  HDR and LDR  (respectively 25 rad/s and 0.01 rad/s). 
+RGA was performed after irradiation on the flatpack devices to evaluate the 
+amount of hydrogen.  Three additional parts (Cans) with the lid off were 
+irradiated at HDR (1 rad/s) with 100% H2. 
+-7
+-6
+-5
+-4
+-3
+-2
+-1
+0
+0 5 10 15 20 25 30
+Error in temperature (0C)
+Total Dose krad(Si)
+FP-LDR-0.8-1.2% H2
+FP-HDR
+CAN-HDR-0% H2
+CAN-LDR-0% H2
+HDR-100% H2
+Early failure
+
+--- PAGINA PDF 57 ---
+49 
+Finally, a set of irradiations were perfo rmed on 
+the OP42 JFET input op -amps from Analog 
+Devices. The irradiation condition was similar 
+to the ones used in [ 65], which was a voltage -
+follower configuration with ±15 Volt on the 
+supply pins. The offset voltage under biased 
+irradiations is the critic al parameter to look at 
+since this is the only parameter that shows an 
+ELDRS effect and only under bias [ 65]. Four 
+samples were soaked in 100% H 2 and 
+irradiated with a dose rate of 1 rad/s. As shown 
+in Figure 64 , the hydrogenated devices show 
+an ELDRS  effect compared to the HDR 
+response. The LDR curve at 0.04 rad/s also 
+shows an ELDRS effect. In this case the 
+bounding factor between the LDR curve and 
+the HDR -H2 curve is approximately 1. Once 
+again, using hydrogen stress during irradiation 
+at HDR can make th e part degrade similarly to 
+the one irradiated at LDR. We should indicate that additional testing is needed to find out if these 
+OP42 devices behave the same way as compared to data presented in [ 65]. If for lower dose rate 
+(<0.04 rad/s) the device shows a  larger ELDRS effect , then additional data at a lower dose rate 
+(<1 rad/s) will be needed to bound the LDR response. (Note that this op -amp has JFET input 
+transistors and that irradiations were performed under bias; two different conditions compared to 
+the other bipolar devices were evaluated for this study).  
+6.2.2 ELDRS-Free Parts 
+Several space -qualified ELDRS -free part types were selected and obtained from NSC.  These 
+included the LM136 voltage reference, the LM2941 low -dropout voltage regulator, the LM124, 
+quad operational amplifier, and the LM139, quad voltage comparator.  LDR data on the LM2941 
+and LM136 were published in the Radiation Effects Data Workshop last 2009 by NSC [1 26, 
+127]. LDR data on the LM124 and LM139 were published in 2008 [1 27]. All four o f these part 
+types have been demonstrated to be hard to 100 krad at both HDR (50–300 rad/s) and LDR (10 
+mrad/s) for irradiation under both biased and unbiased conditions [1 26, 127, 128]. In addition, 
+the LM2941 was tested at 1 mrad/s up to 20 krad and was shown to be ELDRS -free. To ensure 
+that the results are not unique to one process technology, we added several ELDRS -free part 
+types from other manufacturers: one ELDRS -free RH1009 voltage reference was obtained from 
+Linear Technologies; and two radiation -hardened discrete bipolar transistors, a 2N2222A and a 
+2N2907A, were obtained from Semicoa.  
+Samples of 3 –6 parts of each type were delidded and placed inside evacuated glass tubes. Note 
+that all parts had no silicon nitride passivation, which is a barrier to hydrogen. Parts were soaked 
+in the H 2 gas ambient for a minimum of 48 hours before irradiation. The electrical parameters 
+that were monitored, before and after exposure to H 2 and after each irradiation step, were the 
+same ones used by the manufacturers  in their irradiation testing. All irradiations were performed 
+with all leads shorted at dose rates of 1 rad/s or 10 rad/s using a Co -60 source at JPL . Post-
+irradiation electrical measurements were made at several intermediate dose levels up to 100 krad. 
+Table 3 lists the part types, manufacturers, package types, dose rates, percent H2, and step-stress 
+dose levels used in the study.  
+ 
+Fig. 64. Change in offset voltage versus total dose for the 
+Analog Devices OP42. The HDR results are shown for 
+irradiation at 50  rad/s (HDR—virgin parts) and 1 rad/s in 100% 
+H2 (HDR—100% H 2), as well as a LDR result at 0.04 rad/s 
+(LDR—virgin parts). 
+
+
+--- PAGINA PDF 58 ---
+50 
+Table 3. List of part types used in the study along with irradiation information. 
+Manufacturer Part Type Description Package 
+Date 
+Code 
+H2 
+(%) 
+Dose Rate 
+(rad/s) 
+Dose 
+(krad) 
+Sample 
+Size 
+NSC RM124AJRQMLV Quad op amp 14-pin CDIP *0514* 100 10 10, 20, 30, 50 3 
+NSC RM139AJRQMLV Quad comparator 14-pin CDIP *0527* 1 10 10, 20, 30, 50, 75, 100 6 
+NSC RM139AJRQMLV Quad comparator 14-pin CDIP *0527* 100 10 10, 20, 30, 50 3 
+NSC RM136AH2.5RQMLV 2.5 V reference TO-46 N/A  100 1 10, 20, 30, 40, 50, 75, 100 3 
+NSC RM2941JXQMLV LDO regulator 16-pin CDIP *0911* 100 1 10, 20, 30, 40, 50, 75, 100 3 
+Linear Tech RM1009MW 2.5 V reference 10-pin CDIP *0649* 1 10 10, 20, 30, 50, 75, 100 6 
+Semicoa 2N2222A npn BJT TO-18 *0739* 10 10 10, 20, 30, 50, 75, 100 6 
+Semicoa 2N2907A pnp BJT TO-18 *0804* 10 10 10, 20, 30, 50, 75, 100 6 
+6.2.2.1 NSC LM124  
+The LM124 quad op amp is a general purpose amplifier that can  be operated either single -sided 
+at 5  V or with ±15 V supplies. The NSC part has been extensively characterized for ionizing 
+radiation response and was the basis for the ELDRS study using a specially designed test chip 
+that included gated lateral pnp transistors [127]. NSC has since produced an ELDRS-free version 
+of this part that is qualified for space application by modifying the final passivation and making 
+some circuit design changes [128]. The HDR and LDR data taken by NSC on ELDRS -free parts 
+for the unbiased case are used for comparison to the results for exposure of parts from the same 
+wafer lot subjected to 100% H2 and irradiated at 10 rad/s.  
+The two most sensitive parameters for the LM124 are the input bias current and the input offset 
+voltage. Figure 65 shows the total dose response of the increase in positive input bias current, 
+Ib+, for the HDR and LDR response measured by NSC for the space -qualified packaged parts 
+compared to parts soaked in 100% H2 before exposure. Note that the scale is log-log. In all of the 
+plots to follow, the average ±1 standard deviation is shown for either 3 or 6 samples (sample size 
+shown in Table 3). Exposure to H2 results in over an order of magnitude increase in degradation. 
+Figure 66 shows a comparison of the NSC ELDRS -free data to parts soaked in 100% H 2 for the 
+increase input offset voltage, Vio. Again there is over an order of magnitude increase in the 
+degradation for the parts soaked in H2 and the difference increases with increasing dose. 
+ 
+ 
+Fig. 65. Increase in input bias current for the NSC LM124, 
+comparing NSC data to exposure to 100% H2.  
+ 
+Fig. 66. Increase in input offset voltage for the NSC LM124, 
+comparing NSC data to exposure to 100% H2. 
+ 
+1
+10
+100
+1000
+10 100
+Dose [krad(Si)]
+Del Ib+ (nA)
+100% H2, 10 rad/s
+NSC HDR
+NSC LDR
+NSC LM124
+0.1
+1
+10
+100
+10 100
+Dose  [krad(Si)]
+Del Vio (mV)
+100% H2, 10 rad/s
+NSC HDR
+NSC LDR
+NSC LM124
+
+--- PAGINA PDF 59 ---
+51 
+6.2.2.2 NSC LM139  
+The quad comparator, LM139, is another bipolar linear circuit that has been extensively 
+characterized for total dose and dose rate response [ 89, 92]. This part was also modified by 
+process and circuit design to be ELDRS -free [1 28]. For unbiased irradiation the two most 
+sensitive parameters are the input bias current, Ib+, and the sink current, Isink.  The LM139 was 
+irradiated at 10 rad/s for two values of H 2 soaking, 100% and 1 %. Figures 67 and 68 show the 
+increase in Ib+ and Isink, respectively, versus dose, compared to the HDR and LDR  NSC 
+ELDRS-free data. 
+As for the LM124, the exposure to 100% H 2 prior to irradiation resulted in well over an order of 
+magnitude increase in the degradation.  What is more significant is that with only a 1% H 2 
+exposure the increase in degradation over the E LDRS-free parts was still over an order of 
+magnitude for Ib+ and about a factor of 8 for Isink.   
+ 
+Fig. 67. Increase in input bias current for the NSC LM139, 
+comparing NSC data to exposure to 100% and 1% H2.  
+ 
+Fig. 68. Increase in sink current for the NSC LM139, 
+comparing NSC data to exposure to 100% and 1% H2. 
+6.2.2.3  NSC LM136-2.5 and LTC RH1009.  
+The NSC LM136 and LTC RH1009 are both 2.5  V references.  NSC offers an ELDRS -free 
+version of this reference as described in [1 27]. The RH1009 was radiation tested by ICS at high 
+(50 rad/s) and low (8.2 mrad/s) dose rates both biased and unbiased and demonstrated to be 
+ELDRS-free. We compare the results of the HDR and LDR tests on the ELDRS -free parts to 
+irradiation at 1 rad/s after exposure to 100% H2 for the LM136 and to irradiation at 10 rad/s after 
+exposure to 1% H2 for the RH1009. Figures 69 and 70 show the results for the average change in 
+Vref (at 1 mA) for the LM136 and RH1009, respectively. 
+Comparing the two references, we see that the Vref decreases with irradiation for the LM136 and 
+increases for the RH1009. With only 1% H 2 the RH1009 shows a significant increase in Vref 
+compared to the parts not exposed to H2. The changes are much greater at 100% H2 for the LM136.  
+Another sensitive parameter is the change in Vref between two different current values. For these 
+2.5 V references, this parameter, BVR, is measured between currents of 400 µA and 10 mA. This 
+parameter is also known as load regulation. Fig ures 71 and 72 sh ow the results for BVR versus 
+dose for the LM136 and RG1009, respectively. 
+Again, with BVR or load regulation, the degradation with H 2 is much greater than for the 
+packaged ELDRS-free parts and the changes are in the opposite direction for the two part types. 
+1
+10
+100
+1000
+10000
+10 100
+Dose [krad(Si)]
+Del Ib+ (nA)
+100% H2, 10 rad/s
+1% H2, 10 rad/s
+NSC HDR
+NSC LDR
+NSC LM139
+0
+5
+10
+15
+20
+25
+0 20 40 60 80 100 120
+Dose [krad(Si)]
+Isink (mA)
+100% H2, 10 rad/s
+1% H2, 10 rad/s
+NSC HDR
+NSC LDR
+NSC LM139
+
+--- PAGINA PDF 60 ---
+52 
+ 
+Fig. 69. Change in Vref versus dose for LM136, comparing 
+NSC data to exposure to 100% H2. 
+ 
+Fig. 70. Change in Vref versus dose for RH1009, comparing 
+LTC (ICS) data to exposure to 1% H2. 
+ 
+ 
+Fig. 71. Change in BVR (0.4 to 10 mA) versus dose for 
+LM136, comparing NSC data to exposure to 100% H2. 
+ 
+Fig. 72. Change in BVR (0.4 to 10 mA) versus dose for 
+RH1009, comparing LTC (ICS) data to exposure to 1% H2. 
+ 
+6.2.2.4 NSC LM2941 
+The LM2941 is a 1A adjustable low dropout regulator.  The ELDRS-free version is described in 
+[126]. This part was exposed to 100% H 2 prior to irradiation and irradiated at 10 rad/s.  The 
+output voltage was set at 5  V for the electrical tests.  The reference voltage, measured at the 
+adjust pin, is typically 1.275  V. The average change in  Vout versus dose is shown in Fig ure 73 
+and the average change in Vref is shown versus dose in Figure 74. 
+While there is only a few mV change at HDR and LDR  for the ELDRS -free parts, there is 
+several hundred mV change in Vout at 5 V for the parts exposed to 100% H 2 prior to irradiation. 
+The changes in Vref reflect the changes in Vout since Vout  Vref .  
+-20
+-18
+-16
+-14
+-12
+-10
+-8
+-6
+-4
+-2
+0
+0 20 40 60 80 100 120
+Dose [krad(Si)]
+Del Vref (mV)
+100% H2, 1 rad/s
+NSC HDR
+NSC LDR
+NSC LM136-2.5
+0
+1
+2
+3
+4
+5
+6
+7
+8
+0 20 40 60 80 100 120
+Dose [krad(Si)]
+Del Vref (mV)
+1% H2, 10 rad/s
+LTC HDR
+LTC LDR
+LTC RH1009
+0
+5
+10
+15
+20
+25
+0 20 40 60 80 100 120
+Dose [krad(Si)]
+Del BVR 0.4 to 10 mA (mV)
+100% H2, 1 rad/s
+NSC HDR
+NSC LDR
+NSC LM136-2.5
+-16
+-14
+-12
+-10
+-8
+-6
+-4
+-2
+0
+0 20 40 60 80 100 120
+Dose [krad(Si)]
+Del BVR 0.4 to 10 mA (mV)
+1% H2, 10 rad/s
+LTC HDR
+LTC LDR
+LTC RH1009
+
+--- PAGINA PDF 61 ---
+53 
+ 
+Fig. 73. Average change in output voltage versus dose for 
+the LM2941, comparing NSC data to exposure to 100% H2.  
+ 
+Fig. 74. Average change in reference voltage versus dose for 
+the LM2941, comparing NSC data to exposure to 100% H2. 
+6.2.2.5 2N2222A-2N2907 Discrete Bipolar Transistors 
+Radiation-hardened versions of the widely used discrete bipolar transistors, the npn 2N2222A, 
+and the pnp 2N2907A were obtained fr om Semicoa. The HDR and LDR  data on the parts not 
+exposed to H 2 were taken by Semicoa.  Delidded samples were subjected to 10% H 2 and 
+irradiated, unbiased, at 10 rad/s at JPL.  The primary parameters affected by total dose are the 
+forward current gain, Hfe , and the collector -emitter saturation voltage, V ce(sat). The degradation 
+of Hfe is a function of the collector current and degrades much more at low collector current.  
+The normalized percent-gain degradation versus total dose at 1 mA collector current is shown in 
+Figure 75 for the 2N2222A and Figure 76 for the 2N2907A for the baseline Semicoa data at 
+HDR and LDR and the parts soaked in 10% H2 and irradiated at 10 rad/s. 
+The amount of degradation with 10% H 2 is much greater than for the baseline parts. Note  that in 
+the case of the 2N2907A the baseline degradation at LDR is actually less than at HDR. The 
+average normalized percent increase in V ce(sat) (Ic = 500 mA and Ib  = 50 mA) versus dose is 
+shown in Figure 77 for the 2N2222A and Figure 78 for the 2N2907A. 
+ 
+Fig. 75. Average normalized % degradation of Hfe at 1 mA for 
+2N2222A exposed to 10% H2 compared to baseline Semicoa 
+data.  
+ 
+Fig. 76. Average normalized % degradation of Hfe at 1 mA for 
+2N2907A exposed to 10% H2 compared to baseline Semicoa 
+data. 
+-700
+-600
+-500
+-400
+-300
+-200
+-100
+0
+100
+0 20 40 60 80 100 120
+Dose [krad(Si)]
+Del Vout (mV)
+100% H2, 1 rad/s
+NSC HDR
+NSC LDR
+NSC LM2941
+-160
+-140
+-120
+-100
+-80
+-60
+-40
+-20
+0
+20
+0 20 40 60 80 100 120
+Dose [krad(Si)]
+Del Vref (mV)
+100% H2, 1 rad/s
+NSC HDR
+NSC LDR
+NSC LM2941
+20
+30
+40
+50
+60
+70
+80
+90
+100
+0 20 40 60 80 100 120
+Dose [krad(Si)]
+Norm. % Hfe at 1 mA 
+10 % H2, 10 rad/s
+Semi HDR
+Semi LDR
+Semicoa 2N2222A
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+0 20 40 60 80 100 120
+Dose [krad(Si)]
+Norm. % Hfe at 1 mA
+10% H2, 10 rad/s
+Semi HDR
+Semi LDR
+Semicoa 2N2907A
+
+--- PAGINA PDF 62 ---
+54 
+ 
+Fig. 77. Average normalized percent increase of Vce(sat) for 
+2N2222A exposed to 10% H2 compared to baseline Semicoa 
+data. 
+ 
+Fig. 78. Average normalized percent increase of Vce(sat) for 
+2N2907A exposed to 10% H2 compared to baseline Semicoa 
+data. 
+ 
+Comparing Figures 77 and 78, we see that the increase in Vce(sat) for the H2 exposed parts is much 
+greater for the 2N2907A than for the  2N2222A, although in both cases the exposure to H 2 does 
+result in enhanced degradation. 
+6.2.3 Conclusion 
+The proposed method o f accelerated testing using HDR irradiations in environments with 
+elevated concentrations of H 2 have first been tested on six different parts types, all known to 
+exhibit ELDRS, representing a wide variation in manufacturer, process technology , and circuit 
+design (GLPNP, LM193, AD590, LT1019, OP -42, and HSYE-117). For th ese devices, results 
+are very promising since with the right selection of dose rate and hydrogen concentration , it was 
+possible to bound the LDR response. For ELDRS devices,  results indicate d that compared to 
+LDR testing, hydrogen-enhanced testing at HDRs can be a very cost -effective approach for part 
+selection during the design phase of space systems. It also may be considered for missions that 
+require higher dose levels for qualification whe re LDR testing is not practical. For use as a 
+qualification or lot acceptance test method, a characterization test would need to be performed to 
+establish the optimum dose rate and H2 concentration to bound the LDR response.  
+Further experiments were perfo rmed to consolidate the method, particularly when eva luating 
+ELDRS-free parts; mainly to show that the proposed test would not result in rejection of those 
+parts. The approach was investigated on ELDRS -free parts from three manufacturers, looking at 
+a variety of circuit types (operational amplifier, comparator, voltage references , and low dropout 
+regulator) as well as npn and pnp discrete bipolar transistors.  In all cases , the exposure to H 2 
+resulted in an increase in the amount of degradation of sensitive electrical parameters.  The 
+amount of enhanced degradation over the baseline HDR and LDR degradation varied from a few 
+percent for the 2N2222A to orders of magnitude for some of the ELDRS -free circuits. It is clear 
+that, for characterization, this technique is not applicable as an accelerated technique for the 
+purpose of determining whether a part is ELDRS.  In other words, if the only data on a part is at 
+HDR (Condition A of MIL-STD-883, Method 1019) and one wanted to do an accelerated test to 
+determine if the part is ELDRS, this test might produce overly conservative results.  However, as 
+an accelerated test to bound the LDR response of a known ELDRS part, it may still be effective, 
+if correlated to the LDR response. 
+98
+100
+102
+104
+106
+108
+110
+112
+0 20 40 60 80 100 120
+Dose [krad(Si)]
+Norm. % Vce(sat) at 500 mA
+10 % H2, 10 rad/s
+Semi HDR
+Semi LDR
+Semicoa 2N2222A
+100
+120
+140
+160
+180
+200
+220
+0 20 40 60 80 100 120
+Dose [krad(Si)]
+Norm. % Vce(sat) at 500 mA 
+10% H2, 10 rad/s
+Semi HDR
+Semi LDR
+Semicoa 2N2907A
+
+--- PAGINA PDF 63 ---
+55 
+Although the accelerated test using H 2 does not work for ELDRS-free parts, it does illustrate the 
+importance of hydrogen in increasing the amount of degradation in bipolar linear circuits and 
+discrete transistors.  In the previous section, we demonstrated that increasing the amount of 
+hydrogen affected the total dose and dose rate response of bipolar linear circuits.  With increased 
+hydrogen, the transition dose rate for enhanced LDR degradation moved to higher dose rates and 
+the saturation degradation at LDR increased. Based on this mechanism , we proposed that parts 
+that did not show a significant LDR EF at 10 mrad/s, might begin to show enhanced degradation 
+at dose rates below 10 mrad/s. In a review of ELDRS [111], data on several bipolar circuits were 
+shown where the LDR EF continued to increase at dose rates below 10 mrad/s.  Experiments are 
+currently being conducted to investigate the very low dose rate response of several ELDRS -free 
+bipolar circuits to see if the EFs increase down to dose rates of 0.5 mrad/s [ 95]. To date, the dose 
+levels achieved at 0.5 mrad/s are not sufficiently high to determine whether these ELDRS -free 
+parts will show increased enhanced degradation for dose rates below the current LDR test of 
+MIL-STD-883, Test Method 1019.8, Test Condition D of 10 mrad/s.    
+This investigation shows that if ELDRS -free parts are purchased in die form for use in a hybrid 
+microcircuit, or to be packaged in a different package from what the manufacturer used for the 
+ELDRS-free qualification, then the parts may not be total-dose-hard or ELDRS-free if subjected to 
+H2 in the new package form. We have shown in the previous sections that many hermetic package 
+types may have as much as 2–4% H2 in the package due to outgassing from gold or kovar and that 
+these parts show enhanced degradation compared to parts in packages without H2.  
+ 
+KEY POINTS ABOUT USING H2 IRRADIATION AS AN ACCELERATED TESTING TECHNIQUE 
+* The proposed method of accelerated testing using HDR irradiations i n environments with elevated 
+concentrations of H 2 works for ELDRS -sensitive parts with the right combination of dose rate and 
+concentration of H2. 
+* For use as a qualification or lot acceptance test method, a characterization test would need to be performed to 
+establish the optimum dose rate and H2 concentration to bound the LDR response. 
+* The method does not work for ELDRS -free parts and is overly conservative. Indeed, the amount of enhanced 
+degradation over the baseline HDR and LDR degradation varied from a few percent for the 2N2222A to orders 
+of magnitude for some of the ELDRS-free circuits.  
+* However, results from experiments conducted on ELDRS-free parts suggest that if parts are purchased in die 
+form for use in a hybrid microcircuit, or to be packaged in a different package from what the manufacturer 
+used for the ELDRS -free qualification, then the parts may not be total -dose-hard or ELDRS -free if they are 
+subjected to H2 in the new package form. 
+* 2–4% H2 in the package can change the degradation of a part by a factor of 10 for some parameters and 
+only if the part does not have nitride passivation. This factor has to be considered for dies that are used in  
+hybrid implementation.  
+ 
+
+--- PAGINA PDF 64 ---
+56 
+REFERENCES 
+ 
+[1]  Schwank, J.R., “ Basic Mechanisms of Radiation Effects in the Natural Space 
+Environment,” 1994 NSREC Short Course, 1994. 
+[2]  McLean F. B., et al., “ Basic Mechanisms of Radiation Effects in Electronic Materials and 
+Devices,” Harry Diamond Laboratories Techni cal Report, No. HDL -TR-2129, September 
+1987. 
+[3]  Evans R. D., “The Atomic Nucleus,” McGraw-Hill, New York, 1955. 
+[4]  Oldham, T.R., “Analysis of Damage in MOS Devices in Several Radiation Environment,” 
+IEEE Trans. Nucl. Sci., 1984. 31 (6): p. 1236-1241. 
+[5]  Srour, J.R., “Basic Mechanisms of Radiation Effects on Electronic Materials, Devices, and 
+Integrated Circuits,” 1983 IEEE NSREC Short Course, 1983. 
+[6]  Dressendorfer, P.V., “ Basic Mechanisms for the New Millenniun,” 1998 IEEE NSREC 
+Short Course, 1998. 
+[7]  McLean, F.B. and T.R. Oldham, “ Basic Mechanisms of Radiation Effects in Electronic 
+Materials and Devices,” Harry Diamond Laboratories  Technical Report, 1987. HDL-TR: 
+p. 2129. 
+[8]  Shaneyfelt, M.R., et al., “ Charge Yield for Cobalt -60 and 10 -keV X -Ray Irradiations,” 
+IEEE Trans. Nucl. Sci., 1991. 38 (6): p. 1187. 
+[9]  Shaneyfelt, M.R., et al., “ Field Dependence of Interface -Trap Buildup in Polysilicon and 
+Metal Gate MOS Devices,” IEEE Trans Nucl. Sci., 1990. 37 (6): p. 1632. 
+[10]  Oldham, T. R., “ Switching Oxide Traps : Radiation Effects and Soft Errors in Integrated 
+Circuits and Electronic Devices,” R.D. Schrimpf and D.M. Fleetwood, Editors. D.M. 2004, 
+World Sci.: New Jersey. 
+[11]  Fleetwood, D.M., “ Fast and slow border traps in MOS devices,” IEEE Trans Nucl. Sci., 
+1996. 43 (3): p. 779. 
+[12]  Fleetwood, D.M., “Border traps” in MOS devices,” IEEE Trans Nucl. Sci., 1992. 39 (2): p. 
+269. 
+[13]  Rashkeev, S.N., et al., “ Physical model for enhanced interface -trap formation at low dose 
+rates,” IEEE Trans Nucl. Sci., 2002. 49 (6): p. 2650. 
+[14]  Tsetseris, L., et al., “ Common origin for enhanced low -dose-rate-sensitivity and bias 
+temperature instability under negative bias,” IEEE Trans Nucl. Sci., 2005. 52 (6): p. 2265. 
+[15]  Fleetwood, D.M., et al., “ Unified mode l of hole trapping, 1/f noise, and thermally 
+stimulated current in MOS devices,” IEEE Trans Nucl. Sci., 2002. 49 (6): p. 2674. 
+[16]  Nicklaw, C.J., et al., “ The structure, properties, and dynamics of oxygen vacancies in 
+amorphous SiO2,” IEEE Trans Nucl. Sci., 2002. 49(6): p. 2667. 
+[17]  Karna, S.P., et al., “ Electronic structure theory and mechanisms of the oxide trapped hole 
+annealing process,” IEEE Trans Nucl. Sci., 2000. 47: p. 2316. 
+[18]  Rudra, J.K. and W.B. Fowler, “ Oxygen vacancy and the E’ center in  crystalline SiO 2,” 
+Phys. Rev. B, Condens. Matter, 1987. 35: p. 8223. 
+[19]  Chavez, J.R., et al., “ Microscopic structure of the E' center in amorphous SiO 2,” IEEE 
+Trans Nucl. Sci., 1997. (6) 44: p. 1799. 
+[20]  Pantelides, S.T., et al., “ Reactions of hydrogen with Si-SiOs2 interfaces,” IEEE Trans Nucl. 
+Sci., 2000. (6) 47: p. 2262. 
+
+--- PAGINA PDF 65 ---
+57 
+[21]  Lacoe, R.C., et al., “ Total dose tolerance of the commercial TSMC 0.35um CMOS 
+process,” 2001 IEEE Radiation Effects Data Workshop, 2001. IEEE cat no. 01TH8588: p. 
+72-77. 
+[22]  Fleetwood D. M, et al., “1/f noise and radiation effects in MOS devices,” IEEE Trans Elect. 
+Dev., 1994. 41 (11). p. 1953. 
+[23]  Brady F.T., et al., “A Scalable, Radiation Hardened Shallow Trench Isolation,” IEEE Trans 
+Nucl. Sci., 1999. 46(6), p. 1836. 
+[24]  Turowski, M. et al., “ Non-uniform Total -Dose-Induced Charge Distribution in Shallow -
+Trench Isolation Oxides,” IEEE Trans Nucl. Sci., 2004. 51(6). 
+[25]  Wong, J. et al., “ A Hardmask STI Etch Process for 0.13um Logic Technology and 
+Beyond,” IEEE/SE MI Advanced Semiconductor Manufacturing Conference, 2001. 
+Munich, Germany. 
+[26]  Thompson S.E. and Nishida, T., “ Tunneling and Thermal Emission of Elections from a 
+Distribution of Shallow Traps in SiO2,” Appl. Phys. Lett., 1991. 58: p. 1262. 
+[27]  Lenahan P.M., et al., “ Radiation-Induced Interface Traps in MOS Devices: Capture Cross 
+Section and Density of States of P b1 Silicon Dangling Bond Centers,” IEEE Trans Nucl. 
+Sci., 2002. 49(6): p. 2708. 
+[28]  Poindexter E.H., et al., “Interface States and Electron Spin Resonance Centers in Thermally 
+Oxidized (1 11) and (100) Silicon Wafers,” J. Appl. Phys., 1981. 52: p. 879. 
+[29]  Saks N.S. and D.B. Brown, “ Interface trap formation via the two -stage H  process,” IEEE 
+Trans. Nucl. Sci., 1989. 36: p. 1848-59 
+[30]  Rashkeev S.N., et al., “ Effects of Hydrogen Motion on Interface Trap Formation and 
+Annealing,” IEEE Trans Nucl. Sci., 2004. 51 (6): p. 3158. 
+[31]  Paulsen R. E., et al., “ Observation of near -interface oxide traps with the charge pumping 
+technique,” IEEE Electron Device Letters, 13 (12): 1992. 
+[32]  Fleetwood D. M., et al., “ Border Traps: Issues for MOS Radiation Response and Long -
+Term Reliability,” Microelectronics and Reliability 35, 403-428 (1995). 
+[33]  Oldham T. R., “ Ionizing Radiation Effects in MOS Ox ides.” NJ: World Scientific 
+Publishing Co. Pte. Ltd., 1999. 
+[34]  Muller R. S. and Kamins T.I., “ Device Electronics for Integrated Circuits” . Second ed. 
+1986, New York: Wiley. 
+[35]  Cester A., et al., “ Switching Oxide Ionizing radiation effects on Ultra -Thin Oxide MOS 
+Structures,” R.D. Schrimpf and D.M. Fleetwood, Editors. D.M.  004, World Sci.: New 
+Jersey. 
+[36]  Lacoe R.C., et al., “ Total dose hardness of Three Commercial CMOS Microelectronics 
+Foundries,” 4th RADECS, p 265, 1997 
+[37]  Lacoe, R.C., “ CMOS Scaling Design Principles and Hardening by Design Methodology,” 
+NSREC Short Course, 2003. 
+[38]  Nicollian, E. and Brews, J., Metal Oxide Semiconductor Physics and Technology, NY: 
+John Wiley & Sons, 1982, pp. 319-370 and 550-570. 
+[39]  Fleetwood D. M., et al., “Radiation Effects at Low Electric Fields in Thermal, SIMOX and 
+Bipolar-Base Oxides,” IEEE Trans. on Nucl. Sci., 1996. 43 (6): p. 2537. 
+[40]  Cester, A., et al., “ Drain Current Decrease in MOSFETs After Heavy Ion Irradiation,” 
+IEEE Trans Nucl. Sci., 2004. 51(6): p. 3150. 
+
+--- PAGINA PDF 66 ---
+58 
+[41]  Snapp, W., DARPA Rad -Hard-by-Design Program Results , GOMAC Tech 2006, March 
+20-23, San Diego, CA. 
+[42]  M. R. Shaneyfelt, et al. , “Challenges in Hardening Technologies Using Shallow -Trench 
+Isolation,” IEEE Trans. Nucl. Sci. 1998. 45 (6): 2583. 
+[43]  I. Sanchez Esqueda, et al. , “ Two-dimensional Methodology for Modeling Radiation -
+Induced Off-State Leakage in CMOS Technologies ,” IEEE Trans. Nucl. Sci.  004. 45 (6), 
+p. 2583. 
+[44]  P. S. Winokur, et al., “ Two-Stage Process for Buil dup of Radiation -Induced Interface 
+States,” J. Appl. Phys. 1979 50 (5): p. 3492. 
+[45] D. M. Fleetwood, et al., “ A Reevaluation of the Worst -Case Post irradiation Response for 
+Hardened MOS Transistors,” IEEE Trans. Nucl. Sci. 1987 34 (6), p. 1178. 
+[46]  N. S. Saks, et al., “ Effects of Switched Bias on Radiation -Induced Interface Trap 
+Formation,” IEEE Trans. Nucl. Sci. vol. 1991. 38 (6), p. 1130. 
+[47]  Fleetwood D. M., et al., “ High-Temperature Silicon -On-Insulator Electronics for Space 
+Nuclear Power Systems:  Requirements and Feasibility ,” IEEE Trans. Nucl. Sci. 1988. 35 
+(5): p. 1099. 
+[48]  Lelis A. J., et al, “ Response of Interface Traps During High -Temperature Anneals,” IEEE 
+Trans. Nucl. Sci. 1991. 38 (6): p. 1590. 
+[49]  Johnston A. H, "Low Dose Rate Effects in Shallow Trench Isolation Regions," IEEE Trans. 
+Nucl. Sci. 2010, 57 (2010) p. 3279 
+[50]  Cressler J. D., “Using SiGe HBT technology for extreme environment electronics,” in Proc. 
+IEEE Bipolar/BiCMOS Circuits and Technology Meeting, 248 – 251, 2005. 
+[51]  Kosier S. L., et al., " Effects of Oxide Charge and Surface Recombination Velocity on the 
+Excess Base Current of BJTs ," in Proc. IEEE Bipolar/BiCMOS Circuits and Technology 
+Meeting, 211-214, December 1993. 
+[51]  Nowlin R. N., et al, " Mechanisms of Ionizin g-Radiation-Induced Gain Degradation in 
+Modern Bipolar Devices ," in Proc. 1991 IEEE Bipolar Circuits and Tech. Mtg., 174 -177, 
+December 1991. 
+[53] Kosier S. L., et al., "Physically Based Comparison of Hot -Carrier-Induced and Ionizing -
+Radiation-Induced Degradation in BJTs," IEEE Trans. Electron Devices, 1995. 42: p. 436. 
+[54]  Schmidt D. M., et al., " Modeling Ionizing -Radiation-Induced Gain Degradation of the 
+Lateral PNP Bipolar Junction Transistor," IEEE Trans. Nucl. Sci., 1996. 43 (6), p. 3032. 
+[55]  Barnaby H. J., et al., " Modeling Ionizing Radiation Effects in Lateral PNP BJTs with Non -
+Uniform Trapped Charge Distributions," in GOMAC Dig., 1998. p. 585. 
+[56]  Barnaby H. J., et al., " The Effects of Emitter -Tied Field Plates on Lateral PNP Ionizing 
+Radiation Response," in IEEE BCTM Proc., 35-38, December 1998. 
+[57]  Barnaby H. J., et al., " Modeling BJT Radiation Response with Non -Uniform Energy 
+Distributions of Interface Traps," IEEE Trans. Nucl. Sci., 2000. 47 (6): p. 514. 
+[58]  Barnaby H. J., et al., " Influence of Interface and Bulk Defect Interaction on Proton 
+Radiation Response of Bipolar Devices," IEEE NSREC, presented at NSREC, 2001. 
+[59]  Rax B. G., et al., " Displacement damage in bipolar linear integrated circuits ," IEEE Trans. 
+Nucl. Sci., 1999. 46 (6): p. 1660. 
+
+--- PAGINA PDF 67 ---
+59 
+[60]  Zoutendyk J. A., et al., " Comparison of the degradation effects of heavy ion, electron, and 
+cobalt-60 irradiation in an advanced bipolar process ," IEEE Trans. Nucl. Sci., 35 (6): p. 
+1428. 
+[61]  Wei A., et al., " Excess Collector Current Due to an Oxide -Trapped-Charge-Induced 
+Emitter in Irradiated NPN BJTs," IEEE Trans. Electron Devices, 1995. 42 (6): p. 923. 
+[62]  Nowlin R. N., et al., " Trends in the Total -Dose Response of Modern Bipolar Transistors ," 
+IEEE Trans. Nucl. Sci., 1992. 39 (6): p. 2026. 
+[63]  Pawlikiewicz A. H., " High tolerance to radiation effects and low noise performance of 
+ACUTE-a complementary bipolar SOI IC technology ," IEEE Trans. Nucl. Sci., 1196. 43 
+(6): p. 761. 
+[64]  Beaucour J., et al., "Total Dose Effects on Negative Voltage Regulator," IEEE Trans. Nucl. 
+Sci., 1994. 41 (6): p. 2420. 
+[65]  Johnston A. H., et al., " Enhanced Damage in Linear Bipolar Integrated Circuits at Low 
+Dose Rates," IEEE Trans. Nucl. Sci., 1995. 42 (6): p. 1650. 
+[66]  Schmidt D. M., et al.,  "Comparison of Ionizing -Radiation-Induced Gain Degradation in 
+Lateral, Substrate, and Vertical PNP BJTs," IEEE Trans. Nucl. Sci., 1995. 42 (6): p. 1541. 
+[67]  Schmidt D. M., et al., " Modeling Ionizing Radiation Induced Gain Degradation of the 
+Lateral Bipolar Junction Transistor," IEEE Trans. Nucl. Sci., 1996. 43: p. 3032. 
+[68]  Johnston A. H., et al., " Total Dose Effects in Conventional Bipolar Transistors and Linear 
+Integrated Circuits," IEEE Trans. Nuc. Sci. vol. 1994. 41 (6): p. 2427. 
+[69]  Johnston A. H., et al., " Enhanced Damage in Bipolar Devices at Low Dose Rates: Effects 
+at Very Low Dose Rates," IEEE Trans. Nuc. Sci. 1996. 43 (6): p. 3049. 
+[70]  Pease R. L., et al., " Enhanced Low -Dose-Rate Sensitivity of a Low -Dropout Voltage 
+Regulator," IEEE Trans. Nuc. Sci. 1998. 45 (6): p. 2571. 
+[71]  Pease R. L., et al., “ Total dose and dose rate response of an AD590 temperature 
+transducer,” IEEE Trans. Nucl. Sci., 2007. 54 (4): p. 1049. 
+[72]  Barnaby H., et al., "Analysis of Bipolar Linear Circuit Response Mecha nisms for High and 
+Low Dose Rate Total Dose Irradiations,” IEEE Trans. Nuc. Sci. 1996. 43 (6): p. 3040. 
+[73]  Barnaby H., et al., “ Identification of Degradation Mechanisms in a Bipolar Linear Voltage 
+Comparator Through Correlation of Transistor and Circuit  Response,” IEEE Trans. Nucl. 
+Sci. 1999. 46 (6): p. 1666. 
+[74]  Flament O., et al., " Enhanced Total Dose Damage in Junction Field Effect Transistors and 
+Related Linear Integrated Circuits," IEEE Trans. Nuc. Sci. vol. 1996. 43 (6): p. 3060-3067. 
+[75]  Johnston A. H., et al., “ Total dose effects in op -amps with compensated input stages ,” 
+IEEE Trans. Nucl. Sci., 2008. 44 (4): p. 1953. 
+[76]  Johnston A. H., et al., “ Total Dose Effects in op -amps with compensated input stages ,” 
+proceeding of Radiation Effects on Components and Systems, pp. 1 – 8, 2007. 
+[77]  Bernard M. F., et al., “ Analysis of Total Dose Response of A bipolar Voltage Comparator 
+Combining Radiation Experiments And Design Data ,” proceeding of Radiation and Its 
+Effects on Components and Systems, pp. 1 – 8, 2005. 
+[78]  Kosier S. L., et al., " Bounding the Total Dose Response of Modern Bipolar Transistors ," 
+IEEE Trans. Nuc. Sci. 1994. 41 (6): p. 1864. 
+[79]  Schmidt D. M., et al., " Modeling Ionization Radiation Induced Degradation of the Latera l-
+PNP Bipolar Junction Transistor," IEEE Trans. Nuc. Sci. 1996. 43 (6): p. 3032. 
+
+--- PAGINA PDF 68 ---
+60 
+[80]  Enlow E. W., et al., " Response of Advanced Bipolar Processes to Ionizing Radiation ,” 
+IEEE Trans. Nuc. Sci. 1991. 38 (6): p 1342. 
+[81]  Pease R. L., et al., “ A Proposed Hardness Assurance Test Methodology for Bipolar Linear 
+Circuits and Devices in a Space Ionizing Radiation Environment ,” IEEE Trans. Nucl. Sci. 
+1997. 44 (6): p. 1981. 
+[82]  Nowlin R. N., et al., “ Trends in the Total -Dose Response of Modern Bipolar Transistor s,” 
+IEEE Trans. Nucl . Sci. 1992. 39: p. 2026. 
+[83]  Nowlin R. N., et al., “ Hardness Assurance and Testing Issues for Bipolar/BiCMOS 
+Devices,” IEEE Trans. Nucl. Sci. 1993. 40: p. 1686. 
+[84]  McClure S., et al., " Dependence of Total Dose Response of Bipolar  Linear Microcircuits 
+on Applied Dose Rate,” IEEE Trans. Nuc. Sci. 1994. 41 (6): p. 2544. 
+[85]  Johnston A. H., et al., " Total Dose Effects in Conventional Bipolar Transistors and Linear 
+Integrated Circuits," IEEE Trans. Nuc. Sci. vol. 1994. 41 (6): p. 2427. 
+[86]  Beaucour J. T., et al., " Total Dose Effects on Negative Voltage Regulator ," IEEE Trans. 
+Nuc. Sci. 1994. 41 (6): p. 2420. 
+[87]  Johnston A. H., et al., " Enhanced Damage in Bipolar Devices at Low Dose Rates: Effects 
+at Very Low Dose Rates," IEEE Trans. Nuc. Sci. 1996. 43 (6): p. 3049. 
+[88]  Pease R. L., et al., " A Compendium of Recent Total Dose Data on Bipolar Linear 
+Microcircuits,” IEEE Rad. Effects Data Workshop Record, 28-37, 1996. 
+[89]  Pease R. L., et al., “ An Updated Compendium of Enhanced Low  Dose Rate Sensitive 
+(ELDRS) Bipolar Linear Circuits ,” 2001 IEEE Radiation Effects Data Workshop Record, 
+p. 127. 
+[90]  Pease R. L., “ A 2008 update to the ELDRS data compendium ,” Presented at the 2008 
+RADECS, Jyvaskyla, Finland, September, 2008. 
+[91]  Shaneyfelt M. R., et al., “ Thermal-Stress Effects on Enhanced Low Dose Rate Sensitivity 
+in Linear Bipolar ICs,” IEEE Trans. Nucl. Sci. NS- 2000. 47 (6): p. 2539. 
+[92]  Fleetwood D. M., et al., " Physical Mechanisms Contributing to Enhanced Bipolar Gain 
+Degradation at Low Dose Rates,” IEEE Trans. Nucl. Sci. 1994. 41 (6): p. 1871. 
+[93]  Pease R. L., et al., " Enhanced Low -Dose-Rate Sensitivity of a Low -Dropout Voltage 
+Regulator," IEEE Trans. Nuc. Sci. 1998. 45 (6): p 2571. [94] McClure S. S., et al., " Dose 
+rate and bias dependency of total dose sensitivity of low dropout voltage regulators ," IEEE 
+Radiation Effects Data Workshop Record, 100-105, 2000. 
+[95]  Pease R. L., et al., “ The effects of hydrogen in hermetically sealed packages on the total 
+dose and dose rate response of bipolar linear circuits,” IEEE Trans. Nucl. Sci. 2007. 54 (6): 
+p. 2168. 
+[96]  Chen X. J., et al., “ Mechanisms of enhanced radiation -induced degradation due to excess 
+molecular hydrogen in bipolar oxides,” IEEE Trans. Nucl. Sci. 2007. 54 (6): p. 1913. 
+[97]  Adell P. C., et al., “ Impact of hydrogen contamination on the total dose response of linear 
+bipolar microcircuits,” presented at RADECS, September 2007. 
+[98]  Chen X. J., et al., “ Annealing behavior of oxide trapped charge in bipolar base o xides after 
+radiation exposure in H2 environments,” IEEE Trans. Nucl. Sci. 2008. 55 (6): p. 3032. 
+[99]  Pease R. L., et al., “ Characterization of Enhanced Low Dose Rate Sensitivity (ELDRS) 
+Effects Using Gated Lateral PNP Transistor Structures ,” IEEE Trans. Nucl. Sci. 2004. 51 
+(6): p. 3773. 
+
+--- PAGINA PDF 69 ---
+61 
+[100]  Pease R. L., et al., “ The effects of hydrogen on the enhanced low dose rate sensitivity 
+(ELDRS) of bipolar linear circuits,” IEEE Trans. Nucl. Sci. 2008. 55 (6): p. 3169. 
+[101]  Adell P. C., et al., “ Irradiation with Molecular Hydrogen as an Accelerated Total Dose 
+Hardness Assurance Test Method for Bipolar Linear Circuit ,” IEEE Trans. Nucl. Sci. 
+2009. 56 (6): p. 3326. 
+[102]  Shaneyfelt M. R., et al., " Impact of Passivation Layers on Enhanced Low -Dose-Rate 
+Sensitivity and Thermal -Stress Effects in Linear Bipolar ICs ,” IEEE Trans. Nucl. Sci. 
+2002. 49 (6): p. 3171. 
+[103]  Barnaby H., et al., " Analysis of Bipolar Linear Circuit Response Mechanisms for High 
+and Low Dose Rate Total Dose Irradiations ,” IEEE Trans. Nuc. Sci.  1996. 43 (6): p. 
+3040. 
+[104]  Batyrev, I. G  et al., "Mechanisms of Hydrogen Effects in Bipolar Radiation Response," 
+IEEE Trans. Nuc. Sci. 2008. 55 (6): p. 3039. 
+[105]  Boch, J. et al., "Physical Model for the Low-Dose Rate Effect in Bipolar Devices ,” IEEE 
+Trans. Nucl. Sci., 2006 53 (6): p. 3655. 
+[106]  Stahlbush R. E. et al., "Post-irradiation cracking of H2 and formation of interface states in 
+irradiated metal-oxide-semiconductor field-effect transistors," J. Appl. Phys., 1993 73 (6) 
+p. 658.  
+[107]  Mrstik B. J. and Rendell R. W., “ Si-SiO2 interface state generation during X -ray 
+irradiation and during post -irradiation exposure to a hydrogen ambient [MOSFET] ,” 
+IEEE Trans. Nucl. Sci. 1991 38 (6) p. 1101. 
+[108]  D. M. Fleetwood et al., “Using laboratory x-ray and cobalt -60 irradiations to predict 
+CMOS device response in strategic and space environments ,” IEEE Trans. on Nucl. Sci. 
+1988 35 (6): p 487. 
+[109]  Hjalmarson H. P. et al., “ Mechanisms for radiation dose -rate sensitivity of bipolar 
+transistors,” IEEE Trans. Nucl. Sci. 2003 50 (6): p. 1901-1909, 2003.  
+[110]  Hjalmarson H. P.  et al., “ Calculations of Radiation Dose -Rate Sensitivity of Bipolar 
+Transistors,” IEEE Trans. Nucl. Sci. 2008 55 (6) p. 3009. 
+[111]  Pease R. L et al., "ELDRS in Bipolar Line ar Circuits: A Review ,” IEEE Trans. Nucl.  
+2009 56 (4): p. 1894. 
+[112]  Rowsey N. L. et al., "A quantitative Model for ELDRS and H2 degradation effects in 
+Irradiated Oxides Based on First Principles Calculations ,” IEEE Trans. Nucl.  2011 58 
+(6): p. 2937 
+[113]  Witczak S. C. et al., “Dose-rate sensitivity of modern nMOSFETs,” IEEE Trans. on Nucl. 
+Sci. 2005 52 (6): p. 2602.  
+[114]  McLean F. B., "A Framework for Understanding Radiation -Induced Interface States in 
+SiO2 MOS Structures," IEEE Trans. Nucl. Sci., 1980 27 (6): p. 1651. 
+[115]  Snowden C. M., Introduction to Semiconductor Device Modeling.Hackensack, NJ: 
+World Scientific, 1986. 
+[116]  Esqueda I. S. et al., “Modeling inter-device leakage in 90 nm bulk CMOS devices,” IEEE 
+Trans. Nucl. Sci., 2011 58 (6): p. 793. 
+[117]  A. G. Revesz, “Chemical and structural aspects of the irradiation behavior of SiO 2 films 
+on silicon,” IEEE Trans. Nucl. Sci., 1977 24, p. 2102. 
+
+--- PAGINA PDF 70 ---
+62 
+[118]  Chen X. J. et al, “Estimation and verification of radiation induced and energy distribution 
+using combined bipolar and MOS characterization methods in gated bipolar devices ,” 
+IEEE Trans. Nucl. Sci., 2005 52 (6) p. 2245. 
+[119]  Mrstik B. J et al., “Comparison of charge trapping in undoped  oxides made by low - and 
+high-temperature deposition techniques,” IEEE Trans. Nucl. Sci.,  001 48 p.  107.  
+[120]  Carriere T., et al., " Evaluation of Accelerated Total Dose Testing of Linear Bipolar 
+Circuits," IEEE Trans. Nuc. Sci. 2000 47 (6): p. 2350. 
+[121]  Boch J., et al.,” Elevated temperature irradiation at high dose rate of commercial linear 
+bipolar ICs,” IEEE Trans. Nucl. Sci. 2004. 51 (5): p. 2903. 
+[122]  Freitag R. K. and Brown D. B., " Study of Low-Dose-Rate Effects on Commercial Linear 
+Bipolar ICs," IEEE Trans. Nucl. Sci. 1998. 45 (6): p. 2649. 
+[123]  Pershenkov V. S., et al., “ Interface trap model for low -dose-rate effect in bipolar 
+devices,” presented at RADECS, Deauville, France, September 10-14, 2007. 
+[124]  Boch J., et al., “ Effect of switchin g from high to low dose rate on linear bipolar 
+technology radiation response,” IEEE Trans. Nucl. Sci. 2004. 51 (5): p. 2896.  
+[125]  Boch J., et al., “ Estimation of low -dose-rate degradation on bipolar linear integrated 
+circuits using switching experiments,” IEEE Trans. Nucl. Sci. 2005. 52 (6): p. 2616. 
+[126]  Kruckmeyer K. et al., “ Low dose rate test results of National Semiconductor’s ELDRS -
+free low dropout (LDO) regulator, LM2941, at dose rate of 1 and 10 mrad/s, ” in Proc. 
+IEEE Radiation Effects Data Workshop, 2009, pp. 59–64. 
+[127]  Kruckmeyer K. et al., “ Low dose rate test results of National Semiconductor’s ELDRS -
+free LM136-2.5 bipolar reference,” in Proc. IEEE Radiation Effects Data Workshop , pp. 
+47–50. 
+[128]  Kruckmeyer K. et al.,  “ Low dose rate test results of National Semiconductor’s ELDRS -
+free bipolar amplifier LM124 and comparators LM139 and LM193 ,” in Proc. IEEE 
+Radiation Effects Data Workshop Rec., 2008, pp. 110–117. 
+ 
+ 
+ 
+ 
+ 
+ 

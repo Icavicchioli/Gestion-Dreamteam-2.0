@@ -311,6 +311,24 @@ Fecha: 2010-05. [Original en línea](https://www.jpl.nasa.gov/news/engineers-dia
 Actualizaciones del 17, 20 y 24 de mayo de 2010: identificación 0→1, corrección y regreso de datos científicos.
 
 
+<a id="s35"></a>
+
+## S35 — Testing and Hardness Assurance Guidelines for Single Event Transients in Linear Devices
+
+Fecha: 2005-10-24. [Original en línea](https://nepp.nasa.gov/docuploads/FE7A50F8-E974-462D-8642C727C445125F/SET_Linear05.pdf) · [Copia local](../citas/S35_SET_lineales_2005.pdf). Estado: descargado.
+
+C. Poivey, S. Buchner, J. Howard, K. LaBel y R. Pease; NASA/GSFC y NEPP, 24/10/2005. PDF p. 3: origen y propagación; pp. 4–7: formas de pulso y regiones; §§2.4 y 4, pp. 8–12 y 23–25: dependencia de aplicación y familias. No es documentación Voyager.
+
+
+<a id="s36"></a>
+
+## S36 — Hydrogen Contamination and Its Correlation with Enhanced Low-Dose-Rate Sensitivity
+
+Fecha: 2012-12. [Original en línea](https://nepp.nasa.gov/files/25742/12_162_JPL_Adell_Hydrogen%20Contamination%20rec%201%207%2014.pdf) · [Copia local](../citas/S36_bipolares_recombinacion.pdf). Estado: descargado.
+
+Philippe Adell, JPL Publication 12-20, diciembre de 2012 según portada. §3.2, pp. 16–18 / PDF 24–26; figuras 23–27: estructuras BJT, corrientes y degradación. Fuente general, no geometrías de Voyager.
+
+
 ## Figuras incluidas y procedencia
 
 - **Mapa de componentes:** elaboración propia, síntesis de S01, S21, S24–S27 y el dossier. No reproduce un plano de vuelo. PNG y SVG en `figuras/`.
@@ -334,3 +352,11 @@ Las páginas son reproducciones renderizadas de los PDF NASA/JPL, sin reconstrui
 ![Circuito óptico de ensayo](figuras/voyager_radiacion_vol1_1977_p152.png)
 
 **Figura de respaldo C.** S01, p. 7-54. Ejemplo real de prueba que integra componentes discretos; no presentarlo como esquema de vuelo.
+
+## Figuras para distinguir pulso, ganancia y mecanismo
+
+- [S01, PDF 100](figuras/voyager_bjt_p100.png), p. 7-2: explicación del ensayo de bipolares; [PDF 101](figuras/voyager_bjt_p101.png), p. 7-3: figuras 7-1 y 7-2. Identificar cambio de ganancia inversa y corriente de colector, no leerlo como β absoluto. Las figuras comparan las condiciones y familias indicadas, no una placa particular de vuelo.
+- [S35, PDF 4](figuras/S35_transitorios_p004.png), figuras 1–2: transitorios del estudio de circuitos lineales. Ejes tensión de salida y tiempo; las recuperaciones difieren. No son señales medidas en Voyager ni límites universales de duración.
+- [S36, PDF 25](figuras/S36_corrientes_p025.png), p. 17, figuras 24–27: estructuras y componentes de corriente de base; gráfico de IC e IB frente a VBE. Apoya la explicación microscópica, no identifica geometrías Voyager.
+- [Mecanismos conceptuales](figuras/02_mecanismos_conceptuales.png): esquema propio de colección en unión, carga en óxido y capacitor con fuga, fundamentado en S21–25/S35. Sin escala ni parámetros de vuelo.
+- [Pulso y estado](figuras/03_pulso_y_estado.png): esquema propio de propagación y captura; fundamentado en S22/S35. La captura es un supuesto indicado, no el resultado inevitable de cualquier pulso.

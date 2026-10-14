@@ -1,6 +1,6 @@
 # Copias de las fuentes consultadas
 
-**34 registros:** 31 originales descargados (PDF, HTML o datos TXT) y 3 copias de lectura web de páginas JPL cuya descarga directa devolvió HTTP 403. Estas últimas no son el HTML original.
+**36 registros:** 33 originales descargados (PDF, HTML o datos TXT) y 3 copias de lectura web de páginas JPL cuya descarga directa devolvió HTTP 403. Estas últimas no son el HTML original.
 
 Para empezar: **S01** (ensayos de componentes), **S02** (procedimientos), **S08** (PWS), **S21** (física) y **S09** (daño real). Los números de página y secciones están en [la bibliografía](../investigacion/04_fuentes.md).
 
@@ -42,5 +42,7 @@ Los HTML son copias del documento, no sitios completos sin conexión: imágenes,
 | S32 | JPL Horizons API Documentation | [Abrir](S32_horizons_api.html) | [Texto](S32_horizons_api.txt) |
 | S33 | Voyager 2 PGH Rate documentation | [Abrir](S33_pgh_documentacion.html) | [Texto](S33_pgh_documentacion.txt) |
 | S34 | Engineers Diagnosing Voyager 2 Data System Update | [Abrir](S34_lectura_web.txt) | [Texto](S34_lectura_web.txt) |
+| S35 | Testing and Hardness Assurance Guidelines for Single Event Transients in Linear Devices | [Abrir](S35_SET_lineales_2005.pdf) | [Texto](S35_SET_lineales_2005.txt) |
+| S36 | Hydrogen Contamination and Its Correlation with Enhanced Low-Dose-Rate Sensitivity | [Abrir](S36_bipolares_recombinacion.pdf) | [Texto](S36_bipolares_recombinacion.txt) |
 
 [Catálogo con fechas y huellas de integridad](catalogo.json).

@@ -403,5 +403,32 @@
     "consulta": "2026-10-14",
     "sha256": "3930b664a84612eaffb6925b84ba4c74ff5245be39c5abefcb5fabc9b8dde370",
     "bytes": 11851
+  },
+  {
+    "id": "S35",
+    "titulo": "Testing and Hardness Assurance Guidelines for Single Event Transients in Linear Devices",
+    "fecha": "2005-10-24",
+    "url": "https://nepp.nasa.gov/docuploads/FE7A50F8-E974-462D-8642C727C445125F/SET_Linear05.pdf",
+    "archivo": "S35_SET_lineales_2005.pdf",
+    "estado": "descargado",
+    "url_final": "https://nepp.nasa.gov/docuploads/FE7A50F8-E974-462D-8642C727C445125F/SET_Linear05.pdf",
+    "sha256": "a896c2959ff29258b257a1c117ff3d4a96b5b67d73396460a6927ca7333a399a",
+    "bytes": 776669,
+    "consulta": "2026-10-14",
+    "paginas_pdf": 36
+  },
+  {
+    "id": "S36",
+    "titulo": "Hydrogen Contamination and Its Correlation with Enhanced Low-Dose-Rate Sensitivity",
+    "fecha": "2012-12",
+    "url": "https://nepp.nasa.gov/files/25742/12_162_JPL_Adell_Hydrogen%20Contamination%20rec%201%207%2014.pdf",
+    "archivo": "S36_bipolares_recombinacion.pdf",
+    "estado": "descargado",
+    "url_final": "https://nepp.nasa.gov/files/25742/12_162_JPL_Adell_Hydrogen%20Contamination%20rec%201%207%2014.pdf",
+    "sha256": "f327a92d35e6232285533743742dd1fd56d102aa08faea68379fa6a04ff4e9ed",
+    "bytes": 3036259,
+    "consulta": "2026-10-14",
+    "paginas_pdf": 70,
+    "nota": "Portada JPL Publication 12-20, 12/12; no inferir fecha a partir del nombre del archivo."
   }
 ]

@@ -5,7 +5,7 @@
 <rect x="65" y="255" width="540" height="355" rx="16" fill="white" stroke="#bfd0dc" stroke-width="2"/>
 <text x="89" y="311" font-family="Arial, sans-serif" font-size="36" fill="#126c81">R / C</text>
 <text x="89" y="362" font-family="Arial, sans-serif" font-size="29" fill="#152f46">Resistencias y capacitores</text>
-<text x="89" y="412" font-family="Arial, sans-serif" font-size="25" fill="#152f46">R, aislamiento, C y fugas</text>
+<text x="89" y="412" font-family="Arial, sans-serif" font-size="25" fill="#152f46">R, aislamiento, C y corrientes</text>
 <text x="89" y="452" font-family="Arial, sans-serif" font-size="25" fill="#152f46">Polarización, filtros, retención</text>
 <text x="89" y="492" font-family="Arial, sans-serif" font-size="25" fill="#152f46">Voyager: ensayos de pasivos</text>
 <text x="89" y="532" font-family="Arial, sans-serif" font-size="25" fill="#152f46">PWS: descarga de antena</text>
@@ -14,7 +14,7 @@
 <text x="654" y="311" font-family="Arial, sans-serif" font-size="36" fill="#126c81">L / T</text>
 <text x="654" y="362" font-family="Arial, sans-serif" font-size="29" fill="#152f46">Inductores y transformadores</text>
 <text x="654" y="412" font-family="Arial, sans-serif" font-size="25" fill="#152f46">Bobinado, núcleo y aislantes</text>
-<text x="654" y="452" font-family="Arial, sans-serif" font-size="25" fill="#152f46">Pérdidas, aislamiento, rizado</text>
+<text x="654" y="452" font-family="Arial, sans-serif" font-size="25" fill="#152f46">Pérdidas, aislamiento y espurios</text>
 <text x="654" y="492" font-family="Arial, sans-serif" font-size="25" fill="#152f46">Calificar materiales y márgenes</text>
 <text x="654" y="532" font-family="Arial, sans-serif" font-size="25" fill="#152f46">Materiales Voyager: no resueltos</text>
 <text x="654" y="583" font-family="Arial, sans-serif" font-size="21" fill="#526676">S26 §10.2.6.5; S03</text>
@@ -30,7 +30,7 @@
 <text x="89" y="701" font-family="Arial, sans-serif" font-size="36" fill="#126c81">IC</text>
 <text x="89" y="752" font-family="Arial, sans-serif" font-size="29" fill="#152f46">Analógico, lógica y memoria</text>
 <text x="89" y="802" font-family="Arial, sans-serif" font-size="25" fill="#152f46">Offset, tiempos y estado lógico</text>
-<text x="89" y="842" font-family="Arial, sans-serif" font-size="25" fill="#152f46">TID, desplazamiento y SEE</text>
+<text x="89" y="842" font-family="Arial, sans-serif" font-size="25" fill="#152f46">Pulsos, estados y degradación</text>
 <text x="89" y="882" font-family="Arial, sans-serif" font-size="25" fill="#152f46">Blindaje y respuesta del sistema</text>
 <text x="89" y="922" font-family="Arial, sans-serif" font-size="25" fill="#152f46">Voyager: retención / recuperación</text>
 <text x="89" y="973" font-family="Arial, sans-serif" font-size="21" fill="#526676">S01; S04; S10–12</text>

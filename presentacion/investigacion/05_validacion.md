@@ -40,19 +40,33 @@ Fecha: 14 de octubre de 2026. Se revisaron unidades, cálculos, trazabilidad y c
 
 ## Discrepancias conservadas
 
-- **S02, tabla A-2:** imprime 4,8 × 10¹³ en la última fluencia; suma de flujos, tabla A-3 y texto A-6 corresponden a 4,8 × 10¹². Se cotejó visualmente el original. No confundir error del documento con OCR.
-- **FAQ frente a historia técnica:** S05 informa 8198 palabras FDS y S04 aproximadamente 8K. No se sustituyó silenciosamente una cifra. La conversión de 80 µs a instrucciones/s de la FAQ también resulta inconsistente; no se utiliza.
-- **Previsiones frente a estado:** los apagados previstos en S13/S16 no son automáticamente hechos ocurridos. Se priorizan S07 y el comunicado de agosto de 2026 para el estado consignado.
+- **[S02](04_fuentes.md#s02), tabla A-2:** imprime 4,8 × 10¹³ en la última fluencia; suma de flujos, tabla A-3 y texto A-6 corresponden a 4,8 × 10¹². Se cotejó visualmente el original. No confundir error del documento con OCR.
+- **FAQ frente a historia técnica:** [S05](04_fuentes.md#s05) informa 8198 palabras FDS y [S04](04_fuentes.md#s04) aproximadamente 8K. No se sustituyó silenciosamente una cifra. La conversión de 80 µs a instrucciones/s de la FAQ también resulta inconsistente; no se utiliza.
+- **Previsiones frente a estado:** los apagados previstos en [S13](04_fuentes.md#s13)/S16 no son automáticamente hechos ocurridos. Se priorizan [S07](04_fuentes.md#s07) y el comunicado de agosto de 2026 para el estado consignado.
 - **Duración inicial:** algunas notas describen cuatro años hasta Saturno y la ficha histórica resume cinco años. No se usa ese redondeo como límite garantizado de resistencia de componentes ni como vida útil diseñada de toda pieza.
 - **Posición:** cifras fechadas de distancia terrestre no se presentan como distancia heliocéntrica ni como efeméride exacta del día de consulta.
 - **Causalidad:** el bit alterado de 2010 y el chip averiado de 2024 no prueban por sí solos una partícula causante. El daño documentado del CRS sí aporta evidencia radiativa, con reservas sobre el mecanismo propuesto.
 
 ## Comprobaciones de material
 
-Se conservaron 34 registros con archivo local: 31 descargas originales y tres copias de texto recuperado por la herramienta web. Estas tres páginas JPL devolvieron HTTP 403 en la descarga directa; no se presentan como HTML original. El catálogo registra esa diferencia y las huellas SHA-256. Las copias HTML no incluyen todos sus recursos remotos.
+Se conservaron 36 registros con archivo local: 33 descargas originales y tres copias de texto recuperado por la herramienta web. Estas tres páginas JPL devolvieron HTTP 403 en la descarga directa; no se presentan como HTML original. El catálogo registra esa diferencia y las huellas SHA-256. Las copias HTML no incluyen todos sus recursos remotos.
 
 Se revisaron visualmente el mapa propio y las páginas técnicas empleadas para curvas MOS, prueba óptica, pasivos y la inconsistencia de fluencia. Los escaneos históricos tienen calidad limitada; las transcripciones automáticas son auxiliares. Las figuras son material de investigación, no diapositivas listas para proyectar.
 
 ## Preguntas que permanecen abiertas
 
 Faltan el conjunto completo de esquemas y listas de materiales por unidad, tecnologías y geometrías por lote de vuelo, dosis acumulada por ubicación hasta 2026 y ensayos específicos de varios magnéticos, relés, soldaduras y recubrimientos. También faltan diagnósticos concluyentes de causa física para ciertas averías. Estas limitaciones están explícitas en el dossier y no impiden explicar los mecanismos generales ni las mitigaciones efectivamente documentadas.
+
+## Revisión de profundidad y efectos transitorios
+
+La ampliación distingue perturbación transitoria, estado persistente recuperable y degradación/daño, sin hacerlas equivalentes a mecanismos físicos. Incluye trece explicaciones «Cómo explicarlo en clase», además de regiones y ecuaciones opcionales. El balance del BJT indica las condiciones mantenidas; la explicación MOS distingue el término de óxido de los estados de interfaz y diferencia NMOS/PMOS. Se evita atribuir pares electrón–hueco como única explicación de todo componente.
+
+Se verificó en [S04](04_fuentes.md#s04), p. 182, la evolución del prototipo TTL hacia procesador y memorias CMOS; [S01](04_fuentes.md#s01) §VI.B identifica 28 funciones CMOS usadas. No se asigna una tecnología universal a todas las computadoras ni se confirma MOSFET de potencia de vuelo. El esquema de amplificador–comparador–registro–carga es conceptual.
+
+Nuevos cálculos comprobables: 10 mA/100 = 0,1 mA; 10 mA/50 = 0,2 mA (región activa). 1 pC/10 pF = 0,1 V; 100 kΩ × 10 pF = 1 µs; tiempo sobre un umbral 50 mV por encima del punto inicial: 1 µs × ln(0,1/0,05) ≈ 0,693 µs. El pulso es supuesto instantáneo respecto de RC, sin realimentación ni carga adicional; la captura no está garantizada.
+
+El plan recibido sumaba 18:45, no 18:00. El esquema curado deja 17:30 de contenido y 0:30 para bibliografía/respaldo: 18:00 más 2:00 de margen. La comprobación automática de palabras es orientativa; la duración final requiere ensayo oral con pausas y figuras. No se afirma haber realizado ese ensayo.
+
+Se añadieron [S35](04_fuentes.md#s35) (NASA/GSFC, 24/10/2005) y [S36](04_fuentes.md#s36) (JPL Publication 12-20, diciembre de 2012 según portada), descargados con texto extraído. Total actualizado: **36 fuentes, 33 originales descargados y tres copias de lectura web**. Las dos fuentes nuevas son generales, no hardware específico de Voyager.
+
+Comprobación final: 36 archivos catalogados con SHA-256 coincidente, sin enlaces locales rotos, trece explicaciones para clase. Las notas orales suman aproximadamente 1511 palabras: 12,1 minutos a 125 palabras/minuto, dejando unos 5,4 minutos de contenido para señalar figuras, pausas y transiciones, más la media minuta de bibliografía. Es una estimación, no un ensayo cronometrado. Se revisaron visualmente las figuras nuevas; se corrigieron símbolos que la fuente tipográfica no representaba.

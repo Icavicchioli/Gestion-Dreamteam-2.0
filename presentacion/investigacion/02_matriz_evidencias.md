@@ -34,3 +34,25 @@ Fecha de corte: 14/10/2026. **D**: documentado; **I**: inferido; **NR**: no resu
 ## Evidencia que falta para cerrar las preguntas abiertas
 
 Para atribuir una tecnología a una placa hacen falta esquema revisado, lista de materiales, identificación de lote y registro de integración. Para reconstruir dosis hacen falta espectros y geometría local durante la trayectoria, modelo de transporte y su validación. Para atribuir una falla a radiación hacen falta telemetría y diagnóstico que discriminen causas competidoras. Ninguna de esas ausencias se completa con valores típicos de los años setenta.
+
+## Duración, propagación y recuperación por familia
+
+En esta tabla **general** significa física o respuesta de circuito respaldada por fuentes generales; no certifica ocurrencia ni mitigación de vuelo. **Conceptual** identifica una deducción de circuito con supuestos explícitos. No implica que todos los efectos sean relevantes a la misma exposición.
+
+| Familia | Efecto inmediato o espurio | Degradación / estado que puede permanecer | Recuperación y mitigación | Evidencia / certeza |
+|---|---|---|---|---|
+| Resistencias | Corriente ajena o de aislamiento se convierte en tensión | Deriva de R; una lectura posterior puede quedar registrada | Descarga del nodo, control de impedancia y aislamiento | [S01](04_fuentes.md#s01) p. 7-53, ensayo; [S25](04_fuentes.md#s25)/S27 general; circuito conceptual |
+| Capacitores | Conductividad inducida aumenta fuga durante exposición | Descarga altera temporización; posibles cambios residuales | Recarga y material calificado; medir fuga además de C | [S24](04_fuentes.md#s24) p. 49 general; B11B [S01](04_fuentes.md#s01) ensayo; tiempo conceptual |
+| Magnéticos | Perturbación transmitida por mando o aislamiento | Daño de aislamiento si ocurre; no asumir desmagnetización | Control de excitación y aislamiento | [S26](04_fuentes.md#s26) §10.2.6.5 general; materiales Voyager NR |
+| Diodos | Colección de portadores produce corriente extra | Defectos pueden elevar fuga | Fin de colección; selección y evaluación del receptor | [S21](04_fuentes.md#s21)/S35 general; modelos ensayados [S01](04_fuentes.md#s01) |
+| BJT | Corrientes de unión pueden amplificarse como pulsos | Más corriente de base, menor β; posible estado capturado | Recuperación de señal o margen de ganancia según efecto | [S36](04_fuentes.md#s36) PDF 25 mecanismo; [S01](04_fuentes.md#s01) §VII.B ensayo; [S35](04_fuentes.md#s35) transitorios |
+| JFET/MOS | Colección en uniones perturba nodos | Umbral/fugas; susceptibilidad dependiente de estructura | Restauración del nodo; selección de proceso | [S22](04_fuentes.md#s22)–23 general; CMOS programa [S01](04_fuentes.md#s01); potencia de vuelo NR |
+| IC analógico/lógica | SET de salida, cruce falso de umbral | Muestra u orden incorrecta; parámetros degradados | Filtrado, validación y estado seguro según aplicación | [S35](04_fuentes.md#s35) §§2.4/4 general; no atribuir filtros concretos a Voyager |
+| Memorias/registros | Captura de pulso o perturbación directa | Estado equivocado sin daño necesario | Reescritura; detección y recuperación verificadas por caso | [S22](04_fuentes.md#s22) física; [S10](04_fuentes.md#s10)/S34 bit 2010 documentado, causa NR |
+| Detectores/óptica | Pulso útil o espurio según medición | Cambio de eficiencia, corriente oscura o transferencia | Rechazo de eventos/calibración, sin reparar defectos | [S21](04_fuentes.md#s21)/S30 general; [S09](04_fuentes.md#s09) daño Voyager; [S01](04_fuentes.md#s01) ensayo óptico |
+| Pistas/cables/contactos | Propagación y acoplamiento de descarga | Estado alterado o daño en receptor | Retornos, equipotencialidad, control de acoplamiento | [S25](04_fuentes.md#s25) general; [S08](04_fuentes.md#s08) §5.G requisito PWS |
+| PCB/recubrimientos | Fugas o descarga por carga acumulada | Aislamiento puede quedar afectado | Evacuación de carga y elección de material | [S25](04_fuentes.md#s25) general; material completo de vuelo NR |
+| Relés | Mando incorrecto puede accionar mecanismo | Carga conectada/desconectada; depende de mando y relé | Orden correctiva si es recuperable; calificación de aislamiento | [S03](04_fuentes.md#s03) uso documentado; efecto de mando conceptual |
+| Cuarzo/oscilador | Circuitería puede generar pulso de reloj falso | Cristal puede cambiar frecuencia/pérdidas; reloj puede alterar estado receptor | Selección de cristal y análisis separado del circuito | [S26](04_fuentes.md#s26)/S01 cristal; perturbación de reloj conceptual |
+
+**Ejemplo transversal:** amplificador → comparador → registro → carga. [S35](04_fuentes.md#s35) sustenta generación/propagación de SET; el circuito y sus tiempos del dossier §5.7 son ilustrativos. No es un incidente Voyager. Amplitud, duración y captura determinan si el evento produce una consecuencia persistente.

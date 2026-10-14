@@ -1,10 +1,12 @@
 # Radiación y componentes electrónicos de Voyager
 
-Investigación para electrónica universitaria, actualizada al **14 de octubre de 2026**. El foco es cómo la radiación altera cada parte de un circuito y qué decisiones de ingeniería ayudan a entender la longevidad de Voyager.
+Investigación para electrónica universitaria, actualizada al **14 de octubre de 2026**. El foco incluye señales espurias, perturbaciones transitorias, estados alterados y degradación: cómo la radiación altera cada parte de un circuito y qué decisiones de ingeniería ayudan a entender la longevidad de Voyager.
 
 La evidencia muestra una combinación de calificación de componentes, márgenes de circuito, cambios de fabricación, blindaje localizado y recuperación operativa. La misión continuó a pesar de daños y pérdida de capacidades: su longevidad no demuestra inmunidad de sus componentes.
 
 ## Orden de lectura
+
+Para leer hoy: el dossier tiene una guía inicial, explicaciones físicas por familia y trece versiones breves «Cómo explicarlo en clase». Las derivaciones opcionales pueden saltearse. El guion separa texto en pantalla de notas orales.
 
 1. [Dossier técnico](01_dossier.md): física, componentes, hardware, exposición y conclusiones.
 2. [Matriz de evidencias](02_matriz_evidencias.md): qué está documentado, qué se infiere y qué falta resolver.

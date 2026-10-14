@@ -40,6 +40,8 @@ loc = {
 'S31':'Explicación NASA de preparación de naves para radiación; contexto y lectura inicial.',
 'S32':'Documentación de Horizons API. Consultada para explorar efemérides; no se obtuvo una solución numérica utilizable y no se cita una distancia calculada con ella.',
 'S33':'PGH Rate: umbral del canal y promedios de seis horas, complemento de S20.',
+'S35':'C. Poivey, S. Buchner, J. Howard, K. LaBel y R. Pease; NASA/GSFC y NEPP, 24/10/2005. PDF p. 3: origen y propagación; pp. 4–7: formas de pulso y regiones; §§2.4 y 4, pp. 8–12 y 23–25: dependencia de aplicación y familias. No es documentación Voyager.',
+'S36':'Philippe Adell, JPL Publication 12-20, diciembre de 2012 según portada. §3.2, pp. 16–18 / PDF 24–26; figuras 23–27: estructuras BJT, corrientes y degradación. Fuente general, no geometrías de Voyager.',
 'S34':'Actualizaciones del 17, 20 y 24 de mayo de 2010: identificación 0→1, corrección y regreso de datos científicos.'}
 
 for s in catalogo:
@@ -55,7 +57,7 @@ for s in catalogo:
 (citas/'catalogo.json').write_text(json.dumps(catalogo,ensure_ascii=False,indent=2)+'\n')
 
 bib = ['# Fuentes y figuras\n','Consulta: 14 de octubre de 2026. Las páginas PDF se cuentan desde 1 e incluyen portada; se indica además la página impresa cuando difiere. El catálogo conserva URL, fecha de consulta, tamaño y SHA-256.\n','Se priorizan documentos originales NASA/JPL/GSFC, NTRS, PDS y NEPP. S28 es la excepción técnica de Vanderbilt. Los manuales generales explican física; no demuestran instalación ni práctica de vuelo. S32 es material consultado auxiliar.\n']
-idx = ['# Copias de las fuentes consultadas\n','**34 registros:** 31 originales descargados (PDF, HTML o datos TXT) y 3 copias de lectura web de páginas JPL cuya descarga directa devolvió HTTP 403. Estas últimas no son el HTML original.\n','Para empezar: **S01** (ensayos de componentes), **S02** (procedimientos), **S08** (PWS), **S21** (física) y **S09** (daño real). Los números de página y secciones están en [la bibliografía](../investigacion/04_fuentes.md).\n','Los HTML son copias del documento, no sitios completos sin conexión: imágenes, estilos o elementos interactivos pueden depender del sitio original. Los TXT extraídos de PDF contienen errores de OCR posibles; consultar el PDF para números y símbolos.\n','| ID | Fuente | Archivo local | Texto |\n|---|---|---|---|']
+idx = ['# Copias de las fuentes consultadas\n','**36 registros:** 33 originales descargados (PDF, HTML o datos TXT) y 3 copias de lectura web de páginas JPL cuya descarga directa devolvió HTTP 403. Estas últimas no son el HTML original.\n','Para empezar: **S01** (ensayos de componentes), **S02** (procedimientos), **S08** (PWS), **S21** (física) y **S09** (daño real). Los números de página y secciones están en [la bibliografía](../investigacion/04_fuentes.md).\n','Los HTML son copias del documento, no sitios completos sin conexión: imágenes, estilos o elementos interactivos pueden depender del sitio original. Los TXT extraídos de PDF contienen errores de OCR posibles; consultar el PDF para números y símbolos.\n','| ID | Fuente | Archivo local | Texto |\n|---|---|---|---|']
 for s in catalogo:
     p=citas/s['archivo']
     txt=p.with_suffix('.txt')
@@ -87,6 +89,11 @@ Las páginas son reproducciones renderizadas de los PDF NASA/JPL, sin reconstrui
 
 **Figura de respaldo C.** S01, p. 7-54. Ejemplo real de prueba que integra componentes discretos; no presentarlo como esquema de vuelo.
 ''')
+# Conservar el apéndice curado de figuras añadido después de la generación inicial.
+old_bib=(out/'04_fuentes.md').read_text() if (out/'04_fuentes.md').exists() else ''
+marker='## Figuras para distinguir pulso, ganancia y mecanismo'
+if marker in old_bib:
+    bib.append('\n'+marker+old_bib.split(marker,1)[1])
 (out/'04_fuentes.md').write_text('\n'.join(bib))
 (citas/'README.md').write_text('\n'.join(idx)+'\n\n[Catálogo con fechas y huellas de integridad](catalogo.json).\n')
 
@@ -103,10 +110,10 @@ text(65,40,'Radiación: del material al circuito',52)
 text(65,112,'Mapa conceptual • no es un esquema de vuelo de Voyager',28)
 text(65,175,'Ambiente → interacción física → parámetro eléctrico → función del circuito',32)
 cards=[
-('R / C','Resistencias y capacitores',['R, aislamiento, C y fugas','Polarización, filtros, retención','Voyager: ensayos de pasivos','PWS: descarga de antena'], 'S01 p. 7-53; S08 §5.G'),
-('L / T','Inductores y transformadores',['Bobinado, núcleo y aislantes','Pérdidas, aislamiento, rizado','Calificar materiales y márgenes','Materiales Voyager: no resueltos'],'S26 §10.2.6.5; S03'),
+('R / C','Resistencias y capacitores',['R, aislamiento, C y corrientes','Polarización, filtros, retención','Voyager: ensayos de pasivos','PWS: descarga de antena'], 'S01 p. 7-53; S08 §5.G'),
+('L / T','Inductores y transformadores',['Bobinado, núcleo y aislantes','Pérdidas, aislamiento y espurios','Calificar materiales y márgenes','Materiales Voyager: no resueltos'],'S26 §10.2.6.5; S03'),
 ('D / Q','Diodos y transistores',['Unión, red y óxido de control','Fuga, ganancia y umbral','Selección y margen eléctrico','Voyager: ensayos y proceso CMOS'],'S01 §§VI–VII; S21–23'),
-('IC','Analógico, lógica y memoria',['Offset, tiempos y estado lógico','TID, desplazamiento y SEE','Blindaje y respuesta del sistema','Voyager: retención / recuperación'],'S01; S04; S10–12'),
+('IC','Analógico, lógica y memoria',['Offset, tiempos y estado lógico','Pulsos, estados y degradación','Blindaje y respuesta del sistema','Voyager: retención / recuperación'],'S01; S04; S10–12'),
 ('PCB','Placa e interconexiones',['Pistas, soldaduras, relés, contactos','Carga, aislamiento y descargas','Retornos y equipotencialidad','Distinguir radiación de fatiga'],'S25 §§4.1.3–5; S08 §5.G'),
 ('SENS','Detectores, óptica y cuarzo',['Colección, emisión y frecuencia','Respuesta, señal y temporización','Calibración y selección de lotes','Voyager: daño CRS / ensayo cuarzo'],'S09; S01 §VIII.F; S26')]
 for i,(tag,title,lines,source) in enumerate(cards):
