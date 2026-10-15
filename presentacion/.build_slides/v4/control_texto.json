@@ -1,0 +1,140 @@
+[
+  {
+    "diapositiva": 1,
+    "lineas": 5,
+    "max_palabras": 3,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 2,
+    "lineas": 6,
+    "max_palabras": 7,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 3,
+    "lineas": 6,
+    "max_palabras": 8,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 4,
+    "lineas": 6,
+    "max_palabras": 7,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 5,
+    "lineas": 6,
+    "max_palabras": 7,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 6,
+    "lineas": 6,
+    "max_palabras": 7,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 7,
+    "lineas": 5,
+    "max_palabras": 6,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 8,
+    "lineas": 6,
+    "max_palabras": 7,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 9,
+    "lineas": 6,
+    "max_palabras": 8,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 10,
+    "lineas": 6,
+    "max_palabras": 8,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 11,
+    "lineas": 6,
+    "max_palabras": 7,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 12,
+    "lineas": 6,
+    "max_palabras": 7,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 13,
+    "lineas": 6,
+    "max_palabras": 8,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 14,
+    "lineas": 6,
+    "max_palabras": 8,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 15,
+    "lineas": 6,
+    "max_palabras": 8,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 16,
+    "lineas": 6,
+    "max_palabras": 7,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 17,
+    "lineas": 6,
+    "max_palabras": 8,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 18,
+    "lineas": 6,
+    "max_palabras": 7,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 19,
+    "lineas": 6,
+    "max_palabras": 6,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 20,
+    "lineas": 5,
+    "max_palabras": 6,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 21,
+    "lineas": 6,
+    "max_palabras": 7,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 22,
+    "lineas": 5,
+    "max_palabras": 7,
+    "notas_coinciden": true
+  },
+  {
+    "diapositiva": 23,
+    "lineas": 6,
+    "max_palabras": 8,
+    "notas_coinciden": true
+  }
+]

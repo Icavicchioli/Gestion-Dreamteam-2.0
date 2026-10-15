@@ -23,3 +23,12 @@ Las páginas de procedencia se conservan como HTML y texto. La galería NASA se 
 - **Transitorio:** S35, fig.1, p.4. Diapositiva 22; circuito lineal ajeno a Voyager.
 
 Los créditos de la publicación no implican una licencia adicional inventada. Consultar el original para cualquier reutilización fuera del trabajo académico.
+
+
+## Enlaces de procedencia
+
+- [NASA: imagen de Voyager](https://science.nasa.gov/image-detail/spacecraft-profile-3/). Copia local: `portada.html`. Consulta: 14/10/2026.
+- [NASA/JPL: Voyager 2 en pruebas](https://science.nasa.gov/image-detail/pia21736/). Copia local: `integracion.html`. Consulta: 14/10/2026.
+- [NASA/JPL: cinturones de Júpiter observados por Cassini](https://science.nasa.gov/photojournal/inner-radiation-belts-of-jupiter/). Copia local: `jupiter.html`. Consulta: 14/10/2026.
+- [SOHO: actividad solar de julio de 1996](https://soho.nascom.nasa.gov/bestofsoho/Particle/cos003.html). Copia local: `solar.html`. Consulta: 14/10/2026.
+- [Hamamatsu: Si photodiodes, nota técnica](https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/si_pd_kspd9001e.pdf). Copia local: `hamamatsu_fotodiodos.pdf`. Consulta: 14/10/2026.

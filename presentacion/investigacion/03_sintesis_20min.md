@@ -1,3 +1,5 @@
+> **Archivo histórico.** Este esquema fue reemplazado por la presentación de 18 diapositivas. Usar las [notas vigentes](../entregables/v4/notas_orales.md). Se conserva para trazabilidad y no se incluye en el paquete de lectura.
+
 # Esquema curado y notas orales para veinte minutos
 
 **Fecha de corte: 14/10/2026.** Guion para una clase de electrónica cuyos integrantes pueden no haber cursado física de dispositivos. No es un archivo de diapositivas. El [dossier](01_dossier.md) conserva la profundización; aquí se selecciona lo que puede explicarse con claridad en voz alta.

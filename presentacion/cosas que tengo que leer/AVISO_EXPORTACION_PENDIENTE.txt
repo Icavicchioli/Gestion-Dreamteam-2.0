@@ -1,0 +1,7 @@
+Los siete PDF de lectura (00, 01, 02, 04, 05, 06 y 07) y el PowerPoint editable están actualizados y revisados.
+
+03_Presentacion.pdf conserva la primera exportación v4: faltan las últimas frases acortadas de las diapositivas 4, 7, 11 y 13. No usar este PDF como versión final; el PowerPoint sí contiene esas correcciones.
+
+La revisión automática bloqueó la nueva ejecución de .build_slides/v4/exportar_pdf.py. Falta aprobación específica de la plataforma para ejecutarla, copiar el resultado aquí y comprobarlo.
+
+Auditoría: 15/10/2026. Corte documental: 14/10/2026.

@@ -1,0 +1,61 @@
+[
+  {
+    "archivo": "00_Empeza_por_aca.pdf",
+    "paginas": 1,
+    "imagenes_fuente": 0,
+    "fuentes": [
+      "entregables/v4/00_empeza_por_aca.md"
+    ]
+  },
+  {
+    "archivo": "01_Dossier.pdf",
+    "paginas": 27,
+    "imagenes_fuente": 5,
+    "fuentes": [
+      "investigacion/01_dossier.md"
+    ]
+  },
+  {
+    "archivo": "02_Guion_para_exponer.pdf",
+    "paginas": 28,
+    "imagenes_fuente": 12,
+    "fuentes": [
+      "entregables/v4/notas_orales.md"
+    ]
+  },
+  {
+    "archivo": "04_Fuentes_y_figuras.pdf",
+    "paginas": 13,
+    "imagenes_fuente": 3,
+    "fuentes": [
+      "investigacion/04_fuentes.md",
+      "citas/presentacion_v3/README.md"
+    ]
+  },
+  {
+    "archivo": "05_Matriz_de_evidencias.pdf",
+    "paginas": 5,
+    "imagenes_fuente": 0,
+    "fuentes": [
+      "investigacion/02_matriz_evidencias.md"
+    ]
+  },
+  {
+    "archivo": "06_Consignas_y_validacion.pdf",
+    "paginas": 12,
+    "imagenes_fuente": 0,
+    "fuentes": [
+      "investigacion/07_auditoria_consignas.md",
+      "investigacion/00_consignas.md",
+      "investigacion/05_validacion.md"
+    ]
+  },
+  {
+    "archivo": "07_Revision_historica.pdf",
+    "paginas": 2,
+    "imagenes_fuente": 0,
+    "fuentes": [
+      "investigacion/06_revision_historica.md"
+    ]
+  }
+]

@@ -4,13 +4,15 @@ Investigación para electrónica universitaria, actualizada al **14 de octubre d
 
 La evidencia muestra una combinación de calificación de componentes, márgenes de circuito, cambios de fabricación, blindaje localizado y recuperación operativa. La misión continuó a pesar de daños y pérdida de capacidades: su longevidad no demuestra inmunidad de sus componentes.
 
+La auditoría de consignas del 15/10/2026 está en [07_auditoria_consignas.md](07_auditoria_consignas.md). Los PDF de estudio se reúnen en `../cosas que tengo que leer/`.
+
 ## Orden de lectura
 
 Para leer hoy: el dossier tiene una guía inicial, explicaciones físicas por familia y trece versiones breves «Cómo explicarlo en clase». Las derivaciones opcionales pueden saltearse. El guion separa texto en pantalla de notas orales.
 
 1. [Dossier técnico](01_dossier.md): física, componentes, hardware, exposición y conclusiones.
 2. [Matriz de evidencias](02_matriz_evidencias.md): qué está documentado, qué se infiere y qué falta resolver.
-3. [Síntesis para 20 minutos](03_sintesis_20min.md): selección de contenidos alrededor del mapa del circuito.
+3. [Guion vigente](../entregables/v4/notas_orales.md): 18 diapositivas principales, bibliografía y cuatro respaldos. La síntesis anterior se conserva como archivo histórico.
 4. [Fuentes y figuras](04_fuentes.md): bibliografía con localizadores y procedencia de imágenes.
 5. [Validación y límites](05_validacion.md): cálculos, discrepancias y cobertura de preguntas.
 6. [Consignas transcritas](00_consignas.md): TXT original e imágenes.

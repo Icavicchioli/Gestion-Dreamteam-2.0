@@ -85,7 +85,7 @@ Imagen: `WhatsApp Image 2026-10-13 at 21.57.24.jpeg`.
 ## Acuerdos posteriores
 
 - Audiencia de electrónica universitaria y exposición futura de 20 minutos como máximo. Las imágenes no fijan duración.
-- Esta entrega es investigación técnica; las diapositivas se prepararán después.
+- Etapa inicial: investigación técnica. Las diapositivas ya se prepararon; el guion vigente corresponde a la revisión v4.
 - Prioridad para NASA, JPL, GSFC, NEPP y documentación original de instrumentos.
 - El circuito completo es el centro: componentes discretos, pasivos, materiales e interconexiones, además de ICs.
 - Preparar contenido para una futura diapositiva que muestre los componentes relevantes y permita recorrer daño, consecuencia eléctrica y mitigación.

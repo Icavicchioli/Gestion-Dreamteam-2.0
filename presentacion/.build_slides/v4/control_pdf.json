@@ -1,0 +1,58 @@
+{
+  "00_Empeza_por_aca.pdf": {
+    "paginas": 1,
+    "imagenes": 0,
+    "caracteres_faltantes": 0,
+    "enlaces": 0,
+    "enlaces_locales_rotos": []
+  },
+  "01_Dossier.pdf": {
+    "paginas": 27,
+    "imagenes": 5,
+    "caracteres_faltantes": 0,
+    "enlaces": 175,
+    "enlaces_locales_rotos": []
+  },
+  "02_Guion_para_exponer.pdf": {
+    "paginas": 28,
+    "imagenes": 12,
+    "caracteres_faltantes": 0,
+    "enlaces": 92,
+    "enlaces_locales_rotos": []
+  },
+  "03_Presentacion.pdf": {
+    "paginas": 23,
+    "imagenes": 12,
+    "caracteres_faltantes": 0,
+    "enlaces": 0,
+    "enlaces_locales_rotos": []
+  },
+  "04_Fuentes_y_figuras.pdf": {
+    "paginas": 13,
+    "imagenes": 3,
+    "caracteres_faltantes": 0,
+    "enlaces": 87,
+    "enlaces_locales_rotos": []
+  },
+  "05_Matriz_de_evidencias.pdf": {
+    "paginas": 5,
+    "imagenes": 0,
+    "caracteres_faltantes": 0,
+    "enlaces": 72,
+    "enlaces_locales_rotos": []
+  },
+  "06_Consignas_y_validacion.pdf": {
+    "paginas": 12,
+    "imagenes": 0,
+    "caracteres_faltantes": 0,
+    "enlaces": 10,
+    "enlaces_locales_rotos": []
+  },
+  "07_Revision_historica.pdf": {
+    "paginas": 2,
+    "imagenes": 0,
+    "caracteres_faltantes": 0,
+    "enlaces": 2,
+    "enlaces_locales_rotos": []
+  }
+}

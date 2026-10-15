@@ -1,0 +1,12 @@
+# Cachés locales
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/
+
+# Capturas regenerables para revisión visual (no son figuras fuente)
+.build_slides/**/renders/
+.build_slides/**/pdf_renders/
+.build_slides/**/pdf_final/
+.build_slides/**/revision_pdf/
+.build_slides/**/revision_final/

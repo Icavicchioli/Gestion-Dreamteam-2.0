@@ -1,6 +1,6 @@
 # Validación, discrepancias y límites
 
-Fecha: 14 de octubre de 2026. Se revisaron unidades, cálculos, trazabilidad y correspondencia con las consignas. Esto es una investigación documental; no sustituye una revisión de los expedientes completos de vuelo.
+Corte documental: 14 de octubre de 2026. Auditoría de entrega: 15 de octubre de 2026. Se revisaron unidades, cálculos, trazabilidad y correspondencia con las consignas. Esto es una investigación documental; no sustituye una revisión de los expedientes completos de vuelo.
 
 ## Cobertura de prompt.txt
 
@@ -15,7 +15,7 @@ Fecha: 14 de octubre de 2026. Se revisaron unidades, cálculos, trazabilidad y c
 | Capacitores, pistas, dieléctricos, resistencias, inductores, diodos, etc. | Trece familias en §3 y mapa conceptual | Respondida; donde falta evidencia de vuelo se indica |
 | Ver planos y cuántas Voyager hubo | §4.3: dos sondas, diagramas parciales y circuitos de ensayo identificados | Parcial: no se encontró juego completo de planos/BOM de vuelo |
 | Explicar por qué sigue funcionando tras 50 años | §§6–7: casi 50 años, capacidades parciales y causas de falla diferenciadas | Respondida; no se cuantifica aporte causal de cada mitigación |
-| Consignas de las imágenes | 00_consignas y selección de introducción, objetivos, conceptos, aplicación y conclusión | Transcritas; diseño final se aplicará al crear diapositivas |
+| Consignas de las imágenes | 00_consignas y selección de introducción, objetivos, conceptos, aplicación y conclusión | Ver auditoría actual: 07_auditoria_consignas.md |
 
 ## Cálculos revisados
 
@@ -57,7 +57,11 @@ Se revisaron visualmente el mapa propio y las páginas técnicas empleadas para 
 
 Faltan el conjunto completo de esquemas y listas de materiales por unidad, tecnologías y geometrías por lote de vuelo, dosis acumulada por ubicación hasta 2026 y ensayos específicos de varios magnéticos, relés, soldaduras y recubrimientos. También faltan diagnósticos concluyentes de causa física para ciertas averías. Estas limitaciones están explícitas en el dossier y no impiden explicar los mecanismos generales ni las mitigaciones efectivamente documentadas.
 
-## Revisión de profundidad y efectos transitorios
+## Registro histórico de revisiones del 14/10/2026
+
+Las cifras de fuentes y palabras que siguen describen estados anteriores del trabajo. El guion actual tiene 18 diapositivas principales y un presupuesto de 18 minutos; bibliografía y cuatro respaldos quedan fuera. La auditoría vigente está en [07_auditoria_consignas.md](07_auditoria_consignas.md).
+
+### Revisión de profundidad y efectos transitorios
 
 La ampliación distingue perturbación transitoria, estado persistente recuperable y degradación/daño, sin hacerlas equivalentes a mecanismos físicos. Incluye trece explicaciones «Cómo explicarlo en clase», además de regiones y ecuaciones opcionales. El balance del BJT indica las condiciones mantenidas; la explicación MOS distingue el término de óxido de los estados de interfaz y diferencia NMOS/PMOS. Se evita atribuir pares electrón–hueco como única explicación de todo componente.
 
@@ -65,14 +69,14 @@ Se verificó en [S04](04_fuentes.md#s04), p. 182, la evolución del prototipo TT
 
 Nuevos cálculos comprobables: 10 mA/100 = 0,1 mA; 10 mA/50 = 0,2 mA (región activa). 1 pC/10 pF = 0,1 V; 100 kΩ × 10 pF = 1 µs; tiempo sobre un umbral 50 mV por encima del punto inicial: 1 µs × ln(0,1/0,05) ≈ 0,693 µs. El pulso es supuesto instantáneo respecto de RC, sin realimentación ni carga adicional; la captura no está garantizada.
 
-El plan recibido sumaba 18:45, no 18:00. El esquema curado deja 17:30 de contenido y 0:30 para bibliografía/respaldo: 18:00 más 2:00 de margen. La comprobación automática de palabras es orientativa; la duración final requiere ensayo oral con pausas y figuras. No se afirma haber realizado ese ensayo.
+En el esquema anterior, el plan recibido sumaba 18:45, no 18:00. El esquema curado deja 17:30 de contenido y 0:30 para bibliografía/respaldo: 18:00 más 2:00 de margen. La comprobación automática de palabras es orientativa; la duración final requiere ensayo oral con pausas y figuras. No se afirma haber realizado ese ensayo.
 
 Se añadieron [S35](04_fuentes.md#s35) (NASA/GSFC, 24/10/2005) y [S36](04_fuentes.md#s36) (JPL Publication 12-20, diciembre de 2012 según portada), descargados con texto extraído. Total actualizado: **36 fuentes, 33 originales descargados y tres copias de lectura web**. Las dos fuentes nuevas son generales, no hardware específico de Voyager.
 
 Comprobación final: 36 archivos catalogados con SHA-256 coincidente, sin enlaces locales rotos, trece explicaciones para clase. Las notas orales revisadas suman aproximadamente 1478 palabras: 11.8 minutos a 125 palabras/minuto. El presupuesto restante contempla señalar figuras, pausas, transiciones y bibliografía. Es una estimación, no un ensayo cronometrado. Se revisaron visualmente las figuras nuevas; se corrigieron símbolos que la fuente tipográfica no representaba.
 
 
-## Revisión editorial y física del 14 de octubre
+### Revisión editorial y física del 14 de octubre
 
 Se integraron las explicaciones añadidas con las fichas iniciales, eliminando aproximadamente mil palabras de repeticiones antes de añadir ayudas de lectura. Se preservaron las trece familias, resultados de ensayos, explicaciones para clase y referencias. Se unificó el ejemplo de ganancia BJT a 100→50, sin mezclarlo con otro ejemplo 100→20.
 
