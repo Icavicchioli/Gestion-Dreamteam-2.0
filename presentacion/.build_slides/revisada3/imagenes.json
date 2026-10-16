@@ -1,0 +1,144 @@
+[
+  {
+    "name": "01_voyager.jpg",
+    "origin": "citas/presentacion_v3/portada.jpg",
+    "slides": "1",
+    "credit": "NASA/JPL, spacecraft-profile-3",
+    "url": "https://science.nasa.gov/image-detail/spacecraft-profile-3/",
+    "scope": "Vista general de la nave; imagen de contexto.",
+    "sha256": "be5ecfb387c32cb921e5ae485a329dd16f790114491f50ea8b642f68f8541581"
+  },
+  {
+    "name": "02_trayectorias.png",
+    "origin": "investigacion/imagenes_diapos/02_trayectorias.png",
+    "slides": "2",
+    "credit": "NASA, historia de Voyager 1 (S37)",
+    "url": "https://www.nasa.gov/wp-content/uploads/2022/09/voyager_1_6_trajectories_lightened.png",
+    "scope": "Trayectorias históricas, no posiciones actuales.",
+    "sha256": "331de2e25ce29c632b11b3e470a5b7d4b9cdd1d765dc551a85e4ccc5fb7eed32"
+  },
+  {
+    "name": "03_jupiter.png",
+    "origin": ".build_slides/v3/assets/jupiter_detalle.png",
+    "slides": "3",
+    "credit": "Recorte ya existente de imagen NASA/JPL/Cassini",
+    "url": "https://science.nasa.gov/photojournal/inner-radiation-belts-of-jupiter/",
+    "scope": "Contexto de cinturones jovianos. URL específica en catálogo original de imágenes v3.",
+    "sha256": "2173b309dd514d04327604f71c4556fd4d27656231958b4fa28f5fead14a0b53"
+  },
+  {
+    "name": "07_instrumentos.jpg",
+    "origin": "investigacion/imagenes_diapos/01_instrumentos.jpg",
+    "slides": "7",
+    "credit": "NASA, historia de Voyager 1 (S37)",
+    "url": "https://www.nasa.gov/wp-content/uploads/2022/09/voyager_1_5_instruments.jpg",
+    "scope": "Vista rotulada de instrumentos.",
+    "sha256": "710f6f6cfe2665315060e56931d477ded36cc23624938f355c976c4a309326c6"
+  },
+  {
+    "name": "18_integracion.jpg",
+    "origin": "citas/presentacion_v3/integracion.jpg",
+    "slides": "18",
+    "credit": "NASA/JPL, integración Voyager 2, marzo de 1977",
+    "url": "https://science.nasa.gov/image-detail/pia21736/",
+    "scope": "Procedencia exacta en catálogo original de imágenes v3.",
+    "sha256": "f964b0eb404e9b32104b302cbd7edb99abcc3b51e7a0a598bc6972f97c798f9a"
+  },
+  {
+    "name": "contexto_heliosfera.jpg",
+    "origin": "investigacion/imagenes_diapos/03_heliosfera.jpg",
+    "slides": "2; complemento",
+    "credit": "NASA, historia de Voyager 1 (S37)",
+    "url": "https://www.nasa.gov/wp-content/uploads/2022/09/voyager_1_14_interstellar_mission.jpg",
+    "scope": "Ilustración conceptual de la heliosfera.",
+    "sha256": "b0b293c80283e9bcc9635b672bd09a1e95576c8c64a965a4664ee90b6154410e"
+  },
+  {
+    "name": "contexto_fds.png",
+    "origin": ".build_slides/v3/assets/fds.png",
+    "slides": "7; complemento",
+    "credit": "S04, fig. 6-2 p. 181; JPL foto 360-751AC",
+    "url": "https://ntrs.nasa.gov/api/citations/19880069935/downloads/19880069935_Optimized.pdf",
+    "scope": "Hardware FDS. No identifica el vuelo del número de serie mostrado.",
+    "sha256": "e81d1e7dbc71813e45484afd96c229e918f8be447e7eb5f91c3b27393cb5a1a3"
+  },
+  {
+    "name": "08_pasivos_original.png",
+    "origin": "investigacion/figuras/voyager_radiacion_vol1_1977_p151.png",
+    "slides": "8; estudio",
+    "credit": "S01, p. 7-53 / PDF 151",
+    "url": "https://ntrs.nasa.gov/api/citations/19780007219/downloads/19780007219.pdf",
+    "scope": "Página original de resultados de pasivos y diodos; no proyectar como texto pequeño.",
+    "sha256": "7f1df84c72957c21caa12d96389e746b08d561f51d9eafda7f2bc2576c72c8be"
+  },
+  {
+    "name": "09_circuito_optico.png",
+    "origin": "citas/voyager_radiacion_vol1_1977.pdf, PDF 155",
+    "slides": "9",
+    "credit": "JPL 77-41, vol. I, 7-9, PDF 155",
+    "url": "https://ntrs.nasa.gov/api/citations/19780007219/downloads/19780007219.pdf",
+    "scope": "Circuito de ensayo, no placa de vuelo. Recorte de figura conservando ejes, rótulos y pie original.",
+    "page": 155,
+    "sha256": "3f05b5e32ff7732465e91a4377fc34fd54b57d98922df685f4fd5a7ca38ab33b"
+  },
+  {
+    "name": "10_curvas_bipolares.png",
+    "origin": "citas/voyager_radiacion_vol1_1977.pdf, PDF 101",
+    "slides": "10",
+    "credit": "JPL 77-41, vol. I, 7-1, PDF 101",
+    "url": "https://ntrs.nasa.gov/api/citations/19780007219/downloads/19780007219.pdf",
+    "scope": "Curvas históricas por tipo y fabricante. Recorte de figura conservando ejes, rótulos y pie original.",
+    "page": 101,
+    "sha256": "2c7fb1ead37130d35a06b57d86d3e13926f294620a822adfc6491975d56d0847"
+  },
+  {
+    "name": "12_curvas_mos.png",
+    "origin": "citas/voyager_radiacion_vol1_1977.pdf, PDF 83",
+    "slides": "12",
+    "credit": "JPL 77-41, vol. I, 6-1, PDF 83",
+    "url": "https://ntrs.nasa.gov/api/citations/19780007219/downloads/19780007219.pdf",
+    "scope": "Curvas medidas; umbral depende del criterio de corriente. Recorte de figura conservando ejes, rótulos y pie original.",
+    "page": 83,
+    "sha256": "cf2e5880cf861caf9010de6feb1d8fdee218891c3c6be1e4f25b3078fc6c0a4f"
+  },
+  {
+    "name": "14_lm108.png",
+    "origin": "citas/voyager_radiacion_vol1_1977.pdf, PDF 112",
+    "slides": "14",
+    "credit": "JPL 77-41, vol. I, 7-4, PDF 112",
+    "url": "https://ntrs.nasa.gov/api/citations/19780007219/downloads/19780007219.pdf",
+    "scope": "Comparación LM108 estándar/endurecido y circuito empleado. Recorte de figura conservando ejes, rótulos y pie original.",
+    "page": 112,
+    "sha256": "b4a79c4a22899ff284d91294a77ecb43b93e9154d5c9f83edc588406c77bb058"
+  },
+  {
+    "name": "16_lotes_cmos.png",
+    "origin": "citas/voyager_radiacion_vol1_1977.pdf, PDF 201",
+    "slides": "16",
+    "credit": "JPL 77-41, vol. I, 8-21, PDF 201",
+    "url": "https://ntrs.nasa.gov/api/citations/19780007219/downloads/19780007219.pdf",
+    "scope": "Comparación de lotes CD4053B. Recorte de figura conservando ejes, rótulos y pie original.",
+    "page": 201,
+    "sha256": "1d4fd7d491250a3cb6ac31ee2eee46b1912829cd8a7ff3fadb6f30b569b5f9b6"
+  },
+  {
+    "name": "17_margen_original.png",
+    "origin": "citas/voyager_radiacion_vol1_1977.pdf, PDF 34",
+    "slides": "17; estudio",
+    "credit": "JPL 77-41, vol. I, tabla 3-1, PDF 34",
+    "url": "https://ntrs.nasa.gov/api/citations/19780007219/downloads/19780007219.pdf",
+    "scope": "Requisito de blindaje del bus, no dosis actual.",
+    "page": 34,
+    "sha256": "69933d2dca08769ef22dab2d82d8bfc54aa40b61ab7bedff07ad7eff8f338be7"
+  },
+  {
+    "name": "fuente_portada.png",
+    "origin": "citas/voyager_radiacion_vol1_1977.pdf, PDF 1",
+    "slides": "1; estudio",
+    "credit": "JPL 77-41, vol. I, portada, PDF 1",
+    "url": "https://ntrs.nasa.gov/api/citations/19780007219/downloads/19780007219.pdf",
+    "scope": "Portada del documento base.",
+    "page": 1,
+    "sha256": "effc678412f6d9a9be737d0b1f2ddc62a09a124d5f0644f5e8a519405d0ca4b0"
+  }
+]

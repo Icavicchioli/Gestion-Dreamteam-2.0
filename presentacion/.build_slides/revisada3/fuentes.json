@@ -1,0 +1,26 @@
+[
+  {
+    "id": "JPL",
+    "titulo": "Voyager Electronic Parts Radiation Program, Volume I: Final Report",
+    "url": "https://ntrs.nasa.gov/api/citations/19780007219/downloads/19780007219.pdf",
+    "detalle": "A. G. Stanley, K. E. Martin y W. E. Price. JPL Publication 77-41, 15/09/1977. Fuente técnica central. Copia local en fuentes/."
+  },
+  {
+    "id": "H1",
+    "titulo": "45 Years Ago: Voyager 1 Begins its Epic Journey to the Outer Planets and Beyond",
+    "url": "https://www.nasa.gov/history/45-years-ago-voyager-1-begins-its-epic-journey-to-the-outer-planets-and-beyond/",
+    "detalle": "NASA, 07/09/2022. Solo historia, encuentros e ilustraciones."
+  },
+  {
+    "id": "H2",
+    "titulo": "NASA Turns Off 2 Voyager Science Instruments to Extend Mission",
+    "url": "https://science.nasa.gov/blogs/voyager/2025/03/05/nasa-turns-off-2-voyager-science-instruments-to-extend-mission/",
+    "detalle": "NASA, 05/03/2025. Solo distancias fechadas y contexto posterior."
+  },
+  {
+    "id": "H3",
+    "titulo": "Computers in Spaceflight: The NASA Experience",
+    "url": "https://ntrs.nasa.gov/api/citations/19880069935/downloads/19880069935_Optimized.pdf",
+    "detalle": "James E. Tomayko, NASA, 1988, pp. 181-184. Complemento puntual para ubicar computadoras y almacenamiento; no aporta los casos de radiación."
+  }
+]

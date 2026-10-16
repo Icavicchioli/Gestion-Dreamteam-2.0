@@ -1,0 +1,1751 @@
+[
+  {
+    "n": 1,
+    "title": "Voyager: radiación y decisiones electrónicas",
+    "seconds": 30,
+    "screen": "Voyager lleva casi cincuenta años en el espacio. Vamos a recorrer las decisiones del programa de radiación que preparó su electrónica para los encuentros planetarios.",
+    "oral": "La pregunta es qué decisiones ayudaron a que la electrónica pudiera continuar funcionando. Vamos a seguir un informe real del JPL: el programa de radiación de componentes de Voyager, publicado en 1977. Nos interesa entender el problema, la respuesta del componente y la decisión que tomaron. El documento explica la preparación de la misión; su longevidad posterior nos sirve como punto de partida.",
+    "chapter": "### Un informe como hilo conductor\n\nEste dossier es una lectura explicada de *Voyager Electronic Parts Radiation Program, Volume I: Final Report*, JPL Publication 77-41, de A. G. Stanley, K. E. Martin y W. E. Price, fechado el 15 de septiembre de 1977. El relato técnico se apoya en este documento: sus problemas, resultados, decisiones y límites. El orden se adapta a una exposición de electrónica de dieciocho minutos, por lo que no reproduce el índice original. [JPL, portada y §I, p. 1-1 / PDF 24]\n\nEl informe presenta la caracterización de aproximadamente doscientos tipos de dispositivos, más de doscientos treinta ensayos de selección de circuitos integrados y transistores, y más de trece mil dispositivos CMOS sometidos a screening. Estos números describen la escala del programa, no la cantidad de componentes instalados en una sonda. Tampoco significan que se ensayara cada componente de cada familia.\n\nLa cadena de explicación será siempre la misma: qué ambiente consideraron, qué parámetro podía cambiar, qué consecuencia tenía para el circuito y qué hicieron para conservar su funcionamiento. El ejemplo óptico del capítulo 9 muestra por qué conviene mantener esa cadena: una salida puede seguir siendo correcta aunque los dispositivos que la producen hayan perdido prestaciones.\n\n### Qué permite concluir este documento\n\nEl informe registra trabajo anterior a los encuentros con Júpiter. En consecuencia, documenta preparación, capacidades y requisitos; no contiene una investigación retrospectiva de cinco décadas de operación. La antigüedad actual de Voyager permite formular la pregunta de la charla, pero no prueba que todos sus fallos hayan sido radiativos ni que este programa explique por sí solo su longevidad. La energía disponible, el control térmico, las comunicaciones y las operaciones también intervienen.\n\nLas páginas se citan con dos numeraciones: primero la impresa, como 6-1; después la posición en el PDF, como 81. Esta distinción permite encontrar el pasaje aun cuando el visor cuente las portadas. Las explicaciones físicas elementales y los cálculos didácticos se distinguen de los resultados medidos. Un gráfico del banco de ensayos se identifica como tal y no se presenta como el esquema de una placa de vuelo.",
+    "loc": "§I, p. 1-1 / PDF 24; portada y ficha bibliográfica.",
+    "extra": "Ignacio Cavicchioli · Lectura del informe JPL 77-41, volumen I",
+    "image": "01_voyager.jpg",
+    "caption": "Vista de Voyager · NASA/JPL",
+    "visual": "Vista de Voyager · NASA/JPL",
+    "refs": [
+      "JPL",
+      "H1"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "Voyager: radiación y decisiones\nelectrónicas",
+        "x": 64,
+        "y": 65,
+        "w": 1160,
+        "h": 141.3,
+        "size": 55,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Ignacio Cavicchioli",
+        "x": 64,
+        "y": 253,
+        "w": 650,
+        "h": 47.82,
+        "size": 34,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "Voyager lleva casi cincuenta años en el\nespacio. Vamos a recorrer las\ndecisiones del programa de radiación\nque preparó su electrónica para los\nencuentros planetarios.",
+        "x": 64,
+        "y": 329,
+        "w": 600,
+        "h": 215.1,
+        "size": 34,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "image",
+        "file": "01_voyager.jpg",
+        "x": 720,
+        "y": 230,
+        "w": 475,
+        "h": 375
+      },
+      {
+        "kind": "text",
+        "text": "Informe JPL 77-41, volumen I · 1977",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "01",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "Ignacio Cavicchioli"
+  },
+  {
+    "n": 2,
+    "title": "Dos sondas y un recorrido de décadas",
+    "seconds": 65,
+    "screen": "Voyager 2 despegó el 20 de agosto de 1977 y Voyager 1 el 5 de septiembre. Ambas visitaron Júpiter y Saturno; Voyager 2 continuó hacia Urano y Neptuno.",
+    "oral": "La aprobación del proyecto fue en 1972, unos cinco años antes de los lanzamientos, con estudios previos que venían de antes. Las dos llevan 49 años desde el lanzamiento al 16 de octubre de 2026. El mapa muestra los encuentros, no sus posiciones actuales. Para la escala de distancia usamos un comunicado fechado: más de 25.000 millones de kilómetros a la Tierra para Voyager 1 y más de 21.000 millones para Voyager 2, en marzo de 2025. Distancia a la Tierra no es recorrido acumulado.",
+    "chapter": "### Desarrollo, lanzamientos y encuentros\n\nNASA aprobó el proyecto en 1972; los lanzamientos ocurrieron en 1977. Es razonable hablar de unos cinco años entre aprobación y lanzamiento, aclarando que hubo estudios y propuestas anteriores. La experiencia Mariner y el trabajo previo de exploración planetaria forman parte del contexto, sin convertir esos cinco años en toda la historia de desarrollo. [H1]\n\n| Sonda | Lanzamiento | Planetas visitados |\n|---|---|---|\n| Voyager 1 | 5 de septiembre de 1977 | Júpiter, 1979; Saturno, 1980 |\n| Voyager 2 | 20 de agosto de 1977 | Júpiter, 1979; Saturno, 1981; Urano, 1986; Neptuno, 1989 |\n\nAl 16 de octubre de 2026, Voyager 1 lleva 49 años y 41 días desde el lanzamiento, y Voyager 2, 49 años y 57 días. Faltan respectivamente 324 y 308 días para sus cincuentenarios. Es un cálculo de calendario a partir de las fechas de lanzamiento, no una afirmación de que todas sus funciones continúen intactas.\n\n### Distancia y posición: mantener la fecha\n\nEl comunicado NASA del 5 de marzo de 2025 sitúa a Voyager 1 a más de 25.000 millones de kilómetros de la Tierra y a Voyager 2 a más de 21.000 millones. Usamos esos valores con su fecha porque permiten mostrar la escala sin inventar posiciones exactas al día de la presentación. Son distancias a la Tierra, no distancias al Sol ni la longitud total de las trayectorias recorridas. [H2]\n\nVoyager 1 cruzó la heliopausa en 2012 y Voyager 2 en 2018. La heliopausa delimita la región dominada por el viento solar frente al medio interestelar; no marca el fin de la gravedad del Sol. Decir que están en espacio interestelar no implica que hayan atravesado todos los límites posibles del sistema solar. [H1; H2]\n\n### Qué representa el mapa\n\nEl mapa de trayectorias permite asociar cada nave con sus encuentros planetarios. Las asistencias gravitatorias modificaron sus recorridos y permitieron destinos diferentes. No conviene leer el dibujo como un plano a escala de las posiciones actuales. La extensión hacia Urano, Neptuno y el medio interestelar es contexto histórico; el modelo de radiación que estudiaremos a continuación es el del programa descrito en 1977.",
+    "loc": "H1: historia NASA; H2: comunicado de 05/03/2025.",
+    "extra": "V1: >25.000 millones de km · V2: >21.000 millones de km\nDistancias a la Tierra publicadas por NASA el 05/03/2025.",
+    "image": "02_trayectorias.png",
+    "caption": "Trayectorias históricas · NASA. No muestra posiciones actuales.",
+    "visual": "Trayectorias históricas · NASA. No muestra posiciones actuales.",
+    "refs": [
+      "H1",
+      "H2"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "Dos sondas y un recorrido de décadas",
+        "x": 64,
+        "y": 48,
+        "w": 1148,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Voyager 2 despegó el 20 de agosto de\n1977 y Voyager 1 el 5 de septiembre.\nAmbas visitaron Júpiter y Saturno;\nVoyager 2 continuó hacia Urano y\nNeptuno.",
+        "x": 64,
+        "y": 157,
+        "w": 590,
+        "h": 202.8,
+        "size": 32,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "image",
+        "file": "02_trayectorias.png",
+        "x": 709,
+        "y": 150,
+        "w": 495,
+        "h": 370
+      },
+      {
+        "kind": "text",
+        "text": "V1: >25.000 millones de km\nV2: >21.000 millones de km",
+        "x": 64,
+        "y": 435,
+        "w": 595,
+        "h": 77.34,
+        "size": 29,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "A la Tierra · NASA, 05/03/2025",
+        "x": 64,
+        "y": 536,
+        "w": 610,
+        "h": 36.75,
+        "size": 25,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "49 años desde los lanzamientos, al 16/10/2026.",
+        "x": 64,
+        "y": 590,
+        "w": 1145,
+        "h": 41.67,
+        "size": 29,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "NASA · Historia 2022 y comunicado del 05/03/2025",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "02",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "V1: >25.000 millones de km\nV2: >21.000 millones de km\n\nA la Tierra · NASA, 05/03/2025\n\n49 años desde los lanzamientos, al 16/10/2026."
+  },
+  {
+    "n": 3,
+    "title": "Pioneer cambió las prioridades",
+    "seconds": 55,
+    "screen": "Según el informe, la radiación inicialmente no se consideraba un problema para Voyager. Las mediciones de Pioneer en Júpiter impulsaron un programa intensivo para revisar circuitos que ya estaban diseñados.",
+    "oral": "Las sondas anteriores eran Pioneer 10 y 11. Midieron poblaciones de electrones y protones atrapadas en el campo de Júpiter. El informe cuenta que hubo que endurecer el diseño heredado de Mariner con poco tiempo disponible. Cumplir los requisitos de vacío o vibración no aseguraba que los parámetros eléctricos resistieran esa exposición. No hace falta dramatizarlo como una sentencia de destrucción: el documento habla de un riesgo capaz de comprometer la electrónica y de un programa para resolverlo.",
+    "chapter": "### La situación que describe el JPL\n\nLa introducción del informe señala que Pioneer había medido campos intensos de electrones y protones atrapados en el campo magnético de Júpiter. Más adelante, al abrir la sección de hardening, afirma que inicialmente la radiación no se había considerado un problema para Voyager y que los sobrevuelos Pioneer impulsaron un esfuerzo intensivo sobre el diseño Mariner existente. Ambas afirmaciones deben leerse juntas: se conocía la radiación espacial, pero su impacto sobre este diseño exigió una revisión específica. [JPL, §I, p. 1-1 / PDF 24; §VI.A, p. 6-1 / PDF 81]\n\nLa mayoría de los circuitos ya estaba diseñada cuando se comprendió la necesidad de considerar ese ambiente. La primera acción fue analizar esos diseños usando datos disponibles, y luego reemplazar o completar esos datos con caracterizaciones representativas del ambiente de Júpiter. La respuesta no consistió en fabricar de nuevo toda la nave: incluyó sustitución de piezas, rediseños, procesos especiales, screening y blindaje localizado. [JPL, §III.A, pp. 3-1 a 3-2 / PDF 29-30]\n\n### Por qué importa la restricción de tiempo\n\nEl documento explica que no hubo tiempo suficiente para emprender un programa amplio de modificación de todos los dispositivos. Los esfuerzos de fabricación se concentraron en familias CMOS y determinados circuitos lineales. En otras aplicaciones, los diseños y las piezas disponibles ya estaban fijados y hubo que reducir la exposición mediante blindaje. Por eso una solución técnicamente posible no siempre era una solución disponible dentro del calendario del proyecto. [JPL, §VI.A; §IX.A, p. 9-1 / PDF 204]\n\n### Radiación junto a los otros requisitos\n\nEl análisis de peor caso incluía temperatura, tolerancias, envejecimiento, alimentación y frecuencia, además de efectos mecánicos o del vacío cuando alteraban parámetros. A esa combinación se agregó la degradación radiativa. Una placa podía superar las comprobaciones de otros ambientes y aun así perder ganancia, precisión o margen lógico en Júpiter. No hace falta que un componente se rompa físicamente para que su circuito deje de cumplir su función. [JPL, §III.B, pp. 3-3 a 3-4 / PDF 31-32]",
+    "loc": "§I; §III.A-B; §VI.A, p. 6-1 / PDF 81; §IX.A.",
+    "extra": "El programa tuvo que trabajar sobre diseños y componentes ya elegidos.",
+    "image": "03_jupiter.png",
+    "caption": "Cinturones internos de Júpiter · imagen de contexto NASA/JPL, posterior al informe.",
+    "visual": "Cinturones internos de Júpiter · imagen de contexto NASA/JPL, posterior al informe.",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "Pioneer cambió las prioridades",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Según el informe, la radiación\ninicialmente no se consideraba un\nproblema para Voyager. Las\nmediciones de Pioneer en Júpiter\nimpulsaron un programa intensivo\npara revisar circuitos que ya estaban\ndiseñados.",
+        "x": 64,
+        "y": 166,
+        "w": 565,
+        "h": 290.13,
+        "size": 33,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "image",
+        "file": "03_jupiter.png",
+        "x": 688,
+        "y": 156,
+        "w": 526,
+        "h": 390
+      },
+      {
+        "kind": "text",
+        "text": "Cinturones jovianos · NASA/JPL",
+        "x": 688,
+        "y": 558,
+        "w": 526,
+        "h": 36.75,
+        "size": 25,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "El programa tuvo que trabajar sobre diseños y componentes ya elegidos.",
+        "x": 64,
+        "y": 600,
+        "w": 1148,
+        "h": 39.21,
+        "size": 27,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §VI.A, p. 6-1 / PDF 81",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "03",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "Cinturones jovianos · NASA/JPL\n\nEl programa tuvo que trabajar sobre diseños y componentes ya elegidos."
+  },
+  {
+    "n": 4,
+    "title": "El ambiente exterior y el que llega al circuito",
+    "seconds": 60,
+    "screen": "El programa consideró radiación solar, cósmica y atrapada, además de las fuentes radiactivas a bordo. Dentro de la nave, identificó a los electrones penetrantes de Júpiter como el aporte dominante al daño por ionización.",
+    "oral": "La sonda atraviesa ambientes diferentes, pero las poblaciones se superponen. No hay una zona con un solo tipo de radiación. El informe distingue el ambiente exterior sin blindaje del que llega a cada componente después de atravesar la estructura. En ese modelo interno, el daño por desplazamiento de protones y neutrones era secundario frente a la ionización por electrones. Esta jerarquía vale para el caso estudiado, no para cualquier misión espacial.",
+    "chapter": "### Las poblaciones que enumera el informe\n\nLa sección II exige funcionamiento durante y después de la exposición a los cinturones terrestres y jovianos, grandes eventos de protones solares, protones del viento solar, radiación cósmica galáctica y radiación de RTG y RHU. Los RHU son pequeñas unidades calefactoras de radioisótopos; los RTG suministran energía térmica para producir electricidad. Ambos fueron considerados como fuentes locales. [JPL, §II.A-C, p. 2-1 / PDF 25]\n\n| Situación | Poblaciones incluidas en el informe | Consecuencia para el relato |\n|---|---|---|\n| Crucero y exposición solar | Proton​es solares, viento solar y radiación cósmica | La exposición no empieza al llegar a un planeta |\n| Cinturones de la Tierra y Júpiter | Electrones y protones atrapados | El encuentro joviano concentra el problema estudiado |\n| Fuentes a bordo | Neutrones y gamma de RTG/RHU | La geometría de la nave y la ubicación importan |\n\nEl modelo joviano se construyó con resultados de experimentos de partículas de Pioneer 10 y 11 y con integraciones a lo largo de trayectorias de encuentro. No describe simplemente una intensidad universal a cierta distancia del Sol. La tabla 2-1 presenta el ambiente exterior sin blindaje y sin márgenes; sus valores no son dosis ya recibidas por todos los chips. Para RTG/RHU, el informe explicita integraciones de cuatro años. Extenderlas directamente a medio siglo cambiaría el problema. [JPL, tabla 2-1, p. 2-2 / PDF 26]\n\n### Qué cambia al entrar en la nave\n\nLa estructura modifica el espectro que llega a una pieza: algunas partículas se frenan, otras penetran y se producen secundarios. El cálculo de transporte del programa incluyó electrones, protones y bremsstrahlung, los fotones emitidos durante el frenado de electrones. Por eso el blindaje se evaluó junto con la posición y la geometría, no como una reducción idéntica para todos los componentes. [JPL, §III.C, p. 3-6 / PDF 34]\n\nPara el ambiente interno considerado, el informe dice que dominan los electrones penetrantes y sus efectos de ionización superficial en semiconductores. Considera pequeña la contribución electrónica al daño por desplazamiento y suficientes las protecciones/exposiciones para que protones y neutrones no produzcan un daño por desplazamiento significativo en ese contexto. El aporte gamma de RTG/RHU resulta mucho menor que el electrónico. Esta comparación explica por qué el dossier se concentra en óxidos, interfaces, fugas y cambios de parámetros. [JPL, §II.D, p. 2-3 / PDF 27]\n\nEl impacto de polvo, la temperatura y el vacío delimitan el contexto, pero el informe no permite asignar una probabilidad universalmente despreciable a impactos ni concluir que todos serían catastróficos. La charla se restringe al programa de radiación por su tema y duración.",
+    "loc": "§II, pp. 2-1 a 2-4 / PDF 25-28; §III.C, p. 3-6 / PDF 34.",
+    "extra": "La exposición local depende de la estructura y de la ubicación del componente.",
+    "image": null,
+    "caption": "",
+    "visual": "",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "El ambiente exterior y el que llega al circuito",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 58.89,
+        "size": 43,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "El programa consideró radiación solar, cósmica y atrapada, además de las\nfuentes radiactivas a bordo. Dentro de la nave, identificó a los electrones\npenetrantes de Júpiter como el aporte dominante al daño por ionización.",
+        "x": 64,
+        "y": 168,
+        "w": 1152,
+        "h": 124.08,
+        "size": 32,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "table",
+        "rows": [
+          [
+            "Situación",
+            "Poblaciones del modelo"
+          ],
+          [
+            "Crucero",
+            "Solar y cósmica galáctica"
+          ],
+          [
+            "Cinturones terrestres y jovianos",
+            "Electrones y protones atrapados"
+          ],
+          [
+            "Fuentes a bordo",
+            "Neutrones y gamma de RTG/RHU"
+          ]
+        ],
+        "x": 64,
+        "y": 340,
+        "w": 1152,
+        "h": 246,
+        "widths": [
+          550,
+          602
+        ],
+        "size": 29
+      },
+      {
+        "kind": "text",
+        "text": "La exposición local depende de la estructura y de la ubicación del componente.",
+        "x": 64,
+        "y": 610,
+        "w": 1152,
+        "h": 37.980000000000004,
+        "size": 26,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §II, pp. 2-1 a 2-4 / PDF 25-28",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "04",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "| Situación | Poblaciones del modelo |\n| --- | --- |\n| Crucero | Solar y cósmica galáctica |\n| Cinturones terrestres y jovianos | Electrones y protones atrapados |\n| Fuentes a bordo | Neutrones y gamma de RTG/RHU |\n\nLa exposición local depende de la estructura y de la ubicación del componente."
+  },
+  {
+    "n": 5,
+    "title": "Partículas, fotones e ionización",
+    "seconds": 45,
+    "screen": "La fuente indica de dónde viene la radiación; la especie indica qué llega. En el material, esa energía puede generar portadores eléctricos o defectos que cambian el comportamiento del componente.",
+    "oral": "Un electrón y un protón tienen carga; un neutrón y un fotón no. Eso no hace inocuos a los últimos: transfieren energía y generan secundarios. Alfa significa núcleo de helio y beta se refiere a electrones o positrones de determinados decaimientos. No llamamos beta a todo electrón de los cinturones. En esta charla nos interesan especialmente los electrones que el informe identifica como dominantes y las cargas que pueden dejar en aislantes e interfaces.",
+    "chapter": "### Fuente y especie no son sinónimos\n\nJúpiter es un lugar y una magnetósfera; electrón es una especie. RTG es una fuente; neutrón y gamma son los componentes del campo que el informe modela fuera de ella. Un protón puede proceder del viento solar, de un episodio solar energético o de una población atrapada. Las etiquetas de procedencia no reemplazan la descripción de la energía y del tipo de partícula. [JPL, §II.A-C]\n\nComo vocabulario físico: un protón tiene carga positiva; un electrón, negativa; un neutrón no tiene carga neta; un fotón transporta energía electromagnética y tampoco tiene carga. Alfa designa un núcleo de helio-4 y beta, electrones o positrones de desintegración beta. Gamma designa fotones de origen nuclear; los rayos X también son fotones, asociados a otros procesos. Esta clasificación elemental ayuda a leer la tabla 2-1; no significa que el informe atribuya la misma importancia a todas las especies.\n\nLos rayos cósmicos no deben presentarse como sinónimo de rayos gamma. El informe incluye radiación cósmica galáctica sin desarrollar una composición completa para una charla de física de partículas. Tampoco necesitamos atribuir a una eyección solar una especie o energía única: mantendremos las poblaciones solares que enumera el documento.\n\n### Ionización y defectos\n\nIonizar consiste en transferir energía capaz de liberar cargas ligadas. En un semiconductor se pueden generar electrones y huecos móviles; un campo eléctrico puede separarlos y originar una corriente. En un aislante, parte de la carga puede quedar atrapada. Un estado de interfaz es un estado electrónico asociado a la frontera entre materiales, capaz de intercambiar carga con el semiconductor. Esas cargas cambian campos y condiciones eléctricas, aun sin producir una rotura visible. [JPL, §III.D; §VI.B]\n\nEl desplazamiento atómico es otro mecanismo: una interacción transfiere suficiente energía a un átomo para sacarlo de su posición y dejar defectos. El informe no le asigna el papel dominante en la electrónica interna de este programa. En los capítulos de bipolares y JFET, la explicación principal seguirá la ionización superficial documentada, en lugar de atribuir automáticamente toda pérdida de prestaciones a una red cristalina dañada. [JPL, §II.D; §IV.A.2; §VII.B-C]\n\n### Durante la exposición y después\n\nUna corriente generada mientras llega radiación puede interferir con una medida sin dejar el mismo cambio permanente que una carga atrapada. El informe separa esos efectos de interferencia, dependientes de la tasa de ionización, de la degradación acumulada. Esa distinción será útil para los detectores y para no mezclar un pulso, una fuga sostenida y una pérdida de margen. [JPL, §III.D, pp. 3-7 a 3-8 / PDF 35-36]",
+    "loc": "§II; §III.D, pp. 3-7 a 3-8 / PDF 35-36; §VI.B, p. 6-2 / PDF 82.",
+    "extra": "Ionización: portadores móviles · Desplazamiento: defectos en la red",
+    "image": null,
+    "caption": "",
+    "visual": "",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "Partículas, fotones e ionización",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "La fuente indica de dónde viene la radiación; la especie indica qué llega.\nEn el material, esa energía puede generar portadores eléctricos o\ndefectos que cambian el comportamiento del componente.",
+        "x": 64,
+        "y": 167,
+        "w": 1152,
+        "h": 135.15,
+        "size": 35,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Electrones y protones tienen carga.\nNeutrones y fotones transfieren energía sin carga eléctrica.",
+        "x": 64,
+        "y": 352,
+        "w": 1152,
+        "h": 92.1,
+        "size": 35,
+        "bold": true,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "Ionización: portadores móviles · Desplazamiento: defectos en la red",
+        "x": 64,
+        "y": 550,
+        "w": 1152,
+        "h": 44.13,
+        "size": 31,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §II y §III.D",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "05",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "Electrones y protones tienen carga.\nNeutrones y fotones transfieren energía sin carga eléctrica.\n\nIonización: portadores móviles · Desplazamiento: defectos en la red"
+  },
+  {
+    "n": 6,
+    "title": "Las magnitudes que necesitamos",
+    "seconds": 50,
+    "screen": "El tipo y la energía ayudan a entender la interacción con el material. El flujo describe cuántas partículas llegan por área y tiempo; la dosis expresa cuánta energía absorbe una masa de material.",
+    "oral": "Integrar el flujo en el tiempo da fluencia, no dosis. Para pasar de partículas incidentes a energía absorbida hay que conocer especie, energía y transporte en los materiales. Rad de silicio especifica el material de referencia. No vamos a explicar los instrumentos de dosimetría; solo vamos a usar las unidades necesarias para leer los ejemplos. Más energía no permite comparar sin más la penetración de partículas distintas, y esto no es el efecto túnel de una barrera electrónica.",
+    "chapter": "### Cuatro características y una distinción necesaria\n\nEl tipo de radiación identifica el agente; la energía, habitualmente expresada en eV, keV o MeV, caracteriza su capacidad de transferir energía en una interacción. El flujo expresa una tasa de llegada por área y tiempo, por ejemplo electrones/(cm²·s). La fluencia suma esas llegadas por área durante un intervalo, en electrones/cm². La dosis absorbida expresa energía depositada por masa. El informe utiliza estas magnitudes en las tablas 2-1, 2-2 y 5-3. [JPL, pp. 2-2, 2-4 y 5-4 / PDF 26, 28 y 64]\n\nSi φ representa el flujo y es constante durante t, la fluencia es Φ = φ·t. Por ejemplo, 10⁸ electrones/(cm²·s) durante 100 s producen 10¹⁰ electrones/cm². Este cálculo cuenta partículas; no determina por sí solo la dosis.\n\nLa dosis es D = E_abs/m. Un gray equivale a 1 J/kg; un rad equivale a 0,01 Gy. Por tanto, 30 krad(Si) equivalen a 300 Gy(Si), o 300 J/kg absorbidos en silicio. Es una traducción de unidades, no una temperatura, una cantidad de radiografías ni una dosis biológica comparable automáticamente con un ser humano. La sensibilidad eléctrica puede estar concentrada en un volumen muy pequeño y en una interfaz crítica.\n\n### Energía, penetración y blindaje\n\nPara una misma especie y material, aumentar la energía puede aumentar el alcance, pero la pérdida de energía depende del mecanismo de interacción. Un fotón no tiene un alcance final único como en una imagen simplificada de una partícula cargada: su transmisión se describe probabilísticamente. No se puede ordenar toda la radiación por penetración usando solo el número de MeV.\n\nEl mecanismo relevante para atravesar la estructura de una nave es transporte, dispersión y pérdida de energía, con posibles secundarios. No conviene explicarlo como túnel cuántico a través de un aislante de un dispositivo. El informe calculó atenuación y transporte para electrones, protones y bremsstrahlung. [JPL, §III.C.2]\n\n### Qué conserva el dossier de los ensayos\n\nLos valores de fluencia y dosis de las tablas de ensayo están relacionados por las condiciones de esa campaña. No usaremos una conversión universal de electrones/cm² a krad. Para efectos transitorios también interesa la tasa de dosis, porque una corriente de interferencia puede depender de la energía depositada por unidad de tiempo. En CMOS el propio informe discute además tasa de dosis y recocido; por eso no generalizamos que una misma dosis produzca siempre exactamente el mismo resultado, independientemente de su historia temporal. [JPL, §III.D; §VII.F.3, pp. 7-45 y 7-49 / PDF 143 y 147]",
+    "loc": "Tablas 2-1, 2-2 y 5-3; §III.C-D; §VII.F.3.",
+    "extra": "Fluencia = flujo integrado en el tiempo. Dosis = energía absorbida / masa.",
+    "image": null,
+    "caption": "",
+    "visual": "",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "Las magnitudes que necesitamos",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "El tipo y la energía ayudan a entender la interacción con el material. El flujo\ndescribe cuántas partículas llegan por área y tiempo; la dosis expresa cuánta\nenergía absorbe una masa de material.",
+        "x": 64,
+        "y": 164,
+        "w": 1152,
+        "h": 120.39,
+        "size": 31,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "table",
+        "rows": [
+          [
+            "Magnitud",
+            "Qué expresa"
+          ],
+          [
+            "Tipo y energía",
+            "Agente y energía incidente: eV, keV, MeV"
+          ],
+          [
+            "Flujo / fluencia",
+            "Por área y tiempo / acumulado por área"
+          ],
+          [
+            "Dosis",
+            "Energía absorbida por masa: Gy o rad(Si)"
+          ]
+        ],
+        "x": 64,
+        "y": 327,
+        "w": 1152,
+        "h": 240,
+        "widths": [
+          375,
+          777
+        ],
+        "size": 28
+      },
+      {
+        "kind": "text",
+        "text": "Fluencia = flujo integrado en el tiempo. Dosis = energía absorbida / masa.",
+        "x": 64,
+        "y": 601,
+        "w": 1152,
+        "h": 39.21,
+        "size": 27,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · Tablas 2-1, 2-2 y 5-3",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "06",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "| Magnitud | Qué expresa |\n| --- | --- |\n| Tipo y energía | Agente y energía incidente: eV, keV, MeV |\n| Flujo / fluencia | Por área y tiempo / acumulado por área |\n| Dosis | Energía absorbida por masa: Gy o rad(Si) |\n\nFluencia = flujo integrado en el tiempo. Dosis = energía absorbida / masa."
+  },
+  {
+    "n": 7,
+    "title": "La respuesta del programa",
+    "seconds": 45,
+    "screen": "Voyager necesitaba circuitos que siguieran dentro de sus límites después de degradarse. El programa combinó sustitución de piezas, rediseño, fabricación modificada, selección y blindaje según cada aplicación.",
+    "oral": "La nave contiene alimentación, instrumentos, control y almacenamiento de datos. Ahí aparecen resistencias, capacitores, bobinados, diodos, transistores y circuitos integrados. El informe no es una lista completa de materiales de cada placa. Su pregunta es si un dispositivo, en su aplicación, mantiene lo que el circuito necesita. Characterization mide cómo responde, hardening modifica su resistencia y screening decide qué lotes o unidades aceptar.",
+    "chapter": "### Dónde aparecen las familias de componentes\n\nLa alimentación y sus reguladores emplean semiconductores y pasivos; los instrumentos añaden detectores, amplificación, referencias y conversión; la lógica de control y de datos emplea circuitos digitales y memoria. Como contexto arquitectónico, Voyager distribuye funciones entre CCS, AACS y FDS, y dispone de grabación en cinta. La evolución del FDS hacia procesamiento y memoria CMOS se documenta en la historia de computación de NASA, usada aquí exclusivamente para ubicar las funciones. [H3, pp. 181-184]\n\nLa memoria magnética, la cinta y la memoria CMOS almacenan información mediante mecanismos diferentes. Ese contexto no permite adjudicar a cada placa una familia lógica o una lista de componentes sin documentación. El informe sí identifica familias y, en algunos casos, aplicaciones o partes de vuelo. Por ejemplo, su §VII.K informa ensayos de lógica Texas Instruments 54L, mientras que §VI.B describe el uso abundante de CMOS con veintiocho funciones lógicas.\n\n### La prioridad de soluciones\n\nEl documento enumera como prioridad de respuesta el reemplazo directo por otras piezas de la lista, el rediseño del circuito, las piezas endurecidas mediante procesos especiales y screening, y la adición de masa de blindaje. No significa que cada componente recorriera obligatoriamente esas cuatro etapas: el calendario, la exposición y la función determinaban la combinación posible. [JPL, §III.A, p. 3-2 / PDF 30]\n\nCaracterizar un tipo consiste en establecer cómo varían sus parámetros bajo condiciones pertinentes. Endurecer un dispositivo consiste en modificar su diseño o fabricación para mejorar su respuesta. El screening selecciona material o piezas conforme a criterios de aceptación. El análisis de circuito decide qué valores son tolerables y el blindaje reduce la exposición local. Ninguna de estas tareas reemplaza automáticamente a las demás.\n\n### Qué significa que una pieza sea apta\n\nEl programa distinguió piezas insensibles en el ámbito estudiado, piezas adecuadas salvo para aplicaciones muy exigentes, piezas sensibles que requerían medidas y piezas que sufrían cambios catastróficos. El criterio era funcional: pequeñas derivas pueden importar en una medida precisa y ser tolerables en otra función. El reporte señala especialmente aplicaciones de corrientes muy bajas, tensiones muy altas o gran precisión. [JPL, §IV.A.2-3, pp. 4-3 a 4-4 / PDF 39-40]\n\nAl estudiar cada familia preguntaremos qué parámetro cambió y qué exigía su aplicación. Esto también incluye los encapsulados: en determinados amplificadores, el proceso de sellado alteró la respuesta radiativa. La pieza completa y su procedencia importaban tanto como la etiqueta comercial. [JPL, §IV.B.5, p. 4-24 / PDF 60]",
+    "loc": "§III.A; §IV.A.2-3; §IV.B.5; §VI.B; §VII.K. H3 solo para arquitectura.",
+    "extra": "Caracterización: conocer la respuesta. Screening: aceptar las piezas adecuadas.",
+    "image": "07_instrumentos.jpg",
+    "caption": "Ubicación de instrumentos · NASA. Vista de contexto, no inventario de piezas.",
+    "visual": "Ubicación de instrumentos · NASA. Vista de contexto, no inventario de piezas.",
+    "refs": [
+      "JPL",
+      "H3"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "La respuesta del programa",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Voyager necesitaba circuitos que\nsiguieran dentro de sus límites\ndespués de degradarse. El programa\ncombinó sustitución de piezas,\nrediseño, fabricación modificada,\nselección y blindaje según cada\naplicación.",
+        "x": 64,
+        "y": 166,
+        "w": 565,
+        "h": 290.13,
+        "size": 33,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "image",
+        "file": "07_instrumentos.jpg",
+        "x": 688,
+        "y": 156,
+        "w": 526,
+        "h": 390
+      },
+      {
+        "kind": "text",
+        "text": "Instrumentos de Voyager · NASA",
+        "x": 688,
+        "y": 558,
+        "w": 526,
+        "h": 36.75,
+        "size": 25,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "Caracterización: conocer la respuesta. Screening: aceptar las piezas adecuadas.",
+        "x": 64,
+        "y": 600,
+        "w": 1148,
+        "h": 39.21,
+        "size": 27,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §III.A y §IV · Arquitectura: NASA/Tomayko",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "07",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "Instrumentos de Voyager · NASA\n\nCaracterización: conocer la respuesta. Screening: aceptar las piezas adecuadas."
+  },
+  {
+    "n": 8,
+    "title": "Resistencias, capacitores y conexiones",
+    "seconds": 60,
+    "screen": "Los pasivos ensayados mostraron cambios pequeños en resistencia y capacitancia. Esos resultados permitían concentrar el esfuerzo en dispositivos más sensibles, sin convertir a todos los materiales y aislantes en inmunes.",
+    "oral": "En resistencias de película metálica Dale no midieron cambios dentro del error de más o menos 0,01 por ciento, para la fluencia indicada. En capacitores de teflón B11B los cambios medios fueron de unas centésimas de por ciento. Son piezas y parámetros concretos. En inductores, transformadores y conexiones vamos a mencionar su función, pero este informe no nos da una caracterización equivalente que permita inventar qué mitigación eligieron.",
+    "chapter": "### Resistencias: qué se midió\n\nLos tipos Dale Electronics CDP16, CDP18, LDP16 y SDP16, de película metálica, fueron irradiados a 10¹³ electrones/cm². No se observó cambio de resistencia dentro del error experimental de ±0,01 %. El resultado es sólido en su alcance: estabilidad de ese parámetro, para esos tipos y esa exposición. No demuestra la composición de todas las resistencias de vuelo ni revela por sí solo el motivo de selección de cada referencia. [JPL, §VII.H.2, p. 7-53 / PDF 151]\n\nComo explicación de circuito, R fija una relación entre tensión y corriente; en un divisor, una deriva desigual entre resistencias cambia la relación de división. Un conductor puede evacuar carga móvil, pero eso no hace irrelevantes sus superficies, el sustrato, el encapsulado o el aislamiento entre terminales. El informe no proporciona aquí una medida completa de fuga de esas redes resistivas durante la irradiación. Conviene no sustituir el resultado medido por una explicación universal de inmunidad.\n\n### Capacitores: cambios pequeños, con cifras concretas\n\nSe ensayaron seis capacitores de cada valor de Component Research B11B de teflón: 0,02 y 0,05 µF. Tras 5 × 10¹² electrones/cm², las disminuciones medias de capacitancia fueron 5 y 12 pF. Las variaciones relativas calculadas son 5/20.000 = 0,025 % y 12/50.000 = 0,024 %. Son promedios de la muestra, no máximos garantizados para todo capacitor. [JPL, §VII.H.1, p. 7-53 / PDF 151]\n\n| Componente del ensayo | Resultado comunicado | Límite de interpretación |\n|---|---|---|\n| Redes Dale de película metálica | Sin cambio detectable de R dentro de ±0,01 % | A 10¹³ electrones/cm²; no caracteriza todos los aislantes |\n| B11B de 0,02 µF | Disminución media de 5 pF | Seis unidades; 5 × 10¹² electrones/cm² |\n| B11B de 0,05 µF | Disminución media de 12 pF | Seis unidades; 5 × 10¹² electrones/cm² |\n\nEn el modelo elemental C = εA/d, variar la permitividad puede variar C, pero no toda carga atrapada produce una variación simple de ε. También pueden importar conducción del dieléctrico, pérdidas y corrientes de fuga. Un modelo R_fuga en paralelo con C da una retención caracterizada por τ = R_fuga·C; permite entender que mantener la capacitancia no verifica automáticamente el aislamiento. Esta es una explicación de circuito, no un efecto adicional medido en los B11B por ese apartado.\n\n### Inductores, transformadores, relés y materiales\n\nInductores y transformadores incluyen bobinados y aislamiento; un transformador añade aislamiento entre circuitos. Los relés incluyen bobina y contactos, y las pistas, soldaduras y conectores conducen las señales. Los encapsulados y soportes sostienen y aíslan las piezas. El volumen I no ofrece una sección de resultados comparable a §VII.H para atribuir materiales, modelos y soluciones radiativas a todas esas familias de vuelo.\n\nLa ausencia de ese desarrollo se declara en la presentación. Las fotografías y esquemas de ensayo pueden mostrar resistencias, capacitores o relés del banco de laboratorio: su presencia no demuestra que esos elementos formaran parte de una placa enviada al espacio. La conclusión práctica del capítulo es que el programa encontró una sensibilidad muy distinta según la familia y la aplicación; no todo exigía el mismo esfuerzo de modificación.",
+    "loc": "§VII.H, p. 7-53 / PDF 151. Cálculos porcentuales y modelos RC: explicación didáctica.",
+    "extra": "Dale: cambio de R no detectable dentro de ±0,01 %.\nB11B: disminuciones medias de C de 0,025 % y 0,024 %.",
+    "image": null,
+    "caption": "",
+    "visual": "",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "Resistencias, capacitores y conexiones",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Los pasivos ensayados mostraron cambios pequeños en resistencia y\ncapacitancia. Esos resultados permitían concentrar el esfuerzo en dispositivos\nmás sensibles, sin convertir a todos los materiales y aislantes en inmunes.",
+        "x": 64,
+        "y": 164,
+        "w": 1152,
+        "h": 124.08,
+        "size": 32,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "table",
+        "rows": [
+          [
+            "Pieza ensayada",
+            "Exposición",
+            "Resultado"
+          ],
+          [
+            "Dale: película metálica",
+            "10¹³ e/cm²",
+            "ΔR dentro de ±0,01 %"
+          ],
+          [
+            "B11B: 0,02 µF",
+            "5 × 10¹² e/cm²",
+            "C disminuyó 5 pF en promedio"
+          ],
+          [
+            "B11B: 0,05 µF",
+            "5 × 10¹² e/cm²",
+            "C disminuyó 12 pF en promedio"
+          ]
+        ],
+        "x": 64,
+        "y": 337,
+        "w": 1152,
+        "h": 248,
+        "widths": [
+          410,
+          310,
+          432
+        ],
+        "size": 27
+      },
+      {
+        "kind": "text",
+        "text": "Inductores y conexiones: el informe no da una caracterización equivalente.",
+        "x": 64,
+        "y": 610,
+        "w": 1152,
+        "h": 37.980000000000004,
+        "size": 26,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §VII.H, p. 7-53 / PDF 151",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "08",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "| Pieza ensayada | Exposición | Resultado |\n| --- | --- | --- |\n| Dale: película metálica | 10¹³ e/cm² | ΔR dentro de ±0,01 % |\n| B11B: 0,02 µF | 5 × 10¹² e/cm² | C disminuyó 5 pF en promedio |\n| B11B: 0,05 µF | 5 × 10¹² e/cm² | C disminuyó 12 pF en promedio |\n\nInductores y conexiones: el informe no da una caracterización equivalente."
+  },
+  {
+    "n": 9,
+    "title": "Diodos y acoplamientos ópticos",
+    "seconds": 50,
+    "screen": "Los diodos ensayados podían conservar parámetros adecuados mientras ciertos emisores y detectores ópticos se degradaban mucho. En un circuito del informe, la señal restante todavía alcanzaba para mantener una salida correcta.",
+    "oral": "La figura corresponde al ensayo con emisor TIL24, detector LS600 y un transistor 2N2222A en la salida. Tras irradiación no observaron un cambio significativo de esa salida. Los autores explican que todavía llegaba suficiente señal para accionar el transistor, aunque esperaban degradación de los dispositivos ópticos. El mensaje es que una salida digital correcta no prueba que todos los elementos internos sigan como nuevos.",
+    "chapter": "### Diodos: distinguir la función\n\nPara los diodos y rectificadores 1N4148, 1N5711, BC997-1, FJT1100, MV1404 y UTR4320, el informe describe cambios típicos de fuga menores que 1 nA y variaciones de tensión directa de pocos milivoltios después de 10¹³ electrones/cm². Los considera resistentes en ese contexto. Los Zener y referencias se estudiaron aparte porque una deriva pequeña de tensión puede ser relevante para una función de precisión. [JPL, §VII.G, pp. 7-49 a 7-53 / PDF 147-151]\n\nEl documento encontró en determinados Zener cambios dependientes de energía que atribuyó a daño en volumen, y en algunas unidades anomalías que interpretó como efectos superficiales. No todos los cambios tenían el mismo signo. Conviene mantener esa distinción sin trasladar las variaciones de una referencia a todas las uniones semiconductoras.\n\n### Un caso concreto: la señal óptica y la salida eléctrica\n\nEl ensayo óptico con TIL24 y LS600, separados aproximadamente 0,32 cm, aplicó fluencias de 5 × 10¹² y 10¹³ electrones/cm². No observó un cambio significativo de la salida medida. Los autores razonaron, a partir de experiencias previas, que los dispositivos debían estar degradados, pero todavía entregaban suficiente señal pulsada para accionar el 2N2222A de la salida. Es importante conservar esa diferencia: la salida se midió; la degradación interna de ese ensayo se infirió apoyándose en otros resultados. [JPL, §VII.I.1.a, p. 7-55 / PDF 153; figura 7-9, p. 7-57 / PDF 155]\n\nLa figura muestra un circuito de ensayo y permite seguir la cadena emisor luminoso, detector, excitación del transistor y salida. El circuito final introduce una respuesta de conmutación: mientras la excitación supere lo necesario, una reducción considerable de la señal óptica puede no verse como una reducción proporcional del nivel de salida. Es un ejemplo de margen funcional, no una prueba de ausencia de daño.\n\nLos ensayos separados de fuentes y detectores y las conclusiones de §VII.I señalaron sensibilidad radiativa importante, mayor en las fuentes estudiadas que en los detectores. También señalaron dispersión de luz asociada a la lente degradada. En la geometría de mayor separación, perder o dispersar luz tenía consecuencias más visibles. No extrapolaremos un porcentaje único de degradación a todos los LED u optoacopladores. [JPL, pp. 7-57 a 7-61 / PDF 155-159]\n\n### Interferencia y mitigación\n\nDurante la exposición, la ionización también puede generar fotocorrientes o fluorescencia que se confundan con una señal. El informe menciona como respuestas usar menor área de juntura para reducir fotocorriente, materiales ópticos de elevada pureza y, cuando corresponda, filtros o blindaje. Son técnicas discutidas por el programa; la lista no prueba su aplicación en cada instrumento. [JPL, §III.D, pp. 3-7 a 3-8 / PDF 35-36]",
+    "loc": "§VII.G; §VII.I, pp. 7-54 a 7-61 / PDF 152-159; figura 7-9.",
+    "extra": "Una salida correcta puede coexistir con degradación interna.",
+    "image": "09_circuito_optico.png",
+    "caption": "Figura 7-9 del informe: circuito de ensayo óptico, no esquema de una placa de vuelo.",
+    "visual": "Figura 7-9 del informe: circuito de ensayo óptico, no esquema de una placa de vuelo.",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "Diodos y acoplamientos ópticos",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Los diodos ensayados podían\nconservar parámetros adecuados\nmientras ciertos emisores y detectores\nópticos se degradaban mucho. En un\ncircuito del informe, la señal restante\ntodavía alcanzaba para mantener una\nsalida correcta.",
+        "x": 64,
+        "y": 166,
+        "w": 565,
+        "h": 290.13,
+        "size": 33,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "image",
+        "file": "09_circuito_optico.png",
+        "x": 688,
+        "y": 156,
+        "w": 526,
+        "h": 390
+      },
+      {
+        "kind": "text",
+        "text": "Figura 7-9 · Circuito de ensayo",
+        "x": 688,
+        "y": 558,
+        "w": 526,
+        "h": 36.75,
+        "size": 25,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "Una salida correcta puede coexistir con degradación interna.",
+        "x": 64,
+        "y": 600,
+        "w": 1148,
+        "h": 39.21,
+        "size": 27,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §VII.I, pp. 7-55 y 7-57 / PDF 153 y 155",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "09",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "Figura 7-9 · Circuito de ensayo\n\nUna salida correcta puede coexistir con degradación interna."
+  },
+  {
+    "n": 10,
+    "title": "Bipolares: ganancia y punto de operación",
+    "seconds": 65,
+    "screen": "En los bipolares, el informe relaciona la degradación con un aumento de la corriente de base y de las fugas. La pérdida de ganancia era especialmente importante a bajas corrientes y dependía del fabricante y del proceso.",
+    "oral": "Usamos la definición beta igual a corriente de colector dividida por corriente de base. Si para sostener el mismo colector hace falta más corriente de base, beta baja. El documento da un ejemplo numérico que podemos seguir: una beta inicial de cien pasa a aproximadamente 76,9 con el cambio de ganancia inversa indicado. La consecuencia depende del circuito: una etapa puede perder margen de excitación o desplazar su punto de trabajo.",
+    "chapter": "### La explicación que privilegia el informe\n\nEl §VII.B atribuye la degradación en ambiente ionizante al aumento de corriente de base y señala que es más fuerte a corrientes bajas. En algunos dispositivos, capas de inversión cerca de regiones superficiales tipo p aumentaban especialmente las fugas de juntura. Así, el caso Voyager no se explica adecuadamente reduciendo todo a átomos desplazados dentro de la base: el propio informe destaca el estado de las superficies y su fabricación. [JPL, p. 7-2 / PDF 100]\n\nUna carga retenida en un óxido puede modificar el potencial de la superficie próxima. La región superficial puede dejar de comportarse como antes y abrir un camino de conducción no previsto. Los procesos de generación y recombinación superficiales también alteran las corrientes de juntura. A corriente de colector fijada, un aumento de corriente de base reduce β = I_C/I_B. La consecuencia a tensión de base fija depende del resto del circuito; no debe inferirse aplicando mecánicamente la misma frase a cualquier polarización.\n\n### El ejemplo numérico del documento\n\nLa tabla 7-1 expresa cambios mediante Δ(1/β), y el texto muestra cómo recuperar la ganancia final: β_final = 1 / [1/β_inicial + Δ(1/β)]. Para el TI 2N2605 a I_C = 0,01 mA se usa Δ(1/β) = 0,003 a 5 × 10¹² electrones/cm². Si β_inicial = 100, entonces β_final = 1/(0,01 + 0,003) ≈ 76,9. La ganancia inicial de cien es el supuesto del ejemplo, no una medición universal de todas esas piezas. [JPL, p. 7-9 / PDF 107]\n\nComo consecuencia didáctica, para sostener 10 µA de colector, la corriente de base pasa de 0,10 a aproximadamente 0,13 µA. La diferencia parece pequeña, pero puede importar en una etapa diseñada con consumos bajos o márgenes estrechos. Para un transistor de conmutación debe revisarse además la capacidad de su excitador y el estado de saturación; no basta con una ganancia medida en otra condición.\n\n### Qué hicieron frente a la variación\n\nLa figura 7-1 compara dispositivos y fabricantes; incluso una misma referencia 2N2222 presentaba respuestas muy diferentes según la línea de producción. El programa usó selección de lotes, revisión del circuito, elección de ganancias iniciales adecuadas y blindaje donde resultaba necesario. El capítulo de conclusiones recomienda operar cerca del punto de máxima ganancia y diseñar tolerando parámetros degradados. Esa recomendación se presenta como tal, sin afirmar que todos los circuitos de Voyager se rediseñaran para cumplirla. [JPL, §III.A; §IX.B, p. 9-2 / PDF 205]\n\nLos *outliers* eran unidades con una respuesta mucho peor que la población de referencia. La importancia para la charla no es calcular una distribución estadística: es entender por qué el valor típico de una hoja de datos no garantizaba el funcionamiento de todas las unidades que iban a comprarse. El screening del capítulo 16 responde a ese problema.",
+    "loc": "§VII.B y C, pp. 7-2 a 7-9 / PDF 100-107; figura 7-1; §IX.B.",
+    "extra": "Ejemplo del informe: β pasa de 100 a 76,9.",
+    "image": "10_curvas_bipolares.png",
+    "caption": "Figura 7-1: cambio de ganancia inversa frente a corriente. La dosis y el fabricante condicionan la comparación.",
+    "visual": "Figura 7-1: cambio de ganancia inversa frente a corriente. La dosis y el fabricante condicionan la comparación.",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "Bipolares: ganancia y punto de operación",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "En los bipolares, el informe relaciona\nla degradación con un aumento de la\ncorriente de base y de las fugas. La\npérdida de ganancia era\nespecialmente importante a bajas\ncorrientes y dependía del fabricante y\ndel proceso.",
+        "x": 64,
+        "y": 166,
+        "w": 565,
+        "h": 290.13,
+        "size": 33,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "image",
+        "file": "10_curvas_bipolares.png",
+        "x": 688,
+        "y": 156,
+        "w": 526,
+        "h": 390
+      },
+      {
+        "kind": "text",
+        "text": "Figura 7-1 · Δ(1/β) frente a I_C",
+        "x": 688,
+        "y": 558,
+        "w": 526,
+        "h": 36.75,
+        "size": 25,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "Ejemplo del informe: β pasa de 100 a 76,9.",
+        "x": 64,
+        "y": 600,
+        "w": 1148,
+        "h": 39.21,
+        "size": 27,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §VII.B-C, pp. 7-2 a 7-9 / PDF 100-107",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "10",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "Figura 7-1 · Δ(1/β) frente a I_C\n\nEjemplo del informe: β pasa de 100 a 76,9."
+  },
+  {
+    "n": 11,
+    "title": "JFET y conmutadores analógicos",
+    "seconds": 60,
+    "screen": "Los JFET podían desarrollar fugas por efectos en su superficie, aunque su compuerta no fuera un óxido MOS. En los conmutadores analógicos también importaba el circuito que controlaba al transistor de paso.",
+    "oral": "Un JFET controla el canal con una juntura polarizada en inversa, pero eso no elimina las superficies y capas de pasivación del dispositivo. El informe encontró diferencias fuertes entre lotes de canal n poco dopado. En DG129, DG133 y DG141 el transistor de paso era JFET y el controlador bipolar; en DG181 el controlador también contenía MOS. Mirar solo el nombre del transistor de paso no alcanzaba para anticipar la respuesta de todo el integrado.",
+    "chapter": "### Por qué un JFET también tiene un problema de superficie\n\nEn un JFET, la juntura de compuerta controla la sección conductora mediante su región de agotamiento. No es la compuerta aislada de un MOSFET, pero la fabricación todavía incluye superficies y pasivación. El informe identifica a los JFET de canal n poco dopado como especialmente propensos a formación de capas de inversión y a aumentos de fuga compuerta-fuente, I_GSS. También describe conducción no deseada a través del sustrato. [JPL, §VII.C, p. 7-9 / PDF 107]\n\nLa carga superficial puede modificar la distribución de portadores cerca de una región de bajo dopado y crear un camino que antes no conducía de la misma manera. El aumento de fuga puede perturbar una entrada sensible, aunque el canal siga respondiendo a su compuerta. Como modelo de circuito, una fuga que circula por una impedancia R genera un error aproximado I_fuga·R: cuanto mayor sea la impedancia, más importa esa corriente. Es una explicación general del resultado, no un valor medido en una entrada específica de Voyager.\n\n### El conmutador contiene más que el elemento de paso\n\nEl informe describe DG129, DG133 y DG141 con un controlador bipolar y JFET de canal n como interruptores. El DG181 también usa JFET de paso, pero su controlador combina dispositivos bipolares y MOS. Por eso «contiene MOS» y «el interruptor es MOS» no son afirmaciones equivalentes. La sensibilidad del controlador puede limitar el conjunto. [JPL, §IX.C.4, p. 9-3 / PDF 206]\n\nLos parámetros relevantes incluyen corriente de fuga en apagado, resistencia en conducción y comportamiento dinámico. En una adquisición analógica, una fuga puede alterar el valor medido; un aumento de resistencia de paso puede aumentar el error bajo carga o retrasar el establecimiento de la señal. El informe informa variaciones muy dependientes de la polarización durante la exposición, del fabricante y del lote. [JPL, §VII.E, pp. 7-42 a 7-44 / PDF 140-142]\n\n### Las decisiones efectivamente documentadas\n\nLa selección de lotes JFET distinguió respuestas uniformemente buenas, uniformemente sensibles y mezcladas. En las mezcladas tenía sentido separar unidades; cuando todo el lote era demasiado sensible, el screening no podía producir piezas resistentes por selección. Algunas aplicaciones requirieron blindaje. [JPL, §VIII.D, pp. 8-15 a 8-16 / PDF 176-177]\n\nEl DGM111 proporciona otro caso de decisión a nivel circuito: el informe señala que pudo utilizarse en una aplicación cuyas polarizaciones minimizaban la degradación, y da drenador a +10 V, fuente a tierra y alimentación lógica a +5 V. No es una receta universal, sino evidencia de que las tensiones durante la exposición eran parte de la solución. [JPL, §VIII.B.1, p. 8-7 / PDF 168]",
+    "loc": "§VII.C y E; §VIII.B.1 y D; §IX.C.4.",
+    "extra": "La polarización y el controlador pueden limitar a todo el conmutador.",
+    "image": null,
+    "caption": "",
+    "visual": "",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "JFET y conmutadores analógicos",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Los JFET podían desarrollar fugas por efectos en su superficie, aunque su\ncompuerta no fuera un óxido MOS. En los conmutadores analógicos también\nimportaba el circuito que controlaba al transistor de paso.",
+        "x": 64,
+        "y": 166,
+        "w": 1152,
+        "h": 124.08,
+        "size": 32,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "table",
+        "rows": [
+          [
+            "Conmutador",
+            "Elemento de paso",
+            "Controlador"
+          ],
+          [
+            "DG129 / DG133 / DG141",
+            "JFET de canal n",
+            "Bipolar"
+          ],
+          [
+            "DG181",
+            "JFET de canal n",
+            "Bipolar y MOS"
+          ]
+        ],
+        "x": 64,
+        "y": 345,
+        "w": 1152,
+        "h": 202,
+        "widths": [
+          475,
+          340,
+          337
+        ],
+        "size": 28
+      },
+      {
+        "kind": "text",
+        "text": "La polarización y el controlador pueden limitar a todo el conmutador.",
+        "x": 64,
+        "y": 601,
+        "w": 1152,
+        "h": 41.67,
+        "size": 29,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §VII.E, §VIII.B y §IX.C.4",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "11",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "| Conmutador | Elemento de paso | Controlador |\n| --- | --- | --- |\n| DG129 / DG133 / DG141 | JFET de canal n | Bipolar |\n| DG181 | JFET de canal n | Bipolar y MOS |\n\nLa polarización y el controlador pueden limitar a todo el conmutador."
+  },
+  {
+    "n": 12,
+    "title": "MOS y CMOS: cambios que se superponen",
+    "seconds": 85,
+    "screen": "La carga en el óxido y los estados de interfaz pueden desplazar el umbral en sentidos diferentes. En ciertos MOS de canal n, el informe describe una recuperación parcial del umbral a dosis mayores, sin que eso garantice una mejora del circuito.",
+    "oral": "Este es el ejemplo que parecía contradictorio. El informe no está diciendo que más radiación siempre mejore la ganancia. Para el canal n, la contribución del óxido puede llevar el umbral hacia valores negativos; la de interfaz puede empujarlo hacia positivos. La suma puede acercar nuevamente el umbral al inicial y, sin embargo, dejar otros parámetros mal. Para el canal p, las contribuciones descritas tienden en el mismo sentido negativo. En CMOS importan ambos transistores, el consumo y el tiempo de propagación.",
+    "chapter": "### Qué controla el umbral\n\nUn MOSFET controla la región conductora mediante el campo a través de un aislante. La tensión umbral V_T describe una condición de formación del canal, con un criterio de medida que debe especificarse. CMOS combina transistores MOS complementarios, de canal n y p. MOSFET designa un dispositivo; CMOS describe una manera de construir circuitos con ambos tipos. Esa distinción evita confundir tecnología de transistor, familia lógica y función del integrado.\n\nLa ionización puede dejar carga atrapada en el óxido y alterar estados de la interfaz silicio-óxido. La carga modifica el campo que, antes de la exposición, dependía de la tensión aplicada y de las cargas originales de la estructura. Una aproximación electrostática para la contribución de carga positiva de óxido es ΔV_T,ox ≈ -Q_ot/C_ox, usando magnitudes por unidad de área. Es una ayuda didáctica para el signo; no calcula por sí sola el cambio total ni sustituye las curvas del lote. [JPL, §VI.B, pp. 6-1 a 6-2 / PDF 81-82]\n\n### Por qué puede aparecer una recuperación parcial\n\nEl informe explica que los estados del óxido producen desplazamientos negativos en ambos tipos de transistor. Para los dispositivos que describe, los estados de interfaz desplazan el umbral n hacia valores más positivos y el p hacia más negativos. La contribución de óxido actúa a dosis bajas y se satura a las mayores; la de interfaz cobra importancia a dosis altas. [JPL, p. 6-2 / PDF 82]\n\nEn canal n, esas contribuciones pueden compensarse parcialmente: primero el umbral se aleja del inicial en dirección negativa y después vuelve hacia valores positivos. Es posible ver una mejora parcial de ese parámetro al aumentar la dosis, aun cuando haya más defectos. En canal p, las dos contribuciones descritas desplazan el umbral hacia valores negativos y no producen la misma compensación. Esta explicación pertenece al régimen y a los dispositivos tratados; no fija signos universales para cualquier proceso MOS actual.\n\n### Umbral, corriente y ganancia no son lo mismo\n\nSi el umbral n baja, a igual tensión de compuerta el dispositivo puede conducir más. Eso puede aumentar una fuga en el estado que debería estar apagado, y por lo tanto empeorar el circuito. Una corriente mayor no implica automáticamente mayor ganancia útil. La transconductancia g_m describe la variación de corriente de drenador con tensión de compuerta a condiciones fijadas; la ganancia de tensión también depende de la carga y de otras resistencias. El pasaje de recuperación de §VI.B se refiere al umbral, no demuestra un aumento general de g_m.\n\nLa figura 6-1 permite mirar corriente frente a tensión de compuerta para canal n y p antes y después de irradiar. El propio texto advierte que el umbral extraído a corrientes bajas muestra un desplazamiento que puede pasar inadvertido si se observa solo a corrientes más altas. No se debe sustituir esa curva por la frase «el transistor conduce menos siempre».\n\n### La consecuencia en CMOS\n\nEl reporte relaciona desplazamientos de umbral con pérdida de conmutación, fuga excesiva, reducción de velocidad y cambios de inmunidad al ruido. Además, sus ensayos no encontraron una correlación útil entre el cambio de corriente de reposo I_SS y el de tiempo de propagación t_p. Medir consumo no bastaba para saber si los tiempos seguían siendo aceptables. Esta es una de las razones para comprobar varios parámetros funcionales, incluso cuando una compuerta todavía da ceros y unos correctos. [JPL, §VII.F.1-2, p. 7-45 / PDF 143]",
+    "loc": "§VI.B, pp. 6-1 a 6-3 / PDF 81-83, figura 6-1; §VII.F.1-2.",
+    "extra": "Recuperación de un parámetro ≠ recuperación completa del dispositivo.",
+    "image": "12_curvas_mos.png",
+    "caption": "Figura 6-1: corriente de drenador frente a tensión de compuerta, antes y después de irradiar.",
+    "visual": "Figura 6-1: corriente de drenador frente a tensión de compuerta, antes y después de irradiar.",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "MOS y CMOS: cambios que se superponen",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "La carga en el óxido y los estados de\ninterfaz pueden desplazar el umbral\nen sentidos diferentes. En ciertos\nMOS de canal n, el informe describe\nuna recuperación parcial del umbral a\ndosis mayores, sin que eso garantice\nuna mejora del circuito.",
+        "x": 64,
+        "y": 166,
+        "w": 565,
+        "h": 290.13,
+        "size": 33,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "image",
+        "file": "12_curvas_mos.png",
+        "x": 688,
+        "y": 156,
+        "w": 526,
+        "h": 390
+      },
+      {
+        "kind": "text",
+        "text": "Figura 6-1 · I_D frente a V_G",
+        "x": 688,
+        "y": 558,
+        "w": 526,
+        "h": 36.75,
+        "size": 25,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "Recuperación de un parámetro ≠ recuperación completa del dispositivo.",
+        "x": 64,
+        "y": 600,
+        "w": 1148,
+        "h": 39.21,
+        "size": 27,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §VI.B, pp. 6-1 a 6-3 / PDF 81-83",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "12",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "Figura 6-1 · I_D frente a V_G\n\nRecuperación de un parámetro ≠ recuperación completa del dispositivo."
+  },
+  {
+    "n": 13,
+    "title": "Hardening de la familia CMOS RCA",
+    "seconds": 75,
+    "screen": "RCA modificó el recocido del óxido de compuerta de 1100 a 950 °C para mejorar la respuesta de la familia CD4000. Los dispositivos podían seguir funcionando después de irradiarse, pero conservaban aumentos de fuga, consumo y retardo.",
+    "oral": "Es una modificación de fabricación. El proceso comercial no alcanzaba el nivel de fluencia descrito bajo polarización normal; con el proceso modificado seguían funcionando. Eso no quiere decir características intactas. El informe también estudia cambiar la atmósfera de recocido de forming gas a nitrógeno y encuentra mejoras en determinadas fugas y en uniformidad. La fabricación modificada tuvo que acompañarse con selección y criterios de circuito.",
+    "chapter": "### El problema y la intervención\n\nEl informe señala que la nave empleaba muchos dispositivos CMOS, con veintiocho funciones lógicas distintas. Los fabricados con el proceso comercial estándar no soportaban 5 × 10¹² electrones/cm² bajo condiciones normales de polarización: el umbral del canal n se desplazaba hacia cero y aumentaba la corriente de alimentación. RCA redujo la temperatura de recocido del óxido de compuerta de 1100 a 950 °C y logró piezas que seguían funcionando a esa fluencia, aunque con características degradadas. [JPL, §VI.B, p. 6-1 / PDF 81]\n\nEstas temperaturas pertenecen a la fabricación del semiconductor. No describen su temperatura de operación ni el recocido posterior de componentes encapsulados del programa IRAN. El informe caracteriza el esfuerzo de hardening como empírico; no proporciona una derivación atomística completa que permita afirmar que cualquier óxido mejora simplemente por bajar su temperatura de proceso. [JPL, §IX.C.1, p. 9-2 / PDF 205]\n\n### Lo que seguía cambiando\n\nA 150 krad(Si), el documento informa aumentos muy grandes de corriente de reposo, fugas entre terminales y cambios de umbral, además de aumentos del retardo. Que la corriente inicial sea muy pequeña permite multiplicaciones enormes sin que eso equivalga necesariamente a amperes; aun así, importa su valor final y la capacidad de alimentación de la aplicación. Los dispositivos de gran área y las compuertas de transmisión de multiplexores recibieron atención especial. [JPL, pp. 6-1 a 6-2]\n\nEl §VII.F concluye que el proceso de 950 °C parecía adecuado para las condiciones de Voyager que allí describe, incluyendo la dosis prevista y la ausencia de restricciones severas de corriente de reposo. El mismo texto advierte que ambientes mayores o requisitos más estrictos requerirían otro proceso. No aplicaremos los 125 o 150 krad discutidos para determinadas pruebas CMOS como si fueran la dosis de todos los equipos: el margen del bus del capítulo 17 es otro nivel de análisis. [JPL, p. 7-49 / PDF 147]\n\n### Atmósfera de recocido y control de lotes\n\nEl informe menciona resultados preliminares favorables al reemplazar forming gas por nitrógeno durante el recocido, y después presenta comparaciones de screening. En los multiplexores evaluados, el cambio redujo problemas de fuga y mejoró la distribución de respuesta. El §VIII.E describe que la selección eliminaba obleas con dispositivos catastróficos o con consumos inaceptables para las aplicaciones. La mejor fabricación no eliminaba la necesidad de verificar lo que realmente se entregaba. [JPL, pp. 8-19 y 8-30 / PDF 180 y 191]\n\nLa decisión combina, por lo tanto, un cambio de proceso, aceptación de prestaciones degradadas dentro de límites útiles y control de la producción. No es una elección entre «un chip perfecto» y «uno que se destruye»: hay una región intermedia en la que las funciones continúan, con menor margen y parámetros distintos.",
+    "loc": "§VI.B, pp. 6-1 a 6-2 / PDF 81-82; §VII.F.4; §VIII.E; §IX.C.1.",
+    "extra": "1100 °C → 950 °C\nCambio del proceso de fabricación del óxido de compuerta.",
+    "image": null,
+    "caption": "",
+    "visual": "",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "Hardening de la familia CMOS RCA",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "RCA modificó el recocido del óxido de compuerta de 1100 a 950 °C para\nmejorar la respuesta de la familia CD4000. Los dispositivos podían seguir\nfuncionando después de irradiarse, pero conservaban aumentos de fuga,\nconsumo y retardo.",
+        "x": 64,
+        "y": 166,
+        "w": 1152,
+        "h": 178.2,
+        "size": 35,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "1100 °C → 950 °C",
+        "x": 64,
+        "y": 390,
+        "w": 1152,
+        "h": 84.72,
+        "size": 64,
+        "bold": true,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "Recocido del óxido durante la fabricación",
+        "x": 64,
+        "y": 490,
+        "w": 1152,
+        "h": 47.82,
+        "size": 34,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Después: verificar fugas, consumo, retardo y variación entre lotes.",
+        "x": 64,
+        "y": 592,
+        "w": 1152,
+        "h": 41.67,
+        "size": 29,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §VI.B, §VII.F y §VIII.E",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "13",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "1100 °C → 950 °C\n\nRecocido del óxido durante la fabricación\n\nDespués: verificar fugas, consumo, retardo y variación entre lotes."
+  },
+  {
+    "n": 14,
+    "title": "LM108 y LM139: mejoras con contrapartidas",
+    "seconds": 85,
+    "screen": "Los cambios de fabricación mejoraron la resistencia de algunos circuitos lineales, pero también alteraron otras prestaciones. En el LM108 aparecieron problemas de ruido y encapsulado; el LM139 mostró una fuerte dependencia de la polarización.",
+    "oral": "En los lineales, el resultado tenía que servir para una función analógica concreta. El LM108 endurecido corrigió problemas que afectaban a los dispositivos estándar, pero en ciertas aplicaciones su ruido o su encapsulado no eran aceptables y usaron piezas estándar muy blindadas. En el LM139, la mejora dependía además de alimentación, estado durante la exposición y condiciones de medida. El informe registra éxitos, intentos fallidos y decisiones diferentes según la aplicación.",
+    "chapter": "### LM108: cambiar el proceso modifica varias prestaciones\n\nVoyager financió a fines de 1974 y principios de 1975 lotes con procesamiento especial en National Semiconductor. El esfuerzo mejoró determinados dispositivos, especialmente LM108, mientras que los intentos de endurecer LM101 y LM111 no fueron exitosos en ese programa. El informe vincula la sensibilidad de circuitos bipolares lineales a ionización superficial y a las condiciones de oxidación, difusión y recocido. [JPL, §VI.C.1, pp. 6-3 a 6-4 / PDF 83-84]\n\nEn el LM108 estándar, las corrientes de fuga de estructuras pnp y los efectos de inversión podían perturbar corrientes internas y ganancia. La figura 7-4 compara la respuesta del dispositivo estándar con la del endurecido y muestra el circuito empleado para esa comparación. Sirve para conectar una alteración superficial con un efecto de circuito, sin identificar ese montaje como placa de vuelo. [JPL, §VII.D.1, pp. 7-13 a 7-14 / PDF 111-112]\n\nLos LM108/LM108A modificados resultaron adecuados para aplicaciones de Voyager, pero no conservaron todas las ventajas del producto estándar. El informe menciona dificultad para cumplir consistentemente especificaciones iniciales, bajo rendimiento de fabricación a -55 °C, más ruido y problemas con el encapsulado flatpack. En aplicaciones que necesitaban ese encapsulado o no toleraban el ruido se usaron dispositivos estándar con blindaje importante; otras exigieron blindar incluso piezas endurecidas. [JPL, §VI.C.2, pp. 6-4 a 6-5 / PDF 84-85]\n\nEl texto atribuye el ruido del proceso con oxidación por vapor al aumento de estados rápidos de interfaz y a daño de red asociado a ese proceso. No hay contradicción en mejorar tolerancia radiativa y empeorar ruido: son criterios distintos. Para el circuito, una variación de offset produce un error sistemático referido a la entrada; el ruido agrega fluctuaciones. Una aplicación puede tolerar una de esas consecuencias y no la otra.\n\n### LM139: importa cómo se usa y cómo se mide\n\nEl hardening del LM139 incluyó cambios en oxidación. El primer intento no dio el resultado buscado y una modificación posterior mejoró la respuesta en las condiciones descritas, aunque con inconvenientes en corriente de salida. El informe también documenta que se usaron versiones endurecidas y estándar: las modificadas llegaron tarde y en cantidades insuficientes. [JPL, §VI.C.3, p. 6-5 / PDF 85; §VII.D.2, p. 7-29 / PDF 127]\n\nLa sensibilidad dependía fuertemente del estado y de la alimentación durante la irradiación. El documento contrasta exposición en estado off con otras condiciones y muestra que cambiar la tensión de alimentación cambiaba los resultados. Además, medir corriente de salida con salida a 1,5 V o a 0,7 V modificaba la comparación entre versiones. El reporte especifica que las aplicaciones Voyager requerían el funcionamiento a 0,7 V. Por eso no convertiremos una fila de ensayo en una sentencia universal sobre el LM139. [JPL, §VII.D.2; tablas 7-14 a 7-16]\n\nEn este caso, el informe usa *latchup* para un modo de fallo observado bajo irradiación. No lo reinterpretamos automáticamente como el SEL por una sola partícula de un catálogo moderno de efectos. Para explicar este trabajo basta describir el comportamiento anómalo, las condiciones y la mitigación registradas.\n\n### Cómo leer estas comparaciones\n\nCada afirmación de mejora debe completar cuatro datos: mejora respecto de qué versión, bajo qué polarización, en qué parámetro y con qué compromiso en otras prestaciones. No existe un rótulo «rad-hard» que permita ignorar las condiciones del circuito. Esa es la enseñanza común de estos dos casos.",
+    "loc": "§VI.C.1-3, pp. 6-3 a 6-5 / PDF 83-85; §VII.D.1-2; figura 7-4.",
+    "extra": "Mayor tolerancia radiativa no garantiza menor ruido ni el mismo margen de salida.",
+    "image": "14_lm108.png",
+    "caption": "Figura 7-4: efecto de inversión en LM108 estándar y endurecido; incluye el circuito de comparación.",
+    "visual": "Figura 7-4: efecto de inversión en LM108 estándar y endurecido; incluye el circuito de comparación.",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "LM108 y LM139: mejoras con contrapartidas",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Los cambios de fabricación mejoraron\nla resistencia de algunos circuitos\nlineales, pero también alteraron otras\nprestaciones. En el LM108\naparecieron problemas de ruido y\nencapsulado; el LM139 mostró una\nfuerte dependencia de la polarización.",
+        "x": 64,
+        "y": 166,
+        "w": 565,
+        "h": 290.13,
+        "size": 33,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "image",
+        "file": "14_lm108.png",
+        "x": 688,
+        "y": 156,
+        "w": 526,
+        "h": 390
+      },
+      {
+        "kind": "text",
+        "text": "Figura 7-4 · LM108 estándar y endurecido",
+        "x": 688,
+        "y": 558,
+        "w": 526,
+        "h": 36.75,
+        "size": 25,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "Mayor tolerancia radiativa no garantiza menor ruido ni el mismo margen de salida.",
+        "x": 64,
+        "y": 600,
+        "w": 1148,
+        "h": 39.21,
+        "size": 27,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §VI.C y §VII.D · Figura 7-4",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "14",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "Figura 7-4 · LM108 estándar y endurecido\n\nMayor tolerancia radiativa no garantiza menor ruido ni el mismo margen de salida."
+  },
+  {
+    "n": 15,
+    "title": "Memorias, registros y cuarzo",
+    "seconds": 50,
+    "screen": "La memoria CMOS sensible recibió protección específica para limitar su dosis. En los cristales de cuarzo, el programa seleccionó material mediante muestras antes de fabricar las unidades de vuelo.",
+    "oral": "La RAM CMOS era tan sensible que consideraron demasiado costoso endurecerla y optaron por blindarla para no superar diez krad en silicio. Los registros están cubiertos por los problemas de consumo y tiempos de la lógica CMOS; el informe también describe un registro MOS en el detector Reticon del UVS. En cuarzo, fabricaron muestras de cada barra, las irradiaron y aceptaron o rechazaron el material. Son soluciones diferentes para funciones diferentes.",
+    "chapter": "### Memoria y estados lógicos\n\nEl informe dice que se usó una RAM estática CMOS muy susceptible a radiación ionizante. Consideró demasiado costoso un programa de hardening para esa pieza y eligió blindaje importante para mantener la dosis incidente por debajo de 10 krad(Si). Es una decisión explícita sobre una función sensible, no una promesa de que cualquier RAM sobreviva por debajo de ese número. [JPL, §VI.B, p. 6-2 / PDF 82]\n\nUna celda estática CMOS conserva un estado por realimentación de circuitos eléctricos. Si cambian umbrales, corrientes o márgenes, esa capacidad puede deteriorarse. Los registros y contadores también necesitan que los niveles y tiempos de propagación sigan siendo compatibles con su circuito. El §VII.F estudia esas magnitudes y advierte que medir la corriente de reposo no predice por sí solo el retardo. Esta explicación permite hablar de memoria y registros manteniendo el foco del informe.\n\nNo incluimos como eje una lista moderna de SEU, SET, ECC o scrubbing: este volumen no aporta la evidencia necesaria para adjudicar esas técnicas a las memorias Voyager. Tampoco atribuimos fallos ocurridos décadas después a mecanismos que el documento no estudia. La cinta y las memorias magnéticas se ubican como contexto arquitectónico en el capítulo 7, sin inventar una campaña específica para ellas a partir de esta fuente.\n\n### Un registro MOS en un instrumento\n\nEl detector Reticon del UVS incluía un arreglo lineal de fotodiodos con capacitancia asociada, conmutación MOS y un registro MOS de desplazamiento para el barrido. El informe discute su sensibilidad y necesidades de protección. Este es un ejemplo documentado de que la lógica MOS no estaba solamente en una computadora: también participaba en la lectura de un instrumento. [JPL, §VII.I.2, p. 7-61 / PDF 159]\n\n### El cuarzo también es un material que se selecciona\n\nEl informe relaciona la ionización con desplazamientos de frecuencia de cristales de osciladores y filtros, cuya magnitud depende del origen y preparación del cuarzo. Discute cuarzo sintético tratado por *sweeping* y compara requisitos de precisión. En varios ensayos, los cambios se consideraron insignificantes para las aplicaciones tratadas; eso no significa frecuencia matemáticamente invariable. [JPL, §VII.J, pp. 7-61 a 7-63 / PDF 159-161]\n\nEl procedimiento de selección era concreto: el fabricante preparaba entre tres y seis muestras de una barra, se irradiaban y se aceptaba o rechazaba esa barra. Los cristales de vuelo se fabricaban solo con barras aceptadas, sin repetir la irradiación en cada cristal final. La inferencia dependía de mantener la identidad del material. [JPL, §VIII.F, p. 8-41 / PDF 202]\n\nEn términos de circuito, una variación de frecuencia modifica la base de tiempo y las condiciones de sincronismo. El oscilador incluye, además del resonador, una electrónica que lo excita; no toda alteración del reloj implica un defecto en el cuarzo. Aquí la mitigación documentada para el material fue seleccionar su procedencia mediante muestras pertinentes.",
+    "loc": "§VI.B, p. 6-2 / PDF 82; §VII.F, I.2 y J; §VIII.F, p. 8-41 / PDF 202.",
+    "extra": "RAM CMOS: dosis limitada a 10 krad(Si).\nCuarzo: unidades de vuelo fabricadas a partir de barras aceptadas.",
+    "image": null,
+    "caption": "",
+    "visual": "",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "Memorias, registros y cuarzo",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "La memoria CMOS sensible recibió protección específica para limitar su\ndosis. En los cristales de cuarzo, el programa seleccionó material\nmediante muestras antes de fabricar las unidades de vuelo.",
+        "x": 64,
+        "y": 166,
+        "w": 1152,
+        "h": 135.15,
+        "size": 35,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Memoria CMOS",
+        "x": 64,
+        "y": 367,
+        "w": 530,
+        "h": 50.28,
+        "size": 36,
+        "bold": true,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "Blindaje para limitar la dosis a 10\nkrad(Si).",
+        "x": 64,
+        "y": 429,
+        "w": 530,
+        "h": 89.64,
+        "size": 34,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Cristales de cuarzo",
+        "x": 690,
+        "y": 367,
+        "w": 520,
+        "h": 50.28,
+        "size": 36,
+        "bold": true,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "Muestras de las barras antes de\nfabricar piezas de vuelo.",
+        "x": 690,
+        "y": 429,
+        "w": 520,
+        "h": 89.64,
+        "size": 34,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Registros MOS: también aparecen en la lectura del detector UVS.",
+        "x": 64,
+        "y": 598,
+        "w": 1152,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §VI.B, §VII.I-J y §VIII.F",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "15",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "Memoria CMOS\n\nBlindaje para limitar la dosis a 10\nkrad(Si).\n\nCristales de cuarzo\n\nMuestras de las barras antes de\nfabricar piezas de vuelo.\n\nRegistros MOS: también aparecen en la lectura del detector UVS."
+  },
+  {
+    "n": 16,
+    "title": "Screening: elegir las piezas de vuelo",
+    "seconds": 75,
+    "screen": "Dos componentes con la misma referencia podían responder de manera distinta a la radiación. El screening vinculó la aceptación de lotes y unidades con los parámetros que necesitaba cada circuito.",
+    "oral": "Caracterizar una familia no garantizaba que lo comprado se comportara igual. Usaron muestras por oblea, por lote de difusión y metalización o por código de fecha, y procedimientos para piezas individuales en casos seleccionados. IRAN significa irradiar y recocer, pero con límites: algunos parámetros no se recuperaban y los JFET incluidos no recibieron el recocido térmico. Si todas las piezas eran demasiado sensibles, seleccionar no resolvía el problema y podían necesitar blindaje.",
+    "chapter": "### La diferencia con el hardening\n\nEl hardening modifica la capacidad de un dispositivo mediante diseño o fabricación. El screening comprueba piezas o muestras para aceptar o rechazar una población conforme a requisitos. Su razón de ser era que fabricantes, líneas, obleas y lotes podían tener comportamientos distintos. También podía haber unidades mucho más sensibles que el resto. La caracterización previa orientaba el diseño, pero no aseguraba que cada entrega repitiera esa respuesta. [JPL, §IV.A.2 y B.1, pp. 4-3 y 4-14 / PDF 39 y 50]\n\nEl informe pedía screening cuando faltaba margen, cuando el proceso se había modificado para alcanzar resistencia o cuando aparecían poblaciones mezcladas o unidades anómalas. La decisión no era simplemente «seleccionar las piezas más lindas»: debía usar el parámetro que limitaba a la aplicación y mantener trazabilidad hasta el material comprado.\n\n### Qué unidad se aceptaba\n\n| Modalidad | Qué se ensayaba | Qué decisión permitía |\n|---|---|---|\n| Muestras por oblea | Dispositivos representativos de una oblea identificada | Aceptar el resto de esa oblea para fabricar piezas |\n| Lote de difusión-metalización | Muestras con historia de proceso común | Aceptar o rechazar el lote según la aplicación |\n| Código de fecha | Muestras de la agrupación disponible | Detectar respuestas peores que las referencias usadas |\n| Selección de unidades | Cada pieza dentro de los programas que lo requerían | Separar unidades que incumplían el criterio |\n\nEn CMOS RCA se usó muestreo por oblea. El informe describe inicialmente diez muestras, luego cinco por razones de tiempo; ese cambio es parte del procedimiento histórico, no una recomendación estadística universal. Para otras familias solo estaba disponible el código de fecha, una trazabilidad más limitada. El documento considera un problema comprar piezas sin identidad de lote y pretender resolverlo después. [JPL, §IV.B.2-3; §VIII.E.1; §IX.B]\n\n### IRAN y sus límites reales\n\nEl procedimiento irradiar-recocer buscaba detectar piezas demasiado sensibles mediante una exposición, descartar las que no cumplían y recuperar parámetros de las aceptadas mediante recocido cuando correspondía. Se estudiaba además su respuesta a una segunda irradiación. Para piezas encapsuladas se impuso un límite de 150 °C por razones de confiabilidad, muy diferente de los 950 °C del proceso de fabricación CMOS. [JPL, §IV.B.4, pp. 4-18 a 4-22 / PDF 54-58]\n\nNo todas las familias eran candidatas: algunas no recuperaban los parámetros y otras no repetían de forma suficientemente predecible su respuesta. El LM101 y el LM111 conservaron problemas de corriente de entrada; los circuitos debían tolerar esos valores. Los JFET de la selección indicada no fueron sometidos a recocido térmico: las piezas que cumplían ya tenían fugas aceptables. Aunque el informe agrupa ese trabajo bajo IRAN, no debemos dibujar el mismo ciclo térmico para todas las familias. [JPL, §IV.B.4.c-e; §VIII.D.2, p. 8-16 / PDF 177]\n\nEl screening también tenía límites económicos y de calendario. Cuando una población entera era demasiado sensible, separar piezas no creaba una población resistente. En ciertos casos se eligió blindar antes que esperar un procedimiento de selección. Esta combinación de opciones es parte del programa real.\n\n### El encapsulado y la aplicación cierran la decisión\n\nEl muestreo de piezas terminadas permitió descubrir efectos introducidos por el sellado, evitar mezclas de lotes y revisar discrepancias de medición. El HA2700 en flatpack no reprodujo la respuesta de la versión en cápsula ensayada antes. Por otro lado, el lote LM108 C1233A se aceptó con criterios menos estrictos porque las aplicaciones IRIS y AACS toleraban sus parámetros. No eran criterios arbitrarios: debían conservar el funcionamiento requerido. [JPL, §IV.B.5, p. 4-24 / PDF 60; §VIII.A.1, p. 8-1 / PDF 162]",
+    "loc": "§IV.B, pp. 4-14 a 4-24 / PDF 50-60; §VIII.A, D y E; §IX.B.",
+    "extra": "Fabricación modificada + trazabilidad + criterios de aceptación.",
+    "image": "16_lotes_cmos.png",
+    "caption": "Figura 8-21: comparación de lotes CD4053B. Las curvas muestran por qué el lote importa.",
+    "visual": "Figura 8-21: comparación de lotes CD4053B. Las curvas muestran por qué el lote importa.",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "Screening: elegir las piezas de vuelo",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Dos componentes con la misma\nreferencia podían responder de\nmanera distinta a la radiación. El\nscreening vinculó la aceptación de\nlotes y unidades con los parámetros\nque necesitaba cada circuito.",
+        "x": 64,
+        "y": 166,
+        "w": 565,
+        "h": 249.54,
+        "size": 33,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "image",
+        "file": "16_lotes_cmos.png",
+        "x": 688,
+        "y": 156,
+        "w": 526,
+        "h": 390
+      },
+      {
+        "kind": "text",
+        "text": "Figura 8-21 · Lotes CD4053B",
+        "x": 688,
+        "y": 558,
+        "w": 526,
+        "h": 36.75,
+        "size": 25,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "Fabricación modificada + trazabilidad + criterios de aceptación.",
+        "x": 64,
+        "y": 600,
+        "w": 1148,
+        "h": 39.21,
+        "size": 27,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §IV.B y §VIII · Figura 8-21",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "16",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "Figura 8-21 · Lotes CD4053B\n\nFabricación modificada + trazabilidad + criterios de aceptación."
+  },
+  {
+    "n": 17,
+    "title": "Blindaje y margen de circuito",
+    "seconds": 75,
+    "screen": "El blindaje reducía la exposición local cuando las otras medidas no alcanzaban. La capacidad se evaluaba para cada aplicación: un componente podía seguir funcionando y, aun así, haber perdido el margen que necesitaba su circuito.",
+    "oral": "El ejemplo del bus de ingeniería compara una capacidad de referencia de sesenta krad en silicio con treinta krad de exposición local: margen dos. Otros instrumentos tenían criterios distintos, y algunas piezas exigían blindaje localizado. El análisis de peor caso combinaba radiación con temperatura, envejecimiento y tolerancias. No estaban garantizando daño cero: estaban buscando un riesgo aceptable con los recursos y la masa disponibles.",
+    "chapter": "### Capacidad de una pieza en una aplicación\n\nEl análisis de peor caso combinó tolerancias de las piezas, límites térmicos, envejecimiento, alimentación, frecuencia y los otros ambientes que alteraban parámetros. Después incorporó la degradación radiativa para comprobar el funcionamiento. La pregunta no era solo si una pieza sobrevivía, sino si sus valores degradados permitían cumplir las especificaciones de ese circuito. [JPL, §III.B, pp. 3-3 a 3-5 / PDF 31-33]\n\nEl margen de diseño radiativo se define como capacidad de la pieza en la aplicación dividida por la exposición local prevista, usando magnitudes compatibles. Para la ionización por electrones, el programa usó dosis. En el ejemplo de la electrónica de ingeniería del bus, la capacidad de referencia es 60 krad(Si) y el requisito de exposición protegida, 30 krad(Si): RDM = 60/30 = 2. [JPL, tabla 2-2 y tabla 3-1, pp. 2-4 y 3-6 / PDF 28 y 34]\n\n### El margen no era idéntico para todo\n\nEl informe establece margen dos para subsistemas de ingeniería y para el sistema de imágenes en las condiciones señaladas; otros instrumentos científicos tenían mínimo uno. También distingue márgenes de dosis, fluencia de desplazamiento y flujo para interferencia, con excepciones explícitas. Por eso la cifra dos se presenta como ejemplo documentado, no como una regla universal aplicable a cualquier detector de Voyager. [JPL, §II.D; §III.C]\n\nLas piezas con capacidad inferior a la referencia podían requerir blindaje localizado, salvo que su posición ya redujera suficientemente la exposición manteniendo el margen. La RAM CMOS limitada a 10 krad(Si) es un ejemplo de requisito particular. No debemos concluir que todo CMOS, toda memoria o todo instrumento tuviera el mismo límite.\n\n### Blindar también exige decidir\n\nEl cálculo de transporte incluyó geometría, dispersión y secundarios de frenado. La masa de blindaje tenía un costo, y las incertidumbres en ambiente, respuesta y transporte dificultaban garantizar riesgo nulo. El informe dice que el objetivo era reducir el riesgo a un nivel aceptable. Las modificaciones de blindaje y requisitos especiales quedaban registradas mediante excepciones revisadas por los responsables del subsistema. [JPL, §II.D; §III.C.2, p. 3-6 / PDF 34]\n\nLa capacidad de un componente no es necesariamente un umbral abrupto de destrucción. Puede ser el punto donde un offset, una fuga o un retardo deja de cumplir el requisito. Duplicar una relación de dosis tampoco equivale a duplicar los años de misión: la exposición varía a lo largo de la trayectoria y los encuentros concentran determinados riesgos.\n\n### Cómo se conecta con los casos anteriores\n\nEn los pasivos se verificaron cambios pequeños; en CMOS se modificó el proceso y se admitieron prestaciones degradadas; en LM108 se compararon ruido, encapsulado y blindaje; en JFET se seleccionaron lotes o se protegieron los demasiado sensibles. El análisis de circuito decide cuál de esas respuestas sirve. Ese criterio une las familias y evita presentar la radiación como una lista de efectos sin consecuencias de diseño.",
+    "loc": "§II.D, tabla 2-2; §III.B-C, tabla 3-1; §VI.B.",
+    "extra": "60 krad(Si) / 30 krad(Si) = 2\nEjemplo de margen del bus de ingeniería; no dosis acumulada actual.",
+    "image": null,
+    "caption": "",
+    "visual": "",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "Blindaje y margen de circuito",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "El blindaje reducía la exposición local cuando las otras medidas no\nalcanzaban. La capacidad se evaluaba para cada aplicación: un\ncomponente podía seguir funcionando y, aun así, haber perdido el\nmargen que necesitaba su circuito.",
+        "x": 64,
+        "y": 166,
+        "w": 1152,
+        "h": 178.2,
+        "size": 35,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "60 krad(Si) / 30 krad(Si) = 2",
+        "x": 64,
+        "y": 390,
+        "w": 1152,
+        "h": 72.42,
+        "size": 54,
+        "bold": true,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "Capacidad en la aplicación / exposición local prevista",
+        "x": 64,
+        "y": 492,
+        "w": 1152,
+        "h": 46.589999999999996,
+        "size": 33,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Ejemplo del bus de ingeniería; no representa su dosis actual.",
+        "x": 64,
+        "y": 593,
+        "w": 1152,
+        "h": 41.67,
+        "size": 29,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · Tablas 2-2 y 3-1; §III.B-C",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "17",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "60 krad(Si) / 30 krad(Si) = 2\n\nCapacidad en la aplicación / exposición local prevista\n\nEjemplo del bus de ingeniería; no representa su dosis actual."
+  },
+  {
+    "n": 18,
+    "title": "Las decisiones que dejó el programa",
+    "seconds": 50,
+    "screen": "Voyager se preparó aceptando que algunos parámetros iban a cambiar. El programa combinó componentes seleccionados, modificaciones de fabricación, márgenes de circuito y protección localizada para conservar funciones útiles.",
+    "oral": "Volvemos a los ejemplos: pasivos estables en sus ensayos, bipolares evaluados en el punto de trabajo, CMOS fabricado con otro proceso, lineales con compromisos entre ruido y resistencia, y selección que conectaba la muestra con las piezas de vuelo. El informe también reconoce limitaciones de tiempo y recomienda empezar antes el programa de radiación. Esa es una conclusión de ingeniería más fuerte que decir que todos los componentes eran indestructibles.",
+    "chapter": "### Qué podemos afirmar después de recorrer el informe\n\nEl documento sostiene una explicación concreta de preparación radiativa. El ambiente medido por Pioneer obligó a revisar diseños existentes; los ensayos determinaron qué parámetros cambiaban; el análisis identificó qué aplicaciones conservaban margen y cuáles requerían acciones. La respuesta resultó distinta para cada familia y para diferentes lotes de una misma referencia. [JPL, §I; §III; §IX]\n\n| Decisión | Caso del informe | Qué enseña |\n|---|---|---|\n| Comprobar parámetros relevantes | Resistencias Dale y capacitores B11B | La sensibilidad no es igual en todas las familias |\n| Analizar la función completa | Acoplamiento TIL24/LS600 con salida 2N2222A | La degradación interna no implica inmediatamente salida incorrecta |\n| Modificar fabricación | CMOS RCA y LM108 | Se puede ganar tolerancia y asumir otras contrapartidas |\n| Controlar lotes y material | Screening CMOS, bipolares y cuarzo | La referencia comercial no define toda la respuesta |\n| Proteger donde hacía falta | RAM CMOS y componentes de baja capacidad | La exposición local se adapta al requisito funcional |\n\n### Las limitaciones también son parte del resultado\n\nEl JPL reconoce que el calendario y los recursos condicionaron la elección de componentes y obligaron a conservar diseños sensibles. También señala debilidades de trazabilidad y de métodos que detectaban problemas cuando las piezas estaban casi listas para entregar. Las recomendaciones piden comenzar antes la caracterización y el hardening, diseñar desde el inicio para parámetros degradados y mantener identidad de los lotes. Son lecciones para futuros programas, no medidas que debamos atribuir retrospectivamente a todas las piezas de Voyager. [JPL, §IX.A-F, pp. 9-1 a 9-5 / PDF 204-208]\n\n### La conexión con casi cincuenta años de misión\n\nEl informe muestra cómo se preparó la electrónica para atravesar un ambiente exigente conservando funciones. La continuidad posterior de Voyager no convierte esa calificación en una garantía original de cincuenta años ni demuestra que sus parámetros permanecieran constantes. Sí permite apreciar el valor de diseñar con cambios tolerables y de decidir a partir de la función completa.\n\nPara cerrar oralmente: «Lo interesante no es que hayan evitado cualquier degradación. Es que estudiaron cuánto podía cambiar cada parte y qué había que hacer para que el circuito siguiera cumpliendo su función». Esa conclusión resume los ejemplos del documento sin atribuirles una explicación exclusiva de toda la historia posterior.",
+    "loc": "§IX, pp. 9-1 a 9-5 / PDF 204-208; casos de §§III, VI, VII y VIII.",
+    "extra": "El requisito era conservar la función con parámetros que podían degradarse.",
+    "image": "18_integracion.jpg",
+    "caption": "Integración de Voyager 2, 1977 · NASA/JPL",
+    "visual": "Integración de Voyager 2, 1977 · NASA/JPL",
+    "refs": [
+      "JPL"
+    ],
+    "ops": [
+      {
+        "kind": "text",
+        "text": "Las decisiones que dejó el programa",
+        "x": 64,
+        "y": 48,
+        "w": 1152,
+        "h": 60.12,
+        "size": 44,
+        "bold": true,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "text",
+        "text": "Voyager se preparó aceptando que\nalgunos parámetros iban a cambiar. El\nprograma combinó componentes\nseleccionados, modificaciones de\nfabricación, márgenes de circuito y\nprotección localizada para conservar\nfunciones útiles.",
+        "x": 64,
+        "y": 166,
+        "w": 565,
+        "h": 290.13,
+        "size": 33,
+        "bold": false,
+        "color": "#172B3A"
+      },
+      {
+        "kind": "image",
+        "file": "18_integracion.jpg",
+        "x": 688,
+        "y": 156,
+        "w": 526,
+        "h": 390
+      },
+      {
+        "kind": "text",
+        "text": "Integración de Voyager 2 · NASA/JPL",
+        "x": 688,
+        "y": 558,
+        "w": 526,
+        "h": 36.75,
+        "size": 25,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "El requisito era conservar la función con parámetros que podían degradarse.",
+        "x": 64,
+        "y": 600,
+        "w": 1148,
+        "h": 39.21,
+        "size": 27,
+        "bold": false,
+        "color": "#126F87"
+      },
+      {
+        "kind": "text",
+        "text": "JPL · §IX, pp. 9-1 a 9-5 / PDF 204-208",
+        "x": 64,
+        "y": 668,
+        "w": 1050,
+        "h": 29.37,
+        "size": 19,
+        "bold": false,
+        "color": "#49616E"
+      },
+      {
+        "kind": "text",
+        "text": "18",
+        "x": 1160,
+        "y": 662,
+        "w": 56,
+        "h": 40.44,
+        "size": 28,
+        "bold": false,
+        "color": "#126F87"
+      }
+    ],
+    "visible_extra": "Integración de Voyager 2 · NASA/JPL\n\nEl requisito era conservar la función con parámetros que podían degradarse."
+  }
+]
