@@ -738,284 +738,330 @@ y complementar el seguimiento que ofrecen los CGM.
 
 
 \FloatBarrier
+
 \subsubsection{Preanálisis de costos y precios}
-{\consigna
-En esta subsección deben analizarse los costos y precios que existen en relación con la realización del proyecto y su oferta futura.
-}
-    \paragraph{Costos directos e indirectos}
-    {\consigna
-    En esta subsección deben analizarse los costos que deberá afrontar el proyecto, tanto durante su realización.\\
-    Esta sección se actualiza a lo largo del proyecto, manteniendo la línea base y los ajustes necesarios para poder analizar los desvíos que ocurran.\\
-    Deben identificarse los costos directos e indirectos, así como indicar si son variables o fijos.
-    }
-    
-\label{sec:costos}
-Se toma como base la lista de componentes del diseño conceptual y un montaje de evaluación compuesto por un lector, una pulsera y su paquete. Los módulos comerciales permiten estimar la compra inicial para ensayos; el kit electroquímico se utiliza como equipo de desarrollo y no representa el costo del circuito integrado en un futuro producto.
 
-Los precios de electrónica se expresan en USD y se consultaron el 12/10/2026 en las fuentes enlazadas. Las partidas sin cotización se identifican como estimaciones propias o se calculan por lote. El trabajo de ingeniería se expresa en ARS. Los importes de ambas monedas se mantienen separados hasta definir el tipo de cambio del presupuesto. Los materiales no incluyen envío, importación ni impuestos.
+\paragraph{Costos directos e indirectos}
 
-\noindent\textbf{Parche sensor descartable.}
-La Tabla~\ref{tab:costo-parche} identifica el soporte, los reactivos y la interfaz electroquímica del parche de la Figura~\ref{fig:parche-descartable}.
-{\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.18}
-\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{3.0cm} >{\raggedright\arraybackslash}p{3.0cm}@{}}
-\caption{Componentes del parche descartable y base de estimación.}\label{tab:costo-parche}\\
-\toprule
-\textbf{Componente / compra de referencia} & \textbf{Precio publicado} & \textbf{Fuente / estado}\\
-\midrule
-\endfirsthead
-\toprule
-\textbf{Componente / compra de referencia} & \textbf{Precio publicado} & \textbf{Fuente / estado}\\
-\midrule
-\endhead
-\bottomrule\endfoot
+Se estima la fabricación de 100 kits, con PCB fabricadas
+y montadas en China. Cada kit incluye un lector reutilizable,
+una pulsera, un parche inicial, empaque y accesorios.
 
-Papel Whatman grado 1; 100 discos de 90 mm & USD 29,00 por paquete; USD 0,29 por disco & \fuente{https://www.taylorscientific.com/catalog/product/view/id/6802/s/filter-paper-cytiva-grade-no-1-qualitative-medium-retention/category/700/2026-12-31}{Taylor Scientific}\\
-Tratamiento de canales y material de soporte & A cotizar por lote & Proceso por definir\\
-Reactivos para glucosa: enzima y sistema de color & A cotizar por lote & \fuente{https://www.sigmaaldrich.com/US/en/product/sigma/g2133}{Sigma-Aldrich}; formulación por definir\\
-Reactivos para lactato y zona de pH & A cotizar por lote & \fuente{https://doi.org/10.1038/s41378-023-00514-2}{Referencia científica}; no es fuente de precio\\
-Celda impresa de carbono, sin MIP; paquete de 50 & \$159,00 por paquete* & \fuente{https://mtxlabsglobal.com/product/screen-printed-carbon-electrode-pack-of-10/}{MTX Labs}\\
-Modificación del electrodo con MIP y reactivos auxiliares & A cotizar por lote & Desarrollo específico\\
-Adhesivo de contacto cutáneo y soporte & A cotizar según área & Material y proveedor por definir\\
-\bottomrule
-\end{xltabular}
-}
+Los valores son estimaciones en USD por unidad.
+Los componentes electrónicos toman como referencia
+precios publicados para compras de 100 unidades.
+La fabricación, las carcasas y los procesos se estiman
+por lote y se distribuyen entre las unidades.
 
-El papel cuesta USD 0,29 por disco, pero un disco no equivale necesariamente a un parche: el rendimiento depende del área y del plegado. La celda de MTX es una referencia de ensayo sin MIP; el sitio publica 159,00 con símbolo de dólar, sin identificar la moneda en la ficha consultada. Ese importe no se suma al subtotal en USD.
+\medskip
+\noindent\textbf{Lector y pulsera}
 
-El costo por parche aceptado se calculará como:
-\[
-C_{\mathrm{parche}}=
-\frac{C_{\mathrm{materiales\ consumidos}}+C_{\mathrm{preparacion}}+
-C_{\mathrm{control}}}{N_{\mathrm{aceptados}}}.
-\]
-Para cada reactivo, el costo consumido será el precio del envase multiplicado por la fracción utilizada, incluyendo la merma del lote. Se registrarán las cantidades preparadas y aceptadas para obtener el rendimiento real. El adhesivo se estimará por área; el tratamiento del papel y el MIP, por materiales y horas de preparación. La compra de un envase completo es un desembolso inicial distinto del costo consumido por parche.
-
-El sobre se cuenta en el paquete inicial y se agrega a cada recambio posterior. Si se cumple el objetivo de siete días de uso, el consumo medio será de aproximadamente 4,3 parches por cada 30 días. Este supuesto permite estimar reposiciones sin duplicar el lector ni la pulsera.
-
-\noindent\textbf{Lector reutilizable del brazo.}
-Se adopta una lectura óptica por cada zona colorimétrica y un multiplexor para comunicar los tres sensores con el controlador.
-{\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.18}
-\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}X c r r >{\raggedright\arraybackslash}p{2.2cm}@{}}
-\caption{Componentes de referencia para evaluar el lector del brazo.}\label{tab:costo-lector}\\
-\toprule
-\textbf{Componente / referencia} & \textbf{Cant.} & \textbf{USD/u} & \textbf{Total USD} & \textbf{Fuente o base}\\
-\midrule
-\endfirsthead
-\toprule
-\textbf{Componente / referencia} & \textbf{Cant.} & \textbf{USD/u} & \textbf{Total USD} & \textbf{Fuente o base}\\
-\midrule
-\endhead
-\bottomrule\endfoot
-
-
-Sensor de color AS7341, un canal físico por zona & 3 & 18,95 & 56,85 & \fuente{https://www.adafruit.com/product/4698}{Adafruit}\\
-Selector de canales I2C TCA9548A & 1 & 6,95 & 6,95 & \fuente{https://www.adafruit.com/product/2717}{Adafruit}\\
-Kit de lectura electroquímica EVAL-AD5940ELCZ & 1 & 499,46 & 499,46 & \fuente{https://www.digikey.com/en/products/detail/analog-devices-inc/EVAL-AD5940ELCZ/10124785}{DigiKey}\\
-Controlador BLE Feather nRF52840 Express & 1 & 24,95 & 24,95 & \fuente{https://www.adafruit.com/product/4062}{Adafruit}\\
-Batería LiPo de referencia, 400 mAh & 1 & 6,95 & 6,95 & \fuente{https://www.adafruit.com/product/3898}{Adafruit}\\
-Carga y regulación básica de la placa & 1 & Incluida & 0,00 & Incluida en Feather\\
-\midrule
-\textbf{Subtotal comercial} & & & \textbf{595,16} & \\
-\midrule
-Carcasa opaca y acople mecánico & 1 juego & 20--40 & 20--40 & Reserva propia\\
-Iluminación adicional y referencia de color & 1 juego & 5--15 & 5--15 & Reserva propia\\
-Contactos, cables y ajustes de alimentación & 1 juego & 5--15 & 5--15 & Reserva propia\\
-\midrule
-\textbf{Materiales estimados} & & & \textbf{625,16--665,16} & \\
-\bottomrule
-\end{xltabular}
-}
-
-El kit EVAL-AD5940ELCZ se compra una sola vez para evaluar la lectura electroquímica. El controlador y BLE están integrados en la misma placa Feather; la carga básica también está incluida. No se agregan como compras separadas. La batería es una referencia de tamaño y precio, no una autonomía comprobada.
-
-Las reservas de carcasa se estiman con 100--200 g de material a USD 30/kg y USD 17--34 por impresión, terminación y ajuste del acople: USD 20--40. La iluminación adicional se reserva a razón de 5--15 USD por conjunto. Para cables, contactos y adaptación de alimentación se prevén 5--15 USD por conjunto. Son supuestos de un primer montaje, que se reemplazarán por la lista definitiva y las cotizaciones correspondientes.
-
-\noindent\textbf{Pulsera reutilizable.}
-La selección incorpora módulos separados para PPG, movimiento y temperatura de piel.
-{\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.18}
-\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}X c r r >{\raggedright\arraybackslash}p{2.2cm}@{}}
-\caption{Componentes de referencia para evaluar la pulsera.}\label{tab:costo-pulsera}\\
-\toprule
-\textbf{Componente / referencia} & \textbf{Cant.} & \textbf{USD/u} & \textbf{Total USD} & \textbf{Fuente o base}\\
-\midrule
-\endfirsthead
-\toprule
-\textbf{Componente / referencia} & \textbf{Cant.} & \textbf{USD/u} & \textbf{Total USD} & \textbf{Fuente o base}\\
-\midrule
-\endhead
-\bottomrule\endfoot
-
-
-Módulo PPG MAX30101 + MAX32664 & 1 & 48,95 & 48,95 & \fuente{https://www.sparkfun.com/sparkfun-pulse-oximeter-and-heart-rate-sensor-max30101-max32664-qwiic.html}{SparkFun}\\
-Sensor de movimiento LSM6DSOX & 1 & 11,95 & 11,95 & \fuente{https://www.adafruit.com/product/4438}{Adafruit}\\
-Sensor de temperatura TMP117 & 1 & 11,50 & 11,50 & \fuente{https://www.adafruit.com/product/4821}{Adafruit}\\
-Controlador BLE Feather nRF52840 Express & 1 & 24,95 & 24,95 & \fuente{https://www.adafruit.com/product/4062}{Adafruit}\\
-Batería LiPo de referencia, 400 mAh & 1 & 6,95 & 6,95 & \fuente{https://www.adafruit.com/product/3898}{Adafruit}\\
-Carga y regulación básica de la placa & 1 & Incluida & 0,00 & Incluida en Feather\\
-\midrule
-\textbf{Subtotal comercial} & & & \textbf{104,30} & \\
-\midrule
-Carcasa, ventana óptica, contacto térmico y correa & 1 juego & 20--40 & 20--40 & Reserva propia\\
-Cables, contactos y ajustes de alimentación & 1 juego & 5--15 & 5--15 & Reserva propia\\
-\midrule
-\textbf{Materiales estimados} & & & \textbf{129,30--159,30} & \\
-\bottomrule
-\end{xltabular}
-}
-
-La reserva de carcasa, ventana, contacto térmico y correa comprende USD 3--6 de material y USD 17--34 de fabricación y accesorios. Las interconexiones se estiman en USD 5--15 por conjunto. El montaje PPG se evaluará en la muñeca y el TMP117 requerirá una interfaz térmica con la piel.
-
-\noindent\textbf{Paquete y accesorios.}
-El paquete incluye un sobre para el parche inicial y dos cables de carga. Los dispositivos se contabilizan en sus propias tablas.
-{\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.18}
-\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}X c r r >{\raggedright\arraybackslash}p{2.2cm}@{}}
-\caption{Materiales del paquete y accesorios de carga.}\label{tab:costo-caja}\\
-\toprule
-\textbf{Componente / referencia} & \textbf{Cant.} & \textbf{USD/u} & \textbf{Total USD} & \textbf{Fuente o base}\\
-\midrule
-\endfirsthead
-\toprule
-\textbf{Componente / referencia} & \textbf{Cant.} & \textbf{USD/u} & \textbf{Total USD} & \textbf{Fuente o base}\\
-\midrule
-\endhead
-\bottomrule\endfoot
-
-
-Caja exterior de cartón, tamaño por definir & 1 & 2--4 & 2--4 & Reserva propia\\
-Protección interna y alojamientos & 1 juego & 2--4 & 2--4 & Reserva propia\\
-Sobre protector para un parche inicial & 1 & 0,5--1 & 0,5--1 & Reserva propia\\
-Cable USB A a Micro-B de referencia & 2 & 2,95 & 5,90 & \fuente{https://www.adafruit.com/product/592}{Adafruit}\\
-Guía de inicio y manual impresos & 1 juego & 0,5--1,5 & 0,5--1,5 & Reserva propia\\
-Etiquetas e identificación & 1 juego & 0,2--0,5 & 0,2--0,5 & Reserva propia\\
-\midrule
-\textbf{Paquete estimado, con dos cables} & & & \textbf{11,10--16,90} & \\
-\bottomrule
-\end{xltabular}
-}
-
-Para una unidad se prevén USD 2--4 de caja y USD 2--4 de protección interior; el rango cubre material, corte y armado. Se asignan USD 0,50--1 al sobre, USD 0,50--1,50 a una guía impresa y USD 0,20--0,50 al juego de etiquetas. Estas asignaciones se estiman por unidad terminada y se sustituirán por cotizaciones de imprenta y empaque. Se utiliza una fuente USB existente.
-
-\noindent\textbf{Horas de ingeniería y aplicación.}
-Se conserva la base del diseño conceptual: salario bruto de ARS 3.500.000 por mes, 160 horas asignables y un factor presupuestario de 1,40 que incluye costos laborales adicionales. El factor es un supuesto de planificación, no una alícuota legal.
-\[
-C_h=\frac{3.500.000\times1{,}40}{160}=30.625\;\mathrm{ARS/h}.
-\]
-Como referencia, el informe \href{https://cessi.org.ar/wp-content/uploads/2026/07/OPSSI-Reporte-Industria-Software-1er.-trim.-2026.pdf}{CESSI/OPSSI de julio de 2026}, página 17, informa un salario bruto medio de ARS 3.738.000 para el sector software a marzo de 2026. La base común para electrónica, química y software es un supuesto del presupuesto. Las horas se estiman por tarea y contemplan una primera propuesta y una ronda de revisión.
-{\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.18}
-\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.4cm}>{\raggedright\arraybackslash}X r r@{}}
-\caption{Horas de ingeniería para el diseño conceptual.}\label{tab:costo-ingenieria}\\
-\toprule
-\textbf{Objeto / trabajo} & \textbf{Actividades incluidas} & \textbf{Horas} & \textbf{Millones ARS}\\
-\midrule
-\endfirsthead
-\toprule
-\textbf{Objeto / trabajo} & \textbf{Actividades incluidas} & \textbf{Horas} & \textbf{Millones ARS}\\
-\midrule
-\endhead
-\bottomrule\endfoot
-
-Parche descartable & Principios de medición y materiales (12--20 h); canales, zonas y soporte (12--20 h); interfaces y requisitos de calibración (12--24 h); documentación y revisión (6--12 h). & 42--76 & 1,29--2,33\\
-\addlinespace
-Lector del brazo & Óptica y lectura electroquímica (8--16 h); control, BLE y energía (8--16 h); carcasa y acople (8--16 h); interfaces y revisión (8--12 h). & 32--60 & 0,98--1,84\\
-\addlinespace
-Pulsera & Sensores (8--12 h); control, BLE y energía (8--12 h); contacto con la piel, carcasa y correa (8--16 h); documentación y revisión (6--10 h). & 30--50 & 0,92--1,53\\
-\addlinespace
-Aplicación móvil & Requisitos e interfaces (8--12 h); manejo de datos (8--16 h); pantallas preliminares (6--12 h); entradas, salidas y evaluación de modelos (8--16 h). & 30--56 & 0,92--1,72\\
-\addlinespace
-Caja del producto & Distribución y dimensiones (4--8 h); materiales y protección (4--8 h); etiquetas y contenido de la guía (2--4 h). & 10--20 & 0,31--0,61\\
-\addlinespace
-Revisión entre objetos & Compatibilidad de interfaces, consolidación de listas, presupuesto y supuestos del conjunto. & 10--20 & 0,31--0,61\\
-\midrule
-\multicolumn{2}{@{}l}{\textbf{Total de diseño conceptual}} & \textbf{154--282} & \textbf{4,72--8,64}\\
-\bottomrule
-\end{xltabular}
-}
-
-La tabla de ingeniería comprende bloques, selección inicial, interfaces y documentación. La implementación de la aplicación se cuenta por separado: una plataforma móvil, almacenamiento local y datos de ensayo disponibles. La exploración de modelos comprende programación y pruebas iniciales.
-{\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.18}
-\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}X r r@{}}
-\caption{Implementación inicial de la aplicación: horas y costo laboral.}\label{tab:costo-app}\\
-\toprule
-\textbf{Componente} & \textbf{Horas} & \textbf{Millones de ARS}\\
-\midrule
-\endfirsthead
-\toprule
-\textbf{Componente} & \textbf{Horas} & \textbf{Millones de ARS}\\
-\midrule
-\endhead
-\bottomrule\endfoot
-
-Recepción BLE y vinculación con ambos equipos & 20--40 & 0,61--1,23\\
-Sincronización, calidad y datos faltantes & 20--40 & 0,61--1,23\\
-Historial y almacenamiento local & 30--60 & 0,92--1,84\\
-Interfaz, visualización, avisos y ayuda & 40--80 & 1,23--2,45\\
-Exploración inicial de análisis y modelos & 80--160 & 2,45--4,90\\
-Integración y pruebas de la aplicación & 40--80 & 1,23--2,45\\
-\midrule
-\textbf{Total aplicación} & \textbf{230--460} & \textbf{7,04--14,09}\\
-\bottomrule
-\end{xltabular}
-}
-
-\noindent\textbf{Resumen de partidas valorizadas.}
-Los extremos del presupuesto se obtienen sumando los extremos de cada partida, sin sumar nuevamente sus subtotales.
-
+\begin{table}[H]
+\centering
+\caption{Costos estimados por dispositivo, en USD.}
+\label{tab:costo-lector}
+\label{tab:costo-pulsera}
 {\small
 \renewcommand{\arraystretch}{1.2}
-\noindent\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}X|r|r|}
+\begin{tabularx}{\linewidth}{
+>{\raggedright\arraybackslash}X r r}
 \hline
-\textbf{Partida} & \textbf{Mínimo} & \textbf{Máximo}\\\hline
-Materiales del lector (USD) & 625,16 & 665,16\\\hline
-Materiales de la pulsera (USD) & 129,30 & 159,30\\\hline
-Paquete y dos cables (USD) & 11,10 & 16,90\\\hline
-\textbf{Subtotal de materiales (USD)} & \textbf{765,56} & \textbf{841,36}\\\hline
-Diseño conceptual (horas persona) & 154 & 282\\\hline
-Implementación de la aplicación (horas persona) & 230 & 460\\\hline
-\textbf{Subtotal de trabajo (horas persona)} & \textbf{384} & \textbf{742}\\\hline
-\textbf{Subtotal de trabajo (ARS)} & \textbf{11.760.000} & \textbf{22.723.750}\\\hline
+\textbf{Concepto} & \textbf{Lector} & \textbf{Pulsera}\\
+\hline
+Microcontrolador con BLE & 2,40 & 2,40\\
+Sensores y circuitos de lectura & 28,40 & 7,05\\
+Carga, protección y regulación & 3,00 & 3,00\\
+Pasivos, conectores y contactos & 2,50 & 1,20\\
+Batería recargable & 3,00 & 3,00\\
+PCB fabricada y montada & 5,00 & 4,00\\
+Carcasa y accesorios mecánicos & 5,00 & 6,00\\
+Armado final, programación y prueba & 5,10 & 5,10\\
+\hline
+\textbf{Costo directo por unidad} &
+\textbf{54,40} & \textbf{31,75}\\
+\hline
 \end{tabularx}
 }
+\end{table}
 
-El subtotal material contiene USD 499,46 de equipo electroquímico de evaluación. Sin ese equipo, las demás partidas suman USD 266,10--341,90; este valor tampoco es un costo industrial, porque corresponde a módulos y reservas de montaje. El parche funcional y los trabajos que se detallan a continuación completarán el presupuesto del sistema.
+Ambos dispositivos utilizan un ESP32-C3 con BLE integrado.
+El lector incorpora tres AS7341, un multiplexor,
+iluminación y un AD5941 para lectura electroquímica.
+La pulsera utiliza un MAX30101, una IMU LSM6DS3TR-C
+y un sensor de temperatura TMP117.
 
-\noindent\textbf{Clasificación de costos y partidas por completar.}
-Los costos directos se asignan a un objeto o tarea; los indirectos se distribuyen entre las actividades. El carácter fijo o variable se refiere al volumen de unidades o ensayos dentro de la escala prevista.
+\textit{Fuentes de componentes:}
+\href{https://www.lcsc.com/product-detail/C2934569.html}
+{ESP32-C3},
+\href{https://www.lcsc.com/product-detail/C2655145.html}
+{AS7341},
+\href{https://www.digikey.com/en/products/detail/analog-devices-inc/AD5941BCPZ-RL7/10659624}
+{AD5941},
+\href{https://www.lcsc.com/product-detail/C2859066.html}
+{MAX30101},
+\href{https://www.lcsc.com/product-detail/C967633.html}
+{LSM6DS3TR-C} y
+\href{https://www.lcsc.com/product-detail/C699536.html}
+{TMP117}.
+Referencias consultadas el 12/10/2026.
 
-{\footnotesize
+La fabricación y el montaje toman como referencia
+la estructura de servicios de
+\href{https://jlcpcb.com/help/article/pcb-assembly-price}
+{JLCPCB}; los importes son asignaciones presupuestarias
+hasta disponer de los archivos de fabricación.
+Las carcasas se estiman mediante fabricación de baja serie,
+sin molde de inyección.
+
+\medskip
+\noindent\textbf{Parche descartable}
+
+\begin{table}[H]
+\centering
+\caption{Costo estimado por parche, en USD.}
+\label{tab:costo-parche}
+{\small
 \renewcommand{\arraystretch}{1.2}
-\begin{xltabular}{\linewidth}{|>{\raggedright\arraybackslash}p{3.2cm}|>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}X|}
+\begin{tabularx}{\linewidth}{
+>{\raggedright\arraybackslash}X r}
 \hline
-\textbf{Partida} & \textbf{Clasificación} & \textbf{Base de cálculo}\\\hline
-\endfirsthead
-\hline\textbf{Partida} & \textbf{Clasificación} & \textbf{Base de cálculo}\\\hline
-\endhead
-Materiales del lector, pulsera y paquete & Directo; variable por montaje & Cantidad por precio unitario. Tablas anteriores.\\\hline
-Equipo electroquímico de evaluación & Directo; fijo del desarrollo & Una compra de USD 499,46, ya incluida en el subtotal.\\\hline
-Parche y reactivos & Directo; variable por lote & Consumos, preparación y control divididos por parches aceptados.\\\hline
-Diseño conceptual y aplicación & Directo; fijo para el alcance & Horas-persona por ARS 30.625/h.\\\hline
-Diseño detallado y firmware de ambos dispositivos & Directo; fijo para el alcance & Descomponer circuitos, PCB, adquisición, BLE y gestión de energía en tareas; horas por costo horario más fabricación de PCB. No incluido en las horas anteriores.\\\hline
-Formulación, MIP, calibración y ensayos & Directo; variable por campaña & Horas de laboratorio por tarifa, más reactivos, patrones y cantidad de muestras. La selección conceptual de materiales ya está incluida; la preparación experimental no.\\\hline
-Integración y pruebas del sistema completo & Directo; fijo por campaña & Horas por caso de prueba más consumibles. Separar de las pruebas de la aplicación ya presupuestadas.\\\hline
-Envío e importación & Directo; variable por compra & Cotización de transporte y gastos aplicables al pedido. Asignar una sola vez por envío.\\\hline
-Administración, espacio y servicios compartidos & Indirecto; fijo por período & Costo mensual por meses de uso y porcentaje de dedicación al proyecto.\\\hline
-Herramientas e instrumental compartidos & Indirecto; fijo en la escala prevista & Horas de uso por tarifa interna, o compra si se requiere equipamiento propio.\\\hline
-Nube, si se selecciona & Indirecto; mixto & Abono mensual más almacenamiento y procesamiento por uso. La base de la aplicación adopta procesamiento local.\\\hline
-\end{xltabular}
+\textbf{Concepto} & \textbf{USD/parche}\\
+\hline
+Papel, corte y tratamiento de canales & 0,60\\
+Reactivos de glucosa, lactato y pH & 1,55\\
+Celda de electrodos impresos & 3,50\\
+Materiales del MIP y soluciones auxiliares & 0,90\\
+Adhesivo y soporte & 0,40\\
+Sobre protector & 0,30\\
+Preparación, armado y control & 4,08\\
+\hline
+\textbf{Costo directo por parche} & \textbf{11,33}\\
+\hline
+\end{tabularx}
 }
+\end{table}
 
-La línea base conserva los importes del diseño conceptual del 08/10/2026; los precios electrónicos revisados el 12/10/2026 mantienen esos valores. Cada nueva cotización se registrará con fecha, cantidad, moneda y diferencia respecto de esta base. Si el trabajo académico no se remunera, se registra como aporte valorizado y se separa de los pagos efectivos.
+Los reactivos de glucosa y lactato incluyen las enzimas
+y los compuestos que producen color. La zona de pH
+utiliza un indicador.
+
+MIP significa \textit{polímero de impronta molecular}:
+es el material de reconocimiento de cortisol que se
+incorpora al electrodo. Su costo incluye los materiales
+para prepararlo y las soluciones auxiliares.
+
+\href{https://mtxlabsglobal.com/product/screen-printed-carbon-electrode-pack-of-10/}
+{MTX Labs} es un proveedor de electrodos, no un reactivo.
+Su celda impresa sirve como referencia técnica.
+Los USD 3,50 asignados al electrodo son una estimación
+propia, no una cotización de ese proveedor.
+
+Los costos químicos se estiman distribuyendo el consumo
+de materiales entre 100 parches. Se asignan 20 horas
+a la preparación, el armado y el control del lote.
+Las cantidades se ajustarán según la formulación
+y los parches aceptados.
+
+\medskip
+\noindent\textbf{Empaque y accesorios}
+
+\begin{table}[H]
+\centering
+\caption{Costo estimado de empaque por kit, en USD.}
+\label{tab:costo-caja}
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{
+>{\raggedright\arraybackslash}X r}
+\hline
+\textbf{Concepto} & \textbf{USD/kit}\\
+\hline
+Caja y protección interior & 1,80\\
+Dos cables de carga & 1,60\\
+Guía impresa y etiquetas & 0,60\\
+\hline
+\textbf{Total} & \textbf{4,00}\\
+\hline
+\end{tabularx}
+}
+\end{table}
+
+El sobre del parche ya está incluido en el consumible.
+Se supone disponible una fuente USB.
+
+\medskip
+\noindent\textbf{Fabricación, logística e importación}
+
+El costo directo del kit es:
+\[
+54{,}40+31{,}75+11{,}33+4{,}00
+=101{,}48\;\mathrm{USD}.
+\]
+
+Se aplica un coeficiente de previsión de 1,50 para
+variaciones de precios, mermas, retrabajos y gastos
+comunes de producción:
+\[
+C_{\mathrm{fabricacion}}
+=101{,}48\times1{,}50
+=152{,}22\;\mathrm{USD/kit}.
+\]
+
+\begin{table}[H]
+\centering
+\caption{Presupuesto por kit disponible en Argentina, en USD.}
+\label{tab:costo-kit}
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{
+>{\raggedright\arraybackslash}X r}
+\hline
+\textbf{Concepto} & \textbf{USD/kit}\\
+\hline
+Fabricación con coeficiente 1,50 & 152,22\\
+Transporte internacional & 12,00\\
+Seguro & 1,00\\
+Provisión para impuestos y percepciones & 71,12\\
+Gestión de importación y despacho & 6,00\\
+Traslado local & 3,00\\
+Recepción e inventario & 2,00\\
+Almacenamiento inicial & 3,00\\
+\hline
+\textbf{Presupuesto por kit en Argentina} & \textbf{250,34}\\
+\hline
+\textbf{Presupuesto para 100 kits} & \textbf{25.034,00}\\
+\hline
+\end{tabularx}
+}
+\end{table}
+
+La logística se estima por lote: USD 1.200 de transporte,
+USD 100 de seguro, USD 600 de despacho, USD 300 de traslado
+local y USD 200 de recepción. El almacenamiento contempla
+USD 100 mensuales durante tres meses.
+
+La provisión fiscal equivale al 50\% de una base
+presupuestaria de USD 142,23 por kit, formada por
+los materiales y fabricación externa del lector
+y la pulsera, ajustados por 1,50, más transporte y seguro.
+
+El 50\% es una provisión de fondos, no una alícuota legal.
+La liquidación se ajustará según la clasificación
+y el régimen de importación mediante la
+\href{https://www.argentina.gob.ar/economia/ingresospublicos/comercio-exterior}
+{consulta oficial de aranceles}.
+Los impuestos y percepciones recuperables se separarán
+del costo económico definitivo.
+
+El parche de recambio se presupuesta en
+\textbf{USD 17,00 de fabricación}, incluido su sobre:
+$11{,}33\times1{,}50$.
+Su logística se asignará según los pedidos de reposición.
+
+\medskip
+\noindent\textbf{Ingeniería y desarrollo}
+
+Se mantiene un salario bruto mensual de ARS 3.500.000,
+160 horas asignables y un factor de costo laboral
+de 1,40. El costo resultante es ARS 30.625/h.
+
+Para expresar el presupuesto en una moneda común,
+se adopta ARS 1.500/USD como tipo de cambio de planificación.
+El salario, la jornada y el tipo de cambio son las bases
+de cálculo del escenario.
+
+\begin{table}[H]
+\centering
+\caption{Escenario máximo estimado de horas y presupuesto de ingeniería.}
+\label{tab:costo-ingenieria}
+\label{tab:costo-app}
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{
+>{\raggedright\arraybackslash}X r r}
+\hline
+\textbf{Actividad} & \textbf{Horas} & \textbf{ARS}\\
+\hline
+Diseño conceptual e interfaces & 220 & 6.737.500\\
+Diseño de PCB & 160 & 4.900.000\\
+Firmware de los dispositivos & 200 & 6.125.000\\
+Desarrollo del parche y calibración & 160 & 4.900.000\\
+Aplicación y modelos iniciales & 360 & 11.025.000\\
+Integración y pruebas & 120 & 3.675.000\\
+Documentación y preparación de producción & 40 & 1.225.000\\
+Coordinación y revisión técnica & 80 & 2.450.000\\
+\hline
+\textbf{Total del escenario máximo} & \textbf{1.340} & \textbf{41.037.500}\\
+\hline
+\end{tabularx}
+}
+\end{table}
+
+Las horas por actividad son estimaciones propias y se fijaron
+deliberadamente en un nivel alto para representar el máximo
+de planificación considerado, no una dedicación mínima ni
+una predicción exacta. Según el alcance que finalmente se
+implemente y las tareas que puedan simplificarse o reutilizarse,
+el esfuerzo real podría ser menor; en ese caso, también disminuiría
+el costo de ingeniería calculado. Como referencia salarial se conserva el
+\href{https://cessi.org.ar/wp-content/uploads/2026/07/OPSSI-Reporte-Industria-Software-1er.-trim.-2026.pdf}
+{informe CESSI/OPSSI de julio de 2026}.
+
+Se aplica también el coeficiente de previsión de 1,50
+al desarrollo, sin modificar el salario:
+\[
+C_{\mathrm{desarrollo}}
+=41.037.500\times1{,}50
+=61.556.250\;\mathrm{ARS}
+=41.037{,}50\;\mathrm{USD}.
+\]
+
+\medskip
+\noindent\textbf{Resumen final}
+
+\begin{table}[H]
+\centering
+\caption{Presupuesto del primer lote, en USD.}
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{
+>{\raggedright\arraybackslash}X r}
+\hline
+\textbf{Concepto} & \textbf{USD}\\
+\hline
+100 kits disponibles en Argentina & 25.034,00\\
+Ingeniería y desarrollo con previsión & 41.037,50\\
+\hline
+\textbf{Presupuesto total inicial} & \textbf{66.071,50}\\
+\hline
+\end{tabularx}
+}
+\end{table}
+
+El costo estimado del kit puesto en Argentina es de \textbf{USD 250,34 por unidad}. El presupuesto total inicial contempla el primer lote y la ingeniería y el desarrollo.
+
+Los materiales y las tareas por unidad son costos
+directos variables. La ingeniería y la preparación
+de producción son costos fijos del alcance o del lote.
+La recepción y el almacenamiento se distribuyen
+entre las unidades.
+
+\paragraph{Precios y receptividad del mercado}
+
+Los importes anteriores son presupuestos de costos,
+no precios de venta. La oferta contempla un kit inicial
+y parches de recambio. El precio de venta incorporará
+el margen, la distribución y el soporte.
+
+% FLUJO DE FONDOS:
+% 100 kits en Argentina: USD 25.034.
+% Desarrollo: ARS 61.556.250.
+% Cambio de planificación: ARS 1.500/USD.
+% Total equivalente: USD 66.071,50.
+% No duplicar desarrollo ni volver a aplicar el coeficiente de previsión 1,50.
+% Separar impuestos recuperables de costos definitivos.
+% Registrar compras y pagos en sus fechas reales.
+
 
 \paragraph{Precios y receptividad del mercado}
     {\consigna
@@ -1051,6 +1097,87 @@ Esta es la única parte del presente documento que aborda una perspectiva poster
     En el extremo, los costos e ingresos pesimistas generarán el peor escenario y ambos optimistas el mejor de los escenarios; lo esperable es que el proyecto se ubique en algún punto intermedio y es importante analizar esta realidad.\\
     Previsiones realistas de costos e ingresos darán escenarios probables y la simulación de diferentes escenarios permitirá comprender las posibles realidades del proyecto. Debemos movernos siempre en escenarios realistas.
     }
+
+
+\medskip
+\noindent\textbf{Supuestos y escenarios posibles}
+
+Se proyecta un horizonte de cuatro años, con detalle mensual durante
+el primero y anual para los tres siguientes. Los importes se expresan
+en USD constantes, con un tipo de cambio de planificación de
+ARS 1.500/USD.
+
+\begin{itemize}
+    \item \textbf{Desarrollo y lanzamiento.}
+    El desarrollo se distribuye entre los meses 1 y 6. La fabricación
+    del lote inicial se paga en los meses 4 y 5, y la importación en
+    el mes 6. Las ventas comienzan en el mes 7.
+
+    \item \textbf{Costos de desarrollo y fabricación.}
+    Se utiliza el escenario máximo estimado de 1.340 horas de ingeniería
+    y los costos del
+    lote inicial de 100 kits estimados en la sección anterior.
+    El coeficiente de previsión de 1,50 se aplica una sola vez.
+    El presupuesto conjunto de desarrollo y primer lote es de
+    USD 66.071,50.
+
+    \item \textbf{Precios y ventas.}
+    Se estima un precio de USD 400 por kit y USD 25 por parche de
+    recambio. Durante los meses 7 a 12 se venden, respectivamente,
+    10, 15, 15, 20, 20 y 20 kits. Para los años 2, 3 y 4 se proyectan
+    200, 300 y 400 kits, con ventas uniformes durante cada año.
+    Estos valores son supuestos comerciales, no demanda confirmada.
+
+    \item \textbf{Recambios.}
+    Se consideran cuatro parches mensuales por cliente desde el mes
+    posterior a la compra del kit y una retención mensual del 95\%.
+    El costo por recambio es de USD 17 de fabricación y USD 3
+    adicionales de entrega e insumos. Se supone producción contra
+    pedido.
+
+    \item \textbf{Infraestructura y prototipos.}
+    Se supone disponible el equipamiento de trabajo y laboratorio.
+    Se asignan USD 500 mensuales a alquiler, USD 100 a electricidad
+    y USD 100 a agua. Se agregan USD 3.000 para componentes, carcasas
+    e insumos de los prototipos.
+
+    \item \textbf{Operación y comercialización.}
+    El soporte contempla 20 horas mensuales desde el mes 7 y
+    40, 60 y 80 horas mensuales en los años siguientes.
+    La administración se estima en USD 100 mensuales durante el
+    primer año y USD 150, 200 y 250 en los siguientes.
+    La difusión comienza en el mes 7 con USD 150 mensuales y
+    aumenta a USD 200, 250 y 300. Se agrega un gasto variable
+    de comercialización y cobros equivalente al 3\% de las ventas.
+
+    \item \textbf{Cobros y financiamiento.}
+    Se consideran cobros y pagos al contado, sin deuda ni intereses.
+    El aporte de capital cubre el mayor déficit acumulado de los
+    períodos proyectados y se presenta separado de las ventas.
+
+    \item \textbf{Impuestos y evaluación.}
+    El flujo es anterior a Ganancias y tributos locales y no incluye
+    ensayos clínicos ni certificación comercial.
+    
+    \item \textbf{TIR y VAN.}
+    Para el VAN se adopta una tasa de descuento del 20\% anual
+    en USD. El VAN y la TIR se calculan sin los aportes de capital
+    y sin valor residual al finalizar el cuarto año.
+\end{itemize}
+
+Los precios y costos unitarios se mantienen constantes en USD.
+Una reducción de las ventas o de la continuidad de compra de
+recambios, un aumento de costos o una demora en el lanzamiento
+reducirían la rentabilidad prevista y podrían aumentar la necesidad
+de financiamiento. Estas variables quedan editables en la planilla
+para evaluar escenarios alternativos.
+
+\begin{center}
+    \fuente{https://drive.google.com/file/d/1Qr79b0we6oNlQLO2bY-M5EBJwXYLZKiH/view?usp=sharing}{Link al flujo de fondos armado}
+\end{center}
+
+
+
 
     \paragraph{Viabilidad financiera: TIR y VAN}
     {\consigna
@@ -1103,4 +1230,3 @@ Esta es la única parte del presente documento que aborda una perspectiva poster
 % Mantener coherentes inflación y moneda; no sumar directamente ARS con USD.
 % Saldo final del mes = saldo inicial + cobros - pagos.
 % La depreciación contable no es una nueva salida de efectivo.
-

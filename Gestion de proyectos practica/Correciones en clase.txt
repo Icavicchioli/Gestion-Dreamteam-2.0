@@ -1,0 +1,45 @@
+[19:52, 15/10/2026] Ignacio Cavicchioli: agregar un prototipo al plan
+1 año de tiempo, dimensonar para 4 personas o algo así, full time
+el gantt o lo de aglidad va a tener planning para el primer año y luego se tienen los años con ventas con sus tareas.
+contemplas salarios de vendedores? que arranquen con las ventas o que sean los mismos ingenieros originales?
+gestion compra, proveedores, importacion, pelearse con proveedores y chiinos, aduana, etc, prototipo, todo el testing sobre el prototppo, lo que dure la bateria, electrónica, ruggedness, etc, pruebas prototipo, validacion funcional y técnica (tiene que estar si o si) 
+costos parece estar bien
+servicios -> poner general 500 dólares. 
+meter alquiler de equipamiento
+[19:53, 15/10/2026] Ignacio Cavicchioli: que nos chupe 3 huevos el tir y que de lo que quiera
+[19:53, 15/10/2026] Ignacio Cavicchioli: cambiar tema horas a lo del año
+[19:54, 15/10/2026] Ignacio Cavicchioli: 2/3 ing y 2/3 técnicos o admins -> salarios
+centrarse en los de ignacio principlamente, no en el banter
+
+
+[19:55, 15/10/2026] Lautaro García Vitale: Joya
+[20:01, 15/10/2026] Ignacio Cavicchioli: casi dice maria de vuelta
+[20:02, 15/10/2026] Martu Monti: Ilegal
+[20:03, 15/10/2026] Martu Monti: Fui yo esa jaja
+[20:03, 15/10/2026] Martu Monti: nunca se va a acordar de mi
+[20:03, 15/10/2026] Ignacio Cavicchioli: te conoce las primeras 3 letras del nombre...
+[20:04, 15/10/2026] Ignacio Cavicchioli: agregar un prototipo al plan
+1 año de tiempo, dimensonar para 4 personas o algo así, full time
+el gantt o lo de aglidad va a tener planning para el primer año y luego se tienen los años con ventas con sus tareas.
+contemplas salarios de vendedores? que arranquen con las ventas o que sean los mismos ingenieros originales?
+gestion compra, proveedores, importacion, pelearse con proveedores y chiinos, aduana, etc, prototipo, todo el testing sobre el prototppo, lo que dure la bateria, electrónica, ruggedness, etc, pruebas prototipo, validacion funcional y técnica (tiene que estar si o si) 
+costos parece estar bien
+servicios -> poner general 500 dólares. 
+meter alquiler de equipamiento
+columna que resuma los primeros 12 meses en año 1
+[20:07, 15/10/2026] Ignacio Cavicchioli: ir a especialistas y que lo venda -> costo de eso y de dejar el equipo de inversión  comercial
+[20:08, 15/10/2026] Ignacio Cavicchioli: costo de comercializacion -> costos comerciales
+[20:08, 15/10/2026] Ignacio Cavicchioli: va en flow
+[20:08, 15/10/2026] Ignacio Cavicchioli: asociado a ventas y cantidades vendidas
+[20:09, 15/10/2026] Ignacio Cavicchioli: cantidad que va a perdida en cashflow
+[20:10, 15/10/2026] Ignacio Cavicchioli: demasiado austero en lo que vendemos
+[20:11, 15/10/2026] Ignacio Cavicchioli: mas unidades de venta mágicamente
+[20:12, 15/10/2026] Ignacio Cavicchioli: 100/200/300
+[20:12, 15/10/2026] Ignacio Cavicchioli: escala
+[20:12, 15/10/2026] Ignacio Cavicchioli: acuerdos con especialistas para que nos vendan
+[20:13, 15/10/2026] Ignacio Cavicchioli: ya somos amigos con Jonas
+[20:14, 15/10/2026] Ignacio Cavicchioli: abogado, medido?, administrativo, riesgos legales (consulta)
+[20:16, 15/10/2026] Ignacio Cavicchioli: inisistr con capacdad baterias, memoria, tiempo
+[20:16, 15/10/2026] Ignacio Cavicchioli: bueno fin
+[20:16, 15/10/2026] Ignacio Cavicchioli: ahora todo esto va a codex
+[20:17, 15/10/2026] Ignacio Cavicchioli: si está la versión corregida genial, me la pasan y ya mando a corregir
