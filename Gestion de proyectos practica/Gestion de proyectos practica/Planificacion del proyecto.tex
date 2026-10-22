@@ -1,101 +1,101 @@
+\clearpage
 \section{Planificación del proyecto}
-{\consigna
-En esta sección se debe analizar la forma y dinámica bajo la cual el proyecto va a realizarse.
-}
+
+La planificación combina un Gantt maestro de doce meses con sprints quincenales. El Gantt gobierna las dependencias externas ---compras, proveedores, importación, aduana, laboratorios, preserie y revisiones---, mientras que el backlog ágil ordena electrónica, firmware, aplicación, modelos, documentación y correcciones. Esta combinación evita tratar como iterables actividades cuyo plazo depende de terceros y, a la vez, permite aprender de los prototipos sin congelar prematuramente el diseño.
 
 \subsection{Plan de producto}
-{\consigna
-Un plan de producto es un documento estratégico que describe el ciclo de vida de un producto, desde su concepción y diferentes *releases* hasta su retiro del mercado.\\
-El primer *release* lo definiremos como MVP.\\
-Normalmente se lo representa como un gráfico evolutivo, el *Roadmap* del Producto, en el cual se visualizan las diferentes mejoras o prestaciones que se irán incorporando en cada nuevo *release*.\\
-Un plan de producto puede ser muy abarcativo, incluyendo estrategias, plan de desarrollo, marketing, etc. A los fines de este documento, se desea describir la evolución técnico-funcional del producto a través de los diferentes *releases*.
-}
 
 \subsubsection{MVP: objetivo y alcance}
-{\consigna
-Un MVP es un Producto Mínimo Viable, es decir, tiene que ser un producto y contemplar las mínimas funcionalidades que se consideran necesarias para que pueda prestar servicios. Debe funcionar, pero con las mínimas prestaciones para que sea útil.\\
-El **Objetivo del MVP** define conceptualmente qué debe atender el MVP una vez funcionando. El **Alcance** debe describir todas las prestaciones que debe ofrecer.\\
-Normalmente, en una metodología ágil, se busca que el primer resultado sea un MVP y que luego, en sucesivas iteraciones o *Sprints*, se vayan incorporando más prestaciones, completando el alcance amplio deseado. De esta forma, se pueden “ver” resultados tempranamente y revalidar el objetivo del proyecto, costos, etc.
-}
 
-%  Se elimina esta subsección en la v2.6    27-8-2026
-%\paragraph{Revalidación de costos}
-%{\it
-%Durante la ejecución del proyecto hasta obtener el MVP, ocurren cambios, redefiniciones, replanteos y rediseños que afectan los costos. Es necesario actualizar los costos estimados anteriormente y su impacto en el análisis financiero.
-%}
+El MVP es el producto mínimo que debe quedar aceptado al finalizar el mes 12. Incluye: parche sensor descartable; módulo electrónico reutilizable; pulsera reutilizable; aplicación móvil; adquisición, almacenamiento y sincronización de datos; historial; avisos acordes con el uso previsto; dos horizontes de estimación evaluados por separado; identificación limitada de factores probablemente asociados; manuales; guía de recambio; trazabilidad entre requisitos y pruebas; y documentación de fabricación y soporte.
+
+El prototipo integrado previsto para el mes 7 es un entregable intermedio. Su finalidad es revelar fallas de integración, calibración, montaje, comunicaciones y consumo antes de construir el candidato a MVP. No se lo presentará como producto terminado ni como evidencia de validación clínica. La aceptación del MVP será funcional y técnica; la validación clínica y la certificación comercial quedan fuera del alcance de estos doce meses.
 
 \subsubsection{Versiones evolutivas}
-\paragraph{Versión evolutiva 1, 2, N: objetivo y alcance}
-{\consigna
-En las sucesivas iteraciones, se irán incorporando mejoras y funcionalidades al MVP orientadas a llegar al producto deseable para comercializar o prestar servicios.\\
-Debe planificarse mejoras acotadas por iteración, evaluando la cantidad de mejoras y el costo de iterar. Por ejemplo, si obtener una nueva versión del producto implica esfuerzo de importación, manufactura, etc., quizás resulte mejor acotar la cantidad de iteraciones; si en cambio esos costos son bajos, quizás convenga incorporar pocas funcionalidades por iteración para facilitar las pruebas y mitigar riesgos.\\
-Luego de cada iteración, debe analizarse el impacto en los costos, tal como se hizo en el MVP.
-}
 
+\begin{itemize}
+    \item \textbf{Año 2 --- lanzamiento controlado:} producción inicial, acuerdos con clínicas y profesionales, soporte, QA de campo y validación del embudo comercial.
+    \item \textbf{Año 3 --- versión evolutiva 1:} mejoras de robustez, manufactura, experiencia de uso y costos, condicionadas por la evidencia obtenida.
+    \item \textbf{Año 4 --- versión evolutiva 2:} ampliación de capacidad y funciones solamente cuando la evidencia técnica, clínica y regulatoria lo permita.
+\end{itemize}
+
+Cada versión exige revisar alcance, riesgos, costos, datos, inventario, soporte y requisitos regulatorios. Ninguna funcionalidad clínica se incorporará por analogía con el prototipo.
 
 \subsection{Organización del proyecto}
-{\consigna
-Aquí debe describirse a grandes rasgos cómo se organizará el proyecto a nivel Equipo, Recursos y Dinámica.\\
-Debe ser breve (ej.: media carilla) y debe transmitir una foto rápida de cómo se desarrollará el proyecto.
-}
+
 \subsubsection{Equipo de trabajo}
-{\consigna
-Aquí debe describirse cómo se organizará el proyecto a nivel grupo humano.\\
-La definición debe ser principalmente a nivel de roles. Si hay nombres definidos, se puede mencionar quién ocupará determinado rol.\\
-Una persona puede ocupar varios roles, eso suele suceder, pero es importante entenderlo y expresarlo. Hay roles que son incompatibles para ser realizados por una misma persona, por ejemplo: desarrollar el firmware o software y probarlo.\\
-Incluir un organigrama es altamente recomendable.
-}
-\subsubsection{Recursos Necesarios}
-{\consigna
-Aquí puede incluirse un párrafo describiendo las subsecciones siguientes y conceptos en común.\\
-En las siguientes subsecciones debe describirse un inventario de recursos necesarios para poder realizar el proyecto y, en lo posible, quién (rol) será el responsable de proveerlos. Si no se sabe o no está definido, puede quedar pendiente (TBD).
-}
-    \paragraph{Infraestructura}
-    {\consigna
-    Enumerar los recursos de infraestructura necesarios.\\
-    Ej.: oficina, *datacenter*, mesa de pruebas, etc.\\
-    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
-    }
 
-    \paragraph{Equipamiento}
-    {\consigna
-    Enumerar el equipamiento necesario.\\
-    Ej.: Laboratorio, *tester*, mesa de soldado, kit de desarrollo, computadoras, etc.\\
-    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
-    }
+La dotación base es de cuatro personas full-time durante doce meses: dos perfiles de ingeniería y dos perfiles técnicos/administrativos. Los perfiles de ingeniería cubren arquitectura, electrónica, firmware, aplicación, datos e integración; los perfiles técnicos/administrativos cubren laboratorio, QA, documentación, compras, proveedores, importación y coordinación. El liderazgo del proyecto mantiene alcance, presupuesto, riesgos y trazabilidad. Las pruebas de aceptación tendrán revisión independiente de quien implementó la función cuando sea posible, y se contratarán consultas médicas, bioquímicas, legales, regulatorias y contables puntuales.
 
-    \paragraph{Insumos}
-    {\consigna
-    Enumerar los insumos necesarios.\\
-    Ej.: stock de componentes, soldadores, estaño, papelería, etc.\\
-    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
-    }
+La capacidad equivalente de planificación es:
+\[
+4\ \mathrm{FTE}\times12\ \mathrm{meses}\times160\ \mathrm{h/mes}=7.680\ \mathrm{h\ brutas}.
+\]
+Las horas son un control derivado de la dotación y no la base del presupuesto. El costo laboral se calcula por rol y por mes; no se suman nuevamente horas valorizadas por el mismo trabajo.
 
-    \paragraph{Servicios}
-    {\consigna
-    Enumerar los servicios necesarios.\\
-    Ej.: Contador, telefonía, electricidad, limpieza, etc.\\
-    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
-    }
+\subsubsection{Recursos necesarios}
 
-    \paragraph{Otros}
-    {\consigna
-    Enumerar otros recursos que no encuadren dentro de las categorías anteriores.\\
-    Ej.: licencias de software, permisos, etc.\\
-    Es importante mencionar quién es el responsable, el impacto del recurso, el costo, si se necesita redundancia, etc. Incluir todas las características o indicadores que ayuden a comprender su necesidad y plan de cobertura.
-    }
-
+\begin{itemize}
+    \item \textbf{Infraestructura:} oficina/taller por USD 500 mensuales; servicios generales por USD 500 mensuales; nube, licencias y repositorios por USD 500 mensuales.
+    \item \textbf{Equipamiento:} alquiler de equipamiento y laboratorio por USD 1.000 mensuales; estaciones de soldado, instrumental, programadores, computadoras y elementos de seguridad. El responsable técnico verifica disponibilidad y alternativa antes de cada ensayo.
+    \item \textbf{Insumos:} componentes electrónicos, PCB, baterías, carcasas, papel tratado, reactivos, MIP, electrodos, adhesivos, sobres, cables y material de prueba. Compras mantiene lote, proveedor, plazo, merma e inventario.
+    \item \textbf{Servicios especializados:} laboratorio y asesoramiento bioquímico por USD 12.000; consultas médicas, legales y regulatorias por USD 10.000; QA y validación técnica externa por USD 8.000.
+    \item \textbf{Abastecimiento:} cotizaciones alternativas, órdenes, transporte internacional, seguro, despacho, recepción, control de cantidad/calidad e inventario. Los componentes críticos deberán tener alternativa o una contingencia explícita.
+\end{itemize}
 
 \subsection{Metodología de trabajo}
-\subsubsection{Plan de proyecto o iteraciones previstas}
-Se propone un enfoque iterativo mixto. Antes de cerrar la definición del producto, se construirá un prototipo integrado de alcance acotado que permita examinar la integración del parche sensor, el módulo electrónico reutilizable, la pulsera y la aplicación. Se realizarán pruebas preliminares de adquisición, comunicación, montaje y uso; se registrarán resultados, fallas y desvíos respecto de los requerimientos, se priorizarán ajustes y se repetirán las pruebas pertinentes antes de revisar la especificación del producto o MVP. Esta etapa responde a la debilidad de desempeño aún no demostrado y contribuye a mitigar el riesgo R1. Las pruebas de prototipo no equivalen a validación clínica ni demuestran por sí solas la precisión de los modelos de IA.
-\subsubsection{Entregables y Mensurables}
+
+Se ejecutarán 26 sprints quincenales con planificación, demostración, retrospectiva y revisión de riesgos. El backlog se priorizará por evidencia necesaria y reducción de riesgo. Cada historia deberá indicar responsable, criterio de aceptación, dependencia y evidencia de cierre. Los cambios de alcance se registrarán con su efecto en costo, fecha, requisito y prueba.
+
+\subsubsection{Plan maestro de doce meses}
+
+\begin{table}[H]
+\centering
+\caption{Cronograma maestro resumido.}
+\label{tab:gantt-resumido}
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{p{0.13\linewidth} p{0.27\linewidth} X p{0.16\linewidth}}
+\toprule
+\textbf{Meses} & \textbf{Frente} & \textbf{Resultado verificable} & \textbf{Dependencia}\\
+\midrule
+1--3 & Gobierno, arquitectura y regulación & Objetivo, uso previsto, requisitos, interfaces, protocolos y criterios de aceptación aprobados & Inicio\\
+1--6 & Compras y proveedores & Laboratorios/proveedores relevados; cotizaciones, órdenes, importación, despacho y recepción gestionados & Arquitectura\\
+2--6 & Subsistemas & Parche, lector, pulsera, firmware, BLE, aplicación y modelos iniciales ensayables & Materiales\\
+6 & Hito de subsistemas & Evidencia de funcionamiento individual y desvíos registrados & Subsistemas\\
+6--7 & Integración & Prototipo integrado intermedio, adquisición y enlace extremo a extremo & Hito de subsistemas\\
+7--10 & Pruebas e iteración & Autonomía, memoria, BLE, robustez, recambio, calibración, interferencias y repetibilidad verificadas o limitadas & Prototipo integrado\\
+9--10 & Candidato a MVP & Correcciones priorizadas y revisión de aceptación & Pruebas\\
+10--12 & Cierre técnico y operativo & Validación funcional/técnica, diseño congelado, QA, documentación, entrenamiento y soporte & Candidato a MVP\\
+9--12 & Preparación comercial & Acuerdos con clínicas/profesionales y embudo del año 2 documentados & Uso previsto\\
+12 & Hito final & MVP aceptado, limitaciones y retrospectiva aprobadas & Todos los frentes\\
+\bottomrule
+\end{tabularx}}
+\end{table}
+
+El Gantt detallado, con responsables, dependencias y los doce meses, se mantiene en la hoja \textit{Plan 12 meses} del modelo financiero. Las compras de preserie se anticipan a los meses 9--11 para disponer de 100 kits aceptados al cierre del año 1 y poder verificar recepción e inventario sin registrar ventas prematuras.
+
+\subsubsection{Entregables y mensurables}
+
 \begin{itemize}
-    \item Prototipo integrado preliminar y registro de su configuración.
-    \item Protocolo y resultados de las pruebas preliminares, vinculados con los requerimientos evaluados y sus criterios de aceptación, que deberán definirse antes de probar.
-    \item Registro priorizado de fallas, desvíos y ajustes propuestos o realizados, con una revisión de la especificación del producto o MVP antes de continuar.
+    \item arquitectura, uso previsto, requisitos y matriz requisito--prueba;
+    \item especificaciones, cotizaciones, órdenes, registro de importación/despacho y recepción;
+    \item prototipos de subsistemas y prototipo integrado intermedio;
+    \item protocolos y resultados de pruebas funcionales y técnicas;
+    \item perfil de consumo, autonomía, memoria, comunicaciones y recuperación de datos;
+    \item registro de fallas, desvíos, decisiones y retrabajos;
+    \item candidato a MVP, acta de aceptación, paquete de producción, manuales y soporte;
+    \item plan comercial trazable a clínicas/profesionales, pacientes alcanzables, adopción y retención.
 \end{itemize}
-\subsubsection{Estimación de Plazos y Esfuerzo}
+
+\subsubsection{Estimación de plazos y esfuerzo}
+
+El plazo comprometido es de doce meses. La dedicación mensual completa produce una capacidad bruta de 7.680 horas, que incluye implementación, coordinación, aprendizaje, compras, documentación, pruebas y correcciones. Si el prototipo o el MVP se completan antes, el tiempo remanente se destinará a ampliar evidencia, robustez y documentación; no se reducirá retroactivamente el presupuesto laboral. El presupuesto del año 1 es de USD 238.982,22 y el capital mínimo del horizonte modelado es de USD 300.920,09, según el flujo de fondos autoritativo.
+
 \subsubsection{Seguimiento}
+
 \paragraph{Revisiones}
+Cada sprint cierra con demostración y evidencia. Mensualmente se revisan Gantt, costo, compras, inventario, riesgos y criterios de aceptación. Los hitos de los meses 3, 6, 7, 10, 11 y 12 requieren acta de revisión y decisión de continuar, corregir, limitar alcance o escalar una dependencia.
+
 \paragraph{Control de riesgos y desviaciones}
+Cada desvío tendrá fecha, responsable, impacto, acción, vencimiento y evidencia de cierre. Se controlarán como mínimo: plazo de proveedores, merma, costo, consumo y autonomía, memoria, pérdidas BLE, calibración, montaje, robustez, disponibilidad de datos, usabilidad y requisitos regulatorios. Un cambio que afecte ventas, lanzamiento, producción o soporte deberá actualizar en la misma revisión el Gantt, el backlog, el registro de riesgos y el flujo de fondos.

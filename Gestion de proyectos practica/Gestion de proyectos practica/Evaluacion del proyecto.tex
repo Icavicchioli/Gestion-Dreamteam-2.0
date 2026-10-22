@@ -113,6 +113,11 @@ La aplicación central se ejecutará en el teléfono del usuario y recibirá los
 
 La comunicación entre el módulo electrónico reutilizable, la pulsera y el teléfono tendrá un intervalo nominal de sincronización de 5 minutos, ajustable según la experiencia de uso. Se buscará un alcance BLE que cubra el uso del teléfono en el bolsillo y hasta 10 m en condiciones típicas; ambos aspectos deberán validarse en pruebas. Este intervalo es de transferencia y no define la frecuencia de muestreo. Si el teléfono se aleja o se apaga mientras el módulo y la pulsera siguen encendidos, estos conservarán localmente hasta 24 horas de datos cada uno (estimación: 45 KiB por día y dispositivo) y enviarán el bloque acumulado al restablecerse BLE. Si la interrupción supera las 24 horas, no se garantiza conservar el excedente y la aplicación deberá indicar los intervalos faltantes, sin presentar la serie como continua. Si los propios dispositivos se apagan, no se adquieren mediciones durante ese período; la persistencia de los datos ya almacenados ante un apagado dependerá de la memoria elegida y deberá verificarse. La estimación de memoria se considera compatible con microcontroladores habituales, sujeta a validación con el formato, las marcas temporales, los metadatos y las frecuencias de muestreo definidos.
 
+\noindent\textbf{Dimensionamiento preliminar de memoria y energía.}
+La memoria se calcula con registros de 64 bytes cada dos minutos: $64\times720=46.080$ bytes por día, aproximadamente 45 KiB por dispositivo. Se adopta un mínimo de 128 KiB utilizables de memoria no volátil para cubrir 24 horas, metadatos, índices y margen de implementación. En la revisión de arquitectura se deberá medir el tamaño real de cada registro, verificar la retención ante apagado, llenar el buffer, interrumpir BLE por 24 horas y comprobar la sincronización posterior sin duplicados ni pérdidas.
+
+La autonomía de siete días es un objetivo de diseño, no un dato demostrado. Para el lector se adopta preliminarmente una batería mínima de 750 mAh y un consumo medio máximo de 3,5 mA; para la pulsera, 850 mAh y 4,0 mA. Reservando 20\% por degradación, temperatura y variación entre unidades, las autonomías teóricas son $750\times0{,}8/3{,}5=171$ horas y $850\times0{,}8/4{,}0=170$ horas, respectivamente, ambas cercanas a 7,1 días. El consumo pico durante radio, iluminación y lectura deberá mantenerse dentro de la capacidad de la batería y del regulador. Estos valores se reemplazarán por mediciones de corriente por estado, ciclo de trabajo y ensayos completos de descarga antes de aceptar el MVP.
+
 El consumible descartable del sistema será el parche sensor de papel completo, incluidas sus zonas con reactivos y su soporte adhesivo de fijación a la piel del brazo. Se establece como objetivo reemplazar el parche sensor completo cada 7 días de uso, sujeto a validar la estabilidad de los reactivos, la adhesión y el desempeño, conservando el módulo electrónico reutilizable de lectura y comunicación que se acopla a él. La pulsera y su electrónica también serán reutilizables. La aplicación móvil no requiere reemplazo físico. La vida útil objetivo de 7 días y las instrucciones para retirar, reemplazar y volver a acoplar el parche sensor deberán validarse durante el desarrollo.
 
 El diseño preliminar se presenta mediante diagramas por objeto.
@@ -373,8 +378,10 @@ Se mencionan algunos ejemplos que podrían aplicar:
 
 
 \begin{itemize}
+    \item \textbf{Compras y proveedores:} especificaciones comprables, al menos una alternativa para componentes críticos, cotizaciones vigentes, mínimos de compra, plazos, órdenes, transporte, seguro, importación, despacho, recepción y registro de desvíos.
     \item \textbf{Línea de producción/fabricación:} fabricación de parches sensores descartables de papel plegado (microfluídica de papel), incluidas sus zonas con reactivos y su soporte adhesivo, y ensamblado del módulo electrónico reutilizable de lectura óptica/electroquímica y comunicación y de la pulsera reutilizable.
-    \item \textbf{QA:} control de calidad por lote de reactivos cromogénicos, calibración de color de cada lector, calibración de cada unidad de pulsera.
+    \item \textbf{QA:} control de calidad por lote de reactivos cromogénicos, calibración de color de cada lector, calibración de cada unidad de pulsera, identificación de lote y criterios de aceptación de recepción y preserie.
+    \item \textbf{Pruebas:} verificación funcional y técnica de batería, consumo medio y pico, memoria y retención, BLE, recuperación de datos, montaje, robustez, recambio, calibración, interferencias y repetibilidad. Toda falla o limitación se registra antes de repetir el ensayo.
     \item \textbf{Soporte:} atención a usuarios ante fallas de sincronización, dudas sobre plegado y recambio del parche sensor descartable, acoplamiento del módulo electrónico reutilizable o interpretación de la información y los avisos; mantenimiento del módulo electrónico y de la pulsera reutilizables y actualización de firmware remota.
     \item \textbf{Repuestos:} provisión y recambio del parche sensor descartable completo (papel, zonas con reactivos y soporte adhesivo), con recambio objetivo cada 7 días.
     \item \textbf{Entrenamiento:} capacitación a usuarios y profesionales para efectuar el recambio del parche sensor y el acoplamiento del módulo electrónico, e interpretar las mediciones, estimaciones, incertidumbres y avisos dentro del uso previsto.
@@ -395,14 +402,14 @@ Esta sección incorpora un análisis FODA del proyecto (del resultado del proyec
 Esta sección, como todas, es dinámica y se enriquece a lo largo del desarrollo del proyecto.
 }
 
-El análisis considera el alcance conceptual actual del proyecto. Las fortalezas se plantean como ventajas internas esperadas del producto. Las oportunidades corresponden a condiciones externas que podrían favorecer su desarrollo o adopción.
+El análisis considera el proyecto y su capacidad de ejecución. Las fortalezas y debilidades son internas al equipo y a su organización; las oportunidades y amenazas son externas. Los beneficios esperados del producto se analizan en mercado y no se usan como fortalezas. No se afirma que exista un ``mercado no atendido'' sin evidencia específica.
 
 \noindent\textbf{Fortalezas}
 \begin{itemize}
-    \item Más contexto e información relevante para interpretar las variaciones de glucosa: el producto ofrece información sobre factores probablemente asociados, como alimentación, estrés o actividad física, para que el usuario no tenga que interpretar únicamente un número/historial por su cuenta. Esta información complementa el seguimiento con CGM, sin constituir un diagnóstico de la causa.
-    \item Menor esfuerzo de registro frente a la transcripción manual de mediciones: la recepción automática de datos del módulo electrónico reutilizable y la pulsera y su organización en un historial común evitan que el usuario copie y reúna esas mediciones por su cuenta para consultar su evolución.
-    \item Seguimiento de varios biomarcadores en sudor sin punciones ni extracción de sangre para obtener esas mediciones, como alternativa no invasiva para reunir información metabólica adicional. Esta ventaja no implica sustituir los controles sanguíneos ni el CGM.
-    \item Reutilización de la electrónica. El módulo lector y la pulsera se conservan al reemplazar el parche sensor descartable, por lo que el costo de reposición corresponde al consumible y su empaque. 
+    \item Equipo con formación en electrónica y capacidad de integrar hardware, firmware, aplicación y datos bajo una arquitectura común.
+    \item Diseño modular que separa parche, lector, pulsera y aplicación, facilitando pruebas por subsistema, sustitución de componentes y evolución por versiones.
+    \item Planificación con requisitos, criterios de aceptación, hitos y trazabilidad entre decisiones técnicas, costos y pruebas.
+    \item Estrategia de electrónica reutilizable y consumible separado, que permite ensayar costos e inventario por componente.
 \end{itemize}
 
 \noindent\textbf{Oportunidades}
@@ -414,20 +421,17 @@ El análisis considera el alcance conceptual actual del proyecto. Las fortalezas
 
 \noindent\textbf{Debilidades}
 \begin{itemize}
-    \item Experiencia y recursos especializados limitados: el equipo no cuenta actualmente con experiencia práctica demostrada, antecedentes propios ni infraestructura especializada para desarrollar y validar sensores bioquímicos, dispositivos médicos y modelos de inteligencia artificial aplicados a información clínica. También carece de experiencia directa en validación clínica y procesos regulatorios, por lo que dependerá de laboratorios, profesionales de salud e instituciones externas para cubrir estas capacidades.
-    \item Experiencia limitada del equipo en el desarrollo integral de dispositivos médicos: como estudiantes de Ingeniería Electrónica, los integrantes cuentan con formación teórica en electrónica, pero aún deben adquirir experiencia práctica en su aplicación al diseño de dispositivos médicos. También será necesario ampliar conocimientos en biosensores, modelos de IA, validación clínica, regulación e industrialización, mediante aprendizaje específico, asesoramiento especializado y alianzas con profesionales de esas áreas.
+    \item Experiencia práctica e infraestructura especializadas limitadas en biosensores, dispositivos médicos, IA clínica, regulación e industrialización; el proyecto depende de laboratorios y asesores externos.
     \item Desempeño aún no demostrado: el proyecto no cuenta con un prototipo integrado ni validación propia que permita comprobar la calidad de las mediciones y de las predicciones propuestas.
-    \item La colocación del parche sensor descartable, el acoplamiento del módulo electrónico reutilizable y el uso conjunto con la pulsera pueden resultar complejos para el usuario, lo que podría dificultar la utilización adecuada del sistema.
 \end{itemize}
 
 \noindent\textbf{Amenazas}
 \begin{itemize}
-    \item Disponibilidad o acceso insuficiente a datos adecuados para la IA: la falta de registros sincronizados de biomarcadores, señales fisiológicas y eventos de referencia podría limitar el entrenamiento y la evaluación de los modelos, comprometiendo la confiabilidad de la información ofrecida por el producto. Si se determina que los modelos requieren datos de un CGM, las restricciones de acceso a esos registros podrían agravar esta limitación.
-    \item Riesgo de dificultades en la integración y calibración: la coordinación de lecturas colorimétricas, electroquímicas y fisiológicas podría no alcanzar la consistencia requerida, comprometiendo el desempeño del sistema y aumentando los plazos y costos de desarrollo.
+    \item Acceso insuficiente o condicionado a datos sincronizados y referencias adecuadas para especificar y evaluar los modelos.
     \item Fabricantes de CGM u otros desarrolladores podrían incorporar funciones de interpretación contextual o asociación de eventos antes de que el proyecto alcance una versión comercial, reduciendo su diferenciación.
-    \item Las exigencias de evidencia, seguridad y autorización que resulten aplicables al uso previsto podrían extender los plazos y aumentar los costos del desarrollo. La clasificación regulatoria deberá confirmarse y no se considera resuelta por utilizar una tecnología de sensado determinada.
-    \item Usuarios y posibles financiadores de la compra, como obras sociales o aseguradoras, podrían no considerar suficiente el beneficio adicional frente al costo del sistema y al recambio de parches sensores descartables, con recambio objetivo cada 7 días, sujeto a validar su estabilidad, adhesión y desempeño, limitando su adopción incluso si la solución resulta técnicamente viable.
-    \item La falta de acceso a financiamiento externo o a acuerdos con instituciones para realizar ensayos y obtener datos podría demorar el paso del diseño conceptual a un prototipo validado.
+    \item Exigencias de evidencia, seguridad y autorización aplicables al uso previsto podrían extender plazos y costos.
+    \item Usuarios, clínicas o financiadores podrían no considerar suficiente el beneficio adicional frente al precio inicial y al costo recurrente de parches.
+    \item Proveedores, importación, disponibilidad de laboratorio o financiamiento externo podrían demorar el cronograma.
 \end{itemize}
 
 
@@ -455,7 +459,7 @@ Este análisis cubre las debilidades y amenazas identificadas en el FODA que pod
 
 \noindent\textbf{b) Estimación de las consecuencias de los riesgos}
 
-Se propone una escala ordinal de 1 a 10. La severidad ($S$) estima el impacto sobre el proyecto o sus entregables; la ocurrencia ($O$) estima la posibilidad de que el riesgo se materialice. $O$ no representa un porcentaje. Las puntuaciones son estimaciones preliminares para revisar con el equipo, no frecuencias observadas ni resultados validados.
+Se propone una escala ordinal de 1 a 10. La severidad ($S$) estima el impacto sobre el proyecto o sus entregables; la ocurrencia ($O$) estima la posibilidad de que el riesgo se materialice. $O$ no representa un porcentaje. Para que la evaluación sea repetible se usa la siguiente rúbrica: 1--3 bajo, 4--6 medio, 7--8 alto y 9--10 crítico. En severidad, los niveles corresponden respectivamente a impacto absorbible, retrabajo relevante, pérdida de un hito o inviabilidad del objetivo; en ocurrencia, corresponden a evidencia que lo vuelve remoto, posible, probable o ya observado/inminente. Cada puntaje debe citar evidencia, supuesto o antecedente y se revisa en los hitos de los meses 3, 6, 7, 10 y 12. Las puntuaciones actuales son preliminares, no frecuencias observadas.
 
 \noindent R1 $\rightarrow$ Evidencia e integración técnica.
 \begin{itemize}
@@ -660,8 +664,6 @@ En este apartado debe describirse de qué otra forma los usuarios finales pueden
 Esto incluye una descripción de competidores existentes y de soluciones sustitutas.\\
 Debe contemplarse que no hacer nada también puede ser una opción válida para el usuario final.
 }
-
-\subsubsection{Análisis de competidores y sustitutos}
 
 La Tabla~\ref{tab:competidores-sustitutos} compara las principales
 alternativas con el producto propuesto. Los nombres incluyen
@@ -898,9 +900,7 @@ El costo directo del kit es:
 =101{,}48\;\mathrm{USD}.
 \]
 
-Se aplica un coeficiente de previsión de 1,50 para
-variaciones de precios, mermas, retrabajos y gastos
-comunes de producción:
+Para baja serie se presupuesta una carga de preparación y QA del proveedor equivalente al 50\% del costo directo. Esta carga cubre puesta a punto, programación, trazabilidad, control y retrabajo de fabricación; no incluye merma ni la reserva técnica del proyecto, que se modelan por separado:
 \[
 C_{\mathrm{fabricacion}}
 =101{,}48\times1{,}50
@@ -961,67 +961,40 @@ Su logística se asignará según los pedidos de reposición.
 \medskip
 \noindent\textbf{Ingeniería y desarrollo}
 
-Se mantiene un salario bruto mensual de ARS 3.500.000,
-160 horas asignables y un factor de costo laboral
-de 1,40. El costo resultante es ARS 30.625/h.
-
-Para expresar el presupuesto en una moneda común,
-se adopta ARS 1.500/USD como tipo de cambio de planificación.
-El salario, la jornada y el tipo de cambio son las bases
-de cálculo del escenario.
+El presupuesto se basa en una dotación de cuatro personas full-time durante doce meses, no en una bolsa de horas: dos perfiles de ingeniería con salario bruto mensual de ARS 3.500.000 y dos perfiles técnicos/administrativos con ARS 2.500.000. Se aplica un factor laboral de 1,40 y un tipo de cambio de planificación de ARS 1.500/USD. La capacidad equivalente de 7.680 horas brutas se usa solamente para controlar carga y cronograma.
 
 \begin{table}[H]
 \centering
-\caption{Escenario máximo estimado de horas y presupuesto de ingeniería.}
+\caption{Dotación y costo laboral del año 1.}
 \label{tab:costo-ingenieria}
 \label{tab:costo-app}
 {\small
 \renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{\linewidth}{
->{\raggedright\arraybackslash}X r r}
+>{\raggedright\arraybackslash}X r r r}
 \hline
-\textbf{Actividad} & \textbf{Horas} & \textbf{ARS}\\
+\textbf{Rol} & \textbf{FTE} & \textbf{USD/mes} & \textbf{USD/año}\\
 \hline
-Diseño conceptual e interfaces & 220 & 6.737.500\\
-Diseño de PCB & 160 & 4.900.000\\
-Firmware de los dispositivos & 200 & 6.125.000\\
-Desarrollo del parche y calibración & 160 & 4.900.000\\
-Aplicación y modelos iniciales & 360 & 11.025.000\\
-Integración y pruebas & 120 & 3.675.000\\
-Documentación y preparación de producción & 40 & 1.225.000\\
-Coordinación y revisión técnica & 80 & 2.450.000\\
+Ingeniería & 2 & 6.533,33 & 78.400,00\\
+Técnico/administrativo & 2 & 4.666,67 & 56.000,00\\
 \hline
-\textbf{Total del escenario máximo} & \textbf{1.340} & \textbf{41.037.500}\\
+\textbf{Total} & \textbf{4} & \textbf{11.200,00} & \textbf{134.400,00}\\
 \hline
 \end{tabularx}
 }
 \end{table}
 
-Las horas por actividad son estimaciones propias y se fijaron
-deliberadamente en un nivel alto para representar el máximo
-de planificación considerado, no una dedicación mínima ni
-una predicción exacta. Según el alcance que finalmente se
-implemente y las tareas que puedan simplificarse o reutilizarse,
-el esfuerzo real podría ser menor; en ese caso, también disminuiría
-el costo de ingeniería calculado. Como referencia salarial se conserva el
+La nómina cubre arquitectura, hardware, firmware, aplicación, datos, integración, laboratorio, QA, compras, documentación y coordinación. No se agregan horas valorizadas por el mismo trabajo. Si el equipo completa un entregable antes de lo previsto, la capacidad se reasigna a pruebas, robustez y documentación sin reducir retroactivamente el costo contratado. Como referencia salarial se conserva el
 \href{https://cessi.org.ar/wp-content/uploads/2026/07/OPSSI-Reporte-Industria-Software-1er.-trim.-2026.pdf}
 {informe CESSI/OPSSI de julio de 2026}.
-
-Se aplica también el coeficiente de previsión de 1,50
-al desarrollo, sin modificar el salario:
-\[
-C_{\mathrm{desarrollo}}
-=41.037.500\times1{,}50
-=61.556.250\;\mathrm{ARS}
-=41.037{,}50\;\mathrm{USD}.
-\]
 
 \medskip
 \noindent\textbf{Resumen final}
 
 \begin{table}[H]
 \centering
-\caption{Presupuesto del primer lote, en USD.}
+\caption{Presupuesto conciliado del año 1, en USD.}
+\label{tab:presupuesto-anio-1}
 {\small
 \renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{\linewidth}{
@@ -1029,24 +1002,23 @@ C_{\mathrm{desarrollo}}
 \hline
 \textbf{Concepto} & \textbf{USD}\\
 \hline
-100 kits disponibles en Argentina & 25.034,00\\
-Ingeniería y desarrollo con previsión & 41.037,50\\
+Infraestructura y servicios generales & 24.000,00\\
+Prototipos e insumos de prueba & 12.000,00\\
+Preserie, importación y almacenamiento & 27.782,22\\
+Dotación de cuatro FTE & 134.400,00\\
+Laboratorio y consultas especializadas & 30.000,00\\
+Herramientas, nube y licencias & 6.000,00\\
+Reserva técnica trazable (10\%) & 4.800,00\\
 \hline
-\textbf{Presupuesto total inicial} & \textbf{66.071,50}\\
+\textbf{Presupuesto total del año 1} & \textbf{238.982,22}\\
 \hline
 \end{tabularx}
 }
 \end{table}
 
-El costo estimado del kit puesto en Argentina es de \textbf{USD 250,34 por unidad}. El presupuesto total inicial contempla el primer lote y la ingeniería y el desarrollo.
+La reserva técnica del 10\% se calcula únicamente sobre prototipos, insumos, laboratorio, consultas, QA y herramientas (USD 48.000); no se aplica a salarios, infraestructura ni preserie y no se vuelve a aplicar en el flujo. La merma de producción se modela por separado como 10\% de unidades y no como otro porcentaje general. El costo estimado de fabricación de USD 152,22 por kit se mantiene como carga presupuestaria de baja serie que incluye costo directo y preparación/QA del proveedor; no incluye merma, que queda explícita en el volumen bruto. Las cotizaciones y la provisión fiscal deberán reemplazarse por valores efectivos antes de comprar.
 
-Los materiales y las tareas por unidad son costos
-directos variables. La ingeniería y la preparación
-de producción son costos fijos del alcance o del lote.
-La recepción y el almacenamiento se distribuyen
-entre las unidades.
-
-\paragraph{Precios y receptividad del mercado}
+\noindent\textbf{Relación entre costos y precio.}
 
 Los importes anteriores son presupuestos de costos,
 no precios de venta. La oferta contempla un kit inicial
@@ -1077,6 +1049,8 @@ Como referencia comercial, \href{https://www.support.freestyle.abbott/hc/en-us/a
 
 Para la propuesta se compararán el pago inicial y el gasto de reposición. Con el objetivo de siete días por parche, el gasto mensual medio de consumibles sería aproximadamente $4{,}3\,P_{\mathrm{recambio}}$. La receptividad se relevará mediante consultas a usuarios y posibles adquirentes sobre ambos importes; aún no se asigna un precio aceptado por el mercado.
 
+La estrategia inicial prioriza clínicas, médicos clínicos y otros profesionales que puedan incorporar el sistema a programas de seguimiento. El escenario base no deriva ventas de un porcentaje arbitrario de la población: usa 25, 50 y 80 aliados en los años 2 a 4; 40, 50 y 60 pacientes alcanzables por aliado; y adopciones de 30\%, 32\% y 35\%. El resultado es de 300, 800 y 1.680 kits. Los escenarios conservador y expansivo cambian los mismos tres impulsores mediante un único selector en la planilla. El embudo deberá contrastarse con entrevistas, acuerdos y capacidad de atención antes del lanzamiento.
+
 \subsubsection{Análisis financiero}
 {\consigna
 En esta subsección se debe analizar el proyecto desde el punto de vista financiero, es decir, analizar las necesidades económicas del proyecto teniendo en cuenta el momento en que deben ser atendidas. También contempla una proyección de ingresos que el proyecto generaría después de obtener el resultado, en caso de que el proyecto tenga un fin que genere ingresos económicos y un retorno de la inversión económica requerida.\\
@@ -1099,6 +1073,7 @@ Esta es la única parte del presente documento que aborda una perspectiva poster
     }
 
 
+\iffalse
 \medskip
 \noindent\textbf{Supuestos y escenarios posibles}
 
@@ -1179,16 +1154,40 @@ para evaluar escenarios alternativos.
 
 
 
+\fi
+
+\medskip
+\noindent\textbf{Supuestos y escenarios posibles}
+
+El flujo cubre cuatro años, con detalle mensual en el año 1 y valores anuales para la explotación. El año 1 contiene desarrollo, prototipos, preserie e inversión, sin ventas. Las ventas comienzan en el año 2 y quedan condicionadas a la aceptación del MVP y a los requisitos regulatorios aplicables. Todos los valores se expresan en USD constantes y la planilla corregida es la fuente financiera autoritativa.
+
+\begin{itemize}
+    \item \textbf{Dotación:} cuatro FTE durante doce meses: dos de ingeniería y dos perfiles técnicos y administrativos. El costo es mensual por rol y no se duplica con horas valorizadas.
+    \item \textbf{Infraestructura:} por mes, USD 500 de oficina y taller, USD 500 de servicios generales, USD 1.000 de laboratorio y equipamiento y USD 500 de herramientas, nube y licencias.
+    \item \textbf{Desarrollo:} USD 12.000 en prototipos e insumos; USD 30.000 en laboratorio, consultas y QA; y USD 4.800 de reserva técnica aplicada una sola vez a partidas técnicas identificadas.
+    \item \textbf{Preserie:} 100 kits aceptados al cierre del mes 11. La producción bruta incorpora 10\% de merma; compras, importación, recepción y almacenamiento se registran cuando ocurren.
+    \item \textbf{Embudo comercial:} escenario base de 25, 50 y 80 clínicas/profesionales aliados; 40, 50 y 60 pacientes alcanzables por aliado; adopción de 30\%, 32\% y 35\%. Se obtienen 300, 800 y 1.680 kits en los años 2, 3 y 4. Un selector permite escenarios conservador, base y expansivo.
+    \item \textbf{Precios y continuidad:} USD 400 por kit, USD 25 por parche, cuatro recambios por cliente/mes y retención mensual de 95\%.
+    \item \textbf{Costos comerciales:} comisión/cobranza de 8\% sobre ventas, equipo comercial fijo desde el comienzo de ventas, difusión, soporte, logística, producción e inventario vinculados al volumen.
+    \item \textbf{Evaluación:} tasa de descuento anual de 20\%; VAN y TIR calculados sin aporte de capital y sin valor residual. No se modifican supuestos para volver favorables los indicadores.
+\end{itemize}
+
+El presupuesto del año 1 es USD 238.982,22. El capital mínimo es USD 300.920,09, igual al máximo déficit acumulado proyectado más el margen de seguridad definido en el modelo. La planilla incluye controles para ventas nulas, demora de lanzamiento, mayor merma, mayor costo y menor retención.
+
     \paragraph{Viabilidad financiera: TIR y VAN}
     {\consigna
     En esta subsección se deben analizar los indicadores TIR y VAN que surgen del flujo de fondos esperado, así como proponer una tasa de descuento adecuada para el financiamiento del proyecto.
     }
+
+Con el escenario base, el VAN a una tasa anual de 20\% es negativo en USD 233.388,97. La TIR no queda determinada en el horizonte de cuatro años porque los flujos sin financiamiento no producen un cruce económicamente interpretable. Por lo tanto, el escenario no demuestra viabilidad financiera todavía. La decisión correcta no es aumentar ventas arbitrariamente, sino validar el embudo con clínicas/profesionales, revisar precio y margen, controlar el costo de recambios y extender el horizonte únicamente con evidencia. Ambos indicadores permanecen informativos.
 
     \paragraph{Financiamiento necesario y estrategias de soporte}
     {\consigna
     En esta subsección se debe analizar el financiamiento necesario que surge del flujo de fondos y definir, a partir del mismo, una estrategia y alternativas de soporte del flujo de fondos.\\
     Pueden definirse diferentes alternativas para poder soportar el proyecto en caso de que el financiamiento que se obtenga no sea suficiente, qué recortes pueden realizarse o qué tácticas pueden emplearse para disminuir las necesidades de financiamiento.
     }
+
+El capital mínimo estimado es USD 300.920,09. La estrategia propuesta combina aportes por hitos, acuerdos con laboratorios y clínicas, subsidios de innovación y preventas institucionales solamente después de aceptar el MVP y verificar el marco aplicable. Si el financiamiento es insuficiente se priorizarán requisitos de seguridad, evidencia, adquisición, memoria y comunicaciones; se diferirán funcionalidades evolutivas, expansión comercial y mejoras no críticas. No se recortarán QA, consultas regulatorias ni pruebas necesarias para sostener las afirmaciones del producto.
 % NOTAS PARA EL FUTURO FLUJO DE FONDOS (no se imprimen).
 % El flujo muestra cobros y pagos por período, por ejemplo por mes.
 % Todavía faltan el cronograma, modalidad de contratación, ventas y financiación.
