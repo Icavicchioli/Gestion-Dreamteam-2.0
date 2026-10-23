@@ -54,4 +54,4 @@ Fecha de cierre: 22/10/2026. Fuentes: informe comentado por el docente, correcci
 - No se detectaron `#REF!`, `#DIV/0!`, `#VALUE!`, `#NAME?`, `#N/A`, `#NUM!`, `#NULL!`, `#SPILL!` ni `#CALC!`.
 - Se probaron escenarios conservador/base/expansivo, ventas nulas, demora del lanzamiento, merma del 20%, mayor costo y retención del 85%; los resultados están en `Verificacion-modelo-financiero.md`.
 - Prototipo, candidato a MVP, aceptación funcional/técnica, validación clínica y certificación comercial quedan conceptualmente separados.
-- El informe se regeneró desde LaTeX sin errores de compilación ni referencias indefinidas; las consignas de la plantilla quedaron ocultas en la versión final.
+- El informe se regeneró desde LaTeX sin errores de compilación ni referencias indefinidas; las 24 consignas originales de la plantilla se conservaron visibles.

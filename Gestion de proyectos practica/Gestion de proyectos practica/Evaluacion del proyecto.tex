@@ -1,8 +1,25 @@
 \section{Evaluación del proyecto}
+{\consigna
+Esta sección aborda el análisis del proyecto con el objetivo de evaluarlo desde dos aspectos: **Técnico** y de **Negocio**.\\
+En la **evaluación Técnica** se analizan la factibilidad, los riesgos y todas las cuestiones que aborda el proyecto desde lo tecnológico.\\
+En la **evaluación de Negocio** se analizan los aspectos relacionados con la receptividad o posibilidades de adopción del resultado del proyecto por parte de los destinatarios del mismo y las posibilidades de realización desde lo organizacional, legal, económico y demás posibles aspectos no tecnológicos que deban considerarse.
+}
 
 
 
 \subsection{Tipo de proyecto}
+{\consigna
+Esta subsección aborda la tipificación del proyecto o su encuadre dentro del tipo de despliegue que el resultado del proyecto va a tener.\\
+En clase hemos propuesto los siguientes tipos:
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+  \item Proyectos Masivos
+  \item Proyectos Específicos
+  \item Proyectos Únicos o a Medida
+  \item Proyectos de Innovación o Investigación
+\end{itemize}
+Esta lista es una propuesta y puede ampliarse o incluso definir una tipificación diferente.
+}
 
 
 
@@ -12,11 +29,22 @@ Este enfoque exige definir criterios que favorezcan la consistencia entre unidad
 
 
 \subsection{Evaluación de factibilidad técnica}
+{\consigna
+Esta subsección aborda la evaluación Técnica para analizar la factibilidad, los riesgos y todas las cuestiones que involucran el proyecto desde lo tecnológico.\\
+En las diferentes subsecciones se pretenden cubrir todos los aspectos técnicos de la evaluación.
+}
 
 
 Esta sección evalúa la factibilidad técnica del sistema propuesto. Varios de los principios de sensado utilizados —en particular el sensado simultáneo de múltiples biomarcadores en un mismo dispositivo— provienen de desarrollos recientes documentados en literatura científica; el proyecto los adopta y adapta al caso de uso de diabetes, sin que esto implique que la generación de ese conocimiento sea en sí misma el objetivo del trabajo.
 
 \subsubsection{Requerimientos técnicos}
+{\consigna
+En este apartado deben definirse todos los requerimientos técnicos que deberá cumplir el proyecto, que serán la especificación para el diseño de la solución a construir.\\
+Debe contemplar los requisitos que, de cumplirse, cubren las expectativas del proyecto.\\
+Todo lo que no se mencione puede no estar y aun así el proyecto ser exitoso.\\
+Estas especificaciones suelen usarse durante la verificación para evaluar el cumplimiento del objetivo.\\
+Los requerimientos técnicos incluyen los tecnológicos y los funcionales.
+}
 
 
 \noindent\textbf{Requerimientos funcionales:}
@@ -77,6 +105,11 @@ Alimentación & Batería recargable de bajo consumo en el módulo electrónico r
 
 
 \subsubsection{Diseño preliminar del producto}
+{\consigna
+En este apartado debe ir completándose el diseño preliminar. Es un primer bosquejo de diseño que permite tomar dimensión del proyecto y una primera propuesta a alto nivel de solución para cumplir el objetivo y atender los requerimientos.\\
+Esta sección lleva más tiempo completarla porque implica la elaboración de un diseño de circuito, sistema, partes, etc.\\
+Puede contener diagramas en bloque, especificación de partes y demás detalles que den certidumbre sobre la posibilidad de realización. No es necesario que tenga todo el detalle tecnológico.
+}
 
 
 El sistema se organiza en dos fuentes de datos que convergen en una aplicación central (app/hub), como se muestra en la Figura~\ref{fig:arquitectura-sistema}. El dispositivo del brazo está formado por un parche sensor descartable, ubicado en la parte posterior del brazo, y un módulo electrónico reutilizable de lectura y comunicación que se acopla a él. El parche sensor consiste en papel tratado hidrofílica/hidrofóbicamente y plegado tipo origami, con sus zonas con reactivos y su soporte adhesivo. Sus zonas colorimétricas permiten medir glucosa, lactato y pH en sudor mediante reactivos cromogénicos y un sensor de color situado en el módulo electrónico reutilizable; la zona de pH se utiliza como referencia para la calibración de las demás zonas. Una zona electroquímica separada del parche sensor, basada en un polímero de impronta molecular (MIP), permite medir cortisol en sudor mediante un potenciostato de un solo canal integrado en el módulo electrónico reutilizable. Estas mediciones no constituyen por sí mismas mediciones de glucosa sanguínea: cualquier salida que la estime deberá especificar su referencia de evaluación. La pulsera reutilizable, en la muñeca, integra el sensor óptico PPG, el sensor de temperatura, la IMU y su propio módulo BLE, todos reutilizables, aportando el contexto fisiológico de frecuencia cardíaca, actividad física y temperatura de piel. El módulo electrónico reutilizable y la pulsera transmiten sus datos por BLE a la aplicación central (hub), donde se proponen modelos de inteligencia artificial que deberán evaluarse por separado: un modelo temporal con objetivos de diseño de corto plazo (30 a 60 minutos) y horizonte extendido (1 a 8 horas), sin presuponer la viabilidad ni la precisión de ninguno de ellos; y un modelo que identifica factores probablemente asociados a la variación al relacionar biomarcadores y señales fisiológicas de contexto, sin establecer causalidad clínica. Cada salida deberá presentar su horizonte temporal, incertidumbre y referencia de evaluación según corresponda. La aplicación presentará información y avisos coherentes con el uso previsto, aún pendiente de cerrar, sin recomendaciones automáticas de tratamiento. El sistema se concibe como complemento de los CGM; queda pendiente determinar si los modelos dependerán de sus datos y cómo se integrarían.
@@ -299,6 +332,9 @@ Las listas de componentes y sus costos se presentan en las Tablas~\ref{tab:costo
 \FloatBarrier
 \paragraph{Análisis AMFE (preliminar)}
 \label{sec:amfe-preliminar}
+{\consigna
+Aquí debe incorporarse el Análisis AMFE preliminar e ir enriqueciéndolo a lo largo del diseño y desarrollo del proyecto.
+}
 
 
 
@@ -331,6 +367,20 @@ Modelo de factores asociados (IA) & Asociación incorrecta entre una variación 
 }
 
 \subsubsection{Inventario de los diferentes aspectos a cubrir}
+{\consigna
+En este apartado debe enumerarse y describirse todos los aspectos involucrados en el proyecto que son necesarios para cumplir el objetivo.\\
+Dependiendo del objetivo, será la cantidad de aspectos a tener en cuenta.\\
+Se mencionan algunos ejemplos que podrían aplicar:
+
+\begin{itemize}
+\setlength{\itemsep}{3 pt}
+    \item Línea de Producción / fabricación
+    \item QA
+    \item Soporte
+    \item Repuestos, Entrenamiento
+    \item Servicios Especializados
+\end{itemize}
+}
 
 
 
@@ -346,12 +396,19 @@ Modelo de factores asociados (IA) & Asociación incorrecta entre una variación 
 \end{itemize}
 
 \subsection{Evaluación de factibilidad de negocio}
+{\consigna
+Esta sección aborda la evaluación de Negocio, analizando los aspectos relacionados con la receptividad o posibilidades de adopción del resultado del proyecto por parte de los destinatarios del mismo y las posibilidades de realización desde lo organizacional, legal, económico y demás cuestiones no tecnológicas que deban considerarse.
+}
 
 
 
 
 
 \subsubsection{Análisis FODA}
+{\consigna
+Esta sección incorpora un análisis FODA del proyecto (del resultado del proyecto).\\
+Esta sección, como todas, es dinámica y se enriquece a lo largo del desarrollo del proyecto.
+}
 
 
 El análisis considera el proyecto y su capacidad de ejecución. Las fortalezas y debilidades son internas al equipo y a su organización; las oportunidades y amenazas son externas. Los beneficios esperados del producto se analizan en mercado y no se usan como fortalezas. No se afirma que exista un ``mercado no atendido'' sin evidencia específica.
@@ -390,6 +447,10 @@ El análisis considera el proyecto y su capacidad de ejecución. Las fortalezas 
 
 
 \subsubsection{Análisis de Riesgos}
+{\consigna
+En esta sección se deben identificar los riesgos del proyecto, es decir, todos los factores que puedan atentar contra el éxito del mismo.\\
+Hemos dividido el análisis en dos partes: Matriz de Riesgos y Análisis AMFE.
+}
 
 
 Este análisis cubre las debilidades y amenazas identificadas en el FODA que podrían afectar la preparación y la continuidad del proyecto. Los modos de falla del producto se tratan en el AMFE de la sección~\ref{sec:amfe-preliminar}.
@@ -459,6 +520,11 @@ Se propone una escala ordinal de 1 a 10. La severidad ($S$) estima el impacto so
 \end{itemize}
 
     \paragraph{Matriz de Riesgos y Acciones de Mitigación}
+{\consigna
+    Aquí debe incorporarse la Matriz de Riesgos y las Acciones Mitigadoras a tomar.\\
+    Esta parte se irá completando a lo largo del diseño preliminar y las demás secciones.\\
+    El alumno debe investigar diferentes modelos de matrices de riesgos y elegir la que mejor aplique a su proyecto.
+    }
     
 
 \noindent\textbf{c) Tabla de gestión de riesgos}
@@ -585,9 +651,18 @@ R1, R2, R3, R7 y R8 mantienen un RPN residual por encima del umbral y no se cons
 
 
 \subsection{Análisis de mercado y financiero}
+{\consigna
+En esta subsección se aborda el mercado destinatario del proyecto, la receptividad a la adopción y los aspectos financieros o de soporte relacionados con la realización y éxito del proyecto.
+}
 
 
 \subsubsection{Análisis de mercado y público objetivo}
+{\consigna
+En este apartado debe describirse de forma cualitativa quiénes son los usuarios finales del proyecto y quiénes son los adquirentes del proyecto, teniendo en cuenta que pueden diferir.\\
+También debe describirse la forma en que ese público satisface actualmente las prestaciones que dará el proyecto y cómo lo hace, cuál es el esfuerzo o costo que asume para ello.\\
+También debe dimensionarse de alguna forma el mercado potencial.\\
+Luego de leer esta sección, el lector deberá tener un entendimiento holístico del usuario final y adquirente: sus necesidades, expectativas, exigencias y motivaciones relacionadas con el proyecto.
+}
 
 
 Para dimensionar el público potencial en Argentina se toma como referencia la población con diabetes, en lugar de extrapolar directamente la facturación mundial del mercado de monitoreo continuo de glucosa. La Federación Internacional de Diabetes estima que en 2024 había aproximadamente 4,3 millones de personas de entre 20 y 79 años con diabetes en Argentina.\footnote{Federación Internacional de Diabetes, \textit{IDF Diabetes Atlas}, 11.\textsuperscript{a} edición, 2025, capítulo 4: estimaciones para América del Sur y Central correspondientes a 2024.} Como referencia general, la diabetes tipo 2 representa entre el 90\% y el 95\% de los casos de \textit{diabetes mellitus}.\footnote{F. J. Tébar Massó y F. Escobar Jiménez, \textit{La Diabetes en la Práctica Clínica}, Ed. Médica Panamericana, 1.\textsuperscript{a} edición, 2009, ISBN 9788498355253.} Si se aplica ese rango de manera orientativa al total estimado por la FID, se proyectan entre 3,9 y 4,1 millones de personas de 20 a 79 años con diabetes tipo 2 en Argentina, es decir, alrededor de 4 millones. Se trata de una extrapolación y no de un conteo ni de una estimación específica de diabetes tipo 2 para el país; el total de la FID incluye distintos tipos de diabetes y casos diagnosticados y no diagnosticados.
@@ -597,6 +672,11 @@ Esta proyección da un orden de magnitud de la población adulta con diabetes ti
 El usuario final previsto es la persona con diabetes tipo 2 o prediabetes que ya usa o considera usar un CGM y busca relacionar sus variaciones con información de contexto. El adquirente puede ser el propio paciente, una obra social/prepaga o una clínica que ofrezca el servicio como parte de un programa de seguimiento. Hoy, este público intenta interpretar esas relaciones mediante consultas, registros manuales de comidas y actividad o aplicaciones de terceros. El sistema busca complementar esas fuentes mediante la identificación de factores probablemente asociados, sin sustituir la evaluación profesional ni establecer causalidad clínica.
 
 \subsubsection{Análisis de competidores y sustitutos}
+{\consigna
+En este apartado debe describirse de qué otra forma los usuarios finales pueden satisfacer las prestaciones que el proyecto genera.\\
+Esto incluye una descripción de competidores existentes y de soluciones sustitutas.\\
+Debe contemplarse que no hacer nada también puede ser una opción válida para el usuario final.
+}
 
 
 La Tabla~\ref{tab:competidores-sustitutos} compara las principales
@@ -995,6 +1075,10 @@ y parches de recambio. El precio de venta incorporará
 el margen, la distribución y el soporte.
 
 \paragraph{Precios y receptividad del mercado}
+{\consigna
+    En esta subsección deben analizarse los precios de competidores o sustitutos y los valores que el usuario o adquirente está dispuesto a afrontar para disponer del resultado del proyecto.\\
+    Para analizar la receptividad del mercado, deben analizarse soluciones que el usuario utiliza que son parte de la problemática o contexto donde el proyecto se desempeña.
+   }
     
 
 
@@ -1022,9 +1106,26 @@ clínicas. Los escenarios conservador y expansivo cambian los impulsores con un
 del lanzamiento.
 
 \subsubsection{Análisis financiero}
+{\consigna
+En esta subsección se debe analizar el proyecto desde el punto de vista financiero, es decir, analizar las necesidades económicas del proyecto teniendo en cuenta el momento en que deben ser atendidas. También contempla una proyección de ingresos que el proyecto generaría después de obtener el resultado, en caso de que el proyecto tenga un fin que genere ingresos económicos y un retorno de la inversión económica requerida.\\
+Esta es la única parte del presente documento que aborda una perspectiva posterior al proyecto, ya que el retorno de inversión se genera después de que este finaliza. Recomendamos aclarar esta particularidad en este apartado.
+}
 
 
     \paragraph{Flujo de fondos esperado}
+{\consigna
+    En este apartado se debe realizar una proyección estimativa del flujo de fondos esperado para el proyecto, contemplando las dos etapas típicas: la etapa de inversión que ocurre durante el desarrollo del proyecto, donde se visualizan los costos que deben afrontarse y en qué momento; y luego debe incluirse una etapa de explotación económica del resultado (en caso de que el proyecto sea para obtener beneficios económicos), donde se incorporen los ingresos que el proyecto generaría según las expectativas del autor.\\
+    La estimación de la generación de ingresos debe estar justificada con datos e información objetiva. El análisis de precios y receptividad del mercado realizado en la sección previa debería contener la información que permita realizar esta proyección si se hizo adecuadamente.\\
+    Normalmente el flujo de fondos debería dar negativo en la primera etapa y positivo en la segunda si el proyecto busca un beneficio económico.\\
+
+    {\bf Supuestos y Escenarios posibles}\\
+    Como parte del flujo de fondos previsto, deben explicarse aquellos supuestos que dan soporte a la estimación. Algunos ejemplos de los supuestos pueden ser: rango de costos de recursos asumidos, costos de alquileres, carga impositiva prevista, colaboraciones no económicas que generen ahorros o eviten gastos, costos de logística, costos variables de comercialización, marketing, etc.\\
+    Normalmente, de no cumplirse un supuesto, los costos previstos van a sufrir variación, generalmente en un mayor costo. Si es posible, pueden dejarse claros estos impactos.\\
+    De la misma forma, deben explicarse los supuestos de los ingresos previstos, por ejemplo, precio de venta, cantidad de ventas mensuales, etc.\\
+    Posibles variaciones en valores supuestos de costos e ingresos, tomando casos más optimistas o más pesimistas, generan diferentes Escenarios posibles.\\
+    En el extremo, los costos e ingresos pesimistas generarán el peor escenario y ambos optimistas el mejor de los escenarios; lo esperable es que el proyecto se ubique en algún punto intermedio y es importante analizar esta realidad.\\
+    Previsiones realistas de costos e ingresos darán escenarios probables y la simulación de diferentes escenarios permitirá comprender las posibles realidades del proyecto. Debemos movernos siempre en escenarios realistas.
+    }
     
 
 
@@ -1051,6 +1152,9 @@ ventas nulas, demora del lanzamiento, merma del 20\%, mayor costo unitario y
 retención mensual del 85\%, sin errores de fórmula.
 
     \paragraph{Viabilidad financiera: TIR y VAN}
+{\consigna
+    En esta subsección se deben analizar los indicadores TIR y VAN que surgen del flujo de fondos esperado, así como proponer una tasa de descuento adecuada para el financiamiento del proyecto.
+    }
     
 
 Con el escenario base, el VAN a una tasa anual del 20\% es positivo en USD
@@ -1064,6 +1168,10 @@ de recambios y la carga real de importación. Los indicadores permanecen como
 salidas informativas.
 
     \paragraph{Financiamiento necesario y estrategias de soporte}
+{\consigna
+    En esta subsección se debe analizar el financiamiento necesario que surge del flujo de fondos y definir, a partir del mismo, una estrategia y alternativas de soporte del flujo de fondos.\\
+    Pueden definirse diferentes alternativas para poder soportar el proyecto en caso de que el financiamiento que se obtenga no sea suficiente, qué recortes pueden realizarse o qué tácticas pueden emplearse para disminuir las necesidades de financiamiento.
+    }
     
 
 El capital mínimo estimado para el escenario base es USD 228.303,06. La
