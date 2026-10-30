@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{helvet}
+\usepackage[hidelinks,hypertexnames=false]{hyperref}
+\usepackage{tocloft}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{booktabs,array,xltabular,needspace}
+\usepackage[section]{placeins}
+\usepackage{microtype}
+\newcommand{\fuente}[2]{\href{#1}{\textcolor{tpazul}{#2}}}
+\raggedbottom
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.8}
+\setcounter{topnumber}{4}
+\setcounter{totalnumber}{5}
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+\setlength{\emergencystretch}{2em}
+\widowpenalty=10000
+\clubpenalty=10000
+\IfFileExists{spanish.ldf}{\usepackage[spanish]{babel}}{%
+  \usepackage{babel}\babelprovide[import,main]{spanish}}
+
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{float}
+\usetikzlibrary{arrows.meta,calc,fit,backgrounds,babel}
+\definecolor{tpazul}{HTML}{1F4E79}
+\definecolor{tpclaro}{HTML}{EAF2F8}
+\definecolor{tpverde}{HTML}{E2F0D9}
+\definecolor{tpenergia}{HTML}{FCE4D6}
+\newcommand{\consigna}{\color{green!50!black}\itshape}
+\renewcommand{\familydefault}{\sfdefault}
+
+% INICIO SUBSUBSUB
+%same as \subsubsection but level 4
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+% number \paragraph
+\setcounter{secnumdepth}{4}
+\makeatother
+% FIN SUBSUBSUB
+
+\usepackage{draftwatermark}
+
+\tikzset{
+        bloque/.style={draw=tpazul!65,fill=tpclaro,rounded corners=3pt,
+            text width=2.5cm,minimum height=1.15cm,inner sep=5pt,
+            align=center,font=\sffamily\footnotesize},
+        sensor/.style={bloque,fill=tpverde},
+        energia/.style={bloque,fill=tpenergia},
+        externo/.style={bloque,fill=white,draw=tpazul!40},
+        flujo/.style={-{Stealth[length=2mm]},line width=.8pt,draw=tpazul},
+        potencia/.style={flujo,dashed,draw=orange!70!black},
+        relacion/.style={line width=.8pt,draw=tpazul},
+        rotulo/.style={font=\sffamily\scriptsize,fill=white,inner sep=2pt,text=tpazul},
+        marco/.style={draw=tpazul!35,rounded corners=5pt,fill=black!1,inner sep=12pt},
+        titulo/.style={font=\sffamily\bfseries\large,text=tpazul,anchor=west}
+    }
+    
+\AddToHook{cmd/section/before}{\par\Needspace{7\baselineskip}}
+\AddToHook{cmd/subsection/before}{\par\Needspace{5\baselineskip}}
+\AddToHook{cmd/subsubsection/before}{\par\Needspace{5\baselineskip}}
+\AddToHook{cmd/paragraph/before}{\par\Needspace{4\baselineskip}}
+\begin{document}
+% Marca de agua
+\SetWatermarkText{}
+\SetWatermarkScale{0.4}
+\SetWatermarkLightness{0.8}
+\SetWatermarkAngle{45}
+\SetWatermarkColor{red!20!white}
+% Fin - Marca de agua
+
+% Portada
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.6\textwidth]{logo-fiuba.png} \\
+    \vspace{2cm}
+    {\Huge Sistema Inteligente Multimodal de Detección y Predicción de Glucosa} \\
+    \vspace{0.5cm}
+    {\LARGE Materia: TC024 - Gestión de proyectos} \\  
+    \vspace{0.5cm} 
+    {\LARGE Grupo 3 }\\
+    \vspace{2cm}
+    \begin{flushleft}
+        \textbf{Título del trabajo final:} Sistema Inteligente Multimodal de Detección y Predicción de Glucosa\\
+        \vspace{2cm}
+        \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}\\[0.5cm]
+        \begin{tabularx}{\textwidth}{XXX}
+            \textbf{Autor:} & \textbf{Padrón:} & \textbf{Correo:} \\
+            Marco Brischetto & 110008 & mbrischetto@fi.uba.ar \\
+            Lautaro García Vitale & 110028 & lagarciav@fi.uba.ar \\
+            Gabriel José Vigo Abad & 107980 & gvigo@fi.uba.ar \\
+            Juan Ignacio Giachetti & 110877 & jgiachetti@fi.uba.ar \\
+            Ignacio E. Cavicchioli & 109428 & icavicchioli@fi.uba.ar \\
+            Martina Monti &  110574& mmonti@fi.uba.ar \\
+            Francisco Del Rio & 110761 & fadelrio@fi.uba.ar \\
+            Santiago Manuel Cabrera & 110445 & smcabrera@fi.uba.ar \\
+
+        \end{tabularx}
+    
+    \end{flushleft}
+    \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}\\[0.5cm]
+    \vfill
+    \Large Facultad de Ingeniería - Universidad de Buenos Aires
+\end{titlepage}
+
+\setcounter{tocdepth}{4}
+\tableofcontents
+%****************    INTRODUCCION  **********%
+\clearpage
+\input{Introduccion.tex}
+
+%****************    RESUMEN EJECUTIVO  **********%
+%\input{Resumen ejecutivo.tex}
+
+
+
+%****************    DEFINICION DEL PROYECTO  **********%
+
+\input{Definicion del proyecto.tex}
+
+\input{Evaluacion del proyecto.tex}
+
+
+%****************    PLANIFICACION DEL PROYECTO  **********%
+\input{Planificacion del proyecto.tex}
+
+
+
+\end{document}

@@ -1,0 +1,140 @@
+\clearpage
+\section{Planificación del proyecto}
+
+La planificación combina un Gantt maestro de doce meses con sprints quincenales. El Gantt gobierna las dependencias externas, como compras, proveedores, importación, aduana, laboratorios, preserie y revisiones, mientras que el backlog ágil ordena electrónica, firmware, aplicación, modelos, documentación y correcciones. Esta combinación evita tratar como iterables actividades cuyo plazo depende de terceros y, a la vez, permite aprender de los prototipos sin congelar prematuramente el diseño.
+
+\begin{center}
+    \fuente{https://drive.google.com/file/d/1wt7TyQ2ym9HItDamzgjDWafUk0fGTO3Z/view?usp=sharing}{Abrir planilla del Gantt (Google Sheets), abrir la hoja "Plan 12 meses"}
+\end{center}
+
+
+\subsection{Plan de producto}
+
+\subsubsection{MVP: objetivo y alcance}
+
+Como se explicó con anterioridad, el MVP es el producto mínimo que debe quedar aceptado al finalizar el mes 12. Incluye: parche sensor descartable; módulo electrónico reutilizable; pulsera reutilizable; aplicación móvil; adquisición, almacenamiento y sincronización de datos; historial; avisos acordes con el uso previsto; dos horizontes de estimación evaluados por separado; identificación limitada de factores probablemente asociados; manuales; guía de recambio; trazabilidad entre requisitos y pruebas; y documentación de fabricación y soporte.
+
+El prototipo integrado previsto para el mes 7 es un entregable intermedio. Su finalidad es revelar fallas de integración, calibración, montaje, comunicaciones y consumo antes de construir el candidato a MVP. La aceptación del MVP será funcional y técnica.
+
+\subsubsection{Versiones evolutivas}
+
+\begin{itemize}
+    \item \textbf{Año 2 --- lanzamiento controlado:} producción inicial, acuerdos con clínicas y profesionales, soporte, QA de campo y validación del embudo comercial.
+    \item \textbf{Año 3 --- versión evolutiva 1:} mejoras de robustez, manufactura, experiencia de uso y costos, condicionadas por la evidencia obtenida.
+    \item \textbf{Año 4 --- versión evolutiva 2:} ampliación de capacidad y funciones solamente cuando la evidencia técnica, clínica y regulatoria lo permita.
+\end{itemize}
+
+Cada versión exige revisar alcance, riesgos, costos, datos, inventario, soporte y requisitos regulatorios. Ninguna funcionalidad clínica se incorporará por analogía con el prototipo.
+
+\subsection{Organización del proyecto}
+
+\subsubsection{Equipo de trabajo}
+
+De acuerdo a lo explicado en las secciones anteriores, la dotación base es de cuatro personas full-time durante doce meses: dos perfiles de ingeniería y dos perfiles técnicos/administrativos. Los perfiles de ingeniería cubren arquitectura, electrónica, firmware, aplicación, datos e integración; los perfiles técnicos/administrativos cubren laboratorio, QA, documentación, compras, proveedores, importación y coordinación. El liderazgo del proyecto mantiene alcance, presupuesto, riesgos y trazabilidad. Las pruebas de aceptación tendrán revisión independiente de quien implementó la función cuando sea posible, y se contratarán consultas médicas, bioquímicas, legales, regulatorias y contables puntuales.
+
+La capacidad equivalente de planificación es:
+\[
+4\ \mathrm{FTE}\times12\ \mathrm{meses}\times160\ \mathrm{h/mes}=7.680\ \mathrm{h\ brutas}.
+\]
+Las horas son un control derivado de la dotación y no la base del presupuesto. El costo laboral se calcula por rol y por mes; no se suman nuevamente horas valorizadas por el mismo trabajo.
+
+\subsubsection{Recursos necesarios}
+
+\begin{itemize}
+    \item \textbf{Infraestructura:} oficina/taller por USD 500 mensuales; servicios generales por USD 500 mensuales; nube, licencias y repositorios por USD 500 mensuales.
+    \item \textbf{Equipamiento:} alquiler de equipamiento y laboratorio por USD 1.000 mensuales; estaciones de soldado, instrumental, programadores, computadoras y elementos de seguridad. El responsable técnico verifica disponibilidad y alternativa antes de cada ensayo.
+    \item \textbf{Insumos:} componentes electrónicos, PCB, baterías, carcasas, papel tratado, reactivos, MIP, electrodos, adhesivos, sobres, cables y material de prueba. Compras mantiene lote, proveedor, plazo, merma e inventario.
+    \item \textbf{Servicios especializados:} laboratorio y asesoramiento bioquímico por USD 12.000; consultas médicas por USD 3.000, legales por USD 2.500, regulatorias por USD 3.500 y contables e impositivas por USD 1.000; QA y validación técnica externa por USD 8.000.
+    \item \textbf{Abastecimiento:} cotizaciones alternativas, órdenes, transporte internacional, seguro, despacho, recepción, control de cantidad/calidad e inventario. Los componentes críticos deberán tener alternativa o una contingencia explícita.
+\end{itemize}
+
+\subsection{Metodología de trabajo}
+
+Se ejecutarán 26 sprints quincenales con planificación, demostración, retrospectiva y revisión de riesgos. El backlog se priorizará por evidencia necesaria y reducción de riesgo. Cada historia deberá indicar responsable, criterio de aceptación, dependencia y evidencia de cierre. Los cambios de alcance se registrarán con su efecto en costo, fecha, requisito y prueba.
+
+\textcolor{red}{[Pendiente de revisión: ampliar el Gantt con el desglose de cada tarea en subtareas verificables y vincularlas explícitamente con el backlog y los sprints de la metodología ágil. Identificar qué parte del producto aborda cada subtarea (parche sensor, módulo electrónico/lector, pulsera, firmware, aplicación, integración y pruebas), sus dependencias, entregables y criterios de aceptación. Ordenar el trabajo según la secuencia de construcción del aparato: definición e interfaces, desarrollo y ensayo de cada subsistema, integración progresiva, pruebas y correcciones, hasta el MVP. Definir si cada parte del producto se organiza en un sprint propio o se divide en historias distribuidas en varios sprints.]}
+
+\subsubsection{Plan maestro de doce meses}
+
+\begin{table}[H]
+\centering
+\caption{Cronograma maestro resumido.}
+\label{tab:gantt-resumido}
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{p{0.13\linewidth} p{0.27\linewidth} X p{0.16\linewidth}}
+\toprule
+\textbf{Meses} & \textbf{Frente} & \textbf{Resultado verificable} & \textbf{Dependencia}\\
+\midrule
+1--3 & Gobierno, arquitectura y regulación & Objetivo, uso previsto, requisitos, interfaces, protocolos y criterios de aceptación aprobados & Inicio\\
+1--6 & Compras y proveedores & Laboratorios/proveedores relevados; cotizaciones, órdenes, importación, despacho y recepción gestionados & Arquitectura\\
+2--6 & Subsistemas & Parche, lector, pulsera, firmware, BLE, aplicación y modelos iniciales ensayables & Materiales\\
+6 & Hito de subsistemas & Evidencia de funcionamiento individual y desvíos registrados & Subsistemas\\
+6--7 & Integración & Prototipo integrado intermedio, adquisición y enlace extremo a extremo & Hito de subsistemas\\
+7--10 & Pruebas e iteración & Autonomía, memoria, BLE, robustez, recambio, calibración, interferencias y repetibilidad verificadas o limitadas; \textcolor{red}{evaluar modo de carga, calcular y ensayar su duración, y confirmar accesorios y dos parches por kit} & Prototipo integrado\\
+9--10 & Candidato a MVP & Correcciones priorizadas y revisión de aceptación & Pruebas\\
+10--12 & Cierre técnico y operativo & Validación funcional/técnica, diseño congelado, QA, documentación, entrenamiento y soporte & Candidato a MVP\\
+9--12 & Preparación comercial & Acuerdos con clínicas/profesionales y embudo del año 2 documentados & Uso previsto\\
+12 & Hito final & MVP aceptado, limitaciones y retrospectiva aprobadas & Todos los frentes\\
+\bottomrule
+\end{tabularx}}
+\end{table}
+
+El Gantt detallado, con responsables, dependencias y los doce meses, se mantiene en la hoja \textit{Plan 12 meses} del modelo financiero. Las compras de preserie se anticipan a los meses 9--11 para disponer de 100 kits aceptados al cierre del año 1 y poder verificar recepción e inventario sin registrar ventas prematuras.
+
+\subsubsection{Gestión de la explotación en los años 2 a 4}
+
+Después del MVP se utilizarán objetivos trimestrales y un tablero Kanban
+comercial y operativo. Sus columnas son: \textit{Backlog}, \textit{Prospectado},
+\textit{Contactado}, \textit{Reunión}, \textit{Acuerdo}, \textit{Onboarding},
+\textit{Aliado activo} y \textit{Seguimiento}. Cada tarjeta conservará
+responsable, próxima acción, fecha objetivo, evidencia y desvío. Los frentes
+paralelos serán médicos; clínicas; proveedores y producción; inventario y
+logística; soporte y QA de campo; mejoras del producto; y revisión regulatoria.
+
+\begin{table}[H]
+\centering
+\caption{Objetivos anuales de explotación que se controlan trimestralmente.}
+\label{tab:objetivos-explotacion}
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X r r r r r}
+\toprule
+\textbf{Año} & \textbf{Médicos} & \textbf{Clínicas} & \textbf{Kits vendidos} & \textbf{Demos} & \textbf{Onboarding USD}\\
+\midrule
+2 & 18 & 7 & 300 & 7 & 3.450\\
+3 & 35 & 15 & 800 & 15 & 7.125\\
+4 & 56 & 24 & 1.680 & 24 & 11.400\\
+\bottomrule
+\end{tabularx}}
+\end{table}
+
+Cada trimestre revisará aliados acumulados, ventas, producción bruta, merma,
+demostradores, retención, horas de soporte y desvíos. El detalle operativo y
+las fórmulas vinculadas al escenario activo se mantienen en la hoja
+\textit{Plan 12 meses}; el año 1 continúa sin demostradores ni ventas.
+
+\subsubsection{Entregables y mensurables}
+
+\begin{itemize}
+    \item arquitectura, uso previsto, requisitos y matriz requisito--prueba;
+    \item especificaciones, cotizaciones, órdenes, registro de importación/despacho y recepción;
+    \item prototipos de subsistemas y prototipo integrado intermedio;
+    \item protocolos y resultados de pruebas funcionales y técnicas;
+    \item perfil de consumo, autonomía, memoria, comunicaciones y recuperación de datos;
+    \item registro de fallas, desvíos, decisiones y retrabajos;
+    \item candidato a MVP, acta de aceptación, paquete de producción, manuales y soporte;
+    \item plan comercial trazable a clínicas/profesionales, pacientes alcanzables, adopción y retención.
+\end{itemize}
+
+\subsubsection{Estimación de plazos y esfuerzo}
+
+El plazo comprometido es de doce meses. La dedicación mensual completa produce una capacidad bruta de 7.680 horas, que incluye implementación, coordinación, aprendizaje, compras, documentación, pruebas y correcciones. Si el prototipo o el MVP se completan antes, el tiempo remanente se destinará a ampliar evidencia, robustez y documentación; no se reducirá retroactivamente el presupuesto laboral. El presupuesto del año 1 y el capital mínimo del escenario base son de USD 228.303,06, según el flujo de fondos autoritativo.
+
+\subsubsection{Seguimiento}
+
+\paragraph{Revisiones}
+Cada sprint cierra con demostración y evidencia. Mensualmente se revisan Gantt, costo, compras, inventario, riesgos y criterios de aceptación. Los hitos de los meses 3, 6, 7, 10, 11 y 12 requieren acta de revisión y decisión de continuar, corregir, limitar alcance o escalar una dependencia.
+
+\paragraph{Control de riesgos y desviaciones}
+Cada desvío tendrá fecha, responsable, impacto, acción, vencimiento y evidencia de cierre. Se controlarán como mínimo: plazo de proveedores, merma, costo, consumo y autonomía, memoria, pérdidas BLE, calibración, montaje, robustez, disponibilidad de datos, usabilidad y requisitos regulatorios. \textcolor{red}{Queda pendiente revisar la conveniencia de carga inalámbrica y definir la protección ambiental requerida (grado IP por determinar, incluida la evaluación de IP68 si resulta pertinente al uso previsto); no se presupone que los dispositivos alcancen ese grado.} Un cambio que afecte ventas, lanzamiento, producción o soporte deberá actualizar en la misma revisión el Gantt, el backlog, el registro de riesgos y el flujo de fondos.
