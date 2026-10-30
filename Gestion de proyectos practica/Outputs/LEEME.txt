@@ -1,3 +1,11 @@
-PDF/Informe-proyecto-actualizado.pdf conserva la compilación anterior y no incluye los últimos ajustes. La compilación de las fuentes vigentes se realizará en Prism.
+ARCHIVOS DE ENTREGA
 
-El LaTeX vigente está en ../Gestion de proyectos practica/ y el Excel en ../Proyecto-actualizado-18-meses.xlsx. Las imágenes locales se retiraron por indicación del usuario; main.tex conserva la referencia al logo disponible en Prism.
+LaTeX/: los siete archivos .tex finales del informe. Abrir main.tex en Prism. Son idénticos a los de la carpeta de trabajo ../Gestion de proyectos practica/.
+
+Excel/Proyecto-actualizado-18-meses.xlsx: planilla final con economía, componentes, planificación, tareas y sprints, historias de usuario, features y épicas. El backlog está incluido en este mismo Excel.
+
+Inventario de correcciones.txt: registro de las correcciones y su resolución, como documentación de acompañamiento.
+
+El PDF anterior fue retirado. La compilación final se realizará en Prism. No se incluyen imágenes locales: main.tex conserva la referencia a logo-fiuba.png, ya disponible allí. Los demás diagramas están definidos en los propios archivos LaTeX.
+
+Los dos enlaces de publicación del informe (planilla y backlog) quedan «a completar», según lo solicitado.

@@ -1,4 +1,4 @@
-ESTADO: inventario actualizado tras la revisión de contenido, tareas y cálculos. El LaTeX y el Excel contienen las correcciones; el PDF corresponde a la compilación anterior. Las imágenes se usarán desde Prism y no se conservan copias locales.
+ESTADO: inventario actualizado tras la revisión de contenido, tareas y cálculos. El LaTeX y el Excel contienen las correcciones; el PDF anterior fue retirado; la versión final se compilará en Prism. Las imágenes se usarán desde Prism y no se conservan copias locales.
 
 INVENTARIO DE CORRECCIONES — REVISIÓN DE CONTENIDO
 Revisión: 30/10/2026
@@ -60,7 +60,7 @@ C09. Redacción: párrafos de definición, arquitectura, energía, riesgos, econ
 VERIFICACIÓN
 Sin comentarios rojos activos; sin referencias LaTeX faltantes; llaves y entornos balanceados por revisión estática. Dependencias de las 199 tareas existentes y anteriores al sprint dependiente; ninguna persona supera su capacidad mensual.
 El contraste del flujo base guardado coincide con VAN USD 119.928,98 y capital mínimo USD 368.813,16. El libro guardado no presenta errores de fórmula en sus valores almacenados. Se corrigieron la duplicación de mano de obra cubierta por nómina y la base de cargos de importación. La TIR anual equivalente es 37,36%. El precio de planificación se conserva en USD 800.
-LaTeX revisado estáticamente en esta pasada, sin compilar. El PDF conserva la compilación anterior. No se probó el archivo en la aplicación nativa Excel.
+LaTeX revisado estáticamente en esta pasada, sin compilar. El PDF anterior fue retirado; la compilación final queda para Prism. No se probó el archivo en la aplicación nativa Excel.
 
 PUNTOS QUE SIGUEN SIENDO TRABAJO DEL PROYECTO
 Cerrar en S1–S6 las tolerancias analíticas, umbrales clínicos, referencia de evaluación, plataforma y dependencia de CGM; seleccionar celdas y proveedores; obtener cotizaciones; realizar ensayos; diseñar y autorizar el estudio; validar demanda a USD 800. Son tareas previstas, no resultados que esta revisión pueda demostrar.
@@ -87,7 +87,7 @@ P11 (p. 31). Máximo de horas poco razonable: se retiró el antiguo máximo deli
 P12 (p. 31). Horas coherentes con plan: las 199 tareas, ciclos, ejemplo S14, historias, features y épicas suman 8.856,40 h. Controles mensual y quincenal sin excedentes.
 P13 (p. 33). Desarrollo demasiado corto: el desarrollo técnico ocupa doce meses; prototipo intermedio M7, MVP M12 y programa hasta M18.
 P14 (p. 33). Dedicación menor a 1,5 personas: cuatro personas, 160 h/mes por persona hasta M18; 11.520 h de capacidad y nómina por USD 201.600.
-P15 (p. 34). Comparar los cuatro años: tabla de cuatro años en Resumen nuevo!A44:E52 y ahora también en Economía, “Resumen del flujo de cuatro años”. Se muestran kits, ingresos, egresos, flujo anual y acumulado; el año 2 incluye seis meses de ventas.
+P15 (p. 34). Comparar los cuatro años: tabla de cuatro años en Resumen!A44:E52 y ahora también en Economía, “Resumen del flujo de cuatro años”. Se muestran kits, ingresos, egresos, flujo anual y acumulado; el año 2 incluye seis meses de ventas.
 P16 (p. 34). Flujo sin revisión detallada: fórmulas, escenarios, fechas, stock, salarios y métricas contrastados; se corrigieron pagos del lote y redondeo. Esto no presume aprobación del flujo por el docente.
 P17 (p. 37). Planificar MVP/producto, no solo prototipo: Definición y Planificación distinguen prototipo M7, MVP M12, evaluación, lote comercial, autorizaciones y venta desde M19.
 
@@ -131,4 +131,4 @@ Segunda ronda de 16 anotaciones:
 ESTADO FINAL DE ESTA REVISIÓN
 Se incorporó al informe la tabla anual ya calculada en el Excel y se simplificó la redacción del FODA, riesgos y presupuesto. No se modificaron las cifras ni las tareas del Excel.
 Los dos enlaces de publicación permanecen a completar por instrucción del usuario. Ensayos, cotizaciones, umbrales y autorizaciones son trabajo futuro expresamente planificado, no correcciones documentales omitidas.
-No se compiló. El PDF conservado no incorpora las últimas modificaciones. No se generaron imágenes ni nuevos archivos auxiliares en el repositorio.
+No se compiló. El PDF anterior fue retirado y no forma parte de la entrega. No se generaron imágenes ni nuevos archivos auxiliares en el repositorio.

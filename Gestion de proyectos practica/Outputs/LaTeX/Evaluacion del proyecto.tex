@@ -1,0 +1,677 @@
+\section{Evaluación del proyecto}
+
+% Consigna de la cátedra conservada en el fuente:
+% {\consigna
+% Esta sección aborda el análisis del proyecto con el objetivo de evaluarlo desde dos aspectos: **Técnico** y de **Negocio**.\\
+% En la **evaluación Técnica** se analizan la factibilidad, los riesgos y todas las cuestiones que aborda el proyecto desde lo tecnológico.\\
+% En la **evaluación de Negocio** se analizan los aspectos relacionados con la receptividad o posibilidades de adopción del resultado del proyecto por parte de los destinatarios del mismo y las posibilidades de realización desde lo organizacional, legal, económico y demás posibles aspectos no tecnológicos que deban considerarse.
+% }
+
+
+
+
+\subsection{Tipo de proyecto}
+
+% Consigna de la cátedra conservada en el fuente:
+% {\consigna
+% Esta subsección aborda la tipificación del proyecto o su encuadre dentro del tipo de despliegue que el resultado del proyecto va a tener.\\
+% En clase hemos propuesto los siguientes tipos:
+% \begin{itemize}
+% \setlength{\itemsep}{0pt}
+%   \item Proyectos Masivos
+%   \item Proyectos Específicos
+%   \item Proyectos Únicos o a Medida
+%   \item Proyectos de Innovación o Investigación
+% \end{itemize}
+% Esta lista es una propuesta y puede ampliarse o incluso definir una tipificación diferente.
+% }
+
+
+
+
+El proyecto se clasifica como masivo por el despliegue previsto de un producto estandarizado para numerosos usuarios. El kit y la aplicación mantienen un diseño común, aunque cada persona configure sus parámetros de seguimiento. El segmento inicial comprende personas con diabetes tipo 2 o prediabetes.
+
+Este enfoque exige asegurar consistencia entre unidades, una puesta en marcha comprensible, provisión de consumibles y soporte. También requiere controlar los costos por unidad. La clasificación describe el despliegue buscado; la factibilidad técnica, el desempeño, las autorizaciones y la adopción todavía deben demostrarse.
+
+
+\subsection{Evaluación de factibilidad técnica}
+
+% Consigna de la cátedra conservada en el fuente:
+% {\consigna
+% Esta subsección aborda la evaluación Técnica para analizar la factibilidad, los riesgos y todas las cuestiones que involucran el proyecto desde lo tecnológico.\\
+% En las diferentes subsecciones se pretenden cubrir todos los aspectos técnicos de la evaluación.
+% }
+
+
+
+Esta sección evalúa la factibilidad técnica del sistema propuesto. Varios de los principios de sensado utilizados —en particular el sensado simultáneo de múltiples biomarcadores en un mismo dispositivo— provienen de desarrollos recientes documentados en literatura científica; el proyecto los adopta y adapta al caso de uso de diabetes, sin que esto implique que la generación de ese conocimiento sea en sí misma el objetivo del trabajo.
+
+\subsubsection{Requerimientos técnicos}
+
+% Consigna de la cátedra conservada en el fuente:
+% {\consigna
+% En este apartado deben definirse todos los requerimientos técnicos que deberá cumplir el proyecto, que serán la especificación para el diseño de la solución a construir.\\
+% Debe contemplar los requisitos que, de cumplirse, cubren las expectativas del proyecto.\\
+% Todo lo que no se mencione puede no estar y aun así el proyecto ser exitoso.\\
+% Estas especificaciones suelen usarse durante la verificación para evaluar el cumplimiento del objetivo.\\
+% Los requerimientos técnicos incluyen los tecnológicos y los funcionales.
+% }
+
+
+
+\noindent\textbf{Requerimientos funcionales:}
+\begin{enumerate}
+    \item Medir glucosa, lactato, cortisol y pH en sudor de forma no invasiva mediante el parche sensor descartable y el módulo electrónico reutilizable de lectura y comunicación. El pH se utilizará como referencia para la calibración de las demás zonas. Estas mediciones deberán distinguirse de cualquier estimación de glucosa sanguínea.
+    \item Medir frecuencia cardíaca, actividad física y temperatura de piel mediante la pulsera, como contexto fisiológico.
+    \item Evaluar por separado dos modos propuestos como objetivos de diseño para estimar la evolución de la glucosa: corto plazo (30 a 60 minutos) y horizonte extendido (1 a 8 horas). En ambos modos se deberá indicar el horizonte temporal y la incertidumbre, sin presuponer su viabilidad ni un nivel de precisión ya alcanzado.
+    \item Identificar factores probablemente asociados a una variación (alimentación, estrés o actividad física), aclarando que el resultado no establece causalidad clínica.
+    \item Presentar información y avisos al usuario acordes con el uso previsto, a cerrar en S1--S6, sin emitir recomendaciones automáticas de tratamiento. La pulsera mostrará el estado de la última lectura conforme a la sección~\ref{sec:uso-dispositivos}.
+    \item Transmitir los datos del módulo electrónico reutilizable y de la pulsera al teléfono por BLE, con una sincronización nominal cada dos minutos, igual al intervalo de lectura procesada y de actualización de la pulsera. Ante una pérdida del enlace, conservar localmente en cada dispositivo al menos 24 horas de datos (estimación: 45 KiB por día y por dispositivo) y transmitir el bloque acumulado al restablecerse BLE.
+    \item Definir, antes de evaluar el desempeño, la referencia correspondiente a cada salida, incluidas las mediciones en sudor y cualquier estimación de glucosa sanguínea.
+    \item Mantener la solución como complemento de los CGM y cerrar en S6 si los modelos dependerán de datos de un CGM y cómo se realizará esa integración.
+\end{enumerate}
+
+\noindent\textbf{Requerimientos técnicos}
+\par\medskip
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{xltabular}{\textwidth}{|>{\raggedright\arraybackslash}p{0.28\textwidth}|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Componente} & \textbf{Requerimiento} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Componente} & \textbf{Requerimiento} \\
+\hline
+\endhead
+Zona glucosa (parche sensor descartable) & Colorimétrica --- reactivo cromogénico específico \\
+\hline
+Zona lactato (parche sensor descartable) & Colorimétrica --- reactivo cromogénico específico \\
+\hline
+Zona pH (parche sensor descartable) & Colorimétrica --- referencia/calibración de las demás zonas \\
+\hline
+Zona cortisol (parche sensor descartable) & Electroquímica --- polímero de impronta molecular (MIP) \\
+\hline
+Parche sensor descartable & Papel tratado hidrofílica/hidrofóbicamente, plegado tipo origami (microfluídica de papel, bajo costo), incluidas sus zonas con reactivos y su soporte adhesivo. Recambio del parche sensor completo cada siete días, con estabilidad de reactivos, adhesión y desempeño durante ese período \\
+\hline
+Lector óptico & Sensor de color para las zonas colorimétricas del parche sensor descartable, integrado en el módulo electrónico reutilizable \\
+\hline
+Front-end electroquímico & Circuito simple de un solo canal (potenciostato) dedicado a la zona de cortisol, integrado en el módulo electrónico reutilizable \\
+\hline
+Sensor óptico (pulsera) & PPG para frecuencia cardíaca y sensor de temperatura de piel; ambos integrados en la pulsera reutilizable \\
+\hline
+IMU (pulsera) & Acelerómetro + giróscopo para detección de actividad/movimiento \\
+\hline
+Indicador visual (pulsera) & LED RGB: verde, amarillo y rojo según la última lectura; consulta de tres segundos por gesto; doble amarillo ante datos ausentes o vencidos. Ver sección~\ref{sec:uso-dispositivos}\\
+\hline
+Microcontrolador & Bajo consumo, procesa lecturas ópticas y electroquímicas, calibración adaptativa; integrado en el módulo electrónico reutilizable \\
+\hline
+Comunicación & BLE del lector y de la pulsera al teléfono cada dos minutos; enlace directo lector--pulsera con cada lectura válida. Alcance requerido de hasta 10 m en el perfil de uso especificado, con los equipos colocados en el cuerpo y el teléfono en el bolsillo \\
+\hline
+Almacenamiento local y sincronización & Buffer de al menos 24 horas por dispositivo (estimación: 45 KiB/día). Sincronización cada 2 minutos si BLE está disponible; al reconectar, envío en bloque de los datos acumulados. Memoria circular: conserva registros hasta llenarse y luego sobrescribe los más antiguos. Se identifican pérdidas de registros todavía no sincronizados. Retención en memoria no volátil ante apagado. \\
+\hline
+Procesamiento de IA & Modelos a evaluar por separado: estimación temporal (30 a 60 minutos y 1 a 8 horas) e identificación de factores probablemente asociados, sin causalidad clínica. Ejecución local en el teléfono o remota en la nube, coordinada por la aplicación; selección en S6 según costos y requisitos de funcionamiento \\
+\hline
+Alimentación & Batería recargable de bajo consumo en el módulo electrónico reutilizable y en la pulsera reutilizable; autonomía requerida de siete días con lectura procesada cada dos minutos, sincronización al teléfono cada dos minutos y BLE directo activo. Carga USB-C; baterías de 750 mAh por lector y 850 mAh en la pulsera. \\
+\hline
+Fuente y accesorios & Fuente USB-C de un puerto, comprada terminada, con 5 V y al menos 0,5 A disponibles en su salida; dos cables incluidos. Carga con el puerto seco. \\
+\hline
+Protección ambiental & Requisito IP68 de las envolventes completas, con USB-C desconectado; inmersión de diseño a 1,5 m durante 30 minutos y ensayo IP6X. Verificación adicional de sudor, corrosión y adhesión\\
+\hline
+\end{xltabular}
+\par}
+
+
+
+
+\subsubsection{Uso de los dispositivos y continuidad de los datos}\label{sec:uso-dispositivos}
+El kit permite alternar dos lectores mientras se recargan por USB-C. La fuente incluida tiene un solo puerto: se carga un dispositivo por vez, según su nivel de batería. El lector de reserva puede recargarse mientras se utiliza el otro, y la pulsera durante el descanso. Se conservan los dos cables del kit, uno de ellos disponible como repuesto. La fuente de un puerto se compra como producto terminado y se selecciona por compatibilidad con ambos dispositivos; no se diseña dentro del proyecto. Cada dispositivo incorpora un controlador de carga, protección de batería y supervisión térmica. Se adopta como referencia de cálculo una corriente de carga de 250 mA, compatible con una fuente de un puerto de 5 V y al menos 0,5 A en su salida. La selección definitiva deberá respetar la ficha de la celda y los límites térmicos del dispositivo.
+
+Como referencia ideal, el tiempo se obtiene dividiendo la capacidad por la corriente: $t=C/I$. Con $C$ en mAh e $I$ en mA, el resultado queda en horas: $750/250=3{,}0$ h para el lector y $850/250=3{,}4$ h para la pulsera. Esta cuenta supone corriente constante, sin consumo simultáneo del equipo. La carga real de una celda de litio incluye una etapa final de tensión constante en la que la corriente disminuye; por eso esos valores no predicen el tiempo de carga completa.\footnote{\href{https://www.ti.com/document-viewer/lit/html/SSZTA38}{Texas Instruments, fases de corriente constante y tensión constante en la carga de baterías}.} El tiempo efectivo se determinará con la celda y el controlador seleccionados, considerando temperatura y estado inicial. No se exige carga rápida: la pulsera puede cargarse durante el descanso y el lector de reserva mantiene la disponibilidad del sistema. Una fuente de mayor potencia no reduce por sí sola el tiempo permitido por la batería.
+
+Para cambiar de lector, la aplicación sincroniza los datos disponibles, identifica la unidad cargada y confirma su calibración antes de declararla activa. Solo el lector seleccionado como activo alimenta el indicador de la pulsera. Los datos pendientes del lector retirado se agregan al historial con su fecha original, sin reemplazar la lectura actual ni duplicar registros. El cambio puede producir un intervalo breve sin medición, que puede señalarse en la aplicación según el diseño final de la interfaz. Durante la recarga de la pulsera se interrumpen sus señales y su LED; el lector continúa registrando y puede enviar datos al teléfono.
+
+\paragraph{Protección frente a agua, polvo y sudor}
+Se establece IP68 según IEC 60529 como objetivo de las envolventes electrónicas completas. Para el diseño se propone IP6X contra polvo e inmersión a 1,5 m durante 30 minutos, con el cable USB-C desconectado. Esas condiciones de profundidad y duración se acordarán con el laboratorio para el ensayo IPX8; no son un valor universal de la norma ni una autorización para cualquier uso bajo agua.\footnote{\href{https://webstore.iec.ch/en/publication/2452}{IEC 60529, grados de protección de envolventes}.}
+
+El conector deberá estar sellado en condición desconectada y su unión con la carcasa se verificará después de ciclos de conexión y recambio. El ensayo abarcará el dispositivo terminado. Se comprobarán por separado resistencia al sudor, corrosión y adhesión, porque el grado IP no demuestra esas propiedades. La captación de sudor del parche permanecerá accesible y la carga se realizará con el puerto seco. Durante el diseño se evaluará incorporar detección de humedad en el puerto y un aviso en la aplicación, con inhibición local de la carga si el hardware lo permite. La aplicación no puede detectar por sí sola un puerto mojado: necesita una señal del dispositivo. Esta función queda como alternativa a evaluar; mientras no se implemente y pruebe, se indicará al usuario revisar y secar el puerto antes de conectar el cable.
+
+\paragraph{Adquisición, memoria y comunicación}
+El lector genera un registro procesado cada dos minutos y lo envía a la pulsera en cuanto existe una lectura válida. El teléfono recibe una sincronización nominal cada dos minutos de ambos dispositivos. Las señales de la pulsera pueden adquirirse internamente a mayor frecuencia, pero el presupuesto de almacenamiento corresponde a resúmenes cada dos minutos, no a señales crudas continuas.
+
+Cada registro incluye dispositivo de origen, lector activo, número de secuencia, fecha, valor, unidad y calidad. Estos campos permiten ordenar el historial, descartar duplicados y recuperar bloques pendientes después de una desconexión. Los datos atrasados se incorporan al historial sin reemplazar el indicador actual por una lectura antigua. La pulsera muestra ausencia de datos si pasan más de cuatro minutos sin una lectura válida del lector activo.
+
+La puesta en marcha requiere un teléfono con la aplicación: desde allí se vinculan los dos lectores y la pulsera, se selecciona el lector activo y se transfiere la configuración del indicador.\footnote{Esta configuración inicial requiere el celular. Una vez completada, el enlace directo lector--pulsera permite consultar el LED sin mantener el teléfono conectado. El alta de la cuenta y la activación del kit requieren además conexión a Internet.} La pulsera determina el color a partir del valor y la calidad recibidos y de una tabla de rangos identificada por versión, configurada desde la aplicación. La tabla identifica la variable y su unidad; un rango de glucosa sanguínea no se aplica directamente a una medición en sudor. Si falta una configuración válida, la pulsera utiliza el patrón de datos no disponibles. Este cálculo local permite consultar el indicador sin tener el teléfono conectado y evita depender de una predicción en la nube para mostrar la lectura actual.
+
+Con 64 bytes por registro y 720 registros diarios, cada dispositivo requiere aproximadamente 45 KiB por día. Se reservan al menos 128 KiB utilizables de memoria no volátil para datos, índices y metadatos. Se implementará un buffer circular: los registros no se borran al cumplir 24 horas, sino que se conservan hasta que sea necesario reutilizar espacio. Cuando la memoria se llena, se sobrescriben los registros más antiguos; si aún no se habían sincronizado, la aplicación identifica el intervalo perdido. Se garantizan al menos 24 horas con el formato y la frecuencia nominales. Los 128 KiB incluyen índices y metadatos, por lo que no se promete una duración adicional exacta. La verificación prevista de memoria y comunicación se detalla al final de esta sección.
+
+\paragraph{Indicador RGB y aplicación}
+El LED describe la última lectura válida; la aplicación conserva el historial y presenta la interpretación, los avisos actuales y las predicciones. Los umbrales y la variable representada deberán fijarse con la referencia correspondiente en S1--S6 y validarse antes de habilitar el semáforo para uso clínico.
+\begin{center}\begin{tabularx}{\linewidth}{lX}\toprule
+Estado & Interpretación\\\midrule
+Verde & Lectura válida dentro del rango establecido: no se detectan desvíos en esa lectura. Es una indicación favorable del dato disponible, no una evaluación general de salud.\\
+Amarillo & Lectura próxima a un límite o que requiere atención. Consultar la aplicación.\\
+Rojo & Lectura anómala. Consultar la aplicación y verificar con el método de referencia indicado.\\
+Doble amarillo & Datos ausentes, no válidos o de más de cuatro minutos. Consultar el estado del sistema.\\\bottomrule
+\end{tabularx}\end{center}
+El LED permanece apagado en reposo y se activa durante tres segundos mediante un gesto deliberado detectado por la IMU, por ejemplo un giro rápido de muñeca. El movimiento y su sensibilidad se ajustarán durante las pruebas de uso para que resulte cómodo y evite activaciones involuntarias. El rojo agrega un destello de 100 ms cada diez segundos mientras la lectura siga vigente. Ante datos vencidos deja de repetirse ese rojo y se utiliza el patrón de ausencia. Se prevé una corriente de 1 mA para el indicador; su visibilidad deberá comprobarse en las condiciones de uso.
+
+\paragraph{Cuenta y activación del kit}
+El acceso incluido a la aplicación será exclusivo para compradores del kit y se habilitará mediante su activación. El usuario creará una cuenta con correo electrónico verificado. Para habilitar las funciones del producto deberá registrar un kit adquirido, mediante su número de serie y un código de activación o una comprobación de posesión por BLE; conocer un número de serie por sí solo no habilitará la cuenta. El registro asociará la pulsera y los dos lectores al usuario y evitará que un mismo equipo quede activo en cuentas distintas.
+
+La aplicación guiará la primera configuración: vinculación de los dispositivos, selección del lector activo y envío de los rangos del indicador. El alta y la recuperación de la cuenta utilizarán un servicio de autenticación en Internet. La medición, el almacenamiento local y el enlace lector--pulsera seguirán funcionando sin Internet después de la activación; las funciones remotas indicarán cuándo no están disponibles. Se contemplarán recuperación de acceso, cambio de teléfono y transferencia de propiedad con desvinculación de la cuenta anterior. El servicio de cuentas es independiente de la alternativa de IA local o remota. Como posible ampliación comercial, se podrá evaluar una licencia de aplicación para personas que no compren el dispositivo, con funciones y fuentes de datos propias. Esa alternativa no forma parte del alcance, del precio ni de las ventas previstas en este plan.
+
+\paragraph{Presupuesto de energía}
+Las baterías se mantienen en 750 mAh por lector y 850 mAh en la pulsera. Con una reserva de capacidad del 20\% y una duración requerida de 168 horas, los límites medios de diseño se calculan como $0{,}8C/168$: 3,57 mA para el lector y 4,05 mA para la pulsera. Estos límites provienen de la capacidad y del objetivo de autonomía; no son consumos medidos. Se adoptan presupuestos preliminares de 3,5 mA y 4,0 mA, que darían 171 y 170 horas si se alcanzan en la práctica.
+
+Los consumos de adquisición, procesamiento y radio todavía no se conocen por ensayo del conjunto. El intercambio BLE cada dos minutos debe incluirse en el perfil de ensayo; su consumo depende de la duración de las conexiones y de la cantidad de datos transmitidos. El enlace directo y la señalización necesitan margen dentro del presupuesto total. Se asignan preliminarmente 0,2 mA al lector y 0,3 mA a la pulsera para esas funciones, dejando 3,3 y 3,7 mA para el resto. Si se agregaran a los consumos anteriores sin reducir otras cargas, la autonomía bajaría a unas 162 y 158 horas. Las asignaciones de consumo son hipótesis de planificación y deben contrastarse con ensayos reales. La autonomía de siete días se mantiene como requisito: si el consumo medido excede los límites, habrá que reducirlo o revisar la batería. La elección de USB-C no modifica la energía que almacena la batería.
+
+El destello rojo consume 0,01 mA en promedio; treinta consultas diarias de tres segundos agregan aproximadamente 0,0011 mA. Estos consumos están incluidos en el presupuesto total, no se suman nuevamente.
+
+\paragraph{Verificaciones previstas para estos requisitos}
+Durante el desarrollo se realizarán las siguientes pruebas, incluidas en las tareas del plan:
+\begin{itemize}
+\item \textbf{Carga y autonomía (S16--S17).} Medir un ciclo completo de carga, corriente y temperatura con la fuente comprada. Comprobar al menos 168 horas de uso con lecturas cada dos minutos, sincronización cada dos, enlace directo, IMU y LED. El perfil incluirá treinta consultas diarias y el patrón rojo; cualquier exceso de consumo requiere corregir el diseño.
+\item \textbf{Memoria y enlaces (S11--S15).} Conservar 24 horas de datos ante desconexión y apagado, recuperar el historial sin duplicados, cambiar de lector y mantener el indicador actualizado. Comprobar el alcance especificado con los equipos en su posición de uso.
+\item \textbf{Protección ambiental (S18).} Evaluar las envolventes completas según las condiciones IP68 definidas y comprobar por separado sudor, corrosión, ciclos de conexión y adhesión.
+\item \textbf{Indicador y gesto (S19 y regresión del MVP).} Comprobar colores, caducidad a cuatro minutos, doble amarillo, visibilidad y consulta cómoda sin activaciones involuntarias.
+\end{itemize}
+Estas pruebas verifican requisitos ya definidos del producto y aportan evidencia para aceptar el prototipo y el MVP.
+
+
+\subsubsection{Diseño preliminar del producto}
+
+% Consigna de la cátedra conservada en el fuente:
+% {\consigna
+% En este apartado debe ir completándose el diseño preliminar. Es un primer bosquejo de diseño que permite tomar dimensión del proyecto y una primera propuesta a alto nivel de solución para cumplir el objetivo y atender los requerimientos.\\
+% Esta sección lleva más tiempo completarla porque implica la elaboración de un diseño de circuito, sistema, partes, etc.\\
+% Puede contener diagramas en bloque, especificación de partes y demás detalles que den certidumbre sobre la posibilidad de realización. No es necesario que tenga todo el detalle tecnológico.
+% }
+
+
+
+El dispositivo del brazo reúne el parche y su lector. El parche distribuye el sudor hacia las zonas colorimétricas de glucosa, lactato y pH y hacia la zona electroquímica de cortisol. El lector ilumina y mide las zonas de color y utiliza un potenciostato para la zona de cortisol. La pulsera aporta las señales de contexto. La Figura~\ref{fig:arquitectura-sistema} muestra cómo ambos equipos se comunican con la aplicación y cómo el lector envía la lectura actual directamente a la pulsera.
+
+La aplicación distingue mediciones, asociaciones con hábitos y predicciones, cada una con su referencia y sus límites de interpretación.
+
+La aplicación central se ejecutará en el teléfono del usuario y recibirá los datos del módulo electrónico reutilizable y la pulsera. Para ejecutar los modelos de IA se evaluarán dos alternativas: procesamiento local\footnote{La alternativa local requiere un modelo predictivo suficientemente ligero para ejecutarse en el teléfono dentro de sus límites de memoria, consumo y tiempo de respuesta.} en el teléfono o procesamiento remoto en un servicio en la nube, al que la aplicación enviaría los datos necesarios y del que recibiría los resultados. La elección se realizará durante el diseño detallado, comparando los costos de implementación y operación, la capacidad de procesamiento del teléfono, el tiempo de respuesta, la disponibilidad de conexión a Internet y los requisitos de privacidad y protección de datos. La decisión se cerrará en S6 y quedará registrada con los requisitos de funcionamiento sin conexión. Si se elige la nube, deberá definirse el comportamiento del sistema ante la pérdida de conexión, indicando al usuario qué funciones no estarán disponibles.
+
+Los intervalos de comunicación, el almacenamiento y el presupuesto de energía se especifican en la sección~\ref{sec:uso-dispositivos}. Se requiere un alcance BLE de hasta 10 m en el perfil de uso especificado, incluyendo el teléfono en el bolsillo.
+
+Como se definió en el alcance, se reemplaza el parche completo: papel, reactivos y soporte adhesivo. El lector se desacopla y se conserva. El objetivo de siete días entre recambios exige validar estabilidad, adhesión y desempeño, además de las instrucciones de colocación y retiro.
+
+El diseño preliminar se presenta mediante diagramas por objeto.
+La Figura~\ref{fig:parche-descartable} muestra el parche sensor
+ descartable; la Figura~\ref{fig:lector-reutilizable}, el lector
+reutilizable del brazo; la Figura~\ref{fig:pulsera-reutilizable},
+la pulsera; la Figura~\ref{fig:aplicacion-movil}, la aplicación
+móvil; y la Figura~\ref{fig:caja-producto}, el paquete del sensor.
+La Figura~\ref{fig:arquitectura-sistema} resume el flujo de datos y las dos alternativas de procesamiento. Las líneas discontinuas indican el procesamiento remoto: la aplicación intercambia los datos necesarios y los resultados con la nube mediante Internet (Wi-Fi o datos móviles); los dispositivos se comunican con el teléfono por BLE y el lector activo mantiene además un enlace directo con la pulsera para actualizar el LED con cada lectura válida, nominalmente cada dos minutos. Ese enlace se configura inicialmente desde la aplicación. La aplicación y la pulsera se actualizan nominalmente cada dos minutos; si falta conexión, los registros pendientes se recuperan después. Si se elige IA local, el procesamiento se realiza en el teléfono.
+
+
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[bloque/.append style={text width=4.1cm,minimum height=1.7cm},font=\small]
+\node[bloque] (lector) at (-3.6,0) {\textbf{Dispositivo del brazo}\\Parche descartable + lector activo\\Glucosa, lactato, cortisol y pH};
+\node[bloque] (banda) at (3.6,0) {\textbf{Pulsera}\\Señales fisiológicas\\LED RGB de la última lectura};
+\node[bloque] (app) at (0,-3.5) {\textbf{Aplicación móvil}\\Cuenta y activación del kit\\Historial, calidad y avisos\\Análisis local, si se selecciona};
+\node[externo,text width=4.1cm] (nube) at (0,-6.2) {\textbf{Nube opcional}\\Análisis remoto si se selecciona};
+\draw[flujo,arrows={Stealth-Stealth}] (lector.east)--node[rotulo,above,align=center]{BLE directo\\lectura / 2 min}(banda.west);
+\draw[flujo] (lector.south)--++(0,-.8)-|node[rotulo,pos=.2,left]{Sync BLE / 2 min}([xshift=-1.1cm]app.north);
+\draw[flujo] (banda.south)--++(0,-.8)-|node[rotulo,pos=.2,right]{Sync BLE / 2 min}([xshift=1.1cm]app.north);
+\draw[flujo,dashed,arrows={Stealth-Stealth}] (app.south)--node[rotulo,right]{Internet: datos y resultados}(nube.north);
+\end{tikzpicture}
+\caption{Arquitectura del sistema. Lectura procesada cada dos minutos y sincronización al teléfono cada dos minutos. La configuración inicial de los enlaces requiere la aplicación. El procesamiento remoto es una alternativa a decidir en S6; el servicio de cuentas se utiliza para el alta y la activación.}
+\label{fig:arquitectura-sistema}
+\end{figure}
+
+
+
+
+
+
+
+\begin{figure}[H]
+    \centering
+    \resizebox{\linewidth}{!}{%
+    \begin{tikzpicture}
+    \node[titulo] at (-1.5,4.4) {Parche descartable};
+    \node[externo] (sudor) at (0,0) {Sudor\\de la piel};
+    \node[sensor] (cap) at (3.6,0) {Captación\\y distribución\\en papel};
+    \node[sensor] (glu) at (8,2.7) {Zona de glucosa\\Reactivo};
+    \node[sensor] (lac) at (8,.9) {Zona de lactato\\Reactivo};
+    \node[sensor] (ph) at (8,-.9) {Zona de pH\\Indicador};
+    \node[sensor] (cor) at (8,-2.7) {Zona de cortisol\\Electrodos y MIP};
+    \node[externo] (opt) at (13.1,.9) {Lectura óptica\\por el lector};
+    \node[externo] (ele) at (13.1,-2.7) {Lectura eléctrica\\por el lector};
+    \draw[flujo] (sudor)--(cap);
+    \draw[relacion] (cap.east)--(5.6,0);
+    \draw[relacion] (5.6,-2.7)--(5.6,2.7);
+    \foreach \n in {glu,lac,ph,cor} {\draw[flujo] (5.6,0|-\n.west)--(\n.west);}
+    \draw[relacion] (glu.east)--(10.1,2.7)--(10.1,-.9)--(ph.east);
+    \draw[relacion] (lac.east)--(10.1,.9);
+    \draw[flujo] (10.1,.9)--node[rotulo,above]{Color}(opt.west);
+    \draw[flujo] (cor.east)--node[rotulo,above]{Señal eléctrica}(ele.west);
+    \node[font=\sffamily\small,text=tpazul] (base) at (5.8,-4.1) {Soporte y adhesivo en contacto con la piel};
+    \begin{scope}[on background layer]
+        \node[marco,fit=(cap)(glu)(lac)(ph)(cor)(base)] {};
+    \end{scope}
+    \end{tikzpicture}}
+    \caption{Esquema funcional del parche sensor descartable: captación y distribución del sudor, zonas de sensado y lecturas óptica y electroquímica realizadas por el módulo reutilizable.}
+    \label{fig:parche-descartable}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+\node[titulo] at (-1.5,2.4) {Lector reutilizable del brazo};
+\node[externo] (color) at (0,.9) {Zonas de color\\del parche};
+\node[externo] (cort) at (0,-.9) {Electrodos\\del parche};
+\node[bloque] (optica) at (4,.9) {Iluminación\\y sensor de color};
+\node[bloque] (pot) at (4,-.9) {Potenciostato\\Lectura eléctrica};
+\node[bloque,text width=2.65cm] (mc) at (8.1,0) {Microcontrolador\\Adquisición\\y calibración};
+\node[bloque,text width=1.8cm] (ble) at (11.8,0) {Enlace\\BLE};
+\node[externo,text width=1.9cm] (app) at (15,0) {Aplicación\\y pulsera};
+\node[energia,text width=6cm] (pwr) at (7.7,-3.2) {Batería recargable\\USB-C sellado, carga\\protección y regulación};
+\draw[flujo] (color)--(optica);
+\draw[flujo,arrows={Stealth-Stealth}] (cort)--(pot);
+\draw[flujo] (optica.east)--++(.5,0)|-([yshift=.27cm]mc.west);
+\draw[flujo] (pot.east)--++(.5,0)|-([yshift=-.27cm]mc.west);
+\draw[flujo,arrows={Stealth-Stealth}] (mc)--(ble);
+\draw[flujo,arrows={Stealth-Stealth}] (ble)--(app);
+\draw[potencia] (pwr.north)--(pwr.north|-mc.south);
+\draw[potencia] (pwr.west)--(2.2,-3.2)--(2.2,.45)--([yshift=-.45cm]optica.west);
+\draw[potencia] (2.2,-1.35)--([yshift=-.45cm]pot.west);
+\draw[potencia] (pwr.east)-|(ble.south);
+\node[rotulo] at (10.5,-2.05) {Energía};
+\node[font=\sffamily\small,text=tpazul] (base) at (7.5,-4.4) {Carcasa opaca y acople al parche};
+\begin{scope}[on background layer]
+\node[marco,fit=(optica)(pot)(mc)(ble)(pwr)(base)] {};
+\end{scope}
+\end{tikzpicture}}
+\caption{Diagrama de bloques del lector reutilizable del brazo. Las flechas discontinuas indican alimentación eléctrica. Fuente: elaboración propia.}
+\label{fig:lector-reutilizable}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+\node[titulo] at (-1.5,4.8) {Pulsera reutilizable};
+\node[sensor] (ppg) at (0,2.5) {Sensor óptico PPG\\Frecuencia cardíaca};
+\node[sensor] (imu) at (0,.5) {Acelerómetro\\y giróscopo};
+\node[sensor] (tmp) at (0,-1.5) {Temperatura\\de piel};
+\node[bloque,text width=2.65cm] (mc) at (5.2,.5) {Microcontrolador\\Adquisición y filtrado\\Detección de gesto};
+\node[bloque] (led) at (5.2,3) {LED RGB\\Estado de lectura};
+\draw[flujo] (mc.north)--(led.south);
+\node[bloque] (ble) at (9.1,.5) {Comunicación\\BLE};
+\node[externo] (app) at (13,.5) {Aplicación\\y lector activo};
+\node[energia,text width=5.5cm] (pwr) at (5.5,-3.6) {Batería recargable\\USB-C sellado, carga\\protección y regulación};
+\draw[flujo] (ppg.east)--(2.3,2.5)|-([yshift=.38cm]mc.west);
+\draw[flujo] (imu)--(mc);
+\draw[flujo] (tmp.east)--(2.3,-1.5)|-([yshift=-.38cm]mc.west);
+\draw[flujo,arrows={Stealth-Stealth}] (mc)--(ble);
+\draw[flujo,arrows={Stealth-Stealth}] (ble)--(app);
+\draw[potencia] (pwr.north)--(pwr.north|-mc.south);
+\draw[potencia] (pwr.east)-|(ble.south);
+\draw[potencia] (pwr.west)--(-2.1,-3.6)--(-2.1,2.5)--(ppg.west);
+\draw[potencia] (-2.1,.5)--(imu.west);
+\draw[potencia] (-2.1,-1.5)--(tmp.west);
+\node[rotulo] at (6.7,-2.15) {Energía};
+\node[font=\sffamily\small,text=tpazul] (base) at (4.3,-4.85) {Carcasa, contacto con la piel y correa};
+\begin{scope}[on background layer]
+\node[marco,fit=(ppg)(imu)(tmp)(mc)(led)(ble)(pwr)(base),inner xsep=22pt] {};
+\end{scope}
+\end{tikzpicture}}
+\caption{Diagrama de bloques de la pulsera reutilizable. El LED RGB indica el estado de la última lectura válida; la IMU permite consultarlo mediante un gesto. Las flechas discontinuas indican alimentación eléctrica. Fuente: elaboración propia.}
+\label{fig:pulsera-reutilizable}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+\node[titulo] at (-1.5,2.2) {Aplicación móvil};
+\node[externo] (in) at (0,0) {Datos del lector\\y de la pulsera};
+\node[bloque] (rx) at (3.9,0) {Recepción\\por BLE};
+\node[bloque] (prep) at (7.8,0) {Sincronización\\y control de calidad};
+\node[bloque] (model) at (11.7,0) {Análisis\\y estimaciones};
+\node[bloque] (hist) at (7.8,-2.5) {Historial\\de mediciones};
+\node[bloque] (ui) at (11.7,-2.5) {Visualización\\y avisos};
+\node[externo] (usr) at (15.6,-2.5) {Usuario};
+\draw[flujo] (in)--(rx);
+\draw[flujo] (rx)--(prep);
+\draw[flujo] (prep)--(model);
+\draw[flujo] (prep)--(hist);
+\draw[flujo] (hist.east)--++(.5,0)|-([yshift=-.4cm]model.west);
+\draw[flujo] (model)--(ui);
+\draw[flujo] (hist.south)--++(0,-.65)-|(ui.south);
+\draw[flujo] (ui)--(usr);
+\begin{scope}[on background layer]
+\node[marco,fit=(rx)(prep)(model)(hist)(ui),inner ysep=24pt] {};
+\end{scope}
+\end{tikzpicture}}
+\caption{Diagrama funcional de la aplicación móvil. El análisis podrá ejecutarse en el teléfono o mediante un servicio remoto, según la alternativa seleccionada. Fuente: elaboración propia.}
+\label{fig:aplicacion-movil}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+\node[titulo] at (-1.6,2.3) {Caja del producto};
+\node[bloque,text width=3.2cm] (caja) at (5.5,.3) {Caja exterior};
+\node[bloque,text width=3.2cm] (guia) at (0,-2.3) {Guía de inicio\\y manual};
+\node[bloque,text width=3.2cm] (proteccion) at (5.5,-2.3) {Protección interna\\y alojamientos};
+\node[bloque,text width=3.2cm] (etiqueta) at (11,-2.3) {Etiquetas\\e identificación};
+\node[externo,text width=3.2cm] (equipos) at (0,-5.4) {Dos lectores y una pulsera};
+\node[externo,text width=3.2cm] (parche) at (5.5,-5.4) {Dos parches\\en sobres individuales};
+\node[externo,text width=3.2cm] (accesorios) at (11,-5.4) {Fuente USB-C de un puerto comprada\\y dos cables};
+\draw[relacion] (caja.south)--(5.5,-1.05);
+\draw[relacion] (0,-1.05)--(11,-1.05);
+\draw[relacion] (0,-1.05)--(guia.north);
+\draw[relacion] (5.5,-1.05)--node[rotulo,right]{Contiene}(proteccion.north);
+\draw[relacion] (11,-1.05)--(etiqueta.north);
+\draw[relacion] (proteccion.south)--(5.5,-3.8);
+\draw[relacion] (0,-3.8)--(11,-3.8);
+\draw[relacion] (0,-3.8)--(equipos.north);
+\draw[relacion] (5.5,-3.8)--node[rotulo,right]{Aloja y protege}(parche.north);
+\draw[relacion] (11,-3.8)--(accesorios.north);
+\end{tikzpicture}}
+\caption{Organización preliminar del paquete del sensor. Las líneas indican relaciones de contenido y alojamiento. Fuente: elaboración propia.}
+\label{fig:caja-producto}
+\end{figure}
+
+
+
+
+El costo por componente se resume en la Tabla~\ref{tab:costo-kit}. El desarrollo de la aplicación forma parte de la dotación presupuestada en la sección~\ref{sec:presupuesto-programa}; sus tareas y horas se detallan en la planificación y en el Excel.
+
+\FloatBarrier
+\paragraph{Análisis AMFE (preliminar)}
+\label{sec:amfe-preliminar}
+
+% Consigna de la cátedra conservada en el fuente:
+% {\consigna
+% Aquí debe incorporarse el Análisis AMFE preliminar e ir enriqueciéndolo a lo largo del diseño y desarrollo del proyecto.
+% }
+
+
+
+
+{\footnotesize
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.18\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.22\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.18\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.13\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.29\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|}
+\hline
+\textbf{Componente / función} & \textbf{Modo de falla} & \textbf{Efecto} & \textbf{Severidad} & \textbf{Mitigación propuesta} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Componente / función} & \textbf{Modo de falla} & \textbf{Efecto} & \textbf{Severidad} & \textbf{Mitigación propuesta} \\
+\hline
+\endhead
+Zonas colorimétricas (glucosa, lactato, pH) & Interferencia por condiciones de luz ambiente al leer el color & Medición imprecisa & Media & Lector con carcasa que aísla luz ambiente, o calibración por referencia de color interna \\
+\hline
+Zonas colorimétricas & Degradación del reactivo cromogénico por humedad o tiempo de almacenamiento & Lectura nula o errónea & Media & Empaque sellado, indicación de vida útil, control de lote en fabricación \\
+\hline
+Secuenciado de reacciones (plegado de papel) & Plegado incorrecto por parte del usuario al colocar el parche sensor descartable & Mezcla de zonas, lectura cruzada & Media & Diseño de plegado guiado mecánicamente (una sola forma posible de doblar) \\
+\hline
+Zona cortisol (MIP electroquímico) & Baja especificidad, interferencia de otras moléculas del sudor & Asociación incorrecta con estrés & Media & Evaluar especificidad y contrastar con señales de contexto; no presentar el resultado como diagnóstico ni como causalidad clínica \\
+\hline
+Comunicación BLE & Pérdida de conexión con el teléfono o entre lector y pulsera & Interrupción de datos o aviso no emitido & Media & Sincronización al teléfono cada 2 min; enlace directo con cada lectura válida. Memoria local de 24 h, recuperación al reconectar y patrón de datos vencidos en la pulsera \\
+\hline
+Batería (módulo electrónico reutilizable o pulsera) & Descarga antes de lo esperado & Vacío de datos, pérdida de contexto & Media & Diseño de bajo consumo e indicador de batería baja; verificar autonomía objetivo de 7 días en el perfil nominal de uso \\
+\hline
+USB-C y carcasa & Agua o sudor en el puerto; falla de sellado & Corrosión, calentamiento o pérdida de función & Alta & Cargar con puerto seco; verificar conjunto IP68, corrosión, temperatura y protección de carga \\
+\hline
+Alternancia de lectores & Lector incorrecto activo o datos duplicados & Historial mezclado o indicador erróneo & Alta & Identificador, secuencia y fecha; confirmar cambio en la aplicación; probar recuperación de ambas unidades \\
+\hline
+LED RGB & Verde con lectura vencida o interpretación incorrecta & Falsa tranquilidad o demora en consultar & Alta & Caducidad a cuatro minutos, doble amarillo y validación de umbrales y comprensión; aplicación como interfaz principal \\
+\hline
+Modelo de factores asociados (IA) & Asociación incorrecta entre una variación y un factor de contexto & Información o aviso inadecuado al usuario & Alta & Presentar factores como probablemente asociados, informar incertidumbre y evitar inferencias causales o recomendaciones automáticas de tratamiento \\
+\hline
+\end{longtable}
+}
+
+\subsubsection{Inventario de los diferentes aspectos a cubrir}
+
+% Consigna de la cátedra conservada en el fuente:
+% {\consigna
+% En este apartado debe enumerarse y describirse todos los aspectos involucrados en el proyecto que son necesarios para cumplir el objetivo.\\
+% Dependiendo del objetivo, será la cantidad de aspectos a tener en cuenta.\\
+% Se mencionan algunos ejemplos que podrían aplicar:
+%
+% \begin{itemize}
+% \setlength{\itemsep}{3 pt}
+%     \item Línea de Producción / fabricación
+%     \item QA
+%     \item Soporte
+%     \item Repuestos, Entrenamiento
+%     \item Servicios Especializados
+% \end{itemize}
+% }
+
+
+
+
+\begin{itemize}
+    \item \textbf{Compras y proveedores:} especificaciones comprables, al menos una alternativa para componentes críticos, cotizaciones vigentes, mínimos de compra, plazos, órdenes, transporte, seguro, importación, despacho, recepción y registro de desvíos.
+    \item \textbf{Línea de producción/fabricación:} fabricación de parches sensores descartables de papel plegado (microfluídica de papel), incluidas sus zonas con reactivos y su soporte adhesivo, y ensamblado del módulo electrónico reutilizable de lectura óptica/electroquímica y comunicación y de la pulsera reutilizable.
+    \item \textbf{QA:} control de calidad por lote de reactivos cromogénicos, calibración de color de cada lector, calibración de cada unidad de pulsera, identificación de lote y criterios de aceptación de recepción y preserie.
+    \item \textbf{Pruebas:} verificación funcional y técnica de batería, consumo medio y pico, memoria y retención, BLE, recuperación de datos, montaje, robustez, recambio, calibración, interferencias y repetibilidad. Toda falla o limitación se registra antes de repetir el ensayo.
+    \item \textbf{Soporte:} atención a usuarios ante fallas de sincronización, dudas sobre plegado y recambio del parche sensor descartable, acoplamiento del módulo electrónico reutilizable o interpretación de la información y los avisos; mantenimiento del módulo electrónico y de la pulsera reutilizables y actualización de firmware remota.
+    \item \textbf{Repuestos:} provisión y recambio del parche sensor descartable completo (papel, zonas con reactivos y soporte adhesivo), con recambio objetivo cada 7 días.
+    \item \textbf{Entrenamiento:} capacitación a usuarios y profesionales para efectuar el recambio del parche sensor y el acoplamiento del módulo electrónico, e interpretar las mediciones, estimaciones, incertidumbres y avisos dentro del uso previsto.
+    \item \textbf{Servicios especializados:} laboratorio de química/bioquímica para seleccionar reactivos cromogénicos existentes, adaptar su formulación e inmovilización en el soporte de papel y validar su desempeño en sudor; para la zona de cortisol, preparación e integración del MIP a partir de protocolos publicados, con evaluación de selectividad y estabilidad. No se plantea desarrollar nuevas químicas de detección desde cero, sino adaptar soluciones existentes al dispositivo propuesto.
+\end{itemize}
+
+\subsection{Evaluación de factibilidad de negocio}
+
+% Consigna de la cátedra conservada en el fuente:
+% {\consigna
+% Esta sección aborda la evaluación de Negocio, analizando los aspectos relacionados con la receptividad o posibilidades de adopción del resultado del proyecto por parte de los destinatarios del mismo y las posibilidades de realización desde lo organizacional, legal, económico y demás cuestiones no tecnológicas que deban considerarse.
+% }
+
+
+
+
+
+
+\subsubsection{Análisis FODA}
+
+% Consigna de la cátedra conservada en el fuente:
+% {\consigna
+% Esta sección incorpora un análisis FODA del proyecto (del resultado del proyecto).\\
+% Esta sección, como todas, es dinámica y se enriquece a lo largo del desarrollo del proyecto.
+% }
+
+
+
+El análisis considera la capacidad de ejecución del proyecto. Las fortalezas y debilidades corresponden al equipo y su organización; las oportunidades y amenazas, al entorno en el que se desarrollará.
+
+\noindent\textbf{Fortalezas}
+\begin{itemize}
+    \item Dotación de cuatro personas a tiempo completo durante dieciocho meses: ingeniería de software, sistemas embebidos, QA y laboratorio, con responsabilidades definidas.
+    \item Capacidad interna para integrar electrónica, firmware, aplicación y datos bajo protocolos y criterios de aceptación comunes.
+    \item Sistema de gestión con requisitos, responsables, hitos, evidencias de prueba y trazabilidad entre decisiones técnicas, riesgos, costos y cronograma.
+    \item Modelo operativo y financiero integrado que vincula compras, producción, inventario, embudo comercial y flujo de fondos mediante supuestos editables.
+\end{itemize}
+
+\noindent\textbf{Oportunidades}
+\begin{itemize}
+    \item Posibilidad de atender a personas con diabetes tipo 2 o prediabetes que busquen comprender mejor la relación entre sus hábitos cotidianos y las variaciones de glucosa, mediante una propuesta de seguimiento complementario y personalizado.
+    \item Posibilidad de establecer alianzas con clínicas y profesionales de salud interesados en evaluar herramientas de seguimiento entre consultas, validar la utilidad de la información contextual y definir cómo presentar los avisos.
+    \item Interés en el uso de biomarcadores para el monitoreo de enfermedades crónicas.
+\end{itemize}
+
+\noindent\textbf{Debilidades}
+\begin{itemize}
+    \item Experiencia práctica e infraestructura especializadas limitadas en biosensores, dispositivos médicos, IA clínica, regulación e industrialización; el proyecto depende de laboratorios y asesores externos.
+    \item Desempeño aún no demostrado: el proyecto no cuenta con un prototipo integrado ni validación propia que permita comprobar la calidad de las mediciones y de las predicciones propuestas.
+\end{itemize}
+
+\noindent\textbf{Amenazas}
+\begin{itemize}
+    \item Acceso insuficiente o condicionado a datos sincronizados y referencias adecuadas para especificar y evaluar los modelos.
+    \item Fabricantes de CGM u otros desarrolladores podrían incorporar funciones de interpretación contextual o asociación de eventos antes de que el proyecto alcance una versión comercial, reduciendo su diferenciación.
+    \item Exigencias de evidencia, seguridad y autorización aplicables al uso previsto podrían extender plazos y costos.
+    \item Usuarios, clínicas o financiadores podrían no considerar suficiente el beneficio adicional frente al precio inicial y al costo recurrente de parches.
+    \item Proveedores, importación, disponibilidad de laboratorio o financiamiento externo podrían demorar el cronograma.
+\end{itemize}
+
+
+
+
+
+\subsubsection{Riesgos de ejecución}
+Este análisis evalúa los eventos que pueden impedir el cumplimiento del programa, tanto por dificultades internas como por condiciones externas. El AMFE de la sección~\ref{sec:amfe-preliminar} trata las fallas del producto. Se utiliza una escala ordinal de severidad ($S$) y ocurrencia ($O$), de 1 a 10: 1--3 bajo, 4--6 medio, 7--8 alto y 9--10 crítico. La severidad expresa desde un impacto absorbible hasta la inviabilidad del objetivo; la ocurrencia expresa desde un evento remoto hasta uno observado o inminente. No representa porcentajes.
+
+El índice de prioridad es $S\times O$, con umbral de seguimiento de 25. Los valores iniciales son estimaciones del equipo: todavía no hay experiencia de campo suficiente para tratarlos como frecuencias. Los valores residuales son objetivos condicionados a ejecutar las acciones, no reducciones demostradas.
+
+{\small\renewcommand{\arraystretch}{1.2}
+\begin{xltabular}{\linewidth}{l X l l}\toprule
+ID & Riesgo, fundamento y acción & $S\times O$ & Residual objetivo\\\midrule
+\endfirsthead
+\toprule ID & Riesgo, fundamento y acción & $S\times O$ & Residual objetivo\\\midrule\endhead
+R1 & \textbf{Sensado e integración.} Rangos, interferencias, estabilidad y calibración aún no están demostrados. Laboratorio y electrónica deben contrastarlos con referencias, integrar el prototipo y repetir pruebas ante desvíos. & $9\times6=54$ & $9\times4=36$\\
+R2 & \textbf{Datos para modelos.} No hay una fuente confirmada de registros sincronizados y referencias suficientes. Software debe cerrar acceso, dependencia de CGM y evaluación separada de los modelos en S6; sin datos adecuados se limita la función. & $8\times6=48$ & $8\times4=32$\\
+R3 & \textbf{Especialistas y financiación.} La experiencia propia y la infraestructura son limitadas. Coordinación debe confirmar laboratorios, centro, asesores y fondos, con alternativas antes de comprometer cada hito. & $8\times6=48$ & $8\times4=32$\\
+R4 & \textbf{Esfuerzo y alcance.} Las disciplinas comparten recursos y tienen dependencias. El equipo revisa horas reales, reserva y cambios cada sprint, y reprograma antes de sobrecargar una persona o dejar incompleta la integración. & $7\times5=35$ & $7\times3=21$\\
+R5 & \textbf{Coherencia documental.} Un cambio puede dejar desactualizados requisitos, costos o pruebas. QA coordina una revisión cruzada de informe, tareas, versiones e indicadores en cada hito. & $6\times5=30$ & $6\times2=12$\\
+R6 & \textbf{Competencia.} Otros productos pueden incorporar funciones similares antes del lanzamiento. Coordinación revisa alternativas y diferenciación; se acepta provisionalmente con seguimiento. & $6\times4=24$ & $6\times4=24$\\
+R7 & \textbf{Uso y aceptación del precio.} La complejidad del recambio y los USD 800 iniciales pueden reducir la adopción. QA y coordinación evalúan usabilidad y receptividad con usuarios y aliados, y revisan demanda y costos con los resultados. & $7\times5=35$ & $7\times4=28$\\
+R8 & \textbf{Evidencia y autorización.} El uso previsto, la clasificación y las observaciones pueden exigir más trabajo o demorar ventas. Coordinación y asesores preparan el encuadre desde el inicio, distinguen investigación de comercialización y actualizan calendario y caja. & $8\times5=40$ & $8\times4=32$\\
+\bottomrule\end{xltabular}}
+
+R1, R2, R3, R7 y R8 permanecen por encima del umbral incluso en el escenario residual y deben seguir abiertos. R4 y R5 solo bajan de prioridad cuando se compruebe la ejecución de sus acciones. Los riesgos se revisan en los meses 3, 6, 7, 10, 12 y 18; una fecha planificada no justifica cerrar un riesgo sin evidencia.
+
+\subsection{Análisis de mercado y financiero}
+
+% Consigna de la cátedra conservada en el fuente:
+% {\consigna
+% En esta subsección se aborda el mercado destinatario del proyecto, la receptividad a la adopción y los aspectos financieros o de soporte relacionados con la realización y éxito del proyecto.
+% }
+
+
+
+\subsubsection{Análisis de mercado y público objetivo}
+
+% Consigna de la cátedra conservada en el fuente:
+% {\consigna
+% En este apartado debe describirse de forma cualitativa quiénes son los usuarios finales del proyecto y quiénes son los adquirentes del proyecto, teniendo en cuenta que pueden diferir.\\
+% También debe describirse la forma en que ese público satisface actualmente las prestaciones que dará el proyecto y cómo lo hace, cuál es el esfuerzo o costo que asume para ello.\\
+% También debe dimensionarse de alguna forma el mercado potencial.\\
+% Luego de leer esta sección, el lector deberá tener un entendimiento holístico del usuario final y adquirente: sus necesidades, expectativas, exigencias y motivaciones relacionadas con el proyecto.
+% }
+
+
+
+Para dimensionar el público potencial en Argentina se toma como referencia la población con diabetes, en lugar de extrapolar directamente la facturación mundial del mercado de monitoreo continuo de glucosa. La Federación Internacional de Diabetes estima que en 2024 había aproximadamente 4,3 millones de personas de entre 20 y 79 años con diabetes en Argentina.\footnote{Federación Internacional de Diabetes, \textit{IDF Diabetes Atlas}, 11.\textsuperscript{a} edición, 2025, capítulo 4: estimaciones para América del Sur y Central correspondientes a 2024.} Como referencia general, la diabetes tipo 2 representa entre el 90\% y el 95\% de los casos de \textit{diabetes mellitus}.\footnote{F. J. Tébar Massó y F. Escobar Jiménez, \textit{La Diabetes en la Práctica Clínica}, Ed. Médica Panamericana, 1.\textsuperscript{a} edición, 2009, ISBN 9788498355253.} Si se aplica ese rango de manera orientativa al total estimado por la FID, se proyectan entre 3,9 y 4,1 millones de personas de 20 a 79 años con diabetes tipo 2 en Argentina, es decir, alrededor de 4 millones. Se trata de una extrapolación y no de un conteo ni de una estimación específica de diabetes tipo 2 para el país; el total de la FID incluye distintos tipos de diabetes y casos diagnosticados y no diagnosticados.
+
+Esta proyección orienta sobre la población con diabetes tipo 2; no incluye prediabetes ni determina el mercado accesible del sistema. Para estimarlo se deberá relevar uso de CGM, acceso a un teléfono compatible, cobertura y disposición a pagar por el complemento. La previsión de ventas utiliza supuestos de aliados, pacientes alcanzables y adopción; no equivale a un relevamiento del mercado argentino.
+
+El usuario final previsto es la persona con diabetes tipo 2 o prediabetes que ya usa o considera usar un CGM y busca relacionar sus variaciones con información de contexto. El adquirente puede ser el propio paciente, una obra social/prepaga o una clínica que ofrezca el servicio como parte de un programa de seguimiento. Hoy, este público intenta interpretar esas relaciones mediante consultas, registros manuales de comidas y actividad o aplicaciones de terceros. El sistema busca complementar esas fuentes mediante la identificación de factores probablemente asociados, sin sustituir la evaluación profesional ni establecer causalidad clínica.
+
+\subsubsection{Análisis de competidores y sustitutos}
+
+% Consigna de la cátedra conservada en el fuente:
+% {\consigna
+% En este apartado debe describirse de qué otra forma los usuarios finales pueden satisfacer las prestaciones que el proyecto genera.\\
+% Esto incluye una descripción de competidores existentes y de soluciones sustitutas.\\
+% Debe contemplarse que no hacer nada también puede ser una opción válida para el usuario final.
+% }
+
+
+
+La Tabla~\ref{tab:competidores-sustitutos} compara las principales
+alternativas con el producto propuesto. Los nombres incluyen
+enlaces a las fuentes oficiales.
+
+\begin{table}[H]
+\centering
+\caption{Comparación de alternativas con el producto propuesto.}
+\label{tab:competidores-sustitutos}
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{
+    |>{\raggedright\arraybackslash}p{0.22\linewidth}
+    |>{\raggedright\arraybackslash}X
+    |>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Alternativa} &
+\textbf{Qué ofrece} &
+\textbf{Contraste con el producto propuesto} \\
+\hline
+
+\href{https://www.dexcom.com/en-us/g7/how-it-works}
+{Dexcom G7} &
+Monitoreo continuo de glucosa, tendencias y alertas
+de descenso urgente. &
+El proyecto busca complementar el seguimiento de glucosa
+con biomarcadores del sudor y señales de la pulsera. \\
+\hline
+
+\href{https://www.freestyle.abbott/es-es/productos/conectividad/freestyle-libre-3-app.html}
+{FreeStyle Libre 3} &
+Lecturas automáticas de glucosa cada minuto
+y consulta desde la aplicación. &
+La propuesta incorpora lactato, cortisol y pH,
+además de glucosa en sudor, para aportar contexto
+al seguimiento. \\
+\hline
+
+\href{https://www.accu-chek.co.uk/support/faq/how-does-2-hour-glucose-prediction-function-work}
+{SmartGuide + Predict} &
+Predicción de glucosa a dos horas basada en datos
+del CGM y registros del usuario. &
+El proyecto propone evaluar estimaciones con señales
+del parche y la pulsera. La dependencia de datos
+de un CGM se decidirá en S6. \\
+\hline
+
+\href{https://www.levels.com/}{Levels} &
+Información sobre la relación entre hábitos
+y salud metabólica. &
+Comparte el interés por aportar contexto.
+El proyecto propone obtener información mediante
+el sensado conjunto del sudor y de señales fisiológicas. \\
+\hline
+
+\href{https://www.mysugr.com/diabetes-app}{mySugr} &
+Registro de glucosa, comidas y actividad. &
+La aplicación propuesta recibe automáticamente
+las mediciones del parche y la pulsera,
+además de organizar su historial. \\
+\hline
+\end{tabularx}
+\endgroup
+\end{table}
+
+También son sustitutos los registros manuales y las consultas profesionales sin incorporar otro dispositivo. El usuario puede mantener su seguimiento actual y no adquirir el complemento, evitando su costo y la tarea de recambiar parches. Por eso, el sensado conjunto del sudor y de señales fisiológicas deberá demostrar una utilidad adicional que justifique su adopción.
+
+
+
+\FloatBarrier
+
+\subsubsection{Preanálisis de costos y precios}
+Esta sección resume el costo de un kit, los recursos necesarios hasta el lanzamiento y el flujo de caja de cuatro años; el detalle de componentes, supuestos y cálculos se encuentra en la planilla Excel. Se presupuestan dieciocho meses de trabajo y se proyectan ventas desde el mes 19, sujetas a las autorizaciones. Los valores permiten evaluar la inversión y la rentabilidad del escenario de venta a USD 800 por kit.
+
+\paragraph{Costos directos e indirectos}
+
+Se prevé un lote comercial inicial de 100 kits que hayan aprobado los controles de calidad (QA), separado de las unidades de ensayo. Las PCB se cotizarán con proveedores de fabricación y montaje en China. Cada kit incluye dos lectores reutilizables, una pulsera, dos parches iniciales, fuente USB-C de un puerto, dos cables, empaque y documentación.
+
+Los valores son estimaciones en USD por unidad.
+La selección electrónica utiliza modelos comerciales de referencia y asignaciones presupuestarias para lotes de unas 100 unidades. Los valores por conjunto no constituyen cotizaciones vigentes de cada componente.
+La fabricación, las carcasas y los procesos se estiman
+por lote y se distribuyen entre las unidades.
+
+
+\input{Economia actualizada.tex}

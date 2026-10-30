@@ -1,0 +1,31 @@
+\section{Definición del proyecto}
+El proyecto busca desarrollar un sistema de seguimiento metabólico complementario para personas con diabetes tipo 2 o prediabetes. El producto reúne cuatro componentes: un parche sensor descartable, un lector reutilizable que se acopla al parche, una pulsera reutilizable y una aplicación móvil.
+
+El parche permite obtener glucosa, lactato, cortisol y pH del sudor mediante lecturas ópticas y electroquímicas. La pulsera aporta señales de frecuencia cardíaca, actividad y temperatura de piel. La aplicación organiza estas mediciones y evalúa su relación con alimentación, estrés y actividad física. Se investigarán dos horizontes de predicción: 30 a 60 minutos y 1 a 8 horas. Cada uno tendrá su propia evaluación de desempeño e incertidumbre.
+
+El uso previsto inicial es aportar información complementaria al seguimiento de glucosa. La especificación de las salidas, sus referencias, los umbrales de aceptación y la eventual dependencia de datos de un CGM se cerrará en los sprints S1--S6, con asesoramiento clínico y regulatorio. Esta decisión condiciona el desarrollo de los modelos y la evidencia necesaria para autorizar el producto.
+
+\subsection{Misión y visión}
+\noindent\textbf{Misión.} Integrar mediciones del sudor y señales fisiológicas en una herramienta que facilite comprender y seguir las variaciones metabólicas, con información clara sobre sus límites.
+
+\noindent\textbf{Visión.} Desarrollar una solución de seguimiento contextual respaldada por evidencia técnica y clínica. Las futuras funciones, incluidas las relacionadas con otras complicaciones de la diabetes, requerirán objetivos y validación propios.
+
+\subsection{Objetivo y alcance}
+El objetivo es entregar un MVP técnico integrado en doce meses, con adquisición de señales, registro local, comunicación BLE, historial y avisos implementados y verificados. El hito intermedio es un prototipo funcional en el mes 7. El programa continúa hasta el mes 18 para completar evaluaciones, responder observaciones y preparar el lanzamiento. El cumplimiento del MVP técnico no equivale a la autorización de comercialización.
+
+El kit comercial incluirá una pulsera, dos lectores reutilizables, dos parches descartables iniciales, una fuente USB-C comercial de un puerto, dos cables y documentación. La fuente se comprará terminada; el proyecto desarrolla los circuitos de carga internos del lector y de la pulsera. La segunda unidad del lector permite alternar equipos durante la recarga. El parche descartable no contiene batería y se especifica para siete días de uso, con estabilidad de los reactivos, adhesión y desempeño adecuados durante ese período.
+
+La aplicación será la interfaz principal para el historial, la interpretación y los avisos actuales y predictivos. La pulsera mostrará el estado de la última lectura mediante un LED RGB. Durante su recarga se interrumpen las señales de la muñeca y el indicador portátil; el lector puede continuar registrando y comunicándose con el teléfono. La aplicación identificará los intervalos sin datos o sin contexto.
+
+\subsection{Entregables y criterios de cierre}
+La aceptación del MVP verificará los cuatro componentes y su funcionamiento conjunto:
+\begin{enumerate}
+\item \textbf{Parche descartable.} Parche con zonas de sensado, soporte y adhesivo, identificado por lote y diseñado para siete días de uso. Su aceptación exige cumplir los criterios de calibración, interferencias, estabilidad y adhesión durante ese período.
+\item \textbf{Lector reutilizable.} Electrónica, carcasa y firmware capaces de adquirir una lectura procesada cada dos minutos, conservar al menos 24 horas y transmitir por BLE al teléfono y a la pulsera. Incluye alternancia entre los dos lectores del kit, carga USB-C y autonomía de siete días.
+\item \textbf{Pulsera.} Sensores, firmware, LED RGB y enlace BLE directo con el lector. Incluye adquisición de señales fisiológicas, consulta del LED por gesto, identificación de datos vencidos, carga USB-C y autonomía de siete días.
+\item \textbf{Aplicación.} Versión instalable en la plataforma seleccionada durante S1--S6, con cuenta, activación del kit, configuración inicial, vinculación BLE, historial, recuperación de datos, avisos y ayuda. Las funciones predictivas tendrán criterios de aceptación propios y su incorporación a la versión comercial dependerá de los resultados de evaluación y del uso autorizado.
+\end{enumerate}
+
+Las tolerancias analíticas y los criterios clínicos se fijarán antes de los ensayos, en la matriz de requisitos de S1--S6. La sección de planificación relaciona estas entregas con sus tareas, responsables y horas.
+
+Las unidades de desarrollo e investigación estarán separadas del lote comercial de 100 kits previsto para el mes 18. La liberación comercial requiere, además del cierre técnico, completar las evaluaciones y autorizaciones aplicables. Si ese cierre se demora, se desplazan las ventas y se revisa el presupuesto.
