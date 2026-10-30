@@ -1,15 +1,134 @@
-Actualización 29/10/2026
-Origen: comentarios.txt, diez marcas rojas del LaTeX y decisiones de la conversación.
-C01. USB-C y accesorios. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
-C02. Dos lectores y dos descartables. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
-C03. Protección IP68 y sudor. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
-C04. BLE directo y diagramas. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
-C05. LED y gesto. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
-C06. Autonomía y frecuencia. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
-C07. Cuatro frentes y sprints. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
-C08. Evaluación y autoridades. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
-C09. 18 meses y ventas desde 19. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
-C10. Conciliación y flujo mensual. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
-Las pruebas de producto son actividades planificadas, no ensayos realizados.
+ESTADO: inventario actualizado tras la revisión de contenido, tareas y cálculos. El LaTeX y el Excel contienen las correcciones; el PDF corresponde a la compilación anterior. Las imágenes se usarán desde Prism y no se conservan copias locales.
 
-Verificación de entrega: 195 tareas, 39 sprints, 160 h/mes por recurso; ventas desde mes 19; precio USD 800; capital USD 373.342,10; VAN USD 99.564,11; TIR 34,59%. Sin errores de fórmula en valores exportados. No se compiló LaTeX.
+INVENTARIO DE CORRECCIONES — REVISIÓN DE CONTENIDO
+Revisión: 30/10/2026
+
+Fuentes: comentarios.txt, diez anotaciones rojas recuperadas del ZIP original y decisiones aprobadas en la conversación.
+“Resuelto en el plan” significa que la especificación, las tareas o los cálculos están definidos. No significa que se haya fabricado, ensayado o autorizado un producto.
+
+R01. Anotación roja en requerimientos funcionales: evaluar LED RGB.
+Respuesta: sección Uso de los dispositivos, tabla de estados. Verde/rango válido, amarillo/atención, rojo/verificación con referencia, doble amarillo/datos ausentes o vencidos. La pulsera clasifica con una tabla de rangos y unidades versionada desde la app. Sin configuración válida no muestra verde.
+Cierre: resuelto como especificación. La selección y validación de los umbrales clínicos se programa en requisitos y evaluación; no se inventan umbrales de salud.
+
+R02. Anotación roja en la fila Indicador visual.
+Respuesta: fila completada; gesto de tres segundos, destello rojo de 100 ms cada diez segundos y caducidad a cuatro minutos. La app sigue siendo interfaz principal.
+Cierre: resuelto en el texto; no queda una celda vacía.
+
+R03. Anotación roja en Alimentación: modalidad y tiempo de carga.
+Respuesta: USB-C en los tres equipos electrónicos. Fuente de un puerto de 5 V y al menos 0,5 A; corriente preliminar de carga 250 mA. Cuenta ideal C/I: lector 3,0 h y pulsera 3,4 h; no representa la duración completa de la carga CC/CV. No se exige carga rápida.
+Cierre: resuelto como selección y estimación de diseño; ensayo de carga, temperatura y compatibilidad previsto.
+
+R04. Anotación roja en Protección ambiental.
+Respuesta: IP68 como objetivo de envolventes completas según IEC 60529, IP6X y propuesta de inmersión a 1,5 m/30 min para acordar con laboratorio. Conector desconectado, unión sellada, carga en seco; sudor, corrosión y adhesión por separado; captación del parche accesible.
+Cierre: fila y explicación completas; cumplimiento no afirmado antes del ensayo.
+
+R05. Anotación roja en el diagrama de pulsera.
+Respuesta: LED representado como bloque conectado al microcontrolador; IMU para gesto; USB-C y enlace al lector activo representados.
+Cierre: resuelto en el fuente y comprobado visualmente en el PDF compilado. Los enlaces del lector y de la pulsera muestran ambos sentidos de comunicación.
+
+R06. Anotación roja en empaque/costos: comparar carga inalámbrica.
+Respuesta: la decisión posterior del usuario descarta esa comparación y adopta exclusivamente USB-C. Fuente, cables, conectores, sellado y control térmico presupuestados.
+Cierre: resuelto por decisión de alcance; no corresponde conservar la pregunta sobre carga inalámbrica.
+
+R07. Anotación roja en empaque/costos: dos descartables y respaldo.
+Respuesta: kit con una pulsera, dos lectores de 750 mAh, dos descartables, fuente de un puerto, dos cables y documentación. El descartable no tiene batería. Alternancia, lector activo, datos atrasados y breve intervalo de cambio documentados.
+Cierre: resuelto en definición, especificaciones, diagramas y costo directo de USD 194,57.
+
+R08. Anotación roja de planificación: subtareas, backlog y Gantt.
+Respuesta: 199 tareas específicas en 39 sprints, cuatro frentes y tareas transversales. Cada tarea tiene ID, responsable, dependencias, horas por recurso, salida, aceptación y condición externa. El informe muestra ciclos y ejemplo S14.
+Cierre: las 199 tareas están guardadas y contrastadas en el Excel revisado; sus dependencias, horas y entregables coinciden con el registro de trabajo.
+
+R09. Anotación roja del roadmap: carga y contenido del kit.
+Respuesta: secuencia de selección, montaje, medición de carga, compatibilidad de fuente/cables y verificación del kit. Lote comercial de 100 kits aceptados separado de diez kits previstos de ensayo.
+Cierre: especificación y tareas incorporadas al Excel. Las unidades de prueba y el lote comercial tienen presupuesto separado.
+
+R10. Anotación roja de pruebas: carga inalámbrica y protección.
+Respuesta: plan de pruebas de USB-C, temperatura, autonomía, IP68, sudor y corrosión; cada cambio exige revisar evidencia técnica y regulatoria.
+Cierre: resuelto como plan de verificación; no se presentan ensayos inexistentes.
+
+DECISIONES ADICIONALES CONTRASTADAS
+C01. Frecuencia: lectura procesada cada dos minutos; teléfono cada dos minutos; pulsera recibe cada lectura válida sin esperar al teléfono. Memoria 64 bytes/registro, 45 KiB/día, mínimo 128 KiB utilizables. Señales crudas de pulsera no incluidas en esa estimación.
+C02. Autonomía: baterías de 750/850 mAh conservadas. Se explicita que agregar BLE/LED sin reducir otros consumos daría 162/158 h; para alcanzar siete días se debe respetar el presupuesto de 3,5/4 mA. Hay tareas de medición.
+C03. Continuidad: dos lectores y una sola pulsera. Durante su carga faltan contexto y LED; lector y app pueden continuar. Historial no inventa continuidad.
+C04. Cronograma: prototipo M7, MVP técnico M12, cierre previsto M18, ventas desde M19. Preparación regulatoria desde desarrollo; presentaciones desde prototipo; investigación y comercialización diferenciadas.
+C05. Autoridades: ANMAT, comité de ética, centro investigador y ENACOM con competencias separadas. Revisión de software, fabricante/importador y radio. Referencias oficiales incorporadas. Mes 18 no es plazo garantizado.
+C06. Recursos: cuatro personas, 160 h/mes cada una hasta M18. Tareas revisadas: 8.856,40 h; capacidad disponible 2.663,60 h; mayor carga individual mensual 158,80 h. Estimaciones preliminares, no tiempos medidos. Salarios no duplicados por tarea. La carga de QA del mes 17 requiere seguimiento.
+C07. Economía: se conserva precio USD 800, recambio USD 25 y demanda base. Se distingue costo directo, logística, merma y margen. Las unidades de ensayo están dentro del presupuesto y se explicita la simplificación de cuatro recambios mensuales. La conciliación histórica no aparece en el informe académico.
+C08. Escenarios comerciales: se vincularon los gastos de personal comercial y difusión al selector y se corrigió el recálculo de las fórmulas importadas en los años 2 y 3. Las pruebas de los tres escenarios y del cambio de un supuesto del tercer año pasaron.
+C09. Redacción: párrafos de definición, arquitectura, energía, riesgos, economía y planificación reescritos; referencias a tablas inexistentes eliminadas; equipo a M18 unificado; resumen ejecutivo incorporado a main.tex. Las consignas de la evaluación quedan como comentarios del fuente, fuera de la lectura del informe.
+
+VERIFICACIÓN
+Sin comentarios rojos activos; sin referencias LaTeX faltantes; llaves y entornos balanceados por revisión estática. Dependencias de las 199 tareas existentes y anteriores al sprint dependiente; ninguna persona supera su capacidad mensual.
+El contraste del flujo base guardado coincide con VAN USD 119.928,98 y capital mínimo USD 368.813,16. El libro guardado no presenta errores de fórmula en sus valores almacenados. Se corrigieron la duplicación de mano de obra cubierta por nómina y la base de cargos de importación. La TIR anual equivalente es 37,36%. El precio de planificación se conserva en USD 800.
+LaTeX revisado estáticamente en esta pasada, sin compilar. El PDF conserva la compilación anterior. No se probó el archivo en la aplicación nativa Excel.
+
+PUNTOS QUE SIGUEN SIENDO TRABAJO DEL PROYECTO
+Cerrar en S1–S6 las tolerancias analíticas, umbrales clínicos, referencia de evaluación, plataforma y dependencia de CGM; seleccionar celdas y proveedores; obtener cotizaciones; realizar ensayos; diseñar y autorizar el estudio; validar demanda a USD 800. Son tareas previstas, no resultados que esta revisión pueda demostrar.
+
+BACKLOG: se incorporan 42 historias, 12 features y 6 épicas, cuenta/activación y detalle de componentes. Los enlaces de publicación permanecen a completar por indicación del usuario.
+
+CONTRASTE DIRECTO FINAL CON LAS FUENTES — 30/10/2026
+
+PDF ORIGINAL DEL DOCENTE
+Fuente: Plan_Grupo_3_V3 - MARTINA MONTI verion con comentarios del docente.pdf.
+Se leyeron directamente las 17 anotaciones con texto del archivo. Las páginas siguientes son físicas, contando la portada. Respuesta documental no equivale a aprobación posterior del docente.
+
+P01 (p. 18). Fortalezas del proyecto, no beneficios del producto: FODA, apartado Fortalezas, describe equipo, integración, gestión y trazabilidad.
+P02 (p. 19). Acortar FODA: categorías con listas breves; se simplificó también el párrafo introductorio.
+P03 (p. 19). Justificar “mercado no atendido”: se retiró la afirmación; Mercado distingue población de referencia, segmento accesible y previsión de demanda.
+P04 (p. 20). Dificultad de uso como debilidad: ya no figura entre las debilidades; se trata en el riesgo R7 y en las pruebas de usabilidad.
+P05 (p. 20). Integración/calibración es riesgo, no amenaza externa: se ubica en R1. La introducción de Riesgos distingue eventos internos y condiciones externas.
+P06 (p. 20). Redacción clara: definición, requisitos, uso, pruebas, riesgos, costos y planificación revisados; se quitaron frases que describían el proceso de edición.
+P07 (p. 21). Revisar ponderación: Riesgos explica escala S/O, umbral 25, valores preliminares y acciones. Los riesgos residuales no se presentan como reducciones demostradas ni como ponderaciones aprobadas por el docente.
+P08 (p. 28). Autonomía: Presupuesto de energía calcula límites 3,57/4,05 mA con reserva del 20% y presupuestos preliminares de 3,5/4,0 mA; se prevén ensayos de 168 h.
+P09 (p. 28). Explicar armado/programación/prueba: Economía desglosa 25 min por lector y 21 min por pulsera, con tarifa de USD 14,5833/h. El parche conserva una estimación identificada como tal.
+P10 (p. 29). Coeficiente 1,50: no se confunde con un tributo. El presupuesto vigente separa merma del 10%, reserva técnica del 10% sobre su base definida y logística/importación.
+P11 (p. 31). Máximo de horas poco razonable: se retiró el antiguo máximo deliberadamente alto. Las horas se estiman por tarea y perfil, con su origen y revisión posterior explícitos.
+P12 (p. 31). Horas coherentes con plan: las 199 tareas, ciclos, ejemplo S14, historias, features y épicas suman 8.856,40 h. Controles mensual y quincenal sin excedentes.
+P13 (p. 33). Desarrollo demasiado corto: el desarrollo técnico ocupa doce meses; prototipo intermedio M7, MVP M12 y programa hasta M18.
+P14 (p. 33). Dedicación menor a 1,5 personas: cuatro personas, 160 h/mes por persona hasta M18; 11.520 h de capacidad y nómina por USD 201.600.
+P15 (p. 34). Comparar los cuatro años: tabla de cuatro años en Resumen nuevo!A44:E52 y ahora también en Economía, “Resumen del flujo de cuatro años”. Se muestran kits, ingresos, egresos, flujo anual y acumulado; el año 2 incluye seis meses de ventas.
+P16 (p. 34). Flujo sin revisión detallada: fórmulas, escenarios, fechas, stock, salarios y métricas contrastados; se corrigieron pagos del lote y redondeo. Esto no presume aprobación del flujo por el docente.
+P17 (p. 37). Planificar MVP/producto, no solo prototipo: Definición y Planificación distinguen prototipo M7, MVP M12, evaluación, lote comercial, autorizaciones y venta desde M19.
+
+COMENTARIOS.TXT Y MARCAS ROJAS
+- Las cinco líneas de comentarios.txt remiten a marcas rojas, desglose, cuatro frentes y carga/baterías. Se verificaron los cuatro frentes en el informe y en las tareas; el detalle incluye secuencia, recursos, dependencias y aceptación.
+- El ZIP fuente original contiene diez marcas \textcolor{red}: siete en Evaluación y tres en Planificación. R01–R10 de este inventario explican su resolución.
+- Las preguntas sobre carga inalámbrica se resuelven con la decisión posterior de usar solo USB-C. La fuente final es de un puerto, comprada terminada.
+- El kit contiene tres baterías: una por cada uno de los dos lectores y una en la pulsera. Los dos parches descartables no contienen batería.
+- No quedan marcas rojas activas en los .tex vigentes.
+
+CORRECCIONES POSTERIORES DEL USUARIO
+Primera ronda de 43 anotaciones:
+1–7: requisitos expresados como producto previsto, siete días, ventas condicionadas, fuente comprada y entregables claros.
+8–10: tabla técnica completa, estados del LED explicados y alcance BLE formulado como requisito.
+11–12: cálculo de carga explicado y lector activo diferenciado de datos históricos.
+13–16: protección y memoria conservadas; pruebas futuras reunidas en apartado propio.
+17–20: gesto deliberado, visibilidad, pruebas de consumo y modelo local ligero.
+21–23: intervalos identificados, enlace para el LED, configuración inicial con celular y cuenta/activación del kit.
+24–27: QA explicado, título de costo simplificado, componentes concretos y párrafo introductorio de economía.
+28–35: sin relato de conciliación histórica en el informe, enlaces a completar, merma de 112 a 100 explicada, sin referencias a hojas retiradas y límites del flujo explícitos.
+36–40: tareas y perfiles, origen de estimaciones, IDs explicados, planificación sin Gantt y jerarquía de historias/features/épicas.
+41–43: etapas regulatorias, explicación del diseño del estudio y captación de médicos/clínicas desde M9.
+
+Segunda ronda de 16 anotaciones:
+1 y 5: fuente económica de un puerto; dos cables, uno de respaldo.
+2: t=C/I con unidades y límites de la aproximación; se retiró el factor 1,2 sin sustento específico.
+3: visualización del intervalo de cambio de lector opcional en el informe y en T152.
+4: detección de humedad como alternativa a evaluar, condicionada a hardware; no se promete detección solo con la app.
+6: memoria circular que conserva hasta necesitar espacio y luego sobrescribe los registros más antiguos.
+7: verde como indicación favorable de la lectura disponible.
+8: aplicación incluida exclusiva de compradores; licencia separada solo como alternativa futura.
+9: consumos presupuestados, no medidos; autonomía sujeta a los ensayos reales.
+10: apartado explícito de verificaciones conservado.
+11: lectura y sincronización nominales unificadas a dos minutos.
+12: economía presentada como resumen del detalle del Excel.
+13: alternativas de componentes y asignaciones identificadas; no se presenta una BOM cerrada ni precios cotizados.
+14: sprints, backlog e hitos, sin Gantt.
+15: cobertura cruzada y herramientas de IA con revisión humana, sin descontar horas ni personas por anticipado.
+16: padres y sumas de las 42 historias, 12 features y seis épicas comprobados.
+
+ESTADO FINAL DE ESTA REVISIÓN
+Se incorporó al informe la tabla anual ya calculada en el Excel y se simplificó la redacción del FODA, riesgos y presupuesto. No se modificaron las cifras ni las tareas del Excel.
+Los dos enlaces de publicación permanecen a completar por instrucción del usuario. Ensayos, cotizaciones, umbrales y autorizaciones son trabajo futuro expresamente planificado, no correcciones documentales omitidas.
+No se compiló. El PDF conservado no incorpora las últimas modificaciones. No se generaron imágenes ni nuevos archivos auxiliares en el repositorio.

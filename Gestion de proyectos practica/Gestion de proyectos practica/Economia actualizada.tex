@@ -1,6 +1,6 @@
-\subsubsection{Costeo actualizado y preparación del lanzamiento}
-Los importes se expresan en USD constantes. Se conservan como referencias los costos del libro original y se incorporan asignaciones preliminares para los cambios de producto. Las asignaciones deberán sustituirse por cotizaciones antes de comprar.
-\begin{table}[H]\centering\caption{Costo directo del kit USB-C, en USD.}\label{tab:costo-lector}\label{tab:costo-pulsera}\label{tab:costo-parche}\label{tab:costo-caja}\label{tab:costo-kit}\begin{tabular}{lrrr}\hline
+\paragraph{Composición del costo del kit}
+Los importes se expresan en USD constantes y corresponden a una estimación presupuestaria. La selección preliminar y los costos asignados por componente o conjunto se presentan a continuación; deberán confirmarse con cotizaciones antes de comprar.
+\begin{table}[H]\centering\caption{Costo directo del kit, en USD.}\label{tab:costo-kit}\begin{tabular}{lrrr}\hline
 Concepto & Cantidad & USD/unidad & USD/kit\\\hline
 Lector: materiales y procesos & 2 & 55,30 & 110,60\\
 Lector: terminación, programación y prueba & 2 & 6,08 & 12,16\\
@@ -8,24 +8,85 @@ Pulsera: materiales y procesos & 1 & 33,65 & 33,65\\
 Pulsera: terminación y prueba & 1 & 5,10 & 5,10\\
 Parche descartable completo & 2 & 11,33 & 22,66\\
 Caja y protección interior & 1 & 1,80 & 1,80\\
-Fuente USB-C dual & 1 & 10,00 & 10,00\\
+Fuente USB-C de un puerto & 1 & 5,00 & 5,00\\
 Cable USB-C & 2 & 1,50 & 3,00\\
 Guía y etiquetas & 1 & 0,60 & 0,60\\\hline
-Costo directo estimado & & & 199,57\\\hline
+Costo directo estimado & & & 194,57\\\hline
 \end{tabular}\end{table}
 Cada lector parte de USD 49,30 de materiales y procesos y agrega USD 3,00 de conector USB-C sellado, USD 2,00 de sellado de carcasa y USD 1,00 de control térmico. La pulsera parte de USD 26,65 y agrega USD 6,00 por USB-C, sellado y supervisión térmica y USD 1,00 por LED y control. Estos incrementos son estimaciones internas. Las baterías, regulación y PCB base ya están incluidas y no se suman nuevamente.
-El parche mantiene USD 7,25 de materiales y USD 4,08 de preparación. Los dos parches iniciales están incluidos en el kit y deben descontarse de los recambios vendidos al incorporar un cliente.
-Se estima USD 16,00 de flete, USD 1,50 de seguro y USD 11,00 de gestión, traslado y recepción por kit. Se conserva la carga académica del 45\% sobre CIF. Suponiendo importados los lectores, la pulsera y los accesorios, el valor importado es USD 176,91 y el CIF USD 194,41. La logística estimada es USD 115,98; el costo de un kit bruto disponible antes de merma y almacenamiento es USD 315,55. El tratamiento aduanero efectivo debe verificarse para la operación seleccionada.
-\paragraph{Equipo y presupuesto del programa}\label{tab:costo-app}\label{tab:costo-ingenieria}\label{tab:presupuesto-anio-1}
-La dotación de dos perfiles de ingeniería y dos técnicos/administrativos cuesta USD 11.200 mensuales según salarios, factor laboral y tipo de cambio del modelo previo. Dieciocho meses suman USD 201.600 y 11.520 horas brutas. Infraestructura cuesta USD 2.000 mensuales y herramientas/nube USD 500 mensuales. Las horas del backlog son capacidad de esa dotación y no un cargo adicional.
-Se conservan USD 12.000 de prototipos e insumos, USD 12.000 de bioquímica, USD 10.000 de consultas y USD 8.000 de QA. Se agregan asignaciones preliminares de USD 30.000 para evaluación clínica (centro, referencias, gestión de datos, monitorización y cobertura) y USD 10.000 para ensayos ambientales, seguridad, compatibilidad electromagnética y trámites. Estas partidas no son cotizaciones ni fijan el diseño del estudio. Se prevé una reserva del 10\% sobre partidas técnicas y herramientas, aplicada una sola vez. Las unidades de ensayo se incluyen en prototipos; el lote comercial de 100 kits se programa para el lanzamiento y contempla merma del 10\% y USD 300 de almacenamiento.
-\paragraph{Conciliación y flujo financiero}
-La revisión encontró una diferencia previa entre los USD 228.303,06 declarados por el informe y USD 199.200 calculados por el Excel. Se corrigieron las distribuciones mensuales de prototipos, laboratorio, consultas, QA, reserva y preserie antes de comparar escenarios. El puente de conciliación de la hoja Resumen nuevo identifica: prototipos +USD 1.200, bioquímica +USD 12.000, consultas -USD 14.000, QA +USD 8.000, reserva +USD 4.800 y preserie +USD 17.103,06; total USD 29.103,06. El modelo mensual vigente incorpora las distribuciones corregidas y el nuevo alcance.
-El flujo actualizado cubre 48 meses, con ventas desde el mes 19 condicionadas al cierre regulatorio previsto en el 18. Se adopta, por decisión de planificación, USD 800 por kit y USD 25 por recambio, cuatro recambios mensuales y retención del 95\%. Los ritmos de 300, 800 y 1.680 kits corresponden a años comerciales desde el lanzamiento y no a años calendario completos desde el inicio del proyecto. Se enlazan demostradores, onboarding, producción, stock, soporte y costos comerciales con ese mismo calendario. VAN al 20\%, TIR y capital mínimo se calculan sobre flujos sin aportes de financiamiento.
-\paragraph{Autoridades y referencias}
-La evaluación se encuadra ante ANMAT, comité de ética y centro clínico; el registro comercial y la habilitación de fabricación/importación tienen entregables separados. Se revisa también el alcance radioeléctrico ante ENACOM. Referencias: \href{https://www.anmat.gob.ar/webanmat/Legislacion/Medicamentos/Disp_969-97_actualizada.pdf}{investigación clínica en tecnología médica}; \href{https://www.argentina.gob.ar/normativa/nacional/disposici\%C3\%B3n-64-2025-408309/texto}{Disposición ANMAT 64/2025}; \href{https://www.argentina.gob.ar/noticias/anmat-actualiza-los-criterios-regulatorios-para-software-como-dispositivo-medico-samd}{criterios de software médico}; \href{https://enacom.gob.ar/m/homologacion-de-equipos_p347}{homologación de equipos}. Los plazos del programa son estimaciones de planificación y se revisan al responder observaciones.
 
-\paragraph{Resultados conciliados del escenario base}
-El presupuesto del año 1 es USD 233.200,00. Los egresos de los meses 13--18 son USD 140.142,10; la inversión previa a ventas y el capital mínimo son USD 373.342,10. El VAN al 20\% anual es USD 99.564,11 y la TIR anual equivalente es 34,59\%. El modelo usa descuento mensual equivalente a la tasa anual y flujos al cierre de cada mes, sin aportes de capital ni valor residual.
-El precio de USD 800 es un supuesto comercial a validar con usuarios y adquirentes. El umbral aproximado de VAN cero es USD 700,54, conservando las ventas previstas; aumentar el precio no demuestra que esa demanda se mantenga. Con USD 400 y el mismo alcance el VAN es USD -300.838,21. La rentabilidad depende de receptividad, retención, costos y cumplimiento del calendario regulatorio.
-La fuente financiera vigente es Proyecto-actualizado-18-meses.xlsx, hojas Supuestos nuevos, Flujo mensual nuevo y Resumen nuevo. El selector de Plan comercial alimenta ventas, demostradores y onboarding; las otras hojas anteriores conservan antecedentes y llevan una advertencia. Las cantidades mensuales de ventas y demostradores son equivalentes de previsión; producción y compras se redondean. El nuevo precio aplica al conjunto completo, que entrega dos lectores y dos consumibles iniciales.
+\begin{table}[H]\centering\small
+\caption{Alternativa preliminar de componentes y asignaciones por dispositivo.}
+\begin{tabularx}{\linewidth}{l X r}\toprule
+Dispositivo & Componente o conjunto & USD\\\midrule
+Lector & 1 módulo ESP32-C3-MINI-1-H4 (microcontrolador y BLE) & 2,40\\
+Lector & 3 AS7341-DLGT, 1 AD5941BCPZ-RL7, iluminación y multiplexor I2C & 28,40\\
+Lector & Batería de 750 mAh y circuito de carga, protección y regulación & 6,00\\
+Lector & Pasivos y contactos & 2,50\\
+Lector & PCB y montaje & 5,00\\
+Lector & Carcasa & 5,00\\
+Lector & USB-C sellado, juntas y supervisión térmica & 6,00\\
+\textbf{Lector} & \textbf{Materiales y procesos por unidad} & \textbf{55,30}\\\midrule
+Pulsera & 1 módulo ESP32-C3-MINI-1-H4 & 2,40\\
+Pulsera & 1 MAX30101EFD+T, 1 LSM6DS3TR-C y 1 TMP117AIDRVR & 7,05\\
+Pulsera & Batería de 850 mAh y circuito de carga, protección y regulación & 6,00\\
+Pulsera & Pasivos y conexiones & 1,20\\
+Pulsera & PCB y montaje & 4,00\\
+Pulsera & Carcasa y correa & 6,00\\
+Pulsera & USB-C sellado, juntas y supervisión térmica & 6,00\\
+Pulsera & LED RGB y control & 1,00\\
+\textbf{Pulsera} & \textbf{Materiales y procesos por unidad} & \textbf{33,65}\\\bottomrule
+\end{tabularx}\end{table}
+Los modelos son alternativas concretas para el diseño. Los importes son asignaciones de presupuesto, no cotizaciones actuales: en particular, USD 28,40 y USD 7,05 corresponden a conjuntos de sensado y no al precio individual de cada circuito. La compra requiere confirmar el precio del conjunto completo. La hoja \textit{Componentes} desglosa estas asignaciones, los consumibles y los accesorios, y alimenta los costos del kit sin sumarlos dos veces.
+
+Las referencias técnicas de selección son el módulo \href{https://www.lcsc.com/product-detail/C2934569.html}{ESP32-C3-MINI-1-H4}, el sensor óptico \href{https://www.lcsc.com/product-detail/C2655145.html}{AS7341}, el frente electroquímico \href{https://www.analog.com/en/products/ad5941.html}{AD5941} y, para la pulsera, \href{https://www.lcsc.com/product-detail/C2859066.html}{MAX30101}, \href{https://www.lcsc.com/product-detail/C967633.html}{LSM6DS3TR-C} y \href{https://www.ti.com/product/TMP117}{TMP117}. La fuente de un puerto se presupuesta en USD 5 como asignación interna provisional; se comprará terminada y se confirmará su precio con una cotización. Las celdas y los conectores también se seleccionarán por las especificaciones indicadas y su cotización.
+
+El parche mantiene USD 7,25 de materiales y USD 4,08 de preparación. Los dos parches iniciales están incluidos en el kit y deben descontarse de los recambios vendidos al incorporar un cliente.
+
+El armado, la programación y la prueba del lector se estiman en 25 minutos: 10 de armado e inspección, 4 de programación, 8 de prueba funcional y 3 de trazabilidad. Para la pulsera se asignan 8, 4, 6 y 3 minutos, respectivamente, que suman 21. A USD 14,5833 por hora, estos tiempos explican los USD 6,08 y USD 5,10 de la tabla. Son estimaciones internas que se contrastarán con el lote piloto. Los USD 4,08 de preparación del parche son una asignación previa, equivalente a unos 16,79 minutos a esa tarifa; su tiempo real también debe medirse.
+
+La tabla expresa el costo directo con mano de obra variable. Durante los meses 1--18, la nómina cubre la terminación de los dispositivos y la preparación de los parches: se excluyen del desembolso variable USD 25,42 por kit para evitar pagar dos veces el mismo trabajo. El costo directo adicional en esa etapa es USD 169,15 por kit bruto. Desde el mes 19 se incluye nuevamente la mano de obra variable, porque termina la dotación de desarrollo presupuestada.
+
+Se estiman USD 16,00 de flete, USD 1,50 de seguro y USD 11,00 de gestión, traslado y recepción por kit. Se adopta una carga presupuestaria simplificada del 45\% sobre CIF. Los materiales y procesos importados de lectores, pulsera y accesorios suman USD 154,65; el trabajo local de terminación se excluye de esa base. El CIF es USD 172,15 y la logística estimada USD 105,97. Antes de merma y almacenamiento, el desembolso por kit bruto es USD 275,12 mientras la nómina cubre el trabajo interno y USD 300,54 cuando se paga como costo variable. El tratamiento aduanero efectivo debe verificarse para la operación seleccionada.
+\paragraph{Equipo y presupuesto del programa}\label{sec:presupuesto-programa}
+La dotación de dos perfiles de ingeniería y dos perfiles técnicos cuesta USD 11.200 mensuales como asignación presupuestaria conjunta. Dieciocho meses suman USD 201.600 y 11.520 horas brutas. Infraestructura cuesta USD 2.000 mensuales y herramientas/nube USD 500 mensuales. Esta última partida incluye el servicio de cuentas, el envío de correos de verificación y el registro de activaciones, cuya tarifa se ajustará al elegir el proveedor. Las horas del registro de tareas son capacidad de esa dotación y no un cargo adicional.
+
+Se presupuestan USD 12.000 para prototipos e insumos, USD 12.000 de bioquímica, USD 10.000 de consultas y USD 8.000 de servicios externos de QA (revisión de procedimientos, calibración y verificación independiente). El trabajo interno de QA ya se incluye en la nómina.
+
+Se asignan preliminarmente USD 30.000 para evaluación clínica (centro, referencias, gestión de datos, monitorización y cobertura) y USD 10.000 para ensayos ambientales, seguridad, compatibilidad electromagnética y trámites. La partida clínica comprende centro USD 12.000, mediciones de referencia USD 8.000, gestión de datos y monitorización USD 6.000 y cobertura USD 4.000. Los ensayos y trámites se distribuyen en ambiente/sudor USD 3.000, seguridad y compatibilidad electromagnética USD 4.000, y radio/registro USD 3.000. Son asignaciones presupuestarias internas que se ajustarán al acordar con el centro las actividades, participantes y duración de la evaluación. El flujo las distribuye entre M7 y M18 para preparación, reservas, ejecución y cierre; las fechas de pago se ajustarán al contratar.
+
+Se prevé una reserva del 10\% sobre los desembolsos técnicos de cada mes y sobre herramientas/nube. La reserva de herramientas continúa durante los 48 meses y no se vuelve a cargar sobre salarios ni sobre kits.
+
+Como previsión de ingeniería se reservan diez kits completos de ensayo, con doce kits brutos para cubrir merma: USD 3.301,41 de fabricación y logística adicionales a la nómina, dentro de los USD 12.000 de prototipos. Los USD 8.698,59 restantes cubren placas de desarrollo, recambios experimentales y repeticiones. Esta cantidad no determina el tamaño del estudio clínico, que deberá fijarse en su diseño y revisar el presupuesto si necesita más unidades. Las unidades de ensayo no ingresan al stock comercial; el lote comercial de 100 kits se programa para el lanzamiento y contempla merma del 10\% y USD 300 de almacenamiento.
+\paragraph{Flujo financiero}
+El flujo cubre 48 meses, con ventas desde el mes 19 condicionadas al cierre regulatorio previsto en el 18. Se adopta, por decisión de planificación, USD 800 por kit y USD 25 por recambio, cuatro recambios por cliente activo y mes y retención mensual del 95\%. El consumo es una simplificación comercial de cuatro semanas por mes, que deberá ajustarse al uso observado. Se descuentan dos recambios pagos en el mes de alta por los consumibles incluidos en el kit.
+
+Los ritmos de 300, 800 y 1.680 kits corresponden a años comerciales desde el lanzamiento y no a años calendario completos desde el inicio del proyecto. Se enlazan demostradores, capacitación e incorporación de aliados, producción, stock, soporte y costos comerciales con ese mismo calendario. VAN al 20\%, TIR y capital mínimo se calculan sobre flujos sin aportes de financiamiento.
+\paragraph{Resultados del escenario base}
+El presupuesto del año 1 es USD 233.200,00. Los egresos de los meses 13--18 son USD 135.613,16; la inversión previa a ventas y el capital mínimo son USD 368.813,16. El VAN al 20\% anual es USD 119.928,98 y la TIR anual equivalente es 37,36\%. El modelo usa descuento mensual equivalente a la tasa anual y flujos al cierre de cada mes, sin aportes de capital ni valor residual.
+
+La Tabla~\ref{tab:flujo-cuatro-anios} compara los cuatro años del proyecto con los mismos conceptos. El año 1 reúne M1--M12; el año 2, M13--M24; el año 3, M25--M36; y el año 4, M37--M48. El año 2 incluye seis meses de ventas, porque el lanzamiento se prevé en M19.
+
+\begin{table}[H]\centering\small
+\caption{Resumen del flujo de cuatro años. Importes en USD, salvo kits vendidos.}\label{tab:flujo-cuatro-anios}
+\begin{tabular}{lrrrr}\toprule
+Concepto & Año 1 & Año 2 & Año 3 & Año 4\\\midrule
+Kits vendidos & 0 & 150 & 550 & 1240\\
+Ingresos & 0,00 & 160.837,30 & 772.078,47 & 1.963.369,80\\
+Egresos & 233.200,00 & 239.121,93 & 592.135,57 & 1.410.569,14\\
+Flujo del año & -233.200,00 & -78.284,63 & 179.942,89 & 552.800,66\\
+Acumulado al cierre & -233.200,00 & -311.484,63 & -131.541,74 & 421.258,92\\
+\bottomrule\end{tabular}
+\end{table}
+
+Para entregar 100 kits aprobados por QA se presupuestan 112 kits antes del control de calidad. Con una merma estimada del 10\%, el cálculo es $\lceil100/(1-0{,}10)\rceil=112$: se divide por el rendimiento esperado del 90\% y se redondea hacia arriba. La cantidad finalmente liberada dependerá del control de cada unidad. Los desembolsos adicionales a la nómina por fabricación, logística y almacenamiento suman USD 31.113,16, equivalentes a USD 311,13 por kit aceptado. La mano de obra interna se paga dentro de los salarios del programa. Este desembolso incremental no es el costo económico completo del producto. En producción posterior al mes 18 se vuelve a incluir la mano de obra variable.
+
+El precio de USD 800 es un supuesto comercial a validar con usuarios y adquirentes. Aumentar el precio no demuestra que se mantenga la demanda prevista. La rentabilidad depende de receptividad, retención, costos y cumplimiento del calendario regulatorio.
+
+Para el lote inicial, se prevé pagar USD 18.944,80 de materiales y procesos en M16, USD 11.868,36 de logística e importación en M17 y USD 300 de almacenamiento en M18. La recepción y terminación ocurren en M17; las unidades ingresan al stock disponible para vender al completar QA en M18. Así se distingue el pago al proveedor del momento en que el kit está listo para su venta.
+
+La planilla financiera permite consultar los supuestos, el flujo mensual y los resultados. El selector de escenario comercial actualiza ventas, demostradores, incorporación de aliados, dotación comercial y difusión.\par\noindent\textit{Enlace a la planilla Excel: a completar.}\par Las cantidades mensuales de ventas y demostradores son equivalentes de previsión; la producción de kits se redondea a unidades enteras. Los recambios se costean como equivalentes de demanda, sin un inventario mensual propio. El precio aplica al conjunto completo, que entrega dos lectores y dos consumibles iniciales.
+
+Desde el lanzamiento se supone reposición mensual de kits y pago de la terminación como costo variable. Esta simplificación no modela los anticipos, los plazos de aprovisionamiento ni el stock de seguridad de los lotes posteriores; deberán acordarse con el proveedor antes de usar la previsión para financiar la operación. El soporte se estima por cliente activo y la tarifa deberá cubrir las capacidades necesarias para atención y mantenimiento. Estos supuestos pueden aumentar el capital requerido en la operación real.
+
+El flujo es una previsión académica de caja antes de impuesto a las ganancias y de financiación, con cobros y pagos en el mes de la operación. No incluye un modelo fiscal completo, crédito a clientes ni valor de venta del stock remanente. Por ello, los indicadores deben interpretarse dentro de esos supuestos. Las horas internas de compras, QA y soporte al desarrollo están en la nómina; las partidas externas remuneran servicios y ensayos específicos.

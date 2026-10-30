@@ -1,11 +1,23 @@
 \documentclass[12pt]{article}
-\usepackage[utf8]{inputenc}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{helvet}
+\else
+  \usepackage{fontspec}
+  \setsansfont{lmsans10-regular.otf}[
+    BoldFont=lmsans10-bold.otf,
+    ItalicFont=lmsans10-oblique.otf,
+    BoldItalicFont=lmsans10-boldoblique.otf]
+\fi
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{graphicx}
 \usepackage{titlesec}
-\usepackage{helvet}
 \usepackage[hidelinks,hypertexnames=false]{hyperref}
 \usepackage{tocloft}
+\cftsetindents{subsubsection}{3.8em}{3.8em}
+\cftsetindents{paragraph}{7.6em}{4.8em}
 \usepackage{tabularx}
 \usepackage{longtable}
 \usepackage{booktabs,array,xltabular,needspace}
@@ -27,6 +39,7 @@
 \clubpenalty=10000
 \IfFileExists{spanish.ldf}{\usepackage[spanish]{babel}}{%
   \usepackage{babel}\babelprovide[import,main]{spanish}}
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
 
 \usepackage{xcolor}
 \usepackage{tikz}
@@ -67,7 +80,7 @@
         marco/.style={draw=tpazul!35,rounded corners=5pt,fill=black!1,inner sep=12pt},
         titulo/.style={font=\sffamily\bfseries\large,text=tpazul,anchor=west}
     }
-    
+
 \AddToHook{cmd/section/before}{\par\Needspace{7\baselineskip}}
 \AddToHook{cmd/subsection/before}{\par\Needspace{5\baselineskip}}
 \AddToHook{cmd/subsubsection/before}{\par\Needspace{5\baselineskip}}
@@ -88,8 +101,8 @@
     \vspace{2cm}
     {\Huge Sistema Inteligente Multimodal de Detección y Predicción de Glucosa} \\
     \vspace{0.5cm}
-    {\LARGE Materia: TC024 - Gestión de proyectos} \\  
-    \vspace{0.5cm} 
+    {\LARGE Materia: TC024 - Gestión de proyectos} \\
+    \vspace{0.5cm}
     {\LARGE Grupo 3 }\\
     \vspace{2cm}
     \begin{flushleft}
@@ -108,7 +121,7 @@
             Santiago Manuel Cabrera & 110445 & smcabrera@fi.uba.ar \\
 
         \end{tabularx}
-    
+
     \end{flushleft}
     \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}\\[0.5cm]
     \vfill
@@ -122,7 +135,7 @@
 \input{Introduccion.tex}
 
 %****************    RESUMEN EJECUTIVO  **********%
-%\input{Resumen ejecutivo.tex}
+\input{Resumen ejecutivo.tex}
 
 
 

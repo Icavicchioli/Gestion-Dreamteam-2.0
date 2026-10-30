@@ -1,70 +1,31 @@
 \section{Definición del proyecto}
-{\consigna
-Esta sección debe definir el proyecto. A diferencia de la introducción, que es más ``blanda'', a lo largo de esta sección y subsecciones, se debe ser claro y específico, tratando de minimizar posibles ambigüedades.
-Si vamos a hacer un sistema compuesto por un microcontrolador, sensores para medir ciertos indicadores, registrarlos y decidir tomar alguna acción en base a esos datos con cierta finalidad, digamos eso mismo: ``un sistema compuesto por un microcontrolador, sensores para medir ciertos indicadores, registrarlos y decidir tomar alguna acción en base a esos datos con'' la finalidad que sea.\\
+El proyecto busca desarrollar un sistema de seguimiento metabólico complementario para personas con diabetes tipo 2 o prediabetes. El producto reúne cuatro componentes: un parche sensor descartable, un lector reutilizable que se acopla al parche, una pulsera reutilizable y una aplicación móvil.
 
+El parche permite obtener glucosa, lactato, cortisol y pH del sudor mediante lecturas ópticas y electroquímicas. La pulsera aporta señales de frecuencia cardíaca, actividad y temperatura de piel. La aplicación organiza estas mediciones y evalúa su relación con alimentación, estrés y actividad física. Se investigarán dos horizontes de predicción: 30 a 60 minutos y 1 a 8 horas. Cada uno tendrá su propia evaluación de desempeño e incertidumbre.
 
-En esta parte introductoria de la sección, se puede describir el objetivo de negocio que se persigue y cómo se espera cumplirlo, de forma de facilitar el entendimiento de las siguientes subsecciones.
-}
+El uso previsto inicial es aportar información complementaria al seguimiento de glucosa. La especificación de las salidas, sus referencias, los umbrales de aceptación y la eventual dependencia de datos de un CGM se cerrará en los sprints S1--S6, con asesoramiento clínico y regulatorio. Esta decisión condiciona el desarrollo de los modelos y la evidencia necesaria para autorizar el producto.
 
-
-El proyecto consiste en el desarrollo de un sistema portátil e inteligente compuesto por dos dispositivos complementarios —un dispositivo no invasivo ubicado en la parte posterior del brazo, formado por un parche sensor descartable y un módulo electrónico reutilizable de lectura y comunicación que se acopla a él, y una pulsera de muñeca reutilizable— junto con una capa de procesamiento e inteligencia artificial, destinado a personas con diabetes tipo 2 y pre-diabetes.
-
-El parche sensor descartable permite medir glucosa, lactato y cortisol en sudor mediante el módulo electrónico reutilizable, mientras que la pulsera capta señales fisiológicas de contexto (frecuencia cardíaca, actividad física y temperatura de piel). El sistema integra ambas fuentes de datos para no solo reportar el nivel de glucosa, sino identificar factores probablemente asociados (alimentación, estrés o actividad física) y predecir su evolución en dos modos complementarios: corto plazo (30 a 60 minutos), orientado a priorizar la exactitud de la predicción, y horizonte extendido (1 a 8 horas), orientado a estimar tendencias para apoyar la planificación del seguimiento, presentando al usuario avisos actuales y predictivos en la aplicación, junto con un indicador orientativo del dato actual en la pulsera.
-
-El dispositivo busca integrar en una única solución información que hoy se obtiene mediante distintos controles y análisis dispersos en el tiempo, complementando —no reemplazando— a los medidores de glucosa continuos (CGM) existentes en el mercado.
-
-
-% la V 2.6 se reodena la sección misión y vision antes de Objetivo
 \subsection{Misión y visión}
-{\consigna
-Esta subsección debe definir la Misión y la Visión del proyecto.\\
-La **misión** es la razón de ser del proyecto basada en su propósito principal, mientras que la **visión** es la imagen de cómo se espera que el proyecto pueda evolucionar a futuro. La misión se enfoca en el presente y en lo que el resultado del proyecto hace para cumplir su propósito, mientras que la visión se enfoca en el futuro y en los posibles objetivos que el proyecto busca alcanzar.\\
-Existe mucho material disponible para ayudar al alumno a definir estas dos características de su proyecto.
-}
+\noindent\textbf{Misión.} Integrar mediciones del sudor y señales fisiológicas en una herramienta que facilite comprender y seguir las variaciones metabólicas, con información clara sobre sus límites.
 
+\noindent\textbf{Visión.} Desarrollar una solución de seguimiento contextual respaldada por evidencia técnica y clínica. Las futuras funciones, incluidas las relacionadas con otras complicaciones de la diabetes, requerirán objetivos y validación propios.
 
-\noindent\textbf{Misión.} Desarrollar una solución portátil que integre mediciones no invasivas de biomarcadores en sudor y señales fisiológicas para aportar información contextual e identificar factores probablemente asociados a las variaciones observadas, sin atribuir causalidad clínica, con el propósito de facilitar el seguimiento de la salud metabólica.
+\subsection{Objetivo y alcance}
+El objetivo es entregar un MVP técnico integrado en doce meses, con adquisición de señales, registro local, comunicación BLE, historial y avisos implementados y verificados. El hito intermedio es un prototipo funcional en el mes 7. El programa continúa hasta el mes 18 para completar evaluaciones, responder observaciones y preparar el lanzamiento. El cumplimiento del MVP técnico no equivale a la autorización de comercialización.
 
-\noindent\textbf{Visión.} A futuro, se busca consolidar una forma de seguimiento de la salud metabólica que combine mediciones, estimaciones e información contextual con evidencia suficiente para orientar su interpretación. En versiones posteriores podría evaluarse la incorporación de funciones relacionadas con complicaciones asociadas a la diabetes, como el daño renal, únicamente si existe evidencia que las sustente y se realiza una validación específica. La eventual contribución a la autonomía y seguridad de los pacientes o a un uso más eficiente de los recursos sanitarios deberá demostrarse mediante evaluaciones apropiadas.
+El kit comercial incluirá una pulsera, dos lectores reutilizables, dos parches descartables iniciales, una fuente USB-C comercial de un puerto, dos cables y documentación. La fuente se comprará terminada; el proyecto desarrolla los circuitos de carga internos del lector y de la pulsera. La segunda unidad del lector permite alternar equipos durante la recarga. El parche descartable no contiene batería y se especifica para siete días de uso, con estabilidad de los reactivos, adhesión y desempeño adecuados durante ese período.
 
+La aplicación será la interfaz principal para el historial, la interpretación y los avisos actuales y predictivos. La pulsera mostrará el estado de la última lectura mediante un LED RGB. Durante su recarga se interrumpen las señales de la muñeca y el indicador portátil; el lector puede continuar registrando y comunicándose con el teléfono. La aplicación identificará los intervalos sin datos o sin contexto.
 
-\subsection{Objetivo}
-{\consigna
-Esta subsección debe definir el objetivo puntual del proyecto, el resultado esperable, de forma más específica que la definición previa, en cuanto a qué esperar. Debe especificarse si se espera un prototipo o un producto final, y con qué calidad. Si el resultado se compone de varias partes, deben especificarse todas.\\
-El objetivo aquí descripto debe cumplir con el paradigma S.M.A.R.T. El lector debe entender completamente qué esperar como resultado del proyecto.
-}
-
-
-El objetivo del proyecto es desarrollar, en un plazo de doce meses, un producto mínimo viable (MVP) portátil y funcional compuesto por un parche sensor descartable de biomarcadores en sudor, un módulo electrónico reutilizable de lectura y comunicación que se acopla al parche, una pulsera reutilizable de señales fisiológicas y una aplicación móvil. El MVP deberá adquirir y conservar las señales definidas, sincronizarlas por BLE, presentar el historial y permitir evaluar por separado la identificación de factores probablemente asociados y dos horizontes de estimación de glucosa: corto plazo (30 a 60 minutos) y extendido (1 a 8 horas). La identificación se limitará a alimentación, estrés y actividad física y no establecerá causalidad clínica. Las mediciones, estimaciones, incertidumbres y avisos se verificarán mediante criterios de aceptación funcionales y técnicos establecidos antes de cada prueba.
-
-Como resultado se entregarán cuatro componentes integrados: una aplicación móvil, un parche sensor descartable, un módulo electrónico reutilizable de lectura y comunicación, y una pulsera reutilizable. La aplicación deberá vincularse con el módulo y la pulsera, recibir y presentar sus datos e implementar las funciones de análisis, historial, avisos y ayuda comprometidas para la versión. El parche descartable comprenderá el sustrato de papel, sus zonas con reactivos y el soporte adhesivo; se establece como objetivo reemplazarlo cada 7 días de uso, sujeto a validar la estabilidad de los reactivos, la adhesión y el desempeño. El módulo electrónico reutilizable se acoplará al parche e incluirá los elementos de lectura, procesamiento, comunicación, firmware y alimentación que se definan. La pulsera reutilizable incluirá sus sensores, electrónica, firmware y alimentación. Los tres componentes físicos se entregarán protegidos en un paquete que los identifique e incluya la lista de contenido, los accesorios y consumibles definidos, y las instrucciones de puesta en marcha, conexión con la aplicación, mantenimiento de los elementos reutilizables y recambio del parche. La aplicación móvil no requiere reemplazo físico.
-
-%\noindent\textbf{Pendiente de definir:} el plazo de desarrollo del producto, la cantidad de kits que se producirán, las plataformas compatibles con la aplicación, los umbrales de desempeño para la aceptación y si el resultado será un prototipo funcional de evaluación o un producto final comercial. Estas decisiones no se vinculan con la fecha de entrega de la actividad académica.
-
-
-\subsection{Entregables mensurables}
-{\consigna
-Esta subsección debe definir cuáles serán los resultados esperables para verificar el éxito del proyecto.\\
-Se debe especificar concretamente cómo el verificador puede constatar, al final del proyecto, que se cumplieron los objetivos del mismo. Esta descripción da certidumbre a la vez que ayuda a especificar mejor los requerimientos del proyecto.
-}
-
-
-
-Se considerará cumplido el objetivo del proyecto con la entrega y aceptación de los siguientes cuatro componentes:
-
+\subsection{Entregables y criterios de cierre}
+La aceptación del MVP verificará los cuatro componentes y su funcionamiento conjunto:
 \begin{enumerate}
-    \item \textbf{Aplicación instalable:} deberá permitir la vinculación por BLE con el módulo electrónico reutilizable y la pulsera, la recepción y visualización de datos, la consulta del historial, las funciones de análisis comprometidas para la versión, la presentación de avisos acordes con el uso previsto y el acceso a la ayuda. La aplicación móvil no requiere reemplazo físico. Las estimaciones deberán informar su horizonte temporal y su incertidumbre. La aceptación verificará la instalación, la vinculación, la transmisión, el historial y la respuesta ante fallas; el desempeño de cada modelo se evaluará por separado conforme a los umbrales pendientes de definir.
-    \item \textbf{Parche sensor descartable:} parche de papel con sus zonas con reactivos y soporte adhesivo para la medición de los biomarcadores previstos en sudor. El objetivo es reemplazar la parte no reutilizable del parche cada 7 días de uso.
-    \item \textbf{Módulo electrónico reutilizable:} módulo acoplable al parche sensor, con lector óptico, front-end electroquímico, microcontrolador, BLE, firmware y alimentación, según el diseño detallado. La aceptación verificará el acoplamiento con el parche, la adquisición y procesamiento de las lecturas, la transmisión de datos a la aplicación, las tolerancias que se definan y una autonomía objetivo de al menos 7 días de uso normal.
-    \item \textbf{Pulsera reutilizable:} dispositivo con PPG, sensor de temperatura, IMU, BLE, firmware y alimentación, según el diseño detallado. La aceptación verificará la adquisición y transmisión de las señales previstas, la integración con la aplicación, las tolerancias que se definan y una autonomía objetivo de al menos 7 días de uso normal. 
+\item \textbf{Parche descartable.} Parche con zonas de sensado, soporte y adhesivo, identificado por lote y diseñado para siete días de uso. Su aceptación exige cumplir los criterios de calibración, interferencias, estabilidad y adhesión durante ese período.
+\item \textbf{Lector reutilizable.} Electrónica, carcasa y firmware capaces de adquirir una lectura procesada cada dos minutos, conservar al menos 24 horas y transmitir por BLE al teléfono y a la pulsera. Incluye alternancia entre los dos lectores del kit, carga USB-C y autonomía de siete días.
+\item \textbf{Pulsera.} Sensores, firmware, LED RGB y enlace BLE directo con el lector. Incluye adquisición de señales fisiológicas, consulta del LED por gesto, identificación de datos vencidos, carga USB-C y autonomía de siete días.
+\item \textbf{Aplicación.} Versión instalable en la plataforma seleccionada durante S1--S6, con cuenta, activación del kit, configuración inicial, vinculación BLE, historial, recuperación de datos, avisos y ayuda. Las funciones predictivas tendrán criterios de aceptación propios y su incorporación a la versión comercial dependerá de los resultados de evaluación y del uso autorizado.
 \end{enumerate}
 
-Los tres componentes físicos se entregarán protegidos en un paquete identificado, con lista de contenido, accesorios y consumibles definidos, guía rápida, manual y guía de solución de problemas. Sus instrucciones deberán cubrir la puesta en marcha, la conexión con la aplicación, el mantenimiento del módulo y la pulsera, y el recambio del parche descartable. El paquete es una condición de presentación y entrega, no un quinto componente del sistema.
+Las tolerancias analíticas y los criterios clínicos se fijarán antes de los ensayos, en la matriz de requisitos de S1--S6. La sección de planificación relaciona estas entregas con sus tareas, responsables y horas.
 
-Durante el mes 7 se prevé un prototipo integrado intermedio destinado a detectar fallas de arquitectura, montaje, adquisición y comunicación. Ese prototipo es un instrumento de aprendizaje y no el resultado final. El entregable del mes 12 será el MVP aceptado mediante pruebas funcionales y técnicas, con sus limitaciones documentadas y con unidades de ensayo para verificar fabricación, recepción e inventario. La preserie comercial de 100 kits se programa para el lanzamiento. El programa incluye evaluación clínica y autorizaciones sanitarias entre el prototipo del mes 7 y el cierre previsto del mes 18; las ventas se proyectan desde el mes 19.
-
-%****************    EVALUACION DEL PROYECTO  **********%
-\newpage
-
-El kit de entrega incluye dos módulos lectores reutilizables, dos parches descartables iniciales, una pulsera, una fuente USB-C dual y dos cables. El desarrollo del MVP dura doce meses y el programa se extiende hasta el cierre regulatorio previsto en el mes 18.
+Las unidades de desarrollo e investigación estarán separadas del lote comercial de 100 kits previsto para el mes 18. La liberación comercial requiere, además del cierre técnico, completar las evaluaciones y autorizaciones aplicables. Si ese cierre se demora, se desplazan las ventas y se revisa el presupuesto.

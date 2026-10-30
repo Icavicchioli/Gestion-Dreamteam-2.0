@@ -1,0 +1,3 @@
+PDF/Informe-proyecto-actualizado.pdf conserva la compilación anterior y no incluye los últimos ajustes. La compilación de las fuentes vigentes se realizará en Prism.
+
+El LaTeX vigente está en ../Gestion de proyectos practica/ y el Excel en ../Proyecto-actualizado-18-meses.xlsx. Las imágenes locales se retiraron por indicación del usuario; main.tex conserva la referencia al logo disponible en Prism.

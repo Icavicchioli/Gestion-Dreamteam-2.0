@@ -1,22 +1,96 @@
 \clearpage
-\section{Planificación del proyecto}
-El programa combina cuatro frentes paralelos: parche descartable, lector reutilizable, pulsera y aplicación. Compras, integración, QA, clínica, regulación y captación de aliados son actividades transversales. El desarrollo dura doce meses y el cierre regulatorio se prevé en el mes 18. El prototipo integrado del mes 7 habilita la revisión de aptitud y el avance de presentaciones según la evidencia disponible.
-\subsection{Equipo, capacidad y sprints}
-Se mantienen dos perfiles de ingeniería y dos técnicos/administrativos hasta el mes 18, a 160 horas mensuales por persona: 7.680 horas el primer año y 3.840 horas adicionales. Las horas controlan capacidad y no se vuelven a sumar como salarios por tarea. Los cuatro recursos se comparten entre frentes y realizan revisión cruzada. Laboratorios e investigadores clínicos se contratan como servicios externos.
-Se planifican 26 sprints de dos semanas el primer año y 13 durante los meses 13--18. La asignación mensual de capacidad se ajusta a los dos o tres sprints de cada mes; no se multiplica automáticamente cada sprint por 80 horas. Se asigna el 80\% de capacidad a los cuatro productos y el 20\% a coordinación, compras, QA, clínica, regulación y captación de aliados. Las 195 tareas de los 39 sprints contienen estimaciones preliminares ajustables en cada revisión. Cada tarea incluye ID, producto, dependencia, sprint, responsable, horas por recurso, entregable y aceptación en la hoja Tareas y sprints. La compra, recepción, revisión externa y autorización conservan sus esperas independientes del esfuerzo.
-\begin{center}\begin{tabular}{lll}\hline
-Meses & Sprints & Resultado\\\hline
-1--3 & 1--6 & Requisitos, interfaces, proveedores\\
-4--6 & 7--13 & Subsistemas construidos y ensayados\\
-7 & 14--15 & Prototipo integrado\\
-8--10 & 16--22 & Pruebas, correcciones y avance regulatorio\\
-11--12 & 23--26 & MVP técnico y documentación\\
-13--18 & 27--39 & Evaluación, registro y lanzamiento preparado\\\hline
-\end{tabular}\end{center}
-\subsection{Secuencia por producto}
-Parche: materiales y reactivos, muestras, calibración e interferencias, estabilidad y adhesión, fabricación y control de lotes. Lector: interfaces, componentes y PCB, montaje, firmware y adquisición, memoria y BLE, USB-C y carcasa, pruebas. Pulsera: sensores y PCB, montaje, firmware, BLE directo y LED, alimentación y protección, pruebas. Aplicación: interfaces y datos, BLE, historial, calidad y recuperación, avisos actuales, predicciones y ayuda. La integración exige versiones compatibles y resultados individuales disponibles. Cada sprint cierra con demostración, revisión de riesgos y evidencia.
-\subsection{Evaluación clínica y autorizaciones}
-La preparación de requisitos, asesoramiento y documentación comienza en los meses 1--6. Desde el prototipo del mes 7 se avanza con los ensayos y presentaciones permitidos por la evidencia de seguridad. Participan ANMAT, el comité de ética y el centro clínico para autorizar la investigación; se distingue esa autorización del registro para comercializar. Se incluye el encuadre de la aplicación, fabricación/importación y revisión de homologación BLE ante ENACOM. Los estudios con participantes se realizan después de las autorizaciones correspondientes. Se prevén evaluación de mediciones y alertas frente a referencia, resultados, observaciones, correcciones y documentación; el presente plan no desarrolla un protocolo clínico completo.
-El cierre regulatorio hacia el mes 18 es una previsión ajustable. La captación de médicos y clínicas avanza desde el mes 9 con responsables técnicos/administrativos y asesoramiento externo. Las ventas comienzan desde el mes 19, sujetas a autorizaciones. Las unidades de investigación se distinguen de los 100 kits comerciales previstos para el lanzamiento.
-\subsection{Control y aceptación}
-La revisión mensual concilia tareas, capacidad, compras, costos y riesgos. Se comprueban adquisición, calibración, interferencias, autonomía, memoria y retención, BLE simultáneo, recuperación, recambio de lector, carga, temperatura, IP68 y sudor, LED con datos válidos o vencidos y trazabilidad de lotes. Los meses 3, 6, 7, 10, 12 y 18 tienen revisión formal. Los cambios afectan simultáneamente backlog, cronograma, presupuesto, documentación y evidencia clínica cuando corresponda.
+\section{Planificación del proyecto}\label{sec:planificacion}
+El trabajo se organiza en cuatro frentes: parche descartable, lector reutilizable, pulsera y aplicación. Cada frente construye y prueba su componente; los hitos comunes verifican que las versiones funcionen juntas. Las compras, la coordinación, el aseguramiento de calidad (QA), la documentación y las gestiones clínicas y regulatorias atraviesan todo el programa.
+
+El desarrollo técnico ocupa doce meses. El prototipo del mes 7 permite comprobar la arquitectura y revisar la aptitud para avanzar con la evaluación. El MVP del mes 12 cierra la etapa técnica. La preparación regulatoria comienza antes de ambos hitos y continúa hasta el cierre previsto del mes 18. Las ventas se proyectan desde el mes 19, condicionadas a la liberación del producto.
+
+\subsection{Equipo y estimaciones de esfuerzo}
+Se presupuestan cuatro personas durante dieciocho meses: una de ingeniería de software, una de ingeniería de sistemas embebidos, una técnica de QA y una técnica de laboratorio y operación. Ingeniería de sistemas embebidos dirige la electrónica del lector y de la pulsera; QA participa en montaje y verificación. Software dirige la aplicación y apoya los firmwares y la integración. Laboratorio coordina muestras, controles y trazabilidad con los especialistas externos.
+
+Se prevé documentación compartida y capacitación cruzada para que los integrantes puedan cubrir tareas compatibles con sus capacidades. Las decisiones clínicas, regulatorias y de laboratorio especializado seguirán a cargo de los profesionales correspondientes. El equipo podrá apoyarse en herramientas de IA para borradores de código, documentación, búsqueda y preparación de pruebas, con revisión humana de los resultados. Este apoyo se contempla dentro de herramientas/nube y no se traduce en una reducción anticipada de las horas ni de la dotación.
+
+Cada persona dispone de 160 horas mensuales, para una capacidad total de 11.520 horas. El plan asigna 8.856,40 horas a tareas identificadas y deja 2.663,60 horas disponibles para retrabajo, contingencias y ausencias. La mayor carga individual mensual es de 158,80 horas. Además se controla un máximo nominal de 80 horas por persona y sprint de dos semanas, sin exceder las 160 horas del mes. Esta disponibilidad no reduce la nómina: los cuatro puestos se mantienen hasta el mes 18 según el supuesto presupuestario.
+
+Las horas son estimaciones por tarea y perfil, elaboradas por los alumnos a partir de su experiencia en trabajos prácticos profesionales y proyectos de electrónica. Son una base de planificación que se ajustará con el esfuerzo observado durante la ejecución. La distribución considera el tipo de trabajo y el número de sprints del mes. Las actividades transversales reservan aproximadamente un 20\% de la capacidad; el resto no se fuerza a ocupar todas las horas disponibles. En cada revisión se compararán estimación y esfuerzo real para replanificar antes de sobrecargar un recurso.
+
+Cada tarea tiene un identificador para localizarla en el Excel. Por ejemplo, T352 corresponde al sprint 35 y al frente 2 (lector); X35 identifica una actividad transversal del mismo sprint. Los frentes 1, 3 y 4 corresponden al parche, la pulsera y la aplicación. Las tareas A identifican trabajo adicional de cuentas y activación; su sprint figura en la misma fila.
+
+Para el lote inicial, T352 y T362 cubren recepción, programación y prueba de los 224 lectores brutos; T363 cubre las 112 pulseras y T361 los 224 parches iniciales. Las estimaciones de terminación son 25 minutos por lector, 21 por pulsera y aproximadamente 16,79 por parche, más recepción y controles. La producción comparte el mes 17 con las demás tareas: QA alcanza 158,80 horas y exige seguimiento especial de cualquier desvío.
+
+Las horas internas ya están incluidas en los salarios. Los servicios de bioquímica, ensayos, evaluación clínica y asesoramiento tienen partidas externas separadas. La espera de fabricación, laboratorio o respuesta de una autoridad se registra como plazo calendario y condición de avance, no como horas trabajadas por el equipo. El plazo del proveedor se cuenta desde la orden y no se repite en cada tarea que usa el material recibido. Si la entrega o un informe se demora, se reprograman las tareas dependientes.
+
+\subsection{Ciclos, sprints y entregables}
+Se prevén 26 sprints nominales de dos semanas en el primer año y 13 durante los meses 13--18. Su asignación a meses permite relacionar capacidad y presupuesto; el calendario exacto se fijará al iniciar el proyecto. Los meses con tres sprints comparten las mismas 160 horas por persona, en lugar de agregar capacidad ficticia.
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{l l r X}\toprule
+Meses & Sprints & Esfuerzo (h) & Resultado verificable\\\midrule
+1--3 & S1--S6 & 1.475,90 & Requisitos, referencias, interfaces y proveedores\\
+4--6 & S7--S13 & 1.490,80 & Subsistemas probados y muestras de integración\\
+7 & S14--S15 & 508,10 & Prototipo integrado y revisión de aptitud\\
+8--10 & S16--S22 & 1.445,80 & Correcciones y configuración para evaluación\\
+11--12 & S23--S26 & 970,95 & MVP técnico y documentación\\
+13--18 & S27--S39 & 2.964,85 & Evaluaciones, registro y lanzamiento preparado\\
+\bottomrule\end{tabularx}\end{center}
+
+Las 199 tareas de la hoja \textit{Tareas y sprints} incluyen ID, producto, dependencia, mes, sprint, responsable, horas por cada recurso, entregable, aceptación y condición externa. Los IDs T identifican tareas de producto y los IDs X las actividades transversales. La hoja \textit{Plan 18 meses} reúne los ciclos, los hitos por épica, las horas de cada sprint por producto y por persona, y la capacidad mensual. La planificación se presenta mediante sprints y entregas, sin un Gantt adicional.
+
+\subsection{Épicas, features e historias de usuario}
+El Excel organiza el alcance en seis épicas, doce features y 42 historias de usuario. Una épica reúne un objetivo amplio, como sensado o lanzamiento; una feature reúne una capacidad del producto, como el indicador portátil; una historia describe una necesidad concreta, como consultar la lectura mediante un gesto.
+
+La hoja \textit{Historias de usuario} contiene título, descripción, horas estimadas y feature parent. La hoja \textit{Features} contiene título, descripción, horas, épica parent y fechas previstas de entrega y lanzamiento. La hoja \textit{Épicas} resume título, descripción, horas y fechas. Parent identifica el elemento superior al que pertenece cada fila.
+
+Las horas se calculan a partir de las tareas asociadas. Cada tarea se asigna a una sola historia, cada historia a una feature y cada feature a una épica: los totales de los cuatro niveles coinciden y no deben sumarse entre sí. Los criterios de aceptación, responsables, dependencias y sprints permanecen en \textit{Tareas y sprints}, para mantener simples las hojas de historias.
+
+Las fechas se expresan como meses del proyecto porque aún no se fijó su inicio calendario. La entrega técnica del prototipo ocurre en M7 y la del MVP en M12; el lanzamiento comercial se prevé desde M19, sujeto a las autorizaciones. Las features pueden tener una primera entrega y mejoras posteriores. La secuencia prioriza requisitos e interfaces, subsistemas, integración y MVP; después completa evidencia, producción y lanzamiento. Las dependencias de tareas determinan qué puede comenzar en cada sprint.
+
+Por ejemplo, la épica \textit{Datos y experiencia de uso} contiene la feature \textit{Indicador portátil}. Esta incluye las historias \textit{Consultar el indicador por gesto} y \textit{Distinguir el estado de la lectura}, vinculadas con implementación y pruebas de gesto, colores y caducidad. La integración y la regresión conjunta tienen tareas propias, sin repetir las horas de implementación.
+\par\noindent\textit{Enlace al backlog (hojas Épicas, Features e Historias de usuario del Excel): a completar.}
+
+\subsection{Secuencia de construcción de cada producto}
+\begin{description}
+\item[Parche descartable.] Se parte de analitos, materiales y geometría. Luego se fabrican muestras, se mide su respuesta y se evalúan interferencias, estabilidad y adhesión. El prototipo se integra con un lote trazable; el MVP agrega instrucciones de fabricación y aceptación. Los últimos ciclos preparan los controles de recepción y la liberación de consumibles.
+\item[Lector reutilizable.] Primero se fijan las interfaces ópticas, eléctricas y de datos. Después se seleccionan componentes, se diseña la PCB, se ordena y se monta. El firmware incorpora adquisición, calibración, memoria persistente y BLE simultáneo. La integración precede a las pruebas completas de carga, autonomía, carcasa y alternancia. La versión final incluye programación y prueba por número de serie.
+\item[Pulsera.] Los requisitos de señales y LED guían la selección de sensores, PCB y carcasa. Tras el montaje se implementan adquisición, gesto, recepción del lector y estados visuales. Se verifican ausencia de datos, consumo, protección y comprensión del indicador. El cierre incluye controles de producción y compatibilidad con los accesorios del kit.
+\item[Aplicación.] Las historias de uso y el contrato de datos preceden a la vinculación BLE, el historial y la recuperación. La aplicación se integra con señales reales antes de evaluar los modelos, los avisos y la usabilidad. El MVP entrega una versión instalable con ayuda y límites documentados. La evidencia posterior determina qué salidas pueden habilitarse para el uso autorizado.
+\end{description}
+
+Las dependencias cruzadas impiden pasar a integración sin las interfaces y pruebas previas de los cuatro frentes. Por ejemplo, S14 recibe las tareas T131--T134 y X13, que cierran los subsistemas. Su trabajo se distribuye así:
+\begin{center}\small\begin{tabularx}{\linewidth}{l X r}\toprule
+ID & Trabajo del sprint S14 & Horas\\\midrule
+T141 & Integrar parche con lector y aplicación & 51,00\\
+T142 & Integrar lector con los otros componentes & 41,00\\
+T143 & Integrar pulsera en el prototipo & 39,00\\
+T144 & Integrar mediciones reales del prototipo & 50,00\\
+X14 & Coordinar integración del prototipo & 64,00\\
+\bottomrule\end{tabularx}\end{center}
+Esas 245 horas de trabajo no son 245 horas de duración del sprint: se reparten entre cuatro personas. Software aporta 67 horas, sistemas embebidos 69, QA 49 y laboratorio 60. El sprint S15 repite la medición integrada, demuestra la alternancia de lectores, verifica los avisos y cierra los desvíos del prototipo. Así, el hito del mes 7 resulta de una secuencia y de evidencias concretas, no de una única tarea denominada ``hacer el dispositivo''.
+
+\subsection{Evaluación clínica, regulación y preparación comercial}\label{sec:regulacion}
+El plan distingue tres trabajos: demostrar seguridad y funcionamiento mediante ensayos; obtener las aprobaciones para investigar con personas; y completar los requisitos para comercializar. El prototipo permite iniciar o completar las presentaciones respaldadas por evidencia suficiente, pero su existencia no autoriza por sí misma un estudio ni una venta.
+
+\begin{center}\small\begin{tabularx}{\linewidth}{l X X}\toprule
+Período & Trabajo y resultado esperado & Condición para avanzar\\\midrule
+M1--M6 & Definir uso, referencias, encuadre, asesores, centro y documentación inicial (X02, X05, X06, X09). & Requisitos y plan de evaluación acordados.\\
+M7 & Revisar seguridad y aptitud del prototipo; completar expediente (X14--X15). & Versión identificada y evidencia técnica disponible.\\
+M8--M12 & Presentaciones, revisión ética e institucional y respuestas a observaciones (X16--X26). & Aprobaciones de investigación aplicables antes de incorporar participantes.\\
+M13--M15 & Evaluación autorizada, análisis de resultados y cierre de evidencia (X27--X32). & Resultados suficientes y cambios controlados; repetir evidencia si corresponde.\\
+M16--M18 & Registro comercial, requisitos del establecimiento, radio, observaciones y liberación (X33--X39). & Autorizaciones completas y versión comercial coincidente con la evaluada.\\\bottomrule
+\end{tabularx}\end{center}
+
+ANMAT interviene en el encuadre sanitario, las investigaciones bajo su competencia y el registro del producto. El comité de ética evalúa la protección de los participantes; el centro y el equipo investigador aceptan y ejecutan el estudio en las condiciones aprobadas. La investigación y la comercialización tienen expedientes y decisiones diferentes. Como referencia de planificación, la Disposición 969/97 contempla 90 días hábiles para expedirse sobre una presentación de investigación, con suspensión por observaciones; ese plazo no equivale a la duración total del estudio.\footnote{\href{https://www.argentina.gob.ar/normativa/nacional/disposici\%C3\%B3n-969-1997-42205/actualizacion}{ANMAT, régimen de estudios clínicos de tecnología médica}.}
+
+El asesoramiento deberá revisar también el encuadre de la aplicación y los requisitos del fabricante o importador. No se asigna de antemano una clase de riesgo ni una vía simplificada. Se consideran las definiciones vigentes para software médico y se documentará qué funciones requieren evidencia y registro.\footnote{\href{https://www.argentina.gob.ar/normativa/nacional/disposici\%C3\%B3n-64-2025-408309/texto}{Disposición ANMAT 64/2025}; \href{https://www.argentina.gob.ar/noticias/anmat-actualiza-los-criterios-regulatorios-para-software-como-dispositivo-medico-samd}{criterios para software como dispositivo médico}.}
+
+ENACOM corresponde a la evaluación radioeléctrica y al registro aplicable a los equipos BLE y al operador. El uso de un módulo previamente homologado deberá revisarse para la configuración final. La normativa y el procedimiento se confirmarán al presentar el trámite, considerando la transición del marco RAMATEL anunciada para diciembre de 2026.\footnote{\href{https://enacom.gob.ar/m/homologacion-de-equipos_p347}{ENACOM, homologación de equipos y marco RAMATEL}.}
+
+El cierre en el mes 18 es una previsión de gestión. Las fechas previstas no garantizan una respuesta favorable. Antes de investigar con personas se acordará con el centro cómo realizar la evaluación clínica: quiénes participarán, durante cuánto tiempo, qué mediciones se compararán con el método de referencia y qué resultados se considerarán aceptables. Esta organización de la evaluación se denomina diseño del estudio; su definición puede modificar recursos y fechas. Se presupuestan diez kits completos para ingeniería y ensayos; esa cantidad no fija la muestra clínica. Las partidas de evaluación, servicios y trámites se describen en la sección~\ref{sec:presupuesto-programa}.
+
+La búsqueda de médicos y clínicas comienza en el mes 9 y continúa durante las evaluaciones. Comprende prospectos, entrevistas, demostraciones permitidas, acuerdos y capacitación. Las comunicaciones deberán reflejar el estado de desarrollo y el uso autorizado. El lote inicial, separado de las unidades de investigación, se ordena y paga en M16, se recibe y termina en M17 y completa sus controles en M18. X37 revisa el inventario provisional; X38 revisa las autorizaciones y X39 cierra la liberación comercial, con 100 kits aprobados por QA y los controles de S38 terminados. Si falta una autorización o quedan fallas críticas, se reprograman lanzamiento, stock, caja y contratación antes de vender.
+
+\subsection{Pruebas y control de cambios}
+Cada sprint termina con una demostración del entregable y revisión de desvíos. Los hitos de los meses 3, 6, 7, 10, 12 y 18 revisan además alcance, presupuesto, riesgos y requisitos externos. El cierre de una tarea requiere evidencia; una descripción de intención no reemplaza el resultado de la prueba.
+
+El plan de aceptación cubre adquisición y calibración; interferencias y estabilidad del parche; carga USB-C, temperatura y autonomía; protección del conjunto frente a polvo, agua y sudor; alternancia de lectores; BLE simultáneo; persistencia y recuperación; y estados del LED con datos válidos, inválidos o vencidos. Las pruebas de aplicación comprueban alta y recuperación de cuenta, activación por posesión del kit, configuración inicial, permisos, historial, ausencia de contexto, avisos y recuperación de datos. Los modelos y el semáforo requieren evaluación específica frente a referencia. Antes de contar con las aprobaciones correspondientes se trabaja con bancos, muestras de control y casos simulados; las pruebas corporales del producto con participantes quedan sujetas a las aprobaciones de investigación aplicables.
+
+Un cambio posterior a la configuración de evaluación debe indicar qué requisitos, riesgos, pruebas y documentos afecta. Si altera la interpretación o el desempeño, se revisará con los responsables clínicos y regulatorios antes de usar sus resultados. La aceptación técnica del MVP, la aceptación de un lote y la liberación comercial quedan registradas por separado.
