@@ -1,0 +1,15 @@
+Actualización 29/10/2026
+Origen: comentarios.txt, diez marcas rojas del LaTeX y decisiones de la conversación.
+C01. USB-C y accesorios. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
+C02. Dos lectores y dos descartables. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
+C03. Protección IP68 y sudor. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
+C04. BLE directo y diagramas. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
+C05. LED y gesto. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
+C06. Autonomía y frecuencia. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
+C07. Cuatro frentes y sprints. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
+C08. Evaluación y autoridades. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
+C09. 18 meses y ventas desde 19. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
+C10. Conciliación y flujo mensual. Resolución: implementada en especificaciones, planificación y Excel actualizado. Cierre: revisar coherencia con las pruebas y cifras del libro.
+Las pruebas de producto son actividades planificadas, no ensayos realizados.
+
+Verificación de entrega: 195 tareas, 39 sprints, 160 h/mes por recurso; ventas desde mes 19; precio USD 800; capital USD 373.342,10; VAN USD 99.564,11; TIR 34,59%. Sin errores de fórmula en valores exportados. No se compiló LaTeX.
