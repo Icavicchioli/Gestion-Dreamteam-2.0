@@ -1,0 +1,5 @@
+ver las partes rojas del latex
+Desglosar las tareas en más detalle
+Organizar en 4 frentes paralelos: Parche, dispositivo del parche, pulsera, app
+¿Qué onda con la carga? ¿Dos dispositivos? ¿Dos baterías?
+Estas y otras correcciones están en rojo en el prism
