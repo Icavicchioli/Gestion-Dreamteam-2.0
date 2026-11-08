@@ -29,9 +29,12 @@
 
 
 
-El proyecto se clasifica como masivo por el despliegue previsto de un producto estandarizado para numerosos usuarios. El kit y la aplicación mantienen un diseño común, aunque cada persona configure sus parámetros de seguimiento. El segmento inicial comprende personas con diabetes tipo 2 o prediabetes.
+El proyecto tiene dos etapas y una tipología mixta. Durante su desarrollo se encuadra como innovación e investigación aplicada: el sensado combinado en sudor, en particular cortisol mediante MIP, y las predicciones son hipótesis técnicas cuyo desempeño aún no está demostrado. Si se demuestra factibilidad y se obtienen las autorizaciones, el objetivo de explotación es un producto estandarizado de despliegue masivo para personas con diabetes tipo 2 o prediabetes. La clasificación masiva describe ese objetivo futuro, no evidencia de mercado, desempeño o autorización ya alcanzados.
 
 Este enfoque exige asegurar consistencia entre unidades, una puesta en marcha comprensible, provisión de consumibles y soporte. También requiere controlar los costos por unidad. La clasificación describe el despliegue buscado; la factibilidad técnica, el desempeño, las autorizaciones y la adopción todavía deben demostrarse.
+
+\subsubsection*{Versiones evolutivas}
+La versión objetivo de M18 es un lote inicial de 100 kits sometido a control, con las funciones de hardware y aplicación que hayan superado sus criterios de aceptación y estén cubiertas por el uso autorizado. Las mediciones en sudor se presentarán como concentraciones en sudor; las salidas predictivas o asociativas solo se habilitarán si cuentan con desempeño y autorización suficientes. Una evolución posterior podría ampliar analitos, habilitar modelos predictivos, mejorar el parche o incorporar fuentes de datos adicionales. Ninguna de esas ampliaciones se considera automáticamente parte de la versión inicial. El plan de 48 meses no discrimina costos ni ingresos incrementales de una versión posterior; antes de incluirla en un caso de negocio deberán definirse alcance, evidencia requerida, cronograma, soporte y costos. No se presupone que tales funciones generen ingresos.
 
 
 \subsection{Evaluación de factibilidad técnica}
@@ -61,7 +64,7 @@ Esta sección evalúa la factibilidad técnica del sistema propuesto. Varios de 
 
 \noindent\textbf{Requerimientos funcionales:}
 \begin{enumerate}
-    \item Medir glucosa, lactato, cortisol y pH en sudor de forma no invasiva mediante el parche sensor descartable y el módulo electrónico reutilizable de lectura y comunicación. El pH se utilizará como referencia para la calibración de las demás zonas. Estas mediciones deberán distinguirse de cualquier estimación de glucosa sanguínea.
+    \item Medir glucosa, lactato, cortisol y pH en sudor de forma no invasiva mediante el parche sensor descartable y el módulo electrónico reutilizable de lectura y comunicación. Estas mediciones deberán distinguirse de cualquier estimación de glucosa sanguínea; no se presume una relación de equivalencia entre ambas.
     \item Medir frecuencia cardíaca, actividad física y temperatura de piel mediante la pulsera, como contexto fisiológico.
     \item Evaluar por separado dos modos propuestos como objetivos de diseño para estimar la evolución de la glucosa: corto plazo (30 a 60 minutos) y horizonte extendido (1 a 8 horas). En ambos modos se deberá indicar el horizonte temporal y la incertidumbre, sin presuponer su viabilidad ni un nivel de precisión ya alcanzado.
     \item Identificar factores probablemente asociados a una variación (alimentación, estrés o actividad física), aclarando que el resultado no establece causalidad clínica.
@@ -69,9 +72,12 @@ Esta sección evalúa la factibilidad técnica del sistema propuesto. Varios de 
     \item Transmitir los datos del módulo electrónico reutilizable y de la pulsera al teléfono por BLE, con una sincronización nominal cada dos minutos, igual al intervalo de lectura procesada y de actualización de la pulsera. Ante una pérdida del enlace, conservar localmente en cada dispositivo al menos 24 horas de datos (estimación: 45 KiB por día y por dispositivo) y transmitir el bloque acumulado al restablecerse BLE.
     \item Definir, antes de evaluar el desempeño, la referencia correspondiente a cada salida, incluidas las mediciones en sudor y cualquier estimación de glucosa sanguínea.
     \item Mantener la solución como complemento de los CGM y cerrar en S6 si los modelos dependerán de datos de un CGM y cómo se realizará esa integración.
+    \item Permitir el emparejamiento BLE local de los dispositivos con el teléfono con autenticación y cifrado; una cuenta o la vinculación a una identidad no será condición para las funciones locales básicas. La necesidad de registrar una unidad en una cuenta deberá justificarse por una función concreta de sincronización, recuperación o trazabilidad.
+    \item Incorporar un mecanismo de actualización remota de firmware con verificación de integridad, manejo de fallos y recuperación a una versión funcional. La actualización no deberá interrumpir la medición sin informar al usuario.
+    \item Proteger los datos de salud en tránsito y en almacenamiento, limitar su recolección a lo necesario y permitir al usuario conocer y gestionar su conservación y eliminación. El encuadre legal y los controles concretos deberán validarse con asesoramiento especializado antes de pruebas con participantes.
 \end{enumerate}
 
-\noindent\textbf{Requerimientos técnicos}
+\noindent\textbf{Alternativas preliminares de diseño (no son requisitos de desempeño)}
 \par\medskip
 {\small
 \renewcommand{\arraystretch}{1.2}
@@ -121,8 +127,49 @@ Protección ambiental & Requisito IP68 de las envolventes completas, con USB-C d
 \end{xltabular}
 \par}
 
+\paragraph{Especificaciones técnicas preliminares}\label{sec:especificaciones}
+La tabla separa valores de diseño de criterios analíticos provisionales para la verificación de banco. Los rangos se toman como dominios de desafío informados por sensores publicados, no como intervalos clínicos universales ni como prestaciones ya alcanzadas por este prototipo. En todos los casos, una concentración en sudor se reportará como tal; no se traducirá a glucosa sanguínea sin un modelo y una validación independientes.
 
+{\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}p{0.20\linewidth}|>{\raggedright\arraybackslash}p{0.25\linewidth}|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Magnitud} & \textbf{Especificación preliminar} & \textbf{Verificación y estado}\\\hline
+Glucosa en sudor & Dominio de desafío de 0,10--0,50 mM; objetivo de detección instrumental $\leq0{,}03$ mM. & Ver tabla~\ref{tab:criterios-analiticos}. Es una prueba técnica en sudor, no una estimación de glucosa sanguínea.\\\hline
+Lactato en sudor & Dominio de desafío de 1--20 mM. & Ver tabla~\ref{tab:criterios-analiticos}; la evidencia citada es de un sensor deportivo distinto.\\\hline
+Cortisol en sudor & Dominio de desafío de 9,8--49,5 ng/mL; objetivo de detección instrumental $\leq$8 ng/mL. & Ver tabla~\ref{tab:criterios-analiticos}; el comparador publicado utiliza MIP, pero no es el diseño del grupo.\\\hline
+pH del sudor & Dominio de desafío de 4,5--6,5; error máximo propuesto de $\pm$0,2 unidades de pH. & Ver tabla~\ref{tab:criterios-analiticos}; no se interpreta como marcador clínico.\\\hline
+Relación con glucosa sanguínea y predicciones & No existe una tolerancia de equivalencia definida. Horizontes exploratorios de 30--60 min y 1--8 h. & Evaluación separada contra referencia sanguínea adecuada y protocolo clínico; no se habilita uso interpretativo ni se afirma precisión hasta validar.\\\hline
+Frecuencia y datos & Lectura procesada y sincronización nominal cada 2 min; almacenamiento no volátil de al menos 24 h por dispositivo, estimado en 45 KiB/día. & Prueba de carga de memoria, apagado, desconexión y recuperación sin duplicados.\\\hline
+BLE & Alcance objetivo de hasta 10 m en el perfil de uso descrito; enlace directo lector--pulsera y sincronización con el teléfono cada 2 min. & Prueba con los dispositivos en el cuerpo y el teléfono en el bolsillo, pérdidas, reconexión y coexistencia de enlaces.\\\hline
+Autonomía & Objetivo de al menos 168 h con la frecuencia de lectura y enlaces nominales; batería preliminar de 750 mAh en cada lector y 850 mAh en la pulsera. & Los consumos de 3,5 mA y 4,0 mA son hipótesis, no mediciones. Contrastar corrientes de reposo, adquisición, LED y radio con fichas técnicas y ciclo de trabajo; luego ensayo continuo de 168 h.\\\hline
+Parche y contacto cutáneo & Siete días es un objetivo de duración, no una vida útil demostrada. Volumen disponible y respuesta cuando no hay sudor: por definir. & Evaluar reposición de sudor, contaminación, adhesión, irritación, lixiviación, degradación y estabilidad durante el uso previsto. Sin sudor suficiente, la lectura debe marcarse no disponible, nunca inferirse.\\\hline
+Carga y protección & USB-C, fuente comprada de 5 V y al menos 0,5 A; IP68 objetivo con inmersión de diseño a 1,5 m por 30 min y puerto desconectado. & Medir carga y temperatura con la celda/controlador elegidos; ensayar el equipo terminado. La condición IPX8 deberá acordarse con el laboratorio y no sustituye pruebas de sudor, corrosión o biocompatibilidad.\\\hline
+Firmware y privacidad & Actualización remota con integridad y recuperación; datos cifrados en tránsito y protegidos en el dispositivo y la cuenta. & Pruebas de interrupción/rollback, autorización y eliminación de datos. Requisitos detallados pendientes de revisión legal y de arquitectura.\\\hline
+\end{tabularx}}
 
+{\small
+\renewcommand{\arraystretch}{1.12}
+\begin{table}[H]\centering
+\caption{Criterios analíticos internos propuestos para la puerta técnica M7. No son límites clínicos ni requisitos regulatorios.}
+\label{tab:criterios-analiticos}
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}p{0.20\linewidth}|>{\raggedright\arraybackslash}p{0.35\linewidth}|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Salida} & \textbf{Referencia y dominio de prueba} & \textbf{Criterio de aceptación de banco}\\\hline
+Glucosa en sudor & 0,10; 0,30 y 0,50 mM; método cuantitativo independiente, verificado en matriz de sudor y con LOQ adecuada. & Sesgo relativo medio $\leq15\%$ y CV de repetibilidad $\leq15\%$ en cada nivel cuantificable; en el nivel más bajo aceptado, ambos $\leq20\%$. Tiempo hasta 90\% de señal estable (t$_{90}$) $\leq120$ s.\\\hline
+Lactato en sudor & 1; 10 y 20 mM; método enzimático o cromatográfico independiente, verificado en matriz de sudor. & Mismos límites de sesgo y CV; t$_{90}\leq120$ s. La referencia publicada informa respuesta menor a 90 s en otro dispositivo.\\\hline
+Cortisol en sudor & 9,8; 25 y 49,5 ng/mL; LC--MS/MS u otro método de referencia independiente validado en sudor. & Mismos límites de sesgo y CV; t$_{90}\leq120$ s. La detección instrumental objetivo es $\leq8$ ng/mL; esto no equivale por sí solo a cuantificación aceptable.\\\hline
+pH del sudor & pH 4,5; 5,5 y 6,5; electrodo de vidrio calibrado con tampones que abarquen el intervalo. & Error absoluto $\leq0,2$ unidades de pH en cada nivel; t$_{90}\leq120$ s.\\\hline
+\end{tabularx}
+\end{table}}
+
+Para las salidas cuantitativas, el protocolo inicial usará al menos cinco réplicas independientes por nivel en cada una de tres corridas/días; se incluirán blancos, interferentes previsibles y muestras fortificadas, y se informarán sesgo, coeficiente de variación (CV), límite de detección (LOD), límite de cuantificación (LOQ) e intervalos de confianza. Como regla de control de interferencias, el sesgo no deberá superar 15\% en el dominio cuantificable. Los límites de sesgo y precisión se adoptan como una meta interna conservadora inspirada en ICH M10 (±15\%, ampliable a ±20\% en el límite inferior de cuantificación); ICH M10 trata métodos bioanalíticos para fármacos y no es una norma aplicable a este sensor de sudor. Si una muestra queda debajo del LOQ, el sistema deberá informar ``no disponible'', no extrapolar ni sustituir el valor.
+
+Los dominios de desafío provienen de dispositivos concretos: Xiao et al. informan para glucosa en sudor un rango lineal de 0,1--0,5 mM y LOD de 0,03 mM; Xuan et al. informan 1--20 mM y respuesta menor a 90 s para lactato en sudor; Mugo et al. informan para un sensor MIP de cortisol en sudor 9,8--49,5 ng/mL, LOD de 8 ng/mL, respuesta menor a 2 min y RSD promedio de 6,4\%; Chen et al. reportan pH de sudor normal de 4,5--6,5 y un sensor con rango lineal 3,5--6,7. Estos resultados no transfieren desempeño al parche del grupo. En glucosa, la literatura también modela una relación sudor/sangre muy variable con el flujo de sudor y un retardo; por eso no se fija umbral de equivalencia ni se habilita una interpretación de glucosa sanguínea. Las referencias citadas describen comparadores experimentales y no validan por sí mismas el uso clínico propuesto.\footnote{J. Xiao et al., ``Microfluidic Chip-Based Wearable Colorimetric Sensor for Simple and Facile Detection of Sweat Glucose'', \textit{Analytical Chemistry}, 91(23), 14803--14807 (2019), DOI: \href{https://doi.org/10.1021/acs.analchem.9b03110}{10.1021/acs.analchem.9b03110}; X. Xuan et al., ``Fully Integrated Wearable Device for Continuous Sweat Lactate Monitoring in Sports'', \textit{ACS Sensors}, 8(6), 2401--2409 (2023), DOI: \href{https://doi.org/10.1021/acssensors.3c00708}{10.1021/acssensors.3c00708}; S. M. Mugo et al., ``A Wearable, Textile-Based Polyacrylate Imprinted Electrochemical Sensor for Cortisol Detection in Sweat'', \textit{Biosensors}, 12(10), 854 (2022), DOI: \href{https://doi.org/10.3390/bios12100854}{10.3390/bios12100854}; Q. Chen et al., ``Skin-attachable Tb-MOF ratio fluorescent sensor for real-time detection of human sweat pH'', \textit{Biosensors and Bioelectronics}, 263, 116606 (2024), DOI: \href{https://doi.org/10.1016/j.bios.2024.116606}{10.1016/j.bios.2024.116606}; ICH, \textit{M10 Bioanalytical Method Validation and Study Sample Analysis} (2022), \href{https://database.ich.org/sites/default/files/M10_Guideline_Step4_2022_0524.pdf}{guía oficial}, secciones 3.2--3.3; T. D. La Count et al., ``Modeling Glucose Transport From Systemic Circulation to Sweat'', \textit{Journal of Pharmaceutical Sciences}, 108(1), 364--371 (2019), DOI: \href{https://doi.org/10.1016/j.xphs.2018.09.026}{10.1016/j.xphs.2018.09.026}.}
+
+El volumen mínimo de sudor no se toma de otro diseño: se medirá en una titulación de volumen sobre el parche completo, registrando el mínimo que llena cada canal y satisface los criterios anteriores en cinco unidades por analito. Se incorporará ese volumen medido a la especificación y el equipo indicará ``no disponible'' cuando no haya muestra suficiente. La prueba de siete días verificará la operación repetida cada dos minutos en una matriz controlada; la duración de adhesión, irritación y seguridad cutánea requiere evaluación separada, aprobada y no se considera validada por el ensayo de banco.
+
+La lectura cada dos minutos durante siete días es una hipótesis de diseño. No se presupone que una reacción colorimétrica sea reversible ni que el sudor se renueve en cantidad suficiente en reposo. Se probarán el consumo o agotamiento del reactivo, el arrastre entre zonas, el volumen y flujo disponibles y la señal durante el período completo. Baker y Wolfe advierten que el flujo, la composición, el metabolismo glandular y la contaminación superficial afectan la composición final del sudor, y que la evidencia disponible no permite tratar glucosa o cortisol en sudor como sustitutos de sangre.\footnote{L. B. Baker y A. S. Wolfe, ``Physiological mechanisms determining eccrine sweat composition'', \textit{European Journal of Applied Physiology}, 120, 719--752 (2020), DOI: \href{https://doi.org/10.1007/s00421-020-04323-7}{10.1007/s00421-020-04323-7}.}
 
 \subsubsection{Uso de los dispositivos y continuidad de los datos}\label{sec:uso-dispositivos}
 El kit permite alternar dos lectores mientras se recargan por USB-C. La fuente incluida tiene un solo puerto: se carga un dispositivo por vez, según su nivel de batería. El lector de reserva puede recargarse mientras se utiliza el otro, y la pulsera durante el descanso. Se conservan los dos cables del kit, uno de ellos disponible como repuesto. La fuente de un puerto se compra como producto terminado y se selecciona por compatibilidad con ambos dispositivos; no se diseña dentro del proyecto. Cada dispositivo incorpora un controlador de carga, protección de batería y supervisión térmica. Se adopta como referencia de cálculo una corriente de carga de 250 mA, compatible con una fuente de un puerto de 5 V y al menos 0,5 A en su salida. La selección definitiva deberá respetar la ficha de la celda y los límites térmicos del dispositivo.
@@ -139,9 +186,11 @@ El conector deberá estar sellado en condición desconectada y su unión con la 
 \paragraph{Adquisición, memoria y comunicación}
 El lector genera un registro procesado cada dos minutos y lo envía a la pulsera en cuanto existe una lectura válida. El teléfono recibe una sincronización nominal cada dos minutos de ambos dispositivos. Las señales de la pulsera pueden adquirirse internamente a mayor frecuencia, pero el presupuesto de almacenamiento corresponde a resúmenes cada dos minutos, no a señales crudas continuas.
 
+El kit base conserva dos lectores, pero la justificación económica de la segunda unidad debe confirmarse: su costo directo estimado es USD 61,38 (USD 55,30 de materiales/procesos y USD 6,08 de terminación/prueba), cerca del 31,5\% del costo directo del kit. La hipótesis es evitar una interrupción durante la recarga; debe compararse con cargar el lector durante el recambio semanal del parche y aceptar una pausa breve. Hasta medir autonomía, tiempo real de recambio y continuidad requerida, se mantiene la configuración presupuestada de dos lectores; cualquier cambio exige recalcular BOM, stock, logística y flujo.
+
 Cada registro incluye dispositivo de origen, lector activo, número de secuencia, fecha, valor, unidad y calidad. Estos campos permiten ordenar el historial, descartar duplicados y recuperar bloques pendientes después de una desconexión. Los datos atrasados se incorporan al historial sin reemplazar el indicador actual por una lectura antigua. La pulsera muestra ausencia de datos si pasan más de cuatro minutos sin una lectura válida del lector activo.
 
-La puesta en marcha requiere un teléfono con la aplicación: desde allí se vinculan los dos lectores y la pulsera, se selecciona el lector activo y se transfiere la configuración del indicador.\footnote{Esta configuración inicial requiere el celular. Una vez completada, el enlace directo lector--pulsera permite consultar el LED sin mantener el teléfono conectado. El alta de la cuenta y la activación del kit requieren además conexión a Internet.} La pulsera determina el color a partir del valor y la calidad recibidos y de una tabla de rangos identificada por versión, configurada desde la aplicación. La tabla identifica la variable y su unidad; un rango de glucosa sanguínea no se aplica directamente a una medición en sudor. Si falta una configuración válida, la pulsera utiliza el patrón de datos no disponibles. Este cálculo local permite consultar el indicador sin tener el teléfono conectado y evita depender de una predicción en la nube para mostrar la lectura actual.
+La puesta en marcha requiere un teléfono con la aplicación: desde allí se emparejan los dos lectores y la pulsera por BLE, se selecciona el lector activo y se transfiere la configuración del indicador. El emparejamiento local no requiere código impreso ni conexión a Internet. La cuenta será opcional para el funcionamiento local y necesaria solo para las funciones remotas que finalmente se incluyan, como respaldo o recuperación en la nube. El número de serie podrá registrarse para trazabilidad, sin bloquear el uso del equipo ni impedir su transferencia a otro titular. La pulsera determina el color a partir del valor y la calidad recibidos y de una tabla de rangos identificada por versión, configurada desde la aplicación. La tabla identifica la variable y su unidad; un rango de glucosa sanguínea no se aplica directamente a una medición en sudor. Si falta una configuración válida, la pulsera utiliza el patrón de datos no disponibles. Este cálculo local permite consultar el indicador sin tener el teléfono conectado y evita depender de una predicción en la nube para mostrar la lectura actual.
 
 Con 64 bytes por registro y 720 registros diarios, cada dispositivo requiere aproximadamente 45 KiB por día. Se reservan al menos 128 KiB utilizables de memoria no volátil para datos, índices y metadatos. Se implementará un buffer circular: los registros no se borran al cumplir 24 horas, sino que se conservan hasta que sea necesario reutilizar espacio. Cuando la memoria se llena, se sobrescriben los registros más antiguos; si aún no se habían sincronizado, la aplicación identifica el intervalo perdido. Se garantizan al menos 24 horas con el formato y la frecuencia nominales. Los 128 KiB incluyen índices y metadatos, por lo que no se promete una duración adicional exacta. La verificación prevista de memoria y comunicación se detalla al final de esta sección.
 
@@ -156,10 +205,8 @@ Doble amarillo & Datos ausentes, no válidos o de más de cuatro minutos. Consul
 \end{tabularx}\end{center}
 El LED permanece apagado en reposo y se activa durante tres segundos mediante un gesto deliberado detectado por la IMU, por ejemplo un giro rápido de muñeca. El movimiento y su sensibilidad se ajustarán durante las pruebas de uso para que resulte cómodo y evite activaciones involuntarias. El rojo agrega un destello de 100 ms cada diez segundos mientras la lectura siga vigente. Ante datos vencidos deja de repetirse ese rojo y se utiliza el patrón de ausencia. Se prevé una corriente de 1 mA para el indicador; su visibilidad deberá comprobarse en las condiciones de uso.
 
-\paragraph{Cuenta y activación del kit}
-El acceso incluido a la aplicación será exclusivo para compradores del kit y se habilitará mediante su activación. El usuario creará una cuenta con correo electrónico verificado. Para habilitar las funciones del producto deberá registrar un kit adquirido, mediante su número de serie y un código de activación o una comprobación de posesión por BLE; conocer un número de serie por sí solo no habilitará la cuenta. El registro asociará la pulsera y los dos lectores al usuario y evitará que un mismo equipo quede activo en cuentas distintas.
-
-La aplicación guiará la primera configuración: vinculación de los dispositivos, selección del lector activo y envío de los rangos del indicador. El alta y la recuperación de la cuenta utilizarán un servicio de autenticación en Internet. La medición, el almacenamiento local y el enlace lector--pulsera seguirán funcionando sin Internet después de la activación; las funciones remotas indicarán cuándo no están disponibles. Se contemplarán recuperación de acceso, cambio de teléfono y transferencia de propiedad con desvinculación de la cuenta anterior. El servicio de cuentas es independiente de la alternativa de IA local o remota. Como posible ampliación comercial, se podrá evaluar una licencia de aplicación para personas que no compren el dispositivo, con funciones y fuentes de datos propias. Esa alternativa no forma parte del alcance, del precio ni de las ventas previstas en este plan.
+\paragraph{Emparejamiento, cuenta y trazabilidad}
+La aplicación guiará la primera configuración y emparejará los dispositivos mediante el procedimiento BLE del sistema operativo, con confirmación de posesión y cifrado. El emparejamiento y las funciones locales básicas no dependerán de un código de activación, una cuenta ni Internet. Una cuenta se solicitará únicamente para funciones remotas que la versión inicial efectivamente ofrezca; antes de implementarlas se definirán consentimiento, recuperación, cambio de teléfono, transferencia de titularidad y eliminación de datos. El registro de número de serie y lote será una función de trazabilidad y no una licencia de uso. La verificación del flujo de emparejamiento y de la gestión de datos queda incluida en las pruebas de aplicación.
 
 \paragraph{Presupuesto de energía}
 Las baterías se mantienen en 750 mAh por lector y 850 mAh en la pulsera. Con una reserva de capacidad del 20\% y una duración requerida de 168 horas, los límites medios de diseño se calculan como $0{,}8C/168$: 3,57 mA para el lector y 4,05 mA para la pulsera. Estos límites provienen de la capacidad y del objetivo de autonomía; no son consumos medidos. Se adoptan presupuestos preliminares de 3,5 mA y 4,0 mA, que darían 171 y 170 horas si se alcanzan en la práctica.
@@ -215,14 +262,14 @@ La Figura~\ref{fig:arquitectura-sistema} resume el flujo de datos y las dos alte
 \begin{tikzpicture}[bloque/.append style={text width=4.1cm,minimum height=1.7cm},font=\small]
 \node[bloque] (lector) at (-3.6,0) {\textbf{Dispositivo del brazo}\\Parche descartable + lector activo\\Glucosa, lactato, cortisol y pH};
 \node[bloque] (banda) at (3.6,0) {\textbf{Pulsera}\\Señales fisiológicas\\LED RGB de la última lectura};
-\node[bloque] (app) at (0,-3.5) {\textbf{Aplicación móvil}\\Cuenta y activación del kit\\Historial, calidad y avisos\\Análisis local, si se selecciona};
+\node[bloque] (app) at (0,-3.5) {\textbf{Aplicación móvil}\\Emparejamiento BLE local\\Historial, calidad y avisos\\Cuenta opcional para nube};
 \node[externo,text width=4.1cm] (nube) at (0,-6.2) {\textbf{Nube opcional}\\Análisis remoto si se selecciona};
 \draw[flujo,arrows={Stealth-Stealth}] (lector.east)--node[rotulo,above,align=center]{BLE directo\\lectura / 2 min}(banda.west);
 \draw[flujo] (lector.south)--++(0,-.8)-|node[rotulo,pos=.2,left]{Sync BLE / 2 min}([xshift=-1.1cm]app.north);
 \draw[flujo] (banda.south)--++(0,-.8)-|node[rotulo,pos=.2,right]{Sync BLE / 2 min}([xshift=1.1cm]app.north);
 \draw[flujo,dashed,arrows={Stealth-Stealth}] (app.south)--node[rotulo,right]{Internet: datos y resultados}(nube.north);
 \end{tikzpicture}
-\caption{Arquitectura del sistema. Lectura procesada cada dos minutos y sincronización al teléfono cada dos minutos. La configuración inicial de los enlaces requiere la aplicación. El procesamiento remoto es una alternativa a decidir en S6; el servicio de cuentas se utiliza para el alta y la activación.}
+\caption{Arquitectura del sistema. Lectura procesada cada dos minutos y sincronización al teléfono cada dos minutos. La configuración inicial de los enlaces requiere la aplicación. El procesamiento remoto y la cuenta asociada son opcionales y se decidirán en S6.}
 \label{fig:arquitectura-sistema}
 \end{figure}
 
@@ -406,36 +453,52 @@ El costo por componente se resume en la Tabla~\ref{tab:costo-kit}. El desarrollo
 
 
 
+El NPR preliminar se calcula como $S\times O\times D$, con severidad (S), ocurrencia (O) y detectabilidad (D) puntuadas de 1 a 10; en D, 10 significa difícil de detectar antes del efecto. Los puntajes son estimaciones iniciales del equipo, no tasas observadas. Se deben revisar al disponer de ensayos. No se aplica un umbral universal de NPR: hasta que el equipo acuerde un criterio de priorización, se atenderán primero los modos con consecuencias para la seguridad o con posible dato engañoso, y luego los de mayor NPR.
+
 {\footnotesize
-\renewcommand{\arraystretch}{1.2}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.18\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.22\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.18\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.13\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.29\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|>{\centering\arraybackslash}p{\dimexpr0.07\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|>{\centering\arraybackslash}p{\dimexpr0.07\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|>{\centering\arraybackslash}p{\dimexpr0.07\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|>{\centering\arraybackslash}p{\dimexpr0.08\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.43\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|}
 \hline
-\textbf{Componente / función} & \textbf{Modo de falla} & \textbf{Efecto} & \textbf{Severidad} & \textbf{Mitigación propuesta} \\
+\textbf{Modo de falla / efecto} & \textbf{S} & \textbf{O} & \textbf{D} & \textbf{NPR} & \textbf{Control propuesto} \\
 \hline
 \endfirsthead
 \hline
-\textbf{Componente / función} & \textbf{Modo de falla} & \textbf{Efecto} & \textbf{Severidad} & \textbf{Mitigación propuesta} \\
+\textbf{Modo de falla / efecto} & \textbf{S} & \textbf{O} & \textbf{D} & \textbf{NPR} & \textbf{Control propuesto} \\
 \hline
 \endhead
-Zonas colorimétricas (glucosa, lactato, pH) & Interferencia por condiciones de luz ambiente al leer el color & Medición imprecisa & Media & Lector con carcasa que aísla luz ambiente, o calibración por referencia de color interna \\
+Luz ambiente en zonas colorimétricas; lectura imprecisa. & 6 & 4 & 5 & 120 & Aislar ópticamente el parche y verificar una referencia de color en cada lectura. \\
 \hline
-Zonas colorimétricas & Degradación del reactivo cromogénico por humedad o tiempo de almacenamiento & Lectura nula o errónea & Media & Empaque sellado, indicación de vida útil, control de lote en fabricación \\
+Degradación del reactivo por humedad o almacenamiento; lectura nula o errónea. & 9 & 5 & 7 & 315 & Envase sellado, vida útil definida con ensayo acelerado/tiempo real y control por lote; invalidar resultados fuera de especificación. \\
 \hline
-Secuenciado de reacciones (plegado de papel) & Plegado incorrecto por parte del usuario al colocar el parche sensor descartable & Mezcla de zonas, lectura cruzada & Media & Diseño de plegado guiado mecánicamente (una sola forma posible de doblar) \\
+Plegado incorrecto del papel; mezcla o lectura cruzada entre zonas. & 7 & 4 & 5 & 140 & Guiado mecánico de una sola posición, marcas de orientación y prueba de usabilidad. \\
 \hline
-Zona cortisol (MIP electroquímico) & Baja especificidad, interferencia de otras moléculas del sudor & Asociación incorrecta con estrés & Media & Evaluar especificidad y contrastar con señales de contexto; no presentar el resultado como diagnóstico ni como causalidad clínica \\
+Baja selectividad del MIP/interferencia en cortisol; asociación engañosa. & 8 & 6 & 7 & 336 & Ensayar selectividad, interferentes y matriz; no presentar cortisol como diagnóstico ni inferir causalidad. \\
 \hline
-Comunicación BLE & Pérdida de conexión con el teléfono o entre lector y pulsera & Interrupción de datos o aviso no emitido & Media & Sincronización al teléfono cada 2 min; enlace directo con cada lectura válida. Memoria local de 24 h, recuperación al reconectar y patrón de datos vencidos en la pulsera \\
+Pérdida de BLE; datos incompletos o aviso no emitido. & 6 & 4 & 3 & 72 & Memoria local, secuencia y recuperación sin duplicados; indicar ausencia o vencimiento de datos. \\
 \hline
-Batería (módulo electrónico reutilizable o pulsera) & Descarga antes de lo esperado & Vacío de datos, pérdida de contexto & Media & Diseño de bajo consumo e indicador de batería baja; verificar autonomía objetivo de 7 días en el perfil nominal de uso \\
+Descarga antes de lo previsto; pérdida de datos o contexto. & 7 & 4 & 4 & 112 & Medir autonomía en el perfil nominal, alertar batería baja y replanificar si no alcanza 168 h. \\
 \hline
-USB-C y carcasa & Agua o sudor en el puerto; falla de sellado & Corrosión, calentamiento o pérdida de función & Alta & Cargar con puerto seco; verificar conjunto IP68, corrosión, temperatura y protección de carga \\
+Ingreso de agua/sudor o sellado defectuoso; corrosión o pérdida de función. & 9 & 3 & 6 & 162 & Ensayar el equipo terminado, conector desconectado, ciclos de uso, sudor y temperatura; instruir carga con puerto seco. \\
 \hline
-Alternancia de lectores & Lector incorrecto activo o datos duplicados & Historial mezclado o indicador erróneo & Alta & Identificador, secuencia y fecha; confirmar cambio en la aplicación; probar recuperación de ambas unidades \\
+Lector activo incorrecto o registros duplicados al alternar; historial/LED equivocado. & 7 & 3 & 4 & 84 & Identificar unidad, secuenciar datos y confirmar cambio en la aplicación; probar recuperación de ambos lectores. \\
 \hline
-LED RGB & Verde con lectura vencida o interpretación incorrecta & Falsa tranquilidad o demora en consultar & Alta & Caducidad a cuatro minutos, doble amarillo y validación de umbrales y comprensión; aplicación como interfaz principal \\
+LED favorable con dato vencido o mal interpretado; falsa tranquilidad. & 9 & 3 & 7 & 189 & Caducidad a cuatro minutos, patrón explícito de dato no disponible y prueba de comprensión; aplicación como interfaz principal. \\
 \hline
-Modelo de factores asociados (IA) & Asociación incorrecta entre una variación y un factor de contexto & Información o aviso inadecuado al usuario & Alta & Presentar factores como probablemente asociados, informar incertidumbre y evitar inferencias causales o recomendaciones automáticas de tratamiento \\
+Asociación o predicción incorrecta; información inadecuada. & 8 & 5 & 8 & 320 & Validación independiente por salida, incertidumbre visible y bloqueo de mensajes terapéuticos o clínicos no autorizados. \\
+\hline
+Sudor insuficiente, ausente o contaminado; lectura errónea/no representativa. & 8 & 6 & 7 & 336 & Ensayar distintos flujos y condiciones de reposo; control de suficiencia y contaminación; mostrar ``sin muestra'' en vez de estimar. \\
+\hline
+Irritación o sensibilización por adhesivo/reactivos; lesión o retiro del parche. & 9 & 4 & 8 & 288 & Evaluación de materiales y biocompatibilidad con asesoramiento competente antes de estudio con personas; instrucciones de retiro y reporte. \\
+\hline
+Acople incorrecto entre lector y parche; lectura sesgada o nula. & 8 & 4 & 6 & 192 & Geometría con posición única, detección de inserción/alineación y prueba de repetibilidad entre montajes. \\
+\hline
+Calentamiento de batería junto a la piel o durante carga; riesgo térmico. & 9 & 3 & 6 & 162 & Protección eléctrica/térmica, caracterización de celdas y ensayo en peor condición; inhibir carga si se exceden límites definidos. \\
+\hline
+Actualización remota interrumpida/corrupta; dispositivo inutilizable o versión inconsistente. & 8 & 3 & 6 & 144 & Verificar integridad, actualización atómica, recuperación/rollback y prueba de interrupción antes de liberar. \\
+\hline
+Exposición o acceso no autorizado a datos de salud; pérdida de privacidad. & 9 & 3 & 8 & 216 & Minimización, cifrado, control de acceso, consentimiento, retención/eliminación y evaluación legal y técnica previa. \\
+\hline
+Gesto detectado involuntariamente; consulta o señal del LED no deseada. & 5 & 4 & 4 & 80 & Ajustar umbral, probar movimientos cotidianos y permitir desactivar/configurar el gesto. \\
 \hline
 \end{longtable}
 }
@@ -472,6 +535,23 @@ Modelo de factores asociados (IA) & Asociación incorrecta entre una variación 
     \item \textbf{Servicios especializados:} laboratorio de química/bioquímica para seleccionar reactivos cromogénicos existentes, adaptar su formulación e inmovilización en el soporte de papel y validar su desempeño en sudor; para la zona de cortisol, preparación e integración del MIP a partir de protocolos publicados, con evaluación de selectividad y estabilidad. No se plantea desarrollar nuevas químicas de detección desde cero, sino adaptar soluciones existentes al dispositivo propuesto.
 \end{itemize}
 
+Las pruebas de desempeño, las compras del prototipo y el asesoramiento bioquímico forman parte del desarrollo hasta M12/M18 y están incluidos en las tareas o partidas del programa; no son aspectos posteriores al MVP. El inventario siguiente distingue esos recursos de las responsabilidades que continúan si se comercializa el producto. Los importes son estimaciones presupuestarias ya incluidas en el flujo, no costos adicionales ni cotizaciones.
+
+{\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}p{0.20\linewidth}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}p{0.25\linewidth}|}
+\hline
+\textbf{Categoría} & \textbf{Recurso y uso} & \textbf{Base presupuestaria}\\\hline
+Infraestructura & Oficina/taller, servicios generales, laboratorio y acceso a equipamiento. & USD 2.000/mes: 500 + 500 + 1.000; asignación a cotizar.\\\hline
+Equipamiento e insumos & Placas, consumibles, prototipos y unidades para ingeniería; instrumentos especializados se alquilan o utilizan mediante el laboratorio externo. & USD 12.000 en prototipos e insumos, incluidas las unidades de ensayo; el tamaño de muestra clínica no está incluido.\\\hline
+Licencias y herramientas & Desarrollo, autenticación/servicios remotos si se habilitan y herramientas de trabajo. & Reserva de USD 500/mes para herramientas y nube; costo unitario y escalamiento por usuarios pendientes de cotización.\\\hline
+Servicios especializados de desarrollo & Adaptación y prueba de reactivos/MIP, asesoramiento médico, legal y regulatorio, y revisión externa de QA. & USD 12.000 bioquímica, USD 10.000 consultas y USD 8.000 QA externo; reservas globales a desglosar por horas, muestras y tarifas.\\\hline
+Evaluación y conformidad & Centro, mediciones de referencia, gestión/monitorización, cobertura, ensayos ambientales, seguridad, EMC, radio y trámites. & USD 30.000 evaluación clínica y USD 10.000 ensayos/trámites; asignaciones a confirmar con proveedores y autoridades.\\\hline
+Personal & Software, sistemas embebidos, QA y laboratorio durante 18 meses. & USD 11.200/mes y USD 201.600 en total, según salarios, factor laboral y tipo de cambio supuestos en la sección de costos.\\\hline
+\end{tabularx}}
+
+\noindent\textbf{Aspectos posteriores a la etapa de desarrollo.} Si se habilita la comercialización, deberán presupuestarse y asignarse responsables para garantía, reposición y devoluciones; distribución, almacenamiento, vida útil y etiquetado de parches; manuales y capacitación; atención al usuario; actualización y vigilancia poscomercialización; facturación y cobro de recambios; seguros; gestión de incidentes y residuos. Esas actividades no se consideran cubiertas por el presupuesto de desarrollo ni por la dotación que finaliza en M18. Su costo posterior debe incorporarse al flujo antes de presentar la rentabilidad como escenario operativo completo.
+
 \subsection{Evaluación de factibilidad de negocio}
 
 % Consigna de la cátedra conservada en el fuente:
@@ -499,16 +579,16 @@ El análisis considera la capacidad de ejecución del proyecto. Las fortalezas y
 \noindent\textbf{Fortalezas}
 \begin{itemize}
     \item Dotación de cuatro personas a tiempo completo durante dieciocho meses: ingeniería de software, sistemas embebidos, QA y laboratorio, con responsabilidades definidas.
-    \item Capacidad interna para integrar electrónica, firmware, aplicación y datos bajo protocolos y criterios de aceptación comunes.
-    \item Sistema de gestión con requisitos, responsables, hitos, evidencias de prueba y trazabilidad entre decisiones técnicas, riesgos, costos y cronograma.
-    \item Modelo operativo y financiero integrado que vincula compras, producción, inventario, embudo comercial y flujo de fondos mediante supuestos editables.
+    \item Experiencia del equipo en la integración de electrónica, firmware, aplicación y datos, limitada a prototipos y trabajos previos y aún no demostrada en un producto médico.
+    \item Plan de trabajo con requisitos, responsables, hitos, evidencias de prueba y trazabilidad, que permite detectar desvíos y replanificar.
 \end{itemize}
 
 \noindent\textbf{Oportunidades}
 \begin{itemize}
     \item Posibilidad de atender a personas con diabetes tipo 2 o prediabetes que busquen comprender mejor la relación entre sus hábitos cotidianos y las variaciones de glucosa, mediante una propuesta de seguimiento complementario y personalizado.
     \item Posibilidad de establecer alianzas con clínicas y profesionales de salud interesados en evaluar herramientas de seguimiento entre consultas, validar la utilidad de la información contextual y definir cómo presentar los avisos.
-    \item Interés en el uso de biomarcadores para el monitoreo de enfermedades crónicas.
+    \item Posibilidad de trabajar con laboratorios, centros clínicos y profesionales para determinar si los biomarcadores elegidos aportan información útil y medible.
+    \item Disponibilidad de componentes y plataformas de desarrollo comerciales que pueden reducir el tiempo de integración, sujeto a verificación de disponibilidad, costo e importación.
 \end{itemize}
 
 \noindent\textbf{Debilidades}
@@ -540,7 +620,7 @@ El índice de prioridad es $S\times O$, con umbral de seguimiento de 25. Los val
 ID & Riesgo, fundamento y acción & $S\times O$ & Residual objetivo\\\midrule
 \endfirsthead
 \toprule ID & Riesgo, fundamento y acción & $S\times O$ & Residual objetivo\\\midrule\endhead
-R1 & \textbf{Sensado e integración.} Rangos, interferencias, estabilidad y calibración aún no están demostrados. Laboratorio y electrónica deben contrastarlos con referencias, integrar el prototipo y repetir pruebas ante desvíos. & $9\times6=54$ & $9\times4=36$\\
+R1 & \textbf{Sensado e integración.} Rangos, interferencias, estabilidad y calibración aún no están demostrados. Laboratorio y electrónica deben contrastarlos con referencias. Si la revisión M7 no alcanza los criterios, no se presenta el prototipo como MVP apto ni se avanza a pruebas con participantes: se congela la función afectada, se evalúa una versión acotada sin la salida no validada o se posterga el hito, y se reestiman costo, evidencia y calendario antes de continuar. & $9\times6=54$ & $9\times4=36$\\
 R2 & \textbf{Datos para modelos.} No hay una fuente confirmada de registros sincronizados y referencias suficientes. Software debe cerrar acceso, dependencia de CGM y evaluación separada de los modelos en S6; sin datos adecuados se limita la función. & $8\times6=48$ & $8\times4=32$\\
 R3 & \textbf{Especialistas y financiación.} La experiencia propia y la infraestructura son limitadas. Coordinación debe confirmar laboratorios, centro, asesores y fondos, con alternativas antes de comprometer cada hito. & $8\times6=48$ & $8\times4=32$\\
 R4 & \textbf{Esfuerzo y alcance.} Las disciplinas comparten recursos y tienen dependencias. El equipo revisa horas reales, reserva y cambios cada sprint, y reprograma antes de sobrecargar una persona o dejar incompleta la integración. & $7\times5=35$ & $7\times3=21$\\
@@ -548,9 +628,12 @@ R5 & \textbf{Coherencia documental.} Un cambio puede dejar desactualizados requi
 R6 & \textbf{Competencia.} Otros productos pueden incorporar funciones similares antes del lanzamiento. Coordinación revisa alternativas y diferenciación; se acepta provisionalmente con seguimiento. & $6\times4=24$ & $6\times4=24$\\
 R7 & \textbf{Uso y aceptación del precio.} La complejidad del recambio y los USD 800 iniciales pueden reducir la adopción. QA y coordinación evalúan usabilidad y receptividad con usuarios y aliados, y revisan demanda y costos con los resultados. & $7\times5=35$ & $7\times4=28$\\
 R8 & \textbf{Evidencia y autorización.} El uso previsto, la clasificación y las observaciones pueden exigir más trabajo o demorar ventas. Coordinación y asesores preparan el encuadre desde el inicio, distinguen investigación de comercialización y actualizan calendario y caja. & $8\times5=40$ & $8\times4=32$\\
+R9 & \textbf{Proveedores e importación.} La fabricación o el despacho de PCB/componentes puede demorarse, encarecerse o dejar sin repuestos. Compras registra plazos de fabricación, transporte y aduana como dependencias, cotiza alternativas y reserva margen antes de fijar la fecha de integración; si falla el proveedor crítico, se reprograman tareas dependientes y lote. & $8\times6=48$ & $8\times4=32$\\
+R10 & \textbf{Ausencia de una persona clave.} QA y laboratorio tienen responsables únicos y carga alta; una ausencia puede bloquear pruebas o trazabilidad. Se documentan procedimientos, se capacita a un suplente en tareas compatibles y se reordena el plan; no se delegan ensayos especializados sin competencia. & $8\times5=40$ & $8\times3=24$\\
+R11 & \textbf{Tamaño y disponibilidad de la evaluación.} Los diez kits de ingeniería no determinan la muestra clínica. Un centro puede exigir más participantes, unidades o visitas que el presupuesto reservado. Se acuerdan protocolo, cálculo de muestra, referencia y costos con el centro antes de comprometer el calendario; una necesidad mayor requiere aprobar presupuesto y replanificar. & $8\times5=40$ & $8\times3=24$\\
 \bottomrule\end{xltabular}}
 
-R1, R2, R3, R7 y R8 permanecen por encima del umbral incluso en el escenario residual y deben seguir abiertos. R4 y R5 solo bajan de prioridad cuando se compruebe la ejecución de sus acciones. Los riesgos se revisan en los meses 3, 6, 7, 10, 12 y 18; una fecha planificada no justifica cerrar un riesgo sin evidencia.
+Los productos $S\times O$ y residuales se mantienen para continuidad con el registro original de riesgos y no son equivalentes al NPR del AMFE. R1, R2, R3, R7, R8 y R9 permanecen por encima del umbral de seguimiento definido por el equipo y deben seguir abiertos. R4, R5, R10 y R11 solo bajan de prioridad cuando se compruebe la ejecución de sus acciones. Los riesgos se revisan en los meses 3, 6, 7, 10, 12 y 18; una fecha planificada no justifica cerrar un riesgo sin evidencia. Las dependencias externas críticas incluyen la disponibilidad de reactivos e instrumental, fabricación y despacho de PCB, acceso al centro/Comité de Ética y decisiones regulatorias. Una demora del proveedor de PCB desplaza montaje, integración y prueba del prototipo; si el plazo se extiende cuatro semanas, se usa una alternativa previamente calificada o se desplazan las tareas dependientes y el hito M7, sin contabilizar la espera como horas de trabajo.
 
 \subsection{Análisis de mercado y financiero}
 
@@ -578,6 +661,9 @@ Para dimensionar el público potencial en Argentina se toma como referencia la p
 Esta proyección orienta sobre la población con diabetes tipo 2; no incluye prediabetes ni determina el mercado accesible del sistema. Para estimarlo se deberá relevar uso de CGM, acceso a un teléfono compatible, cobertura y disposición a pagar por el complemento. La previsión de ventas utiliza supuestos de aliados, pacientes alcanzables y adopción; no equivale a un relevamiento del mercado argentino.
 
 El usuario final previsto es la persona con diabetes tipo 2 o prediabetes que ya usa o considera usar un CGM y busca relacionar sus variaciones con información de contexto. El adquirente puede ser el propio paciente, una obra social/prepaga o una clínica que ofrezca el servicio como parte de un programa de seguimiento. Hoy, este público intenta interpretar esas relaciones mediante consultas, registros manuales de comidas y actividad o aplicaciones de terceros. El sistema busca complementar esas fuentes mediante la identificación de factores probablemente asociados, sin sustituir la evaluación profesional ni establecer causalidad clínica.
+
+\paragraph{Comprador y tamaño del mercado accesible}
+Como hipótesis de trabajo para interpretar el precio y el flujo se toma al paciente/usuario como comprador directo. No hay entrevistas, acuerdos de cobertura ni evidencia de que una obra social, prepaga o clínica pague el producto; por ello no se consideran compradores confirmados ni se les atribuyen ahorros. La extrapolación de 90--95\% de diabetes tipo 2 sobre los 4,3 millones estimados por la FID da un techo demográfico orientativo de 3,87--4,09 millones de personas de 20 a 79 años; no es un recuento nacional de tipo 2 ni un mercado accesible. Los volúmenes del plan (300, 800 y 1.680 kits en los años comerciales 1--3) equivalen aproximadamente a 0,007--0,008\%, 0,020--0,021\% y 0,041--0,043\% de ese techo, respectivamente. Son metas de captación del escenario, no demanda demostrada. No se aplica una penetración arbitraria para estimar el mercado accesible: los filtros de uso/cobertura de CGM, acceso a teléfono compatible, capacidad o cobertura de pago, elegibilidad para el uso autorizado y alcance de clínicas/aliados no cuentan con datos locales verificables en esta etapa. Por eso el comprador directo y el precio se mantienen como supuestos de planificación sujetos a entrevistas; las cantidades de venta deben leerse como metas condicionales, no como pronóstico validado.
 
 \subsubsection{Análisis de competidores y sustitutos}
 
@@ -650,6 +736,11 @@ Registro de glucosa, comidas y actividad. &
 La aplicación propuesta recibe automáticamente
 las mediciones del parche y la pulsera,
 además de organizar su historial. \\
+\hline
+
+Glucómetro capilar y tiras reactivas &
+Mediciones puntuales de glucosa en sangre con un medidor y consumibles. &
+Es un sustituto de bajo costo de entrada para mediciones puntuales, pero no ofrece por sí solo el registro contextual del proyecto. El costo local de equipo y tiras debe relevarse con fecha, presentación y fuente. \\
 \hline
 \end{tabularx}
 \endgroup

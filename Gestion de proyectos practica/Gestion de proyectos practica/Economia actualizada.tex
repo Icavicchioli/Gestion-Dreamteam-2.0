@@ -39,6 +39,27 @@ Pulsera & LED RGB y control & 1,00\\
 \end{tabularx}\end{table}
 Los modelos son alternativas concretas para el diseño. Los importes son asignaciones de presupuesto, no cotizaciones actuales: en particular, USD 28,40 y USD 7,05 corresponden a conjuntos de sensado y no al precio individual de cada circuito. La compra requiere confirmar el precio del conjunto completo. La hoja \textit{Componentes} desglosa estas asignaciones, los consumibles y los accesorios, y alimenta los costos del kit sin sumarlos dos veces.
 
+\paragraph{BOM preliminar y precios sin desglose}
+La lista identifica cantidades y asignaciones disponibles, pero el presupuesto no contiene un precio individual para cada componente de los conjuntos de sensado. Se informa el costo combinado y no se lo distribuye arbitrariamente entre piezas; los precios unitarios deberán obtenerse mediante cotización.
+\begin{table}[H]\centering\small
+\caption{Detalle de cantidades en los conjuntos de sensado; USD asignados al conjunto, no al componente individual.}
+\begin{tabularx}{\linewidth}{l X r X}\toprule
+Dispositivo & Componente & Cantidad & USD asignados\\\midrule
+Lector & AS7341-DLGT, sensor óptico & 3 & Sin desglose; incluido en USD 28,40\\
+Lector & AD5941BCPZ-RL7, frente electroquímico & 1 & Sin desglose; incluido en USD 28,40\\
+Lector & Iluminación y multiplexor I2C & 1 conjunto & Sin desglose; incluido en USD 28,40\\
+\midrule
+Lector & Asignación total de sensado óptico/electroquímico & 1 conjunto & 28,40\\
+\midrule
+Pulsera & MAX30101EFD+T, sensor PPG & 1 & Sin desglose; incluido en USD 7,05\\
+Pulsera & LSM6DS3TR-C, IMU & 1 & Sin desglose; incluido en USD 7,05\\
+Pulsera & TMP117AIDRVR, sensor de temperatura & 1 & Sin desglose; incluido en USD 7,05\\
+\midrule
+Pulsera & Asignación total del conjunto de sensores & 1 conjunto & 7,05\\
+\bottomrule
+\end{tabularx}\end{table}
+El resto de la BOM y sus asignaciones (MCU/BLE, batería, carga, PCB, carcasa, USB-C, reactivos, electrodos, MIP, adhesivo y accesorios) está discriminado por categoría en la tabla de costos y en la hoja \textit{Componentes}. La información actual sigue siendo presupuestaria y no una cotización por componente. Para la liberación de compras se requiere completar precio unitario, cantidad, proveedor, fecha, flete e impuestos aplicables, y actualizar el flujo.
+
 Las referencias técnicas de selección son el módulo \href{https://www.lcsc.com/product-detail/C2934569.html}{ESP32-C3-MINI-1-H4}, el sensor óptico \href{https://www.lcsc.com/product-detail/C2655145.html}{AS7341}, el frente electroquímico \href{https://www.analog.com/en/products/ad5941.html}{AD5941} y, para la pulsera, \href{https://www.lcsc.com/product-detail/C2859066.html}{MAX30101}, \href{https://www.lcsc.com/product-detail/C967633.html}{LSM6DS3TR-C} y \href{https://www.ti.com/product/TMP117}{TMP117}. La fuente de un puerto se presupuesta en USD 5 como asignación interna provisional; se comprará terminada y se confirmará su precio con una cotización. Las celdas y los conectores también se seleccionarán por las especificaciones indicadas y su cotización.
 
 El parche mantiene USD 7,25 de materiales y USD 4,08 de preparación. Los dos parches iniciales están incluidos en el kit y deben descontarse de los recambios vendidos al incorporar un cliente.
@@ -83,13 +104,56 @@ Acumulado al cierre & -233.200,00 & -311.484,63 & -131.541,74 & 421.258,92\\
 \bottomrule\end{tabular}
 \end{table}
 
+\paragraph{Detalle del VAN anual y sensibilidad a la tasa}
+Para hacer reproducible el cálculo sobre la Tabla~\ref{tab:flujo-cuatro-anios}, se adopta la convención académica de considerar la inversión neta del año 1 en $t=0$ y los flujos netos de los años 2--4 en $t=1,2,3$. El VAN anual con tasa efectiva anual $r$ es $\sum_{t=0}^{3}F_t/(1+r)^t$. Esta convención anual no reemplaza el cálculo mensual de 48 períodos de la planilla, que ubica cada cobro y pago al cierre de mes y arroja VAN USD 119.928,98 y TIR anual equivalente 37,36\%; la agregación anual cambia la fecha efectiva de los flujos y, por tanto, el resultado.
+
+\begin{table}[H]\centering\small
+\caption{Cálculo anual ilustrativo del VAN, con inversión del año 1 en $t=0$.}
+\begin{tabular}{lrrrr}\toprule
+Período & Flujo USD & Factor al 20\% & Valor presente USD & Acumulado VP USD\\\midrule
+Año 1, $t=0$ & -233.200,00 & 1,0000 & -233.200,00 & -233.200,00\\
+Año 2, $t=1$ & -78.284,63 & 0,8333 & -65.237,19 & -298.437,19\\
+Año 3, $t=2$ & 179.942,89 & 0,6944 & 124.960,34 & -173.476,85\\
+Año 4, $t=3$ & 552.800,66 & 0,5787 & 319.907,79 & 146.430,94\\
+\bottomrule\end{tabular}
+\end{table}
+
+Con los mismos flujos anuales y esta convención, la TIR es aproximadamente 40,80\%. La tasa anual del 20\% es un supuesto de evaluación, no una tasa de mercado demostrada: la siguiente sensibilidad muestra el resultado con tasas alternativas. La tasa mensual equivalente a 20\% efectivo anual es $(1+0{,}20)^{1/12}-1=1{,}5309\%$; la TIR mensual debe anualizarse como $(1+\mathrm{TIR}_{m})^{12}-1$.
+\begin{center}\small
+\begin{tabular}{lrr}\toprule
+Tasa efectiva anual & VAN anual (USD) & Convención\\\midrule
+10\% & 259.672,60 & Año 1 en $t=0$; años 2--4 en $t=1$--3\\
+20\% & 146.430,94 & Año 1 en $t=0$; años 2--4 en $t=1$--3\\
+30\% & 64.672,28 & Año 1 en $t=0$; años 2--4 en $t=1$--3\\
+40\% & 4.148,00 & Año 1 en $t=0$; años 2--4 en $t=1$--3\\
+\bottomrule\end{tabular}\end{center}
+Las diferencias entre el VAN anual y el mensual no son errores de suma: reflejan la distinta fecha de los flujos. Para comparar alternativas financieras se debe usar siempre la misma base de tiempo y explicitar la convención. La tasa requiere justificación con el costo de capital y riesgos de etapa, y el modelo aún excluye el tratamiento fiscal completo.
+
+\paragraph{Escenarios y decisiones ante desvíos}
+La revisión del modelo consignada en la devolución muestra que el caso base es sensible al volumen/precio de venta y al calendario regulatorio. Como análisis de estrés del modelo (valores aproximados; requieren confirmación al actualizar el archivo), se trasladan al informe los siguientes casos de una variable:
+\begin{center}\small
+\begin{tabular}{lrrr}\toprule
+Caso & VAN (USD) & TIR aproximada & Implicancia\\\midrule
+Base mensual informado & 119.929 & 37,4\% & Capital mínimo 368.813; recupero M41\\
+Retención mensual 90\% & 75.700 & 31\% & Menor ingreso recurrente\\
+Ventas -25\% & -31.600 & 15\% & No crea valor con 20\% de descuento\\
+Precio de kit USD 600 & -80.300 & 7\% & Requiere revisar precio/costo\\
+Lanzamiento 6 meses tarde (M25) & -101.600 & 3\% & Retrasa ingresos y eleva capital requerido\\
+Mitad de dotación desde M19 & 18.100 & 23\% & Debe definirse soporte posterior\\
+Escenario ``Conservador'' de la planilla & Negativo & Negativa & Capital mínimo aproximado USD 420.000; no recupera\\
+\bottomrule\end{tabular}\end{center}
+Estos resultados no son pronósticos ni sustituyen el recálculo del flujo mensual. Antes de usarlos para comprometer inversión se deberán recalcular en la hoja financiera y documentar las variables modificadas, ventas, costos, capital mínimo y mes de recupero. Si el escenario pesimista se materializa, la decisión prevista es diferir el lote y los gastos comerciales no comprometidos, conservar las funciones validadas y reestimar capital y calendario, sin iniciar ventas antes de las autorizaciones.
+
+\paragraph{Estrategia de financiamiento}
+El capital mínimo de USD 368.813,16 es una necesidad estimada de caja; el flujo no identifica aportantes ni modela aportes de capital. Como estrategia a evaluar, se propone combinar (i) subsidios o programas de innovación para investigación y prototipos, (ii) aportes de capital de socios/inversores para los hitos de integración y evaluación, y (iii) acuerdos con centros o aliados para reducir o compartir costos de estudio, solo cuando exista un compromiso formal. La búsqueda se escalonará por hitos y cada fuente tendrá monto, condiciones, calendario y responsable. No se considera ninguna de estas fuentes confirmada; si no se cubre el monto necesario, no se ordena el lote ni se inicia la fase clínica con presupuesto insuficiente. El capital y la mezcla de instrumentos deben verificarse con asesoramiento contable/legal y actualizarse en la planilla.
+
 Para entregar 100 kits aprobados por QA se presupuestan 112 kits antes del control de calidad. Con una merma estimada del 10\%, el cálculo es $\lceil100/(1-0{,}10)\rceil=112$: se divide por el rendimiento esperado del 90\% y se redondea hacia arriba. La cantidad finalmente liberada dependerá del control de cada unidad. Los desembolsos adicionales a la nómina por fabricación, logística y almacenamiento suman USD 31.113,16, equivalentes a USD 311,13 por kit aceptado. La mano de obra interna se paga dentro de los salarios del programa. Este desembolso incremental no es el costo económico completo del producto. En producción posterior al mes 18 se vuelve a incluir la mano de obra variable.
 
-El precio de USD 800 es un supuesto comercial a validar con usuarios y adquirentes. Aumentar el precio no demuestra que se mantenga la demanda prevista. La rentabilidad depende de receptividad, retención, costos y cumplimiento del calendario regulatorio.
+El precio de USD 800 es un supuesto comercial a validar con usuarios y adquirentes. Bajo el esquema de USD 25 por recambio y cuatro recambios mensuales, el costo de planificación del primer año es USD 1.950 (USD 800 + USD 1.200 de doce meses de recambios menos USD 50 por los dos recambios incluidos); los años siguientes son USD 1.200, además del CGM que el usuario ya utilice. Se adopta al paciente como pagador directo únicamente para leer este escenario. No hay evidencia de disposición a pagar ni de un beneficio económico o clínico que compense esos importes; por ahora, el beneficio para quien paga es una hipótesis de utilidad contextual que debe validarse con entrevistas y evaluación autorizada. No se afirma ahorro de consultas, internaciones o mediciones. La retención mensual del 95\% del modelo equivale a una baja compuesta aproximada del 46\% anual ($1-0{,}95^{12}$) y no cuenta con una fuente empírica; se tratará como supuesto, no como dato de mercado. Aumentar el precio no demuestra que se mantenga la demanda prevista. La rentabilidad depende de receptividad, retención, costos y cumplimiento del calendario regulatorio.
 
 Para el lote inicial, se prevé pagar USD 18.944,80 de materiales y procesos en M16, USD 11.868,36 de logística e importación en M17 y USD 300 de almacenamiento en M18. La recepción y terminación ocurren en M17; las unidades ingresan al stock disponible para vender al completar QA en M18. Así se distingue el pago al proveedor del momento en que el kit está listo para su venta.
 
-La planilla financiera permite consultar los supuestos, el flujo mensual y los resultados. El selector de escenario comercial actualiza ventas, demostradores, incorporación de aliados, dotación comercial y difusión.\par\noindent\textit{Enlace a la planilla Excel: a completar.}\par Las cantidades mensuales de ventas y demostradores son equivalentes de previsión; la producción de kits se redondea a unidades enteras. Los recambios se costean como equivalentes de demanda, sin un inventario mensual propio. El precio aplica al conjunto completo, que entrega dos lectores y dos consumibles iniciales.
+La planilla financiera permite consultar los supuestos, el flujo mensual y los resultados. El selector de escenario comercial actualiza ventas, demostradores, incorporación de aliados, dotación comercial y difusión.\par\noindent\textit{Planilla del flujo de caja:} \fuente{https://drive.google.com/file/d/17TJn2NMyN4UdFhtFchd6Z08y0LMXp2tW/view?usp=drive_link}{Abrir planilla financiera, tab "flujo mensual"(Google Drive).}\par Las cantidades mensuales de ventas y demostradores son equivalentes de previsión; la producción de kits se redondea a unidades enteras. Los recambios se costean como equivalentes de demanda, sin un inventario mensual propio. El precio aplica al conjunto completo, que entrega dos lectores y dos consumibles iniciales.
 
 Desde el lanzamiento se supone reposición mensual de kits y pago de la terminación como costo variable. Esta simplificación no modela los anticipos, los plazos de aprovisionamiento ni el stock de seguridad de los lotes posteriores; deberán acordarse con el proveedor antes de usar la previsión para financiar la operación. El soporte se estima por cliente activo y la tarifa deberá cubrir las capacidades necesarias para atención y mantenimiento. Estos supuestos pueden aumentar el capital requerido en la operación real.
 
